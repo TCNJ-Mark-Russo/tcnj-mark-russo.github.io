@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Narrowing Conversions.</span></h3> <div class="para">Narrowing conversions are type conversions that occur when converting a value of a larger data type to a smaller data type. In narrowing conversions, there can be a potential loss of information or precision, and the conversion must be done explicitly using casting. To cast a variable, precede the variable with the desired type surrounded with parentheses.</div> <div class="para">For example, converting a <code class="code-inline tex2jax_ignore">double</code> to an <code class="code-inline tex2jax_ignore">int</code> requires explicit casting:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double largeNumber = 3.14;
+int smallNumber = (int)largeNumber; // Narrowing conversion cast double to int
+</code></pre></div> <div class="para">In the above code, the value of <code class="code-inline tex2jax_ignore">largeNumber</code> (a double) is explicitly cast to <code class="code-inline tex2jax_ignore">int</code> using the <code class="code-inline tex2jax_ignore">(int)</code> cast.</div> <div class="para">The following table shows all valid narrowing conversions of primitive types, which can be performed using a cast. <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.9.2<span class="period">.</span></span><span class="space"> </span>Type Casting (Narrowing Conversions)</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">FROM</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">TO</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">byte</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">short</code></td>
+<td class="l m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">char</code>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long</code></td>
+<td class="l m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>, <code class="code-inline tex2jax_ignore">int</code>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">float</code></td>
+<td class="l m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
+<td class="l m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
+<td class="l m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>
+</td>
+</tr>
+</table></div></figure> <div class="para">It’s important to note that narrowing conversions may result in data loss or truncation. For example, when converting a floating-point value to an integer, the fractional part is discarded, leading to potential loss of precision.</div>
+</div></section><span class="incontext"><a href="section-19.html#paragraphs-4" class="internal">in-context</a></span>
+</body>
+</html>
