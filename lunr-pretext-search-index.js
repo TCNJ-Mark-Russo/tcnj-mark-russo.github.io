@@ -502,7 +502,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.11",
   "title": "Relational Expressions",
-  "body": "Relational Expressions  TODO: (relational operators, <, >, <=, >=, ==, !=)  "
+  "body": "Relational Expressions  Relational expressions include the familiar greater-than ( > ), less-than ( < ) and equal-to ( == ) operators. Recall that the single-equal operator ( = ) is reserved for assignment in Java. To test for equality, Java uses the double-equals operator ( == ). In addition to these operators, Java imeplements compound relational operators, including greater-than or equal-to ( >= ), less-than or equal-to ( <= ) and not-equal-to ( != ). These have the obvious interpretations.  All relational operators evaluate to logical values ( true or false ). if you think about that for a moment, you should see the logic in that statement. In general, relational operators involving > or < take numerical operands only. Let's consider a few examples.    "
 },
 {
   "id": "section-22",
@@ -604,9 +604,9 @@ var ptx_lunr_docs = [
   "body": "Your First Java Program  javac and java commands  "
 },
 {
-  "id": "p-166",
+  "id": "p-168",
   "level": "2",
-  "url": "section-25.html#p-166",
+  "url": "section-25.html#p-168",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -649,9 +649,9 @@ var ptx_lunr_docs = [
   "body": "Your First Java Program  javac and java commands  "
 },
 {
-  "id": "p-175",
+  "id": "p-177",
   "level": "2",
-  "url": "section-29.html#p-175",
+  "url": "section-29.html#p-177",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -781,7 +781,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.6",
   "title": "Collection Classes",
-  "body": "Collection Classes  ArrayList ...  (Using a loop counter to access elements of an ArrayList)  Autoboxing and Unboxing  HashMap  HashSet  "
+  "body": "Collection Classes  ArrayList ...  (Using a loop counter to access elements of an ArrayList)  Autoboxing and Unboxing  "
 },
 {
   "id": "section-43",
@@ -808,7 +808,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.9",
   "title": "Nested Control",
-  "body": "Nested Control  Nested whiles  Nested if's  "
+  "body": "Nested Control  Nested while statements  Nested if statements  "
 },
 {
   "id": "section-46",
@@ -816,8 +816,8 @@ var ptx_lunr_docs = [
   "url": "section-46.html",
   "type": "Section",
   "number": "4.10",
-  "title": "Polygons",
-  "body": "Polygons  Use loop to fill ArrayList and create a Polygon  "
+  "title": "Object Graphics",
+  "body": "Object Graphics   "
 },
 {
   "id": "section-47",
@@ -825,112 +825,103 @@ var ptx_lunr_docs = [
   "url": "section-47.html",
   "type": "Section",
   "number": "4.11",
-  "title": "Animation",
-  "body": "Animation  Timer Class  "
-},
-{
-  "id": "section-48",
-  "level": "1",
-  "url": "section-48.html",
-  "type": "Section",
-  "number": "4.12",
   "title": "Key Concepts",
-  "body": "Key Concepts   The flow of a program may be configured to change based on the state of its data values.  An if-statement controls program flow by conditionally executing a block of code when an expression evaluates to true and skips the block of code when the expression evaluates to false  A while-statement will repeatedly execute a block of code while an expression continues to evaluate to true  The code block for a while statement may never execute if the conditional statement never evaluates to true  A while-statement is also referred to as a \"while loop\" and a counter variable may be used to construct a program flow scenario in which a block of code is executed a precise number of times  Execution of a while-statement code block may be terminated immediately when a break statement is encountered  Execution of a while-statement code block may be terminated immediately when a continue statement is encountered. In this case program flow returns to the while-statement conditional expression to test if the code block should be repeated.  When a while-statement is exited due to a break statement or its conditional expression evaluating to false, execution continues immediately after the while-statement code block, if any  An if-statement nested within a while-statement is a common idiom for determining if a break or continue should be executed.  A while-statement nested within another while-statement is a common idiom for generating all pairs of two counters, such as when working with a rectangular structure  If-statements may be extended with an else-clause which specifies an alternative block of code to be executed when the conditional expression evaluates to false  If-statements may also be extended with an else-if clause which specifies a new conditional expression and alternative block of code and to be executed when all previous conditional expression evaluates to false  An if-statement must include an if-clause, zero more else-if-clauses and zero or one else-clause  Consecutive if-statements are independent from one another - if both conditional expressions evaluate to true, then both code blocks will execute.  The first conditional expression encountered in a single multi-clause if-statement that evaluates to true will result in its code block being executed. All other code blocks are skipped.  The top-down first-true procedure for evaluating if-statements has implications on which code block is executed.  The order of conditional expressions listed in a complex if-statement as well as the way conditional expressions are constructed may have a large impact on the flow of a program.  There are multiple strategies for constructing the conditional expressions of an if-statement, including a strategy that covers all possible cases in every conditional expression and a strategy that specifies subsequent conditional expressions that incrementally admit new cases on each subsequent conditional expression. In former case the later case the order of conditional expressions in a complex if-statement does not matter - all are independent. In the latter case the order of conditional expressions in a complex if-statement can matter greatly as each is dependent upon the previous expressions tested.  If-statements may be nested as a way to simplify conditional expressions  Java Collections are specialized objects designed to store and manage small or large numbers of other objects  An ArrayList is an ordered, resizable collection of objects that may be manipulated using its methods  ArrayList may hold any type of object using generics, also known as diamond notation.  A while-loop with a counter is a standard idiom for accessing all objects stored in an ArrayList.  Variables declared as one of Java's primitive data types may be stored in an ArrayList by first wrapping the primitive value in an equivalent class provided by Java  In many cases Java will automatically wrap a primitive in a class and remove a primitive from a class - processes called AutoBoxing and Unboxing  The classes that Java provides for boxing include Boolean, Byte, Character, Float, Double, Short, Integer, Long  A HashMap is a built-in generic Java collection class that holds zero or more objects in an unordered fashion and identifies each object with another object as its key  A HashSet is a built-in generic Java collection class that holds zero or more objects in an unordered set - the same object will not be stored twice in a HashSet.  Accessing all items of a HashMap may be accomplished with first obtaining a HashSet of all the keys in a HashMap and then using each item in the HashSet of unique keys to access each item in the HashMap.   "
+  "body": "Key Concepts   The flow of a program may be configured to change based on the state of its data values.  An if-statement controls program flow by conditionally executing a block of code when a certain expression evaluates to true , and skips the block of code when the expression evaluates to false .  A while-statement will repeatedly execute a block of code while an expression continues to evaluate to true  The code block for a while statement may never execute if the conditional statement never evaluates to true  A while-statement is also referred to as a \"while loop\" and a counter variable may be used to construct a program flow scenario in which a block of code is executed a precise number of times  Execution of a while-statement code block may be terminated immediately when a break statement is encountered  Execution of a while-statement code block may be terminated immediately when a continue statement is encountered. In this case program flow returns to the while-statement conditional expression to test if the code block should be repeated.  When a while-statement is exited due to a break statement or its conditional expression evaluating to false, execution continues immediately after the while-statement code block, if any  An if-statement nested within a while-statement is a common idiom for determining if a break or continue should be executed.  A while-statement nested within another while-statement is a common idiom for generating all pairs of two counters, such as when working with a rectangular structure  If-statements may be extended with an else-clause which specifies an alternative block of code to be executed when the conditional expression evaluates to false  If-statements may also be extended with an else-if clause which specifies a new conditional expression and alternative block of code and to be executed when all previous conditional expression evaluates to false  An if-statement must include an if-clause, zero more else-if-clauses and zero or one else-clause  Consecutive if-statements are independent from one another - if both conditional expressions evaluate to true, then both code blocks will execute.  The first conditional expression encountered in a single multi-clause if-statement that evaluates to true will result in its code block being executed. All other code blocks are skipped.  The top-down first-true procedure for evaluating if-statements has implications on which code block is executed.  The order of conditional expressions listed in a complex if-statement as well as the way conditional expressions are constructed may have a large impact on the flow of a program.  There are multiple strategies for constructing the conditional expressions of an if-statement, including a strategy that covers all possible cases in every conditional expression and a strategy that specifies subsequent conditional expressions that incrementally admit new cases on each subsequent conditional expression. In former case the later case the order of conditional expressions in a complex if-statement does not matter - all are independent. In the latter case the order of conditional expressions in a complex if-statement can matter greatly as each is dependent upon the previous expressions tested.  If-statements may be nested as a way to simplify conditional expressions  Java Collections are specialized objects designed to store and manage small or large numbers of other objects  An ArrayList is an ordered, resizable collection of objects that may be manipulated using its methods  ArrayList may hold any type of object using generics , also known as diamond notation .  A while-loop with a counter is a standard idiom for accessing all objects stored in an ArrayList.  Variables declared as one of Java's primitive data types may be stored in an ArrayList by first wrapping the primitive value in an equivalent class provided by Java  In many cases Java will automatically wrap a primitive in a class and remove a primitive from a class - processes called AutoBoxing and Unboxing  The classes that Java provides for boxing include Boolean, Byte, Character, Float, Double, Short, Integer, Long   "
 },
 {
   "id": "exercises-4",
   "level": "1",
   "url": "exercises-4.html",
   "type": "Exercises",
-  "number": "4.13",
+  "number": "4.12",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-49",
+  "id": "section-48",
   "level": "1",
-  "url": "section-49.html",
+  "url": "section-48.html",
   "type": "Section",
   "number": "5.1",
   "title": "for-Statements",
   "body": "for-Statements  "
 },
 {
-  "id": "section-50",
+  "id": "section-49",
   "level": "1",
-  "url": "section-50.html",
+  "url": "section-49.html",
   "type": "Section",
   "number": "5.2",
   "title": "do-while-Statements",
   "body": "do-while-Statements  "
 },
 {
-  "id": "section-51",
+  "id": "section-50",
   "level": "1",
-  "url": "section-51.html",
+  "url": "section-50.html",
   "type": "Section",
   "number": "5.3",
   "title": "for-each Statements",
   "body": "for-each Statements  "
 },
 {
-  "id": "section-52",
+  "id": "section-51",
   "level": "1",
-  "url": "section-52.html",
+  "url": "section-51.html",
   "type": "Section",
   "number": "5.4",
   "title": "Which Iteration Statement?",
   "body": "Which Iteration Statement?  Compare\/contrast options  "
 },
 {
-  "id": "section-53",
+  "id": "section-52",
   "level": "1",
-  "url": "section-53.html",
+  "url": "section-52.html",
   "type": "Section",
   "number": "5.5",
   "title": "switch-Statements",
   "body": "switch-Statements  "
 },
 {
-  "id": "section-54",
+  "id": "section-53",
   "level": "1",
-  "url": "section-54.html",
+  "url": "section-53.html",
   "type": "Section",
   "number": "5.6",
   "title": "Conditional Expressions",
   "body": "Conditional Expressions  "
 },
 {
-  "id": "section-55",
+  "id": "section-54",
   "level": "1",
-  "url": "section-55.html",
+  "url": "section-54.html",
   "type": "Section",
   "number": "5.7",
   "title": "Which Branching Statement?",
   "body": "Which Branching Statement?  Compare\/contrast options  "
 },
 {
-  "id": "section-56",
+  "id": "section-55",
   "level": "1",
-  "url": "section-56.html",
+  "url": "section-55.html",
   "type": "Section",
   "number": "5.8",
   "title": "Shortcut Evaluation",
   "body": "Shortcut Evaluation   "
 },
 {
-  "id": "section-57",
+  "id": "section-56",
   "level": "1",
-  "url": "section-57.html",
+  "url": "section-56.html",
   "type": "Section",
   "number": "5.9",
   "title": "Comparing Floating-point Numbers",
   "body": "Comparing Floating-point Numbers  Rounding in floating point numbers suggests not using == operator  "
 },
 {
-  "id": "section-58",
+  "id": "section-57",
   "level": "1",
-  "url": "section-58.html",
+  "url": "section-57.html",
   "type": "Section",
   "number": "5.10",
   "title": "Key Concepts",
@@ -946,99 +937,99 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-59",
+  "id": "section-58",
   "level": "1",
-  "url": "section-59.html",
+  "url": "section-58.html",
   "type": "Section",
   "number": "6.1",
   "title": "Creating and Initializing Arrays",
   "body": "Creating and Initializing Arrays  "
 },
 {
-  "id": "section-60",
+  "id": "section-59",
   "level": "1",
-  "url": "section-60.html",
+  "url": "section-59.html",
   "type": "Section",
   "number": "6.2",
   "title": "Accessing Array Elements with Iteration",
   "body": "Accessing Array Elements with Iteration  (Using a loop counter at access elements of an array)  "
 },
 {
-  "id": "section-61",
+  "id": "section-60",
   "level": "1",
-  "url": "section-61.html",
+  "url": "section-60.html",
   "type": "Section",
   "number": "6.3",
   "title": "Array vs. ArrayList",
   "body": "Array vs. ArrayList  Creating and Initializing  Both are reference types  Accessing size  Element access  Element addition  Element removal  "
 },
 {
-  "id": "section-62",
+  "id": "section-61",
   "level": "1",
-  "url": "section-62.html",
+  "url": "section-61.html",
   "type": "Section",
   "number": "6.4",
   "title": "Creating Stars",
   "body": "Creating Stars  Use iteration and an array to create Star shapes  "
 },
 {
-  "id": "section-63",
+  "id": "section-62",
   "level": "1",
-  "url": "section-63.html",
+  "url": "section-62.html",
   "type": "Section",
   "number": "6.5",
   "title": "Multidimensional Arrays",
   "body": "Multidimensional Arrays  Arrays of Arrays  Nested loops for accessing all elements of multidimensional arrays  "
 },
 {
-  "id": "section-64",
+  "id": "section-63",
   "level": "1",
-  "url": "section-64.html",
+  "url": "section-63.html",
   "type": "Section",
   "number": "6.6",
   "title": "Ragged Arrays",
   "body": "Ragged Arrays  "
 },
 {
-  "id": "section-65",
+  "id": "section-64",
   "level": "1",
-  "url": "section-65.html",
+  "url": "section-64.html",
   "type": "Section",
   "number": "6.7",
   "title": "Arrays as Parameters",
   "body": "Arrays as Parameters  As a reference type, all the same rules apply.  "
 },
 {
-  "id": "section-66",
+  "id": "section-65",
   "level": "1",
-  "url": "section-66.html",
+  "url": "section-65.html",
   "type": "Section",
   "number": "6.8",
   "title": "Arrays of Objects",
   "body": "Arrays of Objects  Like a single variable, array elements of objects hold references to objects  "
 },
 {
-  "id": "section-67",
+  "id": "section-66",
   "level": "1",
-  "url": "section-67.html",
+  "url": "section-66.html",
   "type": "Section",
   "number": "6.9",
   "title": "Arrays Library",
   "body": "Arrays Library  The Arrays library of static methods for manipulating arrays in Java  "
 },
 {
-  "id": "section-68",
+  "id": "section-67",
   "level": "1",
-  "url": "section-68.html",
+  "url": "section-67.html",
   "type": "Section",
   "number": "6.10",
   "title": "Command line Parameters",
   "body": "Command line Parameters  Command-line parameters are passed to main() as an array of Strings  "
 },
 {
-  "id": "section-69",
+  "id": "section-68",
   "level": "1",
-  "url": "section-69.html",
+  "url": "section-68.html",
   "type": "Section",
   "number": "6.11",
   "title": "Key Concepts",
@@ -1054,45 +1045,45 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-70",
+  "id": "section-69",
   "level": "1",
-  "url": "section-70.html",
+  "url": "section-69.html",
   "type": "Section",
   "number": "7.1",
   "title": "Class vs Instance",
   "body": "Class vs Instance  There can only ever be one class. There can be zero or more instances.  static fields belong to the class. All non-static fields are copied into each instance.  static methods do not have access to non-static fields. Non-static methods may access the scope of the object through which they are executed.  Class vs Object scope.  "
 },
 {
-  "id": "section-71",
+  "id": "section-70",
   "level": "1",
-  "url": "section-71.html",
+  "url": "section-70.html",
   "type": "Section",
   "number": "7.2",
   "title": "Constructors and Methods",
   "body": "Constructors and Methods  Anatomy of a Constructor  Constructor patters - init object fields.  Non-static methods  Method vs Constructor  The this keyword to set object scope  Using class name to set static scope  "
 },
 {
-  "id": "section-72",
+  "id": "section-71",
   "level": "1",
-  "url": "section-72.html",
+  "url": "section-71.html",
   "type": "Section",
   "number": "7.3",
   "title": "Access Control",
   "body": "Access Control  public vs private  "
 },
 {
-  "id": "section-73",
+  "id": "section-72",
   "level": "1",
-  "url": "section-73.html",
+  "url": "section-72.html",
   "type": "Section",
   "number": "7.4",
   "title": "Accessor and Mutator Methods",
   "body": "Accessor and Mutator Methods  getters and setters  "
 },
 {
-  "id": "section-74",
+  "id": "section-73",
   "level": "1",
-  "url": "section-74.html",
+  "url": "section-73.html",
   "type": "Section",
   "number": "7.5",
   "title": "Encapsulation",
@@ -1108,85 +1099,85 @@ var ptx_lunr_docs = [
   "body": " Enumerated Types  In Java, enumerated types, also known as enums , provide a way to define a fixed set of named constants. Enums allow you to create a custom data type with a predefined and automatically assigned set of values, making your code more readable, maintainable, and type-safe.  To define an enum in Java, you use the enum keyword followed by the name of the enum type. Here's an example of a simple enum representing clothing sizes:  TODO: Replace following with a program  >jshell | Welcome to JShell -- Version 17.0.6 | For an introduction type: \/help intro jshell> enum Size { ...> XSMALL, ...> SMALL, ...> MEDIUM, ...> LARGE, ...> XLARGE ...> } | created enum Size jshell>  In this example, Size > is the name of the enum type, and the constants SMALL , MEDIUM , LARGE , etc., are the possible values of the enum. Note that capitalization of constant name is not required, but useful for communicating the fact that these are constants.  You can use enum constants in your code just like any other static variables. For example:  jshell> Size mySize = Size.LARGE; mySize ==> LARGE jshell> System.out.println(\"Please order a \" + mySize); Please order a LARGE jshell>  Enums also have some useful methods automatically provided by Java. For instance, you can retrieve the name of an enum constant using the name() method:  jshell> System.out.println(\"Please order a \" + mySize.name()); Please order a LARGE  You can compare enum constants using the equality operator (==) because each constant is a unique instance of the enum type. Enums can also be used in switch statements for easy branching based on the enum value.  TODO: Replace following with a program  jshell> switch (mySize) { ...> case XSMALL: ...> case XLARGE: ...> System.out.println(\"We are out of 'extra' sizes\"); ...> break; ...> default: ...> System.out.println(\"Order placed\"); ...> } We are out of 'extra' sizes jshell>  Enums can have constructors, fields, and methods like any other Java class. You can even define custom behavior for each enum constant.  In summary, Java enumerated types (enums) provide a convenient way to define a fixed set of named constants, making your code more expressive and robust. Enums are type-safe, can have custom behavior, and provide useful methods out-of-the-box for working with the constants they define.  "
 },
 {
-  "id": "p-235",
+  "id": "p-234",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-235",
+  "url": "section-cl-enumerated.html#p-234",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "TODO: Replace following with a program "
 },
 {
-  "id": "p-240",
+  "id": "p-239",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-240",
+  "url": "section-cl-enumerated.html#p-239",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "TODO: Replace following with a program "
 },
 {
-  "id": "section-76",
+  "id": "section-75",
   "level": "1",
-  "url": "section-76.html",
+  "url": "section-75.html",
   "type": "Section",
   "number": "7.7",
   "title": "Multiple File Programs",
   "body": "Multiple File Programs  Classes defined in multiple files.  Compiling and running programs spread over multiple files.  Multiple classes in the same file  Packages and file structure  A class's main() method is invoked automatically when the class is run.  jar files - just a zip archive of .class files  "
 },
 {
-  "id": "section-77",
+  "id": "section-76",
   "level": "1",
-  "url": "section-77.html",
+  "url": "section-76.html",
   "type": "Section",
   "number": "7.8",
   "title": "Driver Programs",
   "body": "Driver Programs  Typically a top-level class with static methods that create and orchestrate other objects. May only have the static main() method.  "
 },
 {
-  "id": "section-78",
+  "id": "section-77",
   "level": "1",
-  "url": "section-78.html",
+  "url": "section-77.html",
   "type": "Section",
   "number": "7.9",
   "title": "Testing",
   "body": "Testing  Using the main() method for testing  "
 },
 {
-  "id": "section-79",
+  "id": "section-78",
   "level": "1",
-  "url": "section-79.html",
+  "url": "section-78.html",
   "type": "Section",
   "number": "7.10",
   "title": "Review of Scope",
   "body": "Review of Scope  block, method, object, class  One more, package  Scope sets variable lifetime. Be careful to define variables in the appropriate scope  The \"narrowest scope feasible\" principle.  "
 },
 {
-  "id": "section-80",
+  "id": "section-79",
   "level": "1",
-  "url": "section-80.html",
+  "url": "section-79.html",
   "type": "Section",
   "number": "7.11",
   "title": "Shadowing",
   "body": "Shadowing  We get used to declaring and initializing variables. This often causes shadowing errors.  "
 },
 {
-  "id": "section-81",
+  "id": "section-80",
   "level": "1",
-  "url": "section-81.html",
+  "url": "section-80.html",
   "type": "Section",
   "number": "7.12",
   "title": "Anonymous Objects",
   "body": "Anonymous Objects  Created, used, and lost  "
 },
 {
-  "id": "section-82",
+  "id": "section-81",
   "level": "1",
-  "url": "section-82.html",
+  "url": "section-81.html",
   "type": "Section",
   "number": "7.13",
   "title": "Key Concepts",
-  "body": "Key Concepts   The Java Standard Library provides a large number of prewritten classes.  Other prewritten classes may be available from external libraries, often stored in JAR files.  JAR is an acronym for Java Archive.  The driver class (aka driver program) is the class in a larger program that contains the public static void main(String[] args) method. This is where the program begins execution.  An object member is a term used for all class or object variables and methods.  When using the static keyword to modify a variable or method declaration, that member belongs to the class.  A scope is an enclosing context in a program where variables and expressions are associated. Two examples are class scope and object scope.  The scope of a method or instance variable may be specified by preceding it with the name of the class or object followed by a dot. This is called dot-notation.  It may be necessary to specify the scope of a static member with the class name in which it was defined in order to access it.  Regardless of the number of object instances created, there is only one class and therefore one set of static class members.  Every object instantiated using a class will get its own members declared without using the static keyword.  A custom class constructor defines the code executed when the new keyword is used with a constructor to create a new instance of the class.  A constructor must have the same name as the class, have no return type, not even void, and no return statement.  The this keyword always resolves to a reference to the current object.  You may invoke one constructor from another constructor in the same class using the this keyword followed by the constructor argument list.  The visibility of methods and instance variables encapsulated by and object are controlled using certain keywords, including public and private.  The combination of a method name, parameters and parameter types are referred to as a method's signature.  Multiple methods having the same name may be defined within a class, provided their signatures are distinct. This situation is called overloading a method.  Instance variables and methods declared as private are accessible only from within the scope of an object.  A common Java best practice is to declare private all object instance variables, and to control access using methods.  Methods that access private instance variables are called accessor methods, or \"getters\".  Accessor methods often are named using camel case, beginning with the word get followed by the name of the instance variable being accessed.  Methods that modify private instance variables are called mutator methods, or \"setters\".  Mutator methods often are named using camel case, beginning with the word set followed by the name of the instance variable being modified.  Objects should be designed to be self-governing. That is, an object should contain all the code and internal variables necessary to manage its instance variables. This is a core concept of object-oriented programming called encapsulation.  In addition to class scope and object scope, block scope is an enclosing context for a code block, such as when defining a code block that makes up an if-statement or for-statement.  Scopes are nested. Block scopes are nested within method scopes, and method scopes are nested within an object or class scope.  Shadowing occurs when variables defined in an inner scope have names identical to variables defined in an outer scope.  To access a shadowed variable, it is necessary to set the scope of the variable explicitly using dot-notation and the this keyword or the Class name.  When choosing a scope to declare a variable, always use the most narrow scope feasible. This avoids program bugs that emerge when a variable value set by one method instance has an unexpected impact on the execution of another method instance.  The scope within which a variable is declared governs its lifetime. For example, when declaring a variable within a method, it comes into existence upon declaration and goes out of existence when the method scope exits. When declaring an instance variable in an object, it comes in to existence when the object is instantiated and goes out of existence when the object is garbage collected.  Anonymous objects are objects created temporarily but never assigned to a variable. They occur when chaining methods, or when invoking a constructor to set a parameter value as part of calling a method.  The toString() method of an object is a special method used to return a String representation of an object. toString() is invoked by Java's print methods to print an object to the terminal.   "
+  "body": "Key Concepts   The Java Standard Library provides a large number of prewritten classes.  Other prewritten classes may be available from external libraries, often stored in JAR files.  JAR is an acronym for Java Archive.  The driver class (aka driver program) is the class in a larger program that contains the public static void main(String[] args) method. This is where the program begins execution.  An object member is a term used for all class or object variables and methods.  When using the static keyword to modify a variable or method declaration, that member belongs to the class.  A scope is an enclosing context in a program where variables and expressions are associated. Two examples are class scope and object scope.  The scope of a method or instance variable may be specified by preceding it with the name of the class or object followed by a dot. This is called dot-notation.  It may be necessary to specify the scope of a static member with the class name in which it was defined in order to access it.  Regardless of the number of object instances created, there is only one class and therefore one set of static class members.  Every object instantiated using a class will get its own members declared without using the static keyword.  A custom class constructor defines the code executed when the new keyword is used with a constructor to create a new instance of the class.  A constructor must have the same name as the class, have no return type, not even void, and no return statement.  The this keyword always resolves to a reference to the current object.  You may invoke one constructor from another constructor in the same class using the this keyword followed by the constructor argument list.  The visibility of methods and instance variables encapsulated by and object are controlled using certain keywords, including public and private.  The combination of a method name, parameters and parameter types are referred to as a method's signature.  Multiple methods having the same name may be defined within a class, provided their signatures are distinct. This situation is called overloading a method.  Instance variables and methods declared as private are accessible only from within the scope of an object.  A common Java best practice is to declare private all object instance variables, and to control access using methods.  Methods that access private instance variables are called accessor methods, or \"getters\".  Accessor methods often are named using camel case, beginning with the word get followed by the name of the instance variable being accessed.  Methods that modify private instance variables are called mutator methods, or \"setters\".  Mutator methods often are named using camel case, beginning with the word set followed by the name of the instance variable being modified.  Objects should be designed to be self-governing. That is, an object should contain all the code and internal variables necessary to manage its instance variables. This is a core concept of object-oriented programming called encapsulation.  In addition to class scope and object scope, block scope is an enclosing context for a code block, such as when defining a code block that makes up an if-statement or for-statement.  Scopes are nested. Block scopes are nested within method scopes, and method scopes are nested within an object or class scope.  Shadowing occurs when variables defined in an inner scope have names identical to variables defined in an outer scope.  To access a shadowed variable, it is necessary to set the scope of the variable explicitly using dot-notation and the this keyword or the Class name.  When choosing a scope to declare a variable, always use the most narrow scope feasible. This avoids program bugs that emerge when a variable value set by one method instance has an unexpected impact on the execution of another method instance.  The scope within which a variable is declared governs its lifetime. For example, when declaring a variable within a method, it comes into existence upon declaration and goes out of existence when the method scope exits. When declaring an instance variable in an object, it comes in to existence when the object is instantiated and goes out of existence when the object is garbage collected.  Anonymous objects are objects created temporarily but never assigned to a variable. They occur when chaining methods, or when invoking a constructor to set a parameter value as part of calling a method.  The toString() method of an object is a special method used to return a String representation of an object. toString() is invoked by Java's print methods and the String representation is what is printed to the terminal.   "
 },
 {
   "id": "exercises-7",
@@ -1198,112 +1189,112 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-83",
+  "id": "section-82",
   "level": "1",
-  "url": "section-83.html",
+  "url": "section-82.html",
   "type": "Section",
   "number": "8.1",
   "title": "Setting Up Inheritance",
   "body": "Setting Up Inheritance  extends and super keywords keyword  base class, derived class  Prevent subclassing using the final keyword  "
 },
 {
-  "id": "p-260",
+  "id": "p-259",
   "level": "2",
-  "url": "section-83.html#p-260",
+  "url": "section-82.html#p-259",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "final "
 },
 {
-  "id": "section-84",
+  "id": "section-83",
   "level": "1",
-  "url": "section-84.html",
+  "url": "section-83.html",
   "type": "Section",
   "number": "8.2",
   "title": "Benefits of Inheritance",
   "body": "Benefits of Inheritance  Subclassing automatically shares all functionality in base class. Derived class has a head start.  Modifications and updates apply to all derived classes  Reduction of code duplication  Reduction of excessive code maintenance  "
 },
 {
-  "id": "section-85",
+  "id": "section-84",
   "level": "1",
-  "url": "section-85.html",
+  "url": "section-84.html",
   "type": "Section",
   "number": "8.3",
   "title": "Generalization and Specialization",
   "body": "Generalization and Specialization  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  "
 },
 {
-  "id": "section-86",
+  "id": "section-85",
   "level": "1",
-  "url": "section-86.html",
+  "url": "section-85.html",
   "type": "Section",
   "number": "8.4",
   "title": "Subtype Polymorphism and Dynamic Binding",
   "body": "Subtype Polymorphism and Dynamic Binding  Assign an object of type derived class to a variable of type base class  Cast an object of type base class to a variable of type derived class  Dynamic binding  https:\/\/software.rajivprab.com\/2019\/08\/14\/nuances-of-overloading-and-overriding-in-java\/ Single Dispatch, Hidden Override, Exposed Override, Ambiguous Parameter, Multiple Inheritance - Interfaces, Multiple Inheritance - Class and Interface, Transitive Override, Private Override, Static Overrides, Static Linking  Using the @Override annotation on all override methods will help greatly in preventing regressions, by producing compile errors as soon as any base methods have their visibility changed.  "
 },
 {
-  "id": "p-273",
+  "id": "p-272",
   "level": "2",
-  "url": "section-86.html#p-273",
+  "url": "section-85.html#p-272",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "@Override "
 },
 {
-  "id": "section-87",
+  "id": "section-86",
   "level": "1",
-  "url": "section-87.html",
+  "url": "section-86.html",
   "type": "Section",
   "number": "8.5",
   "title": "protected Access",
   "body": "protected Access  "
 },
 {
-  "id": "section-88",
+  "id": "section-87",
   "level": "1",
-  "url": "section-88.html",
+  "url": "section-87.html",
   "type": "Section",
   "number": "8.6",
   "title": "The Object Class",
   "body": "The Object Class  All Java classes inherit Object, even when there is no extends  The inherited toString() method and when to override  The inherited equals() and when to override  "
 },
 {
-  "id": "section-89",
+  "id": "section-88",
   "level": "1",
-  "url": "section-89.html",
+  "url": "section-88.html",
   "type": "Section",
   "number": "8.7",
   "title": "Testing for a specific Class",
   "body": "Testing for a specific Class  instanceof operator  "
 },
 {
-  "id": "section-90",
+  "id": "section-89",
   "level": "1",
-  "url": "section-90.html",
+  "url": "section-89.html",
   "type": "Section",
   "number": "8.8",
   "title": "Abstract Classes and Methods",
   "body": "Abstract Classes and Methods  Force a derived class to implement a method by declaring it abstract in the base class  A class with an abstract method must also be declared abstract  "
 },
 {
-  "id": "p-278",
+  "id": "p-277",
   "level": "2",
-  "url": "section-90.html#p-278",
+  "url": "section-89.html#p-277",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "abstract "
 },
 {
-  "id": "section-91",
+  "id": "section-90",
   "level": "1",
-  "url": "section-91.html",
+  "url": "section-90.html",
   "type": "Section",
   "number": "8.9",
   "title": "Key Concepts",
-  "body": "Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding.  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.  The Shape class in DoodlePad is a good example of an abstract class because it does not make sense to instantiate it.   "
+  "body": "Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding.  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.   "
 },
 {
   "id": "exercises-8",
@@ -1315,90 +1306,90 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-92",
+  "id": "section-91",
   "level": "1",
-  "url": "section-92.html",
+  "url": "section-91.html",
   "type": "Section",
   "number": "9.1",
   "title": "Defining and Implementing Interfaces",
   "body": "Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
 },
 {
-  "id": "p-281",
+  "id": "p-280",
   "level": "2",
-  "url": "section-92.html#p-281",
+  "url": "section-91.html#p-280",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "class interface "
 },
 {
-  "id": "p-283",
+  "id": "p-282",
   "level": "2",
-  "url": "section-92.html#p-283",
+  "url": "section-91.html#p-282",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "extends implements "
 },
 {
-  "id": "section-93",
+  "id": "section-92",
   "level": "1",
-  "url": "section-93.html",
+  "url": "section-92.html",
   "type": "Section",
   "number": "9.2",
   "title": "Interfaces and Polymorphism",
   "body": "Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
 },
 {
-  "id": "section-94",
+  "id": "section-93",
   "level": "1",
-  "url": "section-94.html",
+  "url": "section-93.html",
   "type": "Section",
   "number": "9.3",
   "title": "Comparable&lt;T&gt; Interface",
   "body": "Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
 },
 {
-  "id": "section-95",
+  "id": "section-94",
   "level": "1",
-  "url": "section-95.html",
+  "url": "section-94.html",
   "type": "Section",
   "number": "9.4",
   "title": "Iterator&lt;T&gt; Interface",
   "body": "Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
 },
 {
-  "id": "section-96",
+  "id": "section-95",
   "level": "1",
-  "url": "section-96.html",
+  "url": "section-95.html",
   "type": "Section",
   "number": "9.5",
   "title": "Benefits of an Interface",
   "body": "Benefits of an Interface  An ArrayList holding objects of multiple types  "
 },
 {
-  "id": "section-97",
+  "id": "section-96",
   "level": "1",
-  "url": "section-97.html",
+  "url": "section-96.html",
   "type": "Section",
   "number": "9.6",
   "title": "Defining Your Own Interfaces",
   "body": "Defining Your Own Interfaces   "
 },
 {
-  "id": "section-98",
+  "id": "section-97",
   "level": "1",
-  "url": "section-98.html",
+  "url": "section-97.html",
   "type": "Section",
   "number": "9.7",
   "title": "Interfaces and Polymorphism",
   "body": "Interfaces and Polymorphism   "
 },
 {
-  "id": "section-99",
+  "id": "section-98",
   "level": "1",
-  "url": "section-99.html",
+  "url": "section-98.html",
   "type": "Section",
   "number": "9.8",
   "title": "Key Concepts",
@@ -1414,108 +1405,108 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-100",
+  "id": "section-99",
   "level": "1",
-  "url": "section-100.html",
+  "url": "section-99.html",
   "type": "Section",
   "number": "10.1",
   "title": "Software Development Life Cycled (SDLC)",
   "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
 },
 {
-  "id": "section-101",
+  "id": "section-100",
   "level": "1",
-  "url": "section-101.html",
+  "url": "section-100.html",
   "type": "Section",
   "number": "10.2",
   "title": "Encapsulation and Abstraction",
   "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
 },
 {
-  "id": "section-102",
+  "id": "section-101",
   "level": "1",
-  "url": "section-102.html",
+  "url": "section-101.html",
   "type": "Section",
   "number": "10.3",
   "title": "Object Relationships",
   "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
 },
 {
-  "id": "section-103",
+  "id": "section-102",
   "level": "1",
-  "url": "section-103.html",
+  "url": "section-102.html",
   "type": "Section",
   "number": "10.4",
   "title": "When to use Inheritance",
   "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
 },
 {
-  "id": "section-104",
+  "id": "section-103",
   "level": "1",
-  "url": "section-104.html",
+  "url": "section-103.html",
   "type": "Section",
   "number": "10.5",
   "title": "When to use Interfaces",
   "body": "When to use Interfaces  Common public interface  "
 },
 {
-  "id": "section-105",
+  "id": "section-104",
   "level": "1",
-  "url": "section-105.html",
+  "url": "section-104.html",
   "type": "Section",
   "number": "10.6",
   "title": "Cohesion and Coupling",
   "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
 },
 {
-  "id": "section-106",
+  "id": "section-105",
   "level": "1",
-  "url": "section-106.html",
+  "url": "section-105.html",
   "type": "Section",
   "number": "10.7",
   "title": "Unified Modeling Language (UML)",
   "body": "Unified Modeling Language (UML)  "
 },
 {
-  "id": "section-107",
+  "id": "section-106",
   "level": "1",
-  "url": "section-107.html",
+  "url": "section-106.html",
   "type": "Section",
   "number": "10.8",
   "title": "Class Diagram",
   "body": "Class Diagram  A structure diagram  "
 },
 {
-  "id": "section-108",
+  "id": "section-107",
   "level": "1",
-  "url": "section-108.html",
+  "url": "section-107.html",
   "type": "Section",
   "number": "10.9",
   "title": "Object Diagram",
   "body": "Object Diagram  A structure diagram  "
 },
 {
-  "id": "section-109",
+  "id": "section-108",
   "level": "1",
-  "url": "section-109.html",
+  "url": "section-108.html",
   "type": "Section",
   "number": "10.10",
   "title": "Activity Diagrams",
   "body": "Activity Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-110",
+  "id": "section-109",
   "level": "1",
-  "url": "section-110.html",
+  "url": "section-109.html",
   "type": "Section",
   "number": "10.11",
   "title": "State Machine Diagrams",
   "body": "State Machine Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-111",
+  "id": "section-110",
   "level": "1",
-  "url": "section-111.html",
+  "url": "section-110.html",
   "type": "Section",
   "number": "10.12",
   "title": "Key Concepts",
@@ -1531,99 +1522,99 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-112",
+  "id": "section-111",
   "level": "1",
-  "url": "section-112.html",
+  "url": "section-111.html",
   "type": "Section",
   "number": "11.1",
   "title": "Syntax Errors",
   "body": "Syntax Errors  Caught by the compiler  "
 },
 {
-  "id": "section-113",
+  "id": "section-112",
   "level": "1",
-  "url": "section-113.html",
+  "url": "section-112.html",
   "type": "Section",
   "number": "11.2",
   "title": "Logic Errors",
   "body": "Logic Errors  The program runs, but produces the wrong output.  "
 },
 {
-  "id": "section-114",
+  "id": "section-113",
   "level": "1",
-  "url": "section-114.html",
+  "url": "section-113.html",
   "type": "Section",
   "number": "11.3",
   "title": "Runtime Errors",
   "body": "Runtime Errors  The program compiles, but something goes wrong while it is running. Java responds to the problem by throwing an exception. Like nearly everything else in Java, an exception is an object created by instantiating a suitable exception class that identifies the problem.  If there is no intervention, Java will eventually print the current state of the call stack when the exception object is thrown.  "
 },
 {
-  "id": "p-318",
+  "id": "p-317",
   "level": "2",
-  "url": "section-114.html#p-318",
+  "url": "section-113.html#p-317",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "call stack "
 },
 {
-  "id": "section-115",
+  "id": "section-114",
   "level": "1",
-  "url": "section-115.html",
+  "url": "section-114.html",
   "type": "Section",
   "number": "11.4",
   "title": "Common Exception Classes",
   "body": "Common Exception Classes  ArithmeticException  NullPointerException  IndexOutOfBoundsException  ArrayIndexOutOfBoundsException  IllegalArgumentException  Exception class hierarchy  printStackTrace() method  "
 },
 {
-  "id": "section-116",
+  "id": "section-115",
   "level": "1",
-  "url": "section-116.html",
+  "url": "section-115.html",
   "type": "Section",
   "number": "11.5",
   "title": "Catching Exceptions",
   "body": "Catching Exceptions  try-catch  try-catch-finally  "
 },
 {
-  "id": "section-117",
+  "id": "section-116",
   "level": "1",
-  "url": "section-117.html",
+  "url": "section-116.html",
   "type": "Section",
   "number": "11.6",
   "title": "Checked vs. Unchecked Exceptions",
   "body": "Checked vs. Unchecked Exceptions  Checked exceptions must be caught  Alternatively, the catching of a checked exception may be deferred using the throws keyword.  "
 },
 {
-  "id": "p-329",
+  "id": "p-328",
   "level": "2",
-  "url": "section-117.html#p-329",
+  "url": "section-116.html#p-328",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "throws "
 },
 {
-  "id": "section-118",
+  "id": "section-117",
   "level": "1",
-  "url": "section-118.html",
+  "url": "section-117.html",
   "type": "Section",
   "number": "11.7",
   "title": "Reading Files",
   "body": "Reading Files  Thow IO exceptions  IO exceptions are checked, and must be caught in a try-catch  Files need to be closed.  "
 },
 {
-  "id": "section-119",
+  "id": "section-118",
   "level": "1",
-  "url": "section-119.html",
+  "url": "section-118.html",
   "type": "Section",
   "number": "11.8",
   "title": "try-with-resources",
   "body": "try-with-resources  May be used with objects that implement the AutoClosable interface.  public interface AutoCloseable { void close() throws Exception; }  "
 },
 {
-  "id": "section-120",
+  "id": "section-119",
   "level": "1",
-  "url": "section-120.html",
+  "url": "section-119.html",
   "type": "Section",
   "number": "11.9",
   "title": "Key Concepts",
@@ -1639,117 +1630,117 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-121",
+  "id": "section-120",
   "level": "1",
-  "url": "section-121.html",
+  "url": "section-120.html",
   "type": "Section",
   "number": "12.1",
   "title": "Tracing Programs",
   "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
 },
 {
-  "id": "section-122",
+  "id": "section-121",
   "level": "1",
-  "url": "section-122.html",
+  "url": "section-121.html",
   "type": "Section",
   "number": "12.2",
   "title": "The Call Stack",
   "body": "The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
 },
 {
-  "id": "section-123",
+  "id": "section-122",
   "level": "1",
-  "url": "section-123.html",
+  "url": "section-122.html",
   "type": "Section",
   "number": "12.3",
   "title": "Recursion",
   "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
 },
 {
-  "id": "p-338",
+  "id": "p-337",
   "level": "2",
-  "url": "section-123.html#p-338",
+  "url": "section-122.html#p-337",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "recursion "
 },
 {
-  "id": "p-339",
+  "id": "p-338",
   "level": "2",
-  "url": "section-123.html#p-339",
+  "url": "section-122.html#p-338",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Direct recursion "
 },
 {
-  "id": "p-340",
+  "id": "p-339",
   "level": "2",
-  "url": "section-123.html#p-340",
+  "url": "section-122.html#p-339",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Indirect recursion "
 },
 {
-  "id": "section-124",
+  "id": "section-123",
   "level": "1",
-  "url": "section-124.html",
+  "url": "section-123.html",
   "type": "Section",
   "number": "12.4",
   "title": "Solving Problems with Recursion",
   "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
 },
 {
-  "id": "p-343",
+  "id": "p-342",
   "level": "2",
-  "url": "section-124.html#p-343",
+  "url": "section-123.html#p-342",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cases base case recursive case "
 },
 {
-  "id": "section-125",
+  "id": "section-124",
   "level": "1",
-  "url": "section-125.html",
+  "url": "section-124.html",
   "type": "Section",
   "number": "12.5",
   "title": "Example: Computing Factorial",
   "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-126",
+  "id": "section-125",
   "level": "1",
-  "url": "section-126.html",
+  "url": "section-125.html",
   "type": "Section",
   "number": "12.6",
   "title": "Example: Computing Fibonacci Numbers",
   "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
 },
 {
-  "id": "section-127",
+  "id": "section-126",
   "level": "1",
-  "url": "section-127.html",
+  "url": "section-126.html",
   "type": "Section",
   "number": "12.7",
   "title": "Example: Drawing a Pyramid",
   "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-128",
+  "id": "section-127",
   "level": "1",
-  "url": "section-128.html",
+  "url": "section-127.html",
   "type": "Section",
   "number": "12.8",
   "title": "Example: Building a Maze",
   "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-129",
+  "id": "section-128",
   "level": "1",
-  "url": "section-129.html",
+  "url": "section-128.html",
   "type": "Section",
   "number": "12.9",
   "title": "Key Concepts",
@@ -1765,72 +1756,72 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-130",
+  "id": "section-129",
   "level": "1",
-  "url": "section-130.html",
+  "url": "section-129.html",
   "type": "Section",
   "number": "13.1",
   "title": "Searching and Sorting Algorithms",
   "body": "Searching and Sorting Algorithms  "
 },
 {
-  "id": "section-131",
+  "id": "section-130",
   "level": "1",
-  "url": "section-131.html",
+  "url": "section-130.html",
   "type": "Section",
   "number": "13.2",
   "title": "Sequential Search",
   "body": "Sequential Search  "
 },
 {
-  "id": "section-132",
+  "id": "section-131",
   "level": "1",
-  "url": "section-132.html",
+  "url": "section-131.html",
   "type": "Section",
   "number": "13.3",
   "title": "Binary Search",
   "body": "Binary Search  Iterative implementation  Recursive implementation  "
 },
 {
-  "id": "section-133",
+  "id": "section-132",
   "level": "1",
-  "url": "section-133.html",
+  "url": "section-132.html",
   "type": "Section",
   "number": "13.4",
   "title": "Selection Sort",
   "body": "Selection Sort  "
 },
 {
-  "id": "section-134",
+  "id": "section-133",
   "level": "1",
-  "url": "section-134.html",
+  "url": "section-133.html",
   "type": "Section",
   "number": "13.5",
   "title": "Insertion Sort",
   "body": "Insertion Sort  "
 },
 {
-  "id": "section-135",
+  "id": "section-134",
   "level": "1",
-  "url": "section-135.html",
+  "url": "section-134.html",
   "type": "Section",
   "number": "13.6",
   "title": "Merge Sort",
   "body": "Merge Sort  "
 },
 {
-  "id": "section-136",
+  "id": "section-135",
   "level": "1",
-  "url": "section-136.html",
+  "url": "section-135.html",
   "type": "Section",
   "number": "13.7",
   "title": "Complexity",
   "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
 },
 {
-  "id": "section-137",
+  "id": "section-136",
   "level": "1",
-  "url": "section-137.html",
+  "url": "section-136.html",
   "type": "Section",
   "number": "13.8",
   "title": "Key Concepts",
@@ -1864,9 +1855,9 @@ var ptx_lunr_docs = [
   "body": " Testing   This is the introduction.   The Importance of Testing  The compiler tells us if we have syntax error s and the execution engine throws exceptions when something goes wrong while the program is running ( runtime errors ). How can we check when the program runs without error, but produces incorrect results ( logic errors )? The best way to check for logic errors is through testing.  A good test plan executes all paths through your source code and presents a wide range of possible inputs. It checks results produced to make sure all they are correct.   Java assertions and AssertionError  Java assertions and AssertionError   Unit Testing  Integration Testing  Key Concepts   Testing is an important part of software development during which time test cases are developed and run to ensure a program is correct.  Test cases should cover all behavior expected by a program. This is called test coverage.  Special testing situations include a boundary (edge) case, a corner case and a special case  Software testing includes unit testing and integration testing  During unit testing individual isolated parts (units) of a program are tested for correctness independently  During integration testing the interaction between software units is tested for correctness   Exercises   "
 },
 {
-  "id": "p-363",
+  "id": "p-362",
   "level": "2",
-  "url": "appendix-testing.html#p-363",
+  "url": "appendix-testing.html#p-362",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1909,18 +1900,18 @@ var ptx_lunr_docs = [
   "body": "   doodlepad.org   https:\/\/doodlepad.org   copyright  This book was authored in PreTeXt .  "
 },
 {
-  "id": "section-138",
+  "id": "section-137",
   "level": "1",
-  "url": "section-138.html",
+  "url": "section-137.html",
   "type": "Section",
   "number": "14.1",
   "title": "Visualizer",
   "body": " Visualizer   Visualize   "
 },
 {
-  "id": "section-139",
+  "id": "section-138",
   "level": "1",
-  "url": "section-139.html",
+  "url": "section-138.html",
   "type": "Section",
   "number": "14.2",
   "title": "Active Code",
@@ -1929,7 +1920,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-python",
   "level": "2",
-  "url": "section-139.html#program-activecode-python",
+  "url": "section-138.html#program-activecode-python",
   "type": "Listing",
   "number": "14.2.1",
   "title": "",
@@ -1938,7 +1929,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-java",
   "level": "2",
-  "url": "section-139.html#program-activecode-java",
+  "url": "section-138.html#program-activecode-java",
   "type": "Listing",
   "number": "14.2.2",
   "title": "Informal Java “Hello, World”",
@@ -1947,7 +1938,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-javascript",
   "level": "2",
-  "url": "section-139.html#program-activecode-javascript",
+  "url": "section-138.html#program-activecode-javascript",
   "type": "Listing",
   "number": "14.2.3",
   "title": "",
