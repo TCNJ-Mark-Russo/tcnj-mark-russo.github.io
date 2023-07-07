@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- https://github.com/highlightjs/highlight.js/tree/main/src/styles -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs.min.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script> -->
+    <link rel="stylesheet" href="vs.min.css">
+    <script src="highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        * {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .hljs {
+            background: whitesmoke;
+        }
+        code, .hljs-type, .hljs-keyword, .hljs-number {
+            font-family: 'Courier New', Courier, monospace !important;
+            font-weight: bold;
+        }
+        .hljs-number {
+            color: brown;
+        }
+    </style>
+    <script> // Utils
+        /**
+        * Choose a random element from array
+        */
+        function choose(arr) {
+            return arr[Math.floor((Math.random()*arr.length))];
+        }
+        /**
+         * Shuffle array in place.
+         * @param {Array} a items An array containing the items.
+         */
+        function shuffle(arr) {
+            var j, x, i;
+            for (i = arr.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = arr[i];
+                arr[i] = arr[j];
+                arr[j] = x;
+            }
+            return arr;
+        }
+        /**
+         * Generate a random int in range [min, max], both inclusive
+         */
+        function randint(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        /**
+         * A simple rotation cipher.
+         * Rotates ASCII values with character codes in [32, 126].
+         * May be derotated by rotating again with r = (95-r).
+         * @param {str} an ASCII string to obfuscate
+         * @param {r} a rotation amount in [0, 94]
+         */
+        function rotr(str, r) {
+            let n = 95; // = 126 - 32 + 1;
+            let codes = str.split('').map(c => 32 + (((c.charCodeAt() - 32) + r) % n));
+            return codes.map( c => String.fromCharCode(c) ).join('');
+        }
+    </script>
+    <script src="qtemplates.js" charset="utf-8"></script>
+    </head>
+    <body>
+<hr/>
+
+<!----------------------------------------------------------------------------------
+ q-multiplechoice expects:
+    1) A data-qid attribute with an identifier value that is unique to this document,
+    2) HTML prompt, 
+    3) A <script type="application/json"> holding the config object.
+-->
+<q-multiplechoice data-qid="Q01">
+    <p>Evaluate the following expression and choose the resulting value.</p>
+    <pre><code class="language-java">"1" + 1</code></pre>
+
+    <script type="application/json">
+    {"options" : ["<code>2</code>", "<code>\"11\"</code>", "<code>11</code>"],
+     "soln"    : "<code>\"11\"</code>" }
+    </script>
+</q-multiplechoice>
+<hr/>
+
+<!----------------------------------------------------------------------------------
+ q-multipleanswer expects:
+    1) A data-qid attribute with an identifier value that is unique to this document,
+    2) HTML prompt, 
+    3) A <script type="application/json"> holding the config object.
+-->
+<q-multipleanswer data-qid="Q02">
+    <p>Choose the value and type.<p>
+    <pre><code class="language-java">(4 > 3) + "blue"</code></pre>
+
+    <script type="application/json">
+    {"options" : ["<code>\"7blue\"</code>", "<code>\"trueblue\"</code>", "<code>true</code>", 
+                  "<code>boolean</code>",   "<code>int</code>",          "<code>String</code>"],
+     "soln"    : ["<code>\"trueblue\"</code>", "<code>String</code>"] }
+    </script>
+</q-multipleanswer>
+<hr/>
+
+<!----------------------------------------------------------------------------------
+ q-multipledropdowns expects:
+    1) A data-qid attribute with an identifier value that is unique to this document,
+    2) HTML prompt, 
+    3) A <script type="application/json"> holding the config object.
+-->
+<q-multipledropdowns data-qid="Q03">
+
+<p>Select initializers for A, B, and C to produce the output 1, 2, 3.</p>
+<pre><code class="language-java">
+int A = __A;  // Select correct variable initializer
+int B = __B;
+int C = __C;
+
+for (int i = A; i &lt; B; i = i + C) {
+   System.out.println(i);
+}
+</code></pre>
+
+<script type="application/json">
+{"options"   : {"__A": ["",1,2,4], "__B":["",1,2,4], "__C":["",1,2,4]},
+ "solns"     : [{"__A":1, "__B":4, "__C":1}],
+ "checkCase" : false}
+</script>
+
+</q-multipledropdowns>
+<hr/>
+
+<!----------------------------------------------------------------------------------
+ q-fillinblanks expects:
+    1) A data-qid attribute with an identifier value that is unique to this document,
+    2) HTML nodes as the prompt, 
+    3) A <script type="application/json"> holding the config object.
+-->
+<q-fillinblanks data-qid="Q04">
+
+<p>Enter initializers for A, B, and C to produce the output:  
+    <code class="language-java">1, 2, 3</code>.</p>
+
+<div>
+<pre><code class="language-java">
+int A = __A;  // Init variables
+int B = __B;
+int C = __C;
+
+for (int i = A; i &lt; B; i = i + C) {
+  System.out.println(i);
+}
+
+</code></pre></div>
+
+<script type="application/json">
+{"solns"    : [{"__A":1, "__B":4, "__C":1}],
+"checkCase" : false }
+</script>
+</q-fillinblanks>
+<hr/>
+
+<!----------------------------------------------------------------------------------
+ q-parsonsproblem expects:
+    1) A data-qid attribute with an identifier value that is unique to this document,
+    2) HTML nodes as the prompt, 
+    3) A <pre><code class="language-..."></code></pre> holding the lines of code to rearrange, and
+    4) A <script type="application/json"> holding the config object.
+-->
+<q-parsonsproblem data-qid="Q05">
+
+<p>Drag the lines of code on the left to the box on the right and rearrange so the resulting code 
+    snippet produces the output: <code class="language-java">1 2 3 Done</code>, in that order.</p>
+
+<pre><code class="language-java">int i = 0;
+while (i < 3) {
+    System.out.println(i);
+    i = i + 1;
+}
+System.out.printline("Done");</code></pre>
+
+<script type="application/json">
+{}
+</script>
+</q-parsonsproblem>
+<hr/>
+
+<!----------------------------------------------------------------------------------
+ q-matching expects:
+    1) A data-qid attribute with an identifier value that is unique to this document,
+    2) HTML nodes as the prompt, and
+    3) A <script type="application/json"> holding the config object
+-->
+<q-matching data-qid="Q06">
+<p>Drag the boxes on the <b>left</b> to the matching boxes on the right</p>
+
+<script type="application/json">
+{ "data": {
+    "overloading" :"To define two or more methods in a class with a common name but a different signatures.",
+    "extends"     :"Keyword used to set up an inheritance relationship between classes.",
+    "polymorphism":"A key concept in object oriented programming where one item may have many forms.",
+    "overriding"  :"To define a method in a derived class having the same signature as a method in one of its base classes.",
+    "signature"   :"A method's unique name and the number, type and order of its parameters."
+}}
+</script>
+</q-matching>
+<hr/>
+
+<!-- -------------------------------------------------------------- -->
+
+<!--
+//JSON.parse(atob(config));
+let cfg, prompt;
+
+// ----------------------------------------------------------------
+cfg =  {'options' : ['<code>2</code>', '<code>"11"</code>', '<code>11</code>'], 
+        'soln'    : '<code>"11"</code>' };
+prompt = `<p>Evaluate the following expression and choose the resulting value.</p>
+<pre><code class="language-java">"1" + 1</code></pre>`;
+
+document.body.appendChild(new QMultipleChoice('Q00', prompt, cfg));
+
+cfg =  {'options'   : ['<code>"7blue"</code>', '<code>"trueblue"</code>', '<code>true</code>', '<code>boolean</code>', '<code>int</code>', '<code>String</code>'],
+        'idxs'  : [1, 5] };
+prompt = `<p>Choose the value and type.<p>
+    <pre><code class="language-java">(4 > 3) + "blue"
+    </code></pre>`
+document.body.appendChild(new QMultipleAnswer('Q02', prompt, cfg));
+
+<!-- Example of creating QFillInBlanks and QMultipleDropdowns entirely in code
+<script>
+cfg =  {'ops'      : {'__A': [0,1,3,4], '__B':[0,1,3,4], '__C':[0,1,3,4]},
+        'solns'    : [{'__A':1, '__B':4, '__C':1}],
+        'checkCase': false,
+        'prompt'   : `
+<p>Select initializers for A, B, and C to produce the output 1, 2, 3.</p>
+<div>
+<pre><code class="language-java">
+int A = __A;  // Init variables
+int B = __B;
+int C = __C;
+
+for (int i = A; i &lt; B; i = i + C) {
+  System.out.println(i);
+}
+
+</code></pre></div>`};
+    document.body.appendChild(new QMultipleDropdowns('Q05', cfg));
+
+    cfg = { "data": {"A":"AAA", "B":"BBB", "C":"CCC"} }
+    document.body.appendChild(new QMatching('Q08', "Solve the matching problem", cfg));
+
+// ----------------------------------------------------------------
+//    cfg =  {'solns'    : [{'__A':1, '__B':4, '__C':1}],
+//            'checkCase': false,
+//            'prompt'   : `
+//<p>Enter initializers for A, B, and C to produce the output 1, 2, 3.</p>
+//<div>
+//<pre><code class="language-java">
+//int A = __A;  // Init variables
+//int B = __B;
+//int C = __C;
+//
+//for (int i = A; i &lt; B; i = i + C) {
+//  System.out.println(i);
+//}
+//
+//</code></pre></div>`};
+//    document.body.appendChild(new QFillInBlanks('Q04C', cfg));
+
+</script> -->
+
+</body>
+</html>
+
