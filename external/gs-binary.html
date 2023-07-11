@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Mark F. Russo, PhD. Jan 21, 2022 -->
+        <title>Binary Numbers</title>
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            table.display {
+                border-spacing: 0;
+                /* border-collapse: collapse; */
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td.title {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 14pt;
+                text-align: center;
+                user-select: none;
+            }
+            td.bit {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 32pt;
+                color: gray;
+                border-style: solid;
+                border-color: gray;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                user-select: none;
+            }
+            td.byte1 {
+                background-color: #FFCCCC;
+                color: "#AAAAAA";
+            }
+            td.byte2 {
+                background-color: #CCFFCC;
+                color: "#AAAAAA";
+            }
+            #encoded {
+                font-size: 36pt;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="display">
+            <tr>
+                <td class='title'>2<sup>15</sup></td>
+                <td class='title'>2<sup>14</sup></td>
+                <td class='title'>2<sup>13</sup></td>
+                <td class='title'>2<sup>12</sup></td>
+                <td class='title'>2<sup>11</sup></td>
+                <td class='title'>2<sup>10</sup></td>
+                <td class='title'>2<sup>9</sup></td>
+                <td class='title'>2<sup>8</sup></td>
+                <td class='title'>2<sup>7</sup></td>
+                <td class='title'>2<sup>6</sup></td>
+                <td class='title'>2<sup>5</sup></td>
+                <td class='title'>2<sup>4</sup></td>
+                <td class='title'>2<sup>3</sup></td>
+                <td class='title'>2<sup>2</sup></td>
+                <td class='title'>2<sup>1</sup></td>
+                <td class='title'>2<sup>0</sup></td>
+            </tr>
+            <tr>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte2'>0</td>
+                <td class='bit byte1'>0</td>
+                <td class='bit byte1'>0</td>
+                <td class='bit byte1'>0</td>
+                <td class='bit byte1'>0</td>
+                <td class='bit byte1'>0</td>
+                <td class='bit byte1'>0</td>
+                <td class='bit byte1'>0</td>
+                <td class='bit byte1'>0</td>
+            </tr>
+            <tr>
+                <td colspan="16" id="encoded">0</td>
+            </tr>
+        </table>
+
+        <script>
+            // Click event handler
+            function flipBit(ev) {
+                // Flip bit display
+                if ( ev.target.innerHTML === '0' ) {
+                    ev.target.innerText = '1';
+                    ev.target.style.borderColor = "black";
+                    ev.target.style.color = "black";
+                } else {
+                    ev.target.innerText = '0';
+                    ev.target.style.borderColor = "gray";
+                    ev.target.style.color = "gray";
+                }
+                
+                // Recalculate encoded value
+                let sum = 0;
+                let tds = document.querySelectorAll('td.bit');
+                for (let i = 0; i < tds.length; i++) {
+                    if (tds[i].innerHTML === '1') {
+                        let exp = parseInt( tds[i].dataset.exp );
+                        sum += (2**exp);
+                    }
+                }
+                document.getElementById("encoded").innerHTML = sum;
+            }
+
+            // Set up event handlers and element data
+            let tds = document.querySelectorAll('td.bit');
+            for (let i = 0; i < tds.length; i++) {
+                tds[i].onclick = flipBit;
+                tds[i].dataset.exp = 15-i;
+            }
+        </script>
+    </body>
+</html>

@@ -11,49 +11,6 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<section class="paragraphs"><h3 class="heading"><span class="title">Widening Conversions.</span></h3> <div class="para">In Java, type promotion refers to the <em class="emphasis">automatic</em> conversion of values from one data type to another, usually during arithmetic expression evaluation or assignment operations.</div> <div class="para">For example, a <code class="code-inline tex2jax_ignore">byte</code> will be automatically converted to an <code class="code-inline tex2jax_ignore">int</code> or a <code class="code-inline tex2jax_ignore">float</code>:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">byte smallNumber = 10;
-int largerNumber = smallNumber;     // Widening conversion from byte to int
-float floatingNumber = smallNumber; // Widening conversion from byte to float
-</code></pre></div> <div class="para">In the above code, the value of <code class="code-inline tex2jax_ignore">smallNumber</code> (a byte) is automatically promoted to <code class="code-inline tex2jax_ignore">int</code> and <code class="code-inline tex2jax_ignore">float</code> during assignment without the need for explicit casting.</div> <div class="para">The following table shows all valid widening conversions of primitive types. <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.9.1<span class="period">.</span></span><span class="space"> </span>Type Promotion (Widening Conversions)</figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">FROM</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">TO</th>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">byte</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">short</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">float</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-</table></div></figure>
-</div></section><span class="incontext"><a href="section-20.html#paragraphs-3" class="internal">in-context</a></span>
+<section class="paragraphs"><h2 class="heading"><span class="title">The Importance of Testing.</span></h2> <div class="para">The compiler tells us if we have <dfn class="terminology">syntax error</dfn>s and the execution engine throws exceptions when something goes wrong while the program is running (<dfn class="terminology">runtime errors</dfn>). How can we check when the program runs without error, but produces incorrect results (<dfn class="terminology">logic errors</dfn>)? The best way to check for logic errors is through testing.</div> <div class="para">A good test plan executes all paths through your source code and presents a wide range of possible inputs. It checks results produced to make sure all they are correct.</div></section><span class="incontext"><a href="appendix-testing.html#paragraphs-3" class="internal">in-context</a></span>
 </body>
 </html>

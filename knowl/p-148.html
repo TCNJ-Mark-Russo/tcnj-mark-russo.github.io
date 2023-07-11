@@ -11,48 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The following table shows all valid widening conversions of primitive types. <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.9.1<span class="period">.</span></span><span class="space"> </span>Type Promotion (Widening Conversions)</figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">FROM</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">TO</th>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">byte</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">short</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">float</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>, <code class="code-inline tex2jax_ignore">double</code>
-</td>
-</tr>
-</table></div></figure>
-</div>
-<span class="incontext"><a href="section-20.html#p-148" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Sure enough, as you can see by the session above, dividing 3 by 2 produces an <code class="code-inline tex2jax_ignore">int</code> with a value of 1, not 1.5. Because 1.5 cannot be stored in an <code class="code-inline tex2jax_ignore">int</code>, the result produced has value of 1. Specifically, dividing two integer number types performs <em class="emphasis">integer division</em>, not floating point division. Integer division drops any fractional parts of the result. A frequent pitfall of novice Java programmers is to expect a fractional part in a result after dividing two integer types, which is impossible, where would it be stored? Of course, this is not a problem when dividing floating point types.</div>
+<span class="incontext"><a href="section-pe-math.html#p-148" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Integer Primitive Types</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Computational Problem Solving with Java and Interactive Object Graphics">
+<meta property="book:author" content="Mark F. Russo, PhD">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./styles/mfr.css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.3/prefix-runtime.743dc745e5a9b334.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.3/prefix-runestone.a6d252836fb5c953.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.3/prefix-runestone.931faef5361cf6e9.css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="javaog.html"><span class="title">Computational Problem Solving with Java and Interactive Object Graphics</span></a></h1>
+<p class="byline">Mark F. Russo, PhD</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-pe-variables.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-primitives-expressions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-pe-chars.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-getting-started.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gs-learning.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Learning to Program</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computers and Computational Devices</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-languages.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Programming Languages</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-oop.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Object Oriented Programming</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-java.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The Java Programming Language</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-toolkit.html" class="internal"><span class="codenumber">1.6</span> <span class="title">The Java Development Kit</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-gs-install.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Installing Your Toolkit</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gs-install.html#subsection-1" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Install the Java Development Kit (JDK)</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-install.html#subsection-2" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Install a Programming Editor</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-gs-jshell.html" class="internal"><span class="codenumber">1.8</span> <span class="title">The JShell REPL</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-doodlepad.html" class="internal"><span class="codenumber">1.9</span> <span class="title">The DoodlePad Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-10.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-primitives-expressions.html" class="internal"><span class="codenumber">2</span> <span class="title">Primitives, Variables and Expressions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-pe-primitives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Primitive Data Types</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-pe-variables.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Variables and Comments</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-variables.html#exercises-1" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-pe-integers.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Integer Primitive Types</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-integers.html#exercises-2" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-chars.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Character Primitive Type</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-chars.html#exercises-3" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-pe-floats.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Floating Point Primitive Number Types</span></a></div></li>
+<li><div class="toc-item"><a href="section-pe-strings.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strings</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-pe-math.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Mathematical Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-math.html#exercises-4" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-assignment.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Assignment Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-assignment.html#exercises-5" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-relational.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Relational Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-relational.html#exercises-6" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-logical.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Logical Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-logical.html#exercises-7" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-conversion.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Type Conversions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-conversion.html#exercises-8" class="internal"><span class="codenumber">2.11</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-pe-concepts.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-pe-exercises.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-java-programs.html" class="internal"><span class="codenumber">3</span> <span class="title">Java Programs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-compile.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Your First Java Program</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-static-methods.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Static Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-string.html" class="internal"><span class="codenumber">3.3</span> <span class="title">String Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-scanner.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Scanner Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-doodlepad.html" class="internal"><span class="codenumber">3.5</span> <span class="title">DoodlePad Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-shapes.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Creating Shapes</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-mouse.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Handling Mouse Interaction</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-reftypes.html" class="internal"><span class="codenumber">4</span> <span class="title">Reference Types</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-rt-stringbuilder.html" class="internal"><span class="codenumber">4.1</span> <span class="title">StringBuilder Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-refvars.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Reference Variables</span></a></div></li>
+<li><div class="toc-item"><a href="section-34.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Garbage Collection</span></a></div></li>
+<li><div class="toc-item"><a href="section-35.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-concepts.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-control1.html" class="internal"><span class="codenumber">5</span> <span class="title">Flow Control - Part 1</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-c1-if-statements.html" class="internal"><span class="codenumber">5.1</span> <span class="title">if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-38.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-39.html" class="internal"><span class="codenumber">5.3</span> <span class="title">If-statement Strategies</span></a></div></li>
+<li><div class="toc-item"><a href="section-40.html" class="internal"><span class="codenumber">5.4</span> <span class="title">while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-41.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Block Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-42.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Collection Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-43.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-44.html" class="internal"><span class="codenumber">5.8</span> <span class="title">break and continue</span></a></div></li>
+<li><div class="toc-item"><a href="section-45.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Nested Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-46.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Object Graphics</span></a></div></li>
+<li><div class="toc-item"><a href="section-47.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-control2.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow Control - Part 2</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-48.html" class="internal"><span class="codenumber">6.1</span> <span class="title">for-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-49.html" class="internal"><span class="codenumber">6.2</span> <span class="title">do-while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-50.html" class="internal"><span class="codenumber">6.3</span> <span class="title">for-each Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-51.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.5</span> <span class="title">switch-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Conditional Expressions</span></a></div></li>
+<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
+<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-arrays.html" class="internal"><span class="codenumber">7</span> <span class="title">Arrays</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
+<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
+<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Creating Stars</span></a></div></li>
+<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Ragged Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Arrays of Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Arrays Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Command line Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">7.12</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-classes.html" class="internal"><span class="codenumber">8</span> <span class="title">Custom Classes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Class vs Instance</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Constructors and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Access Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Encapsulation</span></a></div></li>
+<li><div class="toc-item"><a href="section-cl-enumerated.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Enumerated Types</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Multiple File Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Driver Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Testing</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Review of Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.11</span> <span class="title">Shadowing</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Anonymous Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">8.13</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">8.14</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">9</span> <span class="title">Inheritance</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.5</span> <span class="title">protected Access</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.6</span> <span class="title">The Object Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">10</span> <span class="title">Interfaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">11</span> <span class="title">Program and Class Design</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
+<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
+<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Object Relationships</span></a></div></li>
+<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">11.4</span> <span class="title">When to use Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">11.5</span> <span class="title">When to use Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
+<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
+<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Class Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Object Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.10</span> <span class="title">Activity Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">11.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">11.13</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Exceptions and Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-18.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-19.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Debugging</span></a></div></li>
+<li>
+<div class="toc-item"><a href="appendix-testing.html" class="internal"><span class="codenumber">C</span> <span class="title">Testing</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="exercises-20.html" class="internal"><span class="codenumber">C</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
+<li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">15</span> <span class="title">Extra - To Be Deleted</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Visualizer</span></a></div></li>
+<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Active Code</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-22.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-23.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-pe-integers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Integer Primitive Types</span>
+</h2>
+<div class="para" id="p-109">Java divides numeric values into two broad categories: <em class="emphasis">integers</em> and <em class="emphasis">floating point numbers</em>. An integer is a numeric value having no decimal places. It may optionally be preceded by a sign, like - or +, but it may not have commas or a decimal place (.). Consequently, integers are whole numbers (positive, negative or zero). No fractional part is permitted. Examples of Java integer value include 2, -64, 0, and 2147483647. We may enter these values directly into JShell, with no comma, at least up to a point. For example, if we enter 2147483647, JShell happily reads it and saves it with a new variable name generated automatically (beginning with <code class="code-inline tex2jax_ignore">$</code> and followed a number). But if we enter a value that is larger by 1, that is 2147483648, we see an error.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">jshell&gt; 2147483647;
+$1 ==&gt; 2147483647
+|  created scratch variable $1 : int
+
+jshell&gt; 2147483648
+|  Error:
+|  integer number too large: 2147483648;
+|  2147483648
+|  ^
+</pre></div>
+<div class="para" id="p-110">The error tells us that the number is <em class="emphasis">too large</em>. More specifically, the number is too large to be stored in the memory allotted by the default type that JShell uses to store integers values, <code class="code-inline tex2jax_ignore">int</code>. To store 2147483648 in memory, we must choose a different Java integer type, one capable of holding larger numbers by virtue of being allocated more memory.</div>
+<div class="para" id="p-111">Recall that Java provides four primitive integer types, <code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>. We use the term primitive because these types are fundamental to the Java language. These four types are listed in the following table along with the amount of memory used to store each as well as the range of values that may be stored as min and max. All integer variables are stored as one of these types. JShell chooses <code class="code-inline tex2jax_ignore">int</code> to store integers by default. We can see this in the <code class="code-inline tex2jax_ignore">$1</code> scratch variable above when JShell produces the output <code class="code-inline tex2jax_ignore">created scratch variable $1 : int</code>. The final <code class="code-inline tex2jax_ignore">int</code> tells us that <code class="code-inline tex2jax_ignore">$1</code> is of type <code class="code-inline tex2jax_ignore">int</code>. Attempting to create the value 2147483648 and store it as an <code class="code-inline tex2jax_ignore">int</code> produces an error because, according to the following table, that value is outside the range of values capable of being stored as an <code class="code-inline tex2jax_ignore">int</code>. What we really need is a way to store the number as a <code class="code-inline tex2jax_ignore">long</code>.</div>
+<figure class="table table-like" id="table-pe-int-info"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.3.1<span class="period">.</span></span><span class="space"> </span>Integer types, range, and memory requirements.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">type</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">min</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">max</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">memory</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">byte</code></td>
+<td class="l m b0 r0 l0 t0 lines">-128</td>
+<td class="l m b0 r0 l0 t0 lines">127</td>
+<td class="l m b0 r0 l0 t0 lines">1 byte</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">short</code></td>
+<td class="l m b0 r0 l0 t0 lines">-32,768</td>
+<td class="l m b0 r0 l0 t0 lines">32,767</td>
+<td class="l m b0 r0 l0 t0 lines">2 bytes</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l m b0 r0 l0 t0 lines">-2,147,483,648</td>
+<td class="l m b0 r0 l0 t0 lines">2,147,483,647</td>
+<td class="l m b0 r0 l0 t0 lines">4 bytes</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long</code></td>
+<td class="l m b0 r0 l0 t0 lines">-9,223,372,036,854,770,000</td>
+<td class="l m b0 r0 l0 t0 lines">9,223,372,036,854,770,000</td>
+<td class="l m b0 r0 l0 t0 lines">8 bytes</td>
+</tr>
+</table></div></figure><div class="para" id="p-112">Any time we enter a number directly into a Java program, even if we don’t store it using a variable, Java must interpret it and hold in memory, at least temporarily. Whenever any value is entered directly into a Java program, such as a number, it is called a <dfn class="terminology">literal</dfn>. Integer literals of type <code class="code-inline tex2jax_ignore">int</code> are written as a sequence of digits, using no other special syntax. But other literal types require extra care, such as by adding trailing characters to indicate their type. For example, a <code class="code-inline tex2jax_ignore">long</code> literal is written as a sequence of digits followed by a trailing <code class="code-inline tex2jax_ignore">L</code>. The special trailing character tells Java to set aside twice the amont of memory used to store an <code class="code-inline tex2jax_ignore">int</code> (8 bytes). To create a long literal, terminate the literal’s sequence of integer digits with an <code class="code-inline tex2jax_ignore">L</code>, as follows. Note that when we enter an integer value like this, JShell in verbose mode tells us that the type is <code class="code-inline tex2jax_ignore">long</code>.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">jshell&gt; 2147483648L;
+$3 ==&gt; 2147483648
+|  created scratch variable $3 : long
+</pre></div>
+<div class="para" id="p-113">Java now knows you intend to create a long and so is declares the scratch variable <code class="code-inline tex2jax_ignore">$3</code> with a type of <code class="code-inline tex2jax_ignore">long</code> and initializes it with the value entered. This time, because a variable of type <code class="code-inline tex2jax_ignore">long</code> is capable of storing the number 2147483648, JShell does not produce an error. <code class="code-inline tex2jax_ignore">long</code> literals are made up of digits and a trailing <code class="code-inline tex2jax_ignore">L</code>&gt;. Unfortunately, Java provides no way to express a <code class="code-inline tex2jax_ignore">short</code> and <code class="code-inline tex2jax_ignore">byte</code> literals. We can declare <code class="code-inline tex2jax_ignore">short</code> and <code class="code-inline tex2jax_ignore">byte</code> variables and initialise them, but we must use integer literals as the initial value. Java handles the automatic conversion from an <code class="code-inline tex2jax_ignore">int</code> to a <code class="code-inline tex2jax_ignore">short</code> and <code class="code-inline tex2jax_ignore">byte</code> before it is written to the variable’s memory. If the initial value is too big to fit, we’ll see an error.</div>
+<div class="para" id="p-114">As we’ve seen, declaring a variable is accomplished by entering a type followed by the name of the variable we wish to create and a final semicolon. For example, let’s say we want to create a variable named <code class="code-inline tex2jax_ignore">n</code> of type <code class="code-inline tex2jax_ignore">long</code>. We would enter <code class="code-inline tex2jax_ignore">long n;</code>. Java assigns a default value of 0 to all new integer variables that have not been initialized.</div>
+<div class="para" id="p-115">With the variable <code class="code-inline tex2jax_ignore">n</code> and its associated memory created, we may safely assign our larger number to the variable because as a type <code class="code-inline tex2jax_ignore">long</code> it is capable of holding the larger value.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">jshell&gt; long n;
+n ==&gt; 0
+|  created variable n : long
+
+jshell&gt; n = 2147483648L;
+n ==&gt; 2147483648
+|  assigned to n : long
+
+jshell&gt;
+</pre></div>
+<div class="para" id="p-116">Using similar procedures you may declare variables with one of the four integer types and assign values. You may also use these variable names any place you would normally use its associated value, such as in a mathematical expression. Make sure to be careful that all variables assigned values have enough memory to hold assigned values. Assigning an <code class="code-inline tex2jax_ignore">int</code> value to a <code class="code-inline tex2jax_ignore">long</code> variable is permitted, but not the other way around.</div>
+<section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-117">Declare and initialize integer variables of all four integer types.</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-118">Write simple mathematical expressions that combine the different types.</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-119">What do you notice about the result type when you add an <code class="code-inline tex2jax_ignore">int</code> and a <code class="code-inline tex2jax_ignore">long</code>. Why is this the case?</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-pe-variables.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-pe-chars.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

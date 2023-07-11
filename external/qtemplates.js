@@ -50,6 +50,9 @@ class QMultipleChoice extends HTMLElement {
                 font-weight: bold;
                 line-height: 1.4em;
             }
+            button#bReset, button#bCheck {
+                width: 50px;
+            }
             .hljs-number   { color: brown; }
             .hljs-string   { color: #444; }
             .hljs-type     { color: darkred; } 
@@ -192,6 +195,9 @@ class QMultipleAnswer extends HTMLElement {
                 font-family: 'Courier New', Courier, monospace !important;
                 font-weight: bold;
                 line-height: 1.4em;
+            }
+            button#bReset, button#bCheck {
+                width: 50px;
             }
             .hljs-number   { color: brown; }
             .hljs-string   { color: #444; }
@@ -356,6 +362,9 @@ class QFillInBlanks extends HTMLElement {
                 font-family: 'Courier New', Courier, monospace !important;
                 font-weight: bold;
                 line-height: 1.5em;
+            }
+            button#bReset, button#bCheck {
+                width: 50px;
             }
             .hljs-number   { color: brown; }
             .hljs-string   { color: #444; }
@@ -538,6 +547,9 @@ class QMultipleDropdowns extends HTMLElement {
                 font-family: 'Courier New', Courier, monospace !important;
                 font-weight: bold;
                 line-height: 1.5em;
+            }
+            button#bReset, button#bCheck {
+                width: 50px;
             }
             .hljs-number   { color: brown; }
             .hljs-string   { color: #444; }
@@ -748,6 +760,9 @@ class QParsonsProblem extends HTMLElement {
                 font-family: 'Courier New', Courier, monospace !important;
                 font-weight: bold;
                 line-height: 1.5em;
+            }
+            button#bReset, button#bCheck {
+                width: 50px;
             }
             .hljs-number   { color: brown; }
             .hljs-string   { color: #444; }
@@ -1080,6 +1095,9 @@ class QMatching extends HTMLElement {
                 font-family: 'Courier New', Courier, monospace !important;
                 font-weight: bold;
                 line-height: 1.5em;
+            }
+            button#bReset, button#bCheck {
+                width: 50px;
             }
             .hljs-number   { color: brown; }
             .hljs-string   { color: #444; }

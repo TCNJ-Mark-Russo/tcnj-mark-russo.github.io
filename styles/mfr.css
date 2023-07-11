@@ -45,5 +45,10 @@ span.codenumber::after {
     background-color: transparent;
 }
 :root {
-    --chaptertoc: goldenrod;
+    --chaptertoc: #20477b;
+    --highlighttoc: #588cd3; 
+    --sectiontocactive: goldenrod;
+}
+iframe#interactive-gs-binary {
+    height: 180px;
 }
