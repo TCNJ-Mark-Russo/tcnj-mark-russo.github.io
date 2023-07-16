@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Counter.java
+
+// Counter counts people entering and exiting a room
+class Counter {
+    // Total count
+    public static long total = 0L;
+
+    // Increment total count
+    public static void enter() {
+        Counter.total += 1L;
+    }
+    // Decrement total count
+    public static void exit() {
+        Counter.total -= 1L;
+    }
+    // Reset counter
+    public static void reset() {
+        Counter.total = 0L;
+    }
+    // Test the Counter class
+    public static void main(String[] args) {
+        Counter.enter();    // Person enters 
+        Counter.enter();    // Person enters 
+        Counter.enter();    // Person enters 
+        Counter.enter();    // Person enters 
+        Counter.exit();     // Person exits 
+        Counter.enter();    // Person enters 
+        Counter.exit();     // Person exits 
+        Counter.exit();     // Person exits 
+
+        // How many people are left in the room?
+        System.out.println("There are " + Counter.total 
+                            + " people remaining in the room");
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="section-35.html#listing-rt-staticvars" class="internal">in-context</a></span>
+</body>
+</html>

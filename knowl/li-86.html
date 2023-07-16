@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h3 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span>
-</h3>Java will operate only on operands having the same type. For example, Java will not add an int and long. Similarly, Java will not add a float and a double. Before evaluating an expression with different operand types, Java attempts to <em class="emphasis">promote</em> the type automatically of one of the operands to match the type of the other. These type changes are called <em class="emphasis">widening conversions</em> because more memory is used to store the converted data compared to the original data (the memory required widens).</article><span class="incontext"><a href="section-pe-concepts.html#li-86" class="internal">in-context</a></span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span>
+</h3>To cast data from one type to another, precede the given value, variable, or expression with parentheses containing the new type. For example, to convert a long to an int, precede a variable, value or expression with (int). <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><span class="prompt unselectable">jshell&gt; </span><b>(int)123L
+</b>$2 ==&gt; 123
+| created scratch variable $2 : int
+To convert a double to a float, precede a variable,
+value, or expression with (float)
+<span class="prompt unselectable">jshell&gt; </span><b>(float)12.34
+</b>$3 ==&gt; 12.34
+| created scratch variable $3 : float
+</pre></div></article><span class="incontext"><a href="section-pe-concepts.html#li-86" class="internal">in-context</a></span>
 </body>
 </html>

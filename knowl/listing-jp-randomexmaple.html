@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomExample.java 
+import java.util.Random;
+
+public class RandomExample {
+    public static void main(String[] args) {
+        int i1, i2;
+        double x1, x2, x3;
+
+        Random rnd = new Random();
+        
+        // Pseudorandom ints in range [0, 10)
+        // The value 10, is out of range
+        i1 = rnd.nextInt(10);
+        i2 = rnd.nextInt(10);
+        System.out.println(i1 + ", " + i2);
+
+        // Pseudorandom doubles in range [0.0, 1.0)
+        x1 = rnd.nextDouble();
+        x2 = rnd.nextDouble();
+        System.out.println(x1 + ", " + x2);
+
+        // Pseudorandom double with mean 0.0 
+        // and standard deviation 1.0
+        x1 = rnd.nextGaussian();
+        x2 = rnd.nextGaussian();
+        x3 = rnd.nextGaussian();
+        System.out.println(x1 + ", " + x2 + ", " + x3);
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Random</code> method examples.</figcaption></figure><span class="incontext"><a href="section-jp-random.html#listing-jp-randomexmaple" class="internal">in-context</a></span>
+</body>
+</html>

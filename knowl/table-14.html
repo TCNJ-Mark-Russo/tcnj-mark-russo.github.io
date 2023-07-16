@@ -11,61 +11,50 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.11.3<span class="period">.</span></span><span class="space"> </span>Class primitive equivalents and Java primitive parsing</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.11.2<span class="period">.</span></span><span class="space"> </span>Narrowing Primitive Conversions</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">Primitive</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Class</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Parse method</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Evaluates to</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">FROM</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">TO</th>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">byte</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Byte</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Byte.parseByte("1")</code></td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">1</code> (byte)</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">short</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Short</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Short.parseShort("1")</code></td>
 <td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">1</code> (short)</td>
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">char</code>
+</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Integer</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Integer.parseInt("1")</code></td>
 <td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">1</code> (int)</td>
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>
+</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Long</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Long.parseLong("1")</code></td>
 <td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">1</code> (long)</td>
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>, <code class="code-inline tex2jax_ignore">int</code>
+</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">float</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Float</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Float.parseFloat("3.15")</code></td>
 <td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">3.14</code> (float)</td>
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>
+</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Double</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Double.parseDouble("3.15")</code></td>
 <td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">3.14</code> (double)</td>
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">char</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>, <code class="code-inline tex2jax_ignore">float</code>
+</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">boolean</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Boolean</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Boolean.parseBoolean("true")</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
 <td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">true</code> (boolean)</td>
+<code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>
+</td>
 </tr>
 </table></div></figure><span class="incontext"><a href="section-pe-conversion.html#table-14" class="internal">in-context</a></span>
 </body>

@@ -1,6 +1,7 @@
 // ---------------------------------------------------------------  
 // qtemplates.js
 // MFR
+// v. 2023/07/14
 
 // TODO:
 // - Build random question generators
@@ -106,7 +107,7 @@ class QMultipleChoice extends HTMLElement {
                 this.config.options.map( (x, index) => `<input type="radio" name='${this.qid}' value='${x}'/> ${x}`).join('<br/>');
 
             // Highlight code
-            let blocks = this.shadowRoot.querySelectorAll('pre code'); 
+            let blocks = this.shadowRoot.querySelectorAll('code'); 
             for (let i = 0; i< blocks.length; i++) { hljs.highlightElement(blocks[i]); }
 
             // Set event handler for [Check] and [Reset] buttons
@@ -168,7 +169,7 @@ customElements.define("q-multiplechoice", QMultipleChoice);
 
 // --------------------------------------------------------------- 
 // 2. Multiple Answer
-// qid   : Unique Question ID, like Q01
+// qid     : Unique Question ID, like Q01
 // config is object with keys:
 // options : An array of answer options to display
 // soln    : Correct answer options 
@@ -254,7 +255,7 @@ class QMultipleAnswer extends HTMLElement {
                 this.config.options.map( (x, index) => `<input type="checkbox" name='${this.qid}' value='${x}'/> ${x}`).join('<br/>');
 
             // Highlight code
-            let blocks = this.shadowRoot.querySelectorAll('pre code'); 
+            let blocks = this.shadowRoot.querySelectorAll('code'); 
             for (let i = 0; i< blocks.length; i++) { hljs.highlightElement(blocks[i]); }
 
             // Set event handler for [Check] and [Reset] buttons
@@ -422,7 +423,7 @@ class QFillInBlanks extends HTMLElement {
             }
 
             // Highlight any code in component
-            let blocks = this.shadowRoot.querySelectorAll('pre code');
+            let blocks = this.shadowRoot.querySelectorAll('code');
             for (let i = 0; i< blocks.length; i++) { hljs.highlightElement(blocks[i]); }
 
             // AFTER code highlight, substitute solution keys with <input> elements with key id
@@ -524,6 +525,12 @@ customElements.define("q-fillinblanks", QFillInBlanks);
 // options   : An object mapping <select>s to an array of options
 // solns     : An array of correct answer maps. Each maps <input> id to correct answer
 // checkCase : false if to test solutions independent of case
+// <script type="application/json">
+// {"options" : {"__Q1V":["2.0", "2", 10],  "__Q1T":["double", "int", "long"],
+//               "__Q2V":["4.0", "2", 221], "__Q2T":["double", "int", "float"]},
+// "solns"   : [{"__Q1V":"2.0", "__Q1T":"double", "__Q2V":"4.0", "__Q2T":"double"}] }
+// </script>
+
 class QMultipleDropdowns extends HTMLElement {
     static get observedAttributes() { return ['data-qid']; }
 
@@ -606,16 +613,23 @@ class QMultipleDropdowns extends HTMLElement {
             }
 
             // Highlight any code in component
-            let blocks = this.shadowRoot.querySelectorAll('pre code');
+            let blocks = this.shadowRoot.querySelectorAll('code');
             for (let i = 0; i< blocks.length; i++) { hljs.highlightElement(blocks[i]); }
 
             // AFTER code highlight, substitute solution keys with <input> elements with key id
             // using a text substitution
             let html = this.shadowRoot.innerHTML;
             for (let k in this.config.options) {
-                let parts = [`<select name='${this.qid}${k}' id='${k}'>`];
+                // Build options and shuffle
+                let parts = [];
                 for (let op of this.config.options[k]) { parts.push( `<option value="${op}">${op}</option>` ); }
+                shuffle(parts);
+                // Add blank answer to front 
+                parts.unshift(`<option value=""></option>`);
+                // Add select parts to front and back
+                parts.unshift(`<select name='${this.qid}${k}' id='${k}'>`);
                 parts.push(`</select>`);
+                // Replace string in HTML
                 html = html.replace(k, parts.join('')); 
             }
             this.shadowRoot.innerHTML = html;
@@ -835,7 +849,7 @@ class QParsonsProblem extends HTMLElement {
             // Get lines of code and save a copy
             let cls = '';
             let lines = [];
-            let codeBlock = this.querySelector('pre code');
+            let codeBlock = this.querySelector('code');
             if (codeBlock) {
                 cls = codeBlock.className;
                 const codeText = codeBlock.innerText;

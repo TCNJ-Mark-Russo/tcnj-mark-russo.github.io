@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>String Class</title>
+<title>The String Class</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,15 +86,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.3';
+eBookConfig.runestone_version = '7.0.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.3/prefix-runtime.743dc745e5a9b334.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.3/prefix-runestone.a6d252836fb5c953.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.3/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.3/prefix-runestone.931faef5361cf6e9.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runtime.61a1aa562b2eef01.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -241,7 +241,7 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="section-gs-install.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Installing Your Toolkit</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-gs-install.html#subsection-1" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Install the Java Development Kit (JDK)</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-install.html#subsection-gs-install-jdk" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Install the Java Development Kit (JDK)</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-install.html#subsection-2" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Install a Programming Editor</span></a></div></li>
 </ul>
 </li>
@@ -294,15 +294,50 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-java-programs.html" class="internal"><span class="codenumber">3</span> <span class="title">Java Programs</span></a></div>
+<div class="toc-item"><a href="chapter-java-programs.html" class="internal"><span class="codenumber">3</span> <span class="title">Java Programs and Objects</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-jp-compile.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Your First Java Program</span></a></div></li>
-<li><div class="toc-item"><a href="section-jp-static-methods.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Static Methods</span></a></div></li>
-<li class="active"><div class="toc-item"><a href="section-jp-string.html" class="internal"><span class="codenumber">3.3</span> <span class="title">String Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-jp-scanner.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Scanner Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-jp-doodlepad.html" class="internal"><span class="codenumber">3.5</span> <span class="title">DoodlePad Library</span></a></div></li>
-<li><div class="toc-item"><a href="section-jp-shapes.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Creating Shapes</span></a></div></li>
-<li><div class="toc-item"><a href="section-jp-mouse.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Handling Mouse Interaction</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-jp-compile.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Your First Java Program</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">A Java Program File</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Compiling a Java Program</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Running a Compiled Java Program</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-static-methods.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Static Methods</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-6" class="internal"><span class="codenumber">3.2.1</span> <span class="title"><code class="code-inline tex2jax_ignore">public static void main(...)</code></span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-7" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Other <code class="code-inline tex2jax_ignore">static</code> Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Source Code Formatting</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-jp-string.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The String Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-9" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Instantiating a String</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-10" class="internal"><span class="codenumber">3.3.2</span> <span class="title">String Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-11" class="internal"><span class="codenumber">3.3.3</span> <span class="title">String Examples</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-scanner.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Scanner Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-12" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Instantiating a Scanner</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-13" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Scanner Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-14" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Scanner Examples</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-random.html" class="internal"><span class="codenumber">3.5</span> <span class="title">The Random Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-15" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Instantiating a Random Object</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-16" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Random Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-17" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Random Example</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-jp-concepts.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-exercises.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -310,180 +345,205 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="section-rt-stringbuilder.html" class="internal"><span class="codenumber">4.1</span> <span class="title">StringBuilder Class</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-refvars.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Reference Variables</span></a></div></li>
-<li><div class="toc-item"><a href="section-34.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Garbage Collection</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-gc.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Garbage Collection</span></a></div></li>
 <li><div class="toc-item"><a href="section-35.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-concepts.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-control1.html" class="internal"><span class="codenumber">5</span> <span class="title">Flow Control - Part 1</span></a></div>
+<div class="toc-item"><a href="chapter-doodlepad.html" class="internal"><span class="codenumber">5</span> <span class="title">DoodlePad</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-c1-if-statements.html" class="internal"><span class="codenumber">5.1</span> <span class="title">if-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-38.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-39.html" class="internal"><span class="codenumber">5.3</span> <span class="title">If-statement Strategies</span></a></div></li>
-<li><div class="toc-item"><a href="section-40.html" class="internal"><span class="codenumber">5.4</span> <span class="title">while-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-41.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Block Scope</span></a></div></li>
-<li><div class="toc-item"><a href="section-42.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Collection Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-43.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-44.html" class="internal"><span class="codenumber">5.8</span> <span class="title">break and continue</span></a></div></li>
-<li><div class="toc-item"><a href="section-45.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Nested Control</span></a></div></li>
-<li><div class="toc-item"><a href="section-46.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Object Graphics</span></a></div></li>
-<li><div class="toc-item"><a href="section-47.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-doodlepad.html" class="internal"><span class="codenumber">5.1</span> <span class="title">DoodlePad Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-model.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Drawing Model</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-dp-shapes.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Creating Shapes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-18" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Rectangle</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-19" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Oval</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-20" class="internal"><span class="codenumber">5.3.3</span> <span class="title">RoundRect</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-21" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Line</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-22" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Arc</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-dp-colors.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Colors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-interaction.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Handling Events and Interactions</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Paths</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Images</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-more.html" class="internal"><span class="codenumber">5.8</span> <span class="title">More Features</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-concepts.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-control2.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow Control - Part 2</span></a></div>
+<div class="toc-item"><a href="chapter-control1.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow Control - Part 1</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-48.html" class="internal"><span class="codenumber">6.1</span> <span class="title">for-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-49.html" class="internal"><span class="codenumber">6.2</span> <span class="title">do-while-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-50.html" class="internal"><span class="codenumber">6.3</span> <span class="title">for-each Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-51.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
-<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.5</span> <span class="title">switch-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Conditional Expressions</span></a></div></li>
-<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
-<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
-<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-if-statements.html" class="internal"><span class="codenumber">6.1</span> <span class="title">if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-49.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-50.html" class="internal"><span class="codenumber">6.3</span> <span class="title">If-statement Strategies</span></a></div></li>
+<li><div class="toc-item"><a href="section-51.html" class="internal"><span class="codenumber">6.4</span> <span class="title">while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Block Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Collection Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.8</span> <span class="title">break and continue</span></a></div></li>
+<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Nested Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Object Graphics</span></a></div></li>
+<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">6.12</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-arrays.html" class="internal"><span class="codenumber">7</span> <span class="title">Arrays</span></a></div>
+<div class="toc-item"><a href="chapter-control2.html" class="internal"><span class="codenumber">7</span> <span class="title">Flow Control - Part 2</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
-<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
-<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Creating Stars</span></a></div></li>
-<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Ragged Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
-<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Arrays of Objects</span></a></div></li>
-<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Arrays Library</span></a></div></li>
-<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Command line Parameters</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">7.12</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">7.1</span> <span class="title">for-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">7.2</span> <span class="title">do-while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">7.3</span> <span class="title">for-each Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.5</span> <span class="title">switch-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Conditional Expressions</span></a></div></li>
+<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
+<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-classes.html" class="internal"><span class="codenumber">8</span> <span class="title">Custom Classes</span></a></div>
+<div class="toc-item"><a href="chapter-arrays.html" class="internal"><span class="codenumber">8</span> <span class="title">Arrays</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Class vs Instance</span></a></div></li>
-<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Constructors and Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Access Control</span></a></div></li>
-<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Encapsulation</span></a></div></li>
-<li><div class="toc-item"><a href="section-cl-enumerated.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Enumerated Types</span></a></div></li>
-<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Multiple File Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Driver Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Testing</span></a></div></li>
-<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Review of Scope</span></a></div></li>
-<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.11</span> <span class="title">Shadowing</span></a></div></li>
-<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Anonymous Objects</span></a></div></li>
-<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">8.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">8.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Creating Stars</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Ragged Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Arrays of Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Arrays Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Command line Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.11</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">9</span> <span class="title">Inheritance</span></a></div>
+<div class="toc-item"><a href="chapter-classes.html" class="internal"><span class="codenumber">9</span> <span class="title">Custom Classes</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
-<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.5</span> <span class="title">protected Access</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.6</span> <span class="title">The Object Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Class vs Instance</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Constructors and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Access Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Encapsulation</span></a></div></li>
+<li><div class="toc-item"><a href="section-cl-enumerated.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Enumerated Types</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Multiple File Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Driver Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Testing</span></a></div></li>
+<li><div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Review of Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Shadowing</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">9.12</span> <span class="title">Anonymous Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">9.13</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">9.14</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">10</span> <span class="title">Interfaces</span></a></div>
+<div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">10</span> <span class="title">Inheritance</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
+<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
+<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">11</span> <span class="title">Program and Class Design</span></a></div>
+<div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Interfaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">11.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">11.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.10</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">11.12</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">11.13</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Exceptions and Files</span></a></div>
+<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">12</span> <span class="title">Program and Class Design</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">12.13</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
+<div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">13</span> <span class="title">Exceptions and Files</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-18.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Runtime Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Catching Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
+<div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">14</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-19.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">14.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">15</span> <span class="title">Algorithms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-144.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-145.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-146.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-147.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-18.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Debugging</span></a></div></li>
 <li>
-<div class="toc-item"><a href="appendix-testing.html" class="internal"><span class="codenumber">C</span> <span class="title">Testing</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="exercises-20.html" class="internal"><span class="codenumber">C</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="appendix-testing.html" class="internal"><span class="codenumber">D</span> <span class="title">Testing</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="exercises-19.html" class="internal"><span class="codenumber">D</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
@@ -492,42 +552,182 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">15</span> <span class="title">Extra - To Be Deleted</span></a></div>
+<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-22.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-23.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-148.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
+<li><div class="toc-item"><a href="section-149.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-20.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-22.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-jp-string"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">String Class</span>
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">The String Class</span>
 </h2>
-<div class="para" id="p-237">Java provides a rich set of methods and functionalities in the <code class="code-inline tex2jax_ignore">String</code> class, making it powerful and versatile for working with text and string manipulation.</div>
-<div class="para" id="p-238">Once a <code class="code-inline tex2jax_ignore">String</code> variable is created and initialized, you can perform various operations on it. Here are some commonly used methods and functionalities of the <code class="code-inline tex2jax_ignore">String</code> class:</div>
+<section class="introduction" id="introduction-10"><div class="para" id="p-249">Another way that we benefit from encapsulation is unique to object oriented programming. That is to encapsulate both state (data) and behavior (methods) in a larger structure called an <dfn class="terminology">object</dfn>. The way that we create an <dfn class="terminology">instance</dfn> of an object is by using the code we write when declaring a <dfn class="terminology">class</dfn>. In fact, an <em class="emphasis">object</em> is often referred to as an <em class="emphasis">instance of a class</em>, and creating a new object as <em class="emphasis">instanciating a class</em>. We won’t be writing new classes to be instantiated until a bit later. Fortunately, The <a href="" class="xref" data-knowl="./knowl/glossary-jdk.html" title="Term: JDK">JDK</a> ships with a huge number of prewritten and debugged classes that we can use directly. The first class we will investigate is <code class="code-inline tex2jax_ignore">String</code>.</div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Instantiating a String</span>
+</h3>
+<div class="para" id="p-250">It may surprise you to learn that <code class="code-inline tex2jax_ignore">String</code> is a class because it also has a handy literal notation that allows us to create <code class="code-inline tex2jax_ignore">String</code>s objects directly using double-quotes (<code class="code-inline tex2jax_ignore">""</code>). In fact, there is a second way to instantiate a new <code class="code-inline tex2jax_ignore">String</code>, which is the way we instantiate <em class="emphasis">any</em> object in Java. That is, by using the <dfn class="terminology">new</dfn> keyword to invoke the class <dfn class="terminology"><a href="" class="xref" data-knowl="./knowl/glossary-constructor.html" title="Term: constructor">constructor</a></dfn>. In the following program we create two <code class="code-inline tex2jax_ignore">String</code> objects, one using literal notation and the other by invoking the <code class="code-inline tex2jax_ignore">String</code> constructor using <dfn class="terminology">new</dfn>. Both result in a new <code class="code-inline tex2jax_ignore">String</code> object.</div>
+<figure class="listing figure-like" id="listing-4"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Strings.java
+public class Strings {
+    public static void main(String[] args) {// Start execution here
+
+        String name1, name2;                // Declare variables
+        name1 = "Athos";                    // Assign String literal
+        name2 = new String("Porthos");      // Invoke String constructor
+
+        System.out.println(name1 + " and " + name2);
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.3.1<span class="period">.</span></span><span class="space"> </span>Two ways to create <code class="code-inline tex2jax_ignore">String</code> objects.</figcaption></figure><div class="para" id="p-251">Once we know the name of the class we want to create and the parameters expected by its constructor we use the <dfn class="terminology">new</dfn> keyword to invoke the constructor using the following pattern for invocation. The result is a new object, an instance of the class, which we save by assigning to a variable declared with the class type. The following figure demonstrates constructor invocation and assignment of the created object. <figure class="table table-like" id="table-jp-invoke-constructor"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.2<span class="period">.</span></span><span class="space"> </span>Invoking a constructor (TODO: Replace with figure)</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c b b1 r1 l1 t1 lines"><em class="emphasis">variable</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">assign</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">keyword</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">class</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">parameters</em></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">name2</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">=</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">new</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">("Porthos")</code></td>
+</tr>
+</table></div></figure>
+</div></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">String Methods</span>
+</h3>
+<div class="para" id="p-252">As we’ve discussed, the idea of <em class="emphasis">encapsulation</em> in object oriented programming implies that objects (and classes) may implement their own <em class="emphasis">state</em> and <em class="emphasis">behavior</em>. The state of an object is captured by its internal variables that it defines, and its behavior by the methods it implements. Often, an object’s methods manipulate and manage its internal data, which is consist with <em class="emphasis">encapsulation</em>.</div>
+<div class="para" id="p-253">To access the variables and methods of an object, we must gain access to its inner scope. We do this using what’s know as the <dfn class="terminology">dot operator</dfn>. If we follow an object with a dot (<code class="code-inline tex2jax_ignore">.</code>), we are effectively peering into the inner scope of the object. We are able to access anything within the object that the object makes available. To demonstrate, let’s have a look at what objects of type <code class="code-inline tex2jax_ignore">String</code> implement.</div>
+<div class="para" id="p-254">As you know, the data held and managed by a <code class="code-inline tex2jax_ignore">String</code> object is a sequence of characters. A <code class="code-inline tex2jax_ignore">String</code> object implements several methods that allows us to interrogate and manipulate these internal data.</div>
+<div class="para" id="p-255">For example, one of the <code class="code-inline tex2jax_ignore">String</code> object methods is named <code class="code-inline tex2jax_ignore">toUpperCase()</code>. As the method name implies, it converts all characters in a <code class="code-inline tex2jax_ignore">String</code> to uppercase and returns a new <code class="code-inline tex2jax_ignore">String</code> composed of all uppercase letters. Remember that a <code class="code-inline tex2jax_ignore">String</code> is immutable: all <code class="code-inline tex2jax_ignore">String</code> method the modify its internal data return a new <code class="code-inline tex2jax_ignore">String</code>.</div>
+<div class="para" id="p-256">Let’s return to JShell for a moment to explore methods of the <code class="code-inline tex2jax_ignore">String</code> class. In the following JShell session, we create a new <code class="code-inline tex2jax_ignore">String</code> object and then invoke its <code class="code-inline tex2jax_ignore">toUpperCase()</code> method which returns a new <code class="code-inline tex2jax_ignore">String</code> made up of all uppercase characters.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; String name2 = new String("Porthos");  // Create a new String object
+name2 ==&gt; "Porthos"
+|  created variable name2 : String
+
+jshell&gt; String name3 = name2.toUpperCase();    // Produce an uppercase version
+name3 ==&gt; "PORTHOS"
+|  created variable name3 : String
+
+jshell&gt;
+</b></pre></div>
+<div class="para" id="p-257">The variable <code class="code-inline tex2jax_ignore">name3</code> now references an object of type <code class="code-inline tex2jax_ignore">String</code> with the value <code class="code-inline tex2jax_ignore">"PORTHOS"</code>.</div>
+<div class="para" id="p-258">Here is something interesting to try. JShell is able to look up all the items within the scope of an object and print out a list of their names. Enter the variable name of one of your <code class="code-inline tex2jax_ignore">String</code> objects into JShell followed by the dot-operator, for example, the new variable <code class="code-inline tex2jax_ignore">name3.</code> and then press the TAB key. JShell will give you a list of all accessible names, like the following. In the case of <code class="code-inline tex2jax_ignore">String</code> everything accessible is a method, hence each item in the list is followed by one or two parentheses.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; name3.         // Press the TAB key
+charAt(                chars()                codePointAt(
+codePointBefore(       codePointCount(        codePoints()
+compareTo(             compareToIgnoreCase(   concat(
+contains(              contentEquals(         describeConstable()
+endsWith(              equals(                equalsIgnoreCase(
+formatted(             getBytes(              getChars(
+getClass()             hashCode()             indent(
+indexOf(               intern()               isBlank()
+isEmpty()              lastIndexOf(           length()
+lines()                matches(               notify()
+notifyAll()            offsetByCodePoints(    regionMatches(
+repeat(                replace(               replaceAll(
+replaceFirst(          resolveConstantDesc(   split(
+startsWith(            strip()                stripIndent()
+stripLeading()         stripTrailing()        subSequence(
+substring(             toCharArray()          toLowerCase(
+toString()             toUpperCase(           transform(
+translateEscapes()     trim()                 wait(
+jshell&gt; name3.
+</b></pre></div>
+<div class="para" id="p-259">As you can see by the list, Java provides a rich set of methods and functionalities in the <code class="code-inline tex2jax_ignore">String</code> class, making it powerful and versatile for working with text and string manipulation. Here are some commonly used methods and functionalities of the <code class="code-inline tex2jax_ignore">String</code> class:</div>
+<figure class="table table-like" id="table-22"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.3<span class="period">.</span></span><span class="space"> </span>Some <code class="code-inline tex2jax_ignore">String</code> methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Retrieving string length:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int length       = myString.length();</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Comparing strings:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">boolean isEqual  = myString1.equals(myString2);</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Concatenating strings:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char concat      = myString1.concatenate(myString2);</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Accessing characters:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char firstChar   = myString.charAt(idx);</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Extracting substrings:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String substring = myString.substring(startIdx, endIdx);</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Finding substring:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int index        = myString.indexOf(subStr);</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Converting case:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String lowercase = myString.toLowerCase();</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Converting case:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String uppercase = myString.toUpperCase();</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Replacing substrings:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String replaced  = myString.replace(oldValue, newValue);</code></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Removing whitespace:</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String trimmed   = myString.trim(response);</code></td>
+</tr>
+</table></div></figure><div class="para" id="p-260">To compare the content of two Strings, you should use the <code class="code-inline tex2jax_ignore">equals()</code> method instead of the <code class="code-inline tex2jax_ignore">==</code> operator. The <code class="code-inline tex2jax_ignore">equals()</code> method compares the two Strings character-by-character, while the <code class="code-inline tex2jax_ignore">==</code> operator checks if the two String references point to the same memory location. Using <code class="code-inline tex2jax_ignore">==</code> to compare <code class="code-inline tex2jax_ignore">Strings</code> is rarely what you want to do. Use it only if you understand the difference. Otherwise, <code class="code-inline tex2jax_ignore">.equals()</code> is the better choice.</div></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">String Examples</span>
+</h3>
+<div class="para" id="p-261">The following program which demonstrates several <code class="code-inline tex2jax_ignore">String</code> methods.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// StringExample.java
+public class StringExample {
+    public static void main(String[] args) {
+
+        String part1 = new String("Anti");          // String constructor
+        String part2 = "disestablishmentarianism";  // String literal
+        String word  = part1.concat(part2);         // Concat Strings
+
+        // Get word length
+        int len = word.length();
+        System.out.println(word + " has " + len + " characters");
+
+        // Get character at an index (starts at 0)
+        char first = word.charAt(0);
+        char last  = word.charAt( word.length() - 1 );
+        System.out.println("The first character is " + first);
+        System.out.println("The lst character is " + last);
+
+        // Find a substring
+        int idx = word.indexOf("dis");
+        System.out.println("The substring 'dis' starts at index " + idx);
+
+        // Replace substrings
+        String newWord = word.replace("Anti", "Pro");
+        System.out.println("The new word is " + newWord);
+    }
+}
+</code></pre></div>
+<div class="para" id="p-262">Compile and run the program.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac StringExample.java
+java StringExample
+</b>Antidisestablishmentarianism has 28 characters
+The first character is A
+The lst character is m
+The substring 'dis' starts at index 4
+The new word is Prodisestablishmentarianism
+</pre></div>
+<div class="para logical" id="p-263">
+<div class="para">Some things to note.</div>
 <ul class="disc">
-<li id="li-103"><div class="para" id="p-derived-li-103">Retrieving the length of a string: <code class="code-inline tex2jax_ignore">int length = myString.length();</code>
-</div></li>
-<li id="li-104"><div class="para" id="p-derived-li-104">Concatenating strings: <code class="code-inline tex2jax_ignore">String concatenated = myString1 + myString2;</code>
-</div></li>
-<li id="li-105"><div class="para" id="p-derived-li-105">Comparing strings: <code class="code-inline tex2jax_ignore">boolean isEqual = myString1.equals(myString2);</code>
-</div></li>
-<li id="li-106"><div class="para" id="p-derived-li-106">Accessing individual characters: <code class="code-inline tex2jax_ignore">char firstChar = myString.charAt(0);</code>
-</div></li>
-<li id="li-107"><div class="para" id="p-derived-li-107">Extracting substrings: <code class="code-inline tex2jax_ignore">String substring = myString.substring(startIndex, endIndex);</code>
-</div></li>
-<li id="li-108"><div class="para" id="p-derived-li-108">Converting case: <code class="code-inline tex2jax_ignore">String lowercase = myString.toLowerCase();</code>
-</div></li>
-<li id="li-109"><div class="para" id="p-derived-li-109">Splitting strings: <code class="code-inline tex2jax_ignore">String[] parts = myString.split(delimiter);</code>
-</div></li>
-<li id="li-110"><div class="para" id="p-derived-li-110">Replacing characters or substrings: <code class="code-inline tex2jax_ignore">String replaced = myString.replace(oldValue, newValue);</code>
-</div></li>
-<li id="li-111"><div class="para" id="p-derived-li-111">Formatting strings: <code class="code-inline tex2jax_ignore">String formatted = String.format("Hello, %s!", name);</code>
-</div></li>
+<li id="li-102"><div class="para" id="p-derived-li-102">The <code class="code-inline tex2jax_ignore">.concate()</code> method of <code class="code-inline tex2jax_ignore">String</code> does the same job as the <code class="code-inline tex2jax_ignore">+</code> operator with <code class="code-inline tex2jax_ignore">String</code> operands. You may nest <code class="code-inline tex2jax_ignore">.concat()</code> invocations.</div></li>
+<li id="li-103"><div class="para" id="p-derived-li-103">The index of the first character is 0. Passing <code class="code-inline tex2jax_ignore">0</code> to the <code class="code-inline tex2jax_ignore">.charAt(0)</code> method returns <code class="code-inline tex2jax_ignore">'A'</code>. To get the last character, we must pass an index equal to length() - 1. If the first index is 0, then the last index must be 1 less than the length. This is a general rule in Java. <dfn class="terminology">All indexes start at 0</dfn>.</div></li>
 </ul>
-<div class="para" id="p-239">To compare the content of two Strings, you should use the <code class="code-inline tex2jax_ignore">equals()</code> method instead of the <code class="code-inline tex2jax_ignore">==</code> operator. The <code class="code-inline tex2jax_ignore">equals()</code> method compares the actual characters of the strings, while the <code class="code-inline tex2jax_ignore">==</code> operator checks if the two string references point to the same memory location.</div></section></div>
+</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-jp-static-methods.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-jp-scanner.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

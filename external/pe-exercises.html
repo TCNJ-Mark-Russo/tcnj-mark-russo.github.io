@@ -1,9 +1,145 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+<link rel="stylesheet" href="vs.min.css">
+<script src="highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<style>
+    * {
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .hljs {
+        background: whitesmoke;
+    }
+    code, .hljs-type, .hljs-keyword, .hljs-number {
+        font-family: 'Courier New', Courier, monospace !important;
+        font-weight: bold;
+    }
+    .hljs-number {
+        color: brown;
+    }
+</style>
+<script> // Utils
+    /**
+    * Choose a random element from array
+    */
+    function choose(arr) {
+        return arr[Math.floor((Math.random()*arr.length))];
+    }
+    /**
+        * Shuffle array in place.
+        * @param {Array} a items An array containing the items.
+        */
+    function shuffle(arr) {
+        var j, x, i;
+        for (i = arr.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = arr[i];
+            arr[i] = arr[j];
+            arr[j] = x;
+        }
+        return arr;
+    }
+    /**
+        * Generate a random int in range [min, max], both inclusive
+        */
+    function randint(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    /**
+        * A simple rotation cipher.
+        * Rotates ASCII values with character codes in [32, 126].
+        * May be derotated by rotating again with r = (95-r).
+        * @param {str} an ASCII string to obfuscate
+        * @param {r} a rotation amount in [0, 94]
+        */
+    function rotr(str, r) {
+        let n = 95; // = 126 - 32 + 1;
+        let codes = str.split('').map(c => 32 + (((c.charCodeAt() - 32) + r) % n));
+        return codes.map( c => String.fromCharCode(c) ).join('');
+    }
+</script>
+<script src="qtemplates.js" charset="utf-8"></script>
+</head>
+<body>
+<hr/>
+<p>Identify valid variable names</p>
+<hr/>
+<p>Identify types by literal notation, int, long, float, double, char, String</p>
+<hr/>
+<p>Evaluate relational and logical expressions</p>
+<hr/>
+<q-multipledropdowns data-qid="Q01">
+<p>Consider each expression on the left.
+Choose from the dropdowns on the right the the value and
+type that results from evaluating each expression.</p>
 
-    </head>
-    <body>
+<table>
+<tr><th style="text-align:left;">Expression</th>
+    <th style="text-align:left;">Value</th>
+    <th style="text-align:left;">Type</th></tr>
+<tr>
+<td style="padding:5px;"><code class="language-java">1 + 1.0</code></td>
+<td>__Q1V</td><td>__Q1T</td>
+</tr>
+
+<tr>
+<td style="padding:5px;"><code class="language-java">2 + 2 * 1.0</code></td>
+<td>__Q2V</td><td>__Q2T</td>
+</tr>
+
+<tr>
+<td style="padding:5px;"><code class="language-java">2 * 2 + 1</code></td>
+<td>__Q3V</td><td>__Q3T</td>
+</tr>
+
+<tr>
+<td style="padding:5px;"><code class="language-java">3 / 2 + 1</code></td>
+<td>__Q4V</td><td>__Q4T</td>
+</tr>
+
+<tr>
+<td style="padding:5px;"><code class="language-java">3 + 2 / 1</code></td>
+<td>__Q5V</td><td>__Q5T</td>
+</tr>
+
+<tr>
+<td style="padding:5px;"><code class="language-java">30 / 12</code></td>
+<td>__Q6V</td><td>__Q6T</td>
+</tr>
+
+<tr>
+<td style="padding:5px;"><code class="language-java">30 % 12</code></td>
+<td>__Q7V</td><td>__Q7T</td>
+</tr>
+    
+</table>
+
+<script type="application/json">
+{"options":{"__Q1V":["2.0", "11.0", 10],  "__Q1T":["double", "int", "long"],
+            "__Q2V":["4.0", "2", 221],    "__Q2T":["double", "int", "float"],
+            "__Q3V":["5", "4", 221],      "__Q3T":["String", "int", "double"],
+            "__Q4V":["321", "2", "2.5"],  "__Q4T":["String", "int", "double"],
+            "__Q5V":["321", "5", "2.5"],  "__Q5T":["String", "int", "double"],
+            "__Q6V":["3", "2.5", "2"],    "__Q6T":["String", "int", "double"],
+            "__Q7V":["2.5", "5", "6"],    "__Q7T":["String", "int", "double"]
+},
+ "solns" :[{"__Q1V":"2.0", "__Q1T":"double", 
+            "__Q2V":"4.0", "__Q2T":"double",
+            "__Q3V":"5", "__Q3T":"int",
+            "__Q4V":"2", "__Q4T":"int",
+            "__Q5V":"5", "__Q5T":"int",
+            "__Q6V":"2", "__Q6T":"int",
+            "__Q7V":"6", "__Q7T":"int"
+}]
+}
+</script>
+</q-multipledropdowns>
+<hr/>
+<p>Expression evaluation with casting</p>
+<hr/>
 
     </body>
 </html>

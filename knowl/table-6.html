@@ -11,47 +11,106 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.8.1<span class="period">.</span></span><span class="space"> </span>Common Compound Assignment, Increment, and Decrement Operators</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.7.2<span class="period">.</span></span><span class="space"> </span>Java <code class="code-inline tex2jax_ignore">Math</code> class static methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">Operator</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Type</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method/Constant</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">++</code></td>
-<td class="l m b0 r0 l0 t0 lines">unary, prefix or postfix</td>
-<td class="l m b0 r0 l0 t0 lines">increment by 1</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.PI</code></td>
+<td class="l m b0 r0 l0 t0 lines">The mathematical constant <span class="process-math">\(\pi\text{.}\)</span>
+</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">--</code></td>
-<td class="l m b0 r0 l0 t0 lines">unary, prefix or postfix</td>
-<td class="l m b0 r0 l0 t0 lines">decrement by 1</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.E</code></td>
+<td class="l m b0 r0 l0 t0 lines">Euler’s mathematical constant <span class="process-math">\(e\text{.}\)</span>
+</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">+=</code></td>
-<td class="l m b0 r0 l0 t0 lines">binary, infix</td>
-<td class="l m b0 r0 l0 t0 lines">increment the left operand by the right operand and reassign</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.pow(x, y)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Raise x to the power of e and return result</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">-=</code></td>
-<td class="l m b0 r0 l0 t0 lines">binary, infix</td>
-<td class="l m b0 r0 l0 t0 lines">decrement the left operand by the right operand and reassign</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.abs(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Return the absolute value of x.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">*=</code></td>
-<td class="l m b0 r0 l0 t0 lines">binary, infix</td>
-<td class="l m b0 r0 l0 t0 lines">multiply the left operand by the right operand and reassign</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.sqrt(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the square root of x.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">/=</code></td>
-<td class="l m b0 r0 l0 t0 lines">binary, infix</td>
-<td class="l m b0 r0 l0 t0 lines">divide the left operand by the right operand and reassign</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.min(x, y)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Return the minimum of x and y.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">%=</code></td>
-<td class="l m b0 r0 l0 t0 lines">binary, infix</td>
-<td class="l m b0 r0 l0 t0 lines">compute modulus the left operand using the right operand and reassign</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.max(x, y)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Return the maximum of x and y.</td>
 </tr>
-</table></div></figure><span class="incontext"><a href="section-pe-assignment.html#table-6" class="internal">in-context</a></span>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.ceil(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Return the next integer greater than <code class="code-inline tex2jax_ignore">x</code>.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.floor(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Return the next integer below than <code class="code-inline tex2jax_ignore">x</code>.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.round(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Round <code class="code-inline tex2jax_ignore">x</code> to the nearest integer.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.exp(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Raise Euler’s number (<span class="process-math">\(e\)</span>) to the power of x (<span class="process-math">\(e^x\)</span>).</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.log(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the natural logarithm of x (<span class="process-math">\(ln(x)\)</span>).</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.log10(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the base-10 logarithm of x (<span class="process-math">\(log_{10}(x)\)</span>).</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.sin(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the sine function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.cos(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the cosine function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.tan(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the tangent function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.sinh(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the hyperbolic sine function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.cosh(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the hyperbolic cosine function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.tanh(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the hyperbolic tangent function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.asin(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the inverse (arc) sine function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.acos(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the inverse (arc) cosine function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.atan(x)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Compute the inverse (arc) tangent function of x.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Math.atan2(x, y)</code></td>
+<td class="l m b0 r0 l0 t0 lines">An alternative inverse tangent function taking rectilinear<br>coordinates <code class="code-inline tex2jax_ignore">x,y</code> and returning the angle <span class="process-math">\(\theta\text{.}\)</span>
+</td>
+</tr>
+</table></div></figure><span class="incontext"><a href="section-pe-math.html#table-6" class="internal">in-context</a></span>
 </body>
 </html>

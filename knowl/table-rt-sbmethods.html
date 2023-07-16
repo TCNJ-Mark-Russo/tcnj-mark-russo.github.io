@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span>Useful <code class="code-inline tex2jax_ignore">StringBuilder</code> Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Returns</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">append(...)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">StringBuilder</code></td>
+<td class="l t b0 r0 l0 t0 lines">Converts several types to a <code class="code-inline tex2jax_ignore">String</code><br>format and then appends it to the end<br>of the <code class="code-inline tex2jax_ignore">StringBuilder</code>.<br>Returns a reference to itself,<br>allowing method chaining.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">delete(int start,
+        int end)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">StringBuilder</code></td>
+<td class="l t b0 r0 l0 t0 lines">Removes chars beginning at index start<br>and extending through index end - 1.<br>Returns a reference to itself,<br>allowing method chaining.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">replace(int start,
+         int end,
+         String str)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">StringBuilder</code></td>
+<td class="l t b0 r0 l0 t0 lines">Replace chars beginning at index start<br>through index end - 1<br>with <code class="code-inline tex2jax_ignore">str</code>.<br>Returns a reference to itself,<br>allowing method chaining.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">insert(int offset,
+      String substr)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">StringBuilder</code></td>
+<td class="l t b0 r0 l0 t0 lines">Inserts <code class="code-inline tex2jax_ignore">substr</code> beginning at<br>offset.<br>Returns a reference to itself,<br>allowing method chaining.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">indexOf(String substr)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l t b0 r0 l0 t0 lines">Return index where <code class="code-inline tex2jax_ignore">substr</code><br>is found.<br>Returns -1 if not found.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">charAt(int index)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns <code class="code-inline tex2jax_ignore">char</code> at index <code class="code-inline tex2jax_ignore">index</code>.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">substring(int start,
+           int end)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns a <code class="code-inline tex2jax_ignore">String</code> of characters<br>from <code class="code-inline tex2jax_ignore">start</code> through <code class="code-inline tex2jax_ignore">end - 1</code>.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">length()</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns the length of the current<br>character sequence.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">setLength(int newLength)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">void</code></td>
+<td class="l t b0 r0 l0 t0 lines">Sets the total size of the<br><code class="code-inline tex2jax_ignore">StringBuilder</code> to <code class="code-inline tex2jax_ignore">newLength</code>.<br><code class="code-inline tex2jax_ignore">setLength(0)</code> removed all<br>characters from the <code class="code-inline tex2jax_ignore">StringBuilder</code>.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">toString()</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns the length of the current<br>character sequence.</td>
+</tr>
+</table></div></figure><span class="incontext"><a href="section-rt-stringbuilder.html#table-rt-sbmethods" class="internal">in-context</a></span>
+</body>
+</html>

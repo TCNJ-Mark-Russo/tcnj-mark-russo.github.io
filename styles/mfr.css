@@ -46,7 +46,7 @@ span.codenumber::after {
 }
 :root {
     --chaptertoc: #20477b;
-    --highlighttoc: #588cd3; 
+    --highlighttoc: rgb(160, 160, 160);
     --sectiontocactive: goldenrod;
 }
 iframe#interactive-gs-binary {

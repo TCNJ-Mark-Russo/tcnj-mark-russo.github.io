@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class ComputeDistance {
+
+  public static void main(String[] args) {  // Computation starts here
+
+    // Reuse distanceBetween() to calculate and sum two distances
+    double dist1 = distanceBetween(0.0, 20.0, 30.0,  0.0);
+    double dist2 = distanceBetween(30.0, 0.0, 40.0, 10.0);
+    System.out.println("Total distance: " + (dist1+dist2));
+
+  }
+
+  // New method that encapsulates the distance formula computation
+  // Parameters are four doubles representing the two point coordinates
+  public static double distanceBetween(double x1, double y1, 
+                                       double x2, double y2 ) {
+
+    double term1 = Math.pow(x1-x2, 2);      // Compute temporary terms
+    double term2 = Math.pow(y1-y2, 2);
+    
+    // Apply the distance formula
+    double distance = Math.sqrt( term1 + term2 );
+
+    // Return the computed distance
+    return distance;
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.2.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ComputeDistance.java</code> (version 2)</figcaption></figure><span class="incontext"><a href="section-jp-static-methods.html#listing-jp-computedistance2" class="internal">in-context</a></span>
+</body>
+</html>
