@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// PushButton2.java
+import doodlepad.*;
+
+public class PushButton2 extends RoundRect {
+    private boolean isOn;   // Button state
+
+    public PushButton2(double x, double y, double w, double h) {
+        super(x, y, w, h, 20, 20);
+
+        // Initialize the button
+        this.setFillColor(200);
+
+        // Starts off
+        isOn = false;
+    }
+
+    @Override
+    public void onMousePressed(double x, double y, int button) {
+        // Toggle button state
+        isOn = !isOn;
+
+        // Set button fill color based on state
+        if (isOn) {
+            this.setFillColor(0, 255, 0);
+        } else {
+            this.setFillColor(200);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a new PushButton2
+        PushButton2 myPushButton = new PushButton2(100, 100, 75, 50);
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">10.9.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">PushButton2.java</code></figcaption></figure><span class="incontext"><a href="section-in-doodlepad.html#listing-in-pushbutton2" class="internal">in-context</a></span>
+</body>
+</html>

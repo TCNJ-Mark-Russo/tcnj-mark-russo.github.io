@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Colors.java
+import doodlepad.*;
+
+public class Colors {
+
+    public static void main(String[] args) {
+        // Red Rectangle with no stroke
+        Rectangle myRect = new Rectangle( 10, 55, 50, 40);
+        myRect.setFillColor(255, 0, 0);
+        myRect.setStroked(false);
+
+        // Unfilled Oval with thick light gray stroke
+        Oval myOval = new Oval(40, 50, 50, 50);
+        myOval.setFilled(false);
+        myOval.setStrokeColor(200);
+        myOval.setStrokeWidth(5);
+
+        // Gray Line with thick stroke
+        Line myLine = new Line(80, 50, 120, 90);
+        myLine.setStrokeColor(127);
+        myLine.setStrokeWidth(10);
+
+        // Semi-transparent yellow filled Arc with default stroke style
+        Arc myArc = new Arc(100, 50, 50, 50, 30, 290);
+        myArc.setFillColor(255, 255, 0, 127);
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="section-dp-colors.html#listing-dp-color_example" class="internal">in-context</a></span>
+</body>
+</html>

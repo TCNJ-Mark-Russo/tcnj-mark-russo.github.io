@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// PathDemo2.java
+import doodlepad.*;
+
+public class PathDemo2 {
+    public static void main(String[] args) {
+
+        Path p2 = new Path();       // 1) Create an empty Path object
+        p2.moveTo(150.0,  50.0);    // 2) Move your pencil to (150, 50)
+        p2.lineTo(150.0, 150.0);    // 3) Draw a line down to (150, 150)
+                                    // 4) Add quadratic segment to (50, 150)
+        p2.quadTo(100.0, 200.0, 50.0, 150.0);
+        p2.lineTo( 50.0,  50.0);    // 5) Add a line up to (50, 50)
+        p2.closePath();             // 6) Close the Path.
+
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.7.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">PathDemo2.java</code></figcaption></figure><span class="incontext"><a href="section-dp-paths.html#listing-dp-pathdemo2" class="internal">in-context</a></span>
+</body>
+</html>

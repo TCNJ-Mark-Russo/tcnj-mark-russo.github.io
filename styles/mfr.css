@@ -52,3 +52,6 @@ span.codenumber::after {
 iframe#interactive-gs-binary {
     height: 180px;
 }
+iframe#interactive-dp-colors {
+    height: 400px;
+}

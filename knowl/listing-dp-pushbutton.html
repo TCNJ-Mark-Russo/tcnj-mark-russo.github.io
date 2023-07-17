@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// PushButton.java
+import doodlepad.*;
+
+public class PushButton {
+    private RoundRect shpButton;    // Button Shape
+    private boolean isOn;           // Button state
+
+    public PushButton() {
+        // Create button shape and initialize
+        shpButton = new RoundRect(100, 100, 75, 50, 20, 20);
+        shpButton.setFillcellor(200);
+
+        // Starts off
+        isOn = false;
+
+        // Set button click event handler method
+        shpButton.setMousePressedHandler( this::onPressed );
+    }
+
+    private void onPressed(Shape shp, double x, double y, int button) {
+        // Toggle button state
+        isOn = !isOn;
+
+        // Set button fill cellor based on state
+        if (isOn) {
+            shpButton.setFillcellor(0, 255, 0);
+        } else {
+            shpButton.setFillcellor(200);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a new PushButton
+        PushButton myPushButton = new PushButton();
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">PushButton.java</code></figcaption></figure><span class="incontext"><a href="section-dp-events.html#listing-dp-pushbutton" class="internal">in-context</a></span>
+</body>
+</html>

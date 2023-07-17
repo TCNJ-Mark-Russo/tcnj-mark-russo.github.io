@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Event-Driven Programming</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Computational Problem Solving with Java and Interactive Object Graphics">
+<meta property="book:author" content="Mark F. Russo, PhD">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./styles/mfr.css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-runtime.61a1aa562b2eef01.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.5/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.5/prefix-runestone.8d2f742bc74f4a41.css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="javaog.html"><span class="title">Computational Problem Solving with Java and Interactive Object Graphics</span></a></h1>
+<p class="byline">Mark F. Russo, PhD</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-dp-colors.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-doodlepad.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-dp-paths.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-getting-started.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gs-learning.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Learning to Program</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computers and Computational Devices</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-languages.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Programming Languages</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-oop.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Object Oriented Programming</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-java.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The Java Programming Language</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-toolkit.html" class="internal"><span class="codenumber">1.6</span> <span class="title">The Java Development Kit</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-gs-install.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Installing Your Toolkit</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gs-install.html#subsection-gs-install-jdk" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Install the Java Development Kit (JDK)</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-install.html#subsection-2" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Install a Programming Editor</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-gs-jshell.html" class="internal"><span class="codenumber">1.8</span> <span class="title">The JShell REPL</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-doodlepad.html" class="internal"><span class="codenumber">1.9</span> <span class="title">The DoodlePad Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-10.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-primitives-expressions.html" class="internal"><span class="codenumber">2</span> <span class="title">Primitives, Variables and Expressions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-pe-primitives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Primitive Data Types</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-pe-variables.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Variables and Comments</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-variables.html#exercises-1" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-integers.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Integer Primitive Types</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-integers.html#exercises-2" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-chars.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Character Primitive Type</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-chars.html#exercises-3" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-pe-floats.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Floating Point Primitive Number Types</span></a></div></li>
+<li><div class="toc-item"><a href="section-pe-strings.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strings</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-pe-math.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Mathematical Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-math.html#exercises-4" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-assignment.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Assignment Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-assignment.html#exercises-5" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-relational.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Relational Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-relational.html#exercises-6" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-logical.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Logical Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-logical.html#exercises-7" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-conversion.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Type Conversions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-conversion.html#exercises-8" class="internal"><span class="codenumber">2.11</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-pe-concepts.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-pe-exercises.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-java-programs.html" class="internal"><span class="codenumber">3</span> <span class="title">Java Programs and Objects</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-jp-compile.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Your First Java Program</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">A Java Program File</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Compiling a Java Program</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Running a Compiled Java Program</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-static-methods.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Static Methods</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-6" class="internal"><span class="codenumber">3.2.1</span> <span class="title"><code class="code-inline tex2jax_ignore">public static void main(...)</code></span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-7" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Other <code class="code-inline tex2jax_ignore">static</code> Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Source Code Formatting</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-string.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The String Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-9" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Instantiating a String</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-10" class="internal"><span class="codenumber">3.3.2</span> <span class="title">String Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-11" class="internal"><span class="codenumber">3.3.3</span> <span class="title">String Examples</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-scanner.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Scanner Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-12" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Instantiating a Scanner</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-13" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Scanner Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-14" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Scanner Examples</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-random.html" class="internal"><span class="codenumber">3.5</span> <span class="title">The Random Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-15" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Instantiating a Random Object</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-16" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Random Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-17" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Random Example</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-jp-concepts.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-exercises.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-reftypes.html" class="internal"><span class="codenumber">4</span> <span class="title">Reference Types</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-rt-stringbuilder.html" class="internal"><span class="codenumber">4.1</span> <span class="title">StringBuilder Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-refvars.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Reference Variables</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-gc.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Garbage Collection</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-scope.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-concepts.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-doodlepad.html" class="internal"><span class="codenumber">5</span> <span class="title">DoodlePad</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-doodlepad.html" class="internal"><span class="codenumber">5.1</span> <span class="title">DoodlePad Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-model.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Drawing Model</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-dp-shapes.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Creating Shapes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-18" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Rectangle</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-19" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Oval</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-20" class="internal"><span class="codenumber">5.3.3</span> <span class="title">RoundRect</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-21" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Arc</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-22" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Line</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-position-size.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Shape Position and Size</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-dp-position-size.html#subsection-23" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Position- and Size-related Methods</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-colors.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Colors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-24" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Color Components</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-25" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Setting Fill and Stroke Color</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-26" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Fill And Stroke Color Examples</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-27" class="internal"><span class="codenumber">5.5.4</span> <span class="title">Color-related Methods</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-dp-events.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Event-Driven Programming</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-28" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Connecting Events and Methods with Method References</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-29" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Shape Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-30" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Other Event-Related Shape Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-31" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Pad Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-32" class="internal"><span class="codenumber">5.6.5</span> <span class="title">Pad Keyboard Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-33" class="internal"><span class="codenumber">5.6.6</span> <span class="title">Pad Timer Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-34" class="internal"><span class="codenumber">5.6.7</span> <span class="title">Box Driver Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-paths.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Path Shapes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-35" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Sides made up of Quadratic Curve Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-36" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Sides made of Spline Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-37" class="internal"><span class="codenumber">5.7.3</span> <span class="title">Drawing and Styling a Path</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-images.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Images</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-38" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Image Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-39" class="internal"><span class="codenumber">5.8.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-40" class="internal"><span class="codenumber">5.8.3</span> <span class="title">A Simple Example</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-41" class="internal"><span class="codenumber">5.8.4</span> <span class="title">An Image as a Shape</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-timers.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Timers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-42" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Timer Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-43" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Example: Animating Shape Motion</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-sprites.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Sprites</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-44" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Sprite Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-45" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-46" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Flying Bird Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-transformations.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Graphic Transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-47" class="internal"><span class="codenumber">5.11.1</span> <span class="title">Translate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-48" class="internal"><span class="codenumber">5.11.2</span> <span class="title">Scale</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-49" class="internal"><span class="codenumber">5.11.3</span> <span class="title">Rotate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-50" class="internal"><span class="codenumber">5.11.4</span> <span class="title">Reset</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-51" class="internal"><span class="codenumber">5.11.5</span> <span class="title">Pad Transformations</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-dp-concepts.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-exercises.html" class="internal"><span class="codenumber">5.13</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-control1.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow Control - Part 1</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-c1-if-statements.html" class="internal"><span class="codenumber">6.1</span> <span class="title">if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.3</span> <span class="title">If-statement Strategies</span></a></div></li>
+<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.4</span> <span class="title">while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Block Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Collection Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">6.8</span> <span class="title">break and continue</span></a></div></li>
+<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Nested Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Object Graphics</span></a></div></li>
+<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">6.12</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-control2.html" class="internal"><span class="codenumber">7</span> <span class="title">Flow Control - Part 2</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.1</span> <span class="title">for-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.2</span> <span class="title">do-while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.3</span> <span class="title">for-each Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.5</span> <span class="title">switch-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Conditional Expressions</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-arrays.html" class="internal"><span class="codenumber">8</span> <span class="title">Arrays</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Creating Stars</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Ragged Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Arrays of Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Arrays Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Command line Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-ar-polygons.html" class="internal"><span class="codenumber">8.11</span> <span class="title">DoodlePad Polygons</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">8.13</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-classes.html" class="internal"><span class="codenumber">9</span> <span class="title">Custom Classes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Class vs Instance</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Constructors and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Access Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Encapsulation</span></a></div></li>
+<li><div class="toc-item"><a href="section-cl-enumerated.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Enumerated Types</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Multiple File Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Driver Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Testing</span></a></div></li>
+<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Review of Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Shadowing</span></a></div></li>
+<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">9.12</span> <span class="title">Anonymous Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">9.13</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">9.14</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">10</span> <span class="title">Inheritance</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
+<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
+<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-in-doodlepad.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Inheritance in DoodlePad</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-52" class="internal"><span class="codenumber">10.9.1</span> <span class="title">Handling Events by Overriding Base Class Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-53" class="internal"><span class="codenumber">10.9.2</span> <span class="title">Overridable Shape Event Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-54" class="internal"><span class="codenumber">10.9.3</span> <span class="title">Overridable Pad Event Methods</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">10.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Interfaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">12</span> <span class="title">Program and Class Design</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">12.13</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">13</span> <span class="title">Exceptions and Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Runtime Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Catching Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">14</span> <span class="title">Recursion</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-144.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">14.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">15</span> <span class="title">Algorithms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-145.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-146.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-147.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-148.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-149.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-150.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-151.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-152.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-18.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
+<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Debugging</span></a></div></li>
+<li>
+<div class="toc-item"><a href="appendix-testing.html" class="internal"><span class="codenumber">D</span> <span class="title">Testing</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="exercises-19.html" class="internal"><span class="codenumber">D</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
+<li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-153.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
+<li><div class="toc-item"><a href="section-154.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-20.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-22.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-dp-events"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.6</span> <span class="title">Event-Driven Programming</span>
+</h2>
+<section class="introduction" id="introduction-17"><div class="para" id="p-365">Perhaps the most distinguishing feature of the DoodlePad library is the ease and extent to which it supports event driven programming. All DoodlePad Shape objects as well as the Pad object may be set up to invoke custom methods in response to a wide range of user interaction. For example, you may want the change the fill cellor of one or more shapes when the user hovers over the shape or clicks the shape with the mouse. Alternatively, you may want to move a Shape in specific direction when the user presses one of the arrow keys. The Pad object implements timer functionality that raises tick events at a user-specified rate. You may want to invoke one or more of your custom methods each time the Pad’s timer ticks, which may be accomplished using the Pad’s tick event.</div> <div class="para" id="p-366">By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don’t want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.</div> <div class="para" id="p-367">This ability to respond to mouse, keyboard, timer and other events allows DoodlePad to be used to develop a wide range of fun interactive graphics programs that are limited only by your imagination.</div></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.1</span> <span class="title">Connecting Events and Methods with Method References</span>
+</h3>
+<div class="para" id="p-368">The simplest way to invoke a method in response to an event is to connect the event associated with a given object to one of your methods. The most important prerequisite for making this connection is to ensure that your event handler method’s signature matches what the event expects (by implementing the ShapeMouseEventHandler interface). Let’s say you want to invoke a method when the user clicks on a Shape object of some kind. All mouse events, including the click event, requires that the method to be connected have the following four parameters in the given order:</div>
+<figure class="table table-like" id="table-32"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.6.1<span class="period">.</span></span><span class="space"> </span>Mouse Event Parameters</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">#</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Type</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">1.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Shape</code></td>
+<td class="l t b0 r0 l0 t0 lines">The Shape object that initiated the mouse event</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">2.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
+<td class="l t b0 r0 l0 t0 lines">The x-coordinate at which the event occurred</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">3.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
+<td class="l t b0 r0 l0 t0 lines">The y-coordinate at which the event occurred</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">4.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l t b0 r0 l0 t0 lines">A number identifying the mouse button used</td>
+</tr>
+</table></div></figure><div class="para" id="p-369">For example, the following method may be invoked by a mouse event because it implements the necessary four parameter types in the specified order.</div>
+<figure class="listing figure-like" id="listing-dp-onpressed"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public void onPressed(Shape shp, double, x, double y, int button) {
+    System.out.println("The mouse was pressed at coordinates (" 
+                        + x + "," + y + ")");
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-370">Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the <code class="code-inline tex2jax_ignore">::</code> binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.</div>
+<div class="para" id="p-371">As an example, let’s say your class implements the previous onPress method, and you would like to invoke this method when the mouse is pressed on an Oval Shape object, a reference to which was saved as an instance variable named myOval. The following statement establishes this connection, so that when the mouse is pressed on myOval the onPress method implemented by this will be invoked.</div>
+<figure class="listing figure-like" id="listing-dp-setmousepressedhandler"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">myOval.setMousePressedHandler( this::onPress );
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-372">The inherited <code class="code-inline tex2jax_ignore">setMousePressedHandler(...)</code> method is what is used to establish the connection for mouse-pressed events.</div>
+<div class="para" id="p-373">Following is a complete program demonstrating event handing in DoodlePad using method references.</div>
+<figure class="listing figure-like" id="listing-dp-pushbutton"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// PushButton.java
+import doodlepad.*;
+
+public class PushButton {
+    private RoundRect shpButton;    // Button Shape
+    private boolean isOn;           // Button state
+
+    public PushButton() {
+        // Create button shape and initialize
+        shpButton = new RoundRect(100, 100, 75, 50, 20, 20);
+        shpButton.setFillcellor(200);
+
+        // Starts off
+        isOn = false;
+
+        // Set button click event handler method
+        shpButton.setMousePressedHandler( this::onPressed );
+    }
+
+    private void onPressed(Shape shp, double x, double y, int button) {
+        // Toggle button state
+        isOn = !isOn;
+
+        // Set button fill cellor based on state
+        if (isOn) {
+            shpButton.setFillcellor(0, 255, 0);
+        } else {
+            shpButton.setFillcellor(200);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a new PushButton
+        PushButton myPushButton = new PushButton();
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">PushButton.java</code></figcaption></figure><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:67%;"><div class="para" id="p-374">In this example we implement a simple graphical toggle button class named PushButton. For the button graphic we use a RoundRect Shape object. The PushButton constructor creates the RoundRect object and initializes its fill cellors to gray. The PushButton class tracks its state using an isOn boolean instance variable. The class is initialized with isOn = false implying the button is initially off. The constructor also uses the setMousePressedHandler method to indicate that the object’s onPressed method should be invoked when the RoundRect shape is pressed with the mouse. The onPressed method toggles the value of isOn and then resets the RoundRect fill cellor based on the current PushButton state. When the RoundRect is pressed with the mouse, the PushButton object state is toggled and the RoundRect fill cellor changes to green, indicating that the button was pressed. A second press toggles PushButton off and sets the RoundRect fill cellor back to gray.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-375"></div></div>
+<div class="sbspanel top" style="width:30%;"><figure class="figure figure-like" id="figure-17"><img src="external/images/pushbutton1.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span>PushButton.java</figcaption></figure></div>
+</div></div>
+<div class="para" id="p-376">The image on the right shows the output from running this example program and pressing the RoundRect Shape once with the mouse.</div></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.2</span> <span class="title">Shape Mouse Event-Related Methods</span>
+</h3>
+<div class="para" id="p-377">A wide variety of mouse events may be handled in a similar manner. Following is a list of all methods used to connect a mouse event with a Shape. Each method is used to associate a particular mouse event with a custom method. Each of the following methods takes a method reference as its only parameter. Each method reference must identify a method with a signature that matches the previously listed four parameter types in the given order, otherwise the compiler will complain.</div>
+<figure class="table table-like" id="table-33"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.6.6<span class="period">.</span></span><span class="space"> </span>Shape Mouse Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseClickedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseClickedHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-54" id="fn-54"><sup> 1 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseDoubleClickedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-55" id="fn-55"><sup> 2 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMousePressedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMousePressedHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-56" id="fn-56"><sup> 3 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseReleasedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseReleasedHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-57" id="fn-57"><sup> 4 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseMovedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseMovedHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-58" id="fn-58"><sup> 5 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseDraggedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseDraggedHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-59" id="fn-59"><sup> 6 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseEnteredHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseEnteredHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-60" id="fn-60"><sup> 7 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseExitedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseExitedHandler(ShapeMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-61" id="fn-61"><sup> 8 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.3</span> <span class="title">Other Event-Related Shape Methods</span>
+</h3>
+<div class="para" id="p-378">Shapes triggers one additional event beyond the above list of mouse events. The selectionChanged event is triggered whenever the selection status of a Shape changes. For example, if the user clicks on a selectable Shape that is not already selected, the Shape becomes selected, which is indicated by a light gray rectangle drawn around the Shape. If a suitable event handler method is attached to the Shape’s selectionChange event, then as the Shape becomes selected, the event method will be invoked, indicating the Shape object whose selection state changed as well as if the Shape is currently selected. Likewise, if another Shape is clicked causing the currently selected Shape to be unselected, the event handler method will once again be invoked.</div>
+<div class="para" id="p-379">Both the method reference and overriding methods of handling triggered selectionChanged events are supported. Event handler methods to be attached to the selectionChanged event trigger using the method reference approach must have a signature with two parameters: Shape and boolean. This implements the ShapeSelectionEventHandler interface. The first parameter indicates the Shape object whose selection changed, and the second parameter indicates if that Shape is currently selected (true) or not (false).</div>
+<div class="para" id="p-380">The following two methods are used for handling triggered selectionChanged events. The first method attaches an event handler using the method reference approach. Override the second method to handle the triggered event using the method overriding approach.</div>
+<figure class="table table-like" id="table-34"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.6.7<span class="period">.</span></span><span class="space"> </span>Shape Selection Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setSelectionChangedHandler-doodlepad.Shape.ShapeSelectionEventHandler-" target="_blank">public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-62" id="fn-62"><sup> 9 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the <a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.ShapeSelectionEventHandler.html" target="_blank">ShapeSelectionEventHandler</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-63" id="fn-63"><sup> 10 </sup></a> interface.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onSelectionChanged-boolean-" target="_blank">public void onSelectionChanged(boolean selected)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-64" id="fn-64"><sup> 11 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.4</span> <span class="title">Pad Mouse Event-Related Methods</span>
+</h3>
+<figure class="table table-like" id="table-35"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.6.8<span class="period">.</span></span><span class="space"> </span>Pad Mouse Event-Related Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMousePressedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMousePressedHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-65" id="fn-65"><sup> 12 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMousePressed event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseReleasedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseReleasedHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-66" id="fn-66"><sup> 13 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMouseReleased event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseMovedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseMovedHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-67" id="fn-67"><sup> 14 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMouseMoved event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseClickedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseClickedHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-68" id="fn-68"><sup> 15 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMouseClicked event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseDoubleClickedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-69" id="fn-69"><sup> 16 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMouseDoubleClicked event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseDraggedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseDraggedHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-70" id="fn-70"><sup> 17 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMouseDragged event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseEnteredHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseEnteredHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-71" id="fn-71"><sup> 18 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMouseEntered event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseExitedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseExitedHandler(PadMouseEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-72" id="fn-72"><sup> 19 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onMouseExited event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#addMouseListener-doodlepad.PadMouseListener-" target="_blank">public void addMouseListener(PadMouseListener o)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-73" id="fn-73"><sup> 20 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Add object to the list of items that are notified on Pad’s mouse events.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeMouseListener-doodlepad.PadMouseListener-" target="_blank">public void removeMouseListener(PadMouseListener o)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-74" id="fn-74"><sup> 21 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Remove object from Pad’s mouse listener list.</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.5</span> <span class="title">Pad Keyboard Event-Related Methods</span>
+</h3>
+<figure class="table table-like" id="table-36"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.6.9<span class="period">.</span></span><span class="space"> </span>Pad Keyboard Event-Related Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyPressedHandler-doodlepad.Pad.PadKeyEventHandler-" target="_blank">public void setKeyPressedHandler(Pad.PadKeyEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-75" id="fn-75"><sup> 22 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onKeyPressed event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyReleasedHandler-doodlepad.Pad.PadKeyEventHandler-" target="_blank">public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-76" id="fn-76"><sup> 23 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onKeyReleased event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyTypedHandler-doodlepad.Pad.PadKeyTypedEventHandler-" target="_blank">public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-77" id="fn-77"><sup> 24 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onKeyTyped event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#addKeyListener-doodlepad.PadKeyListener-" target="_blank">public void addKeyListener(PadKeyListener o)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-78" id="fn-78"><sup> 25 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Add object to the list of items that are notified on Pad’s key events.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeKeyListener-doodlepad.PadKeyListener-" target="_blank">public void removeKeyListener(PadKeyListener o)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-79" id="fn-79"><sup> 26 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Remove object from Pad’s key listener list.</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.6</span> <span class="title">Pad Timer Event-Related Methods</span>
+</h3>
+<figure class="table table-like" id="table-37"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.6.10<span class="period">.</span></span><span class="space"> </span>Pad Keyboard Event-Related Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setTickHandler-doodlepad.Pad.PadTimerEventHandler-" target="_blank">public void setTickHandler(Pad.PadTimerEventHandler handler)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-80" id="fn-80"><sup> 27 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onTick event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#addTickListener-doodlepad.PadTickListener-" target="_blank">public void addTickListener(PadTickListener o)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-81" id="fn-81"><sup> 28 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Add object to the list if items that are notified on Pad’s timer tick action.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeTickListener-doodlepad.PadTickListener-" target="_blank">public void removeTickListener(PadTickListener o)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-82" id="fn-82"><sup> 29 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Remove object from Pad’s timer tick action listener list.</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.7</span> <span class="title">Box Driver Example</span>
+</h3>
+<div class="para" id="p-381">In the following example a blue Rectangle is created and positioned on a Pad object. The default Pad object’s keyPressed event is handled with a custom method that reacts to the arrow keys being pressed. Only arrow keys are tested; all other keys are ignore. When the down arrow is pressed, the box object’s move(...) method is used to move the box 10 pixels down (by increasing its y-location). Likewise, the remaining three arrow keys move the box left, right or up, depending upon the key pressed. The result is a simple program that can be used to drive a box around the Pad using the arrow keys.</div>
+<div class="para" id="p-382">One item to note is the way the key String being pressed is tested. For all arrows keys the keyText String argument passed to the event handler method is compared to both a String describing the key (e.g. "Left") and a symbol (e.g. "←"). An arrow key is identified with a positive match to either the description or symbol String. The reason we test both is that the String passed to the event handler may be different depending upon your operating system. Specifically, Windows sets keyText to key description ("Left") while macOS uses a symbol (e.g. "←"). Give it a try.</div>
+<figure class="listing figure-like" id="listing-dp-box-driver"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// BoxDriver.java
+import doodlepad.*;
+
+public class BoxDriver
+{
+    // The box to drive around the Pad
+    private Rectangle box;
+
+    public BoxDriver() {
+        // Explicitly create a Pad and handle key-pressed event
+        Pad p = new Pad(600, 600);
+        p.setKeyPressedHandler( this::onKeyPressed );
+
+        // Create ans style the box to drive
+        box = new Rectangle(100, 100, 50, 50);
+        box.setFillcellor(0, 0, 255);
+    }
+
+    // Key pressed event handler moves box according key pressed
+    public void onKeyPressed(Pad p, String keyText, String keyMods) {
+        if (keyText.equals("Left") || keyText.equals("←")) {
+            box.move(-10, 0);
+        } else if (keyText.equals("Right") || keyText.equals("→")) {
+            box.move(10, 0);
+        } else if (keyText.equals("Up") || keyText.equals("↑")) {
+            box.move(0, -10);
+        } else if (keyText.equals("Down") || keyText.equals("↓")) {
+            box.move(0, 10);
+        }
+    }
+
+    public static void main(String[] args) {
+        BoxDriver myBoxDriver = new BoxDriver();
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.11<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">BoxDriver.java</code></figcaption></figure></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-54"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseClickedHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-55"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseDoubleClickedHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-56"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMousePressedHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-57"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseReleasedHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-58"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseMovedHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-59"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseDraggedHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-60"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseEnteredHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-61"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseExitedHandler-doodlepad.Shape.ShapeMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-62"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setSelectionChangedHandler-doodlepad.Shape.ShapeSelectionEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-63"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.ShapeSelectionEventHandler.html</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-64"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onSelectionChanged-boolean-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-65"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMousePressedHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-66"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseReleasedHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-67"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseMovedHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-68"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseClickedHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-69"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseDoubleClickedHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-70"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseDraggedHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-71"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseEnteredHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-72"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseExitedHandler-doodlepad.Pad.PadMouseEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-73"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#addMouseListener-doodlepad.PadMouseListener-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-74"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeMouseListener-doodlepad.PadMouseListener-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-75"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyPressedHandler-doodlepad.Pad.PadKeyEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-76"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyReleasedHandler-doodlepad.Pad.PadKeyEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-77"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyTypedHandler-doodlepad.Pad.PadKeyTypedEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-78"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#addKeyListener-doodlepad.PadKeyListener-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-79"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeKeyListener-doodlepad.PadKeyListener-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-80"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setTickHandler-doodlepad.Pad.PadTimerEventHandler-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-81"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#addTickListener-doodlepad.PadTickListener-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-82"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeTickListener-doodlepad.PadTickListener-</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-dp-colors.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-dp-paths.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

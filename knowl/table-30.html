@@ -11,141 +11,131 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">B.0.2<span class="period">.</span></span><span class="space"> </span>Shell commands</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.5.4<span class="period">.</span></span><span class="space"> </span>Color-related Shape object methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">Task</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Shell</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Command</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">Get the current working directory</em></td>
-<td class="l m b0 r0 l0 t0 lines">Command Prompt</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">cd</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">PowerShell</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">pwd</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">bash</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">pwd</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">List directory contents</em></td>
-<td class="l m b0 r0 l0 t0 lines">Command Prompt</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">dir</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">PowerShell</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">dir</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">bash</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">ls</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">Change the current working directory</em></td>
-<td class="l m b0 r0 l0 t0 lines">Command Prompt</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">cd</code> <em class="emphasis">path\to\directory</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-double-" target="_blank">public void setFillColor(double red, double green, double blue, double alpha)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-31-hidden.html" title="Footnote 5.5.1"><sup> 1 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to fill a Shape<br>by specifying all four color components.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">PowerShell</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">cd</code> <em class="emphasis">path\to\directory</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-" target="_blank">public void setFillColor(double red, double green, double blue)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-32-hidden.html" title="Footnote 5.5.2"><sup> 2 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to fill a Shape.<br>The alpha color component is set to 255,<br>meaning that the Shape fill is not transparent.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">bash</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">cd</code> <em class="emphasis">path/to/directory</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-" target="_blank">public void setFillColor(double gray)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-33-hidden.html" title="Footnote 5.5.3"><sup> 3 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Set the fill color of a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape fill is not transparent.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">Move up one directory level</em></td>
-<td class="l m b0 r0 l0 t0 lines">Command Prompt</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">cd ..</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">PowerShell</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">cd ..</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">bash</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">cd ..</code></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">Create a new directory</em></td>
-<td class="l m b0 r0 l0 t0 lines">Command Prompt</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">mkdir</code> <em class="emphasis">directoryname</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillRed--" target="_blank">public int getFillRed()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-34-hidden.html" title="Footnote 5.5.4"><sup> 4 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Return the red fill color component.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">PowerShell</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">mkdir</code> <em class="emphasis">directoryname</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillBlue--" target="_blank">public int getFillBlue()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-35-hidden.html" title="Footnote 5.5.5"><sup> 5 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Return the blue fill color component.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">bash</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">mkdir</code> <em class="emphasis">directoryname</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillGreen--" target="_blank">public int getFillGreen()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-36-hidden.html" title="Footnote 5.5.6"><sup> 6 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Retrun the green fill color component.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">Copy a file</em></td>
-<td class="l m b0 r0 l0 t0 lines">Command Prompt</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">copy</code> <em class="emphasis">source\file\path destination\file\path</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillAlpha--" target="_blank">public int getFillAlpha()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-37-hidden.html" title="Footnote 5.5.7"><sup> 7 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Return the alpha fill color component indicating the degree to which the shape fill is transparent.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">PowerShell</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">Copy-Item -Path</code> <em class="emphasis">source\file\path</em> <code class="code-inline tex2jax_ignore">-Destination</code> <em class="emphasis">destination\file\path</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillColor--" target="_blank">public java.awt.Color getFillColor()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-38-hidden.html" title="Footnote 5.5.8"><sup> 8 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to fill a Shape as a java.awt.Color object.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">bash</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">cp</code> <em class="emphasis">source/file/path destination/file/path</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFilled-boolean-" target="_blank">public void setFilled(boolean filled)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-39-hidden.html" title="Footnote 5.5.9"><sup> 9 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Specify whether or not a Shape is to be filled with a color. If set to false the Shape will not be filled.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">Delete a file</em></td>
-<td class="l m b0 r0 l0 t0 lines">Command Prompt</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">del</code> <em class="emphasis">filename</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFilled--" target="_blank">public boolean getFilled()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-40-hidden.html" title="Footnote 5.5.10"><sup> 10 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Return a boolean indicating whether or not the Shape is filled.</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">PowerShell</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">del</code> <em class="emphasis">filename</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-double-" target="_blank">public void setStrokeColor(double red, double green, double blue, double alpha)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-41-hidden.html" title="Footnote 5.5.11"><sup> 11 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to stroke (outline) a Shape by specifying al four color components</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">bash</td>
-<td class="l m b0 r0 l0 t0 lines">
-<code class="code-inline tex2jax_ignore">rm</code> <em class="emphasis">filename</em>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-" target="_blank">public void setStrokeColor(double red, double green, double blue)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-42-hidden.html" title="Footnote 5.5.12"><sup> 12 </sup></a>
 </td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to outline a Shape. The alpha color component is set to 255, meaning that the Shape outline is not transparent.</td>
 </tr>
-</table></div></figure><span class="incontext"><a href="appendix_shells.html#table-30" class="internal">in-context</a></span>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-" target="_blank">public void setStrokeColor(double gray)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-43-hidden.html" title="Footnote 5.5.13"><sup> 13 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to outline a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape outline is not transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeRed--" target="_blank">public int getStrokeRed()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-44-hidden.html" title="Footnote 5.5.14"><sup> 14 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the red outline color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeBlue--" target="_blank">public int getStrokeBlue()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-45-hidden.html" title="Footnote 5.5.15"><sup> 15 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the blue outline color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeGreen--" target="_blank">public int getStrokeGreen()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-46-hidden.html" title="Footnote 5.5.16"><sup> 16 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the green outline color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeAlpha--" target="_blank">public int getStrokeAlpha()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-47-hidden.html" title="Footnote 5.5.17"><sup> 17 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the alpha outline color component indicating the degree to which the shape outline is transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeColor--" target="_blank">public java.awt.Color getStrokeColor()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-48-hidden.html" title="Footnote 5.5.18"><sup> 18 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to outline a Shape as a java.awt.Color object.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStroked-boolean-" target="_blank">public void setStroked(boolean filled)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-49-hidden.html" title="Footnote 5.5.19"><sup> 19 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Specify whether or not a Shape is to be outline with a color. If set to false the Shape will not be outlined.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStroked--" target="_blank">public boolean getStroked()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-50-hidden.html" title="Footnote 5.5.20"><sup> 20 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return a boolean indicating whether or not the Shape is outlined.</td>
+</tr>
+</table></div></figure><span class="incontext"><a href="section-dp-colors.html#table-30" class="internal">in-context</a></span>
 </body>
 </html>

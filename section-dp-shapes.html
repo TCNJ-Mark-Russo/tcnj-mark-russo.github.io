@@ -86,15 +86,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.4';
+eBookConfig.runestone_version = '7.0.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runtime.61a1aa562b2eef01.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.8d2f742bc74f4a41.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-runtime.61a1aa562b2eef01.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.5/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.5/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -210,7 +210,7 @@ eBookConfig.enable_chatcodes =  false;
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-dp-model.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-doodlepad.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-dp-colors.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-dp-model.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-doodlepad.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-dp-position-size.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
@@ -346,7 +346,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><div class="toc-item"><a href="section-rt-stringbuilder.html" class="internal"><span class="codenumber">4.1</span> <span class="title">StringBuilder Class</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-refvars.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Reference Variables</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-gc.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Garbage Collection</span></a></div></li>
-<li><div class="toc-item"><a href="section-35.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-scope.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-concepts.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
@@ -362,176 +362,247 @@ eBookConfig.enable_chatcodes =  false;
 <li><div class="toc-item"><a href="section-dp-shapes.html#subsection-18" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Rectangle</span></a></div></li>
 <li><div class="toc-item"><a href="section-dp-shapes.html#subsection-19" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Oval</span></a></div></li>
 <li><div class="toc-item"><a href="section-dp-shapes.html#subsection-20" class="internal"><span class="codenumber">5.3.3</span> <span class="title">RoundRect</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-21" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Line</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-22" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Arc</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-21" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Arc</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-22" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Line</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="section-dp-colors.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Colors</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-interaction.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Handling Events and Interactions</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-paths.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Paths</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-images.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Images</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-more.html" class="internal"><span class="codenumber">5.8</span> <span class="title">More Features</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-concepts.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Chapter Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-dp-position-size.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Shape Position and Size</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-dp-position-size.html#subsection-23" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Position- and Size-related Methods</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-colors.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Colors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-24" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Color Components</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-25" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Setting Fill and Stroke Color</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-26" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Fill And Stroke Color Examples</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-27" class="internal"><span class="codenumber">5.5.4</span> <span class="title">Color-related Methods</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-events.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Event-Driven Programming</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-28" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Connecting Events and Methods with Method References</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-29" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Shape Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-30" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Other Event-Related Shape Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-31" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Pad Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-32" class="internal"><span class="codenumber">5.6.5</span> <span class="title">Pad Keyboard Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-33" class="internal"><span class="codenumber">5.6.6</span> <span class="title">Pad Timer Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-34" class="internal"><span class="codenumber">5.6.7</span> <span class="title">Box Driver Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-paths.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Path Shapes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-35" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Sides made up of Quadratic Curve Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-36" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Sides made of Spline Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-37" class="internal"><span class="codenumber">5.7.3</span> <span class="title">Drawing and Styling a Path</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-images.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Images</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-38" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Image Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-39" class="internal"><span class="codenumber">5.8.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-40" class="internal"><span class="codenumber">5.8.3</span> <span class="title">A Simple Example</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-41" class="internal"><span class="codenumber">5.8.4</span> <span class="title">An Image as a Shape</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-timers.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Timers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-42" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Timer Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-43" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Example: Animating Shape Motion</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-sprites.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Sprites</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-44" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Sprite Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-45" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-46" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Flying Bird Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-transformations.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Graphic Transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-47" class="internal"><span class="codenumber">5.11.1</span> <span class="title">Translate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-48" class="internal"><span class="codenumber">5.11.2</span> <span class="title">Scale</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-49" class="internal"><span class="codenumber">5.11.3</span> <span class="title">Rotate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-50" class="internal"><span class="codenumber">5.11.4</span> <span class="title">Reset</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-51" class="internal"><span class="codenumber">5.11.5</span> <span class="title">Pad Transformations</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-dp-concepts.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-exercises.html" class="internal"><span class="codenumber">5.13</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-control1.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow Control - Part 1</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-c1-if-statements.html" class="internal"><span class="codenumber">6.1</span> <span class="title">if-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-49.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-50.html" class="internal"><span class="codenumber">6.3</span> <span class="title">If-statement Strategies</span></a></div></li>
-<li><div class="toc-item"><a href="section-51.html" class="internal"><span class="codenumber">6.4</span> <span class="title">while-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Block Scope</span></a></div></li>
-<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Collection Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.8</span> <span class="title">break and continue</span></a></div></li>
-<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Nested Control</span></a></div></li>
-<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Object Graphics</span></a></div></li>
-<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.3</span> <span class="title">If-statement Strategies</span></a></div></li>
+<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.4</span> <span class="title">while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Block Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Collection Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">6.8</span> <span class="title">break and continue</span></a></div></li>
+<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Nested Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Object Graphics</span></a></div></li>
+<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">6.12</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-control2.html" class="internal"><span class="codenumber">7</span> <span class="title">Flow Control - Part 2</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">7.1</span> <span class="title">for-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">7.2</span> <span class="title">do-while-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">7.3</span> <span class="title">for-each Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
-<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.5</span> <span class="title">switch-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Conditional Expressions</span></a></div></li>
-<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
-<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
-<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.1</span> <span class="title">for-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.2</span> <span class="title">do-while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.3</span> <span class="title">for-each Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.5</span> <span class="title">switch-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Conditional Expressions</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-arrays.html" class="internal"><span class="codenumber">8</span> <span class="title">Arrays</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
-<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
-<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Creating Stars</span></a></div></li>
-<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Ragged Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
-<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Arrays of Objects</span></a></div></li>
-<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Arrays Library</span></a></div></li>
-<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Command line Parameters</span></a></div></li>
-<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.11</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Creating Stars</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Ragged Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Arrays of Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Arrays Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Command line Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-ar-polygons.html" class="internal"><span class="codenumber">8.11</span> <span class="title">DoodlePad Polygons</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">8.13</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-classes.html" class="internal"><span class="codenumber">9</span> <span class="title">Custom Classes</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Class vs Instance</span></a></div></li>
-<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Constructors and Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Access Control</span></a></div></li>
-<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Encapsulation</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Class vs Instance</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Constructors and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Access Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Encapsulation</span></a></div></li>
 <li><div class="toc-item"><a href="section-cl-enumerated.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Enumerated Types</span></a></div></li>
-<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Multiple File Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Driver Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Testing</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Review of Scope</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Shadowing</span></a></div></li>
-<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">9.12</span> <span class="title">Anonymous Objects</span></a></div></li>
-<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">9.13</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Multiple File Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Driver Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Testing</span></a></div></li>
+<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Review of Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Shadowing</span></a></div></li>
+<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">9.12</span> <span class="title">Anonymous Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">9.13</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">9.14</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">10</span> <span class="title">Inheritance</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
-<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
-<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
+<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
+<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-in-doodlepad.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Inheritance in DoodlePad</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-52" class="internal"><span class="codenumber">10.9.1</span> <span class="title">Handling Events by Overriding Base Class Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-53" class="internal"><span class="codenumber">10.9.2</span> <span class="title">Overridable Shape Event Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-54" class="internal"><span class="codenumber">10.9.3</span> <span class="title">Overridable Pad Event Methods</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">10.11</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Interfaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">12</span> <span class="title">Program and Class Design</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">12.13</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">13</span> <span class="title">Exceptions and Files</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Runtime Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Catching Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">14</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-144.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">14.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">15</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-144.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-145.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-146.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-147.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-145.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-146.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-147.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-148.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-149.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-150.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-151.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-152.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-18.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -554,8 +625,8 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-148.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-149.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
+<li><div class="toc-item"><a href="section-153.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
+<li><div class="toc-item"><a href="section-154.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-20.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-22.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
@@ -565,7 +636,7 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-dp-shapes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Creating Shapes</span>
 </h2>
-<section class="introduction" id="introduction-15"><div class="para" id="p-336">In <a href="section-dp-doodlepad.html" class="internal" title="Section 5.1: DoodlePad Library">Section 5.1</a> we created our first Oval object. We used the <code class="code-inline tex2jax_ignore">Oval</code> class constructor that takes no arguments. every Shape in DoodlePad has a <dfn class="terminology">nullary</dfn> (no-argument) constructor for convenience. For all Shapes, the <em class="emphasis">nullary</em> constructor chooses the initial location of the Shape to be random (using a <code class="code-inline tex2jax_ignore">Random</code> object) and sets the width and height to 100. Alternative Shape constructors let use set the location and size as parameters.</div> <div class="para" id="p-337">DoodlePad defines a variety of graphic objects that you can instantiate and interact with, including basic shapes. Available basic shape classes include the following. Don’t miss other DoodlePad classes such as <code class="code-inline tex2jax_ignore">Polygon</code>, <code class="code-inline tex2jax_ignore">Pad</code>, <code class="code-inline tex2jax_ignore">Path</code>, <code class="code-inline tex2jax_ignore">Image</code>, <code class="code-inline tex2jax_ignore">Text</code>, <code class="code-inline tex2jax_ignore">Sprite</code> and more.</div> <figure class="table table-like" id="table-27"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span>Basic Shapes</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<section class="introduction" id="introduction-15"><div class="para" id="p-337">In <a href="section-dp-doodlepad.html" class="internal" title="Section 5.1: DoodlePad Library">Section 5.1</a> we created our first Oval object. We used the <code class="code-inline tex2jax_ignore">Oval</code> class constructor that takes no arguments. every Shape in DoodlePad has a <dfn class="terminology">nullary</dfn> (no-argument) constructor for convenience. For all Shapes, the <em class="emphasis">nullary</em> constructor chooses the initial location of the Shape to be random (using a <code class="code-inline tex2jax_ignore">Random</code> object) and sets the width and height to 100. Alternative Shape constructors let use set the location and size as parameters.</div> <div class="para" id="p-338">DoodlePad defines a variety of graphic objects that you can instantiate and interact with, including basic shapes. Available basic shape classes include the following. Don’t miss other DoodlePad classes such as <code class="code-inline tex2jax_ignore">Polygon</code>, <code class="code-inline tex2jax_ignore">Pad</code>, <code class="code-inline tex2jax_ignore">Path</code>, <code class="code-inline tex2jax_ignore">Image</code>, <code class="code-inline tex2jax_ignore">Text</code>, <code class="code-inline tex2jax_ignore">Sprite</code> and more.</div> <figure class="table table-like" id="table-27"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span>Basic Shapes</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Shape</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
@@ -593,7 +664,7 @@ eBookConfig.enable_chatcodes =  false;
 </table></div></figure></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.1</span> <span class="title">Rectangle</span>
 </h3>
-<div class="para" id="p-338">Rectangles are one of the more simple shapes in DoodlePad. Creating a new Rectangle is as simple as creating an instance of the Rectangle class. The Rectangle class’s nullary constructor creates a 100 pixel × 100 pixel Rectangle at a randomly selected location, but other Rectangle constructors give you more control of the Rectangle created. For example, the following sample program creates a 70 pixel × 40 pixel Rectangle with its upper left corner at the location (50, 60).</div>
+<div class="para" id="p-339">Rectangles are one of the more simple shapes in DoodlePad. Creating a new Rectangle is as simple as creating an instance of the Rectangle class. The Rectangle class’s nullary constructor creates a 100 pixel × 100 pixel Rectangle at a randomly selected location, but other Rectangle constructors give you more control of the Rectangle created. For example, the following sample program creates a 70 pixel × 40 pixel Rectangle with its upper left corner at the location (50, 60).</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RectangleDemo1.java
 import doodlepad.*;
 
@@ -604,11 +675,11 @@ public class RectangleDemo1 {
     }
 }
 </code></pre></div>
-<div class="para" id="p-339">The Rectangle size and location are passed as numerical arguments to the Rectangle constructor. The first pair of arguments correspond to the Rectangle location (x=50, y=60) and the second pair correspond to its size (width=70, height=40). This is a pattern that is repeated in many graphic object constructors in DoodlePad.</div></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<div class="para" id="p-340">The Rectangle size and location are passed as numerical arguments to the Rectangle constructor. The first pair of arguments correspond to the Rectangle location (x=50, y=60) and the second pair correspond to its size (width=70, height=40). This is a pattern that is repeated in many graphic object constructors in DoodlePad.</div></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.2</span> <span class="title">Oval</span>
 </h3>
-<div class="para" id="p-340">Creating an Oval is very similar to creating a Rectangle. An Oval’s nullary constructor creates a new 100 pixel × 100 pixel ellipse Shape with a randomly selected starting location. An Oval also has a four-argument constructor similar to a Rectangle. The first two arguments of this constructor are the x and y coordinates of the upper left corner of the Oval’s bounding box and the second two arguments are the Oval’s width and height. Note that the four numerical argument values of this Oval constructor can be thought of as describing the bounding box within which the Oval is be created.</div>
-<div class="para" id="p-341">The only difference between the following example program and the previous example is that the following sample program creates a 70 pixel × 40 pixel Oval with its upper left corner at the location (50, 60) isntead of a Rectangle.</div>
+<div class="para" id="p-341">Creating an Oval is very similar to creating a Rectangle. An Oval’s nullary constructor creates a new 100 pixel × 100 pixel ellipse Shape with a randomly selected starting location. An Oval also has a four-argument constructor similar to a Rectangle. The first two arguments of this constructor are the x and y coordinates of the upper left corner of the Oval’s bounding box and the second two arguments are the Oval’s width and height. Note that the four numerical argument values of this Oval constructor can be thought of as describing the bounding box within which the Oval is be created.</div>
+<div class="para" id="p-342">The only difference between the following example program and the previous example is that the following sample program creates a 70 pixel × 40 pixel Oval with its upper left corner at the location (50, 60) isntead of a Rectangle.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// OvalDemo1.java
 import doodlepad.*;
 
@@ -621,13 +692,69 @@ public class OvalDemo1 {
 }
 </code></pre></div></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.3</span> <span class="title">RoundRect</span>
-</h3></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">5.3.4</span> <span class="title">Line</span>
-</h3></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">5.3.5</span> <span class="title">Arc</span>
-</h3></section></section></div>
+</h3>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:67%;"><div class="para" id="p-343">The RoundRect class differs from Rectangle in that the corners of a RoundRect are, well, rounded. In addition to specifying the location and size of a RoundRect, you must also specify the width and height of the arcs that form the rounded corners. These additional parameters are called arcWidth and arcHeight and come after x-location, y-location, width and height in the RoundRect constructor.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-344"></div></div>
+<div class="sbspanel top" style="width:30%;"><figure class="figure figure-like" id="figure-14"><img src="external/images/roundrect.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span>RoundRect Measurements</figcaption></figure></div>
+</div></div>
+<div class="para" id="p-345">In the following example we create a RoundRect object at (10, 10) with width = 200, height = 150, arcWidth and arcHeight = 30. The diagram on the right illustrates how these parameters are used to define the shape. Note that the arcWidth and arcHeight parameters are not required to have equal values.</div>
+<figure class="listing figure-like" id="listing-9"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RoundRectDemo1.java
+import doodlepad.*;
+
+public class RoundRectDemo1 {
+    public static void main(String[] args) {
+        
+        RoundRect r1 = new RoundRect(10, 10, 200, 150, 30, 30);
+        
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3.4</span> <span class="title">Arc</span>
+</h3>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:67%;"><div class="para" id="p-346">The Arc shape class can be thought of as a pie-section taken from an Oval. In fact, to define an Arc one starts with the location and dimensions of an Oval and then adds the start and angular extent of the section to be taken. In DoodlePad these angles are defined with 0° indicated by a horizontal line extending from the center of the oval to the right. As the angle increases the line rotates in the counter clockwise direction.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-347"></div></div>
+<div class="sbspanel top" style="width:30%;"><figure class="figure figure-like" id="figure-15"><img src="external/images/arc.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span>Arc Measurements</figcaption></figure></div>
+</div></div>
+<div class="para" id="p-348">The beginning of an arc is specified with an angle between 0° and 360°, and the length of the arc is determined by an angle that the arc sweeps. The arc itself follows the outline of the equivalent oval. The figure on the right describes the arc specified (in red) by the program below. The first four arguments of the Arc constructor are the same as an Oval (x, y, width, height). The last two parameters are the starting angle (startAngle) and the extent of the arc (arcAngle) measure in degrees.</div>
+<div class="para" id="p-349">When an arc is filled, it becomes a pie section, which can be filled and outlined to form a pie-shaped graphic object. When an arc is not filled, as is the case with the example below, only the segment of the equivalent Oval’s outline is rendered.</div>
+<figure class="listing figure-like" id="listing-10"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ArcDemo1.java
+import doodlepad.*;
+
+public class ArcDemo1 {
+    public static void main(String[] args) {
+        
+        // Create the Arc starting at 45 degrees and extending for 90 degrees
+        Arc a1 = new Arc(100, 100, 200, 200, 45, 90);
+        
+        // Do not fill the arc so only the arc is drawn.
+        a1.setFilled(false);
+
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3.5</span> <span class="title">Line</span>
+</h3>
+<div class="para" id="p-350">The Line shape is created by specifying its two endpoint coordinates. The Line constructor takes four values, (x1, y1, x2, y2), where (x1, y1) is the first endpoint and (x2, y2) is the second endpoint.</div>
+<div class="para" id="p-351">The example below creates a diagonal Line shape between the endpoints (100, 100) and (200, 200).</div>
+<figure class="listing figure-like" id="listing-11"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LineDemo1.java
+import doodlepad.*;
+
+public class LineDemo1 {
+    public static void main(String[] args) {
+        
+        // Create a diagonal Line shape from (100, 100) and (200, 200)
+        Line l1 = new Line(100, 100, 200, 200);
+
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="conclusion" id="conclusion-1"><div class="para" id="p-352">DoodlePad provides more ways to create Shape classes beyond those described in this chapter. If you’d like to skip ahead to investigate more complex techniques, have a look at <a href="section-dp-paths.html" class="internal" title="Section 5.7: Path Shapes">Path Shapes 5.7</a>, <a href="section-ar-polygons.html" class="internal" title="Section 8.11: DoodlePad Polygons">Polygon Shapes 8.11</a>. <a href="section-dp-images.html" class="internal" title="Section 5.8: Images">Images 5.8</a>, and <a href="section-dp-sprites.html" class="internal" title="Section 5.10: Sprites">Sprites 5.10</a>.</div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section-dp-model.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-dp-colors.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="section-dp-model.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-dp-position-size.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -1306,9 +1306,9 @@ var ptx_lunr_docs = [
   "body": " Garbage Collection  Garbage Collection Garbage collection is a fundamental concept in computer programming, particularly in languages like Java. It is the process of automatically reclaiming memory that is no longer in use by the program, freeing it up for future allocations. Garbage collection plays a vital role in memory management, ensuring efficient resource utilization and preventing memory leaks.  When a program executes, it dynamically allocates memory to hold objects, variables, and other data structures. As the program runs, the garbage collector periodically examines the objects to determine which ones are still in use. It does this through a process called \"mark and sweep.\" It starts by traversing the reachable objects (e.g., through global variables, static variables, and local variables, etc.), marking all objects in use. Any objects not marked during this traversal are considered unreachable and eligible for garbage collection. When we lose all references to an object it becomes unreachable and eligible for garbage collection.  After marking all reachable objects, the garbage collector performs the sweep phase. It frees the memory occupied by objects that were not marked as reachable. This memory is then returned to the available memory pool for future allocations.  In some garbage collection algorithms, an additional step called compaction may be performed. Compaction involves moving the live objects closer together, effectively defragmenting memory. This can improve memory access performance.  Garbage collection alleviates the burden of manual memory management, where programmers would have to explicitly allocate and deallocate memory for objects. By automating memory reclamation, garbage collection reduces the risk of memory leaks and simplifies the development process. However, it's essential to be mindful of object lifetimes and design memory-efficient programs to optimize garbage collection performance.  "
 },
 {
-  "id": "section-35",
+  "id": "section-rt-scope",
   "level": "1",
-  "url": "section-35.html",
+  "url": "section-rt-scope.html",
   "type": "Section",
   "number": "4.4",
   "title": "Variable Scope and Lifetime",
@@ -1317,7 +1317,7 @@ var ptx_lunr_docs = [
 {
   "id": "p-304",
   "level": "2",
-  "url": "section-35.html#p-304",
+  "url": "section-rt-scope.html#p-304",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1326,7 +1326,7 @@ var ptx_lunr_docs = [
 {
   "id": "p-305",
   "level": "2",
-  "url": "section-35.html#p-305",
+  "url": "section-rt-scope.html#p-305",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1335,7 +1335,7 @@ var ptx_lunr_docs = [
 {
   "id": "listing-rt-staticvars",
   "level": "2",
-  "url": "section-35.html#listing-rt-staticvars",
+  "url": "section-rt-scope.html#listing-rt-staticvars",
   "type": "Listing",
   "number": "4.4.1",
   "title": "",
@@ -1375,7 +1375,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "DoodlePad Library",
-  "body": " DoodlePad Library  Below you'll find a complete DoodlePad program that creates a graphics window (a Pad object) and instantiates an Oval object. Once you compile and run your program, you will see a window like that shown in the figure on the right. This simple program demonstrates how DoodlePad allows you to focus on learning Java and object oriented programming, and not on the details of Swing and AWT.   A DoodlePad Pad window object with an Oval object    import doodlepad.*; public class MyFirstOval { public static void main(String[] args) { Oval oval1 = new Oval(); } }      Notice the import statement at the top of the program. As we've seen, this is necessary to load classes from external libarries that are not included in Java by default. The DoodlePad library (certainly) is not distributed with the JDK and therefore must be downloaded separately. Fortunately, this library is distributed as a single file named  doodlepad.jar and is freely available for you to download and use. The extension JAR is a clever shorthand for Java ARchive . In fact, a JAR file is just a zip archive. Go ahead and use your favorite zip utility to peer into the file contents. What you'll see is a list of .class files. The doodlepad.jar file is just a zip archive of precompiled Java classes.  Unlike the classes that are included in the Java Platform, when compiling and running a program that uses DoodlePad classes, you must tell Java where to find them. That is, you must tell Java where to look for the doodlepad.jar file. Once it know where to find these classes, the Java compiler will compile your program and check that you are using these classes in accordance with their exposed public interfaces. The Java runtime will bring it all to life as a running program.  Most editors and Java programming environments provide ways to create projects that reference libraries so compiling and running is easy. Here we will not use any special editor. Instead we use the commandline approach provided by the JDK to demonstrate how to compile and run programs that make use of the DoodlePad class library. We want to demonstrate how to use the library independent of any specific editor.  Our core goal is to tell Java where to find our class libraries (i.e. our .class and .jar files). Both the javac command and the java command allow the addition of several options when executed. We want to use the --class-path option which gives the command the file system path to search for class libraries. This option can be shortened to -classpath and -cp for convenience. We'll use -cp to specify the class path.  You may want to store all your JAR files in a common location on your file system, or take some other organizational approach. In the following example, we assume you have downloaded the doodlepad.jar file and saved it to the same folder as your Java program. One word of caution. Many web browers consider JAR files to be dangerous, and rightly so. They contain executable code. Your browser may refuse to download the doodlepad.jar file until you give special permission to do so. This file is not executable. It contains only libraries to be used by other programs.  Let's assume you want to compile and run the MyFirstOval.java program given above. You already have the following two files in your folder: MyFirstOval.java and doodlepad.jar . Open a terminal window running your shell program and make sure the current directory is set to the folder containing your files. To compile your program execute the following command.  javac -cp doodlepad.jar MyFirstOval.java  If all goes well, the compilation will finish and you will have a MyFirstOval.class file in your folder. If you see errors, double-check that the files are in your folder and that your shell has the current directory set to the same folder.  The syntax for running the program will depend upon your operating system and shell. The reason being that you will use a separator character in your Java command, and that character is different between Windows and macOS\/Linux. On Windows, the separator character is semicolon ( ; ) and on macOS and Linux it is colon ( : ). In your java command you want Java to look for classes both in the current folder, which is specified by the special . character, as well as in the doodlepad.jar file. The MyFirstOval.class file is saved in the current folder while the DoodlePad class files are in the doodlepad.jar archive. The command to run your program on macOS or Linux is as follows. Note the use of the : character to separate the current folder path ( . ) and the doodlepad.jar archive. Also recall that the last argument is the class at which to start execution -- the class having a public static void main(String[] args) static method implemented.  java -cp .:doodlepad.jar MyFirstOval  On Windows using the Command Prompt, use the following command syntax, which is the same as above except the path separator is now ; .  java -cp .;doodlepad.jar MyFirstOval  If using PowerShell on Windows, note that ; character is used by the PowerShell language to terminal statements. We must escape the ; character to ensure that it is not used by PowerShell, but instead is passed through unmodified to Java. To escape any character in PowerShell, preceded the character with a backtick ( ` ). The syntax for running a Java program while specifying a class path in PowerShell is as follows. Note the use of the backtick ( ` ) to escape the semicolon character ( ; ).  java -cp .`;doodlepad.jar MyFirstOval  If successful, you will see a window like that in .  If you plan to use DoodlePad classes in your examples (which I strongly encourage), make sure you have these details mastered and that you are able to compile and run a DoodlePad program like MyFirstOval.java on the operating system and shell of your choice. There is quite a bit of fun to come while writing interactive graphics program that make use of the DoodlePad library.  "
+  "body": " DoodlePad Library  Below you'll find a complete Java program that uses the DoodlePad library to create a graphics window (encapsulated as a Pad object) and instantiate an Oval object. Once you compile and run your program, you will see a window like that shown in the figure on the right. This simple program demonstrates how DoodlePad removes the detail of the underlying windowing libraries allowing you to focus on learning Java and object oriented programming. Other than the include statement added to the top of the program, we simply instantiated an Oval object, and the rest was handled automatically.   A DoodlePad Pad window object with an Oval object    \/\/ MyFirstOval.java import doodlepad.*; public class MyFirstOval { public static void main(String[] args) { Oval oval1 = new Oval(); } }      As we've seen, the import statement is necessary to load classes from external libraries that are not included in Java by default. The DoodlePad library (certainly) is not distributed with the JDK and therefore must be downloaded separately. Fortunately, this library is distributed as a single file named  doodlepad.jar and is freely available for you to download and use. The file extension JAR is a clever shorthand for the term Java ARchive . In fact, a JAR file is just a zip archive. Go ahead and use your favorite zip utility to open the file and peer into its contents. What you'll see is a list of .class files, which we know are compiled Java files. The doodlepad.jar file is just a zip archive of precompiled Java classes.  Unlike the classes that are included in the Java Platform, when compiling and running a program that uses DoodlePad classes, you must tell Java where to find them on your filesystem. That is, you must tell Java where to look for the doodlepad.jar file. Once it knows where to find these classes, the Java compiler will compile your program and check that you are using these classes in accordance with their exposed public interfaces. The Java runtime will bring it all to life as a running program.  Most editors and Java programming environments provide ways to create projects that reference libraries so compiling and running is convenient. Here we will not use any special editor. Instead we use the commandline approach provided by the JDK shell commands to demonstrate how to compile and run programs that make use of the DoodlePad class library. We want to demonstrate how to use the library independent of any specific editor.  So, our core goal is to tell Java where to find our class libraries (i.e. our .class and .jar files). Both the javac command and the java command allow the addition of several options when executed. We want to use the --class-path option which informs the command which file system path to search for class libraries. This option can be shortened to -cp for convenience.  You may want to store all your JAR files in a common location on your file system, or take some other organizational approach. In the following example, we assume you have downloaded the  doodlepad.jar file and saved it to the same folder as your Java program. One word of caution. Many web browers consider JAR files to be dangerous, and rightly so. They contain executable code. Your browser may refuse to download the doodlepad.jar file until you give special permission to do so. This file is not executable. It contains only libraries to be used by other programs.  Let's assume you want to compile and run the MyFirstOval.java program given above. You already have the following two files in your folder: MyFirstOval.java and doodlepad.jar . Open a terminal window running your shell program and make sure the current directory is set to the folder containing your files. To compile your program execute the following command.  javac -cp doodlepad.jar MyFirstOval.java  If all goes well, the compilation will finish and you will have a MyFirstOval.class file in your folder. If you see errors, double-check that the files are in your folder and that your shell has the current directory set to the same folder.  The syntax for running the program will depend upon your operating system and shell. The reason being that you will use a separator character in your Java command, and that character is different between Windows and macOS\/Linux. On Windows, the separator character is semicolon ( ; ) and on macOS and Linux it is colon ( : ). In your java command you want Java to look for classes both in the current folder, which is specified by the special . character, as well as in the doodlepad.jar file. The MyFirstOval.class file is saved in the current folder while the DoodlePad class files are in the doodlepad.jar archive. The command to run your program on macOS or Linux is as follows. Note the use of the : character to separate the current folder path ( . ) and the doodlepad.jar archive. Also recall that the last argument is the class at which to start execution -- the class having a public static void main(String[] args) static method implemented.  java -cp .:doodlepad.jar MyFirstOval  On Windows using the Command Prompt, use the following command syntax, which is the same as above except the path separator is now ; .  java -cp .;doodlepad.jar MyFirstOval  If using PowerShell on Windows, note that ; character is used by the PowerShell language to terminal statements. We must escape the ; character to ensure that it is not used by PowerShell, but instead is passed through unmodified to Java. To escape any character in PowerShell, preceded the character with a backtick ( ` ). The syntax for running a Java program while specifying a class path in PowerShell is as follows. Note the use of the backtick ( ` ) to escape the semicolon character ( ; ).  java -cp .`;doodlepad.jar MyFirstOval  If successful, you will see a window like that in .  If you plan to use DoodlePad classes in your examples (which I strongly encourage), make sure you have these details mastered and that you are able to compile and run a DoodlePad program like MyFirstOval.java on the operating system and shell of your choice. There is quite a bit of fun to come while writing interactive graphics program that make use of the DoodlePad library.  "
 },
 {
   "id": "figure-dp-oval",
@@ -1384,12 +1384,12 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "5.1.1",
   "title": "",
-  "body": " A DoodlePad Pad window object with an Oval object    import doodlepad.*; public class MyFirstOval { public static void main(String[] args) { Oval oval1 = new Oval(); } }     "
+  "body": " A DoodlePad Pad window object with an Oval object    \/\/ MyFirstOval.java import doodlepad.*; public class MyFirstOval { public static void main(String[] args) { Oval oval1 = new Oval(); } }     "
 },
 {
-  "id": "p-317",
+  "id": "p-318",
   "level": "2",
-  "url": "section-dp-doodlepad.html#p-317",
+  "url": "section-dp-doodlepad.html#p-318",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1429,12 +1429,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Creating Shapes",
-  "body": " Creating Shapes   In we created our first Oval object. We used the Oval class constructor that takes no arguments. every Shape in DoodlePad has a nullary (no-argument) constructor for convenience. For all Shapes, the nullary constructor chooses the initial location of the Shape to be random (using a Random object) and sets the width and height to 100. Alternative Shape constructors let use set the location and size as parameters.  DoodlePad defines a variety of graphic objects that you can instantiate and interact with, including basic shapes. Available basic shape classes include the following. Don't miss other DoodlePad classes such as Polygon , Pad , Path , Image , Text , Sprite and more.   Basic Shapes    Shape  Description    Rectangle  Your garden variety Rectangle    Oval  Another name for an Ellipse    RoundRect  A Rectangle with rounded corners    Line  A straight line between two points    Arc  A curved line that is part of an ellipse       Rectangle  Rectangles are one of the more simple shapes in DoodlePad. Creating a new Rectangle is as simple as creating an instance of the Rectangle class. The Rectangle class's nullary constructor creates a 100 pixel × 100 pixel Rectangle at a randomly selected location, but other Rectangle constructors give you more control of the Rectangle created. For example, the following sample program creates a 70 pixel × 40 pixel Rectangle with its upper left corner at the location (50, 60).  \/\/ RectangleDemo1.java import doodlepad.*; public class RectangleDemo1 { public static void main(String[] args) { Rectangle r1 = new Rectangle(50, 60, 70, 40); } }  The Rectangle size and location are passed as numerical arguments to the Rectangle constructor. The first pair of arguments correspond to the Rectangle location (x=50, y=60) and the second pair correspond to its size (width=70, height=40). This is a pattern that is repeated in many graphic object constructors in DoodlePad.    Oval  Creating an Oval is very similar to creating a Rectangle. An Oval's nullary constructor creates a new 100 pixel × 100 pixel ellipse Shape with a randomly selected starting location. An Oval also has a four-argument constructor similar to a Rectangle. The first two arguments of this constructor are the x and y coordinates of the upper left corner of the Oval's bounding box and the second two arguments are the Oval's width and height. Note that the four numerical argument values of this Oval constructor can be thought of as describing the bounding box within which the Oval is be created.  The only difference between the following example program and the previous example is that the following sample program creates a 70 pixel × 40 pixel Oval with its upper left corner at the location (50, 60) isntead of a Rectangle.  \/\/ OvalDemo1.java import doodlepad.*; public class OvalDemo1 { public static void main(String[] args) { Oval r1 = new Oval(50, 60, 70, 40); } }    RoundRect    Line    Arc   "
+  "body": " Creating Shapes   In we created our first Oval object. We used the Oval class constructor that takes no arguments. every Shape in DoodlePad has a nullary (no-argument) constructor for convenience. For all Shapes, the nullary constructor chooses the initial location of the Shape to be random (using a Random object) and sets the width and height to 100. Alternative Shape constructors let use set the location and size as parameters.  DoodlePad defines a variety of graphic objects that you can instantiate and interact with, including basic shapes. Available basic shape classes include the following. Don't miss other DoodlePad classes such as Polygon , Pad , Path , Image , Text , Sprite and more.   Basic Shapes    Shape  Description    Rectangle  Your garden variety Rectangle    Oval  Another name for an Ellipse    RoundRect  A Rectangle with rounded corners    Line  A straight line between two points    Arc  A curved line that is part of an ellipse       Rectangle  Rectangles are one of the more simple shapes in DoodlePad. Creating a new Rectangle is as simple as creating an instance of the Rectangle class. The Rectangle class's nullary constructor creates a 100 pixel × 100 pixel Rectangle at a randomly selected location, but other Rectangle constructors give you more control of the Rectangle created. For example, the following sample program creates a 70 pixel × 40 pixel Rectangle with its upper left corner at the location (50, 60).  \/\/ RectangleDemo1.java import doodlepad.*; public class RectangleDemo1 { public static void main(String[] args) { Rectangle r1 = new Rectangle(50, 60, 70, 40); } }  The Rectangle size and location are passed as numerical arguments to the Rectangle constructor. The first pair of arguments correspond to the Rectangle location (x=50, y=60) and the second pair correspond to its size (width=70, height=40). This is a pattern that is repeated in many graphic object constructors in DoodlePad.    Oval  Creating an Oval is very similar to creating a Rectangle. An Oval's nullary constructor creates a new 100 pixel × 100 pixel ellipse Shape with a randomly selected starting location. An Oval also has a four-argument constructor similar to a Rectangle. The first two arguments of this constructor are the x and y coordinates of the upper left corner of the Oval's bounding box and the second two arguments are the Oval's width and height. Note that the four numerical argument values of this Oval constructor can be thought of as describing the bounding box within which the Oval is be created.  The only difference between the following example program and the previous example is that the following sample program creates a 70 pixel × 40 pixel Oval with its upper left corner at the location (50, 60) isntead of a Rectangle.  \/\/ OvalDemo1.java import doodlepad.*; public class OvalDemo1 { public static void main(String[] args) { Oval r1 = new Oval(50, 60, 70, 40); } }    RoundRect   The RoundRect class differs from Rectangle in that the corners of a RoundRect are, well, rounded. In addition to specifying the location and size of a RoundRect, you must also specify the width and height of the arcs that form the rounded corners. These additional parameters are called arcWidth and arcHeight and come after x-location, y-location, width and height in the RoundRect constructor.    RoundRect Measurements     In the following example we create a RoundRect object at (10, 10) with width = 200, height = 150, arcWidth and arcHeight = 30. The diagram on the right illustrates how these parameters are used to define the shape. Note that the arcWidth and arcHeight parameters are not required to have equal values.    \/\/ RoundRectDemo1.java import doodlepad.*; public class RoundRectDemo1 { public static void main(String[] args) { RoundRect r1 = new RoundRect(10, 10, 200, 150, 30, 30); } }      Arc   The Arc shape class can be thought of as a pie-section taken from an Oval. In fact, to define an Arc one starts with the location and dimensions of an Oval and then adds the start and angular extent of the section to be taken. In DoodlePad these angles are defined with 0° indicated by a horizontal line extending from the center of the oval to the right. As the angle increases the line rotates in the counter clockwise direction.    Arc Measurements     The beginning of an arc is specified with an angle between 0° and 360°, and the length of the arc is determined by an angle that the arc sweeps. The arc itself follows the outline of the equivalent oval. The figure on the right describes the arc specified (in red) by the program below. The first four arguments of the Arc constructor are the same as an Oval (x, y, width, height). The last two parameters are the starting angle (startAngle) and the extent of the arc (arcAngle) measure in degrees.  When an arc is filled, it becomes a pie section, which can be filled and outlined to form a pie-shaped graphic object. When an arc is not filled, as is the case with the example below, only the segment of the equivalent Oval's outline is rendered.    \/\/ ArcDemo1.java import doodlepad.*; public class ArcDemo1 { public static void main(String[] args) { \/\/ Create the Arc starting at 45 degrees and extending for 90 degrees Arc a1 = new Arc(100, 100, 200, 200, 45, 90); \/\/ Do not fill the arc so only the arc is drawn. a1.setFilled(false); } }      Line  The Line shape is created by specifying its two endpoint coordinates. The Line constructor takes four values, (x1, y1, x2, y2), where (x1, y1) is the first endpoint and (x2, y2) is the second endpoint. The example below creates a diagonal Line shape between the endpoints (100, 100) and (200, 200).    \/\/ LineDemo1.java import doodlepad.*; public class LineDemo1 { public static void main(String[] args) { \/\/ Create a diagonal Line shape from (100, 100) and (200, 200) Line l1 = new Line(100, 100, 200, 200); } }      DoodlePad provides more ways to create Shape classes beyond those described in this chapter. If you'd like to skip ahead to investigate more complex techniques, have a look at Path Shapes , Polygon Shapes . Images , and Sprites .   "
 },
 {
-  "id": "p-336",
+  "id": "p-337",
   "level": "2",
-  "url": "section-dp-shapes.html#p-336",
+  "url": "section-dp-shapes.html#p-337",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1450,56 +1450,569 @@ var ptx_lunr_docs = [
   "body": " Basic Shapes    Shape  Description    Rectangle  Your garden variety Rectangle    Oval  Another name for an Ellipse    RoundRect  A Rectangle with rounded corners    Line  A straight line between two points    Arc  A curved line that is part of an ellipse    "
 },
 {
+  "id": "figure-14",
+  "level": "2",
+  "url": "section-dp-shapes.html#figure-14",
+  "type": "Figure",
+  "number": "5.3.2",
+  "title": "",
+  "body": " RoundRect Measurements   "
+},
+{
+  "id": "listing-9",
+  "level": "2",
+  "url": "section-dp-shapes.html#listing-9",
+  "type": "Listing",
+  "number": "5.3.3",
+  "title": "",
+  "body": "  \/\/ RoundRectDemo1.java import doodlepad.*; public class RoundRectDemo1 { public static void main(String[] args) { RoundRect r1 = new RoundRect(10, 10, 200, 150, 30, 30); } }   "
+},
+{
+  "id": "figure-15",
+  "level": "2",
+  "url": "section-dp-shapes.html#figure-15",
+  "type": "Figure",
+  "number": "5.3.4",
+  "title": "",
+  "body": " Arc Measurements   "
+},
+{
+  "id": "listing-10",
+  "level": "2",
+  "url": "section-dp-shapes.html#listing-10",
+  "type": "Listing",
+  "number": "5.3.5",
+  "title": "",
+  "body": "  \/\/ ArcDemo1.java import doodlepad.*; public class ArcDemo1 { public static void main(String[] args) { \/\/ Create the Arc starting at 45 degrees and extending for 90 degrees Arc a1 = new Arc(100, 100, 200, 200, 45, 90); \/\/ Do not fill the arc so only the arc is drawn. a1.setFilled(false); } }   "
+},
+{
+  "id": "listing-11",
+  "level": "2",
+  "url": "section-dp-shapes.html#listing-11",
+  "type": "Listing",
+  "number": "5.3.6",
+  "title": "",
+  "body": "  \/\/ LineDemo1.java import doodlepad.*; public class LineDemo1 { public static void main(String[] args) { \/\/ Create a diagonal Line shape from (100, 100) and (200, 200) Line l1 = new Line(100, 100, 200, 200); } }   "
+},
+{
+  "id": "section-dp-position-size",
+  "level": "1",
+  "url": "section-dp-position-size.html",
+  "type": "Section",
+  "number": "5.4",
+  "title": "Shape Position and Size",
+  "body": " Shape Position and Size  All graphic objects have a location and a size, where location is the upper left x-y coordinate of the object's bounding box and size is the width and height of the bounding box. A Shape object's bounding box is the smallest box that surrounds the Shape. If a Shape is set to be selectable, the light gray selection box drawn around the Shape while it is selected corresponds with the Shape's bounding box. All Shapes may be moved and sized by setting the location and size of its bounding box.   Position- and Size-related Methods  Shape implements a number of mutator and accessor methods that may be used to modify its location and size, as well as to interrogate its current location and size. In all cases the methods can be thought of a modifying the Shape's bounding box. The Shape itself is modified to fill the new bounding box. The manner in which the Shape's defining coordinates change depend upon the Shape.  One additional Shape method to note is move(double dx, double dy). This is a convenience method that moves the location of a Shape by dx in the x-direction and by dy in the y-direction. It is useful when you have the amount by which a Shape should move relative to its current location rather than the new absolute position of a Shape.  The following Shape methods permit a Shape's bounding box to be modified. These methods may be used on all Shape subclasses.   Shape size and location methods    Method  Description    public double getHeight()  Return the Shape's height.   public void setHeight(double height)  Set the height of the Shape.   public double getWidth()  Return the Shape's width.   public void setWidth(double width)  Set the width of the Shape.   public Dimension getSize()  Return the Shape's height and width as a Dimension object.   public void setSize(double width, double height)  Set both the width and height of the Shape.   public Point getLocation()  Return the location of the upper left corner of the Shape's bounding box as a Point object.   public void setLocation(double x, double y)  Set the coordinates of the upper left corner of teh Shape's bounding box.   public double getX()  Return the x-location of the upper left corner of the Shape's bounding box.   public void setX(double x)  Set the x-coordinate of the upper left corner of the Shape's bounding box.   public double getY()  Return the y-coordinate of the upper left corner of the Shape's bounding box.   public void setY(double y)  Set the y-coordinate of the upper left corner of the Shape's bounding box.   public Point getCenter()  Return the coordinates of the Shape's bounding box center.   public void setCenter(double cx, double cy)  Move the Shape so that its bounding box has specified center coordinates.   public void move(double dx, double dy)  Move a Shape by the distance (dx, dy).     "
+},
+{
+  "id": "table-28",
+  "level": "2",
+  "url": "section-dp-position-size.html#table-28",
+  "type": "Table",
+  "number": "5.4.1",
+  "title": "Shape size and location methods",
+  "body": " Shape size and location methods    Method  Description    public double getHeight()  Return the Shape's height.   public void setHeight(double height)  Set the height of the Shape.   public double getWidth()  Return the Shape's width.   public void setWidth(double width)  Set the width of the Shape.   public Dimension getSize()  Return the Shape's height and width as a Dimension object.   public void setSize(double width, double height)  Set both the width and height of the Shape.   public Point getLocation()  Return the location of the upper left corner of the Shape's bounding box as a Point object.   public void setLocation(double x, double y)  Set the coordinates of the upper left corner of teh Shape's bounding box.   public double getX()  Return the x-location of the upper left corner of the Shape's bounding box.   public void setX(double x)  Set the x-coordinate of the upper left corner of the Shape's bounding box.   public double getY()  Return the y-coordinate of the upper left corner of the Shape's bounding box.   public void setY(double y)  Set the y-coordinate of the upper left corner of the Shape's bounding box.   public Point getCenter()  Return the coordinates of the Shape's bounding box center.   public void setCenter(double cx, double cy)  Move the Shape so that its bounding box has specified center coordinates.   public void move(double dx, double dy)  Move a Shape by the distance (dx, dy).   "
+},
+{
   "id": "section-dp-colors",
   "level": "1",
   "url": "section-dp-colors.html",
   "type": "Section",
-  "number": "5.4",
+  "number": "5.5",
   "title": "Colors",
-  "body": " Colors  "
+  "body": " Colors   Color Components  Most DoodlePad Shape subclasses may be filled with one color and stroked (outlined) with a separate color. It is also possible to disable Shape fill or stroke, drawing empty shapes or shapes without an outline. Colors in DoodlePad are constructed from color components: red, green, and blue, and one transparency component called alpha. The value of each of the four components may be an integer in the range [0, 255].  Use the interactive widget below to explore how these four values combine to achieve a desired fill or stroke color. Drag the colored slider knobs up and down with the mouse to change a component's value. The color that results from combining the four components is shown in the rectangular swatch on the right. To illustrate transparency (alpha), behind the swatch there are three colored lines. Transparency is increased by decreasing the alpha component. When alpha is 0, the resulting color is completely transparent. When alpha is 255, the color is completely opaque. Drag the alpha slider up and down to see the impact on color.   Pure red, green or blue is achieved by setting the corresponding color component value to its maximum (255) and leaving the other two color color values at 0. Other colors are constructed from different combinations of the color components. All shades of gray, from black to white, are formed by setting the values of red, green, and blue to equal values between 0 and 255.  The following table lists the components of several named colors. Drag the sliders to values that match settings to see the named color.  Named Color Components    Name  Red  Green  Blue    Red  255  0  0    Green  0  128  0    Blue  0  0  255    Yellow  255  255  0    Orange  255  128  0    Cyan  0  255  255    Magenta  255  0  255    Lime  0  255  0    Chartreuse  127  255  0    Purple  128  0  128    Maroon  128  0  0    Teal  0  128  128    Navy  0  0  128    Black  0  0  0    White  255  255  255    Gray  128  128  128        Setting Fill and Stroke Color  Each Shape object's fill color and stroke color may be specified using color component values. There are two mutator methods for setting Shape color: setFillColor(...) and getStrokeColor(...) . These setter methods each have three overloads. The base method signature has four parameters, one for each of the four color components: red, green, blue and alpha. A second overloaded method has only three parameters, which specify red, green and blue components. In this case the alpha component is assumed to have a value of 255, meaning that the Shape color has no transparency. The third overloaded method has only one parameter, often called gray. In this case the parameter value is repeated for all three color components, and alpha once again is set to 255.    Fill And Stroke Color Examples   The following example program creates four shapes with various fill and stroke colors. The resulting Shape objects are shown in the image on the right. Note that the Oval is unfilled, so the underlying red Rectangle is visible. Also note that the filled Arc has a semi-transparent yellow fill, so the underlying Line is partially visible.    Stroke and fill colors       \/\/ Colors.java import doodlepad.*; public class Colors { public static void main(String[] args) { \/\/ Red Rectangle with no stroke Rectangle myRect = new Rectangle( 10, 55, 50, 40); myRect.setFillColor(255, 0, 0); myRect.setStroked(false); \/\/ Unfilled Oval with thick light gray stroke Oval myOval = new Oval(40, 50, 50, 50); myOval.setFilled(false); myOval.setStrokeColor(200); myOval.setStrokeWidth(5); \/\/ Gray Line with thick stroke Line myLine = new Line(80, 50, 120, 90); myLine.setStrokeColor(127); myLine.setStrokeWidth(10); \/\/ Semi-transparent yellow filled Arc with default stroke style Arc myArc = new Arc(100, 50, 50, 50, 30, 290); myArc.setFillColor(255, 255, 0, 127); } }      Color-related Methods  The following table lists all color-related Shape methods and their overloads with descriptions. Both setter and getter methods are listed.   Color-related Shape object methods    Method  Description    public void setFillColor(double red, double green, double blue, double alpha)   Set the color used to fill a Shape  by specifying all four color components.    public void setFillColor(double red, double green, double blue)   Set the color used to fill a Shape.  The alpha color component is set to 255,  meaning that the Shape fill is not transparent.    public void setFillColor(double gray)  Set the fill color of a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape fill is not transparent.    public int getFillRed()  Return the red fill color component.    public int getFillBlue()  Return the blue fill color component.    public int getFillGreen()  Retrun the green fill color component.    public int getFillAlpha()  Return the alpha fill color component indicating the degree to which the shape fill is transparent.    public java.awt.Color getFillColor()  Return the color used to fill a Shape as a java.awt.Color object.    public void setFilled(boolean filled)  Specify whether or not a Shape is to be filled with a color. If set to false the Shape will not be filled.    public boolean getFilled()  Return a boolean indicating whether or not the Shape is filled.    public void setStrokeColor(double red, double green, double blue, double alpha)  Set the color used to stroke (outline) a Shape by specifying al four color components    public void setStrokeColor(double red, double green, double blue)  Set the color used to outline a Shape. The alpha color component is set to 255, meaning that the Shape outline is not transparent.    public void setStrokeColor(double gray)  Set the color used to outline a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape outline is not transparent.    public int getStrokeRed()  Return the red outline color component.    public int getStrokeBlue()  Return the blue outline color component.    public int getStrokeGreen()  Return the green outline color component.    public int getStrokeAlpha()  Return the alpha outline color component indicating the degree to which the shape outline is transparent.    public java.awt.Color getStrokeColor()  Return the color used to outline a Shape as a java.awt.Color object.    public void setStroked(boolean filled)  Specify whether or not a Shape is to be outline with a color. If set to false the Shape will not be outlined.    public boolean getStroked()  Return a boolean indicating whether or not the Shape is outlined.     The Pad object also has a few color-related methods. These are used only for setting and getting the Pad's background color. The Pad has only two overloads for its method of setting background color. Because a Pad's color may not be transparent, no overload is available that includes an alpha parameter.   Color-related Pad object methods    Method  Description    public void setBackground(double red, double green, double blue)  Specify the color to use to fill the background of a Pad object. Only red, green and blue color components are specified because Pad objects may not be transparent.    public void setBackground(double gray)  Specify the shade of gray to use to fill the background of a Pad object. The single parameter value is used for red, green and blue.    public java.awt.Color getBackground()  Return the color used to fill the background of a Pad object as a java.awt.Color object.      "
 },
 {
-  "id": "section-dp-interaction",
+  "id": "table-29",
+  "level": "2",
+  "url": "section-dp-colors.html#table-29",
+  "type": "Table",
+  "number": "5.5.1",
+  "title": "Named Color Components",
+  "body": " Named Color Components    Name  Red  Green  Blue    Red  255  0  0    Green  0  128  0    Blue  0  0  255    Yellow  255  255  0    Orange  255  128  0    Cyan  0  255  255    Magenta  255  0  255    Lime  0  255  0    Chartreuse  127  255  0    Purple  128  0  128    Maroon  128  0  0    Teal  0  128  128    Navy  0  0  128    Black  0  0  0    White  255  255  255    Gray  128  128  128    "
+},
+{
+  "id": "figure-16",
+  "level": "2",
+  "url": "section-dp-colors.html#figure-16",
+  "type": "Figure",
+  "number": "5.5.2",
+  "title": "",
+  "body": " Stroke and fill colors   "
+},
+{
+  "id": "listing-dp-color_example",
+  "level": "2",
+  "url": "section-dp-colors.html#listing-dp-color_example",
+  "type": "Listing",
+  "number": "5.5.3",
+  "title": "",
+  "body": "  \/\/ Colors.java import doodlepad.*; public class Colors { public static void main(String[] args) { \/\/ Red Rectangle with no stroke Rectangle myRect = new Rectangle( 10, 55, 50, 40); myRect.setFillColor(255, 0, 0); myRect.setStroked(false); \/\/ Unfilled Oval with thick light gray stroke Oval myOval = new Oval(40, 50, 50, 50); myOval.setFilled(false); myOval.setStrokeColor(200); myOval.setStrokeWidth(5); \/\/ Gray Line with thick stroke Line myLine = new Line(80, 50, 120, 90); myLine.setStrokeColor(127); myLine.setStrokeWidth(10); \/\/ Semi-transparent yellow filled Arc with default stroke style Arc myArc = new Arc(100, 50, 50, 50, 30, 290); myArc.setFillColor(255, 255, 0, 127); } }   "
+},
+{
+  "id": "table-30",
+  "level": "2",
+  "url": "section-dp-colors.html#table-30",
+  "type": "Table",
+  "number": "5.5.4",
+  "title": "Color-related Shape object methods",
+  "body": " Color-related Shape object methods    Method  Description    public void setFillColor(double red, double green, double blue, double alpha)   Set the color used to fill a Shape  by specifying all four color components.    public void setFillColor(double red, double green, double blue)   Set the color used to fill a Shape.  The alpha color component is set to 255,  meaning that the Shape fill is not transparent.    public void setFillColor(double gray)  Set the fill color of a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape fill is not transparent.    public int getFillRed()  Return the red fill color component.    public int getFillBlue()  Return the blue fill color component.    public int getFillGreen()  Retrun the green fill color component.    public int getFillAlpha()  Return the alpha fill color component indicating the degree to which the shape fill is transparent.    public java.awt.Color getFillColor()  Return the color used to fill a Shape as a java.awt.Color object.    public void setFilled(boolean filled)  Specify whether or not a Shape is to be filled with a color. If set to false the Shape will not be filled.    public boolean getFilled()  Return a boolean indicating whether or not the Shape is filled.    public void setStrokeColor(double red, double green, double blue, double alpha)  Set the color used to stroke (outline) a Shape by specifying al four color components    public void setStrokeColor(double red, double green, double blue)  Set the color used to outline a Shape. The alpha color component is set to 255, meaning that the Shape outline is not transparent.    public void setStrokeColor(double gray)  Set the color used to outline a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape outline is not transparent.    public int getStrokeRed()  Return the red outline color component.    public int getStrokeBlue()  Return the blue outline color component.    public int getStrokeGreen()  Return the green outline color component.    public int getStrokeAlpha()  Return the alpha outline color component indicating the degree to which the shape outline is transparent.    public java.awt.Color getStrokeColor()  Return the color used to outline a Shape as a java.awt.Color object.    public void setStroked(boolean filled)  Specify whether or not a Shape is to be outline with a color. If set to false the Shape will not be outlined.    public boolean getStroked()  Return a boolean indicating whether or not the Shape is outlined.    "
+},
+{
+  "id": "table-31",
+  "level": "2",
+  "url": "section-dp-colors.html#table-31",
+  "type": "Table",
+  "number": "5.5.5",
+  "title": "Color-related Pad object methods",
+  "body": " Color-related Pad object methods    Method  Description    public void setBackground(double red, double green, double blue)  Specify the color to use to fill the background of a Pad object. Only red, green and blue color components are specified because Pad objects may not be transparent.    public void setBackground(double gray)  Specify the shade of gray to use to fill the background of a Pad object. The single parameter value is used for red, green and blue.    public java.awt.Color getBackground()  Return the color used to fill the background of a Pad object as a java.awt.Color object.    "
+},
+{
+  "id": "section-dp-events",
   "level": "1",
-  "url": "section-dp-interaction.html",
+  "url": "section-dp-events.html",
   "type": "Section",
-  "number": "5.5",
-  "title": "Handling Events and Interactions",
-  "body": " Handling Events and Interactions  Method References  "
+  "number": "5.6",
+  "title": "Event-Driven Programming",
+  "body": " Event-Driven Programming   Perhaps the most distinguishing feature of the DoodlePad library is the ease and extent to which it supports event driven programming. All DoodlePad Shape objects as well as the Pad object may be set up to invoke custom methods in response to a wide range of user interaction. For example, you may want the change the fill cellor of one or more shapes when the user hovers over the shape or clicks the shape with the mouse. Alternatively, you may want to move a Shape in specific direction when the user presses one of the arrow keys. The Pad object implements timer functionality that raises tick events at a user-specified rate. You may want to invoke one or more of your custom methods each time the Pad's timer ticks, which may be accomplished using the Pad's tick event.  By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don't want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.  This ability to respond to mouse, keyboard, timer and other events allows DoodlePad to be used to develop a wide range of fun interactive graphics programs that are limited only by your imagination.    Connecting Events and Methods with Method References  The simplest way to invoke a method in response to an event is to connect the event associated with a given object to one of your methods. The most important prerequisite for making this connection is to ensure that your event handler method's signature matches what the event expects (by implementing the ShapeMouseEventHandler interface). Let's say you want to invoke a method when the user clicks on a Shape object of some kind. All mouse events, including the click event, requires that the method to be connected have the following four parameters in the given order:   Mouse Event Parameters    #  Type  Description    1.  Shape  The Shape object that initiated the mouse event    2.  double  The x-coordinate at which the event occurred    3.  double  The y-coordinate at which the event occurred    4.  int  A number identifying the mouse button used     For example, the following method may be invoked by a mouse event because it implements the necessary four parameter types in the specified order.    public void onPressed(Shape shp, double, x, double y, int button) { System.out.println(\"The mouse was pressed at coordinates (\" + x + \",\" + y + \")\"); }    Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the :: binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.  As an example, let's say your class implements the previous onPress method, and you would like to invoke this method when the mouse is pressed on an Oval Shape object, a reference to which was saved as an instance variable named myOval. The following statement establishes this connection, so that when the mouse is pressed on myOval the onPress method implemented by this will be invoked.    myOval.setMousePressedHandler( this::onPress );    The inherited setMousePressedHandler(...) method is what is used to establish the connection for mouse-pressed events.  Following is a complete program demonstrating event handing in DoodlePad using method references.   PushButton.java   \/\/ PushButton.java import doodlepad.*; public class PushButton { private RoundRect shpButton; \/\/ Button Shape private boolean isOn; \/\/ Button state public PushButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); shpButton.setFillcellor(200); \/\/ Starts off isOn = false; \/\/ Set button click event handler method shpButton.setMousePressedHandler( this::onPressed ); } private void onPressed(Shape shp, double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill cellor based on state if (isOn) { shpButton.setFillcellor(0, 255, 0); } else { shpButton.setFillcellor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton PushButton myPushButton = new PushButton(); } }     In this example we implement a simple graphical toggle button class named PushButton. For the button graphic we use a RoundRect Shape object. The PushButton constructor creates the RoundRect object and initializes its fill cellors to gray. The PushButton class tracks its state using an isOn boolean instance variable. The class is initialized with isOn = false implying the button is initially off. The constructor also uses the setMousePressedHandler method to indicate that the object's onPressed method should be invoked when the RoundRect shape is pressed with the mouse. The onPressed method toggles the value of isOn and then resets the RoundRect fill cellor based on the current PushButton state. When the RoundRect is pressed with the mouse, the PushButton object state is toggled and the RoundRect fill cellor changes to green, indicating that the button was pressed. A second press toggles PushButton off and sets the RoundRect fill cellor back to gray.    PushButton.java     The image on the right shows the output from running this example program and pressing the RoundRect Shape once with the mouse.    Shape Mouse Event-Related Methods  A wide variety of mouse events may be handled in a similar manner. Following is a list of all methods used to connect a mouse event with a Shape. Each method is used to associate a particular mouse event with a custom method. Each of the following methods takes a method reference as its only parameter. Each method reference must identify a method with a signature that matches the previously listed four parameter types in the given order, otherwise the compiler will complain.   Shape Mouse Event Methods    Method  Description    public void setMouseClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.    public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.    public void setMousePressedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.    public void setMouseReleasedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.    public void setMouseMovedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.    public void setMouseDraggedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.    public void setMouseEnteredHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.    public void setMouseExitedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.       Other Event-Related Shape Methods  Shapes triggers one additional event beyond the above list of mouse events. The selectionChanged event is triggered whenever the selection status of a Shape changes. For example, if the user clicks on a selectable Shape that is not already selected, the Shape becomes selected, which is indicated by a light gray rectangle drawn around the Shape. If a suitable event handler method is attached to the Shape's selectionChange event, then as the Shape becomes selected, the event method will be invoked, indicating the Shape object whose selection state changed as well as if the Shape is currently selected. Likewise, if another Shape is clicked causing the currently selected Shape to be unselected, the event handler method will once again be invoked.  Both the method reference and overriding methods of handling triggered selectionChanged events are supported. Event handler methods to be attached to the selectionChanged event trigger using the method reference approach must have a signature with two parameters: Shape and boolean. This implements the ShapeSelectionEventHandler interface. The first parameter indicates the Shape object whose selection changed, and the second parameter indicates if that Shape is currently selected (true) or not (false).  The following two methods are used for handling triggered selectionChanged events. The first method attaches an event handler using the method reference approach. Override the second method to handle the triggered event using the method overriding approach.   Shape Selection Event Methods    Method  Description    public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)  Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the ShapeSelectionEventHandler interface.    public void onSelectionChanged(boolean selected)  Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.       Pad Mouse Event-Related Methods   Pad Mouse Event-Related Methods    Method  Description    public void setMousePressedHandler(PadMouseEventHandler handler)  Assign an onMousePressed event handler using a method reference.    public void setMouseReleasedHandler(PadMouseEventHandler handler)  Assign an onMouseReleased event handler using a method reference.    public void setMouseMovedHandler(PadMouseEventHandler handler)  Assign an onMouseMoved event handler using a method reference.    public void setMouseClickedHandler(PadMouseEventHandler handler)  Assign an onMouseClicked event handler using a method reference.    public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)  Assign an onMouseDoubleClicked event handler using a method reference.    public void setMouseDraggedHandler(PadMouseEventHandler handler)  Assign an onMouseDragged event handler using a method reference.    public void setMouseEnteredHandler(PadMouseEventHandler handler)  Assign an onMouseEntered event handler using a method reference.    public void setMouseExitedHandler(PadMouseEventHandler handler)  Assign an onMouseExited event handler using a method reference.    public void addMouseListener(PadMouseListener o)  Add object to the list of items that are notified on Pad's mouse events.    public void removeMouseListener(PadMouseListener o)  Remove object from Pad's mouse listener list.       Pad Keyboard Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description   public void setKeyPressedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyPressed event handler using a method reference.  public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyReleased event handler using a method reference.  public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler) Assign an onKeyTyped event handler using a method reference.  public void addKeyListener(PadKeyListener o) Add object to the list of items that are notified on Pad's key events.  public void removeKeyListener(PadKeyListener o) Remove object from Pad's key listener list.      Pad Timer Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description    public void setTickHandler(Pad.PadTimerEventHandler handler)  Assign an onTick event handler using a method reference.    public void addTickListener(PadTickListener o)  Add object to the list if items that are notified on Pad's timer tick action.    public void removeTickListener(PadTickListener o)  Remove object from Pad's timer tick action listener list.       Box Driver Example  In the following example a blue Rectangle is created and positioned on a Pad object. The default Pad object's keyPressed event is handled with a custom method that reacts to the arrow keys being pressed. Only arrow keys are tested; all other keys are ignore. When the down arrow is pressed, the box object's move(...) method is used to move the box 10 pixels down (by increasing its y-location). Likewise, the remaining three arrow keys move the box left, right or up, depending upon the key pressed. The result is a simple program that can be used to drive a box around the Pad using the arrow keys.  One item to note is the way the key String being pressed is tested. For all arrows keys the keyText String argument passed to the event handler method is compared to both a String describing the key (e.g. \"Left\") and a symbol (e.g. \"←\"). An arrow key is identified with a positive match to either the description or symbol String. The reason we test both is that the String passed to the event handler may be different depending upon your operating system. Specifically, Windows sets keyText to key description (\"Left\") while macOS uses a symbol (e.g. \"←\"). Give it a try.   BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillcellor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }     "
+},
+{
+  "id": "table-32",
+  "level": "2",
+  "url": "section-dp-events.html#table-32",
+  "type": "Table",
+  "number": "5.6.1",
+  "title": "Mouse Event Parameters",
+  "body": " Mouse Event Parameters    #  Type  Description    1.  Shape  The Shape object that initiated the mouse event    2.  double  The x-coordinate at which the event occurred    3.  double  The y-coordinate at which the event occurred    4.  int  A number identifying the mouse button used    "
+},
+{
+  "id": "listing-dp-onpressed",
+  "level": "2",
+  "url": "section-dp-events.html#listing-dp-onpressed",
+  "type": "Listing",
+  "number": "5.6.2",
+  "title": "",
+  "body": "  public void onPressed(Shape shp, double, x, double y, int button) { System.out.println(\"The mouse was pressed at coordinates (\" + x + \",\" + y + \")\"); }   "
+},
+{
+  "id": "listing-dp-setmousepressedhandler",
+  "level": "2",
+  "url": "section-dp-events.html#listing-dp-setmousepressedhandler",
+  "type": "Listing",
+  "number": "5.6.3",
+  "title": "",
+  "body": "  myOval.setMousePressedHandler( this::onPress );   "
+},
+{
+  "id": "listing-dp-pushbutton",
+  "level": "2",
+  "url": "section-dp-events.html#listing-dp-pushbutton",
+  "type": "Listing",
+  "number": "5.6.4",
+  "title": "",
+  "body": " PushButton.java   \/\/ PushButton.java import doodlepad.*; public class PushButton { private RoundRect shpButton; \/\/ Button Shape private boolean isOn; \/\/ Button state public PushButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); shpButton.setFillcellor(200); \/\/ Starts off isOn = false; \/\/ Set button click event handler method shpButton.setMousePressedHandler( this::onPressed ); } private void onPressed(Shape shp, double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill cellor based on state if (isOn) { shpButton.setFillcellor(0, 255, 0); } else { shpButton.setFillcellor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton PushButton myPushButton = new PushButton(); } }   "
+},
+{
+  "id": "figure-17",
+  "level": "2",
+  "url": "section-dp-events.html#figure-17",
+  "type": "Figure",
+  "number": "5.6.5",
+  "title": "",
+  "body": " PushButton.java   "
+},
+{
+  "id": "table-33",
+  "level": "2",
+  "url": "section-dp-events.html#table-33",
+  "type": "Table",
+  "number": "5.6.6",
+  "title": "Shape Mouse Event Methods",
+  "body": " Shape Mouse Event Methods    Method  Description    public void setMouseClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.    public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.    public void setMousePressedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.    public void setMouseReleasedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.    public void setMouseMovedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.    public void setMouseDraggedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.    public void setMouseEnteredHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.    public void setMouseExitedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.    "
+},
+{
+  "id": "table-34",
+  "level": "2",
+  "url": "section-dp-events.html#table-34",
+  "type": "Table",
+  "number": "5.6.7",
+  "title": "Shape Selection Event Methods",
+  "body": " Shape Selection Event Methods    Method  Description    public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)  Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the ShapeSelectionEventHandler interface.    public void onSelectionChanged(boolean selected)  Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.    "
+},
+{
+  "id": "table-35",
+  "level": "2",
+  "url": "section-dp-events.html#table-35",
+  "type": "Table",
+  "number": "5.6.8",
+  "title": "Pad Mouse Event-Related Methods",
+  "body": " Pad Mouse Event-Related Methods    Method  Description    public void setMousePressedHandler(PadMouseEventHandler handler)  Assign an onMousePressed event handler using a method reference.    public void setMouseReleasedHandler(PadMouseEventHandler handler)  Assign an onMouseReleased event handler using a method reference.    public void setMouseMovedHandler(PadMouseEventHandler handler)  Assign an onMouseMoved event handler using a method reference.    public void setMouseClickedHandler(PadMouseEventHandler handler)  Assign an onMouseClicked event handler using a method reference.    public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)  Assign an onMouseDoubleClicked event handler using a method reference.    public void setMouseDraggedHandler(PadMouseEventHandler handler)  Assign an onMouseDragged event handler using a method reference.    public void setMouseEnteredHandler(PadMouseEventHandler handler)  Assign an onMouseEntered event handler using a method reference.    public void setMouseExitedHandler(PadMouseEventHandler handler)  Assign an onMouseExited event handler using a method reference.    public void addMouseListener(PadMouseListener o)  Add object to the list of items that are notified on Pad's mouse events.    public void removeMouseListener(PadMouseListener o)  Remove object from Pad's mouse listener list.    "
+},
+{
+  "id": "table-36",
+  "level": "2",
+  "url": "section-dp-events.html#table-36",
+  "type": "Table",
+  "number": "5.6.9",
+  "title": "Pad Keyboard Event-Related Methods",
+  "body": " Pad Keyboard Event-Related Methods    Method  Description   public void setKeyPressedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyPressed event handler using a method reference.  public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyReleased event handler using a method reference.  public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler) Assign an onKeyTyped event handler using a method reference.  public void addKeyListener(PadKeyListener o) Add object to the list of items that are notified on Pad's key events.  public void removeKeyListener(PadKeyListener o) Remove object from Pad's key listener list.   "
+},
+{
+  "id": "table-37",
+  "level": "2",
+  "url": "section-dp-events.html#table-37",
+  "type": "Table",
+  "number": "5.6.10",
+  "title": "Pad Keyboard Event-Related Methods",
+  "body": " Pad Keyboard Event-Related Methods    Method  Description    public void setTickHandler(Pad.PadTimerEventHandler handler)  Assign an onTick event handler using a method reference.    public void addTickListener(PadTickListener o)  Add object to the list if items that are notified on Pad's timer tick action.    public void removeTickListener(PadTickListener o)  Remove object from Pad's timer tick action listener list.    "
+},
+{
+  "id": "listing-dp-box-driver",
+  "level": "2",
+  "url": "section-dp-events.html#listing-dp-box-driver",
+  "type": "Listing",
+  "number": "5.6.11",
+  "title": "",
+  "body": " BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillcellor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }   "
 },
 {
   "id": "section-dp-paths",
   "level": "1",
   "url": "section-dp-paths.html",
   "type": "Section",
-  "number": "5.6",
-  "title": "Paths",
-  "body": " Paths  Procedural shape creation  "
+  "number": "5.7",
+  "title": "Path Shapes",
+  "body": " Path Shapes   A Path is a complex shape made up of various types of curves and straight lines. Unlike other Shapes in the DoodlePad library, a Path is assembled incrementally by adding line segments and curves to form the Shape outline. This is done a manner similar to the way we might draw a shape with a pencil. A path may even be open, meaning the final Shape is not required to be enclosed by a continuous line covering all sides.   Consider the shape on the right, which looks like a Rectangle missing its top side. Previously, when we created a basic Rectangle object, we made use of a constructor that created a Rectangle shape having all four sides. To create the Path as shown in the figure, we must take a different approach.    Path Object     To create any Path shape we build up the shape incrementally by adding one side at a time. We start by creating an empty Path object (having no sides) and then invoke a sequence of its methods to add new sides, one at a time. When finished, we may choose to close the Path Shape outline with a final line segment, or leave it open. The listing below for the PathDemo1 class is a small program that creates the previous Path object in code using DoodlePad.   PathDemo1.java   \/\/ PathDemo1.java import doodlepad.*; public class PathDemo1 { public static void main(String[] args) { Path p1 = new Path(); \/\/ 1) Create an empty Path object p1.moveTo(150.0, 50.0); \/\/ 2) Move the virtual pencil to (150, 50) p1.lineTo(150.0, 150.0); \/\/ 3) Draw a line down to (150, 150) p1.lineTo( 50.0, 150.0); \/\/ 4) Add a line over to (50, 150) p1.lineTo( 50.0, 50.0); \/\/ 5) Add a line up to (50, 50) } }    Creating the previous Path object required five lines of code. Recall that the DoodlePad drawing model sets the default location of the coordinate system origin to the upper left corner of the drawing window. Following is a more detailed description of the program.   Line 1 uses the nullary Path constructor to create an empty Path object and saves a reference to the variable p1. Path objects each have a notion of the current point, which is initialized to the coordinates (0.0, 0.0). The current point is updated as new sides are added to the Path, with the starting coordinates of each new side being set to the current point and the end coordinates of each new side being set as the current point after the side is added. This assures that sides are added end to end: the endpoint of one side becomes the starting point of the next.  Line 2 starts the Path definition by moving the Path's current point to the coordinates (150.0, 50.0) without adding a side to the Path. In most cases we want to start defining a Path at coordinates other than the origin (0, 0), so the first method invokes is often moveTo(…). This point corresponds to the upper coordinates of the Path's right side.  Lines 3, 4 and 5 add the three more straight lines as sides to the Path: the right side from the starting point of (150.0, 50.0) down to (150.0, 150.0), the bottom from (150.0, 150.0) over to (50.0, 150.0), and the left from (50.0, 150.0) to (50.0, 50.0). The Path object lineTo(…) method is used.  If we wanted to close the Path by adding a final line to form the top of the shape, we could have invoked the closePath() method of the Path object. In this case we leave the Path open.   After creating a Path object, its moveTo(…), lineTo(…), and closePath() methods may be used to create any shape with multiple line segments as sides, open or closed.    Sides made up of Quadratic Curve Segments  It is also possible to add curved side to a Path object. Two types or curved sides are permitted: one based on a quadratic curve, and another based on a Bézier spline.  To add a side to a Path made up of a segment from a quadratic curve, use the Path object's quadTo(…) method. quadTo(…) takes four double parameters instead of two, as was the case with lineTo(…). The first two quadTo(…) parameters define the side's control point, and the second two define its endpoint. As usual, the side starts at the current point coordinates.  The following listing for the PathDemo2 class is identical to PathDemo1 only the second side is changed from from a line to a quadratic curve segment. Notice that in line 4 the quadTo(…) method takes four numeric parameters. The endpoint of (50.0, 150.0) is preceded with a control point of (100.0, 200.0), which defines how the side will curve.   PathDemo2.java   \/\/ PathDemo2.java import doodlepad.*; public class PathDemo2 { public static void main(String[] args) { Path p2 = new Path(); \/\/ 1) Create an empty Path object p2.moveTo(150.0, 50.0); \/\/ 2) Move your pencil to (150, 50) p2.lineTo(150.0, 150.0); \/\/ 3) Draw a line down to (150, 150) \/\/ 4) Add quadratic segment to (50, 150) p2.quadTo(100.0, 200.0, 50.0, 150.0); p2.lineTo( 50.0, 50.0); \/\/ 5) Add a line up to (50, 50) p2.closePath(); \/\/ 6) Close the Path. } }     To illustrate how the control point of the quadTo(…) method impacts the shape of the quadratic segment making up the bottom of the Path, have a look at the interactive widget to the right. The Path shape outlined by the black line is the shape that is drawn by the code in the PathDemo2 sample listing. Gray boxes represent the side endpoints and the red box is the control point for the curved side. The dashed line shows the relationship between the control point of the curved side and its endpoints. The coordinates of the control point are printed at the bottom of the widget.     The boxes in the widget are draggable using your mouse. Move the position of each box to see how it affects the Path shape outline. Of particular interest is the red box representing the control point. Click and drag this box to see how the shape of the side changes. Also note the value of the control point and how it relates to the shape of the side. Dashed lines between the control point and the side's endpoints are tangent to the curved segment at its endpoints.    Sides made of Spline Segments  Curved sides of a Path shape may be more complex than a segment of a quadratic curve. Sides may be made up of a Bézier spline, which requires two control points instead of one. In the following listing for PathDemo3 a Path is created with a Bézier spline as the bottom side.   PathDemo3.java   \/\/ PathDemo3.java import doodlepad.*; public class PathDemo3 { public static void main(String[] args) { Path p3 = new Path(); \/\/ 1) Create an empty Path object p3.moveTo( 150.0, 50.0); \/\/ 2) Move your pencil to (150, 50) p3.lineTo( 150.0, 150.0); \/\/ 3) Draw a line down to (150, 150) \/\/ 4) Add bezier spline to (50, 150) p3.curveTo(100.0, 200.0, 100.0, 100.0, 50.0, 150.0); p3.lineTo( 50.0, 50.0); \/\/ 5) Add a line up to (50, 50) p3.closePath(); \/\/ 6) Close the Path. } }     To add a side composed of a Bézier spline to a Path object, use the curveTo(…) method of Path, which can be found in the listing on line 4. The curveTo(…) method takes six parameters. The first two arguments make up the coordinates of the first control point. The second two arguments make up the coordinates for the second control point. Finally, the last two arguments are used for endpoint coordinates of the side being added.     Once again, to illustrate how these control points impact the shape of the Path side added with the curveTo(…) method, have a cose look at the accompanying interactive widget. In this case the first control point is outlined in red, and the second is outlined in green. The boxes in this widget are interactive; click and drag them to get a sense for how the shape of the side added with curveTo(…) changes with the position of the associated control points. The first control point governs the shape of start of the curved side and the second control point governs the shape of the end of the curved side. The coordinates of both control points are drawn at the bottom of the widget.    Drawing and Styling a Path  Path objects inherit all methods from the Shape class in DoodlePad. In particular, a Path may be moved, resized and styled in a manner identical to any of the other Shape subclasses.   The following example program creates four shapes with various fill and stroke colors. The resulting Shape objects are shown in the image on the right. Note that the Oval is unfilled, so the underlying red Rectangle is visible. Also note that the filled Arc has a semi-transparent yellow fill, so the underlying Line is partially visible.    HeartPath       \/\/ HeartPath.java import doodlepad.*; public class HeartPath { public static void main(String[] args) { \/\/ Create heart-shaped Path Path h = new Path(); h.moveTo(100.0, 70.0); h.quadTo( 10.0, 25.0, 100.0, 150.0); \/\/ 1) Left side of heart h.quadTo(190.0, 25.0, 100.0, 70.0); \/\/ 2) Right side of heart h.closePath(); \/\/ Set fill color and disable stroke h.setFillColor(255, 0, 0); \/\/ 3) Fill with red h.setStroked(false); \/\/ 4) Do not draw outline } }    All standard inherited Shape methods may be invoked on Path objects. For example, it is possible to move a Path using the setX(…), setY(…), setLocation(…), setCenter(…) and translate(…) methods. A path may be resized using the setWidth(…), setHeight(…) and scale(…) methods. It may be rotated with the rotate(…) method and it will even respond to all mouse events in a pixel-perfect manner, no matter how many or the shape of the sides used to construct the Path.   "
+},
+{
+  "id": "figure-18",
+  "level": "2",
+  "url": "section-dp-paths.html#figure-18",
+  "type": "Figure",
+  "number": "5.7.1",
+  "title": "",
+  "body": " Path Object   "
+},
+{
+  "id": "listing-dp-pathdemo1",
+  "level": "2",
+  "url": "section-dp-paths.html#listing-dp-pathdemo1",
+  "type": "Listing",
+  "number": "5.7.2",
+  "title": "",
+  "body": " PathDemo1.java   \/\/ PathDemo1.java import doodlepad.*; public class PathDemo1 { public static void main(String[] args) { Path p1 = new Path(); \/\/ 1) Create an empty Path object p1.moveTo(150.0, 50.0); \/\/ 2) Move the virtual pencil to (150, 50) p1.lineTo(150.0, 150.0); \/\/ 3) Draw a line down to (150, 150) p1.lineTo( 50.0, 150.0); \/\/ 4) Add a line over to (50, 150) p1.lineTo( 50.0, 50.0); \/\/ 5) Add a line up to (50, 50) } }   "
+},
+{
+  "id": "listing-dp-pathdemo2",
+  "level": "2",
+  "url": "section-dp-paths.html#listing-dp-pathdemo2",
+  "type": "Listing",
+  "number": "5.7.3",
+  "title": "",
+  "body": " PathDemo2.java   \/\/ PathDemo2.java import doodlepad.*; public class PathDemo2 { public static void main(String[] args) { Path p2 = new Path(); \/\/ 1) Create an empty Path object p2.moveTo(150.0, 50.0); \/\/ 2) Move your pencil to (150, 50) p2.lineTo(150.0, 150.0); \/\/ 3) Draw a line down to (150, 150) \/\/ 4) Add quadratic segment to (50, 150) p2.quadTo(100.0, 200.0, 50.0, 150.0); p2.lineTo( 50.0, 50.0); \/\/ 5) Add a line up to (50, 50) p2.closePath(); \/\/ 6) Close the Path. } }   "
+},
+{
+  "id": "listing-dp-pathdemo3",
+  "level": "2",
+  "url": "section-dp-paths.html#listing-dp-pathdemo3",
+  "type": "Listing",
+  "number": "5.7.4",
+  "title": "",
+  "body": " PathDemo3.java   \/\/ PathDemo3.java import doodlepad.*; public class PathDemo3 { public static void main(String[] args) { Path p3 = new Path(); \/\/ 1) Create an empty Path object p3.moveTo( 150.0, 50.0); \/\/ 2) Move your pencil to (150, 50) p3.lineTo( 150.0, 150.0); \/\/ 3) Draw a line down to (150, 150) \/\/ 4) Add bezier spline to (50, 150) p3.curveTo(100.0, 200.0, 100.0, 100.0, 50.0, 150.0); p3.lineTo( 50.0, 50.0); \/\/ 5) Add a line up to (50, 50) p3.closePath(); \/\/ 6) Close the Path. } }   "
+},
+{
+  "id": "figure-19",
+  "level": "2",
+  "url": "section-dp-paths.html#figure-19",
+  "type": "Figure",
+  "number": "5.7.5",
+  "title": "",
+  "body": " HeartPath   "
+},
+{
+  "id": "listing-20",
+  "level": "2",
+  "url": "section-dp-paths.html#listing-20",
+  "type": "Listing",
+  "number": "5.7.6",
+  "title": "",
+  "body": "  \/\/ HeartPath.java import doodlepad.*; public class HeartPath { public static void main(String[] args) { \/\/ Create heart-shaped Path Path h = new Path(); h.moveTo(100.0, 70.0); h.quadTo( 10.0, 25.0, 100.0, 150.0); \/\/ 1) Left side of heart h.quadTo(190.0, 25.0, 100.0, 70.0); \/\/ 2) Right side of heart h.closePath(); \/\/ Set fill color and disable stroke h.setFillColor(255, 0, 0); \/\/ 3) Fill with red h.setStroked(false); \/\/ 4) Do not draw outline } }   "
 },
 {
   "id": "section-dp-images",
   "level": "1",
   "url": "section-dp-images.html",
   "type": "Section",
-  "number": "5.7",
+  "number": "5.8",
   "title": "Images",
-  "body": " Images  "
+  "body": " Images  DoodlePad includes a special Shape class called Image. The Image class implements a rectangular region of pixels (tiny picture elements having a single color) which may be modified programmatically; you may set or get the color of individual pixels. Also, the Image class implements methods that allow you to draw shapes and draw text on the Image. Note that drawing on an Image does not create Shape objects, it only sets the pixels of the Image to form the shape or text. In the end, with an Image, we have only pixels.   Image Constructors  Images may be constructed blank, or upon construction they may load and display an image from a file. This behavior is governed by the constructor used to create an Image. Following are three Image object constructors. The first constructor creates an blank Image with the givel location (xm y) and dimensions (width, height). The second constructor creates an Image object and loads an image from a file, given a path to it on the file system. The dimensions of the Image are set to match the dimensions of the image loaded from the file. The third constructor creats an Image object of the given dimensions, and also loads and resizes the image stored in the given file path prior to displaying it. For all Image constructors, refer to the docs.      Constructor Signature  Description    public Image(double x, double y, double width, double height)   An Image object constructor that creates a blank Image object with an upper left corner at (x,y) and dimensions (width, height).    public Image(java.lang.String path, double x, double y)   An Image object constructor that creates an Image object and loads and displays an image from the path given as the first argument. The upper left corner of the image is at (x,y) and its dimensions map the dimensions of the loaded image. Loadable Image formats include GIF, PNG, JPEG, BMP, and WBMP.    public Image(java.lang.String path, double x, double y, double width, double height)   An Image object constructor that creates an Image object and loads and displays an image from the path given as the first argument. The upper left corner of the image is at (x,y) and its dimensions (width, height). Loadable Image formats include GIF, PNG, JPEG, BMP, and WBMP.      The following simple example demonstrates how to create a new Image object using the constructor that loads and displays an image upon construction. The screenshot on the right shows the result of the Image1.java program. While strictly not required, in this example an instance of the Pad object is created first to set the size of the initial window and to give it a title. The image is a selfie taken by the wild Indonesian macaque named Naturo who was the subject of a well-known copyright dispute.    Naruto Selfie      Image1.java   \/\/ Image1.java import doodlepad.*; public class Image1 { public static void main(String[] args) { Pad pad = new Pad(\"Naruto Selfie\", 355, 355); Image im = new Image(\"naruto-selfie.png\", 0, 0); } }      Image Methods  The Image object implements several methods for modifying its pixels, whether that be one pixel at at time, or by setting pixels to form shapes or text. Following are selected Image object methods with descriptions.   Image Object Methods    Method Signature  Description   public void setPixel(int x, int y, int red, int green, int blue)  Set the color of the pixel at the coordinate (x, y) to the color identified by (red, green, blue). (See Colors .)   public int getRed(int x, int y)  Return an int corresponding to the red component of the pixel color at (x, y).   public int getGreen(int x, int y)  Return an int corresponding to the green component of the pixel color at (x, y).   public int getBlue(int x, int y)  Return an int corresponding to the blue component of the pixel color at (x, y).   public int getAlpha(int x, int y)  Return an int corresponding to the alpha (transparency) component of the pixel color at (x, y).   public void drawArc(double x, double y, double width, double height, double startAngle, double arcAngle)  Draw an arc on the Image defined by a section of an ellipse bounded by the rectangle with upper left corner at (x, y) and size (width, height). The arc starts at angle startAngle (degrees) and extends by arcAngle (degrees).   public void drawLine(double x1, double y1, double x2, double y2)  Draw a line on the Image from the coordinate (x1, y1) to (x2, y2).   public void drawOval(double x, double y, double width, double height)  Draw an oval on the Image within the bounding box having an upper left corner at (x, y) and dimensions (width, height).   public void drawPolygon(double[] xPoints, double[] yPoints)  Draw a polygon on the Image that connects corresponding coordinate pairs stored in the two arrays xPoints and yPoints.   public void drawPolygon(java.util.List<Point> points)  Draw a polygon on the Image that connects coordinates stored as a List<> of Point objects.   public void drawRectangle(double x, double y, double width, double height)  Draw a rectangle within the bounding box having an upper left corner at (x, y) and dimensions (width, height).   public void drawRoundRect(double x, double y, double width, double height, double arcWidth, double arcHeight)  Draw a rounded rectangle within the bounding box having an upper left corner at (x, y), dimensions (width, height), and rounded corners defined by an arc with width arcWidth and height arcHeight.   public void drawText(java.lang.String text, double x, double y)  Draw text on an Image stored in the String text , with an upper left corner defined by (x, y).   public void drawText(java.lang.String text, double x, double y, int size)  Draw text on an Image stored in the String text , with an upper left corner defined by (x, y), and a font size of size .     You will note that none of the previous methods set the fill color, stroke color, or stroke width to be used when drawing on an Image. To set the fill and stroke properties of drawn lines and shapes, set these values using the Image object's methods prior to invoking one its drawing methods. Once set, these settings are used for all subsequent drawing performed on an Image object, until new settings are specified.   Set Image Drawing Context    Method Signature  Description     public void setFillColor(double red, double green, double blue)   Set the color to be used to fill shapes drawn on an Image.     public void setStrokeColor(double red, double green, double blue)   Set the color to be used to outline shapes drawn on an Image.     public void setStrokeWidth(double width)   Set the width in pixels of the stroke to outline any shape that is drawn on an Image.       A Simple Example   The following example program demonstrates the use of Image object methods used to draw on the Image. In this example 200 lines are drawn on the Image object using a for statement. Each line is drawn after setting random endpoint coordinates, random width, and random stroke color.    Image2.java      Image2.java   \/\/ Image2.java import java.util.Random; import doodlepad.*; public class Image2 { public static void main(String[] args) { double x1, x2, y1, y2, w; int r, g, b; \/\/ Create a Pad object, an Image object for the Pad, \/\/ and a Random object for generating random numbers. Pad pad = new Pad(400, 400); Image im = new Image(0, 0, 400, 400); Random rnd = new Random(); for (int i=0; i<100; i++) { \/\/ Random numbers y1 = 400*rnd.nextDouble(); x1 = 200*rnd.nextDouble(); x2 = 200+200*rnd.nextDouble(); w = 10*rnd.nextDouble(); r = rnd.nextInt(256); g = rnd.nextInt(256); b = rnd.nextInt(256); \/\/ Draw line on Image im.setStrokeColor(r,g,b); im.setStrokeWidth(w); im.drawLine(x1,y1,x2,y1); \/\/ More random numbers x1 = 400*rnd.nextDouble(); y1 = 200*rnd.nextDouble(); y2 = 200+200*rnd.nextDouble(); w = 10*rnd.nextDouble(); r = rnd.nextInt(256); g = rnd.nextInt(256); b = rnd.nextInt(256); \/\/ Draw line on Image im.setStrokeColor(r,g,b); im.setStrokeWidth(w); im.drawLine(x1,y1,x1,y2); } } }      An Image as a Shape   Because Image is a subclass of Shape it inherits all of the Shape methods. For example, you may resize and move an Image as well as respond to all the standard mouse events. This gives you the ability to programmatically draw on the Image in response to interacting with it using the mouse. The following example draws a randomly-sized green oval where the mouse is pressed. For a more complete program that uses this technique to create a drawing program using DoodlePad, refer to the Interactive Drawing example.    Image3.java      Image3.java   \/\/ Image3.java import doodlepad.*; public class Image3 { public static void main(String[] args) { \/\/ Create Pad and Image Pad pad = new Pad(400, 400); Image im = new Image(0, 0, 400, 400); \/\/ Set up mouse event handler im.setMousePressedHandler( Image3::onSpot ); \/\/ Set drawing fill color to green im.setFillColor(0,200,0); } \/\/ What to do when mouse is pressed on Image public static void onSpot(Shape shp, double cx, double cy, int button) { \/\/ Cast Shape to Image Image im = (Image)shp; \/\/ Draw randomly sized oval double radius = Math.random()*40; im.drawOval(cx-radius, cy-radius, 2*radius, 2*radius); } }     "
 },
 {
-  "id": "section-dp-more",
+  "id": "table-38",
+  "level": "2",
+  "url": "section-dp-images.html#table-38",
+  "type": "Table",
+  "number": "5.8.1",
+  "title": "",
+  "body": "    Constructor Signature  Description    public Image(double x, double y, double width, double height)   An Image object constructor that creates a blank Image object with an upper left corner at (x,y) and dimensions (width, height).    public Image(java.lang.String path, double x, double y)   An Image object constructor that creates an Image object and loads and displays an image from the path given as the first argument. The upper left corner of the image is at (x,y) and its dimensions map the dimensions of the loaded image. Loadable Image formats include GIF, PNG, JPEG, BMP, and WBMP.    public Image(java.lang.String path, double x, double y, double width, double height)   An Image object constructor that creates an Image object and loads and displays an image from the path given as the first argument. The upper left corner of the image is at (x,y) and its dimensions (width, height). Loadable Image formats include GIF, PNG, JPEG, BMP, and WBMP.    "
+},
+{
+  "id": "figure-20",
+  "level": "2",
+  "url": "section-dp-images.html#figure-20",
+  "type": "Figure",
+  "number": "5.8.2",
+  "title": "",
+  "body": " Naruto Selfie   "
+},
+{
+  "id": "listing-21",
+  "level": "2",
+  "url": "section-dp-images.html#listing-21",
+  "type": "Listing",
+  "number": "5.8.3",
+  "title": "",
+  "body": " Image1.java   \/\/ Image1.java import doodlepad.*; public class Image1 { public static void main(String[] args) { Pad pad = new Pad(\"Naruto Selfie\", 355, 355); Image im = new Image(\"naruto-selfie.png\", 0, 0); } }   "
+},
+{
+  "id": "table-39",
+  "level": "2",
+  "url": "section-dp-images.html#table-39",
+  "type": "Table",
+  "number": "5.8.4",
+  "title": "Image Object Methods",
+  "body": " Image Object Methods    Method Signature  Description   public void setPixel(int x, int y, int red, int green, int blue)  Set the color of the pixel at the coordinate (x, y) to the color identified by (red, green, blue). (See Colors .)   public int getRed(int x, int y)  Return an int corresponding to the red component of the pixel color at (x, y).   public int getGreen(int x, int y)  Return an int corresponding to the green component of the pixel color at (x, y).   public int getBlue(int x, int y)  Return an int corresponding to the blue component of the pixel color at (x, y).   public int getAlpha(int x, int y)  Return an int corresponding to the alpha (transparency) component of the pixel color at (x, y).   public void drawArc(double x, double y, double width, double height, double startAngle, double arcAngle)  Draw an arc on the Image defined by a section of an ellipse bounded by the rectangle with upper left corner at (x, y) and size (width, height). The arc starts at angle startAngle (degrees) and extends by arcAngle (degrees).   public void drawLine(double x1, double y1, double x2, double y2)  Draw a line on the Image from the coordinate (x1, y1) to (x2, y2).   public void drawOval(double x, double y, double width, double height)  Draw an oval on the Image within the bounding box having an upper left corner at (x, y) and dimensions (width, height).   public void drawPolygon(double[] xPoints, double[] yPoints)  Draw a polygon on the Image that connects corresponding coordinate pairs stored in the two arrays xPoints and yPoints.   public void drawPolygon(java.util.List<Point> points)  Draw a polygon on the Image that connects coordinates stored as a List<> of Point objects.   public void drawRectangle(double x, double y, double width, double height)  Draw a rectangle within the bounding box having an upper left corner at (x, y) and dimensions (width, height).   public void drawRoundRect(double x, double y, double width, double height, double arcWidth, double arcHeight)  Draw a rounded rectangle within the bounding box having an upper left corner at (x, y), dimensions (width, height), and rounded corners defined by an arc with width arcWidth and height arcHeight.   public void drawText(java.lang.String text, double x, double y)  Draw text on an Image stored in the String text , with an upper left corner defined by (x, y).   public void drawText(java.lang.String text, double x, double y, int size)  Draw text on an Image stored in the String text , with an upper left corner defined by (x, y), and a font size of size .    "
+},
+{
+  "id": "table-40",
+  "level": "2",
+  "url": "section-dp-images.html#table-40",
+  "type": "Table",
+  "number": "5.8.5",
+  "title": "Set Image Drawing Context",
+  "body": " Set Image Drawing Context    Method Signature  Description     public void setFillColor(double red, double green, double blue)   Set the color to be used to fill shapes drawn on an Image.     public void setStrokeColor(double red, double green, double blue)   Set the color to be used to outline shapes drawn on an Image.     public void setStrokeWidth(double width)   Set the width in pixels of the stroke to outline any shape that is drawn on an Image.    "
+},
+{
+  "id": "figure-21",
+  "level": "2",
+  "url": "section-dp-images.html#figure-21",
+  "type": "Figure",
+  "number": "5.8.6",
+  "title": "",
+  "body": " Image2.java   "
+},
+{
+  "id": "listing-22",
+  "level": "2",
+  "url": "section-dp-images.html#listing-22",
+  "type": "Listing",
+  "number": "5.8.7",
+  "title": "",
+  "body": " Image2.java   \/\/ Image2.java import java.util.Random; import doodlepad.*; public class Image2 { public static void main(String[] args) { double x1, x2, y1, y2, w; int r, g, b; \/\/ Create a Pad object, an Image object for the Pad, \/\/ and a Random object for generating random numbers. Pad pad = new Pad(400, 400); Image im = new Image(0, 0, 400, 400); Random rnd = new Random(); for (int i=0; i<100; i++) { \/\/ Random numbers y1 = 400*rnd.nextDouble(); x1 = 200*rnd.nextDouble(); x2 = 200+200*rnd.nextDouble(); w = 10*rnd.nextDouble(); r = rnd.nextInt(256); g = rnd.nextInt(256); b = rnd.nextInt(256); \/\/ Draw line on Image im.setStrokeColor(r,g,b); im.setStrokeWidth(w); im.drawLine(x1,y1,x2,y1); \/\/ More random numbers x1 = 400*rnd.nextDouble(); y1 = 200*rnd.nextDouble(); y2 = 200+200*rnd.nextDouble(); w = 10*rnd.nextDouble(); r = rnd.nextInt(256); g = rnd.nextInt(256); b = rnd.nextInt(256); \/\/ Draw line on Image im.setStrokeColor(r,g,b); im.setStrokeWidth(w); im.drawLine(x1,y1,x1,y2); } } }   "
+},
+{
+  "id": "figure-22",
+  "level": "2",
+  "url": "section-dp-images.html#figure-22",
+  "type": "Figure",
+  "number": "5.8.8",
+  "title": "",
+  "body": " Image3.java   "
+},
+{
+  "id": "listing-23",
+  "level": "2",
+  "url": "section-dp-images.html#listing-23",
+  "type": "Listing",
+  "number": "5.8.9",
+  "title": "",
+  "body": " Image3.java   \/\/ Image3.java import doodlepad.*; public class Image3 { public static void main(String[] args) { \/\/ Create Pad and Image Pad pad = new Pad(400, 400); Image im = new Image(0, 0, 400, 400); \/\/ Set up mouse event handler im.setMousePressedHandler( Image3::onSpot ); \/\/ Set drawing fill color to green im.setFillColor(0,200,0); } \/\/ What to do when mouse is pressed on Image public static void onSpot(Shape shp, double cx, double cy, int button) { \/\/ Cast Shape to Image Image im = (Image)shp; \/\/ Draw randomly sized oval double radius = Math.random()*40; im.drawOval(cx-radius, cy-radius, 2*radius, 2*radius); } }   "
+},
+{
+  "id": "section-dp-timers",
   "level": "1",
-  "url": "section-dp-more.html",
+  "url": "section-dp-timers.html",
   "type": "Section",
-  "number": "5.8",
-  "title": "More Features",
-  "body": " More Features  The DoodlePad library includes much more, including:  Polygon Shapes  Transformations  Timers  Animated Sprites  We defer a detailed discussion of each topics until later. Click the links above if you'd like to jump to the relevant section.  "
+  "number": "5.9",
+  "title": "Timers",
+  "body": " Timers  One way to perform animations or other graphic illustrations requiring repeated sequential execution of code is to make use of a timer. Smilar to its hardware counterpart, a software timer may be started and stopped, set to run at a presepecified tick rate, and take some action at one or more timepoints in the future. In DoodlePad the Pad class provides the functionality of a timer, which may be used to run repeated actions.   Timer Methods  The Pad's timer functionality is encapsulated by five methods:   Timer Methods    Method Signature  Description   public final void setTickRate(double tps)  Set the rate at which the Pad's internal timer fires. The single method argument is the tick rate, provided in the units ticks-per-second. The default tick rate value is 60.   public final double getTickRate()  Return the current tick rate value in ticks-per-second that has been set for a Pad object's internal timer.   public void setTickHandler(Pad.PadTimerEventHandler handler)  Provide a method reference for a method to be executed when a Pad timer ticks, the tick event handler. The method signature for the handler must match the signature void handler(Pad pad, long when) .   public void startTimer()  Start a Pad's timer ticking. The timer will invoke the associated tick event handler at its preset tick rate.   public void stopTimer()  Stop a Pad's timer ticking.       Example: Animating Shape Motion  The following example demonstrates the use of a timer in DoodlePad. In this example a small green \"bug\" (an Oval object) continually seek the mouse location. Moving the mouse on the Pad causes the bug to change direction.   The program's main() method starts by creating and styling new Pad and Oval objects. The Pad's mouseMoved event is handled by a method that updates target coordinates. These target coordinates are continuously being sought by the bug. The Pad timer's tick rate is set to 30 ticks-per-second, and its tick event handler is set to a method named moveBug(). Before exiting main() the Pad timer is started.    Mouse Seeker     The moveBug() method is the Pad timer's event handler. It is fired approximately 30 times per second by the timer. Each time it is fired, it computes a new location that is about 10% of the way between its current location and the target location, and it moves the bug to the new location. Because it does not move the bug all the way to the target location, the bug continuously changes direction as the mouse moves. The result is a fun program to play with, and the basis for more interesting games and animated illustrations.  Finally, note that a Shape's location is not the only thing that may be animated. Any object property may change. For example, a Shapes' fill or stroke color may be animated, as can its width, height or other properties. The only limit is your imagination.   Seeker.java   \/\/ Seeker.java \/\/ Continually move a green bug to follow a moving mouse import doodlepad.*; public class Seeker { \/\/ The mouse-seeking bug Shape private static Oval bug; \/\/ The coordinates being sought by the bug private static double targetX, targetY; public static void main(String[] args) { \/\/ Create a new Pad object Pad pad = new Pad(\"Mouse Seeker\", 400, 400); \/\/ Create the green bug Shape that seeks the mouse bug = new Oval(0, 0, 10, 10); bug.setFillColor(0, 255, 0); \/\/ Handle the Pad mouseMoved event pad.setMouseMovedHandler( Seeker::onMouseMoved ); \/\/ Set up and start the Pad timer pad.setTickRate(30); pad.setTickHandler( Seeker::moveBug ); pad.startTimer(); } \/\/ Set a new target location for the bug every time the mouse is moved public static void onMouseMoved(Pad pad, double x, double y, int button) { targetX = x; targetY = y; } \/\/ Move the bug part-way toward the target mouse location public static void moveBug(Pad pad, long when) { \/\/ Get the current bug location double currX = bug.getX(); double currY = bug.getY(); \/\/ Compute a new location closer to the mouse double newX = currX + 0.1*(targetX - currX); double newY = currY + 0.1*(targetY - currY); \/\/ Update the bug location bug.setX( newX ); bug.setY( newY ); } }     "
+},
+{
+  "id": "table-41",
+  "level": "2",
+  "url": "section-dp-timers.html#table-41",
+  "type": "Table",
+  "number": "5.9.1",
+  "title": "Timer Methods",
+  "body": " Timer Methods    Method Signature  Description   public final void setTickRate(double tps)  Set the rate at which the Pad's internal timer fires. The single method argument is the tick rate, provided in the units ticks-per-second. The default tick rate value is 60.   public final double getTickRate()  Return the current tick rate value in ticks-per-second that has been set for a Pad object's internal timer.   public void setTickHandler(Pad.PadTimerEventHandler handler)  Provide a method reference for a method to be executed when a Pad timer ticks, the tick event handler. The method signature for the handler must match the signature void handler(Pad pad, long when) .   public void startTimer()  Start a Pad's timer ticking. The timer will invoke the associated tick event handler at its preset tick rate.   public void stopTimer()  Stop a Pad's timer ticking.    "
+},
+{
+  "id": "figure-23",
+  "level": "2",
+  "url": "section-dp-timers.html#figure-23",
+  "type": "Figure",
+  "number": "5.9.2",
+  "title": "",
+  "body": " Mouse Seeker   "
+},
+{
+  "id": "listing-24",
+  "level": "2",
+  "url": "section-dp-timers.html#listing-24",
+  "type": "Listing",
+  "number": "5.9.3",
+  "title": "",
+  "body": " Seeker.java   \/\/ Seeker.java \/\/ Continually move a green bug to follow a moving mouse import doodlepad.*; public class Seeker { \/\/ The mouse-seeking bug Shape private static Oval bug; \/\/ The coordinates being sought by the bug private static double targetX, targetY; public static void main(String[] args) { \/\/ Create a new Pad object Pad pad = new Pad(\"Mouse Seeker\", 400, 400); \/\/ Create the green bug Shape that seeks the mouse bug = new Oval(0, 0, 10, 10); bug.setFillColor(0, 255, 0); \/\/ Handle the Pad mouseMoved event pad.setMouseMovedHandler( Seeker::onMouseMoved ); \/\/ Set up and start the Pad timer pad.setTickRate(30); pad.setTickHandler( Seeker::moveBug ); pad.startTimer(); } \/\/ Set a new target location for the bug every time the mouse is moved public static void onMouseMoved(Pad pad, double x, double y, int button) { targetX = x; targetY = y; } \/\/ Move the bug part-way toward the target mouse location public static void moveBug(Pad pad, long when) { \/\/ Get the current bug location double currX = bug.getX(); double currY = bug.getY(); \/\/ Compute a new location closer to the mouse double newX = currX + 0.1*(targetX - currX); double newY = currY + 0.1*(targetY - currY); \/\/ Update the bug location bug.setX( newX ); bug.setY( newY ); } }   "
+},
+{
+  "id": "section-dp-sprites",
+  "level": "1",
+  "url": "section-dp-sprites.html",
+  "type": "Section",
+  "number": "5.10",
+  "title": "Sprites",
+  "body": " Sprites   A core element of many classic computer games and other computer displays are animated characters or other objects called sprites. Sprites appear animated by displaying in a single place the sequential static frames of an animation loop, as you might see with an animated cartoon or flip book. Typical sprite animation loops show characters running, jumping, rotating, or other repetitive activities.  The frames of a sprite animation are stored together in a single image called a sprite sheet. A sprite display engine copies successive frames from the sprite sheet image and displays them in sequence at a given rate to create the sprite animation. The following image is a sprite sheet that may be used by the DoodlePad Sprite class. All five frames of the sprite animation stored in the following sprite sheet, where each frame is separated at a horizontal interval of 190 pixels.   Flying Bird Sprite Sheet. Courtesy Green Iguana Productions      Sprite Constructors  To operate properly, Sprite objects need several items. They must load their sprite sheet images and have the parameters necessary for copying frames from the sprite sheet including frame width and the number of frames stored on the sprite sheet image. In addition, the coordinates for where the frames should be drawn must also be known, and optionally the dimensions of the frames. The following Sprite constructors are two of the most common and include the necessary parameters.   Sprite Constructors    Constructor Signature  Description   Sprite(java.lang.String path, double x, double y, int frameWidth, int nFrames)  Construct a new Sprite specifying a path to the sprite sheet image, the (x, y) coordinates indicating where to render the sprite, the width of a single frame, and the number of frames on the sprite sheet organized horizontally.   Sprite(java.lang.String path, double x, double y, double frameWidth, int nFrames, int targetWidth, int targetHeight)  Construct a new Sprite specifying a path to the sprite sheet image, the (x, y) coordinates indicating where to render the sprite, the width of a single frame, the number of frames on the sprite sheet organized horizontally, and the target dimensions for the sprite when frames are rendered.       Image Methods  As a subclass of Shape, Sprite objects inherit all the standard Shape methods. The primary additional method unique to the Sprite class is advance(). This is the method that instructs a Sprite object to move to the next frame in its animation sequence. The next frame image from the sprite sheet is copied and drawn at the Sprite location, possibly resizing to fit within target dimensions.   Image Methods    Method Signature  Description   public void advance()  Advance sprite frame and repaint new frame image.       Flying Bird Example   The following example program creates a flying bird Sprite object that makes use of the sprite sheet displayed above. On the right is an animated image showing the flying bird Sprite in action. The Pad object's timer functionality is used to drive the Sprite animation by invoking its advance() method repeatedly at a regular interval.    Flying Bird      FlyingBird.java   \/\/ FlyingBird.java import doodlepad.*; public class FlyingBird { public static void main(String[] args) { \/\/ Create a Pad and a Sprite Pad pad = new Pad(300, 300); Sprite sprite = new Sprite(\"FlyingBird.png\", 50, 50, 190, 5); \/\/ Set Pad timer with a Java lambda function that advances sprite pad.setTickHandler( (Pad p, long when) -> { sprite.advance(); } ); pad.setTickRate(10); pad.startTimer(); } }     "
+},
+{
+  "id": "figure-24",
+  "level": "2",
+  "url": "section-dp-sprites.html#figure-24",
+  "type": "Figure",
+  "number": "5.10.1",
+  "title": "",
+  "body": " Flying Bird Sprite Sheet. Courtesy Green Iguana Productions   "
+},
+{
+  "id": "table-42",
+  "level": "2",
+  "url": "section-dp-sprites.html#table-42",
+  "type": "Table",
+  "number": "5.10.2",
+  "title": "Sprite Constructors",
+  "body": " Sprite Constructors    Constructor Signature  Description   Sprite(java.lang.String path, double x, double y, int frameWidth, int nFrames)  Construct a new Sprite specifying a path to the sprite sheet image, the (x, y) coordinates indicating where to render the sprite, the width of a single frame, and the number of frames on the sprite sheet organized horizontally.   Sprite(java.lang.String path, double x, double y, double frameWidth, int nFrames, int targetWidth, int targetHeight)  Construct a new Sprite specifying a path to the sprite sheet image, the (x, y) coordinates indicating where to render the sprite, the width of a single frame, the number of frames on the sprite sheet organized horizontally, and the target dimensions for the sprite when frames are rendered.    "
+},
+{
+  "id": "table-43",
+  "level": "2",
+  "url": "section-dp-sprites.html#table-43",
+  "type": "Table",
+  "number": "5.10.3",
+  "title": "Image Methods",
+  "body": " Image Methods    Method Signature  Description   public void advance()  Advance sprite frame and repaint new frame image.    "
+},
+{
+  "id": "figure-25",
+  "level": "2",
+  "url": "section-dp-sprites.html#figure-25",
+  "type": "Figure",
+  "number": "5.10.4",
+  "title": "",
+  "body": " Flying Bird   "
+},
+{
+  "id": "listing-25",
+  "level": "2",
+  "url": "section-dp-sprites.html#listing-25",
+  "type": "Listing",
+  "number": "5.10.5",
+  "title": "",
+  "body": " FlyingBird.java   \/\/ FlyingBird.java import doodlepad.*; public class FlyingBird { public static void main(String[] args) { \/\/ Create a Pad and a Sprite Pad pad = new Pad(300, 300); Sprite sprite = new Sprite(\"FlyingBird.png\", 50, 50, 190, 5); \/\/ Set Pad timer with a Java lambda function that advances sprite pad.setTickHandler( (Pad p, long when) -> { sprite.advance(); } ); pad.setTickRate(10); pad.startTimer(); } }   "
+},
+{
+  "id": "section-dp-transformations",
+  "level": "1",
+  "url": "section-dp-transformations.html",
+  "type": "Section",
+  "number": "5.11",
+  "title": "Graphic Transformations",
+  "body": " Graphic Transformations   As described in Graphic Object Position and Size, each Shape object may be moved and sized using methods such as setLocation(...) and setSize(...). This approach to moving and resizing Shapes has limitations, including the inability to rotate a Shape object, including Text. Consider for a moment how you might draw an oval rotated at a 45° angle. This is not possible using setLocation(...) and setSize(...). Fortunately, there is another way.  Most 2-D computer graphics systems implement a form of linear 2-D geometric transformations known as affine transformations, and include operations such as scale, rotate, and translate. This class of transformations provides a way to modify a shape while preserving its essential nature, e.g. points remain points and parallel lines remain parallel. The easiest way to understand how 2-D transformations work in computer graphics is to imagine that each and every object has its own coordinate system. As described in DoodlePad Drawing Model, when a new DoodlePad Shape object is created its coordinate system is defined with its origin in the upper left corner of the Pad window: x-coordinate values increasing from left to right, y-coordinate values increasing from top to bottom, and distances measured in pixels. Geometric transformation operations give you the ability to move and modify the coordinate system of each and every Shape object independently, with respect to a master coordinate system of the Pad window. For example, it is possible to create two Rectangle Shapes, both with their location set to (0, 0), but appearing at different parts of the Pad. If the coordinate system of one Rectangle is translated to another part of the Pad, then the two Rectangle Shapes would not be drawn at the same location in spite of the fact that they had the same x- and y-coordinate values.   For example, the image on the right depicts two Rectangle Shapes, both with dimensions 50 pixels × 50 pixels and coordinates x=0, y=0. One Rectangle has a red fill and the other has a green fill. The difference between the two Shapes is that the green Rectangle has been transformed by translating it to the location (100, 100). In other words, the origin of the green Rectangle's coordinate system has been moved (translated) to (100, 100). The green Rectangle's coordinates (0, 0) are at the same screen location as the red Rectangle's coordinates (100, 100). In spite of the fact that both Rectangles have identical dimensions and location with respect to their own coordinate systems, they are drawn at different parts of the Pad due to the fact that the green Rectangle's coordinate system was translated from its default value.    Rectangle Translation       Translate   As suggested by the terminology used in the previous example, the coordinate system of a Shape may be moved in the x- and y-directions by invoking a Shape object's translate(...) method. The translate(...) method takes two double arguments. The first indicates how far to move the Shape's coordinate system in the x-direction, and the second indicates how far to move the Shape's coordinate system in the y-direction. The following example program implements the previous red\/green Rectangle example using DoodlePad. The class constructor creates two Rectangle objects with identical location and dimension values, but different fill colors. Following this, only the green Rectangle is translated by (100, 100) by executing the statement grnRect.translate(100, 100). Because the starting location of the green Rectangle is (0, 0), after the translation by (100, 100), the new coordinates for the origin of the green Rectangle is (100, 100). The image on the right illustrates the result of executing the following example program.    Rectangle Translation      Transform1.java   \/\/ Transform1.java import doodlepad.*; public class Transform1 { private Rectangle redRect; private Rectangle grnRect; public Transform1() { \/\/ Two Rectangles with identical location and dimensions redRect = new Rectangle(0, 0, 50, 50); grnRect = new Rectangle(0, 0, 50, 50); \/\/ Set fill colors redRect.setFillColor(255, 0, 0); grnRect.setFillColor(0, 255, 0); \/\/ Translate the green Rectangle only grnRect.translate(100, 100); } public static void main(String[] args) { Transform1 myTransform1 = new Transform1(); } }      Scale   The second transformation is scale(...). In effect, a scale(...) transformation zooms in or zooms out on the coordinate system of an object. For example, invoking the scale(...) method with an argument of 2 essentially zooms in by a factor of 2. The coordinate x=50 of the unscaled coordinate system will move to a screen location where x=100 used to be located. Similarly, if a coordinate system is scaled by 0.5, the coordinate x=50 in the unscaled coodinate system will move to a screen location where x=25 used to be located. The same arguments apply to the y-coordinate of the coordinate system. When a shape's coordinate system is scaled by a number greater than 1, the effect is to increase the size or zoom in on the shape, thus drawing it larger with respect to other shapes with unscaled coordinate systems. With a scale factor less than 1, the effect is to reduce the size or zoom out on a shape as compared to other shapes with unscaled coordinate systems.    Rectangle Scale     The scale(...) transformation comes in different forms. Thus far we have assumed that the scale factor is applied equally to the x- and y-axes, but this is not necessary. Different scale factors may be applied to the x- and y-axes, and certain overloads of the scale(...) method permit different scale factors for each axis. Also note that when the axes of a Shape's coordinate system are modified due to a scale(...) transformation, by default all changes are performed around the origin (0, 0). That is to say, all points in the scaled coordinate system will appear to move, except (0, 0). The origin remains fixed, unless a special overload of the transformation is applied. The Shape class implements four overloads of the scale(...) method to account for all these options. The first option is scale(double factor) that takes one scale factor applies it to both the x- and y-axes around the origin (0, 0). The second option is scale(double xFactor, double yFactor) in which the separate scale factors may be applied to each axis. The third option is scale(double factor, double xCenter, double yCenter) in which the same scale factor is applied to both axes, but the scale is applied around the point (xCenter, yCenter) instead of (0,0). This is convenient when a point other than the origin should remain fixed, for example when you want to grow or shrink the size of a shape at its current location. The fourth option is scale(double xFactor, double yFactor, double xCenter, double yCenter) in which independent scale factors are to be applied and a point other than the origin should remain fixed. Applying the scale transformation is a very convenient way to change the size of an object, but the outcome may not be what you expect. When a coodinate system is scaled, everything that is drawn is scaled, including a Shape's stroke width. Consider a Shape drawn with a stroke width of 1. After applying a scale transformation of 2 to the Shape's coodinate system, the Shape with the scaled coordinate system will appear to be drawn with stroke width of 2. From the perspective of the scaled Shape, the stroke width is 1. But when compared to Shapes with unscaled coordinate systems, the stroke will appear to have a width of 2. Often, this is not the desired outcome.   Once again, consider our red and green Rectangle shapes, both with dimensions 50 × 50. After applying a scale factor of 2 to the green Rectangle, the width and height of the green rectangle doubles. Note that the total area of the Rectangle quadruples. The following example program Transform2 demonstrates the result.    Rectangle Scale      Transform2.java   \/\/ Transform2.java import doodlepad.*; public class Transform2 { private Rectangle redRect; private Rectangle grnRect; public Transform2() { \/\/ Two Rectangles with identical location and dimensions grnRect = new Rectangle(0, 0, 50, 50); redRect = new Rectangle(0, 0, 50, 50); \/\/ Set fill colors redRect.setFillColor(255, 0, 0); grnRect.setFillColor(0, 255, 0); \/\/ Scale the green Rectangle only grnRect.scale(2); } public static void main(String[] args) { Transform2 myTransform2 = new Transform2(); } }      Rotate   The last transformation method is rotate(...). The rotate(...) method takes an angle argument in degrees and rotates the coordinate system of a Shape around the origin (0, 0) by that angle in a clockwise direction. You may be accustomed to the rotation of an angle to be in the counter-clockwise direction. In fact, this is not inconsistent with 2-D computer graphics. Because the drawing model of 2-D graphics inverts the orientation of the y-axis, the rotation angle appears to proceed in the clockwise direction.    Rectangle Rotation     As with scale(...), there are multiple overloads of the rotate(...) method. The first overload is rotate(double angle) which expects a single argument indicating the angle in degrees to rotate the coordinate system of a Shape object. The rotate occurs around the origin (0, 0). A second overload is rotate(double angle, double xCenter, double yCenter). This option allows you to set the point about which the Shape's coordinate system is rotated. This is useful when you want to rotate an object in place.   In the example program Transform3 our red and green Rectangle are located at (100, 0). We rotate our green Rectangle's coordinate system by 45° while the red Rectangle's coordinate system remains unchanged. Note how the coordinate system is rotated around the origin (0, 0).    Rectangle Rotation      Transform3.java   \/\/ Transform3.java import doodlepad.*; public class Transform3 { private Rectangle redRect; private Rectangle grnRect; public Transform3() { \/\/ Two Rectangles with identical location and dimensions grnRect = new Rectangle(100, 0, 50, 50); redRect = new Rectangle(100, 0, 50, 50); \/\/ Set fill colors redRect.setFillColor(255, 0, 0); grnRect.setFillColor(0, 255, 0); \/\/ Rotate the green Rectangle only grnRect.rotate(45); } public static void main(String[] args) { Transform3 myTransform3 = new Transform3(); } }      Reset  You are free to apply as many transformations as you like, in any order. All transformations are cumulative; you will see only the final accumulated result. For example, if we create a Shape object, translate it by (50, 50), and then translate it by (50, 50) a second time, the Shape's coordinate system will have its origin located at (100, 100). Use the Shape's reset() method to set all transformations back to their default values.    Pad Transformations  In addition to Shape objects, transformations may be applied to a Pad object. In fact, the same transformation methods and their overloads may be applied to a Pad object in a manner identical to a Shape object. Furthermore, when the Pad's coordinate system is transformed, the transformations are applied to all Shapes drawn on the Pad because Shape coordinate systems are relative to their Pad's coordinate system. When you are interested in zooming or rotating an entire diagram rather than an individual Shape object, applying transformations to the Pad object is a much simpler way to go.   "
+},
+{
+  "id": "figure-26",
+  "level": "2",
+  "url": "section-dp-transformations.html#figure-26",
+  "type": "Figure",
+  "number": "5.11.1",
+  "title": "",
+  "body": " Rectangle Translation   "
+},
+{
+  "id": "figure-27",
+  "level": "2",
+  "url": "section-dp-transformations.html#figure-27",
+  "type": "Figure",
+  "number": "5.11.2",
+  "title": "",
+  "body": " Rectangle Translation   "
+},
+{
+  "id": "listing-26",
+  "level": "2",
+  "url": "section-dp-transformations.html#listing-26",
+  "type": "Listing",
+  "number": "5.11.3",
+  "title": "",
+  "body": " Transform1.java   \/\/ Transform1.java import doodlepad.*; public class Transform1 { private Rectangle redRect; private Rectangle grnRect; public Transform1() { \/\/ Two Rectangles with identical location and dimensions redRect = new Rectangle(0, 0, 50, 50); grnRect = new Rectangle(0, 0, 50, 50); \/\/ Set fill colors redRect.setFillColor(255, 0, 0); grnRect.setFillColor(0, 255, 0); \/\/ Translate the green Rectangle only grnRect.translate(100, 100); } public static void main(String[] args) { Transform1 myTransform1 = new Transform1(); } }   "
+},
+{
+  "id": "figure-28",
+  "level": "2",
+  "url": "section-dp-transformations.html#figure-28",
+  "type": "Figure",
+  "number": "5.11.4",
+  "title": "",
+  "body": " Rectangle Scale   "
+},
+{
+  "id": "figure-29",
+  "level": "2",
+  "url": "section-dp-transformations.html#figure-29",
+  "type": "Figure",
+  "number": "5.11.5",
+  "title": "",
+  "body": " Rectangle Scale   "
+},
+{
+  "id": "listing-27",
+  "level": "2",
+  "url": "section-dp-transformations.html#listing-27",
+  "type": "Listing",
+  "number": "5.11.6",
+  "title": "",
+  "body": " Transform2.java   \/\/ Transform2.java import doodlepad.*; public class Transform2 { private Rectangle redRect; private Rectangle grnRect; public Transform2() { \/\/ Two Rectangles with identical location and dimensions grnRect = new Rectangle(0, 0, 50, 50); redRect = new Rectangle(0, 0, 50, 50); \/\/ Set fill colors redRect.setFillColor(255, 0, 0); grnRect.setFillColor(0, 255, 0); \/\/ Scale the green Rectangle only grnRect.scale(2); } public static void main(String[] args) { Transform2 myTransform2 = new Transform2(); } }   "
+},
+{
+  "id": "figure-30",
+  "level": "2",
+  "url": "section-dp-transformations.html#figure-30",
+  "type": "Figure",
+  "number": "5.11.7",
+  "title": "",
+  "body": " Rectangle Rotation   "
+},
+{
+  "id": "figure-31",
+  "level": "2",
+  "url": "section-dp-transformations.html#figure-31",
+  "type": "Figure",
+  "number": "5.11.8",
+  "title": "",
+  "body": " Rectangle Rotation   "
+},
+{
+  "id": "listing-28",
+  "level": "2",
+  "url": "section-dp-transformations.html#listing-28",
+  "type": "Listing",
+  "number": "5.11.9",
+  "title": "",
+  "body": " Transform3.java   \/\/ Transform3.java import doodlepad.*; public class Transform3 { private Rectangle redRect; private Rectangle grnRect; public Transform3() { \/\/ Two Rectangles with identical location and dimensions grnRect = new Rectangle(100, 0, 50, 50); redRect = new Rectangle(100, 0, 50, 50); \/\/ Set fill colors redRect.setFillColor(255, 0, 0); grnRect.setFillColor(0, 255, 0); \/\/ Rotate the green Rectangle only grnRect.rotate(45); } public static void main(String[] args) { Transform3 myTransform3 = new Transform3(); } }   "
 },
 {
   "id": "section-dp-concepts",
   "level": "1",
   "url": "section-dp-concepts.html",
   "type": "Section",
-  "number": "5.9",
+  "number": "5.12",
   "title": "Key Concepts",
   "body": " Key Concepts     "
 },
@@ -1508,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-dp-exercises.html",
   "type": "Section",
-  "number": "5.10",
+  "number": "5.13",
   "title": "Chapter Exercises",
   "body": " Chapter Exercises   Chapter Exercises    "
 },
@@ -1517,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-dp-exercises.html#dp-exercises",
   "type": "Figure",
-  "number": "5.10.1",
+  "number": "5.13.1",
   "title": "",
   "body": " Chapter Exercises   "
 },
@@ -1531,90 +2044,90 @@ var ptx_lunr_docs = [
   "body": " if-Statements  First true condition executes  In Java, the boolean primitive type is used to represent a boolean value, which can be either true or false . It is the simplest data type and is commonly used for making logical decisions and controlling the flow of programs.  The boolean type is declared using the keyword boolean and occupies 1 bit of memory. However, the actual storage size in memory is typically larger (such as 1 byte) to accommodate the storage requirements of other data types. The boolean type can only take on two possible values: true or false .  You can declare a boolean variable and assign a value to it as follows:  boolean isSunny = true; boolean isRaining = false;  The boolean type is primarily used in conditional statements and loops to control the flow of the program based on the evaluation of boolean expressions. Here's an example:  boolean isSunny = true; boolean isWarm = true; if (isSunny && isWarm) { System.out.println(\"It's a perfect day!\"); } else if (isSunny && !isWarm) { System.out.println(\"It's sunny but not warm.\"); } else { System.out.println(\"The weather is not ideal.\"); }  In the above example, the program checks the values of isSunny and isWarm using logical operators ( && for logical AND, ! for logical NOT) to determine the appropriate output based on the weather conditions.  Boolean values can also be stored in variables, returned by methods, and used in boolean expressions. Java provides logical operators (AND, OR, NOT) and comparison operators (equal to, not equal to, greater than, etc.) that work with boolean values.  It's important to note that boolean values cannot be cast to other data types. They are distinct and separate from numeric types like int , float , or double .  Overall, the boolean primitive type in Java is used to represent logical values of true or false . It plays a fundamental role in decision-making and control structures within Java programs.  "
 },
 {
-  "id": "section-49",
+  "id": "section-52",
   "level": "1",
-  "url": "section-49.html",
+  "url": "section-52.html",
   "type": "Section",
   "number": "6.2",
   "title": "Multi-branch if-Statements",
   "body": "Multi-branch if-Statements  "
 },
 {
-  "id": "section-50",
+  "id": "section-53",
   "level": "1",
-  "url": "section-50.html",
+  "url": "section-53.html",
   "type": "Section",
   "number": "6.3",
   "title": "If-statement Strategies",
   "body": "If-statement Strategies  Multiple if-statements. Mutually-exclusive conditions  Set default and change if necessary  Most limited conditional test to most broad  "
 },
 {
-  "id": "section-51",
+  "id": "section-54",
   "level": "1",
-  "url": "section-51.html",
+  "url": "section-54.html",
   "type": "Section",
   "number": "6.4",
   "title": "while-Statements",
   "body": "while-Statements  "
 },
 {
-  "id": "section-52",
+  "id": "section-55",
   "level": "1",
-  "url": "section-52.html",
+  "url": "section-55.html",
   "type": "Section",
   "number": "6.5",
   "title": "Block Scope",
   "body": "Block Scope  It's important to note that variables have a scope within which they exist. A variable's scope determines from where in your program they may be accessed. For example, variables can have  block scope (limited to a specific block of code),  method scope (limited to a specific method),  object (instance) scope (limited to a specific object),  class scope (accessible throughout the class), and  package scope (limited to a Java package).  The scope of a variable is defined by the location where it is declared. It is important to understand that the location in your program where a variable is declared dictates from where it may be accesses.  "
 },
 {
-  "id": "section-53",
+  "id": "section-56",
   "level": "1",
-  "url": "section-53.html",
+  "url": "section-56.html",
   "type": "Section",
   "number": "6.6",
   "title": "Collection Classes",
   "body": "Collection Classes  ArrayList ...  (Using a loop counter to access elements of an ArrayList)  Autoboxing and Unboxing  "
 },
 {
-  "id": "section-54",
+  "id": "section-57",
   "level": "1",
-  "url": "section-54.html",
+  "url": "section-57.html",
   "type": "Section",
   "number": "6.7",
   "title": "Collections library of Static Methods",
   "body": "Collections library of Static Methods  "
 },
 {
-  "id": "section-55",
+  "id": "section-58",
   "level": "1",
-  "url": "section-55.html",
+  "url": "section-58.html",
   "type": "Section",
   "number": "6.8",
   "title": "break and continue",
   "body": "break and continue  "
 },
 {
-  "id": "section-56",
+  "id": "section-59",
   "level": "1",
-  "url": "section-56.html",
+  "url": "section-59.html",
   "type": "Section",
   "number": "6.9",
   "title": "Nested Control",
   "body": "Nested Control  Nested while statements  Nested if statements  "
 },
 {
-  "id": "section-57",
+  "id": "section-60",
   "level": "1",
-  "url": "section-57.html",
+  "url": "section-60.html",
   "type": "Section",
   "number": "6.10",
   "title": "Object Graphics",
   "body": "Object Graphics   "
 },
 {
-  "id": "section-58",
+  "id": "section-61",
   "level": "1",
-  "url": "section-58.html",
+  "url": "section-61.html",
   "type": "Section",
   "number": "6.11",
   "title": "Key Concepts",
@@ -1630,90 +2143,90 @@ var ptx_lunr_docs = [
   "body": " "
 },
 {
-  "id": "section-59",
+  "id": "section-62",
   "level": "1",
-  "url": "section-59.html",
+  "url": "section-62.html",
   "type": "Section",
   "number": "7.1",
   "title": "for-Statements",
   "body": "for-Statements  "
 },
 {
-  "id": "section-60",
+  "id": "section-63",
   "level": "1",
-  "url": "section-60.html",
+  "url": "section-63.html",
   "type": "Section",
   "number": "7.2",
   "title": "do-while-Statements",
   "body": "do-while-Statements  "
 },
 {
-  "id": "section-61",
+  "id": "section-64",
   "level": "1",
-  "url": "section-61.html",
+  "url": "section-64.html",
   "type": "Section",
   "number": "7.3",
   "title": "for-each Statements",
   "body": "for-each Statements  "
 },
 {
-  "id": "section-62",
+  "id": "section-65",
   "level": "1",
-  "url": "section-62.html",
+  "url": "section-65.html",
   "type": "Section",
   "number": "7.4",
   "title": "Which Iteration Statement?",
   "body": "Which Iteration Statement?  Compare\/contrast options  "
 },
 {
-  "id": "section-63",
+  "id": "section-66",
   "level": "1",
-  "url": "section-63.html",
+  "url": "section-66.html",
   "type": "Section",
   "number": "7.5",
   "title": "switch-Statements",
   "body": "switch-Statements  "
 },
 {
-  "id": "section-64",
+  "id": "section-67",
   "level": "1",
-  "url": "section-64.html",
+  "url": "section-67.html",
   "type": "Section",
   "number": "7.6",
   "title": "Conditional Expressions",
   "body": "Conditional Expressions  "
 },
 {
-  "id": "section-65",
+  "id": "section-68",
   "level": "1",
-  "url": "section-65.html",
+  "url": "section-68.html",
   "type": "Section",
   "number": "7.7",
   "title": "Which Branching Statement?",
   "body": "Which Branching Statement?  Compare\/contrast options  "
 },
 {
-  "id": "section-66",
+  "id": "section-69",
   "level": "1",
-  "url": "section-66.html",
+  "url": "section-69.html",
   "type": "Section",
   "number": "7.8",
   "title": "Shortcut Evaluation",
   "body": "Shortcut Evaluation   "
 },
 {
-  "id": "section-67",
+  "id": "section-70",
   "level": "1",
-  "url": "section-67.html",
+  "url": "section-70.html",
   "type": "Section",
   "number": "7.9",
   "title": "Comparing Floating-point Numbers",
   "body": "Comparing Floating-point Numbers  Rounding in floating point numbers suggests not using == operator  "
 },
 {
-  "id": "section-68",
+  "id": "section-71",
   "level": "1",
-  "url": "section-68.html",
+  "url": "section-71.html",
   "type": "Section",
   "number": "7.10",
   "title": "Key Concepts",
@@ -1729,101 +2242,137 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-69",
+  "id": "section-72",
   "level": "1",
-  "url": "section-69.html",
+  "url": "section-72.html",
   "type": "Section",
   "number": "8.1",
   "title": "Creating and Initializing Arrays",
   "body": "Creating and Initializing Arrays  "
 },
 {
-  "id": "section-70",
+  "id": "section-73",
   "level": "1",
-  "url": "section-70.html",
+  "url": "section-73.html",
   "type": "Section",
   "number": "8.2",
   "title": "Accessing Array Elements with Iteration",
   "body": "Accessing Array Elements with Iteration  (Using a loop counter at access elements of an array)  "
 },
 {
-  "id": "section-71",
+  "id": "section-74",
   "level": "1",
-  "url": "section-71.html",
+  "url": "section-74.html",
   "type": "Section",
   "number": "8.3",
   "title": "Array vs. ArrayList",
   "body": "Array vs. ArrayList  Creating and Initializing  Both are reference types  Accessing size  Element access  Element addition  Element removal  "
 },
 {
-  "id": "section-72",
+  "id": "section-75",
   "level": "1",
-  "url": "section-72.html",
+  "url": "section-75.html",
   "type": "Section",
   "number": "8.4",
   "title": "Creating Stars",
   "body": "Creating Stars  Use iteration and an array to create Star shapes  "
 },
 {
-  "id": "section-73",
+  "id": "section-76",
   "level": "1",
-  "url": "section-73.html",
+  "url": "section-76.html",
   "type": "Section",
   "number": "8.5",
   "title": "Multidimensional Arrays",
   "body": "Multidimensional Arrays  Arrays of Arrays  Nested loops for accessing all elements of multidimensional arrays  "
 },
 {
-  "id": "section-74",
+  "id": "section-77",
   "level": "1",
-  "url": "section-74.html",
+  "url": "section-77.html",
   "type": "Section",
   "number": "8.6",
   "title": "Ragged Arrays",
   "body": "Ragged Arrays  "
 },
 {
-  "id": "section-75",
+  "id": "section-78",
   "level": "1",
-  "url": "section-75.html",
+  "url": "section-78.html",
   "type": "Section",
   "number": "8.7",
   "title": "Arrays as Parameters",
   "body": "Arrays as Parameters  As a reference type, all the same rules apply.  "
 },
 {
-  "id": "section-76",
+  "id": "section-79",
   "level": "1",
-  "url": "section-76.html",
+  "url": "section-79.html",
   "type": "Section",
   "number": "8.8",
   "title": "Arrays of Objects",
   "body": "Arrays of Objects  Like a single variable, array elements of objects hold references to objects  "
 },
 {
-  "id": "section-77",
+  "id": "section-80",
   "level": "1",
-  "url": "section-77.html",
+  "url": "section-80.html",
   "type": "Section",
   "number": "8.9",
   "title": "Arrays Library",
   "body": "Arrays Library  The Arrays library of static methods for manipulating arrays in Java  "
 },
 {
-  "id": "section-78",
+  "id": "section-81",
   "level": "1",
-  "url": "section-78.html",
+  "url": "section-81.html",
   "type": "Section",
   "number": "8.10",
   "title": "Command line Parameters",
   "body": "Command line Parameters  Command-line parameters are passed to main() as an array of Strings  "
 },
 {
-  "id": "section-79",
+  "id": "section-ar-polygons",
   "level": "1",
-  "url": "section-79.html",
+  "url": "section-ar-polygons.html",
   "type": "Section",
   "number": "8.11",
+  "title": "DoodlePad Polygons",
+  "body": " DoodlePad Polygons   A Polygon is a closed multi-sided shape made up of three or more straight lines connected end-to-end with the end of last line attached to the beginning of the first. Polygons are created by specifying the ordered sequence of vertices that define all straight lines. Think of a triangle, square, pentagon, hexagon, etc. In DoodlePad the Polygon class is used to create any polygon that you can imagine. A polygon may be convex or concave in spots; it is entirely up to you and the coordinates of the vertices that you specify.    Path Object     The Polygon class defines several constructors for you to use to create new polygon shapes; but they fall in two general categories. The first category takes two arrays: one holding all x-coordinates and a second holding corresponding y-coordinates. These arrays maybe double[] or int[] arrays.  The following example program creates a Polygon object in the shape of a triangle. The figure on the right is the output generated by this program.   PolygonDemo1.java   \/\/ PolygonDemo1.java import doodlepad.*; public class PolygonDemo1 { public static void main(String[] args) { \/\/ Create and initialize two double[] arrays double[] Xs = new double[] { 50.0, 100.0, 150.0}; double[] Ys = new double[] {150.0, 50.0, 150.0}; \/\/ Pass arrays to Polygon constructor Polygon p1 = new Polygon(Xs, Ys); } }    The second category of Polygon constructor takes a List of Point objects that define the polygon's vertices. More specifically, this Polygon constructor takes a java.util.List<Point> varable as a parameter. The example below demonstrates how to create the same triangle created in the previous example, only this time using the alternate constructor. An ArrayList<Point> object is used as the parameter as ArrayList implements the java.util.List interface.   PolygonDemo2.java   \/\/ PolygonDemo2.java import doodlepad.*; import java.util.ArrayList; public class PolygonDemo2 { public static void main(String[] args) { \/\/ Create and initialize a List of Point object ArrayList<Point> points = new ArrayList<>(); points.add( new Point( 50.0, 150.0) ); points.add( new Point( 100.0, 50.0) ); points.add( new Point( 150.0, 150.0) ); \/\/ Pass Point List to Polygon constructor Polygon p1 = new Polygon(points); } }    "
+},
+{
+  "id": "figure-33",
+  "level": "2",
+  "url": "section-ar-polygons.html#figure-33",
+  "type": "Figure",
+  "number": "8.11.1",
+  "title": "",
+  "body": " Path Object   "
+},
+{
+  "id": "listing-29",
+  "level": "2",
+  "url": "section-ar-polygons.html#listing-29",
+  "type": "Listing",
+  "number": "8.11.2",
+  "title": "<code class=\"code-inline tex2jax_ignore\">PolygonDemo1.java<\/code>",
+  "body": " PolygonDemo1.java   \/\/ PolygonDemo1.java import doodlepad.*; public class PolygonDemo1 { public static void main(String[] args) { \/\/ Create and initialize two double[] arrays double[] Xs = new double[] { 50.0, 100.0, 150.0}; double[] Ys = new double[] {150.0, 50.0, 150.0}; \/\/ Pass arrays to Polygon constructor Polygon p1 = new Polygon(Xs, Ys); } }   "
+},
+{
+  "id": "listing-30",
+  "level": "2",
+  "url": "section-ar-polygons.html#listing-30",
+  "type": "Listing",
+  "number": "8.11.3",
+  "title": "<code class=\"code-inline tex2jax_ignore\">PolygonDemo2.java<\/code>",
+  "body": " PolygonDemo2.java   \/\/ PolygonDemo2.java import doodlepad.*; import java.util.ArrayList; public class PolygonDemo2 { public static void main(String[] args) { \/\/ Create and initialize a List of Point object ArrayList<Point> points = new ArrayList<>(); points.add( new Point( 50.0, 150.0) ); points.add( new Point( 100.0, 50.0) ); points.add( new Point( 150.0, 150.0) ); \/\/ Pass Point List to Polygon constructor Polygon p1 = new Polygon(points); } }   "
+},
+{
+  "id": "section-83",
+  "level": "1",
+  "url": "section-83.html",
+  "type": "Section",
+  "number": "8.12",
   "title": "Key Concepts",
   "body": " Key Concepts   An array is a linear data structure built in the Java.  Arrays may hold primitive data types as well as objects.  Array elements must have a uniform type.  When created, an array has a size that is predetermined and may not be extended.  An array variable is declared by specifying the type of array elements followed by square brackets.  An array is created using the new keyword followed by the type and a size in square brackets.  An array element is accessed using the variable name followed by square brackest and the element number.  Array elements begin at index 0 and end at one less than the length of the array.  The length of an array may be determined using the length property of an array object.  An array may be initialized at the time it is created by leaving out the size of the array but following with curly braces containing a comma-delimited list of values.  A shorthand for initializing an array is to declare an array variable and assign it directly to a curly brace-delimited list of values.  To access an element of an array follow the array variable with a pair of square brackets containing the number of the array element. This form of element access may be used for reading and assigning values to an array element.  Accessing all elements of an array may be performed with a while- or for-loop which generates all indexes.  An array element may itself be an array  An array of arrays is referred to as a 2-dimensional array  2D array variables may be declared with a type followed by two pairs of square brackets.  2D arrays may be created using the new keyword following by two pairs of square brackets containing the number of elements in each dimension. In this case the array is rectangular in shape.  To access an element in a 2D array use two pairs of square brackets, each containing indexes.  A 2D array may be initialized by leaving out dimensions when creating the array and following with nested curly braces containing comma-separated values.  A shorthand for initializing a 2D array is to declare an array variable and assign it directly to nested curly brace-delimited lists of values.  The second dimension of a 2D array is not required to have uniform lengths. This is referred to as a ragged array.  2D ragged arrays may be created by leaving out the length of the second dimension. In this case each array element has the value null.  When using a ragged array each element of the first dimension may be assigned to a 1D array of varying length, provided the types are compatible.  A shorthand for initializing a ragged 2D array is to declare an array variable and assign it directly to nested curly brace-delimited lists of values, where the length of each subordinate list may vary.  To print the elements of a ragged array by looping, the inner loop extent must interrogate each subordinate array length to set the upper loop counter value.  Arrays of dimension higher than two are possible by following the pattern for extending from 1D to 2D arrays.  Use the java.util.Arrays package to access static utility functions for manipulating arrays.  Arrays may be passed by reference to methods, just like any other object reference.  The public static void main()String[] args) method takes an array of Strings, where Strings are read from the terminal following the java command and class name. This array is referred to as the programs command line arguments.   "
 },
@@ -1832,50 +2381,50 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "exercises-11.html",
   "type": "Exercises",
-  "number": "8.12",
+  "number": "8.13",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-80",
+  "id": "section-84",
   "level": "1",
-  "url": "section-80.html",
+  "url": "section-84.html",
   "type": "Section",
   "number": "9.1",
   "title": "Class vs Instance",
   "body": "Class vs Instance  There can only ever be one class. There can be zero or more instances.  static fields belong to the class. All non-static fields are copied into each instance.  static methods do not have access to non-static fields. Non-static methods may access the scope of the object through which they are executed.  Class vs Object scope.  "
 },
 {
-  "id": "section-81",
+  "id": "section-85",
   "level": "1",
-  "url": "section-81.html",
+  "url": "section-85.html",
   "type": "Section",
   "number": "9.2",
   "title": "Constructors and Methods",
   "body": "Constructors and Methods  Anatomy of a Constructor  Constructor patters - init object fields.  Non-static methods  Method vs Constructor  The this keyword to set object scope  Using class name to set static scope  "
 },
 {
-  "id": "section-82",
+  "id": "section-86",
   "level": "1",
-  "url": "section-82.html",
+  "url": "section-86.html",
   "type": "Section",
   "number": "9.3",
   "title": "Access Control",
   "body": "Access Control  public vs private  "
 },
 {
-  "id": "section-83",
+  "id": "section-87",
   "level": "1",
-  "url": "section-83.html",
+  "url": "section-87.html",
   "type": "Section",
   "number": "9.4",
   "title": "Accessor and Mutator Methods",
   "body": "Accessor and Mutator Methods  getters and setters  "
 },
 {
-  "id": "section-84",
+  "id": "section-88",
   "level": "1",
-  "url": "section-84.html",
+  "url": "section-88.html",
   "type": "Section",
   "number": "9.5",
   "title": "Encapsulation",
@@ -1891,81 +2440,81 @@ var ptx_lunr_docs = [
   "body": " Enumerated Types  In Java, enumerated types, also known as enums , provide a way to define a fixed set of named constants. Enums allow you to create a custom data type with a predefined and automatically assigned set of values, making your code more readable, maintainable, and type-safe.  To define an enum in Java, you use the enum keyword followed by the name of the enum type. Here's an example of a simple enum representing clothing sizes:  TODO: Replace following with a program  >jshell | Welcome to JShell -- Version 17.0.6 | For an introduction type: \/help intro jshell> enum Size { ...> XSMALL, ...> SMALL, ...> MEDIUM, ...> LARGE, ...> XLARGE ...> } | created enum Size jshell>  In this example, Size > is the name of the enum type, and the constants SMALL , MEDIUM , LARGE , etc., are the possible values of the enum. Note that capitalization of constant name is not required, but useful for communicating the fact that these are constants.  You can use enum constants in your code just like any other static variables. For example:  jshell> Size mySize = Size.LARGE; mySize ==> LARGE jshell> System.out.println(\"Please order a \" + mySize); Please order a LARGE jshell>  Enums also have some useful methods automatically provided by Java. For instance, you can retrieve the name of an enum constant using the name() method:  jshell> System.out.println(\"Please order a \" + mySize.name()); Please order a LARGE  You can compare enum constants using the equality operator (==) because each constant is a unique instance of the enum type. Enums can also be used in switch statements for easy branching based on the enum value.  TODO: Replace following with a program  jshell> switch (mySize) { ...> case XSMALL: ...> case XLARGE: ...> System.out.println(\"We are out of 'extra' sizes\"); ...> break; ...> default: ...> System.out.println(\"Order placed\"); ...> } We are out of 'extra' sizes jshell>  Enums can have constructors, fields, and methods like any other Java class. You can even define custom behavior for each enum constant.  In summary, Java enumerated types (enums) provide a convenient way to define a fixed set of named constants, making your code more expressive and robust. Enums are type-safe, can have custom behavior, and provide useful methods out-of-the-box for working with the constants they define.  "
 },
 {
-  "id": "p-402",
+  "id": "p-505",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-402",
+  "url": "section-cl-enumerated.html#p-505",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "TODO: Replace following with a program "
 },
 {
-  "id": "p-407",
+  "id": "p-510",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-407",
+  "url": "section-cl-enumerated.html#p-510",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "TODO: Replace following with a program "
-},
-{
-  "id": "section-86",
-  "level": "1",
-  "url": "section-86.html",
-  "type": "Section",
-  "number": "9.7",
-  "title": "Multiple File Programs",
-  "body": "Multiple File Programs  Classes defined in multiple files.  Compiling and running programs spread over multiple files.  Multiple classes in the same file  Packages and file structure  A class's main() method is invoked automatically when the class is run.  jar files - just a zip archive of .class files  "
-},
-{
-  "id": "section-87",
-  "level": "1",
-  "url": "section-87.html",
-  "type": "Section",
-  "number": "9.8",
-  "title": "Driver Programs",
-  "body": "Driver Programs  Typically a top-level class with static methods that create and orchestrate other objects. May only have the static main() method.  "
-},
-{
-  "id": "section-88",
-  "level": "1",
-  "url": "section-88.html",
-  "type": "Section",
-  "number": "9.9",
-  "title": "Testing",
-  "body": "Testing  Using the main() method for testing  "
-},
-{
-  "id": "section-89",
-  "level": "1",
-  "url": "section-89.html",
-  "type": "Section",
-  "number": "9.10",
-  "title": "Review of Scope",
-  "body": "Review of Scope  block, method, object, class  One more, package  Scope sets variable lifetime. Be careful to define variables in the appropriate scope  The \"narrowest scope feasible\" principle.  "
 },
 {
   "id": "section-90",
   "level": "1",
   "url": "section-90.html",
   "type": "Section",
-  "number": "9.11",
-  "title": "Shadowing",
-  "body": "Shadowing  We get used to declaring and initializing variables. This often causes shadowing errors.  "
+  "number": "9.7",
+  "title": "Multiple File Programs",
+  "body": "Multiple File Programs  Classes defined in multiple files.  Compiling and running programs spread over multiple files.  Multiple classes in the same file  Packages and file structure  A class's main() method is invoked automatically when the class is run.  jar files - just a zip archive of .class files  "
 },
 {
   "id": "section-91",
   "level": "1",
   "url": "section-91.html",
   "type": "Section",
-  "number": "9.12",
-  "title": "Anonymous Objects",
-  "body": "Anonymous Objects  Created, used, and lost  "
+  "number": "9.8",
+  "title": "Driver Programs",
+  "body": "Driver Programs  Typically a top-level class with static methods that create and orchestrate other objects. May only have the static main() method.  "
 },
 {
   "id": "section-92",
   "level": "1",
   "url": "section-92.html",
+  "type": "Section",
+  "number": "9.9",
+  "title": "Testing",
+  "body": "Testing  Using the main() method for testing  "
+},
+{
+  "id": "section-93",
+  "level": "1",
+  "url": "section-93.html",
+  "type": "Section",
+  "number": "9.10",
+  "title": "Review of Scope",
+  "body": "Review of Scope  block, method, object, class  One more, package  Scope sets variable lifetime. Be careful to define variables in the appropriate scope  The \"narrowest scope feasible\" principle.  "
+},
+{
+  "id": "section-94",
+  "level": "1",
+  "url": "section-94.html",
+  "type": "Section",
+  "number": "9.11",
+  "title": "Shadowing",
+  "body": "Shadowing  We get used to declaring and initializing variables. This often causes shadowing errors.  "
+},
+{
+  "id": "section-95",
+  "level": "1",
+  "url": "section-95.html",
+  "type": "Section",
+  "number": "9.12",
+  "title": "Anonymous Objects",
+  "body": "Anonymous Objects  Created, used, and lost  "
+},
+{
+  "id": "section-96",
+  "level": "1",
+  "url": "section-96.html",
   "type": "Section",
   "number": "9.13",
   "title": "Key Concepts",
@@ -1981,110 +2530,155 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-93",
+  "id": "section-97",
   "level": "1",
-  "url": "section-93.html",
+  "url": "section-97.html",
   "type": "Section",
   "number": "10.1",
   "title": "Setting Up Inheritance",
   "body": "Setting Up Inheritance  extends and super keywords keyword  base class, derived class  Prevent subclassing using the final keyword  "
 },
 {
-  "id": "p-427",
+  "id": "p-530",
   "level": "2",
-  "url": "section-93.html#p-427",
+  "url": "section-97.html#p-530",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "final "
 },
 {
-  "id": "section-94",
+  "id": "section-98",
   "level": "1",
-  "url": "section-94.html",
+  "url": "section-98.html",
   "type": "Section",
   "number": "10.2",
   "title": "Benefits of Inheritance",
   "body": "Benefits of Inheritance  Subclassing automatically shares all functionality in base class. Derived class has a head start.  Modifications and updates apply to all derived classes  Reduction of code duplication  Reduction of excessive code maintenance  "
 },
 {
-  "id": "section-95",
+  "id": "section-99",
   "level": "1",
-  "url": "section-95.html",
+  "url": "section-99.html",
   "type": "Section",
   "number": "10.3",
   "title": "Generalization and Specialization",
   "body": "Generalization and Specialization  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  "
 },
 {
-  "id": "section-96",
+  "id": "section-100",
   "level": "1",
-  "url": "section-96.html",
+  "url": "section-100.html",
   "type": "Section",
   "number": "10.4",
   "title": "Subtype Polymorphism and Dynamic Binding",
   "body": "Subtype Polymorphism and Dynamic Binding  Assign an object of type derived class to a variable of type base class  Cast an object of type base class to a variable of type derived class  Dynamic binding  https:\/\/software.rajivprab.com\/2019\/08\/14\/nuances-of-overloading-and-overriding-in-java\/ Single Dispatch, Hidden Override, Exposed Override, Ambiguous Parameter, Multiple Inheritance - Interfaces, Multiple Inheritance - Class and Interface, Transitive Override, Private Override, Static Overrides, Static Linking  Using the @Override annotation on all override methods will help greatly in preventing regressions, by producing compile errors as soon as any base methods have their visibility changed.  "
 },
 {
-  "id": "p-440",
+  "id": "p-543",
   "level": "2",
-  "url": "section-96.html#p-440",
+  "url": "section-100.html#p-543",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "@Override "
 },
 {
-  "id": "section-97",
+  "id": "section-101",
   "level": "1",
-  "url": "section-97.html",
+  "url": "section-101.html",
   "type": "Section",
   "number": "10.5",
   "title": "protected Access",
   "body": "protected Access  "
 },
 {
-  "id": "section-98",
+  "id": "section-102",
   "level": "1",
-  "url": "section-98.html",
+  "url": "section-102.html",
   "type": "Section",
   "number": "10.6",
   "title": "The Object Class",
   "body": "The Object Class  All Java classes inherit Object, even when there is no extends  The inherited toString() method and when to override  The inherited equals() and when to override  "
 },
 {
-  "id": "section-99",
+  "id": "section-103",
   "level": "1",
-  "url": "section-99.html",
+  "url": "section-103.html",
   "type": "Section",
   "number": "10.7",
   "title": "Testing for a specific Class",
   "body": "Testing for a specific Class  instanceof operator  "
 },
 {
-  "id": "section-100",
+  "id": "section-104",
   "level": "1",
-  "url": "section-100.html",
+  "url": "section-104.html",
   "type": "Section",
   "number": "10.8",
   "title": "Abstract Classes and Methods",
   "body": "Abstract Classes and Methods  Force a derived class to implement a method by declaring it abstract in the base class  A class with an abstract method must also be declared abstract  "
 },
 {
-  "id": "p-445",
+  "id": "p-548",
   "level": "2",
-  "url": "section-100.html#p-445",
+  "url": "section-104.html#p-548",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "abstract "
 },
 {
-  "id": "section-101",
+  "id": "section-in-doodlepad",
   "level": "1",
-  "url": "section-101.html",
+  "url": "section-in-doodlepad.html",
   "type": "Section",
   "number": "10.9",
+  "title": "Inheritance in DoodlePad",
+  "body": " Inheritance in DoodlePad  Inheritance in DoodlePad   Handling Events by Overriding Base Class Methods  Another way to associate Shape events with custom methods is to subclass Shape and override the appropriate base class method with an implementation to be invoked when the event fires. The Shape base class implements a series of placeholder methods that do nothing, but exist purely to be overridden by a subclass when custom behavior is desired. This represents an alternative to the method reference approach for setting up custom event handlers, and may be used when comfortable with the concept of inheritance.  The Shape implements a series of \"on\" methods: one for each mouse event. For example, Shape implements a method named onMousePressed which is invoked when a Shape is clicked with the mouse. The signature of this method as well as all other methods that correspond with mouse events share a common signature with the types: double, double and int. These are the mouse event x and y coordinates and an integer identifying the mouse button in use. These parameters are identical to the signature of methods used in the method reference approach, minus the first parameter identifying the Shape object.  The following example illustrates an alternate way to implement the previous PushButton class. In this case the PushButton2 class extends the RoundRect Shape class. The mousePressed event is handled by overriding the onMousePressed() method. The remaining logic for this class is identical to the previous example.   PushButton2.java   \/\/ PushButton2.java import doodlepad.*; public class PushButton2 extends RoundRect { private boolean isOn; \/\/ Button state public PushButton2(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); \/\/ Initialize the button this.setFillColor(200); \/\/ Starts off isOn = false; } @Override public void onMousePressed(double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill color based on state if (isOn) { this.setFillColor(0, 255, 0); } else { this.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton2 PushButton2 myPushButton = new PushButton2(100, 100, 75, 50); } }      Overridable Shape Event Methods  As mentioned, the Shape class implements one overridable method for each mouse event. The following table lists all methods that may be overridden in order to handle a triggered mouse event.   Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.       Overridable Pad Event Methods   Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.      Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share      "
+},
+{
+  "id": "listing-in-pushbutton2",
+  "level": "2",
+  "url": "section-in-doodlepad.html#listing-in-pushbutton2",
+  "type": "Listing",
+  "number": "10.9.1",
+  "title": "",
+  "body": " PushButton2.java   \/\/ PushButton2.java import doodlepad.*; public class PushButton2 extends RoundRect { private boolean isOn; \/\/ Button state public PushButton2(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); \/\/ Initialize the button this.setFillColor(200); \/\/ Starts off isOn = false; } @Override public void onMousePressed(double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill color based on state if (isOn) { this.setFillColor(0, 255, 0); } else { this.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton2 PushButton2 myPushButton = new PushButton2(100, 100, 75, 50); } }   "
+},
+{
+  "id": "table-44",
+  "level": "2",
+  "url": "section-in-doodlepad.html#table-44",
+  "type": "Table",
+  "number": "10.9.2",
+  "title": "Overridable Shape Event Methods",
+  "body": " Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.    "
+},
+{
+  "id": "table-45",
+  "level": "2",
+  "url": "section-in-doodlepad.html#table-45",
+  "type": "Table",
+  "number": "10.9.3",
+  "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",
+  "body": " Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.    "
+},
+{
+  "id": "table-46",
+  "level": "2",
+  "url": "section-in-doodlepad.html#table-46",
+  "type": "Table",
+  "number": "10.9.4",
+  "title": "Overridable Pad Socket Event Methods",
+  "body": " Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share    "
+},
+{
+  "id": "section-106",
+  "level": "1",
+  "url": "section-106.html",
+  "type": "Section",
+  "number": "10.10",
   "title": "Key Concepts",
   "body": "Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding.  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.   "
 },
@@ -2093,95 +2687,95 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "exercises-13.html",
   "type": "Exercises",
-  "number": "10.10",
+  "number": "10.11",
   "title": "Exercises",
   "body": "Exercises  "
-},
-{
-  "id": "section-102",
-  "level": "1",
-  "url": "section-102.html",
-  "type": "Section",
-  "number": "11.1",
-  "title": "Defining and Implementing Interfaces",
-  "body": "Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
-},
-{
-  "id": "p-448",
-  "level": "2",
-  "url": "section-102.html#p-448",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "class interface "
-},
-{
-  "id": "p-450",
-  "level": "2",
-  "url": "section-102.html#p-450",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "extends implements "
-},
-{
-  "id": "section-103",
-  "level": "1",
-  "url": "section-103.html",
-  "type": "Section",
-  "number": "11.2",
-  "title": "Interfaces and Polymorphism",
-  "body": "Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
-},
-{
-  "id": "section-104",
-  "level": "1",
-  "url": "section-104.html",
-  "type": "Section",
-  "number": "11.3",
-  "title": "Comparable&lt;T&gt; Interface",
-  "body": "Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
-},
-{
-  "id": "section-105",
-  "level": "1",
-  "url": "section-105.html",
-  "type": "Section",
-  "number": "11.4",
-  "title": "Iterator&lt;T&gt; Interface",
-  "body": "Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
-},
-{
-  "id": "section-106",
-  "level": "1",
-  "url": "section-106.html",
-  "type": "Section",
-  "number": "11.5",
-  "title": "Benefits of an Interface",
-  "body": "Benefits of an Interface  An ArrayList holding objects of multiple types  "
 },
 {
   "id": "section-107",
   "level": "1",
   "url": "section-107.html",
   "type": "Section",
-  "number": "11.6",
-  "title": "Defining Your Own Interfaces",
-  "body": "Defining Your Own Interfaces   "
+  "number": "11.1",
+  "title": "Defining and Implementing Interfaces",
+  "body": "Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
+},
+{
+  "id": "p-555",
+  "level": "2",
+  "url": "section-107.html#p-555",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "class interface "
+},
+{
+  "id": "p-557",
+  "level": "2",
+  "url": "section-107.html#p-557",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "extends implements "
 },
 {
   "id": "section-108",
   "level": "1",
   "url": "section-108.html",
   "type": "Section",
-  "number": "11.7",
+  "number": "11.2",
   "title": "Interfaces and Polymorphism",
-  "body": "Interfaces and Polymorphism   "
+  "body": "Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
 },
 {
   "id": "section-109",
   "level": "1",
   "url": "section-109.html",
+  "type": "Section",
+  "number": "11.3",
+  "title": "Comparable&lt;T&gt; Interface",
+  "body": "Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
+},
+{
+  "id": "section-110",
+  "level": "1",
+  "url": "section-110.html",
+  "type": "Section",
+  "number": "11.4",
+  "title": "Iterator&lt;T&gt; Interface",
+  "body": "Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
+},
+{
+  "id": "section-111",
+  "level": "1",
+  "url": "section-111.html",
+  "type": "Section",
+  "number": "11.5",
+  "title": "Benefits of an Interface",
+  "body": "Benefits of an Interface  An ArrayList holding objects of multiple types  "
+},
+{
+  "id": "section-112",
+  "level": "1",
+  "url": "section-112.html",
+  "type": "Section",
+  "number": "11.6",
+  "title": "Defining Your Own Interfaces",
+  "body": "Defining Your Own Interfaces   "
+},
+{
+  "id": "section-113",
+  "level": "1",
+  "url": "section-113.html",
+  "type": "Section",
+  "number": "11.7",
+  "title": "Interfaces and Polymorphism",
+  "body": "Interfaces and Polymorphism   "
+},
+{
+  "id": "section-114",
+  "level": "1",
+  "url": "section-114.html",
   "type": "Section",
   "number": "11.8",
   "title": "Key Concepts",
@@ -2197,108 +2791,108 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-110",
+  "id": "section-115",
   "level": "1",
-  "url": "section-110.html",
+  "url": "section-115.html",
   "type": "Section",
   "number": "12.1",
   "title": "Software Development Life Cycled (SDLC)",
   "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
 },
 {
-  "id": "section-111",
+  "id": "section-116",
   "level": "1",
-  "url": "section-111.html",
+  "url": "section-116.html",
   "type": "Section",
   "number": "12.2",
   "title": "Encapsulation and Abstraction",
   "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
 },
 {
-  "id": "section-112",
+  "id": "section-117",
   "level": "1",
-  "url": "section-112.html",
+  "url": "section-117.html",
   "type": "Section",
   "number": "12.3",
   "title": "Object Relationships",
   "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
 },
 {
-  "id": "section-113",
+  "id": "section-118",
   "level": "1",
-  "url": "section-113.html",
+  "url": "section-118.html",
   "type": "Section",
   "number": "12.4",
   "title": "When to use Inheritance",
   "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
 },
 {
-  "id": "section-114",
+  "id": "section-119",
   "level": "1",
-  "url": "section-114.html",
+  "url": "section-119.html",
   "type": "Section",
   "number": "12.5",
   "title": "When to use Interfaces",
   "body": "When to use Interfaces  Common public interface  "
 },
 {
-  "id": "section-115",
+  "id": "section-120",
   "level": "1",
-  "url": "section-115.html",
+  "url": "section-120.html",
   "type": "Section",
   "number": "12.6",
   "title": "Cohesion and Coupling",
   "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
 },
 {
-  "id": "section-116",
+  "id": "section-121",
   "level": "1",
-  "url": "section-116.html",
+  "url": "section-121.html",
   "type": "Section",
   "number": "12.7",
   "title": "Unified Modeling Language (UML)",
   "body": "Unified Modeling Language (UML)  "
 },
 {
-  "id": "section-117",
+  "id": "section-122",
   "level": "1",
-  "url": "section-117.html",
+  "url": "section-122.html",
   "type": "Section",
   "number": "12.8",
   "title": "Class Diagram",
   "body": "Class Diagram  A structure diagram  "
 },
 {
-  "id": "section-118",
+  "id": "section-123",
   "level": "1",
-  "url": "section-118.html",
+  "url": "section-123.html",
   "type": "Section",
   "number": "12.9",
   "title": "Object Diagram",
   "body": "Object Diagram  A structure diagram  "
 },
 {
-  "id": "section-119",
+  "id": "section-124",
   "level": "1",
-  "url": "section-119.html",
+  "url": "section-124.html",
   "type": "Section",
   "number": "12.10",
   "title": "Activity Diagrams",
   "body": "Activity Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-120",
+  "id": "section-125",
   "level": "1",
-  "url": "section-120.html",
+  "url": "section-125.html",
   "type": "Section",
   "number": "12.11",
   "title": "State Machine Diagrams",
   "body": "State Machine Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-121",
+  "id": "section-126",
   "level": "1",
-  "url": "section-121.html",
+  "url": "section-126.html",
   "type": "Section",
   "number": "12.12",
   "title": "Key Concepts",
@@ -2314,99 +2908,99 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-122",
+  "id": "section-127",
   "level": "1",
-  "url": "section-122.html",
+  "url": "section-127.html",
   "type": "Section",
   "number": "13.1",
   "title": "Syntax Errors",
   "body": "Syntax Errors  Caught by the compiler  "
 },
 {
-  "id": "section-123",
+  "id": "section-128",
   "level": "1",
-  "url": "section-123.html",
+  "url": "section-128.html",
   "type": "Section",
   "number": "13.2",
   "title": "Logic Errors",
   "body": "Logic Errors  The program runs, but produces the wrong output.  "
 },
 {
-  "id": "section-124",
+  "id": "section-129",
   "level": "1",
-  "url": "section-124.html",
+  "url": "section-129.html",
   "type": "Section",
   "number": "13.3",
   "title": "Runtime Errors",
   "body": "Runtime Errors  The program compiles, but something goes wrong while it is running. Java responds to the problem by throwing an exception. Like nearly everything else in Java, an exception is an object created by instantiating a suitable exception class that identifies the problem.  If there is no intervention, Java will eventually print the current state of the call stack when the exception object is thrown.  "
 },
 {
-  "id": "p-485",
+  "id": "p-592",
   "level": "2",
-  "url": "section-124.html#p-485",
+  "url": "section-129.html#p-592",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "call stack "
 },
 {
-  "id": "section-125",
+  "id": "section-130",
   "level": "1",
-  "url": "section-125.html",
+  "url": "section-130.html",
   "type": "Section",
   "number": "13.4",
   "title": "Common Exception Classes",
   "body": "Common Exception Classes  ArithmeticException  NullPointerException  IndexOutOfBoundsException  ArrayIndexOutOfBoundsException  IllegalArgumentException  Exception class hierarchy  printStackTrace() method  "
 },
 {
-  "id": "section-126",
+  "id": "section-131",
   "level": "1",
-  "url": "section-126.html",
+  "url": "section-131.html",
   "type": "Section",
   "number": "13.5",
   "title": "Catching Exceptions",
   "body": "Catching Exceptions  try-catch  try-catch-finally  "
 },
 {
-  "id": "section-127",
+  "id": "section-132",
   "level": "1",
-  "url": "section-127.html",
+  "url": "section-132.html",
   "type": "Section",
   "number": "13.6",
   "title": "Checked vs. Unchecked Exceptions",
   "body": "Checked vs. Unchecked Exceptions  Checked exceptions must be caught  Alternatively, the catching of a checked exception may be deferred using the throws keyword.  "
 },
 {
-  "id": "p-496",
+  "id": "p-603",
   "level": "2",
-  "url": "section-127.html#p-496",
+  "url": "section-132.html#p-603",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "throws "
 },
 {
-  "id": "section-128",
+  "id": "section-133",
   "level": "1",
-  "url": "section-128.html",
+  "url": "section-133.html",
   "type": "Section",
   "number": "13.7",
   "title": "Reading Files",
   "body": "Reading Files  Thow IO exceptions  IO exceptions are checked, and must be caught in a try-catch  Files need to be closed.  "
 },
 {
-  "id": "section-129",
+  "id": "section-134",
   "level": "1",
-  "url": "section-129.html",
+  "url": "section-134.html",
   "type": "Section",
   "number": "13.8",
   "title": "try-with-resources",
   "body": "try-with-resources  May be used with objects that implement the AutoClosable interface.  public interface AutoCloseable { void close() throws Exception; }  "
 },
 {
-  "id": "section-130",
+  "id": "section-135",
   "level": "1",
-  "url": "section-130.html",
+  "url": "section-135.html",
   "type": "Section",
   "number": "13.9",
   "title": "Key Concepts",
@@ -2422,117 +3016,117 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-131",
+  "id": "section-136",
   "level": "1",
-  "url": "section-131.html",
+  "url": "section-136.html",
   "type": "Section",
   "number": "14.1",
   "title": "Tracing Programs",
   "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
 },
 {
-  "id": "section-132",
+  "id": "section-137",
   "level": "1",
-  "url": "section-132.html",
+  "url": "section-137.html",
   "type": "Section",
   "number": "14.2",
   "title": "The Call Stack",
   "body": "The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
 },
 {
-  "id": "section-133",
+  "id": "section-138",
   "level": "1",
-  "url": "section-133.html",
+  "url": "section-138.html",
   "type": "Section",
   "number": "14.3",
   "title": "Recursion",
   "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
 },
 {
-  "id": "p-505",
+  "id": "p-612",
   "level": "2",
-  "url": "section-133.html#p-505",
+  "url": "section-138.html#p-612",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "recursion "
 },
 {
-  "id": "p-506",
+  "id": "p-613",
   "level": "2",
-  "url": "section-133.html#p-506",
+  "url": "section-138.html#p-613",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Direct recursion "
 },
 {
-  "id": "p-507",
+  "id": "p-614",
   "level": "2",
-  "url": "section-133.html#p-507",
+  "url": "section-138.html#p-614",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Indirect recursion "
 },
 {
-  "id": "section-134",
+  "id": "section-139",
   "level": "1",
-  "url": "section-134.html",
+  "url": "section-139.html",
   "type": "Section",
   "number": "14.4",
   "title": "Solving Problems with Recursion",
   "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
 },
 {
-  "id": "p-510",
+  "id": "p-617",
   "level": "2",
-  "url": "section-134.html#p-510",
+  "url": "section-139.html#p-617",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cases base case recursive case "
 },
 {
-  "id": "section-135",
+  "id": "section-140",
   "level": "1",
-  "url": "section-135.html",
+  "url": "section-140.html",
   "type": "Section",
   "number": "14.5",
   "title": "Example: Computing Factorial",
   "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-136",
+  "id": "section-141",
   "level": "1",
-  "url": "section-136.html",
+  "url": "section-141.html",
   "type": "Section",
   "number": "14.6",
   "title": "Example: Computing Fibonacci Numbers",
   "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
 },
 {
-  "id": "section-137",
+  "id": "section-142",
   "level": "1",
-  "url": "section-137.html",
+  "url": "section-142.html",
   "type": "Section",
   "number": "14.7",
   "title": "Example: Drawing a Pyramid",
   "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-138",
+  "id": "section-143",
   "level": "1",
-  "url": "section-138.html",
+  "url": "section-143.html",
   "type": "Section",
   "number": "14.8",
   "title": "Example: Building a Maze",
   "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-139",
+  "id": "section-144",
   "level": "1",
-  "url": "section-139.html",
+  "url": "section-144.html",
   "type": "Section",
   "number": "14.9",
   "title": "Key Concepts",
@@ -2548,72 +3142,72 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-140",
+  "id": "section-145",
   "level": "1",
-  "url": "section-140.html",
+  "url": "section-145.html",
   "type": "Section",
   "number": "15.1",
   "title": "Searching and Sorting Algorithms",
   "body": "Searching and Sorting Algorithms  "
 },
 {
-  "id": "section-141",
+  "id": "section-146",
   "level": "1",
-  "url": "section-141.html",
+  "url": "section-146.html",
   "type": "Section",
   "number": "15.2",
   "title": "Sequential Search",
   "body": "Sequential Search  "
 },
 {
-  "id": "section-142",
+  "id": "section-147",
   "level": "1",
-  "url": "section-142.html",
+  "url": "section-147.html",
   "type": "Section",
   "number": "15.3",
   "title": "Binary Search",
   "body": "Binary Search  Iterative implementation  Recursive implementation  "
 },
 {
-  "id": "section-143",
+  "id": "section-148",
   "level": "1",
-  "url": "section-143.html",
+  "url": "section-148.html",
   "type": "Section",
   "number": "15.4",
   "title": "Selection Sort",
   "body": "Selection Sort  "
 },
 {
-  "id": "section-144",
+  "id": "section-149",
   "level": "1",
-  "url": "section-144.html",
+  "url": "section-149.html",
   "type": "Section",
   "number": "15.5",
   "title": "Insertion Sort",
   "body": "Insertion Sort  "
 },
 {
-  "id": "section-145",
+  "id": "section-150",
   "level": "1",
-  "url": "section-145.html",
+  "url": "section-150.html",
   "type": "Section",
   "number": "15.6",
   "title": "Merge Sort",
   "body": "Merge Sort  "
 },
 {
-  "id": "section-146",
+  "id": "section-151",
   "level": "1",
-  "url": "section-146.html",
+  "url": "section-151.html",
   "type": "Section",
   "number": "15.7",
   "title": "Complexity",
   "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
 },
 {
-  "id": "section-147",
+  "id": "section-152",
   "level": "1",
-  "url": "section-147.html",
+  "url": "section-152.html",
   "type": "Section",
   "number": "15.8",
   "title": "Key Concepts",
@@ -2638,9 +3232,9 @@ var ptx_lunr_docs = [
   "body": " ASCII Table   Americal Standard Code Information Interchange (ASCII)    Decimal Code  Symbol  Description   0 NUL Null character  1 SOH Start of Heading  2 STX Start of Text  3 ETX End of Text  3 ETX End of Text  4 EOT End of Transmission  5 ENQ Enquiry  6 ACK Acknowledge  7 BEL Bell, Alert  8 BS Backspace  9 HT Horizontal Tab  10 LF Line Feed  11 VT Vertical Tabulation  12 FF Form Feed  13 CR Carriage Return  14 SO Shift Out  15 SI Shift In  16 DLE Data Link Escape  17 DC1 Device Control One (XON)  18 DC2 Device Control Two  19 DC3 Device Control Three (XOFF)  20 DC4 Device Control Four  21 NAK Negative Acknowledge  22 SYN Synchronous Idle  23 ETB End of Transmission Block  24 CAN Cancel  25 EM End of medium  26 SUB Substitute  27 ESC Escape  28 FS File Separator  29 GS Group Separator  30 RS Record Separator  31 US Unit Separator  32 SP Space  33 ! Exclamation mark  34 \" Double quotes (or speech marks)  35 # Number sign  36 $ Dollar  37 % Per cent sign  38 & Ampersand  39 ' Single quote  40 ( Open parenthesis (or open bracket)  41 ) Close parenthesis (or close bracket)  42 * Asterisk  43 + Plus  44 , Comma  45 - Hyphen-minus  46 . Period, dot or full stop  47 \/ Slash or divide  48 0 Zero  49 1 One  50 2 Two  51 3 Three  52 4 Four  53 5 Five  54 6 Six  55 7 Seven  56 8 Eight  57 9 Nine  58 : Colon  59 ; Semicolon  60 Less than (or open angled bracket)  61 = Equals  62 > Greater than (or close angled bracket)  63 ? Question mark  64 @ At sign  65 A Uppercase A  66 B Uppercase B  67 C Uppercase C  68 D Uppercase D  69 E Uppercase E  70 F Uppercase F  71 G Uppercase G  72 H Uppercase H  73 I Uppercase I  74 J Uppercase J  75 K Uppercase K  76 L Uppercase L  77 M Uppercase M  78 N Uppercase N  79 O Uppercase O  80 P Uppercase P  81 Q Uppercase Q  82 R Uppercase R  83 S Uppercase S  84 T Uppercase T  85 U Uppercase U  86 V Uppercase V  87 W Uppercase W  88 X Uppercase X  89 Y Uppercase Y  90 Z Uppercase Z  91 [ Opening bracket  92 \\ Backslash  93 ] Closing bracket  94 ^ Caret - circumflex  95 _ Underscore  96 ` Grave accent  97 a Lowercase a  98 b Lowercase b  99 c Lowercase c  100 d Lowercase d  101 e Lowercase e  102 f Lowercase f  103 g Lowercase g  104 h Lowercase h  105 i Lowercase i  106 j Lowercase j  107 k Lowercase k  108 l Lowercase l  109 m Lowercase m  110 n Lowercase n  111 o Lowercase o  112 p Lowercase p  113 q Lowercase q  114 r Lowercase r  115 s Lowercase s  116 t Lowercase t  117 u Lowercase u  118 v Lowercase v  119 w Lowercase w  120 x Lowercase x  121 y Lowercase y  122 z Lowercase z  123 { Opening brace  124 | Vertical bar  125 } Closing brace  126 ~ Equivalency sign - tilde  127 DEL Delete    "
 },
 {
-  "id": "table-28",
+  "id": "table-47",
   "level": "2",
-  "url": "appendix_ascii_table.html#table-28",
+  "url": "appendix_ascii_table.html#table-47",
   "type": "Table",
   "number": "A.0.1",
   "title": "Americal Standard Code Information Interchange (ASCII)",
@@ -2656,18 +3250,18 @@ var ptx_lunr_docs = [
   "body": " Common Shells and Commands   Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX      Shell commands    Task  Shell  Command    Get the current working directory  Command Prompt  cd     PowerShell  pwd     bash  pwd    List directory contents  Command Prompt  dir     PowerShell  dir     bash  ls    Change the current working directory  Command Prompt  cd  path\\to\\directory     PowerShell  cd  path\\to\\directory     bash  cd  path\/to\/directory    Move up one directory level  Command Prompt  cd ..     PowerShell  cd ..     bash  cd ..    Create a new directory  Command Prompt  mkdir  directoryname     PowerShell  mkdir  directoryname     bash  mkdir  directoryname    Copy a file  Command Prompt  copy  source\\file\\path destination\\file\\path     PowerShell  Copy-Item -Path  source\\file\\path  -Destination  destination\\file\\path     bash  cp  source\/file\/path destination\/file\/path    Delete a file  Command Prompt  del  filename     PowerShell  del  filename     bash  rm  filename     "
 },
 {
-  "id": "table-29",
+  "id": "table-48",
   "level": "2",
-  "url": "appendix_shells.html#table-29",
+  "url": "appendix_shells.html#table-48",
   "type": "Table",
   "number": "B.0.1",
   "title": "Operating systems and their common shell programs",
   "body": " Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX    "
 },
 {
-  "id": "table-30",
+  "id": "table-49",
   "level": "2",
-  "url": "appendix_shells.html#table-30",
+  "url": "appendix_shells.html#table-49",
   "type": "Table",
   "number": "B.0.2",
   "title": "Shell commands",
@@ -2692,9 +3286,9 @@ var ptx_lunr_docs = [
   "body": " Testing   This is the introduction.   The Importance of Testing  The compiler tells us if we have syntax error s and the execution engine throws exceptions when something goes wrong while the program is running ( runtime errors ). How can we check when the program runs without error, but produces incorrect results ( logic errors )? The best way to check for logic errors is through testing.  A good test plan executes all paths through your source code and presents a wide range of possible inputs. It checks results produced to make sure all they are correct.   Java assertions and AssertionError  Java assertions and AssertionError   Unit Testing  Integration Testing  Key Concepts   Testing is an important part of software development during which time test cases are developed and run to ensure a program is correct.  Test cases should cover all behavior expected by a program. This is called test coverage.  Special testing situations include a boundary (edge) case, a corner case and a special case  Software testing includes unit testing and integration testing  During unit testing individual isolated parts (units) of a program are tested for correctness independently  During integration testing the interaction between software units is tested for correctness   Exercises   "
 },
 {
-  "id": "p-530",
+  "id": "p-637",
   "level": "2",
-  "url": "appendix-testing.html#p-530",
+  "url": "appendix-testing.html#p-637",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2737,18 +3331,18 @@ var ptx_lunr_docs = [
   "body": "   doodlepad.org   https:\/\/doodlepad.org   copyright  This book was authored in PreTeXt .  "
 },
 {
-  "id": "section-148",
+  "id": "section-153",
   "level": "1",
-  "url": "section-148.html",
+  "url": "section-153.html",
   "type": "Section",
   "number": "16.1",
   "title": "Visualizer",
   "body": " Visualizer   Visualize   "
 },
 {
-  "id": "section-149",
+  "id": "section-154",
   "level": "1",
-  "url": "section-149.html",
+  "url": "section-154.html",
   "type": "Section",
   "number": "16.2",
   "title": "Active Code",
@@ -2757,7 +3351,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-python",
   "level": "2",
-  "url": "section-149.html#program-activecode-python",
+  "url": "section-154.html#program-activecode-python",
   "type": "Listing",
   "number": "16.2.1",
   "title": "",
@@ -2766,7 +3360,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-java",
   "level": "2",
-  "url": "section-149.html#program-activecode-java",
+  "url": "section-154.html#program-activecode-java",
   "type": "Listing",
   "number": "16.2.2",
   "title": "Informal Java “Hello, World”",
@@ -2775,7 +3369,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-javascript",
   "level": "2",
-  "url": "section-149.html#program-activecode-javascript",
+  "url": "section-154.html#program-activecode-javascript",
   "type": "Listing",
   "number": "16.2.3",
   "title": "",

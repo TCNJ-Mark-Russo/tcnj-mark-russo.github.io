@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// BoxDriver.java
+import doodlepad.*;
+
+public class BoxDriver
+{
+    // The box to drive around the Pad
+    private Rectangle box;
+
+    public BoxDriver() {
+        // Explicitly create a Pad and handle key-pressed event
+        Pad p = new Pad(600, 600);
+        p.setKeyPressedHandler( this::onKeyPressed );
+
+        // Create ans style the box to drive
+        box = new Rectangle(100, 100, 50, 50);
+        box.setFillcellor(0, 0, 255);
+    }
+
+    // Key pressed event handler moves box according key pressed
+    public void onKeyPressed(Pad p, String keyText, String keyMods) {
+        if (keyText.equals("Left") || keyText.equals("←")) {
+            box.move(-10, 0);
+        } else if (keyText.equals("Right") || keyText.equals("→")) {
+            box.move(10, 0);
+        } else if (keyText.equals("Up") || keyText.equals("↑")) {
+            box.move(0, -10);
+        } else if (keyText.equals("Down") || keyText.equals("↓")) {
+            box.move(0, 10);
+        }
+    }
+
+    public static void main(String[] args) {
+        BoxDriver myBoxDriver = new BoxDriver();
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.11<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">BoxDriver.java</code></figcaption></figure><span class="incontext"><a href="section-dp-events.html#listing-dp-box-driver" class="internal">in-context</a></span>
+</body>
+</html>

@@ -86,15 +86,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.4';
+eBookConfig.runestone_version = '7.0.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runtime.61a1aa562b2eef01.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.8d2f742bc74f4a41.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-runtime.61a1aa562b2eef01.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.5/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.5/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.5/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -210,7 +210,7 @@ eBookConfig.enable_chatcodes =  false;
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-dp-shapes.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-doodlepad.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-dp-interaction.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-dp-position-size.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-doodlepad.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-dp-events.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
@@ -346,7 +346,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><div class="toc-item"><a href="section-rt-stringbuilder.html" class="internal"><span class="codenumber">4.1</span> <span class="title">StringBuilder Class</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-refvars.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Reference Variables</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-gc.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Garbage Collection</span></a></div></li>
-<li><div class="toc-item"><a href="section-35.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-scope.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-concepts.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="section-rt-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
@@ -362,176 +362,247 @@ eBookConfig.enable_chatcodes =  false;
 <li><div class="toc-item"><a href="section-dp-shapes.html#subsection-18" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Rectangle</span></a></div></li>
 <li><div class="toc-item"><a href="section-dp-shapes.html#subsection-19" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Oval</span></a></div></li>
 <li><div class="toc-item"><a href="section-dp-shapes.html#subsection-20" class="internal"><span class="codenumber">5.3.3</span> <span class="title">RoundRect</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-21" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Line</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-22" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Arc</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-21" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Arc</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-22" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Line</span></a></div></li>
 </ul>
 </li>
-<li class="active"><div class="toc-item"><a href="section-dp-colors.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Colors</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-interaction.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Handling Events and Interactions</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-paths.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Paths</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-images.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Images</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-more.html" class="internal"><span class="codenumber">5.8</span> <span class="title">More Features</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-concepts.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="section-dp-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Chapter Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-dp-position-size.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Shape Position and Size</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-dp-position-size.html#subsection-23" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Position- and Size-related Methods</span></a></div></li></ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-dp-colors.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Colors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-24" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Color Components</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-25" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Setting Fill and Stroke Color</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-26" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Fill And Stroke Color Examples</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-27" class="internal"><span class="codenumber">5.5.4</span> <span class="title">Color-related Methods</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-events.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Event-Driven Programming</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-28" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Connecting Events and Methods with Method References</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-29" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Shape Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-30" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Other Event-Related Shape Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-31" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Pad Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-32" class="internal"><span class="codenumber">5.6.5</span> <span class="title">Pad Keyboard Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-33" class="internal"><span class="codenumber">5.6.6</span> <span class="title">Pad Timer Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-34" class="internal"><span class="codenumber">5.6.7</span> <span class="title">Box Driver Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-paths.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Path Shapes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-35" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Sides made up of Quadratic Curve Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-36" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Sides made of Spline Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-37" class="internal"><span class="codenumber">5.7.3</span> <span class="title">Drawing and Styling a Path</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-images.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Images</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-38" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Image Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-39" class="internal"><span class="codenumber">5.8.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-40" class="internal"><span class="codenumber">5.8.3</span> <span class="title">A Simple Example</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-41" class="internal"><span class="codenumber">5.8.4</span> <span class="title">An Image as a Shape</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-timers.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Timers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-42" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Timer Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-43" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Example: Animating Shape Motion</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-sprites.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Sprites</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-44" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Sprite Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-45" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-46" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Flying Bird Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-transformations.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Graphic Transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-47" class="internal"><span class="codenumber">5.11.1</span> <span class="title">Translate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-48" class="internal"><span class="codenumber">5.11.2</span> <span class="title">Scale</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-49" class="internal"><span class="codenumber">5.11.3</span> <span class="title">Rotate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-50" class="internal"><span class="codenumber">5.11.4</span> <span class="title">Reset</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-51" class="internal"><span class="codenumber">5.11.5</span> <span class="title">Pad Transformations</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-dp-concepts.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-exercises.html" class="internal"><span class="codenumber">5.13</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-control1.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow Control - Part 1</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-c1-if-statements.html" class="internal"><span class="codenumber">6.1</span> <span class="title">if-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-49.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-50.html" class="internal"><span class="codenumber">6.3</span> <span class="title">If-statement Strategies</span></a></div></li>
-<li><div class="toc-item"><a href="section-51.html" class="internal"><span class="codenumber">6.4</span> <span class="title">while-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Block Scope</span></a></div></li>
-<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Collection Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.8</span> <span class="title">break and continue</span></a></div></li>
-<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Nested Control</span></a></div></li>
-<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Object Graphics</span></a></div></li>
-<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-52.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-53.html" class="internal"><span class="codenumber">6.3</span> <span class="title">If-statement Strategies</span></a></div></li>
+<li><div class="toc-item"><a href="section-54.html" class="internal"><span class="codenumber">6.4</span> <span class="title">while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-55.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Block Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-56.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Collection Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-57.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Collections library of Static Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-58.html" class="internal"><span class="codenumber">6.8</span> <span class="title">break and continue</span></a></div></li>
+<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Nested Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Object Graphics</span></a></div></li>
+<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">6.12</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-control2.html" class="internal"><span class="codenumber">7</span> <span class="title">Flow Control - Part 2</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-59.html" class="internal"><span class="codenumber">7.1</span> <span class="title">for-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">7.2</span> <span class="title">do-while-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">7.3</span> <span class="title">for-each Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
-<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.5</span> <span class="title">switch-Statements</span></a></div></li>
-<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Conditional Expressions</span></a></div></li>
-<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
-<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
-<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.1</span> <span class="title">for-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.2</span> <span class="title">do-while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.3</span> <span class="title">for-each Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.5</span> <span class="title">switch-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Conditional Expressions</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Which Branching Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Shortcut Evaluation</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-arrays.html" class="internal"><span class="codenumber">8</span> <span class="title">Arrays</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
-<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
-<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Creating Stars</span></a></div></li>
-<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Ragged Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
-<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Arrays of Objects</span></a></div></li>
-<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Arrays Library</span></a></div></li>
-<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Command line Parameters</span></a></div></li>
-<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.11</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Creating Stars</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Ragged Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Arrays of Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Arrays Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Command line Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-ar-polygons.html" class="internal"><span class="codenumber">8.11</span> <span class="title">DoodlePad Polygons</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">8.13</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-classes.html" class="internal"><span class="codenumber">9</span> <span class="title">Custom Classes</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Class vs Instance</span></a></div></li>
-<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Constructors and Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Access Control</span></a></div></li>
-<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Encapsulation</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Class vs Instance</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Constructors and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Access Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Encapsulation</span></a></div></li>
 <li><div class="toc-item"><a href="section-cl-enumerated.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Enumerated Types</span></a></div></li>
-<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Multiple File Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Driver Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Testing</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Review of Scope</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Shadowing</span></a></div></li>
-<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">9.12</span> <span class="title">Anonymous Objects</span></a></div></li>
-<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">9.13</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Multiple File Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Driver Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Testing</span></a></div></li>
+<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Review of Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Shadowing</span></a></div></li>
+<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">9.12</span> <span class="title">Anonymous Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">9.13</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">9.14</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">10</span> <span class="title">Inheritance</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
-<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
-<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
+<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
+<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-in-doodlepad.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Inheritance in DoodlePad</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-52" class="internal"><span class="codenumber">10.9.1</span> <span class="title">Handling Events by Overriding Base Class Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-53" class="internal"><span class="codenumber">10.9.2</span> <span class="title">Overridable Shape Event Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-54" class="internal"><span class="codenumber">10.9.3</span> <span class="title">Overridable Pad Event Methods</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">10.11</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Interfaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">12</span> <span class="title">Program and Class Design</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">12.13</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">13</span> <span class="title">Exceptions and Files</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Runtime Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Catching Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">14</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-144.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">14.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">15</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-144.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-145.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-146.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-147.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-145.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-146.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-147.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-148.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-149.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-150.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-151.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-152.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-18.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -554,19 +625,346 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-148.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-149.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
+<li><div class="toc-item"><a href="section-153.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
+<li><div class="toc-item"><a href="section-154.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-20.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
 <li><div class="toc-item"><a href="exercises-22.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-dp-colors"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">5.4</span> <span class="title">Colors</span>
-</h2></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-dp-colors"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.5</span> <span class="title">Colors</span>
+</h2>
+<section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.5.1</span> <span class="title">Color Components</span>
+</h3>
+<div class="para" id="p-356">Most DoodlePad Shape subclasses may be filled with one color and stroked (outlined) with a separate color. It is also possible to disable Shape fill or stroke, drawing empty shapes or shapes without an outline. Colors in DoodlePad are constructed from color components: red, green, and blue, and one transparency component called alpha. The value of each of the four components may be an integer in the range [0, 255].</div>
+<div class="para" id="p-357">Use the interactive widget below to explore how these four values combine to achieve a desired fill or stroke color. Drag the colored slider knobs up and down with the mouse to change a component’s value. The color that results from combining the four components is shown in the rectangular swatch on the right. To illustrate transparency (alpha), behind the swatch there are three colored lines. Transparency is increased by decreasing the alpha component. When alpha is 0, the resulting color is completely transparent. When alpha is 255, the color is completely opaque. Drag the alpha slider up and down to see the impact on color.</div>
+<iframe src="external/colors.html" id="interactive-dp-colors" width="600" height="600"></iframe><div class="para" id="p-358">Pure red, green or blue is achieved by setting the corresponding color component value to its maximum (255) and leaving the other two color color values at 0. Other colors are constructed from different combinations of the color components. All shades of gray, from black to white, are formed by setting the values of red, green, and blue to equal values between 0 and 255.</div>
+<div class="para" id="p-359">The following table lists the components of several named colors. Drag the sliders to values that match settings to see the named color. <figure class="table table-like" id="table-29"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.5.1<span class="period">.</span></span><span class="space"> </span>Named Color Components</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Name</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Red</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Green</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Blue</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Red</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Green</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Blue</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Yellow</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Orange</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Cyan</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Magenta</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Lime</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Chartreuse</td>
+<td class="l t b0 r0 l0 t0 lines">127</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Purple</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Maroon</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Teal</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Navy</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Black</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">White</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Gray</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+</table></div></figure>
+</div></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.5.2</span> <span class="title">Setting Fill and Stroke Color</span>
+</h3>
+<div class="para" id="p-360">Each Shape object’s fill color and stroke color may be specified using color component values. There are two mutator methods for setting Shape color: <code class="code-inline tex2jax_ignore">setFillColor(...)</code> and <code class="code-inline tex2jax_ignore">getStrokeColor(...)</code>. These setter methods each have three overloads. The base method signature has four parameters, one for each of the four color components: red, green, blue and alpha. A second overloaded method has only three parameters, which specify red, green and blue components. In this case the alpha component is assumed to have a value of 255, meaning that the Shape color has no transparency. The third overloaded method has only one parameter, often called gray. In this case the parameter value is repeated for all three color components, and alpha once again is set to 255.</div></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.5.3</span> <span class="title">Fill And Stroke Color Examples</span>
+</h3>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:70%;"><div class="para" id="p-361">The following example program creates four shapes with various fill and stroke colors. The resulting Shape objects are shown in the image on the right. Note that the Oval is unfilled, so the underlying red Rectangle is visible. Also note that the filled Arc has a semi-transparent yellow fill, so the underlying Line is partially visible.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-362"></div></div>
+<div class="sbspanel top" style="width:27%;"><figure class="figure figure-like" id="figure-16"><img src="external/images/colors.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.5.2<span class="period">.</span></span><span class="space"> </span>Stroke and fill colors</figcaption></figure></div>
+</div></div>
+<figure class="listing figure-like" id="listing-dp-color_example"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Colors.java
+import doodlepad.*;
+
+public class Colors {
+
+    public static void main(String[] args) {
+        // Red Rectangle with no stroke
+        Rectangle myRect = new Rectangle( 10, 55, 50, 40);
+        myRect.setFillColor(255, 0, 0);
+        myRect.setStroked(false);
+
+        // Unfilled Oval with thick light gray stroke
+        Oval myOval = new Oval(40, 50, 50, 50);
+        myOval.setFilled(false);
+        myOval.setStrokeColor(200);
+        myOval.setStrokeWidth(5);
+
+        // Gray Line with thick stroke
+        Line myLine = new Line(80, 50, 120, 90);
+        myLine.setStrokeColor(127);
+        myLine.setStrokeWidth(10);
+
+        // Semi-transparent yellow filled Arc with default stroke style
+        Arc myArc = new Arc(100, 50, 50, 50, 30, 290);
+        myArc.setFillColor(255, 255, 0, 127);
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.5.4</span> <span class="title">Color-related Methods</span>
+</h3>
+<div class="para" id="p-363">The following table lists all color-related Shape methods and their overloads with descriptions. Both setter and getter methods are listed.</div>
+<figure class="table table-like" id="table-30"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.5.4<span class="period">.</span></span><span class="space"> </span>Color-related Shape object methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-double-" target="_blank">public void setFillColor(double red, double green, double blue, double alpha)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-31" id="fn-31"><sup> 1 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to fill a Shape<br>by specifying all four color components.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-" target="_blank">public void setFillColor(double red, double green, double blue)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-32" id="fn-32"><sup> 2 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to fill a Shape.<br>The alpha color component is set to 255,<br>meaning that the Shape fill is not transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-" target="_blank">public void setFillColor(double gray)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-33" id="fn-33"><sup> 3 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the fill color of a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape fill is not transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillRed--" target="_blank">public int getFillRed()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-34" id="fn-34"><sup> 4 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the red fill color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillBlue--" target="_blank">public int getFillBlue()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-35" id="fn-35"><sup> 5 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the blue fill color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillGreen--" target="_blank">public int getFillGreen()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-36" id="fn-36"><sup> 6 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Retrun the green fill color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillAlpha--" target="_blank">public int getFillAlpha()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-37" id="fn-37"><sup> 7 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the alpha fill color component indicating the degree to which the shape fill is transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillColor--" target="_blank">public java.awt.Color getFillColor()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-38" id="fn-38"><sup> 8 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to fill a Shape as a java.awt.Color object.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFilled-boolean-" target="_blank">public void setFilled(boolean filled)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-39" id="fn-39"><sup> 9 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Specify whether or not a Shape is to be filled with a color. If set to false the Shape will not be filled.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFilled--" target="_blank">public boolean getFilled()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-40" id="fn-40"><sup> 10 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return a boolean indicating whether or not the Shape is filled.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-double-" target="_blank">public void setStrokeColor(double red, double green, double blue, double alpha)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-41" id="fn-41"><sup> 11 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to stroke (outline) a Shape by specifying al four color components</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-" target="_blank">public void setStrokeColor(double red, double green, double blue)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-42" id="fn-42"><sup> 12 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to outline a Shape. The alpha color component is set to 255, meaning that the Shape outline is not transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-" target="_blank">public void setStrokeColor(double gray)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-43" id="fn-43"><sup> 13 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to outline a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape outline is not transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeRed--" target="_blank">public int getStrokeRed()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-44" id="fn-44"><sup> 14 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the red outline color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeBlue--" target="_blank">public int getStrokeBlue()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-45" id="fn-45"><sup> 15 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the blue outline color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeGreen--" target="_blank">public int getStrokeGreen()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-46" id="fn-46"><sup> 16 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the green outline color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeAlpha--" target="_blank">public int getStrokeAlpha()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-47" id="fn-47"><sup> 17 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the alpha outline color component indicating the degree to which the shape outline is transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeColor--" target="_blank">public java.awt.Color getStrokeColor()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-48" id="fn-48"><sup> 18 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to outline a Shape as a java.awt.Color object.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStroked-boolean-" target="_blank">public void setStroked(boolean filled)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-49" id="fn-49"><sup> 19 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Specify whether or not a Shape is to be outline with a color. If set to false the Shape will not be outlined.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStroked--" target="_blank">public boolean getStroked()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-50" id="fn-50"><sup> 20 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return a boolean indicating whether or not the Shape is outlined.</td>
+</tr>
+</table></div></figure><div class="para" id="p-364">The Pad object also has a few color-related methods. These are used only for setting and getting the Pad’s background color. The Pad has only two overloads for its method of setting background color. Because a Pad’s color may not be transparent, no overload is available that includes an alpha parameter.</div>
+<figure class="table table-like" id="table-31"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.5.5<span class="period">.</span></span><span class="space"> </span>Color-related Pad object methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setBackground-double-double-double-" target="_blank">public void setBackground(double red, double green, double blue)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-51" id="fn-51"><sup> 21 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Specify the color to use to fill the background of a Pad object. Only red, green and blue color components are specified because Pad objects may not be transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setBackground-double-" target="_blank">public void setBackground(double gray)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-52" id="fn-52"><sup> 22 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Specify the shade of gray to use to fill the background of a Pad object. The single parameter value is used for red, green and blue.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#getBackground--" target="_blank">public java.awt.Color getBackground()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-53" id="fn-53"><sup> 23 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to fill the background of a Pad object as a java.awt.Color object.</td>
+</tr>
+</table></div></figure></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-31"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-32"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-33"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-34"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillRed--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-35"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillBlue--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-36"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillGreen--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-37"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillAlpha--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-38"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillColor--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-39"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFilled-boolean-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-40"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFilled--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-41"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-42"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-43"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-44"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeRed--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-45"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeBlue--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-46"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeGreen--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-47"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeAlpha--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-48"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeColor--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-49"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStroked-boolean-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-50"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStroked--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-51"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setBackground-double-double-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-52"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#setBackground-double-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-53"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#getBackground--</code></div></div>
+</div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section-dp-shapes.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-dp-interaction.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="section-dp-position-size.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-dp-events.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
