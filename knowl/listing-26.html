@@ -11,31 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Transform1.java
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Transform3.java
 import doodlepad.*;
 
-public class Transform1 {
+public class Transform3 {
     private Rectangle redRect;
     private Rectangle grnRect;
 
-    public Transform1() {
+    public Transform3() {
         // Two Rectangles with identical location and dimensions
-        redRect = new Rectangle(0, 0, 50, 50);
-        grnRect = new Rectangle(0, 0, 50, 50);
+        grnRect = new Rectangle(100, 0, 50, 50);
+        redRect = new Rectangle(100, 0, 50, 50);
 
         // Set fill colors
         redRect.setFillColor(255, 0, 0);
         grnRect.setFillColor(0, 255, 0);
 
-        // Translate the green Rectangle only
-        grnRect.translate(100, 100);
+        // Rotate the green Rectangle only
+        grnRect.rotate(45);
     }
 
     public static void main(String[] args) {
-        Transform1 myTransform1 = new Transform1();
+        Transform3 myTransform3 = new Transform3();
     }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.11.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Transform1.java</code></figcaption></figure><span class="incontext"><a href="section-dp-transformations.html#listing-26" class="internal">in-context</a></span>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.11.9<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Transform3.java</code></figcaption></figure><span class="incontext"><a href="section-dp-transformations.html#listing-26" class="internal">in-context</a></span>
 </body>
 </html>

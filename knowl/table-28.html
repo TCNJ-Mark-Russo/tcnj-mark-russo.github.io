@@ -11,101 +11,131 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.4.1<span class="period">.</span></span><span class="space"> </span>Shape size and location methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.5.4<span class="period">.</span></span><span class="space"> </span>Color-related Shape object methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getHeight--" target="_blank">public double getHeight()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-16-hidden.html" title="Footnote 5.4.1"><sup> 1 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-double-" target="_blank">public void setFillColor(double red, double green, double blue, double alpha)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-33-hidden.html" title="Footnote 4.5.1"><sup> 1 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the Shape’s height.</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to fill a Shape<br>by specifying all four color components.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setHeight-double-" target="_blank">public void setHeight(double height)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-17-hidden.html" title="Footnote 5.4.2"><sup> 2 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-double-double-" target="_blank">public void setFillColor(double red, double green, double blue)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-34-hidden.html" title="Footnote 4.5.2"><sup> 2 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set the height of the Shape.</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to fill a Shape.<br>The alpha color component is set to 255,<br>meaning that the Shape fill is not transparent.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getWidth--" target="_blank">public double getWidth()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-18-hidden.html" title="Footnote 5.4.3"><sup> 3 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFillColor-double-" target="_blank">public void setFillColor(double gray)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-35-hidden.html" title="Footnote 4.5.3"><sup> 3 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the Shape’s width.</td>
+<td class="l t b0 r0 l0 t0 lines">Set the fill color of a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape fill is not transparent.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setWidth-double-" target="_blank">public void setWidth(double width)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-19-hidden.html" title="Footnote 5.4.4"><sup> 4 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillRed--" target="_blank">public int getFillRed()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-36-hidden.html" title="Footnote 4.5.4"><sup> 4 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set the width of the Shape.</td>
+<td class="l t b0 r0 l0 t0 lines">Return the red fill color component.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getSize--" target="_blank">public Dimension getSize()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-20-hidden.html" title="Footnote 5.4.5"><sup> 5 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillBlue--" target="_blank">public int getFillBlue()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-37-hidden.html" title="Footnote 4.5.5"><sup> 5 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the Shape’s height and width as a Dimension object.</td>
+<td class="l t b0 r0 l0 t0 lines">Return the blue fill color component.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setSize-double-double-" target="_blank">public void setSize(double width, double height)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-21-hidden.html" title="Footnote 5.4.6"><sup> 6 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillGreen--" target="_blank">public int getFillGreen()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-38-hidden.html" title="Footnote 4.5.6"><sup> 6 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set both the width and height of the Shape.</td>
+<td class="l t b0 r0 l0 t0 lines">Retrun the green fill color component.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getLocation--" target="_blank">public Point getLocation()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-22-hidden.html" title="Footnote 5.4.7"><sup> 7 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillAlpha--" target="_blank">public int getFillAlpha()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-39-hidden.html" title="Footnote 4.5.7"><sup> 7 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the location of the upper left corner of the Shape’s bounding box as a Point object.</td>
+<td class="l t b0 r0 l0 t0 lines">Return the alpha fill color component indicating the degree to which the shape fill is transparent.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setLocation-double-double-" target="_blank">public void setLocation(double x, double y)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-23-hidden.html" title="Footnote 5.4.8"><sup> 8 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFillColor--" target="_blank">public java.awt.Color getFillColor()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-40-hidden.html" title="Footnote 4.5.8"><sup> 8 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set the coordinates of the upper left corner of teh Shape’s bounding box.</td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to fill a Shape as a java.awt.Color object.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getX--" target="_blank">public double getX()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-24-hidden.html" title="Footnote 5.4.9"><sup> 9 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setFilled-boolean-" target="_blank">public void setFilled(boolean filled)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-41-hidden.html" title="Footnote 4.5.9"><sup> 9 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the x-location of the upper left corner of the Shape’s bounding box.</td>
+<td class="l t b0 r0 l0 t0 lines">Specify whether or not a Shape is to be filled with a color. If set to false the Shape will not be filled.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setX-double-" target="_blank">public void setX(double x)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-25-hidden.html" title="Footnote 5.4.10"><sup> 10 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getFilled--" target="_blank">public boolean getFilled()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-42-hidden.html" title="Footnote 4.5.10"><sup> 10 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set the x-coordinate of the upper left corner of the Shape’s bounding box.</td>
+<td class="l t b0 r0 l0 t0 lines">Return a boolean indicating whether or not the Shape is filled.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getY--" target="_blank">public double getY()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-26-hidden.html" title="Footnote 5.4.11"><sup> 11 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-double-" target="_blank">public void setStrokeColor(double red, double green, double blue, double alpha)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-43-hidden.html" title="Footnote 4.5.11"><sup> 11 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the y-coordinate of the upper left corner of the Shape’s bounding box.</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to stroke (outline) a Shape by specifying al four color components</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setY-double-" target="_blank">public void setY(double y)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-27-hidden.html" title="Footnote 5.4.12"><sup> 12 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-double-double-" target="_blank">public void setStrokeColor(double red, double green, double blue)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-44-hidden.html" title="Footnote 4.5.12"><sup> 12 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set the y-coordinate of the upper left corner of the Shape’s bounding box.</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to outline a Shape. The alpha color component is set to 255, meaning that the Shape outline is not transparent.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getCenter--" target="_blank">public Point getCenter()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-28-hidden.html" title="Footnote 5.4.13"><sup> 13 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStrokeColor-double-" target="_blank">public void setStrokeColor(double gray)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-45-hidden.html" title="Footnote 4.5.13"><sup> 13 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the coordinates of the Shape’s bounding box center.</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color used to outline a Shape to a shade of gray. The single parameter value is used for red, green and blue. The alpha component is set to 255, meaning that the Shape outline is not transparent.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setCenter-double-double-" target="_blank">public void setCenter(double cx, double cy)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-29-hidden.html" title="Footnote 5.4.14"><sup> 14 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeRed--" target="_blank">public int getStrokeRed()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-46-hidden.html" title="Footnote 4.5.14"><sup> 14 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Move the Shape so that its bounding box has specified center coordinates.</td>
+<td class="l t b0 r0 l0 t0 lines">Return the red outline color component.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#move-double-double-" target="_blank">public void move(double dx, double dy)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-30-hidden.html" title="Footnote 5.4.15"><sup> 15 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeBlue--" target="_blank">public int getStrokeBlue()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-47-hidden.html" title="Footnote 4.5.15"><sup> 15 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Move a Shape by the distance (dx, dy).</td>
+<td class="l t b0 r0 l0 t0 lines">Return the blue outline color component.</td>
 </tr>
-</table></div></figure><span class="incontext"><a href="section-dp-position-size.html#table-28" class="internal">in-context</a></span>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeGreen--" target="_blank">public int getStrokeGreen()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-48-hidden.html" title="Footnote 4.5.16"><sup> 16 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the green outline color component.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeAlpha--" target="_blank">public int getStrokeAlpha()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-49-hidden.html" title="Footnote 4.5.17"><sup> 17 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the alpha outline color component indicating the degree to which the shape outline is transparent.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStrokeColor--" target="_blank">public java.awt.Color getStrokeColor()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-50-hidden.html" title="Footnote 4.5.18"><sup> 18 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to outline a Shape as a java.awt.Color object.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setStroked-boolean-" target="_blank">public void setStroked(boolean filled)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-51-hidden.html" title="Footnote 4.5.19"><sup> 19 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Specify whether or not a Shape is to be outline with a color. If set to false the Shape will not be outlined.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#getStroked--" target="_blank">public boolean getStroked()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-52-hidden.html" title="Footnote 4.5.20"><sup> 20 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return a boolean indicating whether or not the Shape is outlined.</td>
+</tr>
+</table></div></figure><span class="incontext"><a href="section-dp-colors.html#table-28" class="internal">in-context</a></span>
 </body>
 </html>

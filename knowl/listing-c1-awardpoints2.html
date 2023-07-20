@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Award points to the player's total depending upon where the dart lands
+public static void awardPoints(double x1, double y1) {
+    // Circle parameters
+    double xc = 300.0, yc = 300.0;
+
+    // Compute distance
+    double dist = Math.sqrt(Math.pow(x1 - xc, 2) + Math.pow(y1 - yc, 2));
+
+    // Branch depending on distance from center
+    if (dist &lt; 20) {
+        // In center red circle. Add 4 points.
+        total = total + 4;
+    }
+    else if (dist &lt; 50) {
+        // In green circle. Add 3 points.
+        total = total + 3;
+    }
+    else if (dist &lt; 100) {
+        // In blue circle. Add 2 points.
+        total = total + 2;
+    }
+    else if (dist &lt; 150) {
+        // In yellow circle. Add 1 points.
+        total = total + 1;
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.2.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">awardPoints()</code> Method with Multi-branch if-Statements</figcaption></figure><span class="incontext"><a href="section-c1-multibranch-ifs.html#listing-c1-awardpoints2" class="internal">in-context</a></span>
+</body>
+</html>

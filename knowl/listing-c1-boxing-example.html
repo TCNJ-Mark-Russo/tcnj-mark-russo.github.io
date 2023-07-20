@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">Random rnd = new Random();          // New Random and ArrayList objects
+ArrayList&lt;Integer&gt; ints =  new ArrayList&lt;&gt;();
+
+// Fill ArrayList with 1000 random ints
+// The int is not boxed in an Integer class before being added
+// Java takes care of this for us
+int i = 0;                          // Counter
+while (i &lt; 1000) {                  // Loop
+    ints.add( rnd.nextInt(100) );   // Add int to ArrayList
+    i++;                            // Increment counter
+}
+
+// Get all ints and print
+// Notice how val is assigned without unboxing Integer object
+int val;                            // Helper variable
+i = 0;                              // Reset counter
+while (i &lt; ints.size()) {           // Loop
+    val = ints.get( i );            // Get int
+    System.out.println( val );      // Print int
+    i++;                            // Increment counter
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.5.5<span class="period">.</span></span><span class="space"> </span>Boxing and Unboxing</figcaption></figure><span class="incontext"><a href="section-c1-collection-classes.html#listing-c1-boxing-example" class="internal">in-context</a></span>
+</body>
+</html>

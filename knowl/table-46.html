@@ -11,70 +11,82 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.9.4<span class="period">.</span></span><span class="space"> </span>Overridable Pad Socket Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.9.3<span class="period">.</span></span><span class="space"> </span>Overridable Pad Mouse, Keyboard and Timer Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-" target="_blank">public void onClientOpened(int id)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-134-hidden.html" title="Footnote 10.9.21"><sup> 21 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMousePressed-double-double-int-" target="_blank">public void onMousePressed(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-124-hidden.html" title="Footnote 10.9.9"><sup> 9 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when a new client connection opens</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse pressed events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-" target="_blank">public void onClientOpened(int id)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-135-hidden.html" title="Footnote 10.9.22"><sup> 22 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseReleased-double-double-int-" target="_blank">public void onMouseReleased(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-125-hidden.html" title="Footnote 10.9.10"><sup> 10 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when a new client connection opens</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse released events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientReceived-int-java.lang.String-" target="_blank">public void onClientReceived(int id, java.lang.String msg)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-136-hidden.html" title="Footnote 10.9.23"><sup> 23 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseMoved-double-double-int-" target="_blank">public void onMouseMoved(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-126-hidden.html" title="Footnote 10.9.11"><sup> 11 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when a connected client socket receives a message</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse moved events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientClosed-int-" target="_blank">public void onClientClosed(int id)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-137-hidden.html" title="Footnote 10.9.24"><sup> 24 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseClicked-double-double-int-" target="_blank">public void onMouseClicked(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-127-hidden.html" title="Footnote 10.9.12"><sup> 12 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when a client connection is closed</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse clicked events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientError-int-java.lang.String-" target="_blank">public void onClientError(int id, java.lang.String msg)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-138-hidden.html" title="Footnote 10.9.25"><sup> 25 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDoubleClicked-double-double-int-" target="_blank">public void onMouseDoubleClicked(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-128-hidden.html" title="Footnote 10.9.13"><sup> 13 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when a connected client socket has has error</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse double-clicked events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientInfo-int-java.lang.String-" target="_blank">public void onClientInfo(int id, java.lang.String msg)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-139-hidden.html" title="Footnote 10.9.26"><sup> 26 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDragged-double-double-int-" target="_blank">public void onMouseDragged(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-129-hidden.html" title="Footnote 10.9.14"><sup> 14 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when a connected client socket has some information to share</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStarted--" target="_blank">public void onServerStarted()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-140-hidden.html" title="Footnote 10.9.27"><sup> 27 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseEntered-double-double-int-" target="_blank">public void onMouseEntered(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-130-hidden.html" title="Footnote 10.9.15"><sup> 15 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when the listening server starts</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse entered events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStopped--" target="_blank">public void onServerStopped()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-141-hidden.html" title="Footnote 10.9.28"><sup> 28 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseExited-double-double-int-" target="_blank">public void onMouseExited(double x, double y, int button)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-131-hidden.html" title="Footnote 10.9.16"><sup> 16 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when the listening server stops and all connections are closed</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse exited events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerError-java.lang.String-" target="_blank">public void onServerError(java.lang.String msg)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-142-hidden.html" title="Footnote 10.9.29"><sup> 29 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyPressed-java.lang.String-java.lang.String-" target="_blank">public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-132-hidden.html" title="Footnote 10.9.17"><sup> 17 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when the listening server has an error</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle key pressed events</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerInfo-java.lang.String-" target="_blank">public void onServerInfo(java.lang.String msg)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-143-hidden.html" title="Footnote 10.9.30"><sup> 30 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyReleased-java.lang.String-java.lang.String-" target="_blank">public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-133-hidden.html" title="Footnote 10.9.18"><sup> 18 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Invoked when the listening server has some information to share</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle key released events</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyTyped-char-" target="_blank">public void onKeyTyped(char keyChar)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-134-hidden.html" title="Footnote 10.9.19"><sup> 19 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle key typed events</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onTick-long-" target="_blank">public void onTick(long when)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-135-hidden.html" title="Footnote 10.9.20"><sup> 20 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.</td>
 </tr>
 </table></div></figure><span class="incontext"><a href="section-in-doodlepad.html#table-46" class="internal">in-context</a></span>
 </body>

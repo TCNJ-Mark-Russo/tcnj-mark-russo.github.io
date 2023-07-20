@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Collection Classes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Computational Problem Solving with Java and Interactive Object Graphics">
+<meta property="book:author" content="Mark F. Russo, PhD">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./styles/mfr.css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.6';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.6/prefix-runtime.5966dfd60e3d5910.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.6/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.6/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.6/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.6/prefix-runestone.8d2f742bc74f4a41.css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="javaog.html"><span class="title">Computational Problem Solving with Java and Interactive Object Graphics</span></a></h1>
+<p class="byline">Mark F. Russo, PhD</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-c1-break-continue.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-control1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-c1-nested-control.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-getting-started.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gs-learning.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Learning to Program</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computers and Computational Devices</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-languages.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Programming Languages</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-oop.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Object Oriented Programming</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-java.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The Java Programming Language</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-toolkit.html" class="internal"><span class="codenumber">1.6</span> <span class="title">The Java Development Kit</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-gs-install.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Installing Your Toolkit</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gs-install.html#subsection-gs-install-jdk" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Install the Java Development Kit (JDK)</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-install.html#subsection-2" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Install a Programming Editor</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-gs-jshell.html" class="internal"><span class="codenumber">1.8</span> <span class="title">The JShell REPL</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-doodlepad.html" class="internal"><span class="codenumber">1.9</span> <span class="title">The DoodlePad Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-10.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-primitives-expressions.html" class="internal"><span class="codenumber">2</span> <span class="title">Primitives, Variables and Expressions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-pe-primitives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Primitive Data Types</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-pe-variables.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Variables and Comments</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-variables.html#exercises-1" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-integers.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Integer Primitive Types</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-integers.html#exercises-2" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-chars.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Character Primitive Type</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-chars.html#exercises-3" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-pe-floats.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Floating Point Primitive Number Types</span></a></div></li>
+<li><div class="toc-item"><a href="section-pe-strings.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strings</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-pe-math.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Mathematical Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-math.html#exercises-4" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-assignment.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Assignment Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-assignment.html#exercises-5" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-relational.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Relational Expressions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-relational.html#exercises-6" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-logical.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Logical Expressions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-pe-logical.html#subsection-3" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Practice</span></a></div></li>
+<li><div class="toc-item"><a href="section-pe-logical.html#exercises-7" class="internal"><span class="codenumber">2.10.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-pe-conversion.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Type Conversions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-pe-conversion.html#exercises-8" class="internal"><span class="codenumber">2.11</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-pe-concepts.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-pe-exercises.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-java-programs.html" class="internal"><span class="codenumber">3</span> <span class="title">Java Programs and Objects</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-jp-compile.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Your First Java Program</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-4" class="internal"><span class="codenumber">3.1.1</span> <span class="title">A Java Program File</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-5" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Compiling a Java Program</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-compile.html#subsection-6" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Running a Compiled Java Program</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-static-methods.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Static Methods</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-7" class="internal"><span class="codenumber">3.2.1</span> <span class="title"><code class="code-inline tex2jax_ignore">public static void main(...)</code></span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-8" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Other <code class="code-inline tex2jax_ignore">static</code> Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-static-methods.html#subsection-9" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Source Code Formatting</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-string.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The String Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-10" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Instantiating a String</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-11" class="internal"><span class="codenumber">3.3.2</span> <span class="title">String Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-string.html#subsection-12" class="internal"><span class="codenumber">3.3.3</span> <span class="title">String Examples</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-scanner.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Scanner Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-13" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Instantiating a Scanner</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-14" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Scanner Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-scanner.html#subsection-15" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Scanner Examples</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-jp-random.html" class="internal"><span class="codenumber">3.5</span> <span class="title">The Random Class</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-16" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Instantiating a Random Object</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-17" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Random Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-random.html#subsection-18" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Random Example</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-jp-concepts.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-jp-exercises.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-doodlepad.html" class="internal"><span class="codenumber">4</span> <span class="title">DoodlePad</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-doodlepad.html" class="internal"><span class="codenumber">4.1</span> <span class="title">DoodlePad Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-model.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Drawing Model</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-dp-shapes.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Creating Shapes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-19" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Rectangle</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-20" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Oval</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-21" class="internal"><span class="codenumber">4.3.3</span> <span class="title">RoundRect</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-22" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Arc</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-shapes.html#subsection-23" class="internal"><span class="codenumber">4.3.5</span> <span class="title">Line</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-position-size.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Shape Position and Size</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-dp-position-size.html#subsection-24" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Position- and Size-related Methods</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-colors.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Colors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-25" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Color Components</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-26" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Setting Fill and Stroke Color</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-27" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Fill And Stroke Color Examples</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-colors.html#subsection-28" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Color-related Methods</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-events.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Event-Driven Programming</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-29" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Connecting Events and Methods with Method References</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-30" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Shape Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-31" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Other Event-Related Shape Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-32" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Pad Mouse Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-33" class="internal"><span class="codenumber">4.6.5</span> <span class="title">Pad Keyboard Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-34" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Pad Timer Event-Related Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-35" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Box Driver Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-paths.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Path Shapes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-36" class="internal"><span class="codenumber">4.7.1</span> <span class="title">Sides made up of Quadratic Curve Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-37" class="internal"><span class="codenumber">4.7.2</span> <span class="title">Sides made of Spline Segments</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-paths.html#subsection-38" class="internal"><span class="codenumber">4.7.3</span> <span class="title">Drawing and Styling a Path</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-images.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Images</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-39" class="internal"><span class="codenumber">4.8.1</span> <span class="title">Image Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-40" class="internal"><span class="codenumber">4.8.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-41" class="internal"><span class="codenumber">4.8.3</span> <span class="title">A Simple Example</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-images.html#subsection-42" class="internal"><span class="codenumber">4.8.4</span> <span class="title">An Image as a Shape</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-timers.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Timers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-43" class="internal"><span class="codenumber">4.9.1</span> <span class="title">Timer Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-timers.html#subsection-44" class="internal"><span class="codenumber">4.9.2</span> <span class="title">Example: Animating Shape Motion</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-sprites.html" class="internal"><span class="codenumber">4.10</span> <span class="title">Sprites</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-45" class="internal"><span class="codenumber">4.10.1</span> <span class="title">Sprite Constructors</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-46" class="internal"><span class="codenumber">4.10.2</span> <span class="title">Image Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-sprites.html#subsection-47" class="internal"><span class="codenumber">4.10.3</span> <span class="title">Flying Bird Example</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-dp-transformations.html" class="internal"><span class="codenumber">4.11</span> <span class="title">Graphic Transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-48" class="internal"><span class="codenumber">4.11.1</span> <span class="title">Translate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-49" class="internal"><span class="codenumber">4.11.2</span> <span class="title">Scale</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-50" class="internal"><span class="codenumber">4.11.3</span> <span class="title">Rotate</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-51" class="internal"><span class="codenumber">4.11.4</span> <span class="title">Reset</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-transformations.html#subsection-52" class="internal"><span class="codenumber">4.11.5</span> <span class="title">Pad Transformations</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-dp-concepts.html" class="internal"><span class="codenumber">4.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-exercises.html" class="internal"><span class="codenumber">4.13</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-reftypes.html" class="internal"><span class="codenumber">5</span> <span class="title">Reference Types</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-rt-stringbuilder.html" class="internal"><span class="codenumber">5.1</span> <span class="title">StringBuilder Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-refvars.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Reference Variables</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-gc.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Garbage Collection</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-scope.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Variable Scope and Lifetime</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-concepts.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-rt-exercises.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-control1.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow Control - Part 1</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-c1-if-statements.html" class="internal"><span class="codenumber">6.1</span> <span class="title">if-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-multibranch-ifs.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Multi-branch if-Statements</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-c1-while-statements.html" class="internal"><span class="codenumber">6.3</span> <span class="title">while-Statements</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-c1-while-statements.html#subsection-53" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Executing a fixed number of iterations</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-while-statements.html#subsection-54" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Counter Variations</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-c1-break-continue.html" class="internal"><span class="codenumber">6.4</span> <span class="title"><code class="code-inline tex2jax_ignore">break</code> and <code class="code-inline tex2jax_ignore">continue</code></span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-c1-break-continue.html#subsection-55" class="internal"><span class="codenumber">6.4.1</span> <span class="title"><code class="code-inline tex2jax_ignore">break</code> Statement</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-break-continue.html#subsection-56" class="internal"><span class="codenumber">6.4.2</span> <span class="title"><code class="code-inline tex2jax_ignore">continue</code> Statement</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-c1-collection-classes.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Collection Classes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-c1-collection-classes.html#subsection-57" class="internal"><span class="codenumber">6.5.1</span> <span class="title"><code class="code-inline tex2jax_ignore">ArrayList</code></span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-collection-classes.html#subsection-58" class="internal"><span class="codenumber">6.5.2</span> <span class="title">ArrayList Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-collection-classes.html#subsection-59" class="internal"><span class="codenumber">6.5.3</span> <span class="title">Filling ArrayLists and Accessing Elements</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-collection-classes.html#subsection-60" class="internal"><span class="codenumber">6.5.4</span> <span class="title">Working with an ArrayList</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-collection-classes.html#subsection-61" class="internal"><span class="codenumber">6.5.5</span> <span class="title">Autoboxing and Unboxing</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-collection-classes.html#subsection-62" class="internal"><span class="codenumber">6.5.6</span> <span class="title"><code class="code-inline tex2jax_ignore">HashMap</code></span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-collection-classes.html#subsection-63" class="internal"><span class="codenumber">6.5.7</span> <span class="title"><code class="code-inline tex2jax_ignore">HashSet</code></span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-c1-nested-control.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Nested Control</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-c1-nested-control.html#subsection-64" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Accessing Two Dimensions</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-nested-control.html#subsection-65" class="internal"><span class="codenumber">6.6.2</span> <span class="title">Nested Branching to Simplify Condition Testing</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-nested-control.html#subsection-66" class="internal"><span class="codenumber">6.6.3</span> <span class="title">Modify Iteration with Branching</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-c1-block-scope.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Block Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-concepts.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-c1-exercises.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-control2.html" class="internal"><span class="codenumber">7</span> <span class="title">Flow Control - Part 2</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-60.html" class="internal"><span class="codenumber">7.1</span> <span class="title">for-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-61.html" class="internal"><span class="codenumber">7.2</span> <span class="title">do-while-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-62.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Enhanced for Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-63.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Which Iteration Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-64.html" class="internal"><span class="codenumber">7.5</span> <span class="title">switch-Statements</span></a></div></li>
+<li><div class="toc-item"><a href="section-65.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Which Branching Statement?</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Shortcut Evaluation</span></a></div></li>
+<li><div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Comparing Floating-point Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-arrays.html" class="internal"><span class="codenumber">8</span> <span class="title">Arrays</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Creating and Initializing Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Accessing Array Elements with Iteration</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Array vs. ArrayList</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Creating Stars</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Multidimensional Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Ragged Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Arrays as Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Arrays of Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Arrays Library</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Command line Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="section-ar-polygons.html" class="internal"><span class="codenumber">8.11</span> <span class="title">DoodlePad Polygons</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">8.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">8.13</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-classes.html" class="internal"><span class="codenumber">9</span> <span class="title">Custom Classes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Class vs Instance</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Constructors and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Access Control</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Accessor and Mutator Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Encapsulation</span></a></div></li>
+<li><div class="toc-item"><a href="section-cl-enumerated.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Enumerated Types</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Multiple File Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Driver Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Testing</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Review of Scope</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Shadowing</span></a></div></li>
+<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">9.12</span> <span class="title">Anonymous Objects</span></a></div></li>
+<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">9.13</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">9.14</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">10</span> <span class="title">Inheritance</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-94.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
+<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
+<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-in-doodlepad.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Inheritance in DoodlePad</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-67" class="internal"><span class="codenumber">10.9.1</span> <span class="title">Handling Events by Overriding Base Class Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-68" class="internal"><span class="codenumber">10.9.2</span> <span class="title">Overridable Shape Event Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-69" class="internal"><span class="codenumber">10.9.3</span> <span class="title">Overridable Pad Event Methods</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">10.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Interfaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">12</span> <span class="title">Program and Class Design</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">12.13</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">13</span> <span class="title">Exceptions and Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Runtime Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Catching Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+<li><div class="toc-item"><a href="section-130.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">14</span> <span class="title">Recursion</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">14.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">15</span> <span class="title">Algorithms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-144.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-145.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-146.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-147.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-148.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-149.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
+<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Debugging</span></a></div></li>
+<li>
+<div class="toc-item"><a href="appendix-testing.html" class="internal"><span class="codenumber">D</span> <span class="title">Testing</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="exercises-18.html" class="internal"><span class="codenumber">D</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
+<li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-150.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
+<li><div class="toc-item"><a href="section-151.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-19.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-20.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-c1-collection-classes"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Collection Classes</span>
+</h2>
+<section class="introduction" id="introduction-27">In <a href="chapter-java-programs.html" class="internal" title="Chapter 3: Java Programs and Objects">Chapter 3</a> and <a href="chapter-reftypes.html" class="internal" title="Chapter 5: Reference Types">Chapter 5</a> we introduced several classes that come with the Java core library. These included <code class="code-inline tex2jax_ignore">String</code>, <code class="code-inline tex2jax_ignore">Random</code>, <code class="code-inline tex2jax_ignore">Scanner</code>, and <code class="code-inline tex2jax_ignore">StringBuilder</code>. The Java core library includes thousands of classes that are available for you to use to solve your computational problems. One category of classes in the core library are called <em class="emphasis">Collections</em>. A Collection object is a kind of object that can hold and manage many other kind of objects. In this section we will explore a couple of the most used Collection classes in Java.</section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.1</span> <span class="title"><code class="code-inline tex2jax_ignore">ArrayList</code></span>
+</h3>
+<div class="para" id="p-498">The first Collection class we’ll explore is the <em class="emphasis">ArrayList</em>. An ArrayList is an object that holds references to zero or more other objects in an ordered sequence. An ArrayList grows or shrinks as needed. There is no reason to decide how large the an ArrayList must be before instantiation.</div>
+<div class="para" id="p-499">When an ArrayList is instantiated, it must name the class of objects that it will hold. Because Java is a <dfn class="terminology">strongly typed</dfn> language, we cannot freely assign just any object to a variable that is declared to hold another type of object. Despite this feature, an ArrayList can be instantiated to hold a particular class. The reason this is possible is because the ArrayList class is defined as a <dfn class="terminology">generic</dfn>. In short, the ArrayList is more of a class <em class="emphasis">template</em> that substitutes a class named as part of its constructor just before instantiating the new object. A class is specified as a part of its constructor using the <dfn class="terminology">diamond operator</dfn> (<code class="code-inline tex2jax_ignore">&lt; &gt;</code>).</div>
+<div class="para" id="p-500">If we want to instantiate an ArrayList that holds Oval objects, in the variable type declaration we must follow the ArrayList class name in the constructor with the diamond operator containing Oval. Following is an example of declaring and initializing an ArrayList to hold Oval objects.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">ArrayList&lt;Oval&gt; ovals = new ArrayList&lt;&gt;();
+</code></pre></div>
+<div class="para" id="p-501">Note that the type used to declare the variable <code class="code-inline tex2jax_ignore">ovals</code> is <code class="code-inline tex2jax_ignore">ArrayList&lt;Oval&gt;</code>, but the constructor used to create a new object to initialize the variable, is <code class="code-inline tex2jax_ignore">ArrayList&lt;&gt;</code>, having no class name in the diamond operator. Java knows that the variable is of type <code class="code-inline tex2jax_ignore">ArrayList&lt;Oval&gt;</code> and so it is not necessary to repeat the <code class="code-inline tex2jax_ignore">Oval</code> class in the constructor’s diamond operator because Java already knows the class that it should contain.</div></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.2</span> <span class="title">ArrayList Methods</span>
+</h3>
+<div class="para" id="p-502">As is the case with all classes, ArrayList implements methods that allow us to work with the object. Because the ArrayList class is designed to manage a series of objects, its methods relate to these management tasks as well. The following table lists many common ArrayList methods. The class of objects held by the ArrayList is not known until the ArrayList is instantiated. This class is indicated in the following table by a <code class="code-inline tex2jax_ignore">T</code> for <em class="emphasis">type</em>. Once an ArrayList is instantiated, substitute <code class="code-inline tex2jax_ignore">T</code> with the class specified within the diamond operator.</div>
+<figure class="table table-like" id="table-c1-arraylist-methods"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">6.5.1<span class="period">.</span></span><span class="space"> </span>Common ArrayList methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Returns</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">add(T element)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">boolean</code></td>
+<td class="l t b0 r0 l0 t0 lines">Add element to the end of the ArrayList.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">add(int idx, T element)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">void</code></td>
+<td class="l t b0 r0 l0 t0 lines">Inserts element at position idx, shifting objects.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">get(int idx)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">T</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns a reference to the element at index <code class="code-inline tex2jax_ignore">idx</code>.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">remove(int idx)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">T</code></td>
+<td class="l t b0 r0 l0 t0 lines">Removes and returns the item at index <code class="code-inline tex2jax_ignore">idx</code>.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">size()</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns the number of elements in the ArrayList.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">clear()</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">void</code></td>
+<td class="l t b0 r0 l0 t0 lines">Removes all elements of the ArrayList, leaving it empty.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">contains(T element)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">boolean</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns true if the ArrayList contains the element.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">indexOf(T element)</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l t b0 r0 l0 t0 lines">Returns the index of the first object matching element</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.3</span> <span class="title">Filling ArrayLists and Accessing Elements</span>
+</h3>
+<div class="para" id="p-503">We can use what we know about iteration and our new ArrayList methods to fill an ArrayList with Ovals. The following code snippet creates 20 Oval objects using the default constructor and stores them in an ArrayList. Note that we are using the <code class="code-inline tex2jax_ignore">add(…)</code> method of the ArrayList to add each new Oval object once it is created.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">Oval o;             // Helper variable and new ArrayList
+ArrayList&lt;Oval&gt; ovals = new ArrayList&lt;&gt;();
+
+// While loop iterating 20 times
+int i = 0;
+while ( i &lt; 20 ) {
+    o = new Oval(); // Instantiate Oval
+    ovals.add( o ); // Store Oval in ArrayList
+    i++;
+}
+</code></pre></div>
+<div class="para" id="p-504">Without a data structure like ArrayList, we would have had to declare 20 variables to hold each Oval object reference, and then instantiate and assign each in order. We would have not been able to use the while-statement. That would have been tedious at best. Instantiating 1000 Ovals would have been impractical.</div>
+<div class="para" id="p-505">Using a similar approach, we can access each Oval object. For example, if we wanted to change the fill color for each Oval, we could execute a code snippet like the following.</div>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// While loop iterating over all elements
+int i = 0;
+while ( i &lt; ovals.size() ) {
+    o = ovals.get(i);           // Get reference to Oval at index i
+    o.setFillColor(255, 0, 0);  // Set its fill color
+    i++;
+}
+</code></pre></div>
+<div class="para" id="p-506">In the above, we use the ArrayList’s <code class="code-inline tex2jax_ignore">get(…)</code> method to get a reference to the object at index <code class="code-inline tex2jax_ignore">i</code> and assign the reference to the temporary helper variable. Then we use the helper variable to invoke the objects <code class="code-inline tex2jax_ignore">setFillColor(…)</code> method.</div>
+<div class="para" id="p-507">When we set up the while-statement condition we did not enter 20 explicitly. Instead, we asked the ArrayList its size by invoking the <code class="code-inline tex2jax_ignore">size()</code> method. In general, it is a better idea to avoid using fixed parameters in favor of looking up parameter values. Later, if we decide that we do want 1000 Ovals, we will not have to hunt down and fix all the places in our code where we entered 20 expilicitly.</div></section><section class="subsection" id="subsection-60"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.4</span> <span class="title">Working with an ArrayList</span>
+</h3>
+<div class="para logical" id="p-508">
+<div class="para">Let’s bring a number of skills together and have a closer look at a larger program. In the following <code class="code-inline tex2jax_ignore">RandomOvals.java</code> example, we are applying several skils, including:</div>
+<ul class="disc">
+<li id="li-159"><div class="para" id="p-derived-li-159">Importing classes, both from the Java core library and custom</div></li>
+<li id="li-160"><div class="para" id="p-derived-li-160">Naming our top-level class and matching to file name</div></li>
+<li id="li-161"><div class="para" id="p-derived-li-161">Declaring static variables in the outer class scope so the entire program has access</div></li>
+<li id="li-162"><div class="para" id="p-derived-li-162">Starting execution at <code class="code-inline tex2jax_ignore">main(…)</code>
+</div></li>
+<li id="li-163"><div class="para" id="p-derived-li-163">Defining a helper method for abstraction and reuse</div></li>
+<li id="li-164"><div class="para" id="p-derived-li-164">Instantiating new objects like Random and Oval</div></li>
+<li id="li-165"><div class="para" id="p-derived-li-165">Generating random numbers in a defined range</div></li>
+<li id="li-166"><div class="para" id="p-derived-li-166">Constructing a while-statement with an index that is used both to count iterations as well as to access ArrayList elements</div></li>
+<li id="li-167"><div class="para" id="p-derived-li-167">Invoking ArrayList methods like <code class="code-inline tex2jax_ignore">add(…)</code>, <code class="code-inline tex2jax_ignore">get(…)</code> and <code class="code-inline tex2jax_ignore">size()</code>
+</div></li>
+<li id="li-168"><div class="para" id="p-derived-li-168">Invoking Oval methods like <code class="code-inline tex2jax_ignore">setFillColor(…)</code> and <code class="code-inline tex2jax_ignore">setMousePressedHandler(…)</code>
+</div></li>
+<li id="li-169"><div class="para" id="p-derived-li-169">Handing mouse events</div></li>
+</ul>
+</div>
+<figure class="listing figure-like" id="listing-c1-randomovals"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomOvals.java
+import java.util.ArrayList;             // Import classes
+import java.util.Random;
+import doodlepad.*;                     // Import DoodlePad classes
+
+public class RandomOvals {              // public class
+                                        // Declare ArrayList of Ovals
+    public static ArrayList&lt;Oval&gt; ovals = new ArrayList&lt;&gt;();
+
+                                        // Start of execution
+    public static void main(String[] args) {         
+        Oval o;                         // Helper variable
+
+        // Fill ArrayList with 100 randomly placed Oval objects
+        // Use a while to iterate 100 times
+        int i = 0;                      // Init counter
+        while (i &lt; 20) {                // While-statement
+            o = new Oval();             // Create an Oval object
+            o.setMousePressedHandler( RandomOvals::recolor );
+            ovals.add( o );             // Add Oval to ArrayList
+            i++;                        // Increment counter
+        }
+    }
+
+    // Event handler method that executes when an Oval is clicked
+    public static void recolor(Shape shp, double x, double y, int button) {
+        int r, g, b;                    // Helper variables
+        Oval o;
+        Random rnd = new Random();      // Declare a Random object
+
+        // Loop over all Oval objects and reset to a random fill color
+        int i = 0;                      // Init counter
+        while ( i &lt; ovals.size() ) {    // While loop
+            o = ovals.get(i);           // Get the Oval at index i
+            r = rnd.nextInt(256);       // Generate random color components
+            g = rnd.nextInt(256);
+            b = rnd.nextInt(256);
+            o.setFillColor(r, g, b);    // Change fill color
+            i++;                        // Increment counter
+        }
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.5.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomOvals.java</code></figcaption></figure><div class="para" id="p-509">At the top of <a href="" class="xref" data-knowl="./knowl/listing-c1-randomovals.html" title="Listing 6.5.2">Listing 6.5.2</a> the program starts by importing all classes required that are not available by default. In this program we use the <code class="code-inline tex2jax_ignore">ArrayList</code> and <code class="code-inline tex2jax_ignore">Random</code> classes from the <code class="code-inline tex2jax_ignore">java.util</code> package of Java core library as well as DoodlePad classes.</div>
+<div class="para" id="p-510">The main <code class="code-inline tex2jax_ignore">RandomOvals</code> class contains two methods, the <code class="code-inline tex2jax_ignore">main(…)</code> method where execution starts, as well as a helper method named <code class="code-inline tex2jax_ignore">recolor</code> to be used as an event handler when Oval objects are clicked.</div>
+<div class="para" id="p-511">In the <code class="code-inline tex2jax_ignore">main(…)</code> method we declare a helper variable and then set up a while-statement to help us create new Oval objects and fill the ArrayList. The loop counter <code class="code-inline tex2jax_ignore">i</code> is initialized to 0 and incremented at the end of the statement code block. The conditional ensure that the loop repeats 20 times.</div>
+<div class="para" id="p-512">Within the while-statement code block, we create a new Oval object and assign a reference to the helper variable. Then we use this variable to both assign a method to be invoked when the object is clicked, as as as add the object to the end of the ArrayList.</div>
+<div class="para" id="p-513">The structure of the <code class="code-inline tex2jax_ignore">recolor(…)</code> method is similar to <code class="code-inline tex2jax_ignore">main(…)</code>. We start with helper variables and instantiate a Random object. Once again, we set up a while-statement to loop over all elements of the ArrayList. This time the condition does not specify the size of the ArrayList explicitly, but instead asks the ArrayList for the number of elements using its <code class="code-inline tex2jax_ignore">size()</code> method.</div>
+<div class="para" id="p-514">Within the body of the while code block, we use the ArrayList <code class="code-inline tex2jax_ignore">get(…)</code> method to get a reference to the object at index <code class="code-inline tex2jax_ignore">i</code>. Note the <code class="code-inline tex2jax_ignore">i</code> is used both as the loop counter as well as the index of each object in the ArrayList -- a dual purpose. Following this we generate three integers in the proper range for color elements, and then use them to set the Oval object’s fill color to a random value. This repeats for all Ovals in the ArrayList.</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:57%;">
+<div class="para" id="p-515">The figure on the right show the program in action, after clicking one of the Oval objects. The console session for compiling and running is below (for Windows Command Prompt). Make sure you have a copy of the <code class="code-inline tex2jax_ignore">doodlepad.jar</code> file in your project and that you are using the correct syntax for your shell.</div>
+<pre class="console"><b>javac -cp .;doodlepad.jar RandomOvals.java 
+java -cp .;doodlepad.jar RandomOvals
+</b></pre>
+</div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-516"></div></div>
+<div class="sbspanel top" style="width:40%;"><figure class="figure figure-like" id="figure-38"><img src="external/images/figure-c1-randomovals.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.5.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomOvals.java</code></figcaption></figure></div>
+</div></div></section><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.5</span> <span class="title">Autoboxing and Unboxing</span>
+</h3>
+<div class="para" id="p-517">A limitation of ArrayList is that it can hold objects only. But, as we know, primitive types are not objects, and we certainly want the option to store collections of primitives like <code class="code-inline tex2jax_ignore">int</code> and <code class="code-inline tex2jax_ignore">double</code>. How might we do that?</div>
+<div class="para" id="p-518">To address this clear limitation, Java provides <dfn class="terminology">wrapper classes</dfn> that allow us to <em class="emphasis">wrap</em> each primitive in an object. With wrapper classes we are able to wrap primitives values in an object before storing in an ArrayList or other Collection. Java defines one wrapper class for each of the eight primitives. See <a href="" class="xref" data-knowl="./knowl/table-c1-wrapper-classes.html" title="Table 6.5.4: Java Wrapper Classes">Table 6.5.4</a>. As you can see, in general, the name of the wrapper class is the primitive name starting with a capital letter (exceptions are <code class="code-inline tex2jax_ignore">int</code> and <code class="code-inline tex2jax_ignore">char</code>).</div>
+<figure class="table table-like" id="table-c1-wrapper-classes"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">6.5.4<span class="period">.</span></span><span class="space"> </span>Java Wrapper Classes</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Primitive type</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Wrapper class</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">byte</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Byte</code></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">short</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Short</code></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Integer</code></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Long</code></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">float</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Float</code></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Double</code></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">boolean</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Boolean</code></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">char</code></td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Character</code></td>
+</tr>
+</table></div></figure><div class="para" id="p-519">This makes it possible to wrap and and store primitives in an ArrayList, but it is not convenient. Constantly wrapping and unwrapping primitives can become tedious, and quickly.</div>
+<div class="para" id="p-520">Fortnately, there is a solution to this problem as well, called <dfn class="terminology">autoboxing</dfn> and <dfn class="terminology">unboxing</dfn>. Java <em class="emphasis">automatically</em> wraps, or "boxes" primitive types whenever necessary to place them in a collection like an ArrayList. It also automatically unboxes primitve types when removing from an ArrayList. We only need to remember the wrapper class name when naming the class type to be held by an ArrayList, and Java handles the rest.</div>
+<div class="para" id="p-521">In the following code snippet, we declare and fill and ArrayList&lt;Integer&gt; with 100 randomly generated integers. Once filled, we loop over the ArrayList&lt;Integer&gt; again, get each <code class="code-inline tex2jax_ignore">int</code> at each successive index and print it. In both cases (adding and getting) we do not box or unbox the primitive type <code class="code-inline tex2jax_ignore">int</code>. Java automatically boxes each <code class="code-inline tex2jax_ignore">int</code> in an <code class="code-inline tex2jax_ignore">Integer</code> before adding to the ArrayList, and unboxes the <code class="code-inline tex2jax_ignore">Integer</code> to an <code class="code-inline tex2jax_ignore">int</code> when getting and assigning to the primtiive variable.</div>
+<figure class="listing figure-like" id="listing-c1-boxing-example"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">Random rnd = new Random();          // New Random and ArrayList objects
+ArrayList&lt;Integer&gt; ints =  new ArrayList&lt;&gt;();
+
+// Fill ArrayList with 1000 random ints
+// The int is not boxed in an Integer class before being added
+// Java takes care of this for us
+int i = 0;                          // Counter
+while (i &lt; 1000) {                  // Loop
+    ints.add( rnd.nextInt(100) );   // Add int to ArrayList
+    i++;                            // Increment counter
+}
+
+// Get all ints and print
+// Notice how val is assigned without unboxing Integer object
+int val;                            // Helper variable
+i = 0;                              // Reset counter
+while (i &lt; ints.size()) {           // Loop
+    val = ints.get( i );            // Get int
+    System.out.println( val );      // Print int
+    i++;                            // Increment counter
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.5.5<span class="period">.</span></span><span class="space"> </span>Boxing and Unboxing</figcaption></figure><div class="para" id="p-522">Place the above in a complete Java program, compile and run to prove to yourself that this program works without error.</div></section><section class="subsection" id="subsection-62"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.6</span> <span class="title"><code class="code-inline tex2jax_ignore">HashMap</code></span>
+</h3>
+<div class="para" id="p-523">(TODO)</div>
+<div class="para" id="p-524">Iterating over HashMaps</div></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.7</span> <span class="title"><code class="code-inline tex2jax_ignore">HashSet</code></span>
+</h3>
+<div class="para" id="p-525">(TODO)</div>
+<div class="para" id="p-526">Iterating over HashSet</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-c1-break-continue.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-c1-nested-control.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

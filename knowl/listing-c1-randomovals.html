@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomOvals.java
+import java.util.ArrayList;             // Import classes
+import java.util.Random;
+import doodlepad.*;                     // Import DoodlePad classes
+
+public class RandomOvals {              // public class
+                                        // Declare ArrayList of Ovals
+    public static ArrayList&lt;Oval&gt; ovals = new ArrayList&lt;&gt;();
+
+                                        // Start of execution
+    public static void main(String[] args) {         
+        Oval o;                         // Helper variable
+
+        // Fill ArrayList with 100 randomly placed Oval objects
+        // Use a while to iterate 100 times
+        int i = 0;                      // Init counter
+        while (i &lt; 20) {                // While-statement
+            o = new Oval();             // Create an Oval object
+            o.setMousePressedHandler( RandomOvals::recolor );
+            ovals.add( o );             // Add Oval to ArrayList
+            i++;                        // Increment counter
+        }
+    }
+
+    // Event handler method that executes when an Oval is clicked
+    public static void recolor(Shape shp, double x, double y, int button) {
+        int r, g, b;                    // Helper variables
+        Oval o;
+        Random rnd = new Random();      // Declare a Random object
+
+        // Loop over all Oval objects and reset to a random fill color
+        int i = 0;                      // Init counter
+        while ( i &lt; ovals.size() ) {    // While loop
+            o = ovals.get(i);           // Get the Oval at index i
+            r = rnd.nextInt(256);       // Generate random color components
+            g = rnd.nextInt(256);
+            b = rnd.nextInt(256);
+            o.setFillColor(r, g, b);    // Change fill color
+            i++;                        // Increment counter
+        }
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.5.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomOvals.java</code></figcaption></figure><span class="incontext"><a href="section-c1-collection-classes.html#listing-c1-randomovals" class="internal">in-context</a></span>
+</body>
+</html>

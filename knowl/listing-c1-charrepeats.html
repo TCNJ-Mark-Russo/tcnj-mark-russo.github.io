@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class CharRepeats {
+    // Declare once for entire program
+    public static int i = 0;
+
+    public static void main(String[] args) {
+        // Print strings with progressively longer char lengths
+        i = 0;                                      // Init counter
+        while (i &lt; 5) {                             // Repeat 5 times
+            String repeated = repeatChars('A', i+1);// Build String
+            System.out.println(repeated);           // Print String
+            i++;                                    // Increment counter
+        }
+    }
+
+    // Method to build a repeated-character String
+    public static String repeatChars(char ch, int count) {
+        StringBuilder sb = new StringBuilder();     // StringBuilder
+        i = 0;                                      // Init counter
+        while (i &lt; count) {                        // Loop for all chars
+            sb.append(ch);                          // Append ch to StringBuilder
+            i++;                                    // Increment counter
+        }
+        return sb.toString();                       // Return String
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.7.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">CharRepeats.java</code></figcaption></figure><span class="incontext"><a href="section-c1-block-scope.html#listing-c1-charrepeats" class="internal">in-context</a></span>
+</body>
+</html>

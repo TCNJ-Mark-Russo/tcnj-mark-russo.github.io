@@ -11,22 +11,40 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.6.7<span class="period">.</span></span><span class="space"> </span>Shape Selection Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.6.9<span class="period">.</span></span><span class="space"> </span>Pad Keyboard Event-Related Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setSelectionChangedHandler-doodlepad.Shape.ShapeSelectionEventHandler-" target="_blank">public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-62-hidden.html" title="Footnote 5.6.9"><sup> 9 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyPressedHandler-doodlepad.Pad.PadKeyEventHandler-" target="_blank">public void setKeyPressedHandler(Pad.PadKeyEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-77-hidden.html" title="Footnote 4.6.22"><sup> 22 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the <a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.ShapeSelectionEventHandler.html" target="_blank">ShapeSelectionEventHandler</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-63-hidden.html" title="Footnote 5.6.10"><sup> 10 </sup></a> interface.</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onKeyPressed event handler using a method reference.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onSelectionChanged-boolean-" target="_blank">public void onSelectionChanged(boolean selected)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-64-hidden.html" title="Footnote 5.6.11"><sup> 11 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyReleasedHandler-doodlepad.Pad.PadKeyEventHandler-" target="_blank">public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-78-hidden.html" title="Footnote 4.6.23"><sup> 23 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onKeyReleased event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setKeyTypedHandler-doodlepad.Pad.PadKeyTypedEventHandler-" target="_blank">public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-79-hidden.html" title="Footnote 4.6.24"><sup> 24 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Assign an onKeyTyped event handler using a method reference.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#addKeyListener-doodlepad.PadKeyListener-" target="_blank">public void addKeyListener(PadKeyListener o)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-80-hidden.html" title="Footnote 4.6.25"><sup> 25 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Add object to the list of items that are notified on Pad’s key events.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeKeyListener-doodlepad.PadKeyListener-" target="_blank">public void removeKeyListener(PadKeyListener o)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-81-hidden.html" title="Footnote 4.6.26"><sup> 26 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Remove object from Pad’s key listener list.</td>
 </tr>
 </table></div></figure><span class="incontext"><a href="section-dp-events.html#table-34" class="internal">in-context</a></span>
 </body>
