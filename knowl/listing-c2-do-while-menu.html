@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// DoWhileMenu.java
+import java.util.Random;
+import java.util.Scanner;
+import doodlepad.*;
+
+public class DoWhileMenu {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);   // Helpers
+        Random  rnd = new Random();
+        int r, g, b, ans = 0;
+
+        do {                                    // Print menu
+            System.out.println("Choose a Shape to Create");
+            System.out.println("1. Oval");
+            System.out.println("2. Rectangle");
+            System.out.println("3. RoundRect");
+            System.out.println("0. Exit");
+
+            System.out.print("Enter a number: ");
+            ans = scn.nextInt();                // Prompt user
+
+            r = rnd.nextInt(256);               // Random color
+            g = rnd.nextInt(256);
+            b = rnd.nextInt(256);
+
+            if (ans == 1) {                     // Take action
+                Oval o = new Oval();
+                o.setFillColor(r, g, b);
+            }
+            else if (ans == 2) {
+                Rectangle r1 = new Rectangle();
+                r1.setFillColor(r, g, b);
+            }
+            else if (ans == 3) {
+                RoundRect r2 = new RoundRect();
+                r2.setFillColor(r, g, b);
+            }
+
+        } while (ans != 0);                     // Keep going until exit
+        System.out.println("Goodbye");
+        System.exit(0);                         // Quit program
+    }    
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">7.2.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">DoWhileMenu.java</code></figcaption></figure><span class="incontext"><a href="section-c2-do-while-statements.html#listing-c2-do-while-menu" class="internal">in-context</a></span>
+</body>
+</html>

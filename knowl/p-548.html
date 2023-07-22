@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">In <a href="section-c1-collection-classes.html" class="internal" title="Section 6.5: Collection Classes">Section 6.5</a> we introduced the two major forms of program flow control, namely <dfn class="terminology">brancing</dfn> and <dfn class="terminology">iteration</dfn>, and we demonstrated these concepts using the Java if-statement and the while-statement. These two statements are not the only ways to perform <em class="emphasis">branching</em> and <em class="emphasis">iteration</em> in Java. In this section we will explore many of the other options to do the same in Java, and cover some additional important topics in the process.</div>
-<span class="incontext"><a href="chapter-control2.html#p-548" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">If you look closely you will see that <code class="code-inline tex2jax_ignore">i</code> is used as the counter for the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method as well as in the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method. In both cases <code class="code-inline tex2jax_ignore">i</code> reset to 0, but <code class="code-inline tex2jax_ignore">repeatChars(…)</code> leaves the value of <code class="code-inline tex2jax_ignore">i</code> at <code class="code-inline tex2jax_ignore">count + 1</code>. When <code class="code-inline tex2jax_ignore">repeatChars(…)</code> exits it returns to the while-statement in <code class="code-inline tex2jax_ignore">main(…)</code> already in progress. This statement continues, but does with a value of <code class="code-inline tex2jax_ignore">i</code> that has been changed by <code class="code-inline tex2jax_ignore">repeatChars(…)</code>. In this case, the result is that the counter is advanced too quickly, resulting in some of the expected output being skipped.</div>
+<span class="incontext"><a href="section-c1-block-scope.html#p-548" class="internal">in-context</a></span>
 </body>
 </html>

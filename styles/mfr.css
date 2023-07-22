@@ -55,3 +55,6 @@ iframe#interactive-gs-binary {
 iframe#interactive-dp-colors {
     height: 400px;
 }
+.token.comment {
+    color: darkgreen;
+}

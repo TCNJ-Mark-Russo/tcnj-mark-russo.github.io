@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chapter Exercises</title>
+    <!-- https://github.com/highlightjs/highlight.js/tree/main/src/styles -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs.min.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script> -->
+    <link rel="stylesheet" href="vs.min.css">
+    <script src="highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        * {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .hljs {
+            background: whitesmoke;
+        }
+        code, .hljs-type, .hljs-keyword, .hljs-number {
+            font-family: 'Courier New', Courier, monospace !important;
+            font-weight: bold;
+        }
+        .hljs-number {
+            color: brown;
+        }
+    </style>
+    <script> // Utils
+        /**
+        * Choose a random element from array
+        */
+        function choose(arr) {
+            return arr[Math.floor((Math.random()*arr.length))];
+        }
+        /**
+         * Shuffle array in place.
+         * @param {Array} a items An array containing the items.
+         */
+        function shuffle(arr) {
+            var j, x, i;
+            for (i = arr.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = arr[i];
+                arr[i] = arr[j];
+                arr[j] = x;
+            }
+            return arr;
+        }
+        /**
+         * Generate a random int in range [min, max], both inclusive
+         */
+        function randint(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        /**
+         * A simple rotation cipher.
+         * Rotates ASCII values with character codes in [32, 126].
+         * May be derotated by rotating again with r = (95-r).
+         * @param {str} an ASCII string to obfuscate
+         * @param {r} a rotation amount in [0, 94]
+         */
+        function rotr(str, r) {
+            let n = 95; // = 126 - 32 + 1;
+            let codes = str.split('').map(c => 32 + (((c.charCodeAt() - 32) + r) % n));
+            return codes.map( c => String.fromCharCode(c) ).join('');
+        }
+    </script>
+    <script src="qtemplates.js" charset="utf-8"></script>
+    </head>
+    <body>
+<hr/>
+<p>author conditional expressions for a do-while to produce an output</p>
+<p>author init, test, and increment expressions in a for- to produce an output</p>
+<p>...</p>
+</body>
+</html>
