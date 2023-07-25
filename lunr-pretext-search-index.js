@@ -2149,7 +2149,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.5",
   "title": "Collection Classes",
-  "body": " Collection Classes  In and we introduced several classes that come with the Java core library. These included String , Random , Scanner , and StringBuilder . The Java core library includes thousands of classes that are available for you to use to solve your computational problems. One category of classes in the core library are called Collections . A Collection object is a kind of object that can hold and manage many other kind of objects. In this section we will explore a couple of the most used Collection classes in Java.   ArrayList  The first Collection class we'll explore is the ArrayList . An ArrayList is an object that holds references to zero or more other objects in an ordered sequence. An ArrayList grows or shrinks as needed. There is no reason to decide how large the an ArrayList must be before instantiation.  When an ArrayList is instantiated, it must name the class of objects that it will hold. Because Java is a strongly typed language, we cannot freely assign just any object to a variable that is declared to hold another type of object. Despite this feature, an ArrayList can be instantiated to hold a particular class. The reason this is possible is because the ArrayList class is defined as a generic . In short, the ArrayList is more of a class template that substitutes a class named as part of its constructor just before instantiating the new object. A class is specified as a part of its constructor using the diamond operator ( < > ).  If we want to instantiate an ArrayList that holds Oval objects, in the variable type declaration we must follow the ArrayList class name in the constructor with the diamond operator containing Oval. Following is an example of declaring and initializing an ArrayList to hold Oval objects.   ArrayList<Oval> ovals = new ArrayList<>();   Note that the type used to declare the variable ovals is ArrayList<Oval> , but the constructor used to create a new object to initialize the variable, is ArrayList<> , having no class name in the diamond operator. Java knows that the variable is of type ArrayList<Oval> and so it is not necessary to repeat the Oval class in the constructor's diamond operator because Java already knows the class that it should contain.    ArrayList Methods  As is the case with all classes, ArrayList implements methods that allow us to work with the object. Because the ArrayList class is designed to manage a series of objects, its methods relate to these management tasks as well. The following table lists many common ArrayList methods. The class of objects held by the ArrayList is not known until the ArrayList is instantiated. This class is indicated in the following table by a T for type . Once an ArrayList is instantiated, substitute T with the class specified within the diamond operator.   Common ArrayList methods    Method  Returns  Description    add(T element)  boolean  Add element to the end of the ArrayList.    add(int idx, T element)  void  Inserts element at position idx, shifting objects.    get(int idx)  T  Returns a reference to the element at index idx .    remove(int idx)  T  Removes and returns the item at index idx .    size()  int  Returns the number of elements in the ArrayList.    clear()  void  Removes all elements of the ArrayList, leaving it empty.    contains(T element)  boolean  Returns true if the ArrayList contains the element.    indexOf(T element)  int  Returns the index of the first object matching element       Filling ArrayLists and Accessing Elements  We can use what we know about iteration and our new ArrayList methods to fill an ArrayList with Ovals. The following code snippet creates 20 Oval objects using the default constructor and stores them in an ArrayList. Note that we are using the add(…) method of the ArrayList to add each new Oval object once it is created.   Oval o; \/\/ Helper variable and new ArrayList ArrayList<Oval> ovals = new ArrayList<>(); \/\/ While loop iterating 20 times int i = 0; while ( i < 20 ) { o = new Oval(); \/\/ Instantiate Oval ovals.add( o ); \/\/ Store Oval in ArrayList i++; }   Without a data structure like ArrayList, we would have had to declare 20 variables to hold each Oval object reference, and then instantiate and assign each in order. We would have not been able to use the while-statement. That would have been tedious at best. Instantiating 1000 Ovals would have been impractical.  Using a similar approach, we can access each Oval object. For example, if we wanted to change the fill color for each Oval, we could execute a code snippet like the following.   \/\/ While loop iterating over all elements int i = 0; while ( i < ovals.size() ) { o = ovals.get(i); \/\/ Get reference to Oval at index i o.setFillColor(255, 0, 0); \/\/ Set its fill color i++; }   In the above, we use the ArrayList's get(…) method to get a reference to the object at index i and assign the reference to the temporary helper variable. Then we use the helper variable to invoke the objects setFillColor(…) method.  When we set up the while-statement condition we did not enter 20 explicitly. Instead, we asked the ArrayList its size by invoking the size() method. In general, it is a better idea to avoid using fixed parameters in favor of looking up parameter values. Later, if we decide that we do want 1000 Ovals, we will not have to hunt down and fix all the places in our code where we entered 20 expilicitly.    Working with an ArrayList  Let's bring a number of skills together and have a closer look at a larger program. In the following RandomOvals.java example, we are applying several skils, including:  Importing classes, both from the Java core library and custom  Naming our top-level class and matching to file name  Declaring static variables in the outer class scope so the entire program has access  Starting execution at main(…)  Defining a helper method for abstraction and reuse  Instantiating new objects like Random and Oval  Generating random numbers in a defined range  Constructing a while-statement with an index that is used both to count iterations as well as to access ArrayList elements  Invoking ArrayList methods like add(…) , get(…) and size()  Invoking Oval methods like setFillColor(…) and setMousePressedHandler(…)  Handing mouse events     RandomOvals.java   \/\/ RandomOvals.java import java.util.ArrayList; \/\/ Import classes import java.util.Random; import doodlepad.*; \/\/ Import DoodlePad classes public class RandomOvals { \/\/ public class \/\/ Declare ArrayList of Ovals public static ArrayList<Oval> ovals = new ArrayList<>(); \/\/ Start of execution public static void main(String[] args) { Oval o; \/\/ Helper variable \/\/ Fill ArrayList with 100 randomly placed Oval objects \/\/ Use a while to iterate 100 times int i = 0; \/\/ Init counter while (i < 20) { \/\/ While-statement o = new Oval(); \/\/ Create an Oval object o.setMousePressedHandler( RandomOvals::recolor ); ovals.add( o ); \/\/ Add Oval to ArrayList i++; \/\/ Increment counter } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Oval o; Random rnd = new Random(); \/\/ Declare a Random object \/\/ Loop over all Oval objects and reset to a random fill color int i = 0; \/\/ Init counter while ( i < ovals.size() ) { \/\/ While loop o = ovals.get(i); \/\/ Get the Oval at index i r = rnd.nextInt(256); \/\/ Generate random color components g = rnd.nextInt(256); b = rnd.nextInt(256); o.setFillColor(r, g, b); \/\/ Change fill color i++; \/\/ Increment counter } } }    At the top of the program starts by importing all classes required that are not available by default. In this program we use the ArrayList and Random classes from the java.util package of Java core library as well as DoodlePad classes.  The main RandomOvals class contains two methods, the main(…) method where execution starts, as well as a helper method named recolor to be used as an event handler when Oval objects are clicked.  In the main(…) method we declare a helper variable and then set up a while-statement to help us create new Oval objects and fill the ArrayList. The loop counter i is initialized to 0 and incremented at the end of the statement code block. The conditional ensure that the loop repeats 20 times.  Within the while-statement code block, we create a new Oval object and assign a reference to the helper variable. Then we use this variable to both assign a method to be invoked when the object is clicked, as as as add the object to the end of the ArrayList.  The structure of the recolor(…) method is similar to main(…) . We start with helper variables and instantiate a Random object. Once again, we set up a while-statement to loop over all elements of the ArrayList. This time the condition does not specify the size of the ArrayList explicitly, but instead asks the ArrayList for the number of elements using its size() method.  Within the body of the while code block, we use the ArrayList get(…) method to get a reference to the object at index i . Note the i is used both as the loop counter as well as the index of each object in the ArrayList -- a dual purpose. Following this we generate three integers in the proper range for color elements, and then use them to set the Oval object's fill color to a random value. This repeats for all Ovals in the ArrayList.    The figure on the right show the program in action, after clicking one of the Oval objects. The console session for compiling and running is below (for Windows Command Prompt). Make sure you have a copy of the doodlepad.jar file in your project and that you are using the correct syntax for your shell.   javac -cp .;doodlepad.jar RandomOvals.java java -cp .;doodlepad.jar RandomOvals      RandomOvals.java       Autoboxing and Unboxing  A limitation of ArrayList is that it can hold objects only. But, as we know, primitive types are not objects, and we certainly want the option to store collections of primitives like int and double . How might we do that?  To address this clear limitation, Java provides wrapper classes that allow us to wrap each primitive in an object. With wrapper classes we are able to wrap primitives values in an object before storing in an ArrayList or other Collection. Java defines one wrapper class for each of the eight primitives. See . As you can see, in general, the name of the wrapper class is the primitive name starting with a capital letter (exceptions are int and char ).   Java Wrapper Classes    Primitive type  Wrapper class    byte  Byte    short  Short    int  Integer    long  Long    float  Float    double  Double    boolean  Boolean    char  Character     This makes it possible to wrap and and store primitives in an ArrayList, but it is not convenient. Constantly wrapping and unwrapping primitives can become tedious, and quickly.  Fortnately, there is a solution to this problem as well, called autoboxing and unboxing . Java automatically wraps, or \"boxes\" primitive types whenever necessary to place them in a collection like an ArrayList. It also automatically unboxes primitve types when removing from an ArrayList. We only need to remember the wrapper class name when naming the class type to be held by an ArrayList, and Java handles the rest.  In the following code snippet, we declare and fill and ArrayList<Integer> with 100 randomly generated integers. Once filled, we loop over the ArrayList<Integer> again, get each int at each successive index and print it. In both cases (adding and getting) we do not box or unbox the primitive type int . Java automatically boxes each int in an Integer before adding to the ArrayList, and unboxes the Integer to an int when getting and assigning to the primtiive variable.   Boxing and Unboxing   Random rnd = new Random(); \/\/ New Random and ArrayList objects ArrayList<Integer> ints = new ArrayList<>(); \/\/ Fill ArrayList with 1000 random ints \/\/ The int is not boxed in an Integer class before being added \/\/ Java takes care of this for us int i = 0; \/\/ Counter while (i < 1000) { \/\/ Loop ints.add( rnd.nextInt(100) ); \/\/ Add int to ArrayList i++; \/\/ Increment counter } \/\/ Get all ints and print \/\/ Notice how val is assigned without unboxing Integer object int val; \/\/ Helper variable i = 0; \/\/ Reset counter while (i < ints.size()) { \/\/ Loop val = ints.get( i ); \/\/ Get int System.out.println( val ); \/\/ Print int i++; \/\/ Increment counter }    Place the above in a complete Java program, compile and run to prove to yourself that this program works without error.    HashMap  (TODO)  Iterating over HashMaps    HashSet  (TODO)  Iterating over HashSet   "
+  "body": " Collection Classes  In and we introduced several classes that come with the Java core library. These included String , Random , Scanner , and StringBuilder . The Java core library includes thousands of classes that are available for you to use to solve your computational problems. One category of classes in the core library are called Collections . A Collection object is a kind of object that can hold and manage many other kind of objects. In this section we will explore a couple of the most used Collection classes in Java.   ArrayList  The first Collection class we'll explore is the ArrayList . An ArrayList is an object that holds references to zero or more other objects in an ordered sequence. An ArrayList grows or shrinks as needed. There is no reason to decide how large the an ArrayList must be before instantiation.  When an ArrayList is instantiated, it must name the class of objects that it will hold. Because Java is a strongly typed language, we cannot freely assign just any object to a variable that is declared to hold another type of object. Despite this feature, an ArrayList can be instantiated to hold a particular class. The reason this is possible is because the ArrayList class is defined as a generic . In short, the ArrayList is more of a class template that substitutes a class named as part of its constructor just before instantiating the new object. A class is specified as a part of its constructor using the diamond operator ( < > ).  If we want to instantiate an ArrayList that holds Oval objects, in the variable type declaration we must follow the ArrayList class name in the constructor with the diamond operator containing Oval. Following is an example of declaring and initializing an ArrayList to hold Oval objects.   ArrayList<Oval> ovals = new ArrayList<>();   Note that the type used to declare the variable ovals is ArrayList<Oval> , but the constructor used to create a new object to initialize the variable, is ArrayList<> , having no class name in the diamond operator. Java knows that the variable is of type ArrayList<Oval> and so it is not necessary to repeat the Oval class in the constructor's diamond operator because Java already knows the class that it should contain.    ArrayList Methods  As is the case with all classes, ArrayList implements methods that allow us to work with the object. Because the ArrayList class is designed to manage a series of objects, its methods relate to these management tasks as well. The following table lists many common ArrayList methods. The class of objects held by the ArrayList is not known until the ArrayList is instantiated. This class is indicated in the following table by a T for type . Once an ArrayList is instantiated, substitute T with the class specified within the diamond operator.   Common ArrayList methods    Method  Returns  Description    add(T element)  boolean  Add element to the end of the ArrayList.    add(int idx, T element)  void  Inserts element at position idx, shifting objects.    get(int idx)  T  Returns a reference to the element at index idx .    remove(int idx)  T  Removes and returns the item at index idx .    size()  int  Returns the number of elements in the ArrayList.    clear()  void  Removes all elements of the ArrayList, leaving it empty.    contains(T element)  boolean  Returns true if the ArrayList contains the element.    indexOf(T element)  int  Returns the index of the first object matching element       Filling ArrayLists and Accessing Elements  We can use what we know about iteration and our new ArrayList methods to fill an ArrayList with Ovals. The following code snippet creates 20 Oval objects using the default constructor and stores them in an ArrayList. Note that we are using the add(…) method of the ArrayList to add each new Oval object once it is created.   Oval o; \/\/ Helper variable and new ArrayList ArrayList<Oval> ovals = new ArrayList<>(); \/\/ While loop iterating 20 times int i = 0; while ( i < 20 ) { o = new Oval(); \/\/ Instantiate Oval ovals.add( o ); \/\/ Store Oval in ArrayList i++; }   Without a data structure like ArrayList, we would have had to declare 20 variables to hold each Oval object reference, and then instantiate and assign each in order. We would have not been able to use the while-statement. That would have been tedious at best. Instantiating 1000 Ovals would have been impractical.  Using a similar approach, we can access each Oval object. For example, if we wanted to change the fill color for each Oval, we could execute a code snippet like the following.   \/\/ While loop iterating over all elements int i = 0; while ( i < ovals.size() ) { o = ovals.get(i); \/\/ Get reference to Oval at index i o.setFillColor(255, 0, 0); \/\/ Set its fill color i++; }   In the above, we use the ArrayList's get(…) method to get a reference to the object at index i and assign the reference to the temporary helper variable. Then we use the helper variable to invoke the objects setFillColor(…) method.  When we set up the while-statement condition we did not enter 20 explicitly. Instead, we asked the ArrayList its size by invoking the size() method. In general, it is a better idea to avoid using fixed parameters in favor of looking up parameter values. Later, if we decide that we do want 1000 Ovals, we will not have to hunt down and fix all the places in our code where we entered 20 expilicitly.    Working with an ArrayList  Let's bring a number of skills together and have a closer look at a larger program. In the following RandomOvals.java example, we are applying several skils, including:  Importing classes, both from the Java core library and custom  Naming our top-level class and matching to file name  Declaring static variables in the outer class scope so the entire program has access  Starting execution at main(…)  Defining a helper method for abstraction and reuse  Instantiating new objects like Random and Oval  Generating random numbers in a defined range  Constructing a while-statement with an index that is used both to count iterations as well as to access ArrayList elements  Invoking ArrayList methods like add(…) , get(…) and size()  Invoking Oval methods like setFillColor(…) and setMousePressedHandler(…)  Handing mouse events     RandomOvals.java   \/\/ RandomOvals.java import java.util.ArrayList; \/\/ Import classes import java.util.Random; import doodlepad.*; \/\/ Import DoodlePad classes public class RandomOvals { \/\/ public class \/\/ Declare ArrayList of Ovals public static ArrayList<Oval> ovals = new ArrayList<>(); \/\/ Start of execution public static void main(String[] args) { Oval o; \/\/ Helper variable \/\/ Fill ArrayList with 20 randomly placed Oval objects \/\/ Use a while to iterate 20 times int i = 0; \/\/ Init counter while (i < 20) { \/\/ While-statement o = new Oval(); \/\/ Create an Oval object o.setMousePressedHandler( RandomOvals::recolor ); ovals.add( o ); \/\/ Add Oval to ArrayList i++; \/\/ Increment counter } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Oval o; Random rnd = new Random(); \/\/ Declare a Random object \/\/ Loop over all Oval objects and reset to a random fill color int i = 0; \/\/ Init counter while ( i < ovals.size() ) { \/\/ While loop o = ovals.get(i); \/\/ Get the Oval at index i r = rnd.nextInt(256); \/\/ Generate random color components g = rnd.nextInt(256); b = rnd.nextInt(256); o.setFillColor(r, g, b); \/\/ Change fill color i++; \/\/ Increment counter } } }    At the top of the program starts by importing all classes required that are not available by default. In this program we use the ArrayList and Random classes from the java.util package of Java core library as well as DoodlePad classes.  The main RandomOvals class contains two methods, the main(…) method where execution starts, as well as a helper method named recolor to be used as an event handler when Oval objects are clicked.  In the main(…) method we declare a helper variable and then set up a while-statement to help us create new Oval objects and fill the ArrayList. The loop counter i is initialized to 0 and incremented at the end of the statement code block. The conditional ensure that the loop repeats 20 times.  Within the while-statement code block, we create a new Oval object and assign a reference to the helper variable. Then we use this variable to both assign a method to be invoked when the object is clicked, as as as add the object to the end of the ArrayList.  The structure of the recolor(…) method is similar to main(…) . We start with helper variables and instantiate a Random object. Once again, we set up a while-statement to loop over all elements of the ArrayList. This time the condition does not specify the size of the ArrayList explicitly, but instead asks the ArrayList for the number of elements using its size() method.  Within the body of the while code block, we use the ArrayList get(…) method to get a reference to the object at index i . Note the i is used both as the loop counter as well as the index of each object in the ArrayList -- a dual purpose. Following this we generate three integers in the proper range for color elements, and then use them to set the Oval object's fill color to a random value. This repeats for all Ovals in the ArrayList.    The figure on the right show the program in action, after clicking one of the Oval objects. The console session for compiling and running is below (for Windows Command Prompt). Make sure you have a copy of the doodlepad.jar file in your project and that you are using the correct syntax for your shell.   javac -cp .;doodlepad.jar RandomOvals.java java -cp .;doodlepad.jar RandomOvals      RandomOvals.java       Autoboxing and Unboxing  A limitation of ArrayList is that it can hold objects only. But, as we know, primitive types are not objects, and we certainly want the option to store collections of primitives like int and double . How might we do that?  To address this clear limitation, Java provides wrapper classes that allow us to wrap each primitive in an object. With wrapper classes we are able to wrap primitives values in an object before storing in an ArrayList or other Collection. Java defines one wrapper class for each of the eight primitives. See . As you can see, in general, the name of the wrapper class is the primitive name starting with a capital letter (exceptions are int and char ).   Java Wrapper Classes    Primitive type  Wrapper class    byte  Byte    short  Short    int  Integer    long  Long    float  Float    double  Double    boolean  Boolean    char  Character     This makes it possible to wrap and and store primitives in an ArrayList, but it is not convenient. Constantly wrapping and unwrapping primitives can become tedious, and quickly.  Fortnately, there is a solution to this problem as well, called autoboxing and unboxing . Java automatically wraps, or \"boxes\" primitive types whenever necessary to place them in a collection like an ArrayList. It also automatically unboxes primitve types when removing from an ArrayList. We only need to remember the wrapper class name when naming the class type to be held by an ArrayList, and Java handles the rest.  In the following code snippet, we declare and fill and ArrayList<Integer> with 100 randomly generated integers. Once filled, we loop over the ArrayList<Integer> again, get each int at each successive index and print it. In both cases (adding and getting) we do not box or unbox the primitive type int . Java automatically boxes each int in an Integer before adding to the ArrayList, and unboxes the Integer to an int when getting and assigning to the primtiive variable.   Boxing and Unboxing   Random rnd = new Random(); \/\/ New Random and ArrayList objects ArrayList<Integer> ints = new ArrayList<>(); \/\/ Fill ArrayList with 1000 random ints \/\/ The int is not boxed in an Integer class before being added \/\/ Java takes care of this for us int i = 0; \/\/ Counter while (i < 1000) { \/\/ Loop ints.add( rnd.nextInt(100) ); \/\/ Add int to ArrayList i++; \/\/ Increment counter } \/\/ Get all ints and print \/\/ Notice how val is assigned without unboxing Integer object int val; \/\/ Helper variable i = 0; \/\/ Reset counter while (i < ints.size()) { \/\/ Loop val = ints.get( i ); \/\/ Get int System.out.println( val ); \/\/ Print int i++; \/\/ Increment counter }    Place the above in a complete Java program, compile and run to prove to yourself that this program works without error.    HashMap  (TODO)  Iterating over HashMaps    HashSet  (TODO)  Iterating over HashSet   "
 },
 {
   "id": "p-501",
@@ -2176,7 +2176,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "6.5.2",
   "title": "",
-  "body": " RandomOvals.java   \/\/ RandomOvals.java import java.util.ArrayList; \/\/ Import classes import java.util.Random; import doodlepad.*; \/\/ Import DoodlePad classes public class RandomOvals { \/\/ public class \/\/ Declare ArrayList of Ovals public static ArrayList<Oval> ovals = new ArrayList<>(); \/\/ Start of execution public static void main(String[] args) { Oval o; \/\/ Helper variable \/\/ Fill ArrayList with 100 randomly placed Oval objects \/\/ Use a while to iterate 100 times int i = 0; \/\/ Init counter while (i < 20) { \/\/ While-statement o = new Oval(); \/\/ Create an Oval object o.setMousePressedHandler( RandomOvals::recolor ); ovals.add( o ); \/\/ Add Oval to ArrayList i++; \/\/ Increment counter } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Oval o; Random rnd = new Random(); \/\/ Declare a Random object \/\/ Loop over all Oval objects and reset to a random fill color int i = 0; \/\/ Init counter while ( i < ovals.size() ) { \/\/ While loop o = ovals.get(i); \/\/ Get the Oval at index i r = rnd.nextInt(256); \/\/ Generate random color components g = rnd.nextInt(256); b = rnd.nextInt(256); o.setFillColor(r, g, b); \/\/ Change fill color i++; \/\/ Increment counter } } }   "
+  "body": " RandomOvals.java   \/\/ RandomOvals.java import java.util.ArrayList; \/\/ Import classes import java.util.Random; import doodlepad.*; \/\/ Import DoodlePad classes public class RandomOvals { \/\/ public class \/\/ Declare ArrayList of Ovals public static ArrayList<Oval> ovals = new ArrayList<>(); \/\/ Start of execution public static void main(String[] args) { Oval o; \/\/ Helper variable \/\/ Fill ArrayList with 20 randomly placed Oval objects \/\/ Use a while to iterate 20 times int i = 0; \/\/ Init counter while (i < 20) { \/\/ While-statement o = new Oval(); \/\/ Create an Oval object o.setMousePressedHandler( RandomOvals::recolor ); ovals.add( o ); \/\/ Add Oval to ArrayList i++; \/\/ Increment counter } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Oval o; Random rnd = new Random(); \/\/ Declare a Random object \/\/ Loop over all Oval objects and reset to a random fill color int i = 0; \/\/ Init counter while ( i < ovals.size() ) { \/\/ While loop o = ovals.get(i); \/\/ Get the Oval at index i r = rnd.nextInt(256); \/\/ Generate random color components g = rnd.nextInt(256); b = rnd.nextInt(256); o.setFillColor(r, g, b); \/\/ Change fill color i++; \/\/ Increment counter } } }   "
 },
 {
   "id": "figure-33",
@@ -2629,58 +2629,247 @@ var ptx_lunr_docs = [
   "body": " Chapter Exercises   "
 },
 {
-  "id": "section-68",
+  "id": "section-ar-creating",
   "level": "1",
-  "url": "section-68.html",
+  "url": "section-ar-creating.html",
   "type": "Section",
   "number": "8.1",
-  "title": "Creating and Initializing Arrays",
-  "body": " Creating and Initializing Arrays  type notation  initializer  "
+  "title": "Creating, Initializing Arrays",
+  "body": " Creating, Initializing Arrays  A Java array stores in memory a sequence of data items with common data type. The entire sequence can be assigned to a single variable with each element accessed using the variable followed by a sequential integer index (offest) in square brackets, starting with 0. Arrays are incredibly useful when you must store a very large number of related values. Using an index for element access works well with iteration counters, very much like the way we access elements in an ArrayList using the .get(…) method.   Declaring Arrays  An array variable is declared just like any Java variable with a data type, only followed with a pair of square brackets ( [] ).   jshell> double[] data; data ==> null jshell>   In the JShell session above, we declare a double  array variable just like we would declare a single double variable, only we follow the type with [] . It's useful to read this declaration as double array data . In general, working with array variables is very similar to working single data variable, only with the additional of square brackets.  In the above JShell session, we see that the data array variable starts with the value null . This is very important to note. In Java, array variables are reference variables, just like variables having a class type are reference variable. As a reference type, all the same rules and behaviors that we investigated in apply to array variables as well.  Also like a class variable, declaring an array variable does not create the array. An array variable is only a variable that may reference an array, should we choose to create one and assign it to the variable. The variable itself is not the array, which is illustrated by its initial default value being null .  We can declare an array of any valid type in Java. In fact, we can declare arrays of arrays , which investigate more in . The following code snippet illustrates this idea. None of these variables are arrays. They are only variables that may reference an array, not the array itself.   double[] data; \/\/ An array variable of doubles int[] lengths; \/\/ An array variable of integers String[] names; \/\/ An array variable of Strings Random[] rands; \/\/ An array variable of Random objects     Creating Arrays  Similar to instantiating new objects using a constructor, the syntax for creating a new array makes use of the new keyword. This reinforces the fact that arrays are reference types. Unlike invoking an object constructor, the syntax for creating a new array follows the new keyword with the data type to be stored in elements of the array and then square backets containing the number of elements to be stored in the array. In the following code snippet, we create and assign arrays of size 100 for each of the array variables declared above.   data = new double[100]; lengths = new int[100]; names = new String[100]; rands = new Random[100];   Note that we can also use the combination declaration\/initialization statement just like we did with single-value variables.   double[] data = new double[100]; int[] lengths = new int[100]; String[] names = new String[100]; Random[] rands = new Random[100];     Accessing Array Elements  Once created, you may access and use the elements of an array just like you would a single-valued variable. The only difference is that you must follow your array variable with square brackets and an item index so that Java knows which element of the array that you want to access. In the example below, the data array variable is declared and initialized to a new array of doubles with length 100. These items are then accessed by following the array variable name data with square brackets and an index value, like data[0] .   jshell> double[] data = new double[100]; data ==> double[100] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ... 0.0, 0.0, 0.0, 0.0, 0.0 } jshell> System.out.println( data[0] ); \/\/ Access an array for printing 0.0 jshell> data[0] = 3.14; \/\/ Assign a value to an array element $3 ==> 3.14 jshell> System.out.println( data[0] ); 3.14 jshell>    Indexes Start at 0  In Java, when accessing a sequence of items, the index of the first item always starts at 0. Think of an index as an offset from the start of a sequence, not as an item's sequence position.     The idea that array is a sequence of data values is more than just a useful visual queue. Array elements are stored in contiguous memory, one after the other.  In the data example of , note that Java initializes double array items with the value 0.0 , just like it would initialize a single-valued double variable. This is the case with any array holding any numerical type.  If numeric array elements are initialized with 0, how about boolean array elements? What is the default value assigned to a single boolean variable? JShell is a useful tool to investigate Java's behavior.     An array stored in memory      jshell> boolean response; response ==> false jshell> System.out.println( response ); false jshell> boolean[] responses = new boolean[5]; responses ==> boolean[5] { false, false, false, false, false } jshell> System.out.println( responses[4] ); false jshell>   In both cases the default value of a boolean is false . Java sets the initial value of array elements to the same value that it would a single-values variable.    Initializing Arrays  Just like we can initialize a variable at the time of declaration, we also can initialize the elements of an array. We need to specify multiple element values for the array to be initialized. Syntactically, we following the creation of the array with a sequence of values delimited with braces ( {…} ) and separated by commas. In the following example we declare the double array variable data , assign it to a newly created double array, and initialize the double array to the values 10.0, 20.0, 30.0, 40.0 and 50.0.   double[] data = new double[] {10.0, 20.0, 30.0, 40.0 50.0};   Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.  We can shorten the above example even further. The new double[] part of the expression is redundant. Clearly, we want to create a new double array because we provided initial element values. There are legitimate reasons to declare an array variable without creating an array, but no legitimate reason if initial element values are provided. For this reason Java let's us accomplish the same task of creating and initializing the array without the need to include the new double[] part. In the example below, we create and initialize the array by going right to the initial values in braces, leaving out the new double[] .   double[] data = {10.0, 20.0, 30.0, 40.0 50.0};   This initialization syntax may be used with any type, provided you are able to write down the sequence of value in braces. In the examples below, pay careful attention to the rands array holding two Random objects. The only means of creating Random objects is to use the Random constructor.. Within the braces of the initializer, we invoked the Random constructor twice in create two objects which are stored in the rands array.   double[] data = {10.0, 20.0, 30.0, 40.0 50.0}; int[] lengths = {32, 34, 40}; String[] names = {\"Athos\", \"Porthos\", \"Aramis\"}; Random[] rands = {new Random(), new Random()}; boolean[] responses = {true, false, false, false, true};     The Java Array Three-Step Process  Take a moment to notice something important about arrays. In order to fully realize an array containing non-default element values, you must complete three steps .  There must be a variable that references the array. Without maintaining a reachable reference, the array is subject to garbage collection.  Declaring an array variable does NOT create an array. You must use the new keyword and follow the array declaration syntax with size (or initializing values) to create the actual array. The variable has the ability only to reference an existing array, not create the array. You must explicitly create the array in order for it to exist.  A newly created array contains element with default values for its type. A third step of initializing the array is required for it to contain something other than default values.     "
 },
 {
-  "id": "section-69",
+  "id": "p-624",
+  "level": "2",
+  "url": "section-ar-creating.html#p-624",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "does not "
+},
+{
+  "id": "p-626",
+  "level": "2",
+  "url": "section-ar-creating.html#p-626",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "new "
+},
+{
+  "id": "figure-ar-array-memory",
+  "level": "2",
+  "url": "section-ar-creating.html#figure-ar-array-memory",
+  "type": "Figure",
+  "number": "8.1.1",
+  "title": "",
+  "body": " An array stored in memory   "
+},
+{
+  "id": "p-639",
+  "level": "2",
+  "url": "section-ar-creating.html#p-639",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "new "
+},
+{
+  "id": "section-ar-iterating",
   "level": "1",
-  "url": "section-69.html",
+  "url": "section-ar-iterating.html",
   "type": "Section",
   "number": "8.2",
-  "title": "Accessing Array Elements with Iteration",
-  "body": " Accessing Array Elements with Iteration  The first element starts at index 0  Use a loop counter at access elements of an array  You can use for-each loops in Java to iterate through elements of an array as well as a collection.  "
+  "title": "Iterating Over Array Elements",
+  "body": " Iterating Over Array Elements   Because arrays use integer indexes within square brackets, we can access the elements of an array sequentially using iteration and a counter variable, in a manner similar to the way we did with ArrayLists. Like an ArrayList, we can ask an array about its length. Unlike an ArrayList, the length of an array is determined using the .length property of the array instead of the .size() method of an ArrayList. Recall that when iterating over the elements of an ArrayList, our loop counter had to stop at a value of 1 less that the size of the ArrayList. If the first index is 0, the last index is size()-1 . The same argument applies to arrays. The first index is 0, so the last index is .length - 1 . The test for continuation when iterating over the elements of an array must check that the counter is less-than the length of an array, not less-than or equal-to . Notice the form of the continuation tests in the following for-statement examples.    Arrays with For-statements   is an updated version of , with a few changes made. First, we use an array instead of an ArrayList to hold all Oval object references. Second, we change the while-statement to a for-statement. As you study the example, note that the number of Oval objects to create is set when declaring the array near the top of the program. For the iteration continuation test, we interrogate the array for its length instead of entering a value explicitly, and check that the loop counter is less-than the length. It is better to interrogate the array instead of entering the value into the for-statement because it is less error-prone if later we decide to modify the number of Oval objects. Only one change is made instead of searching the program for all instances of 20.   RandomOvals2.java   \/\/ RandomOvals2.java import java.util.Random; \/\/ Import classes import doodlepad.*; \/\/ Import DoodlePad classes public class RandomOvals2 { \/\/ public class public static Oval[] ovals = new Oval[20]; \/\/ Array of 20 Ovals public static void main(String[] args) { \/\/ Start of execution \/\/ Fill array with randomly placed Oval objects \/\/ Use a for-statement to iterate the size of the array for (int i=0; i<ovals.length; i++) { \/\/ For-statement ovals[i] = new Oval(); \/\/ Create an Oval object ovals[i].setMousePressedHandler(RandomOvals2::recolor); } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Random rnd = new Random(); \/\/ Declare Random object \/\/ Loop over all Oval objects and reset to a random fill color for (int i=0; i<ovals.length; i++) { \/\/ For-statement r = rnd.nextInt(256); \/\/ Random color components g = rnd.nextInt(256); b = rnd.nextInt(256); ovals[i].setFillColor(r, g, b); \/\/ Change fill color } } }     RandomOvals2.java      Arrays with For-each Statements  Like with ArrayLists and other Java Collection objects, we can use the for-each statement to iterate over the existing elements of an array. In this case we do not use a loop counter because the for-each statement syntax avoids the need for a counter. If the only purpose of a loop counter is to access existing array elements, the for-each statement might be a better option because fewer moving parts mean less opportunities to make a mistake. Without the loop counter we avoid the opportunity to incorrectly check the condition for continuation and we avoid the opportunity to write the loop counter update incorrectly. We have plenty of opportunities to make mistakes. It is best to limit these opprotunities as much as possible.  In the code snippet below we rewrote the for-statement in the recolor(…) method of as a for-each statement. No loop counter is necessary because the for-each accesses array elements and it iterates the correct number of times. We cannot replace the for-statement in the main(…) method with a for-each. Do you see why?   \/\/ Loop over all Oval objects and reset to a random fill color for (Oval o: ovals) { r = rnd.nextInt(256); \/\/ Random color components g = rnd.nextInt(256); b = rnd.nextInt(256); o.setFillColor(r, g, b); \/\/ Change fill color }   The for-statement in cannot be replaced with a for-each because the loop counter is used for more that just accessing existing objects. We use it to set references to new objects in the array as well. It is not possible to initialize array elements with for-each statement.    array vs. ArrayList  Let's compare two of our most used data structures.   array vs ArrayList    Feature  ArrayList  array    Creating   Uses new with  the constructor    Uses new with  [] and size      Reading the  number of items    Use the .size()  method    Use the .length  property      Accessing element  value    Use the .get(index)  method    Use the [index]  notation      Updating element  value    Use .set(index, val)  or .add(val) methods    Use the [index]  notation       "
 },
 {
-  "id": "section-70",
+  "id": "listing-ar-randomovals2",
+  "level": "2",
+  "url": "section-ar-iterating.html#listing-ar-randomovals2",
+  "type": "Listing",
+  "number": "8.2.1",
+  "title": "",
+  "body": " RandomOvals2.java   \/\/ RandomOvals2.java import java.util.Random; \/\/ Import classes import doodlepad.*; \/\/ Import DoodlePad classes public class RandomOvals2 { \/\/ public class public static Oval[] ovals = new Oval[20]; \/\/ Array of 20 Ovals public static void main(String[] args) { \/\/ Start of execution \/\/ Fill array with randomly placed Oval objects \/\/ Use a for-statement to iterate the size of the array for (int i=0; i<ovals.length; i++) { \/\/ For-statement ovals[i] = new Oval(); \/\/ Create an Oval object ovals[i].setMousePressedHandler(RandomOvals2::recolor); } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Random rnd = new Random(); \/\/ Declare Random object \/\/ Loop over all Oval objects and reset to a random fill color for (int i=0; i<ovals.length; i++) { \/\/ For-statement r = rnd.nextInt(256); \/\/ Random color components g = rnd.nextInt(256); b = rnd.nextInt(256); ovals[i].setFillColor(r, g, b); \/\/ Change fill color } } }   "
+},
+{
+  "id": "figure-ar-randomovals2",
+  "level": "2",
+  "url": "section-ar-iterating.html#figure-ar-randomovals2",
+  "type": "Figure",
+  "number": "8.2.2",
+  "title": "",
+  "body": " RandomOvals2.java   "
+},
+{
+  "id": "table-47",
+  "level": "2",
+  "url": "section-ar-iterating.html#table-47",
+  "type": "Table",
+  "number": "8.2.3",
+  "title": "array vs ArrayList",
+  "body": " array vs ArrayList    Feature  ArrayList  array    Creating   Uses new with  the constructor    Uses new with  [] and size      Reading the  number of items    Use the .size()  method    Use the .length  property      Accessing element  value    Use the .get(index)  method    Use the [index]  notation      Updating element  value    Use .set(index, val)  or .add(val) methods    Use the [index]  notation     "
+},
+{
+  "id": "section-ar-reftypes",
   "level": "1",
-  "url": "section-70.html",
+  "url": "section-ar-reftypes.html",
   "type": "Section",
   "number": "8.3",
-  "title": "Array vs. ArrayList",
-  "body": " Array vs. ArrayList  Creating and Initializing  Both are reference types  Accessing size  Element access  Element addition  Element removal  "
+  "title": "Arrays and References",
+  "body": " Arrays and References   There are two items to consider when working with arrays and reference types. The first is that array variable types are reference types and following all the same rules. The second is that array elements that store objects are reference types as well, and so store only a reference to the object, not the object itself.    Array Variables as Reference Types  As a reference type, an array variable is only a name that references an array. There is nothing to stop us from declaring a second array variable and assigning it to the same array, giving us two names for the array. As we know, assigning one reference variable to another does not copy the object being referenced. Rather, the value of the second reference variable gets the address of the object referenced by the first variable. This is why both variables reference the same object. Using either variable, when we access and modify an array element, the single underlying array is being modified. Specifically, we can modify an array referenced using one variable, and see the modification when accessing it using the other array variable. Let's run some tests.   jshell> String[] names = {\"Athos\", \"Porthos\", \"Aramis\"}; names ==> String[3] { \"Athos\", \"Porthos\", \"Aramis\" } jshell> String[] musketeers = names; musketeers ==> String[3] { \"Athos\", \"Porthos\", \"Aramis\" } jshell> musketeers[2] = \"d'Artagnan\" \/\/ Modify the third element of second var $3 ==> \"d'Artagnan\" jshell> System.out.println( names[2] ) \/\/ Print third element of first var d'Artagnan jshell>   As we can see in the previous JShell session, we declared and initialized our names array with three Strings. We also declared a second String array named musketeers and assigned it to the name of the first array. At this point both array variables names and musketeers reference the same underlying array. We demonstrate this by by changing the content of the last item in the names array and the print the last item in the mustketeers array. The change made using the names array variable is seen using the musketeers array variable, because both reference the same underlying array.    Array Elements as Reference Types  If we declare an array of a primitive type, the elements of the array hold actual primitive values. For example, if we declare a double array, even without initializing the elements, the values held in the array element are set to the default double value of 0.0.   jshell> double[] data = new double[5]; data ==> double[5] { 0.0, 0.0, 0.0, 0.0, 0.0 } jshell> for (int i=0; i<data.length; i++) { ...> System.out.println( data[i] ); ...> } 0.0 0.0 0.0 0.0 0.0 jshell>   The data double array above holds 5 double values. But what about a String array? How many String objects exist after we declare a String array with length 3? Are there three empty String objects \"\" , or maybe something else? See the following JShell session.   jshell> String[] names = new String[3]; names ==> String[3] { null, null, null } jshell>   After declaration of the String array variable and creation of the String array, JShell prints the array for us. We see that the three element of the String array are null, null, null . Recall that the null keywords signals the absense of an object. The names array contains no objects, whatsoever. True, it has the space to reference three String objects should we create and assign them, but unless the array elements are initialized, we have completed only two of the three steps required for fully building out an array: the arrays is created, but its elements have not been initialized.  An array of some reference type has elements that themselves reference external objects. Array elements do not hold objects, they reference them. In this regard, the elements of the array themselves follow the reference type rules.  In the following JShell session we create an array of two StringBuilder objects named sbs1 . Then we create a second StringBuilder array named sbs2 and assign it to the first. We append Strings to both StringBuilders by accessing them using the elements of sbs1 , and then print the entire array sbs2 . We see that both StringBuilder objects as viewed through sbs2 hold the Strings appended to the StringBuilders accessed using sbs1 . The same reference variable rules apply to array elements if they too are reference types.   jshell> StringBuilder[] sbs1 = {new StringBuilder(), new StringBuilder()}; sbs1 ==> StringBuilder[2] { , } jshell> StringBuilder[] sbs2 = sbs1; sbs2 ==> StringBuilder[2] { , } jshell> sbs1[0].append( \"I am the first one\" ); $3 ==> I am the first one jshell> sbs1[1].append( \"I am the second one\" ); $4 ==> I am the second one jshell> sbs2 sbs2 ==> StringBuilder[2] { I am the first one, I am the second one } jshell>     Arrays as Method Parameters  If a reference type is passed to a method as an argument, the method parameter gets a copy of the reference, not a copy of the entire object. Passing reference types to methods as arguments is equivalent to assigning the method parameters to the arguments passed. Consequently, a reference is passed to the method, not a copy of the argument. As a reference type, an array passed to a method actually passes only the array reference, not the entire array. This behavior allows us to write methods that receive and operate on arrays without the need to copy the entire array. For large arrays, this is far more efficient than copying all the array element and then possibly copying all the modified elements back to the original array.  The program in defines three static methods. In addition to the main(…) method you will find the printArr( double[] arr ) method and the doubleArr( double[] arr ) . Both methods take a double array parameter. The printArr(…) method iterates over all elements of the array and prints each. The doubleArr(…) method multiplies all elements by 2 and reassigns each updated value back to the array element.   ArrayArgs.java   \/\/ ArrayArgs.java public class ArrayArgs { public static void main(String[] args) { \/\/ Create array double[] nums = {1.2, 2.3, 3.4, 4.5 }; printArr( nums ); \/\/ Print array doubleArr( nums ); \/\/ Double array elements printArr( nums ); \/\/ Print array } \/\/ Print all elements of the array arr public static void printArr( double[] arr ) { for (double x : arr) { System.out.print(x + \" \"); } System.out.println(); } \/\/ Double all array elements public static void doubleArr( double[] arr ) { for (int i=0; i<arr.length; i++) { arr[i] *= 2; } } }    Compiling and running the program in produces the following output. Note that both methods have void return types; nothing is returned from either method. In spite of this, the doubleArr(…) method modifies the elements of the original array , which is demonstrated when the array is printed a second time and we see that all element values have been doubled. As we know, the reason that the original array elements are modified by doubleArr(…) is because a reference to the orignal array is passed to the method, not a copy. Consequently, the original array elements are modified as well.   javac ArrayArgs.java java ArrayArgs  1.2 2.3 3.4 4.5 2.4 4.6 6.8 9.0     Passing Arguments on the Command-line  We now know what the signature of the main(…) method actually means. The String[] args is an array of String objects, which is passed to the method when your program starts. Java reads all the items on the command-line that occur after the class name, and passes them to main(…) in the args String array. Study and the console session that follows.   CommandLine.java   \/\/ CommandLine.java public class CommandLine { \/\/ The main() method received a String array argument public static void main(String[] args) { \/\/ What's in the args array? System.out.println(\"Received \" + args.length + \" command-line arguments\"); for (String arg : args) { System.out.println(arg); } } }     javac CommandLine.java java CommandLine Hello World  Received 2 command-line arguments Hello World   Try running the CommandLine.java program yourself with your own arguments. In addition to using the Scanner object to prompt the user for input, passing arguments on the command-line is a way to pass data into your program on startup.   "
 },
 {
-  "id": "section-71",
+  "id": "listing-ar-arrayargs",
+  "level": "2",
+  "url": "section-ar-reftypes.html#listing-ar-arrayargs",
+  "type": "Listing",
+  "number": "8.3.1",
+  "title": "",
+  "body": " ArrayArgs.java   \/\/ ArrayArgs.java public class ArrayArgs { public static void main(String[] args) { \/\/ Create array double[] nums = {1.2, 2.3, 3.4, 4.5 }; printArr( nums ); \/\/ Print array doubleArr( nums ); \/\/ Double array elements printArr( nums ); \/\/ Print array } \/\/ Print all elements of the array arr public static void printArr( double[] arr ) { for (double x : arr) { System.out.print(x + \" \"); } System.out.println(); } \/\/ Double all array elements public static void doubleArr( double[] arr ) { for (int i=0; i<arr.length; i++) { arr[i] *= 2; } } }   "
+},
+{
+  "id": "listing-ar-commandline-args",
+  "level": "2",
+  "url": "section-ar-reftypes.html#listing-ar-commandline-args",
+  "type": "Listing",
+  "number": "8.3.2",
+  "title": "",
+  "body": " CommandLine.java   \/\/ CommandLine.java public class CommandLine { \/\/ The main() method received a String array argument public static void main(String[] args) { \/\/ What's in the args array? System.out.println(\"Received \" + args.length + \" command-line arguments\"); for (String arg : args) { System.out.println(arg); } } }   "
+},
+{
+  "id": "section-ar-multi",
   "level": "1",
-  "url": "section-71.html",
+  "url": "section-ar-multi.html",
   "type": "Section",
   "number": "8.4",
   "title": "Multidimensional Arrays",
-  "body": "Multidimensional Arrays  Arrays of Arrays  Nested loops for accessing all elements of multidimensional arrays  "
+  "body": " Multidimensional Arrays  If an array can truly hold any Java type, then an array element should itself be able to hold an array. To be specific, because an array is a reference type, we can declare an array to hold references to other arrays. In this section we'll explore how to create and initialize arrays of arrays and how to work with them.   Declaring Arrays of Arrays  In we learned that we could declare an array variable of any Java type by following the type with a pair of square brackets. Furthermore, an array with elements of a data type is created using the the new keyword followed by the type and a pair of square brackets with a number of elements.  In the following code snippet the list variable is declared with type double array, and initialized with a new double array of size 5. We follow the rules outlined above to create and initialize a new array that itself holds arrays. If double[] is the type of a double array formed by adding a pair of square brackets to the right of the type double , then an array of double arrays is obtained by adding another pair of square brackets after the double array, like so double[][] . Continuing with line of reasoning, if the expression new double[5] creates a new double array with 5 items, then the expression new double[5][3] creates a new array capable of holding 5 double arrays, each of which can hold 3 doubles. This is demonstrated in the second half of the following code snippet and illustrated in . This same pattern of adding square brackets may be continued to form arrays of arrays of arrays, etc.   \/\/ An array of doubles double[] list = new double[5]; \/\/ An array of arrays of doubles double[][] matrix = new double[5][3];    A schematic of matrix , an array of arrays      Accessing Multidimensional Array Elements  Using the same reasoning as in we can access all elements in a multidimensional array using nested iteration . We use an outer loop with a loop counter to generate the indexes of the elements in the top-level array, and we use an inner loop with a counter to generate the indexes of the elements in the inner arrays. It is wise to use the array's .length property in the continuation test.  demonstrates these ideas. This program has two method defined, main(…) and print2D(…) . Both methods use the nested iteration approach to access array elements. In main(…) we access each element and initialize values to random doubles. In print2D(…) we access each element for printing. Pay special attention to the inner loop continuation test, j<arr2D[i].length . We are querying each inner array for its length, each array at arr2D[i] . In the next section we'll learn why we want to ask each inner array for its length, and not just the first, or use a constant.   NestedArrays1.java   \/\/ NestedArrays1.java import java.util.Random; public class NestedArrays1 { public static void main(String[] args) { Random rnd = new Random(); \/\/ Random object double[][] arr2D = new double[5][3]; \/\/ 2D array \/\/ Fill array with random numbers for (int i=0; i<arr2D.length; i++) { \/\/ Outer loop for (int j=0; j<arr2D[i].length; j++) { \/\/ Inner loop arr2D[i][j] = rnd.nextDouble(); } } print2D( arr2D ); \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (int i=0; i<arr.length; i++) { \/\/ Outer loop for (int j=0; j<arr[i].length; j++) { \/\/ Inner loop System.out.print( arr[i][j] + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } } }     javac NestedArrays1.java java NestedArrays1  0.503106975940591 0.9917565242540053 0.17632812964595546 0.7495600013315958 0.01605752178519637 0.9485705200206167 0.33889267773442544 0.47985018921768474 0.042949682032970005 0.6807634494160301 0.5147152407456702 0.312225944100627 0.7609294164182726 0.21161251517956636 0.890812892598448   Initialization of multidimensional arrays is permitted at the time of declaration using curly braces in a manner similar to array with one dimension. For multi-dimensional arrays the initialization structure must match the structure of the array, using nested curly braces {{…}, {…}, …} .  In we rewrite the example from , only this time we initialize the array at declaration time, and we iterate over all nested array elements using a for-each statement instead.  Note how we use nested curly bracket to initialize the array, and how we don't specify the dimensions of the nested arrays. Java determines the array dimensions by the structure of the initialization. Also note the type of the variable in the outer for-each loop inside printArr(…) , which is for (double[] inarr : arr) { . The loop variable is a one-dimensional double array! By now, this should make sense. In Java, a multidimensional array is an array of arrays; the outer array is a one-dimensional array with elements that each hold one-dimensional arrays.   NestedArrays2.java   \/\/ NestedArrays2.java public class NestedArrays2 { public static void main(String[] args) { double[][] arr2D = {{0.0, 0.1, 0.2}, \/\/ 2D array {1.0, 1.1, 1.2}, \/\/ Initialization {2.0, 2.1, 2.2}, {3.0, 3.1, 3.2}, {4.0, 4.1, 4.2}}; print2D( arr2D ); \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (double[] inarr : arr) { \/\/ Outer loop for (double val : inarr) { \/\/ Inner loop System.out.print( val + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } } }     javac NestedArrays2.java java NestedArrays2  0.0 0.1 0.2 1.0 1.1 1.2 2.0 2.1 2.2 3.0 3.1 3.2 4.0 4.1 4.2     Ragged Arrays  In we initialized our multidimensional array explicitily using nested curly braces {{…}, {…}, …} . Array dimensions were determined using the structure of the initializer. This begs the question, what if we initialized the array using something like the following, an initializer without uniform inner dimensions?   double[][] arr2D = {{0.0, 0.1, 0.2}, \/\/ Right side is \"ragged\" {1.0, 1.1, 1.2, 1.3}, {2.0, 2.1}, {3.0, 3.1, 3.2}, {4.0}};   If it is true that Java's multidimensional arrays are really just arrays of arrays, then this syntax should be valid. There should be no constraint on the lengths of the inner arrays because outer array elements hold array references, which don't care about the length of the arrays that they reference.   is the prgoram in only with a ragged initializer. Compiling and running this program produces no errors, and the expected output. It is possible to have internal arrays with unequal lengths.   NestedArrays3.java   \/\/ NestedArrays2.java public class NestedArrays3 { public static void main(String[] args) { double[][] arr2D = {{0.0, 0.1, 0.2}, \/\/ Right side is \"ragged\" {1.0, 1.1, 1.2, 1.3}, {2.0, 2.1}, {3.0, 3.1, 3.2}, {4.0}}; print2D( arr2D ); \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (double[] inarr : arr) { \/\/ Outer loop for (double val : inarr) { \/\/ Inner loop System.out.print( val + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } } }     javac NestedArrays3.java java NestedArrays3  0.0 0.1 0.2 1.0 1.1 1.2 1.3 2.0 2.1 3.0 3.1 3.2 4.0   Multidimensional arrays with unequal lengths are called ragged arrays because they appear to have ragged right edge when printed.  Multidimensional arrays in Java can even be assembled incrementally. Have a close look at our final example in . There are several important features to note.  When we created the arr2D array in we left out the size of the inner dimension ( new double[5][] ). This is an important step. It signals to Java that no inner arrays should be created. Immediately after the arr2D array is created, all element values will be null .  We initialize each element of arr2D one at a time, using different techniques. For the first, second, and last elements, we create and initialize one-dimensional arrays and assign them to arr2D array elements. For the third element, we create but do not initialize a one-dimensional array and assign it. As we know, the values of an uninitialized array with a numeric type will be 0. We leave the fourth array element unassigned. This leaves the value of arr2D[3] as null . All these options are permitted, because we have the flexibility of arr2D being an array of array references.  One final item to note is the update we made to the print2D(…) method. Because our internal array references can be null , we need to test for this case. After all, the outer array is just an array of references, which can have the value null . To avoid a runtime error that would occur if we tried to print arr2D with an unassigned element reference, we added an if-statement to the print2D(…) that checks that each inner array reference is not null before attempting to print its elements. If it is null , the method just goes ahead and prints the element. Looking at the output from compiling and running , you will see that this all checks out.   RaggedAssembly.java   \/\/ RaggedAssembly.java \/\/ Assemble a ragged array one inner array at a time. public class RaggedAssembly { public static void main(String[] args) { double[][] arr2D = new double[5][]; \/\/ Inner lengths unspecified \/\/ Create and assign all inner arrays using various approaches arr2D[0] = new double[] {0.0, 0.1, 0.2}; arr2D[1] = new double[] {1.0, 1.1, 1.2, 1.3}; arr2D[2] = new double[3]; \/\/arr2D[3] = \/\/ Leave unassigned arr2D[4] = new double[] {4.0}; print2D( arr2D ); \/\/ \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (double[] inarr : arr) { \/\/ Outer loop if (inarr != null) { \/\/ Check array exists for (double val : inarr) { \/\/ Inner loop System.out.print( val + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } else { System.out.println(inarr); \/\/ Null reference } } } }     javac RaggedAssembly.java java RaggedAssembly  0.0 0.1 0.2 1.0 1.1 1.2 1.3 0.0 0.0 0.0 null 4.0    "
 },
 {
-  "id": "section-72",
+  "id": "figure-ar-multidimensional",
+  "level": "2",
+  "url": "section-ar-multi.html#figure-ar-multidimensional",
+  "type": "Figure",
+  "number": "8.4.1",
+  "title": "",
+  "body": " A schematic of matrix , an array of arrays   "
+},
+{
+  "id": "listing-arr-nestedarrays1",
+  "level": "2",
+  "url": "section-ar-multi.html#listing-arr-nestedarrays1",
+  "type": "Listing",
+  "number": "8.4.2",
+  "title": "",
+  "body": " NestedArrays1.java   \/\/ NestedArrays1.java import java.util.Random; public class NestedArrays1 { public static void main(String[] args) { Random rnd = new Random(); \/\/ Random object double[][] arr2D = new double[5][3]; \/\/ 2D array \/\/ Fill array with random numbers for (int i=0; i<arr2D.length; i++) { \/\/ Outer loop for (int j=0; j<arr2D[i].length; j++) { \/\/ Inner loop arr2D[i][j] = rnd.nextDouble(); } } print2D( arr2D ); \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (int i=0; i<arr.length; i++) { \/\/ Outer loop for (int j=0; j<arr[i].length; j++) { \/\/ Inner loop System.out.print( arr[i][j] + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } } }   "
+},
+{
+  "id": "listing-arr-nestedarrays2",
+  "level": "2",
+  "url": "section-ar-multi.html#listing-arr-nestedarrays2",
+  "type": "Listing",
+  "number": "8.4.3",
+  "title": "",
+  "body": " NestedArrays2.java   \/\/ NestedArrays2.java public class NestedArrays2 { public static void main(String[] args) { double[][] arr2D = {{0.0, 0.1, 0.2}, \/\/ 2D array {1.0, 1.1, 1.2}, \/\/ Initialization {2.0, 2.1, 2.2}, {3.0, 3.1, 3.2}, {4.0, 4.1, 4.2}}; print2D( arr2D ); \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (double[] inarr : arr) { \/\/ Outer loop for (double val : inarr) { \/\/ Inner loop System.out.print( val + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } } }   "
+},
+{
+  "id": "listing-arr-nestedarrays3",
+  "level": "2",
+  "url": "section-ar-multi.html#listing-arr-nestedarrays3",
+  "type": "Listing",
+  "number": "8.4.4",
+  "title": "",
+  "body": " NestedArrays3.java   \/\/ NestedArrays2.java public class NestedArrays3 { public static void main(String[] args) { double[][] arr2D = {{0.0, 0.1, 0.2}, \/\/ Right side is \"ragged\" {1.0, 1.1, 1.2, 1.3}, {2.0, 2.1}, {3.0, 3.1, 3.2}, {4.0}}; print2D( arr2D ); \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (double[] inarr : arr) { \/\/ Outer loop for (double val : inarr) { \/\/ Inner loop System.out.print( val + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } } }   "
+},
+{
+  "id": "p-669",
+  "level": "2",
+  "url": "section-ar-multi.html#p-669",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ragged arrays "
+},
+{
+  "id": "listing-arr-raggeassembly",
+  "level": "2",
+  "url": "section-ar-multi.html#listing-arr-raggeassembly",
+  "type": "Listing",
+  "number": "8.4.5",
+  "title": "",
+  "body": " RaggedAssembly.java   \/\/ RaggedAssembly.java \/\/ Assemble a ragged array one inner array at a time. public class RaggedAssembly { public static void main(String[] args) { double[][] arr2D = new double[5][]; \/\/ Inner lengths unspecified \/\/ Create and assign all inner arrays using various approaches arr2D[0] = new double[] {0.0, 0.1, 0.2}; arr2D[1] = new double[] {1.0, 1.1, 1.2, 1.3}; arr2D[2] = new double[3]; \/\/arr2D[3] = \/\/ Leave unassigned arr2D[4] = new double[] {4.0}; print2D( arr2D ); \/\/ \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (double[] inarr : arr) { \/\/ Outer loop if (inarr != null) { \/\/ Check array exists for (double val : inarr) { \/\/ Inner loop System.out.print( val + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } else { System.out.println(inarr); \/\/ Null reference } } } }   "
+},
+{
+  "id": "section-ar-library",
   "level": "1",
-  "url": "section-72.html",
+  "url": "section-ar-library.html",
   "type": "Section",
   "number": "8.5",
-  "title": "Ragged Arrays",
-  "body": " Ragged Arrays  array of arrays  "
+  "title": "<code class=\"code-inline tex2jax_ignore\">Arrays<\/code> Library",
+  "body": " Arrays Library   Working with Java arrays can be tedious. Typically, we have to size new arrays and handle each element individually. Fortunately, the Java core library includes a class named Arrays that provides a long list of static methods that we can use to make it easy to work with arrays. The Arrays class static methods provide a wide range of utilities to work on arrays of many types, including the following. See examples of several of these methods in . Note that the Arrays class is in the java.util.Arrays module and must be imported before its methods can be used.   Common static utility methods of the Arrays class    Arrays method  Description    Arrays.copyOf(…)  copying an entire array    Arrays.copyOfRange(…)  copying a slice of an array    Arrays.equals(…)  element-by-element equality test    Arrays.fill(…)  filling with values    Arrays.toString(…)  converting to a String    Arrays.sort(…)  sort array elements    Arrays.binarySearch(…)  search array elements      ArraysMethods.java   \/\/ ArraysMethods.java import java.util.Arrays; import java.util.Random; public class ArraysMethods { public static void main(String[] args) { Random rnd = new Random(); \/\/ Random object \/\/ Create an array of 1000 random integers in [100, 500) \/\/ and print ends int[] nums = new int[1000]; for (int i = 0; i < nums.length; i++) { nums[i] = 100 + rnd.nextInt(400); } printEnds( \"nums\", nums ); \/\/ Create a copy of the array and print copy int[] copy = Arrays.copyOf(nums, nums.length); printEnds( \"copy\", copy ); \/\/ Check if they are the identical array System.out.println(\"nums and copy\" + (nums == copy ? \" ARE\" : \" ARE NOT\") + \" identical\"); \/\/ Check equivalence element-by-element System.out.println(\"nums and copy\" + (Arrays.equals(nums, copy) ? \" ARE\" : \" ARE NOT\") + \" equivalent\"); \/\/ Sort array and print Arrays.sort(nums); printEnds( \"nums (sorted)\", nums ); \/\/ Copy array ranges into two arrays and print int[] firstHalf = Arrays.copyOfRange(nums, 0, 500); int[] secondHalf = Arrays.copyOfRange(nums, 500, 1000); printEnds( \"firstHalf \", firstHalf ); printEnds( \"secondHalf\", secondHalf ); } \/\/ Print array name and elements from both ends of array public static void printEnds( String name, int[] arr ) { System.out.print(name + \": \"); for (int i=0; i<5; i++) { \/\/ Print first 5 System.out.print( arr[i] + \" \"); } System.out.print( \"... \"); \/\/ Print last 5 for (int i=arr.length-5; i<arr.length; i++) { System.out.print( arr[i] + \" \"); } System.out.println(); } }     javac ArraysMethods.java java ArraysMethods  nums: 277 217 458 299 117 ... 482 447 433 136 199 copy: 277 217 458 299 117 ... 482 447 433 136 199 nums and copy ARE NOT identical nums and copy ARE equivalent nums (sorted): 100 100 100 101 102 ... 498 498 498 499 499 firstHalf : 100 100 100 101 102 ... 301 302 302 303 303 secondHalf: 303 304 305 305 305 ... 498 498 498 499 499    "
 },
 {
-  "id": "section-73",
+  "id": "table-ar-arrays-methods",
+  "level": "2",
+  "url": "section-ar-library.html#table-ar-arrays-methods",
+  "type": "Table",
+  "number": "8.5.1",
+  "title": "Common static utility methods of the <code class=\"code-inline tex2jax_ignore\">Arrays<\/code> class",
+  "body": " Common static utility methods of the Arrays class    Arrays method  Description    Arrays.copyOf(…)  copying an entire array    Arrays.copyOfRange(…)  copying a slice of an array    Arrays.equals(…)  element-by-element equality test    Arrays.fill(…)  filling with values    Arrays.toString(…)  converting to a String    Arrays.sort(…)  sort array elements    Arrays.binarySearch(…)  search array elements    "
+},
+{
+  "id": "listing-arr-arrays-methods",
+  "level": "2",
+  "url": "section-ar-library.html#listing-arr-arrays-methods",
+  "type": "Listing",
+  "number": "8.5.2",
+  "title": "",
+  "body": " ArraysMethods.java   \/\/ ArraysMethods.java import java.util.Arrays; import java.util.Random; public class ArraysMethods { public static void main(String[] args) { Random rnd = new Random(); \/\/ Random object \/\/ Create an array of 1000 random integers in [100, 500) \/\/ and print ends int[] nums = new int[1000]; for (int i = 0; i < nums.length; i++) { nums[i] = 100 + rnd.nextInt(400); } printEnds( \"nums\", nums ); \/\/ Create a copy of the array and print copy int[] copy = Arrays.copyOf(nums, nums.length); printEnds( \"copy\", copy ); \/\/ Check if they are the identical array System.out.println(\"nums and copy\" + (nums == copy ? \" ARE\" : \" ARE NOT\") + \" identical\"); \/\/ Check equivalence element-by-element System.out.println(\"nums and copy\" + (Arrays.equals(nums, copy) ? \" ARE\" : \" ARE NOT\") + \" equivalent\"); \/\/ Sort array and print Arrays.sort(nums); printEnds( \"nums (sorted)\", nums ); \/\/ Copy array ranges into two arrays and print int[] firstHalf = Arrays.copyOfRange(nums, 0, 500); int[] secondHalf = Arrays.copyOfRange(nums, 500, 1000); printEnds( \"firstHalf \", firstHalf ); printEnds( \"secondHalf\", secondHalf ); } \/\/ Print array name and elements from both ends of array public static void printEnds( String name, int[] arr ) { System.out.print(name + \": \"); for (int i=0; i<5; i++) { \/\/ Print first 5 System.out.print( arr[i] + \" \"); } System.out.print( \"... \"); \/\/ Print last 5 for (int i=arr.length-5; i<arr.length; i++) { System.out.print( arr[i] + \" \"); } System.out.println(); } }   "
+},
+{
+  "id": "section-ar-polygons",
   "level": "1",
-  "url": "section-73.html",
+  "url": "section-ar-polygons.html",
   "type": "Section",
   "number": "8.6",
-  "title": "Arrays as Method Parameters",
-  "body": " Arrays as Method Parameters  As a reference type, all the same rules apply.  "
+  "title": "Polygons",
+  "body": " Polygons   A Polygon is a closed multi-sided shape made up of three or more straight lines connected end-to-end with the end of the last line attached to the beginning of the first. Polygons are created by specifying the ordered sequence of vertices that define the endpoints of all polygon edges. Think of a triangle, square, pentagon, hexagon, etc. In DoodlePad the Polygon class is used to create any polygon that you can imagine. A polygon may be convex or even concave at certain points. It is entirely up to you to choose the coordinates of the vertices.    Polygon Object     The Polygon class defines several constructors for you to use to create new polygon shapes. One category takes two arrays: one holding all x-coordinates and a second holding corresponding y-coordinates. These arrays maybe double[] or int[] arrays.  The following example program creates a Polygon object in the shape of a triangle (three vertices). is the output generated by this program.   PolygonDemo1.java   \/\/ PolygonDemo1.java import doodlepad.*; public class PolygonDemo1 { public static void main(String[] args) { \/\/ Create and initialize two double[] arrays double[] Xs = new double[] { 50.0, 100.0, 150.0}; double[] Ys = new double[] {150.0, 50.0, 150.0}; \/\/ Pass arrays to Polygon constructor Polygon p1 = new Polygon(Xs, Ys); } }    Let's write a method that creates regular star-shaped polygons with an arbitrary number of points greater than or equals to 2. Note that the number of vertices in a star polygon is twice the number of its points. Half are used for the inner concave vertices and the other half for the outer convex vertices (points of the star).  One way to think about how to make a star-shaped polygon is to image two concentric circles. The star's concave vertices fall on the inner circle and its convex vertices on the outer circle. To collect vertex coordinates, we rotate around the complete radius of the circle with an incremental angle of , where is the number of the star's points. As we rotate, we alternate the selection of vertices from the inner circle and the outer circle, at the current total angle. After one complete rotation, the collected vertex coodinates form the star-shaped polygon.  The makeStar(…) method in builds and returns a star-shaped polygon, progammatically, using the technique described above. The method takes five parameters: (1) npoints , the number of points in the star; (2) inrad , the radius of the inner circle; (3) outrad , the radius of the outer circle; (4) xoffset , the offset of the star location in the x-direction; and (5) yoffset , the offset of the star location in the y-direction.   MakeStar.java   \/\/ MakeStar.java import doodlepad.*; \/\/ Demonstrate the makeStar(...) method public class MakeStar { public static void main(String[] args) { Polygon star1 = makeStar(5, 100, 40, 150, 150); \/\/ 5-point star Polygon star2 = makeStar(50, 100, 40, 150, 350);\/\/ 50-point star star1.setFillColor(255, 255, 0); \/\/ Fill star2.setFillColor(255, 0, 0); } \/\/ Create an return a Polygon object in shape of a star with npoints \/\/ Parameters: num points, inner radius, outer radius, x- and y- offset public static Polygon makeStar( int npoints, double outrad, double inrad, double xoffset, double yoffset) { double[] Xs = new double[2*npoints]; \/\/ Vertex coordinates double[] Ys = new double[2*npoints]; double dangle = (Math.PI \/ npoints); \/\/ Angle between vertices double angle = -0.5*Math.PI; \/\/ One point on top \/\/ Compute vertex coordinates. Two per iteration. for (int i = 0; i<2*npoints; i += 2) { \/\/ Outer vertex (convex\/star point) Xs[i] = xoffset + outrad * Math.cos(angle); Ys[i] = yoffset + outrad * Math.sin(angle); angle += dangle; \/\/ Inner vertex (concave point) Xs[i+1] = xoffset + inrad * Math.cos(angle); Ys[i+1] = yoffset + inrad * Math.sin(angle); angle += dangle; } \/\/ Instantiate and return a new Star-shaped Polygon return new Polygon(Xs, Ys); } }     javac -cp doodlepad.jar MakeStar.java java -cp .;doodlepad.jar MakeStar      shows the output of running the program in . The red 50-point star is composed of 100 vertices. Building this polygon from scratch would be far too tedious to do by hand. Fortunately, with a bit of reasoning, a cople arrays, and iteration, we can accomplish this relatively easily.    MakeStar.java     "
+},
+{
+  "id": "figure-ar-polygon1",
+  "level": "2",
+  "url": "section-ar-polygons.html#figure-ar-polygon1",
+  "type": "Figure",
+  "number": "8.6.1",
+  "title": "",
+  "body": " Polygon Object   "
+},
+{
+  "id": "listing-57",
+  "level": "2",
+  "url": "section-ar-polygons.html#listing-57",
+  "type": "Listing",
+  "number": "8.6.2",
+  "title": "<code class=\"code-inline tex2jax_ignore\">PolygonDemo1.java<\/code>",
+  "body": " PolygonDemo1.java   \/\/ PolygonDemo1.java import doodlepad.*; public class PolygonDemo1 { public static void main(String[] args) { \/\/ Create and initialize two double[] arrays double[] Xs = new double[] { 50.0, 100.0, 150.0}; double[] Ys = new double[] {150.0, 50.0, 150.0}; \/\/ Pass arrays to Polygon constructor Polygon p1 = new Polygon(Xs, Ys); } }   "
+},
+{
+  "id": "listing-ar-makestar",
+  "level": "2",
+  "url": "section-ar-polygons.html#listing-ar-makestar",
+  "type": "Listing",
+  "number": "8.6.3",
+  "title": "<code class=\"code-inline tex2jax_ignore\">MakeStar.java<\/code>",
+  "body": " MakeStar.java   \/\/ MakeStar.java import doodlepad.*; \/\/ Demonstrate the makeStar(...) method public class MakeStar { public static void main(String[] args) { Polygon star1 = makeStar(5, 100, 40, 150, 150); \/\/ 5-point star Polygon star2 = makeStar(50, 100, 40, 150, 350);\/\/ 50-point star star1.setFillColor(255, 255, 0); \/\/ Fill star2.setFillColor(255, 0, 0); } \/\/ Create an return a Polygon object in shape of a star with npoints \/\/ Parameters: num points, inner radius, outer radius, x- and y- offset public static Polygon makeStar( int npoints, double outrad, double inrad, double xoffset, double yoffset) { double[] Xs = new double[2*npoints]; \/\/ Vertex coordinates double[] Ys = new double[2*npoints]; double dangle = (Math.PI \/ npoints); \/\/ Angle between vertices double angle = -0.5*Math.PI; \/\/ One point on top \/\/ Compute vertex coordinates. Two per iteration. for (int i = 0; i<2*npoints; i += 2) { \/\/ Outer vertex (convex\/star point) Xs[i] = xoffset + outrad * Math.cos(angle); Ys[i] = yoffset + outrad * Math.sin(angle); angle += dangle; \/\/ Inner vertex (concave point) Xs[i+1] = xoffset + inrad * Math.cos(angle); Ys[i+1] = yoffset + inrad * Math.sin(angle); angle += dangle; } \/\/ Instantiate and return a new Star-shaped Polygon return new Polygon(Xs, Ys); } }   "
+},
+{
+  "id": "figure-ar-star-polygon",
+  "level": "2",
+  "url": "section-ar-polygons.html#figure-ar-star-polygon",
+  "type": "Figure",
+  "number": "8.6.4",
+  "title": "",
+  "body": " MakeStar.java   "
 },
 {
   "id": "section-74",
@@ -2688,121 +2877,58 @@ var ptx_lunr_docs = [
   "url": "section-74.html",
   "type": "Section",
   "number": "8.7",
-  "title": "Arrays of Objects",
-  "body": " Arrays of Objects  Like a variable or ArrayList, the elements of an array of objects hold references to objects  "
-},
-{
-  "id": "section-75",
-  "level": "1",
-  "url": "section-75.html",
-  "type": "Section",
-  "number": "8.8",
-  "title": "<code class=\"code-inline tex2jax_ignore\">Arrays<\/code> Library",
-  "body": " Arrays Library  The Arrays library of static methods for manipulating arrays in Java  "
-},
-{
-  "id": "section-76",
-  "level": "1",
-  "url": "section-76.html",
-  "type": "Section",
-  "number": "8.9",
-  "title": "Command-line Parameters",
-  "body": " Command-line Parameters  Command-line parameters are passed to main() as an array of Strings  "
-},
-{
-  "id": "section-ar-polygons",
-  "level": "1",
-  "url": "section-ar-polygons.html",
-  "type": "Section",
-  "number": "8.10",
-  "title": "Polygons",
-  "body": " Polygons   A Polygon is a closed multi-sided shape made up of three or more straight lines connected end-to-end with the end of last line attached to the beginning of the first. Polygons are created by specifying the ordered sequence of vertices that define all straight lines. Think of a triangle, square, pentagon, hexagon, etc. In DoodlePad the Polygon class is used to create any polygon that you can imagine. A polygon may be convex or concave in spots; it is entirely up to you and the coordinates of the vertices that you specify.    Path Object     The Polygon class defines several constructors for you to use to create new polygon shapes; but they fall in two general categories. The first category takes two arrays: one holding all x-coordinates and a second holding corresponding y-coordinates. These arrays maybe double[] or int[] arrays.  The following example program creates a Polygon object in the shape of a triangle. The figure on the right is the output generated by this program.   PolygonDemo1.java   \/\/ PolygonDemo1.java import doodlepad.*; public class PolygonDemo1 { public static void main(String[] args) { \/\/ Create and initialize two double[] arrays double[] Xs = new double[] { 50.0, 100.0, 150.0}; double[] Ys = new double[] {150.0, 50.0, 150.0}; \/\/ Pass arrays to Polygon constructor Polygon p1 = new Polygon(Xs, Ys); } }    The second category of Polygon constructor takes a List of Point objects that define the polygon's vertices. More specifically, this Polygon constructor takes a java.util.List<Point> varable as a parameter. The example below demonstrates how to create the same triangle created in the previous example, only this time using the alternate constructor. An ArrayList<Point> object is used as the parameter as ArrayList implements the java.util.List interface.   PolygonDemo2.java   \/\/ PolygonDemo2.java import doodlepad.*; import java.util.ArrayList; public class PolygonDemo2 { public static void main(String[] args) { \/\/ Create and initialize a List of Point object ArrayList<Point> points = new ArrayList<>(); points.add( new Point( 50.0, 150.0) ); points.add( new Point( 100.0, 50.0) ); points.add( new Point( 150.0, 150.0) ); \/\/ Pass Point List to Polygon constructor Polygon p1 = new Polygon(points); } }    "
-},
-{
-  "id": "figure-44",
-  "level": "2",
-  "url": "section-ar-polygons.html#figure-44",
-  "type": "Figure",
-  "number": "8.10.1",
-  "title": "",
-  "body": " Path Object   "
-},
-{
-  "id": "listing-49",
-  "level": "2",
-  "url": "section-ar-polygons.html#listing-49",
-  "type": "Listing",
-  "number": "8.10.2",
-  "title": "<code class=\"code-inline tex2jax_ignore\">PolygonDemo1.java<\/code>",
-  "body": " PolygonDemo1.java   \/\/ PolygonDemo1.java import doodlepad.*; public class PolygonDemo1 { public static void main(String[] args) { \/\/ Create and initialize two double[] arrays double[] Xs = new double[] { 50.0, 100.0, 150.0}; double[] Ys = new double[] {150.0, 50.0, 150.0}; \/\/ Pass arrays to Polygon constructor Polygon p1 = new Polygon(Xs, Ys); } }   "
-},
-{
-  "id": "listing-50",
-  "level": "2",
-  "url": "section-ar-polygons.html#listing-50",
-  "type": "Listing",
-  "number": "8.10.3",
-  "title": "<code class=\"code-inline tex2jax_ignore\">PolygonDemo2.java<\/code>",
-  "body": " PolygonDemo2.java   \/\/ PolygonDemo2.java import doodlepad.*; import java.util.ArrayList; public class PolygonDemo2 { public static void main(String[] args) { \/\/ Create and initialize a List of Point object ArrayList<Point> points = new ArrayList<>(); points.add( new Point( 50.0, 150.0) ); points.add( new Point( 100.0, 50.0) ); points.add( new Point( 150.0, 150.0) ); \/\/ Pass Point List to Polygon constructor Polygon p1 = new Polygon(points); } }   "
-},
-{
-  "id": "section-78",
-  "level": "1",
-  "url": "section-78.html",
-  "type": "Section",
-  "number": "8.11",
   "title": "Key Concepts",
-  "body": " Key Concepts   An array is a linear data structure built in the Java.  Arrays may hold primitive data types as well as objects.  Array elements must have a uniform type.  When created, an array has a size that is predetermined and may not be extended.  An array variable is declared by specifying the type of array elements followed by square brackets.  An array is created using the new keyword followed by the type and a size in square brackets.  An array element is accessed using the variable name followed by square brackest and the element number.  Array elements begin at index 0 and end at one less than the length of the array.  The length of an array may be determined using the length property of an array object.  An array may be initialized at the time it is created by leaving out the size of the array but following with curly braces containing a comma-delimited list of values.  A shorthand for initializing an array is to declare an array variable and assign it directly to a curly brace-delimited list of values.  To access an element of an array follow the array variable with a pair of square brackets containing the number of the array element. This form of element access may be used for reading and assigning values to an array element.  Accessing all elements of an array may be performed with a while- or for-loop which generates all indexes.  An array element may itself be an array  An array of arrays is referred to as a 2-dimensional array  2D array variables may be declared with a type followed by two pairs of square brackets.  2D arrays may be created using the new keyword following by two pairs of square brackets containing the number of elements in each dimension. In this case the array is rectangular in shape.  To access an element in a 2D array use two pairs of square brackets, each containing indexes.  A 2D array may be initialized by leaving out dimensions when creating the array and following with nested curly braces containing comma-separated values.  A shorthand for initializing a 2D array is to declare an array variable and assign it directly to nested curly brace-delimited lists of values.  The second dimension of a 2D array is not required to have uniform lengths. This is referred to as a ragged array.  2D ragged arrays may be created by leaving out the length of the second dimension. In this case each array element has the value null.  When using a ragged array each element of the first dimension may be assigned to a 1D array of varying length, provided the types are compatible.  A shorthand for initializing a ragged 2D array is to declare an array variable and assign it directly to nested curly brace-delimited lists of values, where the length of each subordinate list may vary.  To print the elements of a ragged array by looping, the inner loop extent must interrogate each subordinate array length to set the upper loop counter value.  Arrays of dimension higher than two are possible by following the pattern for extending from 1D to 2D arrays.  Use the java.util.Arrays package to access static utility functions for manipulating arrays.  Arrays may be passed by reference to methods, just like any other object reference.  The public static void main()String[] args) method takes an array of Strings, where Strings are read from the terminal following the java command and class name. This array is referred to as the programs command line arguments.   "
+  "body": " Key Concepts   An array is a linear data structure built in the Java.  Arrays may hold primitive data types as well as objects.  Array elements must have a uniform type.  When created, an array has a size that is predetermined and may not be extended.  An array variable is declared by specifying the type of array elements followed by square brackets.  An array is created using the new keyword followed by the type and a size in square brackets.  An array element is accessed using the array variable name followed by square brackets and the element number.  Array elements begin at index 0 and end at an index of one less than the length of the array.  The length of an array may be determined using the .length property of an array.  An array may be initialized at the time it is created by leaving out the size of the array but following with curly braces containing a comma-delimited list of values.  A shorthand for initializing an array is to declare an array variable and assign it directly to a curly brace-delimited list of values.  To access an element of an array, follow the array variable with a pair of square brackets containing the number of the array element. This form of element access may be used for reading and assigning values to an array element.  Accessing all elements of an array may be performed with a while- or for-loop which generates all indexes, typically as a loop counter.  An array element may itself be an array.  An array of arrays is referred to as a multidimensional array .  2D array variables may be declared with a type followed by two pairs of square brackets.  2D arrays may be created using the new keyword following by two pairs of square brackets containing the number of elements in each dimension. In this case the array is rectangular in shape.  To access an element in a 2D array use the array variable followed by two pairs of square brackets, each containing indexes.  A 2D array may be initialized by leaving out dimensions when creating the array and followed by nested curly braces containing comma-separated values.  A shorthand for initializing a 2D array is to declare an array variable and assign it directly to nested curly brace-delimited lists of values.  The second dimension of a 2D array is not required to have uniform lengths. This is referred to as a ragged array .  2D ragged arrays may be created by leaving out the length of the second dimension. In this case each array element starts with the default value null .  When using a ragged array, each element of the first dimension may be assigned to a 1D array of non-uniform length, provided the types are compatible.  A shorthand for initializing a ragged 2D array is to declare an array variable and assign it directly to nested curly brace-delimited lists of values, where the length of each subordinate list may vary.  To print the elements of a ragged array with iteration, the inner loop extent must use each subordinate array length to check the loop counter value.  Arrays of dimension higher than two are possible by following the pattern for extending from 1D to 2D arrays.  Use the java.util.Arrays package to access static utility functions for manipulating arrays.  Arrays are passed to methods by reference, just like any other object.  The public static void main()String[] args) method takes an array of Strings parameter, where the array Strings are read from the user input following the java command and class name. This array is referred to as the programs command line arguments .   "
 },
 {
   "id": "section-ar-exercises",
   "level": "1",
   "url": "section-ar-exercises.html",
   "type": "Section",
-  "number": "8.12",
+  "number": "8.8",
   "title": "Chapter Exercises",
   "body": " Chapter Exercises   "
 },
 {
-  "id": "section-80",
+  "id": "section-76",
   "level": "1",
-  "url": "section-80.html",
+  "url": "section-76.html",
   "type": "Section",
   "number": "9.1",
   "title": "Class vs Instance",
   "body": "Class vs Instance  There can only ever be one class. There can be zero or more instances.  static fields belong to the class. All non-static fields are copied into each instance.  static methods do not have access to non-static fields. Non-static methods may access the scope of the object through which they are executed.  Class vs Object scope.  "
 },
 {
-  "id": "section-81",
+  "id": "section-77",
   "level": "1",
-  "url": "section-81.html",
+  "url": "section-77.html",
   "type": "Section",
   "number": "9.2",
   "title": "Constructors and Methods",
   "body": "Constructors and Methods  Anatomy of a Constructor  Constructor patters - init object fields.  Non-static methods  Method vs Constructor  The this keyword to set object scope  Using class name to set static scope  "
 },
 {
-  "id": "section-82",
+  "id": "section-78",
   "level": "1",
-  "url": "section-82.html",
+  "url": "section-78.html",
   "type": "Section",
   "number": "9.3",
   "title": "Access Control",
   "body": "Access Control  public vs private  "
 },
 {
-  "id": "section-83",
+  "id": "section-79",
   "level": "1",
-  "url": "section-83.html",
+  "url": "section-79.html",
   "type": "Section",
   "number": "9.4",
   "title": "Accessor and Mutator Methods",
   "body": "Accessor and Mutator Methods  getters and setters  "
 },
 {
-  "id": "section-84",
+  "id": "section-80",
   "level": "1",
-  "url": "section-84.html",
+  "url": "section-80.html",
   "type": "Section",
   "number": "9.5",
   "title": "Encapsulation",
@@ -2818,81 +2944,81 @@ var ptx_lunr_docs = [
   "body": " Enumerated Types  In Java, enumerated types, also known as enums , provide a way to define a fixed set of named constants. Enums allow you to create a custom data type with a predefined and automatically assigned set of values, making your code more readable, maintainable, and type-safe.  To define an enum in Java, you use the enum keyword followed by the name of the enum type. Here's an example of a simple enum representing clothing sizes:  TODO: Replace following with a program  >jshell | Welcome to JShell -- Version 17.0.6 | For an introduction type: \/help intro jshell> enum Size { ...> XSMALL, ...> SMALL, ...> MEDIUM, ...> LARGE, ...> XLARGE ...> } | created enum Size jshell>  In this example, Size > is the name of the enum type, and the constants SMALL , MEDIUM , LARGE , etc., are the possible values of the enum. Note that capitalization of constant name is not required, but useful for communicating the fact that these are constants.  You can use enum constants in your code just like any other static variables. For example:  jshell> Size mySize = Size.LARGE; mySize ==> LARGE jshell> System.out.println(\"Please order a \" + mySize); Please order a LARGE jshell>  Enums also have some useful methods automatically provided by Java. For instance, you can retrieve the name of an enum constant using the name() method:  jshell> System.out.println(\"Please order a \" + mySize.name()); Please order a LARGE  You can compare enum constants using the equality operator (==) because each constant is a unique instance of the enum type. Enums can also be used in switch statements for easy branching based on the enum value.  TODO: Replace following with a program  jshell> switch (mySize) { ...> case XSMALL: ...> case XLARGE: ...> System.out.println(\"We are out of 'extra' sizes\"); ...> break; ...> default: ...> System.out.println(\"Order placed\"); ...> } We are out of 'extra' sizes jshell>  Enums can have constructors, fields, and methods like any other Java class. You can even define custom behavior for each enum constant.  In summary, Java enumerated types (enums) provide a convenient way to define a fixed set of named constants, making your code more expressive and robust. Enums are type-safe, can have custom behavior, and provide useful methods out-of-the-box for working with the constants they define.  "
 },
 {
-  "id": "p-661",
+  "id": "p-702",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-661",
+  "url": "section-cl-enumerated.html#p-702",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "TODO: Replace following with a program "
 },
 {
-  "id": "p-666",
+  "id": "p-707",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-666",
+  "url": "section-cl-enumerated.html#p-707",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "TODO: Replace following with a program "
 },
 {
-  "id": "section-86",
+  "id": "section-82",
   "level": "1",
-  "url": "section-86.html",
+  "url": "section-82.html",
   "type": "Section",
   "number": "9.7",
   "title": "Multiple File Programs",
   "body": "Multiple File Programs  Classes defined in multiple files.  Compiling and running programs spread over multiple files.  Multiple classes in the same file  Packages and file structure  A class's main() method is invoked automatically when the class is run.  jar files - just a zip archive of .class files  "
 },
 {
-  "id": "section-87",
+  "id": "section-83",
   "level": "1",
-  "url": "section-87.html",
+  "url": "section-83.html",
   "type": "Section",
   "number": "9.8",
   "title": "Driver Programs",
   "body": "Driver Programs  Typically a top-level class with static methods that create and orchestrate other objects. May only have the static main() method.  "
 },
 {
-  "id": "section-88",
+  "id": "section-84",
   "level": "1",
-  "url": "section-88.html",
+  "url": "section-84.html",
   "type": "Section",
   "number": "9.9",
   "title": "Testing",
   "body": "Testing  Using the main() method for testing  "
 },
 {
-  "id": "section-89",
+  "id": "section-85",
   "level": "1",
-  "url": "section-89.html",
+  "url": "section-85.html",
   "type": "Section",
   "number": "9.10",
   "title": "Review of Scope",
   "body": "Review of Scope  block, method, object, class  One more, package  Scope sets variable lifetime. Be careful to define variables in the appropriate scope  The \"narrowest scope feasible\" principle.  "
 },
 {
-  "id": "section-90",
+  "id": "section-86",
   "level": "1",
-  "url": "section-90.html",
+  "url": "section-86.html",
   "type": "Section",
   "number": "9.11",
   "title": "Shadowing",
   "body": "Shadowing  We get used to declaring and initializing variables. This often causes shadowing errors.  "
 },
 {
-  "id": "section-91",
+  "id": "section-87",
   "level": "1",
-  "url": "section-91.html",
+  "url": "section-87.html",
   "type": "Section",
   "number": "9.12",
   "title": "Anonymous Objects",
   "body": "Anonymous Objects  Created, used, and lost  "
 },
 {
-  "id": "section-92",
+  "id": "section-88",
   "level": "1",
-  "url": "section-92.html",
+  "url": "section-88.html",
   "type": "Section",
   "number": "9.13",
   "title": "Key Concepts",
@@ -2908,99 +3034,99 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-93",
+  "id": "section-89",
   "level": "1",
-  "url": "section-93.html",
+  "url": "section-89.html",
   "type": "Section",
   "number": "10.1",
   "title": "Setting Up Inheritance",
   "body": "Setting Up Inheritance  extends and super keywords keyword  base class, derived class  Prevent subclassing using the final keyword  "
 },
 {
-  "id": "p-686",
+  "id": "p-727",
   "level": "2",
-  "url": "section-93.html#p-686",
+  "url": "section-89.html#p-727",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "final "
 },
 {
-  "id": "section-94",
+  "id": "section-90",
   "level": "1",
-  "url": "section-94.html",
+  "url": "section-90.html",
   "type": "Section",
   "number": "10.2",
   "title": "Benefits of Inheritance",
   "body": "Benefits of Inheritance  Subclassing automatically shares all functionality in base class. Derived class has a head start.  Modifications and updates apply to all derived classes  Reduction of code duplication  Reduction of excessive code maintenance  "
 },
 {
-  "id": "section-95",
+  "id": "section-91",
   "level": "1",
-  "url": "section-95.html",
+  "url": "section-91.html",
   "type": "Section",
   "number": "10.3",
   "title": "Generalization and Specialization",
   "body": "Generalization and Specialization  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  "
 },
 {
-  "id": "section-96",
+  "id": "section-92",
   "level": "1",
-  "url": "section-96.html",
+  "url": "section-92.html",
   "type": "Section",
   "number": "10.4",
   "title": "Subtype Polymorphism and Dynamic Binding",
   "body": "Subtype Polymorphism and Dynamic Binding  Assign an object of type derived class to a variable of type base class  Cast an object of type base class to a variable of type derived class  Dynamic binding  https:\/\/software.rajivprab.com\/2019\/08\/14\/nuances-of-overloading-and-overriding-in-java\/ Single Dispatch, Hidden Override, Exposed Override, Ambiguous Parameter, Multiple Inheritance - Interfaces, Multiple Inheritance - Class and Interface, Transitive Override, Private Override, Static Overrides, Static Linking  Using the @Override annotation on all override methods will help greatly in preventing regressions, by producing compile errors as soon as any base methods have their visibility changed.  "
 },
 {
-  "id": "p-699",
+  "id": "p-740",
   "level": "2",
-  "url": "section-96.html#p-699",
+  "url": "section-92.html#p-740",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "@Override "
 },
 {
-  "id": "section-97",
+  "id": "section-93",
   "level": "1",
-  "url": "section-97.html",
+  "url": "section-93.html",
   "type": "Section",
   "number": "10.5",
   "title": "protected Access",
   "body": "protected Access  "
 },
 {
-  "id": "section-98",
+  "id": "section-94",
   "level": "1",
-  "url": "section-98.html",
+  "url": "section-94.html",
   "type": "Section",
   "number": "10.6",
   "title": "The Object Class",
   "body": "The Object Class  All Java classes inherit Object, even when there is no extends  The inherited toString() method and when to override  The inherited equals() and when to override  "
 },
 {
-  "id": "section-99",
+  "id": "section-95",
   "level": "1",
-  "url": "section-99.html",
+  "url": "section-95.html",
   "type": "Section",
   "number": "10.7",
   "title": "Testing for a specific Class",
   "body": "Testing for a specific Class  instanceof operator  "
 },
 {
-  "id": "section-100",
+  "id": "section-96",
   "level": "1",
-  "url": "section-100.html",
+  "url": "section-96.html",
   "type": "Section",
   "number": "10.8",
   "title": "Abstract Classes and Methods",
   "body": "Abstract Classes and Methods  Force a derived class to implement a method by declaring it abstract in the base class  A class with an abstract method must also be declared abstract  "
 },
 {
-  "id": "p-704",
+  "id": "p-745",
   "level": "2",
-  "url": "section-100.html#p-704",
+  "url": "section-96.html#p-745",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3025,36 +3151,36 @@ var ptx_lunr_docs = [
   "body": " PushButton2.java   \/\/ PushButton2.java import doodlepad.*; public class PushButton2 extends RoundRect { private boolean isOn; \/\/ Button state public PushButton2(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); \/\/ Initialize the button this.setFillColor(200); \/\/ Starts off isOn = false; } @Override public void onMousePressed(double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill color based on state if (isOn) { this.setFillColor(0, 255, 0); } else { this.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton2 PushButton2 myPushButton = new PushButton2(100, 100, 75, 50); } }   "
 },
 {
-  "id": "table-47",
+  "id": "table-49",
   "level": "2",
-  "url": "section-in-doodlepad.html#table-47",
+  "url": "section-in-doodlepad.html#table-49",
   "type": "Table",
   "number": "10.9.2",
   "title": "Overridable Shape Event Methods",
   "body": " Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.    "
 },
 {
-  "id": "table-48",
+  "id": "table-50",
   "level": "2",
-  "url": "section-in-doodlepad.html#table-48",
+  "url": "section-in-doodlepad.html#table-50",
   "type": "Table",
   "number": "10.9.3",
   "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",
   "body": " Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.    "
 },
 {
-  "id": "table-49",
+  "id": "table-51",
   "level": "2",
-  "url": "section-in-doodlepad.html#table-49",
+  "url": "section-in-doodlepad.html#table-51",
   "type": "Table",
   "number": "10.9.4",
   "title": "Overridable Pad Socket Event Methods",
   "body": " Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share    "
 },
 {
-  "id": "section-102",
+  "id": "section-98",
   "level": "1",
-  "url": "section-102.html",
+  "url": "section-98.html",
   "type": "Section",
   "number": "10.10",
   "title": "Key Concepts",
@@ -3070,90 +3196,90 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-103",
+  "id": "section-99",
   "level": "1",
-  "url": "section-103.html",
+  "url": "section-99.html",
   "type": "Section",
   "number": "11.1",
   "title": "Defining and Implementing Interfaces",
   "body": "Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
 },
 {
-  "id": "p-711",
+  "id": "p-752",
   "level": "2",
-  "url": "section-103.html#p-711",
+  "url": "section-99.html#p-752",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "class interface "
 },
 {
-  "id": "p-713",
+  "id": "p-754",
   "level": "2",
-  "url": "section-103.html#p-713",
+  "url": "section-99.html#p-754",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "extends implements "
 },
 {
-  "id": "section-104",
+  "id": "section-100",
   "level": "1",
-  "url": "section-104.html",
+  "url": "section-100.html",
   "type": "Section",
   "number": "11.2",
   "title": "Interfaces and Polymorphism",
   "body": "Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
 },
 {
-  "id": "section-105",
+  "id": "section-101",
   "level": "1",
-  "url": "section-105.html",
+  "url": "section-101.html",
   "type": "Section",
   "number": "11.3",
   "title": "Comparable&lt;T&gt; Interface",
   "body": "Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
 },
 {
-  "id": "section-106",
+  "id": "section-102",
   "level": "1",
-  "url": "section-106.html",
+  "url": "section-102.html",
   "type": "Section",
   "number": "11.4",
   "title": "Iterator&lt;T&gt; Interface",
   "body": "Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
 },
 {
-  "id": "section-107",
+  "id": "section-103",
   "level": "1",
-  "url": "section-107.html",
+  "url": "section-103.html",
   "type": "Section",
   "number": "11.5",
   "title": "Benefits of an Interface",
   "body": "Benefits of an Interface  An ArrayList holding objects of multiple types  "
 },
 {
-  "id": "section-108",
+  "id": "section-104",
   "level": "1",
-  "url": "section-108.html",
+  "url": "section-104.html",
   "type": "Section",
   "number": "11.6",
   "title": "Defining Your Own Interfaces",
   "body": "Defining Your Own Interfaces   "
 },
 {
-  "id": "section-109",
+  "id": "section-105",
   "level": "1",
-  "url": "section-109.html",
+  "url": "section-105.html",
   "type": "Section",
   "number": "11.7",
   "title": "Interfaces and Polymorphism",
   "body": "Interfaces and Polymorphism   "
 },
 {
-  "id": "section-110",
+  "id": "section-106",
   "level": "1",
-  "url": "section-110.html",
+  "url": "section-106.html",
   "type": "Section",
   "number": "11.8",
   "title": "Key Concepts",
@@ -3169,108 +3295,108 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-111",
+  "id": "section-107",
   "level": "1",
-  "url": "section-111.html",
+  "url": "section-107.html",
   "type": "Section",
   "number": "12.1",
   "title": "Software Development Life Cycled (SDLC)",
   "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
 },
 {
-  "id": "section-112",
+  "id": "section-108",
   "level": "1",
-  "url": "section-112.html",
+  "url": "section-108.html",
   "type": "Section",
   "number": "12.2",
   "title": "Encapsulation and Abstraction",
   "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
 },
 {
-  "id": "section-113",
+  "id": "section-109",
   "level": "1",
-  "url": "section-113.html",
+  "url": "section-109.html",
   "type": "Section",
   "number": "12.3",
   "title": "Object Relationships",
   "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
 },
 {
-  "id": "section-114",
+  "id": "section-110",
   "level": "1",
-  "url": "section-114.html",
+  "url": "section-110.html",
   "type": "Section",
   "number": "12.4",
   "title": "When to use Inheritance",
   "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
 },
 {
-  "id": "section-115",
+  "id": "section-111",
   "level": "1",
-  "url": "section-115.html",
+  "url": "section-111.html",
   "type": "Section",
   "number": "12.5",
   "title": "When to use Interfaces",
   "body": "When to use Interfaces  Common public interface  "
 },
 {
-  "id": "section-116",
+  "id": "section-112",
   "level": "1",
-  "url": "section-116.html",
+  "url": "section-112.html",
   "type": "Section",
   "number": "12.6",
   "title": "Cohesion and Coupling",
   "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
 },
 {
-  "id": "section-117",
+  "id": "section-113",
   "level": "1",
-  "url": "section-117.html",
+  "url": "section-113.html",
   "type": "Section",
   "number": "12.7",
   "title": "Unified Modeling Language (UML)",
   "body": "Unified Modeling Language (UML)  "
 },
 {
-  "id": "section-118",
+  "id": "section-114",
   "level": "1",
-  "url": "section-118.html",
+  "url": "section-114.html",
   "type": "Section",
   "number": "12.8",
   "title": "Class Diagram",
   "body": "Class Diagram  A structure diagram  "
 },
 {
-  "id": "section-119",
+  "id": "section-115",
   "level": "1",
-  "url": "section-119.html",
+  "url": "section-115.html",
   "type": "Section",
   "number": "12.9",
   "title": "Object Diagram",
   "body": "Object Diagram  A structure diagram  "
 },
 {
-  "id": "section-120",
+  "id": "section-116",
   "level": "1",
-  "url": "section-120.html",
+  "url": "section-116.html",
   "type": "Section",
   "number": "12.10",
   "title": "Activity Diagrams",
   "body": "Activity Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-121",
+  "id": "section-117",
   "level": "1",
-  "url": "section-121.html",
+  "url": "section-117.html",
   "type": "Section",
   "number": "12.11",
   "title": "State Machine Diagrams",
   "body": "State Machine Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-122",
+  "id": "section-118",
   "level": "1",
-  "url": "section-122.html",
+  "url": "section-118.html",
   "type": "Section",
   "number": "12.12",
   "title": "Key Concepts",
@@ -3286,99 +3412,99 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-123",
+  "id": "section-119",
   "level": "1",
-  "url": "section-123.html",
+  "url": "section-119.html",
   "type": "Section",
   "number": "13.1",
   "title": "Syntax Errors",
   "body": "Syntax Errors  Caught by the compiler  "
 },
 {
-  "id": "section-124",
+  "id": "section-120",
   "level": "1",
-  "url": "section-124.html",
+  "url": "section-120.html",
   "type": "Section",
   "number": "13.2",
   "title": "Logic Errors",
   "body": "Logic Errors  The program runs, but produces the wrong output.  "
 },
 {
-  "id": "section-125",
+  "id": "section-121",
   "level": "1",
-  "url": "section-125.html",
+  "url": "section-121.html",
   "type": "Section",
   "number": "13.3",
   "title": "Runtime Errors",
   "body": "Runtime Errors  The program compiles, but something goes wrong while it is running. Java responds to the problem by throwing an exception. Like nearly everything else in Java, an exception is an object created by instantiating a suitable exception class that identifies the problem.  If there is no intervention, Java will eventually print the current state of the call stack when the exception object is thrown.  "
 },
 {
-  "id": "p-748",
+  "id": "p-789",
   "level": "2",
-  "url": "section-125.html#p-748",
+  "url": "section-121.html#p-789",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "call stack "
 },
 {
-  "id": "section-126",
+  "id": "section-122",
   "level": "1",
-  "url": "section-126.html",
+  "url": "section-122.html",
   "type": "Section",
   "number": "13.4",
   "title": "Common Exception Classes",
   "body": "Common Exception Classes  ArithmeticException  NullPointerException  IndexOutOfBoundsException  ArrayIndexOutOfBoundsException  IllegalArgumentException  Exception class hierarchy  printStackTrace() method  "
 },
 {
-  "id": "section-127",
+  "id": "section-123",
   "level": "1",
-  "url": "section-127.html",
+  "url": "section-123.html",
   "type": "Section",
   "number": "13.5",
   "title": "Catching Exceptions",
   "body": "Catching Exceptions  try-catch  try-catch-finally  "
 },
 {
-  "id": "section-128",
+  "id": "section-124",
   "level": "1",
-  "url": "section-128.html",
+  "url": "section-124.html",
   "type": "Section",
   "number": "13.6",
   "title": "Checked vs. Unchecked Exceptions",
   "body": "Checked vs. Unchecked Exceptions  Checked exceptions must be caught  Alternatively, the catching of a checked exception may be deferred using the throws keyword.  "
 },
 {
-  "id": "p-759",
+  "id": "p-800",
   "level": "2",
-  "url": "section-128.html#p-759",
+  "url": "section-124.html#p-800",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "throws "
 },
 {
-  "id": "section-129",
+  "id": "section-125",
   "level": "1",
-  "url": "section-129.html",
+  "url": "section-125.html",
   "type": "Section",
   "number": "13.7",
   "title": "Reading Files",
   "body": "Reading Files  Thow IO exceptions  IO exceptions are checked, and must be caught in a try-catch  Files need to be closed.  "
 },
 {
-  "id": "section-130",
+  "id": "section-126",
   "level": "1",
-  "url": "section-130.html",
+  "url": "section-126.html",
   "type": "Section",
   "number": "13.8",
   "title": "try-with-resources",
   "body": "try-with-resources  May be used with objects that implement the AutoClosable interface.  public interface AutoCloseable { void close() throws Exception; }  "
 },
 {
-  "id": "section-131",
+  "id": "section-127",
   "level": "1",
-  "url": "section-131.html",
+  "url": "section-127.html",
   "type": "Section",
   "number": "13.9",
   "title": "Key Concepts",
@@ -3394,117 +3520,117 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-132",
+  "id": "section-128",
   "level": "1",
-  "url": "section-132.html",
+  "url": "section-128.html",
   "type": "Section",
   "number": "14.1",
   "title": "Tracing Programs",
   "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
 },
 {
-  "id": "section-133",
+  "id": "section-129",
   "level": "1",
-  "url": "section-133.html",
+  "url": "section-129.html",
   "type": "Section",
   "number": "14.2",
   "title": "The Call Stack",
   "body": "The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
 },
 {
-  "id": "section-134",
+  "id": "section-130",
   "level": "1",
-  "url": "section-134.html",
+  "url": "section-130.html",
   "type": "Section",
   "number": "14.3",
   "title": "Recursion",
   "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
 },
 {
-  "id": "p-768",
+  "id": "p-809",
   "level": "2",
-  "url": "section-134.html#p-768",
+  "url": "section-130.html#p-809",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "recursion "
 },
 {
-  "id": "p-769",
+  "id": "p-810",
   "level": "2",
-  "url": "section-134.html#p-769",
+  "url": "section-130.html#p-810",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Direct recursion "
 },
 {
-  "id": "p-770",
+  "id": "p-811",
   "level": "2",
-  "url": "section-134.html#p-770",
+  "url": "section-130.html#p-811",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Indirect recursion "
 },
 {
-  "id": "section-135",
+  "id": "section-131",
   "level": "1",
-  "url": "section-135.html",
+  "url": "section-131.html",
   "type": "Section",
   "number": "14.4",
   "title": "Solving Problems with Recursion",
   "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
 },
 {
-  "id": "p-773",
+  "id": "p-814",
   "level": "2",
-  "url": "section-135.html#p-773",
+  "url": "section-131.html#p-814",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cases base case recursive case "
 },
 {
-  "id": "section-136",
+  "id": "section-132",
   "level": "1",
-  "url": "section-136.html",
+  "url": "section-132.html",
   "type": "Section",
   "number": "14.5",
   "title": "Example: Computing Factorial",
   "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-137",
+  "id": "section-133",
   "level": "1",
-  "url": "section-137.html",
+  "url": "section-133.html",
   "type": "Section",
   "number": "14.6",
   "title": "Example: Computing Fibonacci Numbers",
   "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
 },
 {
-  "id": "section-138",
+  "id": "section-134",
   "level": "1",
-  "url": "section-138.html",
+  "url": "section-134.html",
   "type": "Section",
   "number": "14.7",
   "title": "Example: Drawing a Pyramid",
   "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-139",
+  "id": "section-135",
   "level": "1",
-  "url": "section-139.html",
+  "url": "section-135.html",
   "type": "Section",
   "number": "14.8",
   "title": "Example: Building a Maze",
   "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-140",
+  "id": "section-136",
   "level": "1",
-  "url": "section-140.html",
+  "url": "section-136.html",
   "type": "Section",
   "number": "14.9",
   "title": "Key Concepts",
@@ -3520,72 +3646,72 @@ var ptx_lunr_docs = [
   "body": "Exercises  "
 },
 {
-  "id": "section-141",
+  "id": "section-137",
   "level": "1",
-  "url": "section-141.html",
+  "url": "section-137.html",
   "type": "Section",
   "number": "15.1",
   "title": "Searching and Sorting Algorithms",
   "body": " Searching and Sorting Algorithms   A class that holds only static methods capable of performing several algorithms on Java Collection classes  https:\/\/docs.oracle.com\/en\/java\/javase\/20\/docs\/api\/java.base\/java\/util\/Collections.html   "
 },
 {
-  "id": "section-142",
+  "id": "section-138",
   "level": "1",
-  "url": "section-142.html",
+  "url": "section-138.html",
   "type": "Section",
   "number": "15.2",
   "title": "Sequential Search",
   "body": "Sequential Search  "
 },
 {
-  "id": "section-143",
+  "id": "section-139",
   "level": "1",
-  "url": "section-143.html",
+  "url": "section-139.html",
   "type": "Section",
   "number": "15.3",
   "title": "Binary Search",
   "body": "Binary Search  Iterative implementation  Recursive implementation  "
 },
 {
-  "id": "section-144",
+  "id": "section-140",
   "level": "1",
-  "url": "section-144.html",
+  "url": "section-140.html",
   "type": "Section",
   "number": "15.4",
   "title": "Selection Sort",
   "body": "Selection Sort  "
 },
 {
-  "id": "section-145",
+  "id": "section-141",
   "level": "1",
-  "url": "section-145.html",
+  "url": "section-141.html",
   "type": "Section",
   "number": "15.5",
   "title": "Insertion Sort",
   "body": "Insertion Sort  "
 },
 {
-  "id": "section-146",
+  "id": "section-142",
   "level": "1",
-  "url": "section-146.html",
+  "url": "section-142.html",
   "type": "Section",
   "number": "15.6",
   "title": "Merge Sort",
   "body": "Merge Sort  "
 },
 {
-  "id": "section-147",
+  "id": "section-143",
   "level": "1",
-  "url": "section-147.html",
+  "url": "section-143.html",
   "type": "Section",
   "number": "15.7",
   "title": "Complexity",
   "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
 },
 {
-  "id": "section-148",
+  "id": "section-144",
   "level": "1",
-  "url": "section-148.html",
+  "url": "section-144.html",
   "type": "Section",
   "number": "15.8",
   "title": "Key Concepts",
@@ -3610,9 +3736,9 @@ var ptx_lunr_docs = [
   "body": " ASCII Table   Americal Standard Code Information Interchange (ASCII)    Decimal Code  Symbol  Description   0 NUL Null character  1 SOH Start of Heading  2 STX Start of Text  3 ETX End of Text  3 ETX End of Text  4 EOT End of Transmission  5 ENQ Enquiry  6 ACK Acknowledge  7 BEL Bell, Alert  8 BS Backspace  9 HT Horizontal Tab  10 LF Line Feed  11 VT Vertical Tabulation  12 FF Form Feed  13 CR Carriage Return  14 SO Shift Out  15 SI Shift In  16 DLE Data Link Escape  17 DC1 Device Control One (XON)  18 DC2 Device Control Two  19 DC3 Device Control Three (XOFF)  20 DC4 Device Control Four  21 NAK Negative Acknowledge  22 SYN Synchronous Idle  23 ETB End of Transmission Block  24 CAN Cancel  25 EM End of medium  26 SUB Substitute  27 ESC Escape  28 FS File Separator  29 GS Group Separator  30 RS Record Separator  31 US Unit Separator  32 SP Space  33 ! Exclamation mark  34 \" Double quotes (or speech marks)  35 # Number sign  36 $ Dollar  37 % Per cent sign  38 & Ampersand  39 ' Single quote  40 ( Open parenthesis (or open bracket)  41 ) Close parenthesis (or close bracket)  42 * Asterisk  43 + Plus  44 , Comma  45 - Hyphen-minus  46 . Period, dot or full stop  47 \/ Slash or divide  48 0 Zero  49 1 One  50 2 Two  51 3 Three  52 4 Four  53 5 Five  54 6 Six  55 7 Seven  56 8 Eight  57 9 Nine  58 : Colon  59 ; Semicolon  60 Less than (or open angled bracket)  61 = Equals  62 > Greater than (or close angled bracket)  63 ? Question mark  64 @ At sign  65 A Uppercase A  66 B Uppercase B  67 C Uppercase C  68 D Uppercase D  69 E Uppercase E  70 F Uppercase F  71 G Uppercase G  72 H Uppercase H  73 I Uppercase I  74 J Uppercase J  75 K Uppercase K  76 L Uppercase L  77 M Uppercase M  78 N Uppercase N  79 O Uppercase O  80 P Uppercase P  81 Q Uppercase Q  82 R Uppercase R  83 S Uppercase S  84 T Uppercase T  85 U Uppercase U  86 V Uppercase V  87 W Uppercase W  88 X Uppercase X  89 Y Uppercase Y  90 Z Uppercase Z  91 [ Opening bracket  92 \\ Backslash  93 ] Closing bracket  94 ^ Caret - circumflex  95 _ Underscore  96 ` Grave accent  97 a Lowercase a  98 b Lowercase b  99 c Lowercase c  100 d Lowercase d  101 e Lowercase e  102 f Lowercase f  103 g Lowercase g  104 h Lowercase h  105 i Lowercase i  106 j Lowercase j  107 k Lowercase k  108 l Lowercase l  109 m Lowercase m  110 n Lowercase n  111 o Lowercase o  112 p Lowercase p  113 q Lowercase q  114 r Lowercase r  115 s Lowercase s  116 t Lowercase t  117 u Lowercase u  118 v Lowercase v  119 w Lowercase w  120 x Lowercase x  121 y Lowercase y  122 z Lowercase z  123 { Opening brace  124 | Vertical bar  125 } Closing brace  126 ~ Equivalency sign - tilde  127 DEL Delete    "
 },
 {
-  "id": "table-50",
+  "id": "table-52",
   "level": "2",
-  "url": "appendix_ascii_table.html#table-50",
+  "url": "appendix_ascii_table.html#table-52",
   "type": "Table",
   "number": "A.0.1",
   "title": "Americal Standard Code Information Interchange (ASCII)",
@@ -3628,18 +3754,18 @@ var ptx_lunr_docs = [
   "body": " Common Shells and Commands   Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX      Shell commands    Task  Shell  Command    Get the current working directory  Command Prompt  cd     PowerShell  pwd     bash  pwd    List directory contents  Command Prompt  dir     PowerShell  dir     bash  ls    Change the current working directory  Command Prompt  cd  path\\to\\directory     PowerShell  cd  path\\to\\directory     bash  cd  path\/to\/directory    Move up one directory level  Command Prompt  cd ..     PowerShell  cd ..     bash  cd ..    Create a new directory  Command Prompt  mkdir  directoryname     PowerShell  mkdir  directoryname     bash  mkdir  directoryname    Copy a file  Command Prompt  copy  source\\file\\path destination\\file\\path     PowerShell  Copy-Item -Path  source\\file\\path  -Destination  destination\\file\\path     bash  cp  source\/file\/path destination\/file\/path    Delete a file  Command Prompt  del  filename     PowerShell  del  filename     bash  rm  filename     "
 },
 {
-  "id": "table-51",
+  "id": "table-53",
   "level": "2",
-  "url": "appendix_shells.html#table-51",
+  "url": "appendix_shells.html#table-53",
   "type": "Table",
   "number": "B.0.1",
   "title": "Operating systems and their common shell programs",
   "body": " Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX    "
 },
 {
-  "id": "table-52",
+  "id": "table-54",
   "level": "2",
-  "url": "appendix_shells.html#table-52",
+  "url": "appendix_shells.html#table-54",
   "type": "Table",
   "number": "B.0.2",
   "title": "Shell commands",
@@ -3664,9 +3790,9 @@ var ptx_lunr_docs = [
   "body": " Testing   Introduce and motivate testing  Use main() for testing  Learn the debugger   The Importance of Testing  The compiler tells us if we have syntax error s and the execution engine throws exceptions when something goes wrong while the program is running ( runtime errors ). How can we check when the program runs without error, but produces incorrect results ( logic errors )? The best way to check for logic errors is through testing.  A good test plan executes all paths through your source code and presents a wide range of possible inputs. It checks results produced to make sure all they are correct.   Java assertions and AssertionError  Java assertions and AssertionError   Unit Testing  Integration Testing  Key Concepts   Testing is an important part of software development during which time test cases are developed and run to ensure a program is correct.  Test cases should cover all behavior expected by a program. This is called test coverage.  Special testing situations include a boundary (edge) case, a corner case and a special case  Software testing includes unit testing and integration testing  During unit testing individual isolated parts (units) of a program are tested for correctness independently  During integration testing the interaction between software units is tested for correctness   "
 },
 {
-  "id": "p-797",
+  "id": "p-838",
   "level": "2",
-  "url": "appendix-testing.html#p-797",
+  "url": "appendix-testing.html#p-838",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3709,18 +3835,18 @@ var ptx_lunr_docs = [
   "body": "   doodlepad.org   https:\/\/doodlepad.org   copyright  This book was authored in PreTeXt .  "
 },
 {
-  "id": "section-149",
+  "id": "section-145",
   "level": "1",
-  "url": "section-149.html",
+  "url": "section-145.html",
   "type": "Section",
   "number": "16.1",
   "title": "Visualizer",
   "body": " Visualizer   Visualize   "
 },
 {
-  "id": "section-150",
+  "id": "section-146",
   "level": "1",
-  "url": "section-150.html",
+  "url": "section-146.html",
   "type": "Section",
   "number": "16.2",
   "title": "Active Code",
@@ -3729,7 +3855,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-python",
   "level": "2",
-  "url": "section-150.html#program-activecode-python",
+  "url": "section-146.html#program-activecode-python",
   "type": "Listing",
   "number": "16.2.1",
   "title": "",
@@ -3738,7 +3864,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-java",
   "level": "2",
-  "url": "section-150.html#program-activecode-java",
+  "url": "section-146.html#program-activecode-java",
   "type": "Listing",
   "number": "16.2.2",
   "title": "Informal Java “Hello, World”",
@@ -3747,7 +3873,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-javascript",
   "level": "2",
-  "url": "section-150.html#program-activecode-javascript",
+  "url": "section-146.html#program-activecode-javascript",
   "type": "Listing",
   "number": "16.2.3",
   "title": "",

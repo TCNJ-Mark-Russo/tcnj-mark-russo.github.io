@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomOvals2.java
+import java.util.Random;                      // Import classes
+import doodlepad.*;                           // Import DoodlePad classes
+
+public class RandomOvals2 {                   // public class
+  public static Oval[] ovals = new Oval[20];  // Array of 20 Ovals
+
+  public static void main(String[] args) {    // Start of execution
+
+    // Fill array with randomly placed Oval objects
+    // Use a for-statement to iterate the size of the array
+    for (int i=0; i&lt;ovals.length; i++) {      // For-statement
+      ovals[i] = new Oval();                  // Create an Oval object
+      ovals[i].setMousePressedHandler(RandomOvals2::recolor);
+    }
+  }
+
+  // Event handler method that executes when an Oval is clicked
+  public static void recolor(Shape shp, double x, double y, int button) {
+    int r, g, b;                              // Helper variables
+    Random rnd = new Random();                // Declare Random object
+
+    // Loop over all Oval objects and reset to a random fill color
+    for (int i=0; i&lt;ovals.length; i++) {      // For-statement
+      r = rnd.nextInt(256);                   // Random color components
+      g = rnd.nextInt(256);
+      b = rnd.nextInt(256);
+      ovals[i].setFillColor(r, g, b);         // Change fill color
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">8.2.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomOvals2.java</code></figcaption></figure><span class="incontext"><a href="section-ar-iterating.html#listing-ar-randomovals2" class="internal">in-context</a></span>
+</body>
+</html>

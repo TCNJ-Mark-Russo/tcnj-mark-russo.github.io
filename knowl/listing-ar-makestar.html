@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// MakeStar.java
+import doodlepad.*;
+
+// Demonstrate the makeStar(...) method
+public class MakeStar {
+    
+  public static void main(String[] args) {
+    Polygon star1 = makeStar(5, 100, 40, 150, 150); // 5-point star
+    Polygon star2 = makeStar(50, 100, 40, 150, 350);// 50-point star
+
+    star1.setFillColor(255, 255, 0);                // Fill
+    star2.setFillColor(255, 0, 0);
+  }
+
+  // Create an return a Polygon object in shape of a star with npoints 
+  // Parameters: num points, inner radius, outer radius, x- and y- offset
+  public static Polygon makeStar( int npoints, 
+                                  double outrad, double inrad, 
+                                  double xoffset, double yoffset) {
+    double[] Xs = new double[2*npoints];            // Vertex coordinates
+    double[] Ys = new double[2*npoints];
+
+    double dangle = (Math.PI / npoints);            // Angle between vertices
+    double angle  = -0.5*Math.PI;                   // One point on top
+
+    // Compute vertex coordinates. Two per iteration.
+    for (int i = 0; i&lt;2*npoints; i += 2) {
+
+      // Outer vertex (convex/star point)
+      Xs[i]   = xoffset + outrad * Math.cos(angle);
+      Ys[i]   = yoffset + outrad * Math.sin(angle);
+      angle  += dangle;
+
+      // Inner vertex (concave point)
+      Xs[i+1] = xoffset + inrad * Math.cos(angle);
+      Ys[i+1] = yoffset + inrad * Math.sin(angle);
+      angle  += dangle;
+    }
+
+    // Instantiate and return a new Star-shaped Polygon
+    return new Polygon(Xs, Ys);
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">8.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="section-ar-polygons.html#listing-ar-makestar" class="internal">in-context</a></span>
+</body>
+</html>

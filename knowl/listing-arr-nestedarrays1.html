@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// NestedArrays1.java
+import java.util.Random;
+
+public class NestedArrays1 {
+  public static void main(String[] args) {
+    Random rnd = new Random();                // Random object
+    double[][] arr2D = new double[5][3];      // 2D array
+
+    // Fill array with random numbers
+    for (int i=0; i&lt;arr2D.length; i++) {      // Outer loop
+      for (int j=0; j&lt;arr2D[i].length; j++) { // Inner loop
+        arr2D[i][j] = rnd.nextDouble();
+      }
+    }
+
+    print2D( arr2D );                         // Print array
+  }
+
+  // Print an arbitrary 2D double array
+  public static void print2D( double[][] arr ) {
+    for (int i=0; i&lt;arr.length; i++) {        // Outer loop
+      for (int j=0; j&lt;arr[i].length; j++) {   // Inner loop
+        System.out.print( arr[i][j] + " ");   // Print adjacent
+      }
+      System.out.println();                   // Next line
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">8.4.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">NestedArrays1.java</code></figcaption></figure><span class="incontext"><a href="section-ar-multi.html#listing-arr-nestedarrays1" class="internal">in-context</a></span>
+</body>
+</html>

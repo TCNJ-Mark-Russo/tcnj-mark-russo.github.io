@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// NestedArrays2.java
+public class NestedArrays3 {
+  public static void main(String[] args) {
+    double[][] arr2D = {{0.0, 0.1, 0.2},      // Right side is "ragged"
+                        {1.0, 1.1, 1.2, 1.3},
+                        {2.0, 2.1}, 
+                        {3.0, 3.1, 3.2},
+                        {4.0}};
+    print2D( arr2D );                         // Print array
+  }
+
+  // Print an arbitrary 2D double array
+  public static void print2D( double[][] arr ) {
+    for (double[] inarr : arr) {              // Outer loop
+      for (double val : inarr) {              // Inner loop
+        System.out.print( val + " ");         // Print adjacent
+      }
+      System.out.println();                   // Next line
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">8.4.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">NestedArrays3.java</code></figcaption></figure><span class="incontext"><a href="section-ar-multi.html#listing-arr-nestedarrays3" class="internal">in-context</a></span>
+</body>
+</html>

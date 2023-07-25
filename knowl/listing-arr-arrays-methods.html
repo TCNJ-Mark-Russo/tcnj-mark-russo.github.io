@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ArraysMethods.java
+import java.util.Arrays;
+import java.util.Random;
+
+public class ArraysMethods {
+  public static void main(String[] args) {
+    Random rnd = new Random();  // Random object
+
+    // Create an array of 1000 random integers in [100, 500)
+    // and print ends
+    int[] nums = new int[1000];
+    for (int i = 0; i &lt; nums.length; i++) {
+      nums[i] = 100 + rnd.nextInt(400);
+    }
+    printEnds( "nums", nums );
+
+    // Create a copy of the array and print copy
+    int[] copy = Arrays.copyOf(nums, nums.length);
+    printEnds( "copy", copy );
+
+    // Check if they are the identical array
+    System.out.println("nums and copy" + 
+        (nums == copy ? " ARE" : " ARE NOT") + " identical");
+
+    // Check equivalence element-by-element
+    System.out.println("nums and copy" +
+        (Arrays.equals(nums, copy) ? " ARE" : " ARE NOT") + " equivalent");
+
+    // Sort array and print
+    Arrays.sort(nums);
+    printEnds( "nums (sorted)", nums );
+
+    // Copy array ranges into two arrays and print
+    int[] firstHalf  = Arrays.copyOfRange(nums, 0, 500);
+    int[] secondHalf = Arrays.copyOfRange(nums, 500, 1000);
+    printEnds( "firstHalf ", firstHalf );
+    printEnds( "secondHalf", secondHalf );
+
+  }
+
+  // Print array name and elements from both ends of array
+  public static void printEnds( String name, int[] arr ) {
+    System.out.print(name + ": ");
+    for (int i=0; i&lt;5;  i++) {          // Print first 5
+      System.out.print( arr[i] + " ");
+    }
+    System.out.print( "... ");         // Print last 5
+    for (int i=arr.length-5; i&lt;arr.length;  i++) {
+      System.out.print( arr[i] + " ");
+    }
+    System.out.println();
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">8.5.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ArraysMethods.java</code></figcaption></figure><span class="incontext"><a href="section-ar-library.html#listing-arr-arrays-methods" class="internal">in-context</a></span>
+</body>
+</html>
