@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In the above, we use the ArrayList’s <code class="code-inline tex2jax_ignore">get(…)</code> method to get a reference to the object at index <code class="code-inline tex2jax_ignore">i</code> and assign the reference to the temporary helper variable. Then we use the helper variable to invoke the objects <code class="code-inline tex2jax_ignore">setFillColor(…)</code> method.</div>
+<div class="para">When an ArrayList is instantiated, it must name the class of objects that it will hold. Because Java is a <dfn class="terminology">strongly typed</dfn> language, we cannot freely assign just any object to a variable that is declared to hold another type of object. Despite this feature, an ArrayList can be instantiated to hold a particular class. The reason this is possible is because the ArrayList class is defined as a <dfn class="terminology">generic</dfn>. In short, the ArrayList is more of a class <em class="emphasis">template</em> that substitutes a class named as part of its constructor just before instantiating the new object. A class is specified as a part of its constructor using the <dfn class="terminology">diamond operator</dfn> (<code class="code-inline tex2jax_ignore">&lt; &gt;</code>).</div>
 <span class="incontext"><a href="section-c1-collection-classes.html#p-508" class="internal">in-context</a></span>
 </body>
 </html>

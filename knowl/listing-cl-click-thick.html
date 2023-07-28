@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ClickThick.java
+import doodlepad.*;                                 // Import Doodlepad
+                                                    // Classes
+// Class that illustrates Line thickness 
+public class ClickThick {
+  private Line line;                                // Object-scoped variable
+
+  public ClickThick() {                             // Constructor
+    // Create Line object and assign to variable
+    Line line;                                      // This variable SHADOWS
+    line = new Line(100, 100, 500, 100);            // the line variable above
+    line.setStrokeWidth(10);
+    line.setMousePressedHandler( this::onPressed ); // Assign event handler
+  }
+
+  // Event handler method
+  public void onPressed(Shape shp, double x, double y, int button) {
+    double w = line.getStrokeWidth();               // Current line thickness
+
+    if (button == 1) {                              // Left mouse pressed
+      line.setStrokeWidth( 2*w );                   // Double thickness
+    } else if (button == 3) {                       // Right mouse pressed
+      line.setStrokeWidth( w/2 );                   // Halve thickness
+    }
+  }
+  // Create object
+  public static void main(String[] args) {
+    new ClickThick();
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">9.4.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ClickThick.java</code></figcaption></figure><span class="incontext"><a href="section-cl-shadowing.html#listing-cl-click-thick" class="internal">in-context</a></span>
+</body>
+</html>

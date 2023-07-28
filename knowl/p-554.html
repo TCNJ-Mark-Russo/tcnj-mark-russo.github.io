@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">A for-statement is useful when iterating a fixed number of times, and is preferred over a while-statement whenever possible due to its compactness and clarity. Also, the <code class="code-inline tex2jax_ignore">break</code> and <code class="code-inline tex2jax_ignore">continue</code> statements work with a for-statement in manner identical to the while-statement. (See <a href="section-c1-break-continue.html" class="internal" title="Section 6.4: break and continue">Section 6.4</a>).</div>
-<span class="incontext"><a href="section-c2-for-statements.html#p-554" class="internal">in-context</a></span>
+<div class="para">Next we compile and run the program. The program compiles and runs just fine, and it looks correct. In fact, when I tested the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method individually, outside the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method, it worked correctly. The loop counter <code class="code-inline tex2jax_ignore">i</code> is properly initialized and incremented by 1 every time. I expected the output "A", "AA", "AAA", "AAAA", "AAAAA". But as you can see below the output is "A", "AAA", "AAAAA". It is clear that the counter in <code class="code-inline tex2jax_ignore">main(…)</code> increases by 1 each time. I can see with my own eyes the statement <code class="code-inline tex2jax_ignore">i++;</code>. So what is the problem? Could it have something to do with the variable <code class="code-inline tex2jax_ignore">i</code> that we declared in the outer class scope?</div>
+<span class="incontext"><a href="section-c1-block-scope.html#p-554" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Following this, the two StringBuilder variables <code class="code-inline tex2jax_ignore">sb1</code> and <code class="code-inline tex2jax_ignore">sb2</code> are declared and initialized to two StringBuilder objects. The String "Hello" is appended to <code class="code-inline tex2jax_ignore">sb1</code> and "Goodbye" is appended to <code class="code-inline tex2jax_ignore">sb2</code>. Afterwards, we perform the assignment <code class="code-inline tex2jax_ignore">sb1 = sb2</code> and the value of <code class="code-inline tex2jax_ignore">sb1</code> is now "Goodbye". That is what we expect. But then, we append the string " friend" to <code class="code-inline tex2jax_ignore">sb1</code> and print <code class="code-inline tex2jax_ignore">sb2</code>. Somehow, the StringBuilder <code class="code-inline tex2jax_ignore">sb2</code> also got the additional String " friend". Why?</div>
-<span class="incontext"><a href="section-rt-refvars.html#p-429" class="internal">in-context</a></span>
+<div class="para">String immutability is not a problem when concatenating a few small Strings, but when large Strings are concatenated over and over to build even larger String objects, your program can slow down because larger and larger chuncks of memory are repeatedly allocated and deallocated. A more efficient approach to concatenating large and numerous String objects would be a dedicated class with the job of collecting all Strings and then managing the underlying memory more efficiently. This is what Java’s built-in StringBuilder class does for us.</div>
+<span class="incontext"><a href="section-rt-stringbuilder.html#p-429" class="internal">in-context</a></span>
 </body>
 </html>

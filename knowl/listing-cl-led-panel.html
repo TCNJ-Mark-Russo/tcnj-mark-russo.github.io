@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LEDPanel.java
+import doodlepad.*;
+
+// Driver class
+public class LEDPanel {
+  public static void main(String[] args) {
+    // Create a Pad object with title and custom dimensions
+    Pad panel = new Pad("LED Panel", 550, 350);
+
+    // Store LED objects in a 2D array matching layout
+    LED[][] leds = new LED[2][4];
+
+    // Create and position all LED objects on panel
+    leds[0][0] = new LED(100, 100, LEDColor.RED);
+    leds[0][1] = new LED(200, 100, LEDColor.GREEN);
+    leds[0][2] = new LED(300, 100, LEDColor.BLUE);
+    leds[0][3] = new LED(400, 100, LEDColor.YELLOW);
+    leds[1][0] = new LED(100, 200, LEDColor.RED);
+    leds[1][1] = new LED(200, 200, LEDColor.GREEN);
+    leds[1][2] = new LED(300, 200, LEDColor.BLUE);
+    leds[1][3] = new LED(400, 200, LEDColor.YELLOW);
+
+    // Turn on all LED objects
+    for (int r=0; r&lt;leds.length; r++) {
+      for (int c=0; c&lt;leds[r].length; c++) {
+        leds[r][c].turnOn();
+      }
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">9.6.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LEDPanel.java</code></figcaption></figure><span class="incontext"><a href="section-cl-multi-file-programs.html#listing-cl-led-panel" class="internal">in-context</a></span>
+</body>
+</html>

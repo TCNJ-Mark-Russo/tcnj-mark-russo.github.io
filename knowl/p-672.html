@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">We initialize each element of <code class="code-inline tex2jax_ignore">arr2D</code> one at a time, using different techniques. For the first, second, and last elements, we create and initialize one-dimensional arrays and assign them to <code class="code-inline tex2jax_ignore">arr2D</code> array elements. For the third element, we create but do not initialize a one-dimensional array and assign it. As we know, the values of an uninitialized array with a numeric type will be 0. We leave the fourth array element unassigned. This leaves the value of <code class="code-inline tex2jax_ignore">arr2D[3]</code> as <code class="code-inline tex2jax_ignore">null</code>. All these options are permitted, because we have the flexibility of <code class="code-inline tex2jax_ignore">arr2D</code> being an array of array references.</div>
+<div class="para">Note how we use nested curly bracket to initialize the array, and how we don’t specify the dimensions of the nested arrays. Java determines the array dimensions by the structure of the initialization. Also note the type of the variable in the outer for-each loop inside <code class="code-inline tex2jax_ignore">printArr(…)</code>, which is <code class="code-inline tex2jax_ignore">for (double[] inarr : arr) {</code>. The loop variable is a one-dimensional double array! By now, this should make sense. In Java, a multidimensional array is an array of arrays; the outer array is a one-dimensional array with elements that each hold one-dimensional arrays.</div>
 <span class="incontext"><a href="section-ar-multi.html#p-672" class="internal">in-context</a></span>
 </body>
 </html>

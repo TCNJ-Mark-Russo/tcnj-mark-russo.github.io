@@ -11,8 +11,112 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don’t want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.</div>
-<span class="incontext"><a href="section-dp-events.html#p-341" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">The following table lists the components of several named colors. Drag the sliders to values that match settings to see the named color. <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.5.1<span class="period">.</span></span><span class="space"> </span>Named Color Components</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Name</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Red</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Green</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Blue</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Red</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Green</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Blue</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Yellow</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Orange</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Cyan</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Magenta</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Lime</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Chartreuse</td>
+<td class="l t b0 r0 l0 t0 lines">127</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Purple</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Maroon</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Teal</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Navy</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Black</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">White</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+<td class="l t b0 r0 l0 t0 lines">255</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Gray</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+<td class="l t b0 r0 l0 t0 lines">128</td>
+</tr>
+</table></div></figure>
+</div>
+<span class="incontext"><a href="section-dp-colors.html#p-341" class="internal">in-context</a></span>
 </body>
 </html>

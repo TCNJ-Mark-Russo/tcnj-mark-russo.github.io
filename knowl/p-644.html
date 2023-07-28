@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The for-statement in <a href="" class="xref" data-knowl="./knowl/listing-ar-randomovals2.html" title="Listing 8.2.1">Listing 8.2.1</a> cannot be replaced with a for-each because the loop counter is used for more that just accessing existing objects. We use it to set references to new objects in the array as well. It is not possible to initialize array elements with for-each statement.</div>
-<span class="incontext"><a href="section-ar-iterating.html#p-644" class="internal">in-context</a></span>
+<div class="para">We can shorten the above example even further. The <code class="code-inline tex2jax_ignore">new double[]</code> part of the expression is redundant. Clearly, we want to create a new double array because we provided initial element values. There are legitimate reasons to declare an array variable without creating an array, but no legitimate reason if initial element values are provided. For this reason Java let’s us accomplish the same task of creating and initializing the array without the need to include the <code class="code-inline tex2jax_ignore">new double[]</code> part. In the example below, we create and initialize the array by going right to the initial values in braces, leaving out the <code class="code-inline tex2jax_ignore">new double[]</code>.</div>
+<span class="incontext"><a href="section-ar-creating.html#p-644" class="internal">in-context</a></span>
 </body>
 </html>

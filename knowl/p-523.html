@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In the following code snippet, we declare and fill and ArrayList&lt;Integer&gt; with 100 randomly generated integers. Once filled, we loop over the ArrayList&lt;Integer&gt; again, get each <code class="code-inline tex2jax_ignore">int</code> at each successive index and print it. In both cases (adding and getting) we do not box or unbox the primitive type <code class="code-inline tex2jax_ignore">int</code>. Java automatically boxes each <code class="code-inline tex2jax_ignore">int</code> in an <code class="code-inline tex2jax_ignore">Integer</code> before adding to the ArrayList, and unboxes the <code class="code-inline tex2jax_ignore">Integer</code> to an <code class="code-inline tex2jax_ignore">int</code> when getting and assigning to the primtiive variable.</div>
+<div class="para">Within the body of the while code block, we use the ArrayList <code class="code-inline tex2jax_ignore">get(…)</code> method to get a reference to the object at index <code class="code-inline tex2jax_ignore">i</code>. Note the <code class="code-inline tex2jax_ignore">i</code> is used both as the loop counter as well as the index of each object in the ArrayList -- a dual purpose. Following this we generate three integers in the proper range for color elements, and then use them to set the Oval object’s fill color to a random value. This repeats for all Ovals in the ArrayList.</div>
 <span class="incontext"><a href="section-c1-collection-classes.html#p-523" class="internal">in-context</a></span>
 </body>
 </html>

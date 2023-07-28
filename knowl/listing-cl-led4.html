@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LED.java
+// A simple LED display class
+import doodlepad.*;
+
+public class LED {
+  private boolean on;           // Tracks state of LED object
+  private Oval light;           // Visual display of object
+
+  // Constructor
+  public LED(double x, double y) {  
+    this.light = new Oval(x, y, 30, 30);
+    this.turnOff();             // Init state by invoking method (**NEW**)
+  }
+  // Turn on LED (**NEW**)
+  public void turnOn() {
+    this.on = true;
+    this.light.setFillColor(255, 0, 0);
+  }
+  // Turn off LED (**NEW**)
+  public void turnOff() {
+    this.on = false;
+    this.light.setFillColor(100, 100, 100);
+  }
+  // Return state of LED (**NEW**)
+  public boolean isOn() {
+    return this.on;
+  }
+
+  // --- Test LED
+  public static void main(String[] args) {
+    // Create LED objects
+    LED led1 = new LED(100, 100);
+    LED led2 = new LED(200, 100);
+
+    // Turn on both LED objects (**NEW**)
+    led1.turnOn();
+    led2.turnOn();
+
+    System.out.println( "LED1 is" + (led1.isOn() ? "" : " not") + " on");
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">9.3.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LED.java (step 4)</code></figcaption></figure><span class="incontext"><a href="section-cl-methods.html#listing-cl-led4" class="internal">in-context</a></span>
+</body>
+</html>

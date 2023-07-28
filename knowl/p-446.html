@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Imagine that you’ve been asked to write a class called <code class="code-inline tex2jax_ignore">Counter</code> to track of the number of people currently in a room. Each time a person enters the room an <code class="code-inline tex2jax_ignore">enter()</code> method is invoked and a <code class="code-inline tex2jax_ignore">total</code> counter variable is incremented. When a person leaves an <code class="code-inline tex2jax_ignore">exit()</code> method is invoked which decrements the <code class="code-inline tex2jax_ignore">total</code> counter variable. The <code class="code-inline tex2jax_ignore">total</code> variable must be accessible to all methods within the class and it must have a lifetime that lasts for as long as the class exists. Declaring <code class="code-inline tex2jax_ignore">total</code> as <code class="code-inline tex2jax_ignore">static</code> would ensure that these requirements are satisfied.</div>
-<span class="incontext"><a href="section-rt-scope.html#p-446" class="internal">in-context</a></span>
+<div class="para">After marking all reachable objects, the garbage collector performs the sweep phase. It frees the memory occupied by objects that were not marked as reachable. This memory is then returned to the available memory pool for future allocations.</div>
+<span class="incontext"><a href="section-rt-gc.html#p-446" class="internal">in-context</a></span>
 </body>
 </html>

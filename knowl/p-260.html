@@ -12,23 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Once we know the name of the class we want to create and the parameters expected by its constructor we use the <dfn class="terminology">new</dfn> keyword to invoke the constructor using the following pattern for invocation. The result is a new object, an instance of the class, which we save by assigning to a variable declared with the class type. The following figure demonstrates constructor invocation and assignment of the created object. <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.2<span class="period">.</span></span><span class="space"> </span>Invoking a constructor (TODO: Replace with figure)</figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c b b1 r1 l1 t1 lines"><em class="emphasis">variable</em></td>
-<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">assign</em></td>
-<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">keyword</em></td>
-<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">class</em></td>
-<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">parameters</em></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">name2</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">=</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">new</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String</code></td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">("Porthos")</code></td>
-</tr>
-</table></div></figure>
-</div>
-<span class="incontext"><a href="section-jp-string.html#p-260" class="internal">in-context</a></span>
+<div class="para">As an example, consider our <a href="" class="xref" data-knowl="./knowl/listing-jp-computedistance.html" title="Listing 3.1.1"><code class="code-inline tex2jax_ignore">ComputeDistance()</code></a> method from the last section. Rather than having to remember the distance formula every time we wanted to compute distance, a btter approach would be to <em class="emphasis">encapsulate</em> that computation in its own method and give that method a meaningful name, like <code class="code-inline tex2jax_ignore">distanceBetween()</code>. This new method would take the four parameters <code class="code-inline tex2jax_ignore">x1</code>, <code class="code-inline tex2jax_ignore">y1</code>, <code class="code-inline tex2jax_ignore">x2</code>, <code class="code-inline tex2jax_ignore">y2</code>, and return a double that was the computed distance. Following the guidance of <a href="" class="xref" data-knowl="./knowl/figure-jp-method-anatomy.html" title="Figure 3.2.1">Figure 3.2.1</a>, we can construct the following updated program that encapsulates teh distance formula in a new method. This lets us reuse the method without reentering the distance formula over and over again.</div>
+<span class="incontext"><a href="section-jp-static-methods.html#p-260" class="internal">in-context</a></span>
 </body>
 </html>

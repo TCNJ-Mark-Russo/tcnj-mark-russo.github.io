@@ -142,7 +142,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "The Java Programming Language",
-  "body": " The Java Programming Language  The Java programming language was created by James Gosling and his team at Sun Microsystems (now owned by Oracle Corporation) in the mid-1990s. The development of Java began in 1991 as a project called \"Oak\" and was initially intended for use in consumer electronic devices. However, as time progressed, Java's focus shifted towards more general-purpose software development and it became widely known for its ability to create platform-independent applications.  The features of Java include the following.  Simple and Object-Oriented : Java was designed to be a simple and easy-to-learn language. It follows the principles of object oriented programming and provides features such as classes, objects, inheritance, and polymorphism. This makes it suitable for building modular and reusable code.  Platform-Independence : One of the key features of Java is its \"write once, run anywhere\" capability. Java programs are compiled into bytecode, which can run on any system with a Java Virtual Machine (JVM). Once the JVM is ported to run on a computational device, programs written in Java, or one of the JVM family of languages, will run on the device. This allows Java applications to be executed on different platforms without the need for recompilation, making it highly portable.  Robust and Secure : Java was built with a strong emphasis on reliability and security. It includes features like automatic memory management (garbage collection), exception handling, and runtime type checking, which help in writing robust and error-free code. Additionally, Java has a security model that prevents unauthorized access to resources and protects against malicious code execution.  Rich Standard Library : Java comes with a vast and comprehensive standard library that provides a wide range of pre-built classes and application programming interfaces (APIs) for common tasks. The standard library includes packages for networking, input\/output (I\/O), data structures, graphical user interfaces (GUIs), and much more. This extensive library reduces the need to write code from scratch and accelerates development.  Multi-threading : Java has built-in support for multi-threading, allowing concurrent execution of multiple threads within a single program. Multi-threading enables developers to create efficient and responsive applications by dividing tasks into separate threads that can run simultaneously. However, proper synchronization mechanisms need to be employed to ensure thread safety.  Garbage Collection : Java's automatic garbage collection feature relieves developers from manually managing memory allocation and deallocation. The garbage collector automatically detects and removes unreferenced objects, freeing up memory and reducing the chances of memory leaks and crashes.  Community and Ecosystem : Java has a vast and active developer community, which has contributed to the growth of numerous open-source libraries, frameworks, and tools. This vibrant ecosystem makes it easier for developers to leverage existing solutions and accelerates software development.    Over the years, Java has evolved through various versions, with each release introducing new features and enhancements. The language has found extensive use in enterprise software development, web applications, mobile development (Android), scientific research, and more. Java's versatility, performance, and wide adoption have made it one of the most popular programming languages in the world.  Java is packaged in editions that include a different set of tools tailored for specific purposes and platforms. Java editions available include the following.  Java Standard Edition (Java SE). Java SE is the core edition of Java and serves as the foundation for developing general-purpose applications. It provides a robust set of libraries, APIs, and tools for creating desktop, web, and server applications. Java SE includes the Java Development Kit (JDK), which includes the necessary tools and resources for Java development.  Java Enterprise Edition (Java EE). Java EE, now known as Jakarta EE, is an extension of Java SE specifically designed for developing enterprise-level applications. It provides an enterprise application framework with additional libraries, APIs, and services to facilitate the development of large-scale, distributed, and scalable applications. Java EE includes features such as web services, messaging, security, and JavaServer Pages (JSP).  Java Micro Edition (Java ME). Java ME is a scaled-down version of Java designed for resource-constrained devices such as mobile phones, embedded systems, and other small devices. It provides a runtime environment and a set of APIs optimized for these devices, enabling developers to create mobile applications and embedded systems with limited resources.  Other Java Editions. In addition to the main editions mentioned above, there are other specialized editions of Java, including Java Card (for running Java applications on smart cards), JavaFX (for building rich client applications with a modern user interface), and Java Embedded (for developing applications for embedded systems and IoT devices).  It's worth noting that Java SE forms the foundation for the other editions, and many developers primarily work with Java SE while leveraging specific features or APIs from other editions as needed. We use the Java SE throughout this book.  "
+  "body": " The Java Programming Language  The Java programming language was created by James Gosling and his team at Sun Microsystems (now owned by Oracle Corporation) in the mid-1990s. The development of Java began in 1991 as a project called \"Oak\" and was initially intended for use in consumer electronic devices. However, as time progressed, Java's focus shifted towards more general-purpose software development and it became widely known for its ability to create platform-independent applications.  The features of Java include the following.  Simple and Object-Oriented : Java was designed to be a simple and easy-to-learn language. It follows the principles of object oriented programming and provides features such as classes, objects, inheritance, and polymorphism. This makes it suitable for building modular and reusable code.  Platform-Independence : One of the key features of Java is its \"write once, run anywhere\" capability. Java programs are compiled into bytecode, which can run on any system with a Java Virtual Machine (JVM). Once the JVM is ported to run on a computational device, programs written in Java, or one of the JVM family of languages, will run on the device. This allows Java applications to be executed on different platforms without the need for recompilation, making it highly portable.  Robust and Secure : Java was built with a strong emphasis on reliability and security. It includes features like automatic memory management (garbage collection), exception handling, and runtime type checking, which help in writing robust and error-free code. Additionally, Java has a security model that prevents unauthorized access to resources and protects against malicious code execution.  Rich Core Library : Java comes with a vast and comprehensive core library that provides a wide range of pre-built classes and application programming interfaces (APIs) for common tasks. The core library includes packages for networking, input\/output (I\/O), data structures, graphical user interfaces (GUIs), and much more. This extensive library reduces the need to write code from scratch and accelerates development.  Multi-threading : Java has built-in support for multi-threading, allowing concurrent execution of multiple threads within a single program. Multi-threading enables developers to create efficient and responsive applications by dividing tasks into separate threads that can run simultaneously. However, proper synchronization mechanisms need to be employed to ensure thread safety.  Garbage Collection : Java's automatic garbage collection feature relieves developers from manually managing memory allocation and deallocation. The garbage collector automatically detects and removes unreferenced objects, freeing up memory and reducing the chances of memory leaks and crashes.  Community and Ecosystem : Java has a vast and active developer community, which has contributed to the growth of numerous open-source libraries, frameworks, and tools. This vibrant ecosystem makes it easier for developers to leverage existing solutions and accelerates software development.    Over the years, Java has evolved through various versions, with each release introducing new features and enhancements. The language has found extensive use in enterprise software development, web applications, mobile development (Android), scientific research, and more. Java's versatility, performance, and wide adoption have made it one of the most popular programming languages in the world.  Java is packaged in editions that include a different set of tools tailored for specific purposes and platforms. Java editions available include the following.  Java Standard Edition (Java SE). Java SE is the core edition of Java and serves as the foundation for developing general-purpose applications. It provides a robust set of libraries, APIs, and tools for creating desktop, web, and server applications. Java SE includes the Java Development Kit (JDK), which includes the necessary tools and resources for Java development.  Java Enterprise Edition (Java EE). Java EE, now known as Jakarta EE, is an extension of Java SE specifically designed for developing enterprise-level applications. It provides an enterprise application framework with additional libraries, APIs, and services to facilitate the development of large-scale, distributed, and scalable applications. Java EE includes features such as web services, messaging, security, and JavaServer Pages (JSP).  Java Micro Edition (Java ME). Java ME is a scaled-down version of Java designed for resource-constrained devices such as mobile phones, embedded systems, and other small devices. It provides a runtime environment and a set of APIs optimized for these devices, enabling developers to create mobile applications and embedded systems with limited resources.  Other Java Editions. In addition to the main editions mentioned above, there are other specialized editions of Java, including Java Card (for running Java applications on smart cards), JavaFX (for building rich client applications with a modern user interface), and Java Embedded (for developing applications for embedded systems and IoT devices).  It's worth noting that Java SE forms the foundation for the other editions, and many developers primarily work with Java SE while leveraging specific features or APIs from other editions as needed. We use the Java SE throughout this book.  "
 },
 {
   "id": "p-50",
@@ -151,7 +151,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Simple and Object-Oriented Platform-Independence Java Virtual Machine Robust and Secure Rich Standard Library Multi-threading Garbage Collection Community and Ecosystem "
+  "body": "Simple and Object-Oriented Platform-Independence Java Virtual Machine Robust and Secure Rich Core Library Multi-threading Garbage Collection Community and Ecosystem "
 },
 {
   "id": "p-53",
@@ -196,7 +196,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "The Java Development Kit",
-  "body": " The Java Development Kit  The Java Development Kit (JDK) is a software development kit that allows developers to create, compile, and run Java applications. It includes tools, libraries, and documentation necessary for Java development. The JDK is available for multiple platforms, including Windows, macOS, and Linux.  The key components and features of the Java Development Kit include the following.  Java Compiler (javac) for translating source code into bytecode.  Java Virtual Machine (JVM) which is responsible for executing Java bytecode.  Java Runtime Environment (JRE) which contains the JVM and essential class libraries required to run Java applications.  The Java Shell (JShell) is a Read-Evaluate-Print Loop tool (REPL) that runs in a terminal. It evaluates entered declarations, statements, and expressions immediately and prints results.  Other Java Development Tools including the Java Debugger (jdb) and the Java Archive (JAR) tool .  Libraries and APIs , a large set of standard class libraries and APIs that provide pre-built functionality for various tasks.  Development Documentation , a comprehensive set of documentation that describes all of the above.    One item worth highlighting is the platform-independence of the Java Virtual Machine. The JVM plays a fundamental role in achieving Java's \"write once, run anywhere\" capability. Since the JVM executes bytecode, which is a platform-neutral format, Java programs can be executed on any system that has a compatible JVM. This makes Java programs highly portable and eliminates the need to recompile the code for different operating systems or architectures.  Another item worth expanding upon is the JShell REPL. JShell provides a lightweight and interactive way to explore and experiment with Java code. It is particularly useful for learning the Java language, prototyping, and debugging small code snippets. It offers a flexible and dynamic environment for interactive Java development without the need to set up a complete project structure or compile and run separate Java files. JShell tracks history and stores past results. It also acts as an interactive help tool.  In verbose mode JShell not only produces the output from evaluating Java, but it also prints the type of the result -- something that we will be using extensively in the next chapter.  Overall, the Java Development Kit is an essential tool for Java developers, providing everything needed to create, compile, and run Java applications. It offers a rich set of development tools, libraries, and documentation, enabling developers to build robust and platform-independent Java software.  "
+  "body": " The Java Development Kit  The Java Development Kit (JDK) is a software development kit that allows developers to create, compile, and run Java applications. It includes tools, libraries, and documentation necessary for Java development. The JDK is available for multiple platforms, including Windows, macOS, and Linux.  The key components and features of the Java Development Kit include the following.  Java Compiler (javac) for translating source code into bytecode.  Java Virtual Machine (JVM) which is responsible for executing Java bytecode.  Java Runtime Environment (JRE) which contains the JVM and essential class libraries required to run Java applications.  The Java Shell (JShell) is a Read-Evaluate-Print Loop tool (REPL) that runs in a terminal. It evaluates entered declarations, statements, and expressions immediately and prints results.  Other Java Development Tools including the Java Debugger (jdb) and the Java Archive (JAR) tool .  Libraries and APIs , a large set of core class libraries and APIs that provide pre-built functionality for various tasks.  Development Documentation , a comprehensive set of documentation that describes all of the above.    One item worth highlighting is the platform-independence of the Java Virtual Machine. The JVM plays a fundamental role in achieving Java's \"write once, run anywhere\" capability. Since the JVM executes bytecode, which is a platform-neutral format, Java programs can be executed on any system that has a compatible JVM. This makes Java programs highly portable and eliminates the need to recompile the code for different operating systems or architectures.  Another item worth expanding upon is the JShell REPL. JShell provides a lightweight and interactive way to explore and experiment with Java code. It is particularly useful for learning the Java language, prototyping, and debugging small code snippets. It offers a flexible and dynamic environment for interactive Java development without the need to set up a complete project structure or compile and run separate Java files. JShell tracks history and stores past results. It also acts as an interactive help tool.  In verbose mode JShell not only produces the output from evaluating Java, but it also prints the type of the result -- something that we will be using extensively in the next chapter.  Overall, the Java Development Kit is an essential tool for Java developers, providing everything needed to create, compile, and run Java applications. It offers a rich set of development tools, libraries, and documentation, enabling developers to build robust and platform-independent Java software.  "
 },
 {
   "id": "p-58",
@@ -316,13 +316,13 @@ var ptx_lunr_docs = [
   "body": " A DoodlePad Oval created from JShell   "
 },
 {
-  "id": "section-10",
+  "id": "section-gs-concepts",
   "level": "1",
-  "url": "section-10.html",
+  "url": "section-gs-concepts.html",
   "type": "Section",
   "number": "1.10",
   "title": "Key Concepts",
-  "body": "Key Concepts   There are many programming styles and languages available for use. We focus on the object oriented programming style using the Java programming language.  Object oriented programming is a programming style based on software objects.  Encapsulation refers to the bundling of data and related behavior (methods or functions) into a single object.  Inheritance allows the creation of new classes based on existing classes, sharing their attributes and behaviors. Inheritance promotes code reuse and supports the concept of hierarchical relationships between classes.  Polymorphism means that objects of different classes can be treated as objects of a common inherited class. It allows you to write code that can work with objects of different types (classes), as long as they share a common interface or base class.  Abstraction focuses on capturing the essential features and behaviors of an object while hiding unnecessary details. Abstraction helps in designing complex systems by breaking them down into manageable and modular components.  The Java ecosystem is composed of several core components, including the JVM , JRE , JDK , and JShell .  The Java Virtual Machine  (JVM) is a platform independent utility responsible for executing compiled Java bytecode.  The Java Runtime Environment  (JRE) adds to the JVM a very large libary of prewritten classes used to within Java applications. The JRE is the minimum required to run Java programs.  The Java Development Kit  (JDK) adds to the JRE a suite of tools required to develop Java programs, including the Java compiler (javac).  The Java Shell  (JShell) is a tool for executing Java code snippets interactively.  Low-level Language Execute closer to machine code and provide direct control over hardware resources.  High-level Language Offer more abstraction and are designed to be more user-friendly and easier for humans to create.  Scripting Language Often used for small tasks and web development, and are interpreted at runtime rather than compiled ahead-of-time.  Event-driven computer graphics is one of our learning contexts. We will create objects that we can see on our screen as shapes and interact with them using the mouse and keyboard.  DoodlePad is an open source Java interactive object graphics library we will use for developing fun and engaging Java programs. It was designed for teaching Java programming in an event-driven computer graphics context.  DoodlePad classes encapsulate shapes, render them in a graphics window, and respond to interaction using the mouse and keyboard.   "
+  "body": " Key Concepts   There are many programming styles and languages available for use. We focus on the object oriented programming style using the Java programming language.  Object oriented programming is a programming style based on software objects.  Encapsulation refers to the bundling of data and related behavior (methods or functions) into a single object.  Inheritance allows the creation of new classes based on existing classes, sharing their attributes and behaviors. Inheritance promotes code reuse and supports the concept of hierarchical relationships between classes.  Polymorphism means that objects of different classes can be treated as objects of a common inherited class. It allows you to write code that can work with objects of different types (classes), as long as they share a common interface or base class.  Abstraction focuses on capturing the essential features and behaviors of an object while hiding unnecessary details. Abstraction helps in designing complex systems by breaking them down into manageable and modular components.  The Java ecosystem is composed of several core components, including the JVM , JRE , JDK , and JShell .  The Java Virtual Machine  (JVM) is a platform independent utility responsible for executing compiled Java bytecode.  The Java Runtime Environment  (JRE) adds to the JVM a very large libary of prewritten classes used to within Java applications. The JRE is the minimum required to run Java programs.  The Java Development Kit  (JDK) adds to the JRE a suite of tools required to develop Java programs, including the Java compiler (javac).  The Java Shell  (JShell) is a tool for executing Java code snippets interactively.  The Java Core Library provides a large number of prewritten classes.  Other prewritten classes may be available from external libraries, often stored in JAR files.  JAR is an acronym for Java ARchive.  Low-level Language Execute closer to machine code and provide direct control over hardware resources.  High-level Language Offer more abstraction and are designed to be more user-friendly and easier for humans to create.  Scripting Language Often used for small tasks and web development, and are interpreted at runtime rather than compiled ahead-of-time.  Event-driven computer graphics is one of our learning contexts. We will create objects that we can see on our screen as shapes and interact with them using the mouse and keyboard.  DoodlePad is an open source Java interactive object graphics library we will use for developing fun and engaging Java programs. It was designed for teaching Java programming in an event-driven computer graphics context.  DoodlePad classes encapsulate shapes, render them in a graphics window, and respond to interaction using the mouse and keyboard.   "
 },
 {
   "id": "section-gs-exercises",
@@ -523,11 +523,29 @@ var ptx_lunr_docs = [
   "body": "class "
 },
 {
+  "id": "section-pe-enumerated",
+  "level": "1",
+  "url": "section-pe-enumerated.html",
+  "type": "Section",
+  "number": "2.7",
+  "title": "Enumerated Types",
+  "body": " Enumerated Types  In Java, enumerated types , also known as enums , provide a way to define a fixed set of named constants. Enums allow you to create a custom data type with a predefined and automatically assigned set of values, making your code more readable, maintainable, and type-safe.  To define an enum in Java, use the enum keyword followed by the name of the enum type. Here's an example of a simple enum representing clothing sizes:  >jshell | Welcome to JShell -- Version 17.0.6 | For an introduction type: \/help intro jshell> enum Size { ...> XSMALL, ...> SMALL, ...> MEDIUM, ...> LARGE, ...> XLARGE ...> } | created enum Size jshell>  In this example, Size is the name of the enum type, and the constants SMALL , MEDIUM , LARGE , etc., are the possible values of the enum. Note that capitalization of constant name is not required, but useful for communicating the fact that these are constants.  You can use enum constants in your code just like any other static variables. For example:  jshell> Size mySize = Size.LARGE; mySize ==> LARGE jshell> System.out.println(\"Please order a \" + mySize); Please order a LARGE jshell>  Enums also have some useful methods automatically provided by Java. For instance, you can retrieve the name of an enum constant using the name() method:  jshell> System.out.println(\"Please order a \" + mySize.name()); Please order a LARGE  You can compare enum constants using the equality operator ( == ) because each constant is a unique instance of the enum type.  In summary, Java enumerated types (enums) provide a convenient way to define a fixed set of named constants, making your code more expressive and robust. Enums are type-safe, can have custom behavior, and provide useful methods out-of-the-box for working with the constants they define.  "
+},
+{
+  "id": "p-142",
+  "level": "2",
+  "url": "section-pe-enumerated.html#p-142",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "enumerated types enums "
+},
+{
   "id": "section-pe-math",
   "level": "1",
   "url": "section-pe-math.html",
   "type": "Section",
-  "number": "2.7",
+  "number": "2.8",
   "title": "Mathematical Expressions",
   "body": " Mathematical Expressions   Expressions in Java are combinations of variables, literals, operators, and other expressions that evaluate to a value with a type. Expressions are the building blocks of Java programs and are used to perform computations and help make decisions programmatically.  Four of the more common types of Java expressions are:  Mathematical Expressions  Assignment Expressions  Relational Expressions  Logical Expressions     Mathematical Expressions involve mathematical operations such as addition (+), subtraction (-), multiplication (*), division (\/), and modulus (%). The evaulation of an arithmetic expression produces a number. For instance:   jshell> 9 + 5; \/\/ Addition $1 ==> 14 | created scratch variable $1 : int jshell> 9 - 5; \/\/ Subtraction $2 ==> 4 | created scratch variable $2 : int jshell> 9 * 5; \/\/ Multiplication $3 ==> 45 | created scratch variable $3 : int jshell> 9 \/ 5; \/\/ Integer division $4 ==> 1 | created scratch variable $4 : int jshell> 9 % 5; \/\/ Modulus (remainder of division) $5 ==> 4 | created scratch variable $5 : int jshell>  Following is a list of many of the most common Java mathematical operators.  Common Java Mathematical Operators    Operator  Type  Description    +  binary, infix  addition    -  binary, infix  subtraction    -  unary, prefix  negation    *  binary, infix  multiplication    \/  binary, infix  division    %  binary, infix  modulus     The unary prefix operator - in Java is negation , which is used to compute the additive inverse of a numeric value or variable. In other words, it turns a positive value negative, and a negative value positive.  An important general rule of thumb to know regarding Java's binary operators is that both operands must be of the same type going in, and the type of the result produced is the generally the same as the operands . This applies to the numeric operand types int , long , float , and double , and implies the following.   If we add two double s, the sum produced is a double .  If we multiply two float s, the product is a float .  If we subtract two long s, the difference is a long .  If we divide two int s, the quotient is an int .   That last implication is a bit troubling. The value 3 divided by 2 is 1.5. If 3 and 2 are int types, how can the quotient hold the correct value? Let's give it a try in JShell.   jshell> int x = 3, y = 2; \/\/ Declare and init two ints x ==> 3 | created variable x : int y ==> 2 | created variable y : int jshell> x \/ y; \/\/ Divide ints $3 ==> 1 \/\/ Is this a mistake? | created scratch variable $3 : int jshell>   Sure enough, as you can see by the session above, dividing 3 by 2 produces an int with a value of 1, not 1.5. Because 1.5 cannot be stored in an int , the result produced has value of 1. Specifically, dividing two integer number types performs integer division , not floating point division. Integer division drops any fractional parts of the result. A frequent pitfall of novice Java programmers is to expect a fractional part in a result after dividing two integer types, which is impossible, where would it be stored? Of course, this is not a problem when dividing floating point types.  Mathematical functions are available in Java by preceding the function with Math. , for example Math.pow(2,3) evaluates producing 8 . Technically, when using this notation we are accessing static methods of the Math class. The following table lists many of the common mathematical functions implemented in Math . These may be included in any Java expression and will be invoked during expression evaluation.   Java Math class static methods    Method\/Constant  Description    Math.PI  The mathematical constant .    Math.E  Euler's mathematical constant .    Math.pow(x, y)  Raise x to the power of e and return result    Math.abs(x)  Return the absolute value of x.    Math.sqrt(x)  Compute the square root of x.    Math.min(x, y)  Return the minimum of x and y.    Math.max(x, y)  Return the maximum of x and y.    Math.ceil(x)  Return the next integer greater than x .    Math.floor(x)  Return the next integer below than x .    Math.round(x)  Round x to the nearest integer.    Math.exp(x)  Raise Euler's number ( ) to the power of x ( ).    Math.log(x)  Compute the natural logarithm of x ( ).    Math.log10(x)  Compute the base-10 logarithm of x ( ).    Math.sin(x)  Compute the sine function of x.    Math.cos(x)  Compute the cosine function of x.    Math.tan(x)  Compute the tangent function of x.    Math.sinh(x)  Compute the hyperbolic sine function of x.    Math.cosh(x)  Compute the hyperbolic cosine function of x.    Math.tanh(x)  Compute the hyperbolic tangent function of x.    Math.asin(x)  Compute the inverse (arc) sine function of x.    Math.acos(x)  Compute the inverse (arc) cosine function of x.    Math.atan(x)  Compute the inverse (arc) tangent function of x.    Math.atan2(x, y)   An alternative inverse tangent function taking rectilinear  coordinates x,y and returning the angle .      For example, consider the following JShell session, where we compute .   jshell> double a = 3, b = 4; a ==> 3.0 | created variable a : double b ==> 4.0 | created variable b : double jshell> double c = Math.sqrt( Math.pow(a,2) + Math.pow(b,2) ); c ==> 5.0 | created variable c : double jshell>   When expressions become more complex, involving multiple operators, operands, functions, etc., the standard mathematical operator precedence determines the order of evaluation, which is: parentheses > exponents > multiplication and division > addition and subtraction . PEMDAS is an mnemonic that helps us recall operator precedence in arithmetic expressions. When multiple operators of the same precedence are adjacent, evaluation is performed left-to-right. Expressions within parentheses take precedence over all other operations.  The PEMDAS mnemonic is represented below with standard operator precedence   (4) P : parentheses, ()  (3) E : exponents, (not available in Java as an operator)  (2) M : multiplication, *  (2) D : division, \/  (1) A : addition, +  (1) S : subtraction, -   In the following example, note how the result of is 14, not 20. A value of 20 would be expected if the expression was evaluated strictly left-to-right. Because the * operator takes precedence over + , the multiplication is performed before the addition. Surrounding the first subexpression with parentheses causes the subexpression to be evaluated first due to the high precedence of parentheses.   jshell> 2 + 3 * 4; $1 ==> 14 | created scratch variable $1 : int jshell> (2 + 3) * 4; $2 ==> 20 | created scratch variable $2 : int jshell>    Using JShell in verbose mode, evaluate the expression 1 \/ 3 . Why did you get the answer you did?  Evaluate 8 - 4 \/ 2 and (8 - 4) \/ 2 . Why are the answers different?  Evaluate 14 % 12 . Where did that answer come from?  A customer just ordered 100 bagels from my shop. I charge one price for each baker's dozen (13) and another prices for single bagels. How might I calculate the number of baker's dozens and the number of remain single bagels using the operators \/ and % ?  Write an expression that calculates the length of the hypotenuse if a right-triangle with two sides of length 5 and 12 connected by a right angle.   "
 },
@@ -536,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-math.html#table-5",
   "type": "Table",
-  "number": "2.7.1",
+  "number": "2.8.1",
   "title": "Common Java Mathematical Operators",
   "body": " Common Java Mathematical Operators    Operator  Type  Description    +  binary, infix  addition    -  binary, infix  subtraction    -  unary, prefix  negation    *  binary, infix  multiplication    \/  binary, infix  division    %  binary, infix  modulus    "
 },
@@ -545,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-math.html#table-6",
   "type": "Table",
-  "number": "2.7.2",
+  "number": "2.8.2",
   "title": "Java <code class=\"code-inline tex2jax_ignore\">Math<\/code> class static methods",
   "body": " Java Math class static methods    Method\/Constant  Description    Math.PI  The mathematical constant .    Math.E  Euler's mathematical constant .    Math.pow(x, y)  Raise x to the power of e and return result    Math.abs(x)  Return the absolute value of x.    Math.sqrt(x)  Compute the square root of x.    Math.min(x, y)  Return the minimum of x and y.    Math.max(x, y)  Return the maximum of x and y.    Math.ceil(x)  Return the next integer greater than x .    Math.floor(x)  Return the next integer below than x .    Math.round(x)  Round x to the nearest integer.    Math.exp(x)  Raise Euler's number ( ) to the power of x ( ).    Math.log(x)  Compute the natural logarithm of x ( ).    Math.log10(x)  Compute the base-10 logarithm of x ( ).    Math.sin(x)  Compute the sine function of x.    Math.cos(x)  Compute the cosine function of x.    Math.tan(x)  Compute the tangent function of x.    Math.sinh(x)  Compute the hyperbolic sine function of x.    Math.cosh(x)  Compute the hyperbolic cosine function of x.    Math.tanh(x)  Compute the hyperbolic tangent function of x.    Math.asin(x)  Compute the inverse (arc) sine function of x.    Math.acos(x)  Compute the inverse (arc) cosine function of x.    Math.atan(x)  Compute the inverse (arc) tangent function of x.    Math.atan2(x, y)   An alternative inverse tangent function taking rectilinear  coordinates x,y and returning the angle .     "
 },
@@ -554,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-math.html#exercise-10",
   "type": "Exercise",
-  "number": "2.7.1",
+  "number": "2.8.1",
   "title": "",
   "body": "Using JShell in verbose mode, evaluate the expression 1 \/ 3 . Why did you get the answer you did? "
 },
@@ -563,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-math.html#exercise-11",
   "type": "Exercise",
-  "number": "2.7.2",
+  "number": "2.8.2",
   "title": "",
   "body": "Evaluate 8 - 4 \/ 2 and (8 - 4) \/ 2 . Why are the answers different? "
 },
@@ -572,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-math.html#exercise-12",
   "type": "Exercise",
-  "number": "2.7.3",
+  "number": "2.8.3",
   "title": "",
   "body": "Evaluate 14 % 12 . Where did that answer come from? "
 },
@@ -581,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-math.html#exercise-13",
   "type": "Exercise",
-  "number": "2.7.4",
+  "number": "2.8.4",
   "title": "",
   "body": "A customer just ordered 100 bagels from my shop. I charge one price for each baker's dozen (13) and another prices for single bagels. How might I calculate the number of baker's dozens and the number of remain single bagels using the operators \/ and % ? "
 },
@@ -590,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-math.html#exercise-14",
   "type": "Exercise",
-  "number": "2.7.5",
+  "number": "2.8.5",
   "title": "",
   "body": "Write an expression that calculates the length of the hypotenuse if a right-triangle with two sides of length 5 and 12 connected by a right angle. "
 },
@@ -599,14 +617,14 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-pe-assignment.html",
   "type": "Section",
-  "number": "2.8",
+  "number": "2.9",
   "title": "Assignment Expressions",
   "body": " Assignment Expressions  Assignment expressions are used to store values in variable memory. Java provides a range of assignment operators for manipulating numerical values.  Assignment is performed using the assignment operator ( = ). This operator assigns the value of the evaluated expression on the right side of the operator to the variable on the left side. As we've seen, we can perform a variable assignment alone and during variable declaration as an initializer. The right side of an assignment need not be a constant value. For instance:  int age; age = 19; \/\/ Assign a value to a variable int height = 6; \/\/ Declare and initialize a variable double hypotenuse = Math.sqrt( Math.pow(3,2) + Math.pow(4,2) );  Compound assignment operators combine assignment with an arithmetic operation. They provide a shorthand way to perform an operation and assign the result back to the same variable. For example, the += infix binary operator performs addition followed by assignment. The value of the right operand is added to the variable given as the left operand and then reassigned to the variable on the left. Similarly, the *= infix binary operator performs multiplication followed by assignment in a similar manner. Following are descriptions of several of Java's common compound assignment, increment, and decrement operators.   Common Compound Assignment, Increment, and Decrement Operators    Operator  Type  Description    ++  unary, prefix or postfix  increment by 1    --  unary, prefix or postfix  decrement by 1    +=  binary, infix  increment the left operand by the right operand and reassign    -=  binary, infix  decrement the left operand by the right operand and reassign    *=  binary, infix  multiply the left operand by the right operand and reassign    \/=  binary, infix  divide the left operand by the right operand and reassign    %=  binary, infix  compute modulus the left operand using the right operand and reassign     The following code snippet illustrates all of the Java compound infix binary and postfix or prefix unary operators.  x++; \/\/ Equivalent to x = x + 1 ++x; \/\/ Equivalent to x = x + 1 x--; \/\/ Equivalent to x = x - 1 --x; \/\/ Equivalent to x = x - 1 x += y; \/\/ Equivalent to x = x + y x -= y; \/\/ Equivalent to x = x - y x *= y; \/\/ Equivalent to x = x * y x \/= y; \/\/ Equivalent to x = x \/ y x %= y; \/\/ Equivalent to x = x % y  Two of these operators require a little more explanation: the increment operator ( ++ ) and the decrement operator ( -- ). Both of these operators may be used in prefix and postfix form on a variable. The ++ increment operator simultaneously adds a value of 1 to the existing value of a variable and reassigns the variable to the incremented value. The -- decrement operator subtracts a value of 1 from the existing variable value and reassigns it. Why are there both prefix and postfix versions?  When either of these operators are applied to a variable in prefix form, the result is what you would expect. The expression evaluates to the incremented or decremented values. Consider the following JShell session. The variable a is declared and initialized to a value of 5. After the prefix ++ is executed on a , the value changes to 6. Following this the prefix -- operator is applied, and the value is decrements a back to 5. Nothing unusual here. Repeat this example yourself by declaring and initializing new variables, and incrementing and\/or decrementing them using the prefix ++ and -- operators.  jshell> int a = 5; a ==> 5 jshell> ++a $2 ==> 6 jshell> --a $3 ==> 5 jshell>  Let's repeat that exercise, only this time we will use the postfix versions of the operators. Remember, the ++ increment operator always increments the variable by 1 and reassigns to the variable, and the -- decrement operator always decrements by 1 and reassigns to the variable.  jshell> int a = 5; a ==> 5 jshell> a++ \/\/ Let's increment by 1 using the postfix operator. $2 ==> 5 \/\/ The new value appears to remain 5. jshell> a \/\/ Let's check that. a ==> 6 \/\/ Now it is 6. What gives? jshell> a-- \/\/ Let's decrement by 1 using the postfix operator. $4 ==> 6 \/\/ Once again, it appears that the value did not change. jshell> a \/\/ Let's check that. a ==> 5 \/\/ Now it is 5! jshell>  Clearly, something is different about ++ and -- when they are used as postfix operators.  Both the ++ and -- operators change the value of the variable operated upon. The core difference between the prefix and postfix forms of these operators is that expressions using the postfix operators evaluate to the original value of the variable , not the new value. To clarify, in postfix form, both operators do increment or decrement the variable, but the expression evaluates to the original value of the variable, not the new value. With the postfix forms of these operators, even though the value of the variable has changed the evaluated value of the entire expression (including the postfix operator) is the value of the variable before the value was updated.  Another item worth noting is that an assignment expression also evaluates to a value, similar to other mathematical expressions. For example, we know that the expression 2 + 2 evaluates to the value 4 . Also, we know that if we put that expression on the right side of an assignment expression, the variable on the left will be assigned to 4 .  jshell> int x = (2 + 2); x ==> 4 | created variable x : int jshell>  Similarly, an assignment expression itself evaluates to the value being assigned. This implies that if we assign a second variable to an assignment expression, then the second variable will also be assigned to the value. Extending further, we can use this feature to assign multiple variables all as once, even when used as an initialization expression during declaration.  jshell> int y = (x = 5); \/\/ Both x and y are assigned to 5 y ==> 5 \/\/ y has the value 5 | created variable y : int jshell> x x ==> 5 \/\/ x also has the value 5 | value of x : int jshell> int z = y = x = 6; \/\/ z is declared and initialized z ==> 6 | created variable z : int jshell> y y ==> 6 | value of y : int jshell> x x ==> 6 \/\/ x, y, and z all have the value 6 | value of x : int jshell>  By using compound assignment, increment and decrement operations effectively, you can perform various calculations in a compact and succint format.   Declare an int variable x , initialize to 0 and then increment it by 1.  Evaluate the expressions int x = 0; int y = x++; . What are the values of x and y and why?  Evaluate the expressions int x = 0; x -= 10; . What is the value of x and why?   "
 },
 {
-  "id": "p-161",
+  "id": "p-168",
   "level": "2",
-  "url": "section-pe-assignment.html#p-161",
+  "url": "section-pe-assignment.html#p-168",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -617,14 +635,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-assignment.html#table-7",
   "type": "Table",
-  "number": "2.8.1",
+  "number": "2.9.1",
   "title": "Common Compound Assignment, Increment, and Decrement Operators",
   "body": " Common Compound Assignment, Increment, and Decrement Operators    Operator  Type  Description    ++  unary, prefix or postfix  increment by 1    --  unary, prefix or postfix  decrement by 1    +=  binary, infix  increment the left operand by the right operand and reassign    -=  binary, infix  decrement the left operand by the right operand and reassign    *=  binary, infix  multiply the left operand by the right operand and reassign    \/=  binary, infix  divide the left operand by the right operand and reassign    %=  binary, infix  compute modulus the left operand using the right operand and reassign    "
 },
 {
-  "id": "p-163",
+  "id": "p-170",
   "level": "2",
-  "url": "section-pe-assignment.html#p-163",
+  "url": "section-pe-assignment.html#p-170",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -635,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-assignment.html#exercise-15",
   "type": "Exercise",
-  "number": "2.8.1",
+  "number": "2.9.1",
   "title": "",
   "body": "Declare an int variable x , initialize to 0 and then increment it by 1. "
 },
@@ -644,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-assignment.html#exercise-16",
   "type": "Exercise",
-  "number": "2.8.2",
+  "number": "2.9.2",
   "title": "",
   "body": "Evaluate the expressions int x = 0; int y = x++; . What are the values of x and y and why? "
 },
@@ -653,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-assignment.html#exercise-17",
   "type": "Exercise",
-  "number": "2.8.3",
+  "number": "2.9.3",
   "title": "",
   "body": "Evaluate the expressions int x = 0; x -= 10; . What is the value of x and why? "
 },
@@ -662,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-pe-relational.html",
   "type": "Section",
-  "number": "2.9",
+  "number": "2.10",
   "title": "Relational Expressions",
   "body": " Relational Expressions  Relational expressions include the familiar greater-than ( > ), less-than ( < ) and equal-to ( == ) operators. Note that testing for equality in Java uses the double-equal operator ( == ) because the single-equal operator ( = ) is reserved for assignment.  In addition to these operators, Java implements compound relational operators , including greater-than or equal-to ( >= ), less-than or equal-to ( <= ) and not-equal-to ( != ). These have the obvious interpretations.   Type Promotion    Operator  Type  Description    <  binary, infix  less-than    <=  binary, infix  less-than or equal-to    >  binary, infix  greater-than    >=  binary, infix  greater-than or equal-to    ==  binary, infix  equal-to    !=  binary, infix  not equal-to     All relational operators evaluate to a boolean value ( true or false ). If you think about that for a moment, you should see the logic in that statement. In general, relational operators involving > or < take numerical operands only.  Relational operators may be used in larger expressions that also involve arithmetic and even assignment operators. All relational operators have a precedence that is lower than arithmetic operators. When evaluating expressions that mix both, evaluate the arithmetic operators first, and then the relational operators. Consider the following examples.  jshell> int a = 1, b = 2, c = 3; a ==> 1 | created variable a : int b ==> 2 | created variable b : int c ==> 3 | created variable c : int jshell> a < b; $4 ==> true | created scratch variable $4 : boolean jshell> a > b; $5 ==> false | created scratch variable $5 : boolean jshell> a + b < c; $6 ==> false | created scratch variable $6 : boolean jshell> a + b == c; $7 ==> true | created scratch variable $7 : boolean jshell> a + b <= c; $8 ==> true | created scratch variable $8 : boolean jshell> c > a; $9 ==> true | created scratch variable $9 : boolean jshell> c >= a; $10 ==> true | created scratch variable $10 : boolean jshell> c != a + b; $11 ==> false | created scratch variable $11 : boolean jshell> a < b < c; | Error: | bad operand types for binary operator '<' | first type: boolean | second type: int | a < b < c; | ^-------^ jshell>  Note how that last example in the above results in a \"bad operand type\" error. The syntax a < b < c is common mathematics notation, but it is invalid Java. When evaluating this expression, the left-most operator is evaluated first to the boolean value of true . That is, a < b becomes true . Then the right-most operator is evaluated as true < c . The < operator cannot take a boolean value type as an operand, therefore the expression results in an error.  Consider one more example.  jshell> 0.1 + 0.2 == 0.3; $12 ==> false | created scratch variable $12 : boolean jshell>  Clearly, we know that is exactly equal to . Why does Java evaluate this expression to false ? Is Java broken?  It turns out that the problem is not with Java, but with floating point number representation in general. The explanation is obvious by observing the result of 01 + 0.2 .  jshell> 0.1 + 0.2; $13 ==> 0.30000000000000004 | created scratch variable $13 : double jshell>  The answer is not the expected value of 0.3, but instead it has an extra \"4\" way out in the last decimal place. The fundamental reason for this is that the numbers 0.1 , 0.2 , and 0.3 cannot be represented exactly in the 16 decimal places of a double-precision number. Recall from  that computer memory stores numeric values in binary (base 2 numbers), not base 10. While integer values may be represented exactly in binary, certain fractional floating-point numbers are not.  The nearest binary-encoded floating-point number to the value 0.3 , out to 55 decimal places, is  0.299999999999999988897769753748434595763683319091796875 .  By contrast, without considering all the technical detail associated with the rounding and approximation required, the sum 0.1 + 0.2 evaluates to the value  0.3000000000000000444089209850062616169452667236328125  a different number. This helps explain why 0.1 + 0.2 == 0.3 evaluates to false , and teaches us an important lesson about comparing floating-point numbers.  Never compare floating-point numbers with == .  Instead, when testing floating-point numbers, check if the absolute value of the difference between two floating-point values is close enough , for your purposes. See the following example for the better way to test if 0.1 + 0.2 is \"close enough\" to 0.3 .  jshell> Math.abs((0.1 + 0.2) - 0.3) < 0.000000000000001; $1 ==> true | created scratch variable $1 : boolean jshell>   Start with the following declarations.  double xc = 0.5, yc = 0.5, r = 0.3, x = 0.6, y = 0.7;  Write one or more Java expressions that test if the distance between the points and is less than . Recall the distance formula . If is the center of a circle with radius , then your computation will test if the point is within the circle.   "
 },
@@ -671,14 +689,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-relational.html#table-8",
   "type": "Table",
-  "number": "2.9.1",
+  "number": "2.10.1",
   "title": "Type Promotion",
   "body": " Type Promotion    Operator  Type  Description    <  binary, infix  less-than    <=  binary, infix  less-than or equal-to    >  binary, infix  greater-than    >=  binary, infix  greater-than or equal-to    ==  binary, infix  equal-to    !=  binary, infix  not equal-to    "
 },
 {
-  "id": "p-188",
+  "id": "p-195",
   "level": "2",
-  "url": "section-pe-relational.html#p-188",
+  "url": "section-pe-relational.html#p-195",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -689,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-relational.html#exercise-18",
   "type": "Exercise",
-  "number": "2.9.1",
+  "number": "2.10.1",
   "title": "",
   "body": "Start with the following declarations.  double xc = 0.5, yc = 0.5, r = 0.3, x = 0.6, y = 0.7;  Write one or more Java expressions that test if the distance between the points and is less than . Recall the distance formula . If is the center of a circle with radius , then your computation will test if the point is within the circle. "
 },
@@ -698,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-pe-logical.html",
   "type": "Section",
-  "number": "2.10",
+  "number": "2.11",
   "title": "Logical Expressions",
   "body": " Logical Expressions   Java provides three logical operators that you can use to form logical expressions:   Java Logical Operators    Operator  Type  Description    &&  infix, binary  Logical conjunction (AND)    ||  infix, binary  Logical disjunction (AND)    !  prefix, unary  Negation (NOT)     Logical expressions combine subexpressions using logical operators. All input operands for logical operators must be boolean in type, and logical logical expressions always evaluate to a boolean . In short, when it comes to logical expressions, its boolean s in and boolean s out.  Logical operator precedence is lower than relational operators. That means that relational subexpressions involving inequalities used as operands for a logical operator, will be evaluated before the logical operator is evaluated. This is a good thing because relational expressions evaluate to exclusively to boolean s and logical expression operands are exclusively boolean , so the two fit together nicely.  With the conjunction operator ( && ), if both the first operand AND the second operand both evaluate to true , then the conjunction expression evaluates to true . If either the first or second operand evaluates to false , then the conjunction expression is false .  jshell> true && true; $1 ==> true | created scratch variable $1 : boolean jshell> true && false; $2 ==> false | created scratch variable $2 : boolean jshell> false && true; $3 ==> false | created scratch variable $3 : boolean jshell> false && false; $4 ==> false | created scratch variable $4 : boolean jshell>  The above can be summarized as a truth table.   Truth Table for Conjunction ( && )    A  B  A && B    true  true  true    true  false  false    false  true  false    false  false  false     As an example, if day is a variable holding the number of the day in any given month following is a logical expression that tells us to pay the rent during the first week of the month: day >= 1 && day <=7 .  The disjunction operator ( || ) is similar. If either the first operand OR the second operand evaluates to true , then the disjunction expression evaluates to true . If both the first and second operand evaluates to false , then the disjunction expression is false .  jshell> true || true; $1 ==> true | created scratch variable $1 : boolean jshell> true || false; $2 ==> true | created scratch variable $2 : boolean jshell> false || true; $3 ==> true | created scratch variable $3 : boolean jshell> false || false; $4 ==> false | created scratch variable $4 : boolean jshell>  The above also can be summarized as a truth table.   Truth Table for Disjunction ( || )    A  B  A || B    true  true  true    true  false  true    false  true  true    false  false  false     A comfortable water temperature for an adult to swim laps in a pool is between 78°F and 82°F. What is an expression that tells me when to avoid swimming laps in a pool based on its water temperature? If tempF is the water temperature in °F, tempF < 78 || tempF > 82 . If either of these relational expressions is true , we'll go out for a run instead.  Negation ! is the simplest of the Java logical operators. It turns a true value into false and a false value into true . Consider the following example and truth table.  jshell> !true; $1 ==> false | created scratch variable $1 : boolean jshell> !false; $2 ==> true | created scratch variable $2 : boolean jshell>   Truth Table for Negation ( ! )    A  !A    true  false    false  true     Let's consider a few more practical examples of logical expressions.  Test if age is greater than 17 AND less than or equal to 67.  Logical expression: age > 17 && age <= 67  jshell> int age = 40; age ==> 40 | created variable age : int jshell> age > 17 && age <= 67; \/\/ Logical test $2 ==> true | created scratch variable $2 : boolean jshell> age = 12; age ==> 12 | assigned to age : int jshell> age > 17 && age <= 67; \/\/ Logical test $4 ==> false | created scratch variable $4 : boolean jshell>  Test if age is less-than or equal-to 17 OR greater than 67.  Logical expression: age <= 17 || x > 67  jshell> int age = 40; age ==> 40 | created variable age : int jshell> x <= 17 || x > 67; \/\/ Logical test $2 ==> false | created scratch variable $2 : boolean jshell> age = 12; age ==> 12 | assigned to age : int jshell> age <= 17 || x > 67; \/\/ Logical test $4 ==> true | created scratch variable $4 : boolean jshell> age = 70; age ==> 70 | assigned to age : int jshell> age <= 17 || x > 67; \/\/ Logical test $6 ==> true | created scratch variable $6 : boolean jshell>  Are the last two examples complementary? Is the truth table of one expression equal to the negated truth table of the other? Let's check.  Logical expression: !(age <= 17 || age > 67) == (age > 17 && age <= 67)  jshell> int age = 40; age ==> 40 | created variable age : int jshell> !(age <= 17 || age > 67) == (age > 17 && age <= 67); $2 ==> true | created scratch variable $2 : boolean jshell> age = 12; age ==> 12 | assigned to aeg : int jshell> !(age <= 17 || age > 67) == (age > 17 && age <= 67); $4 ==> true | created scratch variable $4 : boolean jshell> age = 70; age ==> 70 | assigned to age : int jshell> !(age <= 17 || age > 67) == (age > 17 && age <= 67); $6 ==> true | created scratch variable $6 : boolean jshell>  Forming logical expressions to test complex conditions takes practice. The more you practice the better you'll be able to solve form the expressions you need to solve your computing problems.    Practice  You've invented a dart game that awards a different number of points to a player when a dart lands within each of four concentric circles. The game board is 600mm by 600mm, so the center is at (300mm, 300mm). The outer (yellow) band is bounded by circles with radii 75mm and 100mm and has a point value of 1. This next (blue) band is bounded by circles with radii 50mm and 75mm and has a point value of 2. This next (green) band is bounded by circles with radii 20mm and 50mm and has a point value of 3. And the center (red) circle has radius of 20mm with a point value of 4. The game board is instrumented with sensors; it reports the (x, y) coordinates in mm when any dart lands.    See the illustration of your game board on the right.  Write a logical expression that evaluates to true if a dart lands within the centermost circle -- centered at (300, 300) with radius 20 -- and false otherwise. Write a second logical expression that evaluates to true if a dart lands within the next circular band (green) between circles with raddi 20mm and 50mm.    Dart Game Board     We can test if a point is within a circle by checking if the distance between a point and the center of the circle is less than the radius of the circle. The distance formula ( ) gives us the way to compute the distance between and , where one of the two points will be chosen as the circle center and the other is the point we are testing. Because our game board is a set of nested circles, the distance formula will be an integral part of our logical expressions.  A simple relational expression will tell us if a dart's landing coordinate falls within the centermost circle. It is convenient to compute the distance to the circle center first and save it to a temporary variable, and then test the value of that distance variable. The following code snippet initializes variables, computes distance, and tests that distance to see if the dart has landed in the centermost circle. Note how we have organized these computations as a sequence of steps.   \/\/ Circle parameters double xc = 300.0, yc = 300.0; \/\/ Dart coordinates double x1 = 310.0, y1 = 319.0; \/\/ Compute distance double dist = Math.sqrt( Math.pow(x1-xc, 2) + Math.pow(y1-yc, 2) ); \/\/ Test System.out.println( dist < 20 );   Let's test the logic interactively using JShell.   jshell> \/\/ Circle parameters ...> double xc = 300.0, yc = 300.0;  xc ==> 300.0 yc ==> 300.0  jshell> \/\/ Dart coordinates ...> double x1 = 310.0, y1 = 319.0;  x1 ==> 310.0 y1 ==> 319.0  jshell> \/\/ Compute distance ...> double dist = Math.sqrt( Math.pow(x1-xc, 2) + Math.pow(y1-yc, 2) );  dist ==> 21.470910553583888  jshell> \/\/ Test if in center red circle ...> System.out.println( dist < 20 ); false  jshell>   The final false tells us that the dart did not land in the centermost circle.  How about the next outer circular band with radius greater than or equal to 20 but less than 50. This test is more complex because two conditions must be true simultaneously in order for the dart to have landed in the green band. Here is the logical expression to be evaluated.   \/\/ Test if in green circle System.out.println( dist >= 20 && dist < 50 );   Enter this into our previous JShell session.   jshell> System.out.println( dist >= 20 && dist < 50 );  true  jshell>   The dart has landed in the green band. The player is awarded 3 points.    Demonstrate the following two De Morgan's laws using Java logical expressions.       "
 },
@@ -707,14 +725,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-logical.html#table-9",
   "type": "Table",
-  "number": "2.10.1",
+  "number": "2.11.1",
   "title": "Java Logical Operators",
   "body": " Java Logical Operators    Operator  Type  Description    &&  infix, binary  Logical conjunction (AND)    ||  infix, binary  Logical disjunction (AND)    !  prefix, unary  Negation (NOT)    "
 },
 {
-  "id": "p-196",
+  "id": "p-203",
   "level": "2",
-  "url": "section-pe-logical.html#p-196",
+  "url": "section-pe-logical.html#p-203",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -725,14 +743,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-logical.html#table-10",
   "type": "Table",
-  "number": "2.10.2",
+  "number": "2.11.2",
   "title": "Truth Table for Conjunction (<code class=\"code-inline tex2jax_ignore\">&&<\/code>)",
   "body": " Truth Table for Conjunction ( && )    A  B  A && B    true  true  true    true  false  false    false  true  false    false  false  false    "
 },
 {
-  "id": "p-199",
+  "id": "p-206",
   "level": "2",
-  "url": "section-pe-logical.html#p-199",
+  "url": "section-pe-logical.html#p-206",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -743,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-logical.html#table-11",
   "type": "Table",
-  "number": "2.10.3",
+  "number": "2.11.3",
   "title": "Truth Table for Disjunction (<code class=\"code-inline tex2jax_ignore\">||<\/code>)",
   "body": " Truth Table for Disjunction ( || )    A  B  A || B    true  true  true    true  false  true    false  true  true    false  false  false    "
 },
@@ -752,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-logical.html#table-12",
   "type": "Table",
-  "number": "2.10.4",
+  "number": "2.11.4",
   "title": "Truth Table for Negation (<code class=\"code-inline tex2jax_ignore\">!<\/code>)",
   "body": " Truth Table for Negation ( ! )    A  !A    true  false    false  true    "
 },
@@ -761,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-logical.html#gs-exercises",
   "type": "Figure",
-  "number": "2.10.5",
+  "number": "2.11.5",
   "title": "",
   "body": " Dart Game Board   "
 },
@@ -770,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-logical.html#exercise-19",
   "type": "Exercise",
-  "number": "2.10.2.1",
+  "number": "2.11.2.1",
   "title": "",
   "body": "Demonstrate the following two De Morgan's laws using Java logical expressions.     "
 },
@@ -779,23 +797,23 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-pe-conversion.html",
   "type": "Section",
-  "number": "2.11",
+  "number": "2.12",
   "title": "Type Conversions",
   "body": " Type Conversions  Back in section  we mentioned that Java binary operators require both operands to be the same type. Remember to pay close attention to operand types when dividing int s. A common source of errors occurs when dividing two int s, which has the potential to drop the fractional part to the right of the decimal in the resulting quotient.  What happens if two dissimilar types are passed as operands to an operator? For example, what happens if we add an int and a double ? And what happens if we add a String and a double , or subtract a double from a String ? Let's find out.  jshell> int a = 2; double b = 2.0; a ==> 2 | created variable a : int b ==> 2.0 | created variable b : double jshell> a + b; $3 ==> 4.0 | created scratch variable $3 : double jshell> \"a\" + b; $4 ==> \"a2.0\" | created scratch variable $4 : String jshell> \"a\" - b; | Error: | bad operand types for binary operator '-' | first type: java.lang.String | second type: double | \"a\" - b; | ^-----^ jshell>  In the first test above, the result produced is a double . Apparently, the int a was converted to a double automatically before the addition was performed. In the second test, we added the String \"a\" to the double b . This time the value of b was converted to a String first and then the + operator was executed on the String types, which results in String concatenation. The third test failed. Apparently it is not possible to subtract a double from a String in Java.  In fact, this demonstrates a general rule for evaluating mixed type expressions in Java. When two operands of a binary operator are NOT of the same type, Java tries to promote one of the operands to the type of the other operand before it performs the operation indicated by the operator. This is not always successful. The error printed by the third test above clearly indicates that the - binary operator is not valid for the operand types provided.  How do we know when and which operand will be promoted ? The answer is that automatic type conversions generally take place for widening primitive conversions . A widening primtiive conversion occurs when the initial data type requires less memory than the converted type. In the case of adding an int and a double , we know from and that a double consumes 8 bytes of memory while an int consumes only 4 bytes of memory. Consequently, automatic promotion will occur from an int to a double , but not the other way around.  The following table shows all valid widening primitive type conversions. The type listed in the FROM column may be promoted to any type in the TO column. Notice that in general the amount of memory used by the types in the TO column increases progressively from left to right. Note especially the expection that a long is promoted to a float , and not the other way around. A long consumes 8 bytes while a float consumes only 4 bytes.   Widening Primitive Conversions    FROM  TO    byte  short , int , long , float , double    short  int , long , float , double    int  long , float , double    long  float , double    float  double    char  int , long , float , double     There are a few other special cases to consider.  In the previous example we added a String and a double . As we know, a String is not primitive type. Yet, a primitive type may be promoted to a String automatically in an exprssion when the operator can take String operands. This type of conversion is called String conversion . Any type in Java may be converted to a String . This may occur automatically as part of the evaluation of an exprssion, or explicitly. The best way to perform the explicit convertion of a primitive type to a String is to use the built-in String.valueOf(...) static method. For example, the expression String.valueOf(3.14) evaluates to the String \"3.14\" . But the automatic type conversion performed by expression evaluation gives us another way to convert anything to a String . Just add \"\" to any individual data. See the session below, for an example.  jshell> String.valueOf(3.14); $1 ==> \"3.14\" | created scratch variable $1 : String jshell> 3.14 + \"\"; $2 ==> \"3.14\" | created scratch variable $2 : String jshell>  When you perform arithmetic operations like + on byte or short integers, you'll notice that the result is always of type int , and not byte or short . The reason for this is that Java does not define arithmetic operators for byte and short integer types. Instead, it promotes both operands to an int before performing the operation. This is the reason the result is always an int . If you really want the result to be a byte or a short integer expression, you'll have to explicitly convert the result back to the desired type. This is the subject of the next section.  Narrowing primitive conversions occur when converting a value of a data type that consumes more memory to one that consumes less memory. In narrowing primitive conversions, there is a potential loss of information or precision. Clearly this is case when we force more bytes into less memory. Narrowing primitive conversions must be performed explicitly using a technique called casting . To cast an expression, precede the expression with the desired type surrounded with parentheses.  For example, converting a double to an int requires explicit casting:  jshell> double pi = 3.14; pi ==> 3.14 | created variable pi : double jshell> (int)pi; \/\/ Narrowing primitive conversion cast double to int $2 ==> 3 | created scratch variable $2 : int jshell>  In the above example, the value of pi (a double) is explicitly cast to int using the (int) cast. The double stored in 8 bytes was reformulated and copied to the 4 bytes of memory available to the int .  The following table shows all valid narrowing primitive conversions of primitive types, which can be performed using a cast.   Narrowing Primitive Conversions    FROM  TO    byte  char    short  byte , char    int  byte , short , char    long  byte , short , char , int    float  byte , short , char , int , long    double  byte , short , char , int , long , float    char  byte , short     It's important to remember that narrowing conversions may result in data loss or truncation. For example, when converting a floating-point value to an integer, the fractional part is discarded, leading to the potential loss of precision. It is also worth pointing out that the we can convert freely between seven of the eight primitive types. In Java, even a char may be converted to a numeric type. Only the boolean primitive type cannot be converted to a numeric type.  There is a way to reverse a String conversion , that is, to turn a String representation of a primitive back into a primitive type. This process is more sophisticated, requiring careful parsing of the characters in the String . For most Java primitives (all except char ) Java provides a class equivalent for the primitive type that implements a static method that starts with parse... . These methods take a String parameter and attempt to parse it, returning a value having the corresponding primitive type. The following table lists the class equivalents of each primitive type and demonstrates the use of the relevant static method.   Class primitive equivalents and Java primitive parsing    Primitive  Class  Parse method  Evaluates to    byte  Byte  Byte.parseByte(\"1\")  1 (byte)    short  Short  Short.parseShort(\"1\")  1 (short)    int  Integer  Integer.parseInt(\"1\")  1 (int)    long  Long  Long.parseLong(\"1\")  1 (long)    float  Float  Float.parseFloat(\"3.15\")  3.14 (float)    double  Double  Double.parseDouble(\"3.15\")  3.14 (double)    boolean  Boolean  Boolean.parseBoolean(\"true\")  true (boolean)     As we've seen, type conversions (e.g. primitive promotion and String conversion) take place automatically during expression evaluation. The specific conversion that occurs depends entirely on the types that operands have at the moment the operator is about to be evaluated. This might not be obvious by looking at an expression before evaluation. Prediction of the type from the evaluation of a given expression requires a careful tracking of the expression evaluation process intermixed with necessary types conversions. The order of subexpression evaluation must follow operator precedence and left-to-right evaluation.  Consider the following expression examples and their evaluated value and type. Can you explain how each value and type result is arrived?   Expression evaluation value and type    Expression  Evaluated Value  Evaluated Type    1 + 1.0  2.0  double    1.0F + 1  2.0F  float    1 + 1L  2L  long    (long)1.5 + 1F  2.0  float    1 + \"1\"  \"11\"  String    \"2\" + 2  \"22\"  String    1 + 1 + \"1\"  \"21\"  String    \"1\" + 1 + 1  \"111\"  String    \"1\" + (1 + 1)  \"12\"  String    (2 > 1) + \"blue\"  \"trueblue\"  String     Type promotion and conversions are essential in Java for maintaining compatibility between different data types and enabling operations involving different types. Understanding the rules and implications of type promotion and conversions is crucial to ensure correct and reliable behavior in Java programs.     "
 },
 {
-  "id": "p-225",
+  "id": "p-232",
   "level": "2",
-  "url": "section-pe-conversion.html#p-225",
+  "url": "section-pe-conversion.html#p-232",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "promote "
 },
 {
-  "id": "p-226",
+  "id": "p-233",
   "level": "2",
-  "url": "section-pe-conversion.html#p-226",
+  "url": "section-pe-conversion.html#p-233",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -806,23 +824,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-conversion.html#table-13",
   "type": "Table",
-  "number": "2.11.1",
+  "number": "2.12.1",
   "title": "Widening Primitive Conversions",
   "body": " Widening Primitive Conversions    FROM  TO    byte  short , int , long , float , double    short  int , long , float , double    int  long , float , double    long  float , double    float  double    char  int , long , float , double    "
 },
 {
-  "id": "p-229",
+  "id": "p-236",
   "level": "2",
-  "url": "section-pe-conversion.html#p-229",
+  "url": "section-pe-conversion.html#p-236",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "String conversion "
 },
 {
-  "id": "p-231",
+  "id": "p-238",
   "level": "2",
-  "url": "section-pe-conversion.html#p-231",
+  "url": "section-pe-conversion.html#p-238",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -833,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-conversion.html#table-14",
   "type": "Table",
-  "number": "2.11.2",
+  "number": "2.12.2",
   "title": "Narrowing Primitive Conversions",
   "body": " Narrowing Primitive Conversions    FROM  TO    byte  char    short  byte , char    int  byte , short , char    long  byte , short , char , int    float  byte , short , char , int , long    double  byte , short , char , int , long , float    char  byte , short    "
 },
@@ -842,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-conversion.html#table-15",
   "type": "Table",
-  "number": "2.11.3",
+  "number": "2.12.3",
   "title": "Class primitive equivalents and Java primitive parsing",
   "body": " Class primitive equivalents and Java primitive parsing    Primitive  Class  Parse method  Evaluates to    byte  Byte  Byte.parseByte(\"1\")  1 (byte)    short  Short  Short.parseShort(\"1\")  1 (short)    int  Integer  Integer.parseInt(\"1\")  1 (int)    long  Long  Long.parseLong(\"1\")  1 (long)    float  Float  Float.parseFloat(\"3.15\")  3.14 (float)    double  Double  Double.parseDouble(\"3.15\")  3.14 (double)    boolean  Boolean  Boolean.parseBoolean(\"true\")  true (boolean)    "
 },
@@ -851,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-conversion.html#table-16",
   "type": "Table",
-  "number": "2.11.4",
+  "number": "2.12.4",
   "title": "Expression evaluation value and type",
   "body": " Expression evaluation value and type    Expression  Evaluated Value  Evaluated Type    1 + 1.0  2.0  double    1.0F + 1  2.0F  float    1 + 1L  2L  long    (long)1.5 + 1F  2.0  float    1 + \"1\"  \"11\"  String    \"2\" + 2  \"22\"  String    1 + 1 + \"1\"  \"21\"  String    \"1\" + 1 + 1  \"111\"  String    \"1\" + (1 + 1)  \"12\"  String    (2 > 1) + \"blue\"  \"trueblue\"  String    "
 },
@@ -860,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-conversion.html#exercise-20",
   "type": "Exercise",
-  "number": "2.11.1",
+  "number": "2.12.1",
   "title": "",
   "body": ""
 },
@@ -869,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-pe-concepts.html",
   "type": "Section",
-  "number": "2.12",
+  "number": "2.13",
   "title": "Key Concepts",
   "body": " Key Concepts   Java defines primitive types, which may be organized into four groups:  Primitive Types  primitive types    integer number types  byte , short , int , long    floating point number types  float , double    boolean type  boolean    a single character type  char      Java has an additional type called String , which is a class, not a primitive. What makes String unique is that Java provides a literal notation for creating new String objects. Merely writing a sequence of characters surrounded by a pair of double-quotes (\") is enough to create a String in Java. This makes String objects easy to create and use in expressions. We'll learn much more about String objects. String  Using Java we can write down arithmetic, and arithmetic-like, expressions. Java will automatically evaluate these expressions, producing a final value with a well-defined type.  The rules for evaluating expressions are nearly the same as the standard rules used to evaluate mathematical expressions. For example, recall PEMDAS .  All data items in Java have a type, which informs Java about the memory required to store it. The value resulting from evaluating an expression also has a type, which informs Java how to store it.  Java implements all standard mathematical operators. These include +, -, * (multiplication), and \/ (division). Java also implements the % operator (modulo), which produces the remainder after Euclidian division (division with a remainder).  The operation performed by an operator on its operands may change, depending upon the types of the operands. For example, Java has two implemenations of the \/ operator: one that operates on float point operands producing a floating point result, and another that operates on int operands producing an integer result.  Another special operator is + . This operator works as you expect with any number type. But, if one operand is a String , then Java changes the meaning of + from addition to String concatenation (it joins the two Strings producing one new String). You must identify the operand types of a + operator to predict the result.  Java will operate only on operands having the same type. For example, Java will not add an int and long . Similarly, Java will not add a float and a double . Before evaluating an expression with different operand types, Java attempts to promote the type automatically of one of the operands to match the type of the other. These type changes are called widening conversions because more memory is used to store the converted data compared to the original data (the memory required widens).  There are rules for what types may be promoted automatically during expression evaluation. Types that may be promoted automatically during expression evaluation are summarized in the following table.  Type Promotion (Widening Conversions)    FROM  TO    byte  short , int , long , float , double    short  int , long , float , double    int  long , float , double    long  float , double    float  double    char  int , long , float , double      There is a way to force data type conversions in the other direction. That is, to force data into a smaller amount of memory. These conversions are called narrowing conversions because less memory is used to store the converted data as compared to the original data (the amount of memory narrows).  One way to force a narrowing conversion is called a cast . We say that the type of one data value is cast to another.  There are rules for which primitive types may be cast to another. These are summarized in the following table.  Type Casting (Narrowing Conversions)    FROM  TO    byte  char    short  byte , char    int  byte , short , char    long  byte , short , char , int    float  byte , short , char , int , long    double  byte , short , char , int , long , float    char  byte , short      To cast data from one type to another, precede the given value, variable, or expression with parentheses containing the new type. For example, to convert a long to an int, precede a variable, value or expression with (int).  jshell>  (int)123L  $2 ==> 123 | created scratch variable $2 : int To convert a double to a float, precede a variable, value, or expression with (float)  jshell>  (float)12.34  $3 ==> 12.34 | created scratch variable $3 : float    Java provides ways of writing down literal values with many (but not all) primitive types and a String. You can look at data in a Java expression and identify its type by the way it is written.   Numbers without decimal places are of type int (eg, 1, 345, -10, 0)  Numbers without decimal places and a trailing L are of type long (eg, 1L, 25L, -10L, 0L)  Numbers with decimal places are of type double (eg, 1.2, -0.07, 100.0, 4E-3)  Numbers with decimal places and a trailing F are of type float (eg, 1.2F, -0.07F, 4E-3F)  The reserved words true and false are booleans  A single letter surrounded by single quotes is of type char (eg, 'a', '0', '*')  A sequence of zero or more characters surrounded by double quotes is of type String (eg, \"Hello\", \"1234\", \"\")   We may declare variables to hold data of any type. Notation for variable declaration is the data type followed by the new variable name. Variables may be used in any expression in place of values. Examples of variable declarations include: int i; double x; String name; boolean result;   Variables may be initialized with a value at the same time they are declared. For example: int i = 1; double x = 3.1415926; String name = \"Roscoe\"; boolean result = true;   Comments are text that are ignored by Java. They are useful for describing a program. Java comments come in two forms. In the first form, Java ignores any text between \/* and *\/ . Comments of this form may span any number of lines. In second form of comment, Java ignores everything from the characters \/\/ through the end of a line.   "
 },
@@ -878,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-concepts.html#table-17",
   "type": "Table",
-  "number": "2.12.1",
+  "number": "2.13.1",
   "title": "Primitive Types",
   "body": " Primitive Types  primitive types    integer number types  byte , short , int , long    floating point number types  float , double    boolean type  boolean    a single character type  char    "
 },
@@ -887,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-concepts.html#table-18",
   "type": "Table",
-  "number": "2.12.2",
+  "number": "2.13.2",
   "title": "Type Promotion (Widening Conversions)",
   "body": " Type Promotion (Widening Conversions)    FROM  TO    byte  short , int , long , float , double    short  int , long , float , double    int  long , float , double    long  float , double    float  double    char  int , long , float , double    "
 },
@@ -896,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-pe-concepts.html#table-19",
   "type": "Table",
-  "number": "2.12.3",
+  "number": "2.13.3",
   "title": "Type Casting (Narrowing Conversions)",
   "body": " Type Casting (Narrowing Conversions)    FROM  TO    byte  char    short  byte , char    int  byte , short , char    long  byte , short , char , int    float  byte , short , char , int , long    double  byte , short , char , int , long , float    char  byte , short    "
 },
@@ -905,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-pe-exercises.html",
   "type": "Section",
-  "number": "2.13",
+  "number": "2.14",
   "title": "Chapter Exercises",
   "body": " Chapter Exercises   "
 },
@@ -919,9 +937,9 @@ var ptx_lunr_docs = [
   "body": " Your First Java Program   In  we installed the entire JDK, which includes not only JShell, but several other tools including the Java compiler program ( javac ) and the program that runs compiled Java programs ( java ). Beginning in this section we will start using these tools to compile and run our Java programs. JShell remains an incredibly useful tool for testing Java expressions and small code snippets. Keep it close.    A Java Program File  Java programs can be composed of a sequence of the declarations, initializations, and expressions that we have studied thus far. There are several additional requirements that must be satisfied before your program will compile.  Your statements must be written to a file with the proper name and the \".java\" extension.  All statements must be grouped into a named structure called a method .  This and any other methods defined must be contained within an organizing structure called a class . The name of the class must match the name of the file.  Unlike JShell, a Java program does not print results to the terminal automatially. Results must be printed explicitly. In Java, the command System.out.println(...) may be used to print the results of an expression to the terminal. We'll need a print statement in order to see the computed result.    Let's say we want to calculate the distance between two points. One point is at the coordinates and the other is at . Once computed we want to print the result to the terminal. In order to write a complete Java program that will compile and run, we need to fulfill all the above requirements. The following program satisfies these requirements. Using your programmer's editor, create a new file at a known location and enter the text of the following program into that file. Save the program to a file with name ComputeDistance.java (satisfying the first requirement). Don't forget the curly braces ( {} ) that enclose the body of the entire class and the nested curly braces that enclose the statements in the main() method. These are important syntactical elements that must be present.   ComputeDistance.java  public class ComputeDistance { \/\/ 1) Open the class public static void main(String[] args) { \/\/ 2) Start the method double x1 = 0.0, y1 = 20.0; \/\/ Declare and init point 1 double x2 = 30.0, y2 = 0.0; \/\/ Declare and init point 2 \/\/ Apply distance formula double distance = Math.sqrt( Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2) ); System.out.println(distance); \/\/ 3) Print distance } \/\/ Close the method } \/\/ Close the class     Compiling a Java Program  Once saved, open a terminal on your computer. The terminal will run a shell program automically that let's you interact with your operating system. Use your shell's commands to make sure the current working directory is set to the location on your file system where your Java program file is saved.  Different operating systems support a variety of terminals and shell programs implementing a variety of commands. Choose the terminal and shell that you prefer. Refer tp for more information about common shell programs and shell commands.  Into your shell enter the following command, which compiles your Java program.  javac ComputeDistance.java  If you see errors, correct them and try again. When the command executes without error, your progam has compiled successfully. If you list the files in your directory, you will see that the javac program created a new file named CalculateDistance.class . This is your compiled program.    Running a Compiled Java Program  To run your compiled Java program, enter the following command into your shell. Note that the java command does not take the name of the compiled program, but rather takes the name of the Class with the main() static method to run. In our case, the name of the class is ComputeDistance . If you see the following output, yu have successfully compiled and run your first Java program. Make sure you have mastered the javac and java commands. You will be using them quite a lot.   java ComputeDistance  36.05551275463989   Once you have that working, try the following longer program, which computes and print the roots of a quadratic polynomial using the quadratic formula. Study this program carefully. Every part of it should look familiar to you. Notice the use of the + and += operators to assemble the output.   \/\/ Roots.java public class Roots { public static void main(String[] args) { \/\/ Define coefficient values for the quadratic polynomial double a = 1.0; double b = 0.0; double c = -4.0; \/\/ Compute the roots double discr = b * b - 4 * a * c; \/\/ the discriminant double root1 = (-b - Math.sqrt(discr)) \/ (2 * a); double root2 = (-b + Math.sqrt(discr)) \/ (2 * a); \/\/ Print the results String resp = \"Coefficients: a=\" + a + \", b=\" + b + \", c=\" + c; resp += \"\\nRoots: \" + root1 + \" and \" + root2; System.out.println(resp); } }    javac Roots.java  java Roots  Coefficients: a=1.0, b=0.0, c=-4.0 Roots: -2.0 and 2.0   Many programming editors streamline the compile and run process by running all steps for you at the click of a button. Make sure you first master at least one shell as well as the commands necessary to work with your computer's operating system and the commands required to compile and run a Java program. Once you feel comfortable, feel free to use your editor's shortcut buttons. You'll understand exactly what they do.   "
 },
 {
-  "id": "p-241",
+  "id": "p-248",
   "level": "2",
-  "url": "section-jp-compile.html#p-241",
+  "url": "section-jp-compile.html#p-248",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -943,7 +961,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Static Methods",
-  "body": " Static Methods   public static void main(...)  In the last section we authored, compiled, and executed our first Java program. To make a complete program suitable for executaion, one of our requirements was to wrap our Java statements in a method named main() . In fact, the main() method must have the exact signature  public static void main(String[]) . This signature is what Java looks for as the starting point for a program's execution. When we entered the shell commands java ComputeDistance , we were telling Java to look in the ComputeDistance class for the method with the signature public static void main(String[]) and begin execution there.  The main() method uses quite a lot of keywords. The following table shows the purpose for each. You will learn about each of these as we progress through the topics that follow. For now, understand that it is necessary to create a main() method with this exact signature so Java knows where to begin execution.   Anatomy of a method      Other static Methods  Grouping Java statements in named methods is a very useful technique that will benefit us as our programs grow in size. It is a form of encapsulation that supports abstraction . Abstracting away the details of a particular computation, exposing it as the name of the concept, is an important way of reducing complexity, which gives us a fighting chance at writing large and complex programs.  As an example, consider our ComputeDistance() method from the last section. Rather than having to remember the distance formula every time we wanted to compute distance, a btter approach would be to encapsulate that computation in its own method and give that method a meaningful name, like distanceBetween() . This new method would take the four parameters x1 , y1 , x2 , y2 , and return a double that was the computed distance. Following the guidance of , we can construct the following updated program that encapsulates teh distance formula in a new method. This lets us reuse the method without reentering the distance formula over and over again.   ComputeDistance.java (version 2)   public class ComputeDistance { public static void main(String[] args) { \/\/ Computation starts here \/\/ Reuse distanceBetween() to calculate and sum two distances double dist1 = distanceBetween(0.0, 20.0, 30.0, 0.0); double dist2 = distanceBetween(30.0, 0.0, 40.0, 10.0); System.out.println(\"Total distance: \" + (dist1+dist2)); } \/\/ New method that encapsulates the distance formula computation \/\/ Parameters are four doubles representing the two point coordinates public static double distanceBetween(double x1, double y1, double x2, double y2 ) { double term1 = Math.pow(x1-x2, 2); \/\/ Compute temporary terms double term2 = Math.pow(y1-y2, 2); \/\/ Apply the distance formula double distance = Math.sqrt( term1 + term2 ); \/\/ Return the computed distance return distance; } }    Compile and run our updated program from a shell.   javac ComputeDistance.java java ComputeDistance  Total distance: 50.19764837837084   Now we have something very nice. In our second version of the ComputeDistance program, we have our outer class defined with a name that matches its file ( ComputeDistance.java ). Within the class we declare a main() method with the proper signature so Java knows were to start exectuion. And we have a helper method named distanceBetween() that encapsulates and abstracts away the details associated with computing the distance between two points. Because we encapsulated the distance formula in its own method, we can invoke the method twice using only its name and passing the four doubles . Never again do we have to remember the details of the distance formula nor how to write it in Java. This is the power of abstraction and encapsulation .    Source Code Formatting  Another item to note about our updated program is how the code itself is laid out. You'll notice that the two methods are indented within the set of curly braces that enclose the class declaration, and the statements that define each method are indented further. The parameter delcarations of the distanceBetween() method are even indented so the second pair of parameters is right under the first pair. This formatting helps us see and understand how a program is organized at a glance, but it is not necessary, at least as far as the Java compiler is concerned. In fact, the Java compiler will compile the following listing with no trouble. But I don't recommend it.   ComputeDistance.java (messy version)   public class ComputeDistanceMessy{public static void main(String[] args){ double dist1=distanceBetween(0.0,20.0,30.0,0.0);double dist2= distanceBetween(30.0,0.0,40.0,10.0);System.out.println(\"Total distance: \" +(dist1+dist2));}public static double distanceBetween(double x1,double y1, double x2,double y2){double term1=Math.pow(x1-x2,2);double term2 = Math.pow(y1-y2,2);double distance=Math.sqrt(term1+term2);return distance;}}    This illustrates an important fact about Java. That is, Whitespace rarely matters . We do need a space or linefeed here or there to separate certain language tokens, but not too many. But that doesn't mean your programs should look like the above. In fact, part of your job while programming is to write your code so that it is understandable by others. To that end, Always format and comment your code . This is your way of communicating your program organization and how it works, even if you are communicating only to your future self. It's best not to be the person who looks back at a program they wrote in the past and has no idea about what it does.   "
+  "body": " Static Methods   public static void main(...)  In the last section we authored, compiled, and executed our first Java program. To make a complete program suitable for executaion, one of our requirements was to wrap our Java statements in a method named main() . In fact, the main() method must have the exact signature  public static void main(String[]) . This signature is what Java looks for as the starting point for a program's execution. When we entered the shell commands java ComputeDistance , we were telling Java to look in the ComputeDistance class for the method with the signature public static void main(String[]) and begin execution there.  The main() method uses several keywords. The following figure shows the purpose for each. You will learn about each of these as we progress through the topics that follow. For now, understand that it is necessary to create a main(…) method with this exact signature so Java knows where to begin execution.   Anatomy of the main(…) method      Other static Methods  Grouping Java statements in named methods is a very useful technique that will benefit us as our programs grow in size. It is a form of encapsulation that supports abstraction . Abstracting away the details of a particular computation, exposing it as the name of the concept, is an important way of reducing complexity, which gives us a fighting chance at writing large and complex programs.  As an example, consider our ComputeDistance() method from the last section. Rather than having to remember the distance formula every time we wanted to compute distance, a btter approach would be to encapsulate that computation in its own method and give that method a meaningful name, like distanceBetween() . This new method would take the four parameters x1 , y1 , x2 , y2 , and return a double that was the computed distance. Following the guidance of , we can construct the following updated program that encapsulates teh distance formula in a new method. This lets us reuse the method without reentering the distance formula over and over again.   ComputeDistance.java (version 2)   public class ComputeDistance { public static void main(String[] args) { \/\/ Computation starts here \/\/ Reuse distanceBetween() to calculate and sum two distances double dist1 = distanceBetween(0.0, 20.0, 30.0, 0.0); double dist2 = distanceBetween(30.0, 0.0, 40.0, 10.0); System.out.println(\"Total distance: \" + (dist1+dist2)); } \/\/ New method that encapsulates the distance formula computation \/\/ Parameters are four doubles representing the two point coordinates public static double distanceBetween(double x1, double y1, double x2, double y2 ) { double term1 = Math.pow(x1-x2, 2); \/\/ Compute temporary terms double term2 = Math.pow(y1-y2, 2); \/\/ Apply the distance formula double distance = Math.sqrt( term1 + term2 ); \/\/ Return the computed distance return distance; } }    Compile and run our updated program from a shell.   javac ComputeDistance.java java ComputeDistance  Total distance: 50.19764837837084   Now we have something very nice. In our second version of the ComputeDistance program, we have our outer class defined with a name that matches its file ( ComputeDistance.java ). Within the class we declare a main() method with the proper signature so Java knows were to start exectuion. And we have a helper method named distanceBetween() that encapsulates and abstracts away the details associated with computing the distance between two points. Because we encapsulated the distance formula in its own method, we can invoke the method twice using only its name and passing the four doubles . Never again do we have to remember the details of the distance formula nor how to write it in Java. This is the power of abstraction and encapsulation .    Source Code Formatting  Another item to note about our updated program is how the code itself is laid out. You'll notice that the two methods are indented within the set of curly braces that enclose the class declaration, and the statements that define each method are indented further. The parameter delcarations of the distanceBetween() method are even indented so the second pair of parameters is right under the first pair. This formatting helps us see and understand how a program is organized at a glance, but it is not necessary, at least as far as the Java compiler is concerned. In fact, the Java compiler will compile the following listing with no trouble. But I don't recommend it.   ComputeDistance.java (messy version)   public class ComputeDistanceMessy{public static void main(String[] args){ double dist1=distanceBetween(0.0,20.0,30.0,0.0);double dist2= distanceBetween(30.0,0.0,40.0,10.0);System.out.println(\"Total distance: \" +(dist1+dist2));}public static double distanceBetween(double x1,double y1, double x2,double y2){double term1=Math.pow(x1-x2,2);double term2 = Math.pow(y1-y2,2);double distance=Math.sqrt(term1+term2);return distance;}}    This illustrates an important fact about Java. That is, Whitespace rarely matters . We do need a space or linefeed here or there to separate certain language tokens, but not too many. But that doesn't mean your programs should look like the above. In fact, part of your job while programming is to write your code so that it is understandable by others. To that end, Always format and comment your code . This is your way of communicating your program organization and how it works, even if you are communicating only to your future self. It's best not to be the person who looks back at a program they wrote in the past and has no idea about what it does.   "
 },
 {
   "id": "figure-jp-method-anatomy",
@@ -952,7 +970,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "3.2.1",
   "title": "",
-  "body": " Anatomy of a method   "
+  "body": " Anatomy of the main(…) method   "
 },
 {
   "id": "listing-jp-computedistance2",
@@ -973,9 +991,9 @@ var ptx_lunr_docs = [
   "body": " ComputeDistance.java (messy version)   public class ComputeDistanceMessy{public static void main(String[] args){ double dist1=distanceBetween(0.0,20.0,30.0,0.0);double dist2= distanceBetween(30.0,0.0,40.0,10.0);System.out.println(\"Total distance: \" +(dist1+dist2));}public static double distanceBetween(double x1,double y1, double x2,double y2){double term1=Math.pow(x1-x2,2);double term2 = Math.pow(y1-y2,2);double distance=Math.sqrt(term1+term2);return distance;}}   "
 },
 {
-  "id": "p-257",
+  "id": "p-264",
   "level": "2",
-  "url": "section-jp-static-methods.html#p-257",
+  "url": "section-jp-static-methods.html#p-264",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -991,18 +1009,18 @@ var ptx_lunr_docs = [
   "body": " The String Class   Another way that we benefit from encapsulation is unique to object oriented programming. That is to encapsulate both state (data) and behavior (methods) in a larger structure called an object . The way that we create an instance of an object is by using the code we write when declaring a class . In fact, an object is often referred to as an instance of a class , and creating a new object as instanciating a class . We won't be writing new classes to be instantiated until a bit later. Fortunately, The JDK ships with a huge number of prewritten and debugged classes that we can use directly. The first class we will investigate is String .    Instantiating a String  It may surprise you to learn that String is a class because it also has a handy literal notation that allows us to create String s objects directly using double-quotes ( \"\" ). In fact, there is a second way to instantiate a new String , which is the way we instantiate any object in Java. That is, by using the new keyword to invoke the class constructor . In the following program we create two String objects, one using literal notation and the other by invoking the String constructor using new . Both result in a new String object.   Two ways to create String objects.   \/\/ Strings.java public class Strings { public static void main(String[] args) {\/\/ Start execution here String name1, name2; \/\/ Declare variables name1 = \"Athos\"; \/\/ Assign String literal name2 = new String(\"Porthos\"); \/\/ Invoke String constructor System.out.println(name1 + \" and \" + name2); } }    Once we know the name of the class we want to create and the parameters expected by its constructor we use the new keyword to invoke the constructor using the following pattern for invocation. The result is a new object, an instance of the class, which we save by assigning to a variable declared with the class type. The following figure demonstrates constructor invocation and assignment of the created object.  Invoking a constructor (TODO: Replace with figure)    variable  assign  keyword  class  parameters    name2  =  new  String  (\"Porthos\")        String Methods  As we've discussed, the idea of encapsulation in object oriented programming implies that objects (and classes) may implement their own state and behavior . The state of an object is captured by its internal variables that it defines, and its behavior by the methods it implements. Often, an object's methods manipulate and manage its internal data, which is consist with encapsulation .  To access the variables and methods of an object, we must gain access to its inner scope. We do this using what's know as the dot operator . If we follow an object with a dot ( . ), we are effectively peering into the inner scope of the object. We are able to access anything within the object that the object makes available. To demonstrate, let's have a look at what objects of type String implement.  As you know, the data held and managed by a String object is a sequence of characters. A String object implements several methods that allows us to interrogate and manipulate these internal data.  For example, one of the String object methods is named toUpperCase() . As the method name implies, it converts all characters in a String to uppercase and returns a new String composed of all uppercase letters. Recall that in we learned that a String object is immutable. All String methods that seemingly modify internal character data, actually return a new String object.  Let's return to JShell for a moment to explore methods of the String class. In the following JShell session, we create a new String object and then invoke its toUpperCase() method which returns a new String made up of all uppercase characters.  jshell> String name2 = new String(\"Porthos\"); \/\/ Create a new String object name2 ==> \"Porthos\" | created variable name2 : String jshell> String name3 = name2.toUpperCase(); \/\/ Produce an uppercase version name3 ==> \"PORTHOS\" | created variable name3 : String jshell>  The variable name3 now references an object of type String with the value \"PORTHOS\" .  Here is something interesting to try. JShell is able to look up all the items within the scope of an object and print out a list of their names. Enter the variable name of one of your String objects into JShell followed by the dot-operator, for example, the new variable name3. and then press the TAB key. JShell will give you a list of all accessible names, like the following. In the case of String everything accessible is a method, hence each item in the list is followed by one or two parentheses.  jshell> name3. \/\/ Press the TAB key charAt( chars() codePointAt( codePointBefore( codePointCount( codePoints() compareTo( compareToIgnoreCase( concat( contains( contentEquals( describeConstable() endsWith( equals( equalsIgnoreCase( formatted( getBytes( getChars( getClass() hashCode() indent( indexOf( intern() isBlank() isEmpty() lastIndexOf( length() lines() matches( notify() notifyAll() offsetByCodePoints( regionMatches( repeat( replace( replaceAll( replaceFirst( resolveConstantDesc( split( startsWith( strip() stripIndent() stripLeading() stripTrailing() subSequence( substring( toCharArray() toLowerCase( toString() toUpperCase( transform( translateEscapes() trim() wait( jshell> name3.  As you can see by the list, Java provides a rich set of methods and functionalities in the String class, making it powerful and versatile for working with text and string manipulation. Here are some commonly used methods and functionalities of the String class:   Common String methods   Retrieving string length: int length = myString.length();  Comparing strings:  boolean isEqual = myString1.equals(myString2);  Concatenating strings:  char concat = myString1.concatenate(myString2);  Accessing characters:  char firstChar = myString.charAt(idx);  Extracting substrings:  String substring = myString.substring(startIdx, endIdx);  Finding substring:  int index = myString.indexOf(subStr);  Converting case:  String lowercase = myString.toLowerCase();  Converting case:  String uppercase = myString.toUpperCase();  Replacing substrings:  String replaced = myString.replace(oldValue, newValue);  Removing whitespace:  String trimmed = myString.trim(response);    To compare the content of two Strings, you should use the equals() method instead of the == operator. The equals() method compares the two Strings character-by-character, while the == operator checks if the two String references point to the same memory location. Using == to compare Strings is rarely what you want to do. Use it only if you understand the difference. Otherwise, .equals() is the better choice.    String Examples  The following program which demonstrates several String methods.  \/\/ StringExample.java public class StringExample { public static void main(String[] args) { String part1 = new String(\"Anti\"); \/\/ String constructor String part2 = \"disestablishmentarianism\"; \/\/ String literal String word = part1.concat(part2); \/\/ Concat Strings \/\/ Get word length int len = word.length(); System.out.println(word + \" has \" + len + \" characters\"); \/\/ Get character at an index (starts at 0) char first = word.charAt(0); char last = word.charAt( word.length() - 1 ); System.out.println(\"The first character is \" + first); System.out.println(\"The lst character is \" + last); \/\/ Find a substring int idx = word.indexOf(\"dis\"); System.out.println(\"The substring 'dis' starts at index \" + idx); \/\/ Replace substrings String newWord = word.replace(\"Anti\", \"Pro\"); System.out.println(\"The new word is \" + newWord); } }  Compile and run the program.  javac StringExample.java java StringExample  Antidisestablishmentarianism has 28 characters The first character is A The lst character is m The substring 'dis' starts at index 4 The new word is Prodisestablishmentarianism   Some things to note.  The .concate() method of String does the same job as the + operator with String operands. You may nest .concat() invocations.  The index of the first character is 0. Passing 0 to the .charAt(0) method returns 'A' . To get the last character, we must pass an index equal to length() - 1. If the first index is 0, then the last index must be 1 less than the length. This is a general rule in Java. All indexes start at 0 .     "
 },
 {
-  "id": "p-258",
+  "id": "p-265",
   "level": "2",
-  "url": "section-jp-string.html#p-258",
+  "url": "section-jp-string.html#p-265",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "object instance class "
 },
 {
-  "id": "p-259",
+  "id": "p-266",
   "level": "2",
-  "url": "section-jp-string.html#p-259",
+  "url": "section-jp-string.html#p-266",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1018,18 +1036,18 @@ var ptx_lunr_docs = [
   "body": " Two ways to create String objects.   \/\/ Strings.java public class Strings { public static void main(String[] args) {\/\/ Start execution here String name1, name2; \/\/ Declare variables name1 = \"Athos\"; \/\/ Assign String literal name2 = new String(\"Porthos\"); \/\/ Invoke String constructor System.out.println(name1 + \" and \" + name2); } }   "
 },
 {
-  "id": "p-260",
+  "id": "p-267",
   "level": "2",
-  "url": "section-jp-string.html#p-260",
+  "url": "section-jp-string.html#p-267",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "new "
 },
 {
-  "id": "p-262",
+  "id": "p-269",
   "level": "2",
-  "url": "section-jp-string.html#p-262",
+  "url": "section-jp-string.html#p-269",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1045,9 +1063,9 @@ var ptx_lunr_docs = [
   "body": " Common String methods   Retrieving string length: int length = myString.length();  Comparing strings:  boolean isEqual = myString1.equals(myString2);  Concatenating strings:  char concat = myString1.concatenate(myString2);  Accessing characters:  char firstChar = myString.charAt(idx);  Extracting substrings:  String substring = myString.substring(startIdx, endIdx);  Finding substring:  int index = myString.indexOf(subStr);  Converting case:  String lowercase = myString.toLowerCase();  Converting case:  String uppercase = myString.toUpperCase();  Replacing substrings:  String replaced = myString.replace(oldValue, newValue);  Removing whitespace:  String trimmed = myString.trim(response);   "
 },
 {
-  "id": "p-272",
+  "id": "p-279",
   "level": "2",
-  "url": "section-jp-string.html#p-272",
+  "url": "section-jp-string.html#p-279",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1063,9 +1081,9 @@ var ptx_lunr_docs = [
   "body": " The Scanner Class  The Scanner utility class provided by Java is useful for reading user responses from an input stream, such as the terminal or a file. When reading from the terminal, a Scanner will wait until the user enters a token and presses the Enter or Return key. Not only can Scanner read a response as text, but it also can parse a response and return a particular data type, when you know what to expect. A Scanner reads one token at a time. By default, tokens are delineated with spaces. We'll use the Scanner class to make our terminal programs interactive.   Instantiating a Scanner  The first thing to note is that, unlike String , the Scanner class is not available in Java by default. It first must be imported from the library that comes with the JDK. This is done by adding the following line to the top of your Java program.  import java.util.Scanner;  Instantiating a Scanner class follows the same pattern as other classes, using the new keyword. The Scanner constructor needs a parameter that tells it where to read responses. The terminal can be read using the precreated object at System.in . Compare this to the Java print statement System.out.println(...) , which writes to the terminal. Following the standard constuctor syntax and using the System.in constructor parameter, we can declare a new Scanner variable and initialize it by instantiating a new Scanner object using the following statement.  Scanner scnr = new Scanner(System.in);    Scanner Methods  Scanner provides a variety of methods to read data from the terminal and even check if there is data to read before reading. The followng table describes many of these methods.   Common Scanner Methods    Method  Returns  Description    hasNext()  boolean  true if there is another token to read    hasNextBoolean()  boolean  true if there is a boolean waiting to be read    hasNextInt()  boolean  true if there is a int waiting to be read    hasNextDouble()  boolean  true if there is a double waiting to be read    next()  String  Read and return the next token as a String    nextLine()  String  Read and return the next complete line of text as a String    nextBoolean()  boolean  Read the next token as a boolean and return    nextInt()  int  Read the next token as an int and return    nextDouble()  double  Read the next token as a double and return    close()  void  Close when done to prevent resource leak.       Scanner Examples  The following program demonstrates how to instantiate a Scanner object and invoke its methods. We add an initial interactive step to our first Java Program in . Once again, we are using the distanceBetween() method twice to compute and sum the distance between the first two points and the second two points. Don't forget to close() the Scanner to avoid a resource leak. Closing a Scanner sets a flag in the object so other parts of your code knows it is not safe to read, it closes any underlying resource that it may be using, and it also makes it suitable for garbage collection to avoid memory leaks, a concept that we will investigate in more detail later. Also note that you may close an already closed Scanner multiple times -- no harm is done.   \/\/ InteractiveDistance.java import java.util.Scanner; \/\/ Import java.util.Scanner public class InteractiveDistance { public static void main(String[] args) { \/\/ Computation starts here double x1, y1, x2, y2, x3, y3; \/\/ Create a Scanner object that reads from the terminal Scanner scnr = new Scanner(System.in); \/\/ Prompt the user for two points System.out.print(\"Please enter x1 y1: \"); x1 = scnr.nextDouble(); y1 = scnr.nextDouble(); System.out.print(\"Please enter x2 y2: \"); x2 = scnr.nextDouble(); y2 = scnr.nextDouble(); System.out.print(\"Please enter x3 y3: \"); x3 = scnr.nextDouble(); y3 = scnr.nextDouble(); \/\/ Close the scanner scnr.close(); \/\/ Reuse the method to calculate and sum two distances double dist1 = distanceBetween(x1, y1, x2, y2); double dist2 = distanceBetween(x2, y2, x3, y3); System.out.println(\"Total distance: \" + (dist1+dist2)); } \/\/ New method that encapsulates the distance formula computation \/\/ Parameters are four doubles representing the two point coordinates public static double distanceBetween(double x1, double y1, double x2, double y2) { double term1 = Math.pow(x1-x2, 2); \/\/ Compute temporary terms double term2 = Math.pow(y1-y2, 2); \/\/ Apply the distance formula double distance = Math.sqrt( term1 + term2 ); \/\/ Return the computed distance return distance; } }   Compile, run, and enter data into your program. As you'll see, using the Scanner object to read data from the terminal is a great way to make your programs more useful. By reading in data values, the computations performed by your programs will be more generally applicable.   javac InteractiveDistance.java java InteractiveDistance  Please enter x1 y1: 0.0 20.0 Please enter x2 y2: 30.0 0.0 Please enter x3 y3: 40.0 10.0 Total distance: 50.19764837837084    "
 },
 {
-  "id": "p-274",
+  "id": "p-281",
   "level": "2",
-  "url": "section-jp-scanner.html#p-274",
+  "url": "section-jp-scanner.html#p-281",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1081,9 +1099,9 @@ var ptx_lunr_docs = [
   "body": " Common Scanner Methods    Method  Returns  Description    hasNext()  boolean  true if there is another token to read    hasNextBoolean()  boolean  true if there is a boolean waiting to be read    hasNextInt()  boolean  true if there is a int waiting to be read    hasNextDouble()  boolean  true if there is a double waiting to be read    next()  String  Read and return the next token as a String    nextLine()  String  Read and return the next complete line of text as a String    nextBoolean()  boolean  Read the next token as a boolean and return    nextInt()  int  Read the next token as an int and return    nextDouble()  double  Read the next token as a double and return    close()  void  Close when done to prevent resource leak.    "
 },
 {
-  "id": "p-276",
+  "id": "p-283",
   "level": "2",
-  "url": "section-jp-scanner.html#p-276",
+  "url": "section-jp-scanner.html#p-283",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1099,9 +1117,9 @@ var ptx_lunr_docs = [
   "body": " The Random Class  Another useful class provided by the JDK is Random . This class gives you the ability to generate pseudorandom numbers. The Random class is a great example of encapsulation in object oriented programming. Performing high quality pseudorandom number generation can be tricky. I should not need to implement an algorithm when high quality an thoroughly debugged algorithms exist already. I can understand what the algorithm produces without knowing the specific details for how the algorithm works. The Random class encapsulates these algorithms and exposes them using simple methods. Let's explore a bit more of what Random can do.   Instantiating a Random Object  Pseudorandom numbers are just that -- not truly random, but rather an approximation of true randomness. While they appear random, that are generated in a well-defined order using a deterministic algorithm. A sequence of pseudorandom numbers is repeated when it starts at the same seed value, which has type long . A Random object may be instantiated with a seed as the parameter, or with no parameters at all. If no seed is specified in the Random constructor, then one is selected for you, usually derived from current value of the running JVM's high-resolution time source.  Like Scanner , the Random class is not available automatically in java. It must first be imported from java.util.Random . A Random object is instantiated using the new keyword and the standard constructor syntax. Once instantiated, the Random object can be used to generate various types of random numbers.   Random constructor examples.   Random rnd1 = new Random(123L); \/\/ Create Random object with seed 123L Random rnd2 = new Random(); \/\/ Create Random object with automatic seed      Random Methods  Random object methods give us the ability to generate a variety of different random number types, selected from uniform and normal distributions. The following table describes many of these methods.   Several Random Methods    Method  Returns  Description    nextInt(int max)  int  Compute a uniformly distributed  pseudorandom int in [0, max) .  Inclusive of 0 but exclusive of max .    nextDouble()  double  Compute a uniformly distributed  pseudorandom double in [0.0, 1.0) .    nextBoolean()  boolean  Compute an equally distributed  pseudorandom boolean in {true, false} .    nextGaussian()  double  Compute a normally distributed  pseudorandom double with mean 0.0  and standard deviation 1.0    setSeed(long seed)  void  Reset the seed of the pseudorandom  number generator.       Random Example  In the following example program we create a Random object and assign it to the variable rnd . Then we use the object to test the .nextInt(...) , .nextDouble() , and .nextGaussian() methods. Note that we are invoking the version of .nextInt(...) that takes a single int argument. This argument will be the exclusive maximum of the random number range, with 0 being the inclusive minimum. In other words, the method invocation rnd.nextInt(10) , we generate integer numbers from 0, 1, 2 ... 9, but never the number 10.  Random method examples.   \/\/ RandomExample.java import java.util.Random; public class RandomExample { public static void main(String[] args) { int i1, i2; double x1, x2, x3; Random rnd = new Random(); \/\/ Pseudorandom ints in range [0, 10) \/\/ The value 10, is out of range i1 = rnd.nextInt(10); i2 = rnd.nextInt(10); System.out.println(i1 + \", \" + i2); \/\/ Pseudorandom doubles in range [0.0, 1.0) x1 = rnd.nextDouble(); x2 = rnd.nextDouble(); System.out.println(x1 + \", \" + x2); \/\/ Pseudorandom double with mean 0.0 \/\/ and standard deviation 1.0 x1 = rnd.nextGaussian(); x2 = rnd.nextGaussian(); x3 = rnd.nextGaussian(); System.out.println(x1 + \", \" + x2 + \", \" + x3); } }     javac RandomExample.java java RandomExample  3, 2 0.46419492484058866, 0.7672336564431435 -0.539505561690596, 0.3820743615836469, 1.5448345622446626    java RandomExample  8, 4 0.4287714292408068, 0.8200307030697347 0.39003589589258647, 0.609691139278949, -0.3421636964155645    java RandomExample  9, 0 0.06465674365837526, 0.6659245501706238 0.6516158074847989, -0.678154539495678, -0.7702039482811629   While the Random object methods give us the basis for generating pseudorandom numbers, practical applications will require us to modify the range within which the numbers are generated to suit our application requirements. Specifically, we'll often need to scale random number ranges to make them wider or more narrow, and we'll often have to translate (shift) ranges to higher and lower values. It is fortunate that the pseudorandom number generator methods include 0 at one end of the range of generated numbers. As you'll see, this is convenient when manipulating these numeric ranges.  The easist way to scale and translate pseudorandom number ranges is to operate on their lower and higher bounds. If we modify the bounds correctly, the inner values of the range will follow. For example, we can easily modify the width of a range by multiplying values generated by a suitable scale factor. For example, if we are interested in a pseudorandom double in the range [0.0, 2.0) we would simply multiply values returned from .nextDouble() by 2.0, as follows. We know that the new generated values will fall in the range [0.0, 2.0).       Similarly, we can add a constant to a range to translate it to a new location.  Consider the following examples. In all cases assume rnd is a previously instantiated Random object.   Write a Java expression that returns a uniformly distributed double in the range [-1.0, 1.0).  First multiply the range by a suitable scale factor, then shift by subtracting a suitable constant.   2.0 * rnd.nextDouble() - 1.0     Write a Java expression that returns a uniformly distributed int in the range [1, 10].  Watch out for the upper bound; it is inclusive of 10. Also note that the range includes 10 integers, and is shifted by 1.   rnd.nextInt(10) + 1     Write a Java expression that returns a uniformly distributed int in the range [-10, -5].  Watch out for the lower bound; it is inclusive of -10. The range includes 6 integers and is shifted. Multiplying by a negative number causes the bounds of a range to swap roles.   rnd.nextInt(6) - 10 or -5 - rnd.nextInt(6)     Write a Java expression that returns a normally distributed double with mean 5.0 and standard deviation of 2.0.  Multiply to scale range to width of standard deviation and add a constant to translate to mean.   rnd.nextGaussian()*2.0 + 5.0     "
 },
 {
-  "id": "p-279",
+  "id": "p-286",
   "level": "2",
-  "url": "section-jp-random.html#p-279",
+  "url": "section-jp-random.html#p-286",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1216,9 +1234,9 @@ var ptx_lunr_docs = [
   "body": " A DoodlePad Pad window object with an Oval object    \/\/ MyFirstOval.java import doodlepad.*; public class MyFirstOval { public static void main(String[] args) { Oval oval1 = new Oval(); } }     "
 },
 {
-  "id": "p-293",
+  "id": "p-300",
   "level": "2",
-  "url": "section-dp-doodlepad.html#p-293",
+  "url": "section-dp-doodlepad.html#p-300",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1261,9 +1279,9 @@ var ptx_lunr_docs = [
   "body": " Creating Shapes   In we created our first Oval object. We used the Oval class constructor that takes no arguments. every Shape in DoodlePad has a nullary (no-argument) constructor for convenience. For all Shapes, the nullary constructor chooses the initial location of the Shape to be random (using a Random object) and sets the width and height to 100. Alternative Shape constructors let use set the location and size as parameters.  DoodlePad defines a variety of graphic objects that you can instantiate and interact with, including basic shapes. Available basic shape classes include the following. Don't miss other DoodlePad classes such as Polygon , Pad , Path , Image , Text , Sprite and more.   Basic Shapes    Shape  Description    Rectangle  Your garden variety Rectangle    Oval  Another name for an Ellipse    RoundRect  A Rectangle with rounded corners    Line  A straight line between two points    Arc  A curved line that is part of an ellipse       Rectangle  Rectangles are one of the more simple shapes in DoodlePad. Creating a new Rectangle is as simple as creating an instance of the Rectangle class. The Rectangle class's nullary constructor creates a 100 pixel × 100 pixel Rectangle at a randomly selected location, but other Rectangle constructors give you more control of the Rectangle created. For example, the following sample program creates a 70 pixel × 40 pixel Rectangle with its upper left corner at the location (50, 60).  \/\/ RectangleDemo1.java import doodlepad.*; public class RectangleDemo1 { public static void main(String[] args) { Rectangle r1 = new Rectangle(50, 60, 70, 40); } }  The Rectangle size and location are passed as numerical arguments to the Rectangle constructor. The first pair of arguments correspond to the Rectangle location (x=50, y=60) and the second pair correspond to its size (width=70, height=40). This is a pattern that is repeated in many graphic object constructors in DoodlePad.    Oval  Creating an Oval is very similar to creating a Rectangle. An Oval's nullary constructor creates a new 100 pixel × 100 pixel ellipse Shape with a randomly selected starting location. An Oval also has a four-argument constructor similar to a Rectangle. The first two arguments of this constructor are the x and y coordinates of the upper left corner of the Oval's bounding box and the second two arguments are the Oval's width and height. Note that the four numerical argument values of this Oval constructor can be thought of as describing the bounding box within which the Oval is be created.  The only difference between the following example program and the previous example is that the following sample program creates a 70 pixel × 40 pixel Oval with its upper left corner at the location (50, 60) isntead of a Rectangle.  \/\/ OvalDemo1.java import doodlepad.*; public class OvalDemo1 { public static void main(String[] args) { Oval r1 = new Oval(50, 60, 70, 40); } }    RoundRect   The RoundRect class differs from Rectangle in that the corners of a RoundRect are, well, rounded. In addition to specifying the location and size of a RoundRect, you must also specify the width and height of the arcs that form the rounded corners. These additional parameters are called arcWidth and arcHeight and come after x-location, y-location, width and height in the RoundRect constructor.    RoundRect Measurements     In the following example we create a RoundRect object at (10, 10) with width = 200, height = 150, arcWidth and arcHeight = 30. The diagram on the right illustrates how these parameters are used to define the shape. Note that the arcWidth and arcHeight parameters are not required to have equal values.    \/\/ RoundRectDemo1.java import doodlepad.*; public class RoundRectDemo1 { public static void main(String[] args) { RoundRect r1 = new RoundRect(10, 10, 200, 150, 30, 30); } }      Arc   The Arc shape class can be thought of as a pie-section taken from an Oval. In fact, to define an Arc one starts with the location and dimensions of an Oval and then adds the start and angular extent of the section to be taken. In DoodlePad these angles are defined with 0° indicated by a horizontal line extending from the center of the oval to the right. As the angle increases the line rotates in the counter clockwise direction.    Arc Measurements     The beginning of an arc is specified with an angle between 0° and 360°, and the length of the arc is determined by an angle that the arc sweeps. The arc itself follows the outline of the equivalent oval. The figure on the right describes the arc specified (in red) by the program below. The first four arguments of the Arc constructor are the same as an Oval (x, y, width, height). The last two parameters are the starting angle (startAngle) and the extent of the arc (arcAngle) measure in degrees.  When an arc is filled, it becomes a pie section, which can be filled and outlined to form a pie-shaped graphic object. When an arc is not filled, as is the case with the example below, only the segment of the equivalent Oval's outline is rendered.    \/\/ ArcDemo1.java import doodlepad.*; public class ArcDemo1 { public static void main(String[] args) { \/\/ Create the Arc starting at 45 degrees and extending for 90 degrees Arc a1 = new Arc(100, 100, 200, 200, 45, 90); \/\/ Do not fill the arc so only the arc is drawn. a1.setFilled(false); } }      Line  The Line shape is created by specifying its two endpoint coordinates. The Line constructor takes four values, (x1, y1, x2, y2), where (x1, y1) is the first endpoint and (x2, y2) is the second endpoint. The example below creates a diagonal Line shape between the endpoints (100, 100) and (200, 200).    \/\/ LineDemo1.java import doodlepad.*; public class LineDemo1 { public static void main(String[] args) { \/\/ Create a diagonal Line shape from (100, 100) and (200, 200) Line l1 = new Line(100, 100, 200, 200); } }      DoodlePad provides more ways to create Shape classes beyond those described in this chapter. If you'd like to skip ahead to investigate more complex techniques, have a look at Path Shapes , Polygon Shapes . Images , and Sprites .   "
 },
 {
-  "id": "p-312",
+  "id": "p-319",
   "level": "2",
-  "url": "section-dp-shapes.html#p-312",
+  "url": "section-dp-shapes.html#p-319",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1402,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.6",
   "title": "Event-Driven Programming",
-  "body": " Event-Driven Programming   Perhaps the most distinguishing feature of the DoodlePad library is the ease and extent to which it supports event driven programming. All DoodlePad Shape objects as well as the Pad object may be set up to invoke custom methods in response to a wide range of user interaction. For example, you may want the change the fill cellor of one or more shapes when the user hovers over the shape or clicks the shape with the mouse. Alternatively, you may want to move a Shape in specific direction when the user presses one of the arrow keys. The Pad object implements timer functionality that raises tick events at a user-specified rate. You may want to invoke one or more of your custom methods each time the Pad's timer ticks, which may be accomplished using the Pad's tick event.  By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don't want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.  This ability to respond to mouse, keyboard, timer and other events allows DoodlePad to be used to develop a wide range of fun interactive graphics programs that are limited only by your imagination.    Connecting Events and Methods with Method References  The simplest way to invoke a method in response to an event is to connect the event associated with a given object to one of your methods. The most important prerequisite for making this connection is to ensure that your event handler method's signature matches what the event expects (by implementing the ShapeMouseEventHandler interface). Let's say you want to invoke a method when the user clicks on a Shape object of some kind. All mouse events, including the click event, requires that the method to be connected have the following four parameters in the given order:   Mouse Event Parameters    #  Type  Description    1.  Shape  The Shape object that initiated the mouse event    2.  double  The x-coordinate at which the event occurred    3.  double  The y-coordinate at which the event occurred    4.  int  A number identifying the mouse button used     For example, the following method may be invoked by a mouse event because it implements the necessary four parameter types in the specified order.    public void onPressed(Shape shp, double, x, double y, int button) { System.out.println(\"The mouse was pressed at coordinates (\" + x + \",\" + y + \")\"); }    Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the :: binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.  As an example, let's say your class implements the previous onPress method, and you would like to invoke this method when the mouse is pressed on an Oval Shape object, a reference to which was saved as an instance variable named myOval. The following statement establishes this connection, so that when the mouse is pressed on myOval the onPress method implemented by this will be invoked.    myOval.setMousePressedHandler( this::onPress );    The inherited setMousePressedHandler(...) method is what is used to establish the connection for mouse-pressed events.  Following is a complete program demonstrating event handing in DoodlePad using method references.   PushButton.java   \/\/ PushButton.java import doodlepad.*; public class PushButton { private RoundRect shpButton; \/\/ Button Shape private boolean isOn; \/\/ Button state public PushButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); shpButton.setFillcellor(200); \/\/ Starts off isOn = false; \/\/ Set button click event handler method shpButton.setMousePressedHandler( this::onPressed ); } private void onPressed(Shape shp, double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill cellor based on state if (isOn) { shpButton.setFillcellor(0, 255, 0); } else { shpButton.setFillcellor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton PushButton myPushButton = new PushButton(); } }     In this example we implement a simple graphical toggle button class named PushButton. For the button graphic we use a RoundRect Shape object. The PushButton constructor creates the RoundRect object and initializes its fill cellors to gray. The PushButton class tracks its state using an isOn boolean instance variable. The class is initialized with isOn = false implying the button is initially off. The constructor also uses the setMousePressedHandler method to indicate that the object's onPressed method should be invoked when the RoundRect shape is pressed with the mouse. The onPressed method toggles the value of isOn and then resets the RoundRect fill cellor based on the current PushButton state. When the RoundRect is pressed with the mouse, the PushButton object state is toggled and the RoundRect fill cellor changes to green, indicating that the button was pressed. A second press toggles PushButton off and sets the RoundRect fill cellor back to gray.    PushButton.java     The image on the right shows the output from running this example program and pressing the RoundRect Shape once with the mouse.    Shape Mouse Event-Related Methods  A wide variety of mouse events may be handled in a similar manner. Following is a list of all methods used to connect a mouse event with a Shape. Each method is used to associate a particular mouse event with a custom method. Each of the following methods takes a method reference as its only parameter. Each method reference must identify a method with a signature that matches the previously listed four parameter types in the given order, otherwise the compiler will complain.   Shape Mouse Event Methods    Method  Description    public void setMouseClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.    public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.    public void setMousePressedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.    public void setMouseReleasedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.    public void setMouseMovedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.    public void setMouseDraggedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.    public void setMouseEnteredHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.    public void setMouseExitedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.       Other Event-Related Shape Methods  Shapes triggers one additional event beyond the above list of mouse events. The selectionChanged event is triggered whenever the selection status of a Shape changes. For example, if the user clicks on a selectable Shape that is not already selected, the Shape becomes selected, which is indicated by a light gray rectangle drawn around the Shape. If a suitable event handler method is attached to the Shape's selectionChange event, then as the Shape becomes selected, the event method will be invoked, indicating the Shape object whose selection state changed as well as if the Shape is currently selected. Likewise, if another Shape is clicked causing the currently selected Shape to be unselected, the event handler method will once again be invoked.  Both the method reference and overriding methods of handling triggered selectionChanged events are supported. Event handler methods to be attached to the selectionChanged event trigger using the method reference approach must have a signature with two parameters: Shape and boolean. This implements the ShapeSelectionEventHandler interface. The first parameter indicates the Shape object whose selection changed, and the second parameter indicates if that Shape is currently selected (true) or not (false).  The following two methods are used for handling triggered selectionChanged events. The first method attaches an event handler using the method reference approach. Override the second method to handle the triggered event using the method overriding approach.   Shape Selection Event Methods    Method  Description    public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)  Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the ShapeSelectionEventHandler interface.    public void onSelectionChanged(boolean selected)  Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.       Pad Mouse Event-Related Methods   Pad Mouse Event-Related Methods    Method  Description    public void setMousePressedHandler(PadMouseEventHandler handler)  Assign an onMousePressed event handler using a method reference.    public void setMouseReleasedHandler(PadMouseEventHandler handler)  Assign an onMouseReleased event handler using a method reference.    public void setMouseMovedHandler(PadMouseEventHandler handler)  Assign an onMouseMoved event handler using a method reference.    public void setMouseClickedHandler(PadMouseEventHandler handler)  Assign an onMouseClicked event handler using a method reference.    public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)  Assign an onMouseDoubleClicked event handler using a method reference.    public void setMouseDraggedHandler(PadMouseEventHandler handler)  Assign an onMouseDragged event handler using a method reference.    public void setMouseEnteredHandler(PadMouseEventHandler handler)  Assign an onMouseEntered event handler using a method reference.    public void setMouseExitedHandler(PadMouseEventHandler handler)  Assign an onMouseExited event handler using a method reference.    public void addMouseListener(PadMouseListener o)  Add object to the list of items that are notified on Pad's mouse events.    public void removeMouseListener(PadMouseListener o)  Remove object from Pad's mouse listener list.       Pad Keyboard Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description   public void setKeyPressedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyPressed event handler using a method reference.  public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyReleased event handler using a method reference.  public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler) Assign an onKeyTyped event handler using a method reference.  public void addKeyListener(PadKeyListener o) Add object to the list of items that are notified on Pad's key events.  public void removeKeyListener(PadKeyListener o) Remove object from Pad's key listener list.      Pad Timer Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description    public void setTickHandler(Pad.PadTimerEventHandler handler)  Assign an onTick event handler using a method reference.    public void addTickListener(PadTickListener o)  Add object to the list if items that are notified on Pad's timer tick action.    public void removeTickListener(PadTickListener o)  Remove object from Pad's timer tick action listener list.       Box Driver Example  In the following example a blue Rectangle is created and positioned on a Pad object. The default Pad object's keyPressed event is handled with a custom method that reacts to the arrow keys being pressed. Only arrow keys are tested; all other keys are ignore. When the down arrow is pressed, the box object's move(...) method is used to move the box 10 pixels down (by increasing its y-location). Likewise, the remaining three arrow keys move the box left, right or up, depending upon the key pressed. The result is a simple program that can be used to drive a box around the Pad using the arrow keys.  One item to note is the way the key String being pressed is tested. For all arrows keys the keyText String argument passed to the event handler method is compared to both a String describing the key (e.g. \"Left\") and a symbol (e.g. \"←\"). An arrow key is identified with a positive match to either the description or symbol String. The reason we test both is that the String passed to the event handler may be different depending upon your operating system. Specifically, Windows sets keyText to key description (\"Left\") while macOS uses a symbol (e.g. \"←\"). Give it a try.   BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillcellor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }     "
+  "body": " Event-Driven Programming   Perhaps the most distinguishing feature of the DoodlePad library is the ease and extent to which it supports event driven programming. All DoodlePad Shape objects as well as the Pad object may be set up to invoke custom methods in response to a wide range of user interaction. For example, you may want the change the fill cellor of one or more shapes when the user hovers over the shape or clicks the shape with the mouse. Alternatively, you may want to move a Shape in specific direction when the user presses one of the arrow keys. The Pad object implements timer functionality that raises tick events at a user-specified rate. You may want to invoke one or more of your custom methods each time the Pad's timer ticks, which may be accomplished using the Pad's tick event.  By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don't want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.  This ability to respond to mouse, keyboard, timer and other events allows DoodlePad to be used to develop a wide range of fun interactive graphics programs that are limited only by your imagination.    Connecting Events and Methods with Method References  The simplest way to invoke a method in response to an event is to connect the event associated with a given object to one of your methods. The most important prerequisite for making this connection is to ensure that your event handler method's signature matches what the event expects (by implementing the ShapeMouseEventHandler interface). Let's say you want to invoke a method when the user clicks on a Shape object of some kind. All mouse events, including the click event, requires that the method to be connected have the following four parameters in the given order:   Mouse Event Parameters    #  Type  Description    1.  Shape  The Shape object that initiated the mouse event    2.  double  The x-coordinate at which the event occurred    3.  double  The y-coordinate at which the event occurred    4.  int  A number identifying the mouse button used     For example, the following method may be invoked by a mouse event because it implements the necessary four parameter types in the specified order.    public void onPressed(Shape shp, double, x, double y, int button) { System.out.println(\"The mouse was pressed at coordinates (\" + x + \",\" + y + \")\"); }    Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the :: binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.  As an example, let's say your class implements the previous onPress method, and you would like to invoke this method when the mouse is pressed on an Oval Shape object, a reference to which was saved as an instance variable named myOval. The following statement establishes this connection, so that when the mouse is pressed on myOval the onPress method implemented by this will be invoked.    myOval.setMousePressedHandler( this::onPress );    The inherited setMousePressedHandler(...) method is what is used to establish the connection for mouse-pressed events.  Following is a complete program demonstrating event handing in DoodlePad using method references.   PushButton.java   \/\/ PushButton.java import doodlepad.*; public class PushButton { private RoundRect shpButton; \/\/ Button Shape private boolean isOn; \/\/ Button state public PushButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); shpButton.setFillcellor(200); \/\/ Starts off isOn = false; \/\/ Set button click event handler method shpButton.setMousePressedHandler( this::onPressed ); } private void onPressed(Shape shp, double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill cellor based on state if (isOn) { shpButton.setFillcellor(0, 255, 0); } else { shpButton.setFillcellor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton PushButton myPushButton = new PushButton(); } }     In this example we implement a simple graphical toggle button class named PushButton. For the button graphic we use a RoundRect Shape object. The PushButton constructor creates the RoundRect object and initializes its fill cellors to gray. The PushButton class tracks its state using an isOn boolean instance variable. The class is initialized with isOn = false implying the button is initially off. The constructor also uses the setMousePressedHandler method to indicate that the object's onPressed method should be invoked when the RoundRect shape is pressed with the mouse. The onPressed method toggles the value of isOn and then resets the RoundRect fill cellor based on the current PushButton state. When the RoundRect is pressed with the mouse, the PushButton object state is toggled and the RoundRect fill cellor changes to green, indicating that the button was pressed. A second press toggles PushButton off and sets the RoundRect fill cellor back to gray.    PushButton.java     The image on the right shows the output from running this example program and pressing the RoundRect Shape once with the mouse.    Shape Mouse Event-Related Methods  A wide variety of mouse events may be handled in a similar manner. Following is a list of all methods used to connect a mouse event with a Shape. Each method is used to associate a particular mouse event with a custom method. Each of the following methods takes a method reference as its only parameter. Each method reference must identify a method with a signature that matches the previously listed four parameter types in the given order, otherwise the compiler will complain.   Shape Mouse Event Methods    Method  Description    public void setMouseClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.    public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.    public void setMousePressedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.    public void setMouseReleasedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.    public void setMouseMovedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.    public void setMouseDraggedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.    public void setMouseEnteredHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.    public void setMouseExitedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.       Other Event-Related Shape Methods  Shapes triggers one additional event beyond the above list of mouse events. The selectionChanged event is triggered whenever the selection status of a Shape changes. For example, if the user clicks on a selectable Shape that is not already selected, the Shape becomes selected, which is indicated by a light gray rectangle drawn around the Shape. If a suitable event handler method is attached to the Shape's selectionChange event, then as the Shape becomes selected, the event method will be invoked, indicating the Shape object whose selection state changed as well as if the Shape is currently selected. Likewise, if another Shape is clicked causing the currently selected Shape to be unselected, the event handler method will once again be invoked.  Both the method reference and overriding methods of handling triggered selectionChanged events are supported. Event handler methods to be attached to the selectionChanged event trigger using the method reference approach must have a signature with two parameters: Shape and boolean. This implements the ShapeSelectionEventHandler interface. The first parameter indicates the Shape object whose selection changed, and the second parameter indicates if that Shape is currently selected (true) or not (false).  The following two methods are used for handling triggered selectionChanged events. The first method attaches an event handler using the method reference approach. Override the second method to handle the triggered event using the method overriding approach.   Shape Selection Event Methods    Method  Description    public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)  Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the ShapeSelectionEventHandler interface.    public void onSelectionChanged(boolean selected)  Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.       Pad Mouse Event-Related Methods   Pad Mouse Event-Related Methods    Method  Description    public void setMousePressedHandler(PadMouseEventHandler handler)  Assign an onMousePressed event handler using a method reference.    public void setMouseReleasedHandler(PadMouseEventHandler handler)  Assign an onMouseReleased event handler using a method reference.    public void setMouseMovedHandler(PadMouseEventHandler handler)  Assign an onMouseMoved event handler using a method reference.    public void setMouseClickedHandler(PadMouseEventHandler handler)  Assign an onMouseClicked event handler using a method reference.    public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)  Assign an onMouseDoubleClicked event handler using a method reference.    public void setMouseDraggedHandler(PadMouseEventHandler handler)  Assign an onMouseDragged event handler using a method reference.    public void setMouseEnteredHandler(PadMouseEventHandler handler)  Assign an onMouseEntered event handler using a method reference.    public void setMouseExitedHandler(PadMouseEventHandler handler)  Assign an onMouseExited event handler using a method reference.    public void addMouseListener(PadMouseListener o)  Add object to the list of items that are notified on Pad's mouse events.    public void removeMouseListener(PadMouseListener o)  Remove object from Pad's mouse listener list.       Pad Keyboard Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description   public void setKeyPressedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyPressed event handler using a method reference.  public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyReleased event handler using a method reference.  public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler) Assign an onKeyTyped event handler using a method reference.  public void addKeyListener(PadKeyListener o) Add object to the list of items that are notified on Pad's key events.  public void removeKeyListener(PadKeyListener o) Remove object from Pad's key listener list.      Pad Timer Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description    public void setTickHandler(Pad.PadTimerEventHandler handler)  Assign an onTick event handler using a method reference.    public void addTickListener(PadTickListener o)  Add object to the list if items that are notified on Pad's timer tick action.    public void removeTickListener(PadTickListener o)  Remove object from Pad's timer tick action listener list.       Box Driver Example  In the following example a blue Rectangle is created and positioned on a Pad object. The default Pad object's keyPressed event is handled with a custom method that reacts to the arrow keys being pressed. Only arrow keys are tested; all other keys are ignore. When the down arrow is pressed, the box object's move(...) method is used to move the box 10 pixels down (by increasing its y-location). Likewise, the remaining three arrow keys move the box left, right or up, depending upon the key pressed. The result is a simple program that can be used to drive a box around the Pad using the arrow keys.  One item to note is the way the key String being pressed is tested. For all arrows keys the keyText String argument passed to the event handler method is compared to both a String describing the key (e.g. \"Left\") and a symbol (e.g. \"←\"). An arrow key is identified with a positive match to either the description or symbol String. The reason we test both is that the String passed to the event handler may be different depending upon your operating system. Specifically, Windows sets keyText to key description (\"Left\") while macOS uses a symbol (e.g. \"←\"). Give it a try.   BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillColor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }     "
 },
 {
   "id": "table-30",
@@ -1501,7 +1519,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "4.6.11",
   "title": "",
-  "body": " BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillcellor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }   "
+  "body": " BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillColor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }   "
 },
 {
   "id": "section-dp-paths",
@@ -1864,9 +1882,9 @@ var ptx_lunr_docs = [
   "body": "StringBuilder Class  Recall that String objects are immutable. This implies that every time we concatenate two String objects, we must create a new String . This is true whether we use the .concat(...) method of String or the + operator.  String immutability is not a problem when concatenating a few small Strings, but when large Strings are concatenated over and over to build even larger String objects, your program can slow down because larger and larger chuncks of memory are repeatedly allocated and deallocated. A more efficient approach to concatenating large and numerous String objects would be a dedicated class with the job of collecting all Strings and then managing the underlying memory more efficiently. This is what Java's built-in StringBuilder class does for us.  Like other Java classes, instantiating a StringBuilder object involves invoking its constructor using the new keyword, as in the following example.   StringBuilder example   \/\/ StringBuilders.java public class StringBuilders { public static void main(String[] args) { StringBuilder sb1; \/\/ Declare variable sb1 = new StringBuilder(); \/\/ Initialize sb1.append(\"Hello\"); \/\/ Add String and print System.out.println( \"sb1: \" + sb1.toString() ); StringBuilder sb2; \/\/ Declare another sb2 = new StringBuilder(); \/\/ Initialize sb2.append(\"Goodbye\"); \/\/ Add String and print System.out.println( \"sb2: \" + sb2.toString() ); sb2 = sb1; sb1.append(\" there\"); \/\/ Add to sb1 System.out.println( \"sb2: \" + sb2.toString() ); } }    Unlike String objects, a StringBuilder is mutable. If you are interest in working with a modifiable data structure holding a sequence of characters, StringBuilder is a good option. You might need this type of capability when programmatically building or modifying the contents of a text file or HTML document, which is made up of plain text characters. StringBuilder objects have several useful methods that enable this kind of work. See .   Useful StringBuilder Methods    Method  Returns  Description    append(...)  StringBuilder   Converts several types to a String  format and then appends it to the end  of the StringBuilder .  Returns a reference to itself,  allowing method chaining.      delete(int start, int end)   StringBuilder   Removes chars beginning at index start  and extending through index end - 1.  Returns a reference to itself,  allowing method chaining.      replace(int start, int end, String str)   StringBuilder   Replace chars beginning at index start  through index end - 1  with str .  Returns a reference to itself,  allowing method chaining.      insert(int offset, String substr)   StringBuilder   Inserts substr beginning at  offset.  Returns a reference to itself,  allowing method chaining.     indexOf(String substr)  int   Return index where substr  is found.  Returns -1 if not found.     charAt(int index)  char   Returns char at index index .      substring(int start, int end)   String   Returns a String of characters  from start through end - 1 .     length()  int   Returns the length of the current  character sequence.     setLength(int newLength)  void   Sets the total size of the  StringBuilder to newLength .  setLength(0) removed all  characters from the StringBuilder .     toString()  String   Returns the length of the current  character sequence.      Compiling and running the program in produces the following.   javac StringBuilders.java java StringBuilders  sb1: Hello sb2: Goodbye sb2: Hello there   Does it surprise you that the first time sb2 was printed the output was Goodbye and the second time the output was Hello there ? The String \" there\" was appended to sb1 , not sb2 . No StringBuilder methods were invoked on sb2 . What happened?  The next section will help you understand why the printed value of sb2 changed so abruptly.  "
 },
 {
-  "id": "p-423",
+  "id": "p-430",
   "level": "2",
-  "url": "section-rt-stringbuilder.html#p-423",
+  "url": "section-rt-stringbuilder.html#p-430",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1909,18 +1927,18 @@ var ptx_lunr_docs = [
   "body": " Copy primitive and reference variables.  TODO: Illustrate the difference between copying primitive and ref variables.  "
 },
 {
-  "id": "p-433",
+  "id": "p-440",
   "level": "2",
-  "url": "section-rt-refvars.html#p-433",
+  "url": "section-rt-refvars.html#p-440",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "dereference "
 },
 {
-  "id": "p-434",
+  "id": "p-441",
   "level": "2",
-  "url": "section-rt-refvars.html#p-434",
+  "url": "section-rt-refvars.html#p-441",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1942,21 +1960,21 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Variable Scope and Lifetime",
-  "body": " Variable Scope and Lifetime  The scope of a Java variable refers to the region of the program where the variable can be accessed and used. Think of how a telescope or microscope both enhances but also limits what we can see. The lifetime of a variable, on the other hand, refers to the period during which the variable exists in memory.  Java has several levels of variable scope, the most important of which are as follows. We've encountered class scope and method scope already.   class (static) scope  object (instance) scope  method (local) scope  block scope   Class variables, also known as static variables, are declared within a class and are associated with the class itself rather than with specific instances of the class. We refer to this as class scope . Variables and methods declared using the static keyword exist within the class scope. Static variables live for as long as a program is running.  Explicitly accessing a static variable or method defined within a given class is accomplished using the class name followed by the dot-operator. Occasionally the scope is not necessary, but it never hurst to be explicit. Let's consider an example.  Imagine that you've been asked to write a class called Counter to track of the number of people currently in a room. Each time a person enters the room an enter() method is invoked and a total counter variable is incremented. When a person leaves an exit() method is invoked which decrements the total counter variable. The total variable must be accessible to all methods within the class and it must have a lifetime that lasts for as long as the class exists. Declaring total as static would ensure that these requirements are satisfied.  Consider the following short program implementing the Counter class in . Note that a main() method is added to test the Counter class. The total variable is a long that is declared using the static keyword within the class but outside any of the class methods. This ensures that the variable has class scope, is accessible from all locations within the program, and will exist for the lifetime of the program.  The Counter class implements enter() , exit() , and reset() methods, which are used to manage the value of the total variable. When we access the total variable we precede it the with the name of the class, for example Counter.total . This ensures that we are accessing the class scope and the variables defined within it. We also invoke the class methods with a similar explicit setting of class scope, namely, Counter.enter() and Counter.exit() . While you will find that this explicit scoping is not necessary, it helps to communicate that we intend to access the class scope.  Following we demonstrate what happens when the program is tested. A total of five people enter the room and three exit, leaving two people remaining in the room.    \/\/ Counter.java \/\/ Counter counts people entering and exiting a room class Counter { \/\/ Total count public static long total = 0L; \/\/ Increment total count public static void enter() { Counter.total += 1L; } \/\/ Decrement total count public static void exit() { Counter.total -= 1L; } \/\/ Reset counter public static void reset() { Counter.total = 0L; } \/\/ Test the Counter class public static void main(String[] args) { Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.exit(); \/\/ Person exits Counter.enter(); \/\/ Person enters Counter.exit(); \/\/ Person exits Counter.exit(); \/\/ Person exits \/\/ How many people are left in the room? System.out.println(\"There are \" + Counter.total + \" people remaining in the room\"); } }    javac Counter.java java Counter  There are 2 people remaining in the room   By contrast to class scope, a variable is scoped to a method when it is declared within the method. It comes into existence when the method is entered and the declaration is executed, and it goes out of existance when the method completes. A method-scoped variable has a lifetime equal to the lifetime of the method instance, and naturally, it cannot be accessed from any statement that is outside the method, because it no longer exists.  For an example of method-scoped variables, we can refer back to nearly any of the past program we have studied. For example, refer back to the updated ComputeDistance class in . The distanceBetween(...) method declares several variables that are used within that method only, including term1 , term2 , and distance . These variables have method scope because they are declared within the distanceBetween(...) method and they are destroyed when the method returns. They cannot be accessed from outside the method after its exits because they do not exist at that point.  We will introduce the remaining important Java scoping at a suitable time. Understanding variable scope and lifetime is crucial for managing memory efficiently, preventing naming conflicts, and ensuring proper data encapsulation in Java programs.  "
+  "body": " Variable Scope and Lifetime  The scope of a Java variable refers to the region of the program where the variable can be accessed and used. Think of how a telescope or microscope both enhances but also limits what we can see. The lifetime of a variable, on the other hand, refers to the period during which the variable exists in memory.  Java has several levels of variable scope, the most important of which are as follows. We've encountered class scope and method scope already.   package scope (limited to a Java package).  class scope (accessible throughout a class), and  object (instance) scope (limited to a specific object),  method scope (limited to a specific method),  block scope (limited to a specific block of code),   Class variables, also known as static variables, are declared within a class and are associated with the class itself rather than with specific instances of the class. We refer to this as class scope . Variables and methods declared using the static keyword exist within the class scope. Static variables live for as long as a program is running.  Explicitly accessing a static variable or method defined within a given class is accomplished using the class name followed by the dot-operator. Occasionally the scope is not necessary, but it never hurst to be explicit. Let's consider an example.  Imagine that you've been asked to write a class called Counter to track of the number of people currently in a room. Each time a person enters the room an enter() method is invoked and a total counter variable is incremented. When a person leaves an exit() method is invoked which decrements the total counter variable. The total variable must be accessible to all methods within the class and it must have a lifetime that lasts for as long as the class exists. Declaring total as static would ensure that these requirements are satisfied.  Consider the following short program implementing the Counter class in . Note that a main() method is added to test the Counter class. The total variable is a long that is declared using the static keyword within the class but outside any of the class methods. This ensures that the variable has class scope, is accessible from all locations within the program, and will exist for the lifetime of the program.  The Counter class implements enter() , exit() , and reset() methods, which are used to manage the value of the total variable. When we access the total variable we precede it the with the name of the class, for example Counter.total . This ensures that we are accessing the class scope and the variables defined within it. We also invoke the class methods with a similar explicit setting of class scope, namely, Counter.enter() and Counter.exit() . While you will find that this explicit scoping is not necessary, it helps to communicate that we intend to access the class scope.  Following we demonstrate what happens when the program is tested. A total of five people enter the room and three exit, leaving two people remaining in the room.    \/\/ Counter.java \/\/ Counter counts people entering and exiting a room class Counter { \/\/ Total count public static long total = 0L; \/\/ Increment total count public static void enter() { Counter.total += 1L; } \/\/ Decrement total count public static void exit() { Counter.total -= 1L; } \/\/ Reset counter public static void reset() { Counter.total = 0L; } \/\/ Test the Counter class public static void main(String[] args) { Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.exit(); \/\/ Person exits Counter.enter(); \/\/ Person enters Counter.exit(); \/\/ Person exits Counter.exit(); \/\/ Person exits \/\/ How many people are left in the room? System.out.println(\"There are \" + Counter.total + \" people remaining in the room\"); } }    javac Counter.java java Counter  There are 2 people remaining in the room   By contrast to class scope, a variable is scoped to a method when it is declared within the method. It comes into existence when the method is entered and the declaration is executed, and it goes out of existance when the method completes. A method-scoped variable has a lifetime equal to the lifetime of the method instance, and naturally, it cannot be accessed from any statement that is outside the method, because it no longer exists.  For an example of method-scoped variables, we can refer back to nearly any of the past program we have studied. For example, refer back to the updated ComputeDistance class in . The distanceBetween(...) method declares several variables that are used within that method only, including term1 , term2 , and distance . These variables have method scope because they are declared within the distanceBetween(...) method and they are destroyed when the method returns. They cannot be accessed from outside the method after its exits because they do not exist at that point.  We will introduce the remaining important Java scoping at a suitable time. Understanding variable scope and lifetime is crucial for managing memory efficiently, preventing naming conflicts, and ensuring proper data encapsulation in Java programs.  "
 },
 {
-  "id": "p-443",
+  "id": "p-450",
   "level": "2",
-  "url": "section-rt-scope.html#p-443",
+  "url": "section-rt-scope.html#p-450",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "class scope method scope "
 },
 {
-  "id": "p-444",
+  "id": "p-451",
   "level": "2",
-  "url": "section-rt-scope.html#p-444",
+  "url": "section-rt-scope.html#p-451",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1972,9 +1990,9 @@ var ptx_lunr_docs = [
   "body": "  \/\/ Counter.java \/\/ Counter counts people entering and exiting a room class Counter { \/\/ Total count public static long total = 0L; \/\/ Increment total count public static void enter() { Counter.total += 1L; } \/\/ Decrement total count public static void exit() { Counter.total -= 1L; } \/\/ Reset counter public static void reset() { Counter.total = 0L; } \/\/ Test the Counter class public static void main(String[] args) { Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.enter(); \/\/ Person enters Counter.exit(); \/\/ Person exits Counter.enter(); \/\/ Person enters Counter.exit(); \/\/ Person exits Counter.exit(); \/\/ Person exits \/\/ How many people are left in the room? System.out.println(\"There are \" + Counter.total + \" people remaining in the room\"); } }   "
 },
 {
-  "id": "p-451",
+  "id": "p-458",
   "level": "2",
-  "url": "section-rt-scope.html#p-451",
+  "url": "section-rt-scope.html#p-458",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2017,9 +2035,9 @@ var ptx_lunr_docs = [
   "body": " Dart Game Board   "
 },
 {
-  "id": "p-458",
+  "id": "p-465",
   "level": "2",
-  "url": "section-c1-if-statements.html#p-458",
+  "url": "section-c1-if-statements.html#p-465",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2044,9 +2062,9 @@ var ptx_lunr_docs = [
   "body": " awardPoints() Method   \/\/ Award points to the player's total depending upon where the dart lands public static void awardPoints(double x1, double y1) { \/\/ Circle parameters double xc = 300.0, yc = 300.0; \/\/ Compute distance double dist = Math.sqrt(Math.pow(x1 - xc, 2) + Math.pow(y1 - yc, 2)); \/\/ Branch depending on distance from center if (dist < 20) { \/\/ In center red circle. Add 4 points. total = total + 4; } if (dist >= 20 && dist < 50) { \/\/ In green circle. Add 3 points. total = total + 3; } \/\/ More to do... }   "
 },
 {
-  "id": "p-461",
+  "id": "p-468",
   "level": "2",
-  "url": "section-c1-if-statements.html#p-461",
+  "url": "section-c1-if-statements.html#p-468",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2152,9 +2170,9 @@ var ptx_lunr_docs = [
   "body": " Collection Classes  In and we introduced several classes that come with the Java core library. These included String , Random , Scanner , and StringBuilder . The Java core library includes thousands of classes that are available for you to use to solve your computational problems. One category of classes in the core library are called Collections . A Collection object is a kind of object that can hold and manage many other kind of objects. In this section we will explore a couple of the most used Collection classes in Java.   ArrayList  The first Collection class we'll explore is the ArrayList . An ArrayList is an object that holds references to zero or more other objects in an ordered sequence. An ArrayList grows or shrinks as needed. There is no reason to decide how large the an ArrayList must be before instantiation.  When an ArrayList is instantiated, it must name the class of objects that it will hold. Because Java is a strongly typed language, we cannot freely assign just any object to a variable that is declared to hold another type of object. Despite this feature, an ArrayList can be instantiated to hold a particular class. The reason this is possible is because the ArrayList class is defined as a generic . In short, the ArrayList is more of a class template that substitutes a class named as part of its constructor just before instantiating the new object. A class is specified as a part of its constructor using the diamond operator ( < > ).  If we want to instantiate an ArrayList that holds Oval objects, in the variable type declaration we must follow the ArrayList class name in the constructor with the diamond operator containing Oval. Following is an example of declaring and initializing an ArrayList to hold Oval objects.   ArrayList<Oval> ovals = new ArrayList<>();   Note that the type used to declare the variable ovals is ArrayList<Oval> , but the constructor used to create a new object to initialize the variable, is ArrayList<> , having no class name in the diamond operator. Java knows that the variable is of type ArrayList<Oval> and so it is not necessary to repeat the Oval class in the constructor's diamond operator because Java already knows the class that it should contain.    ArrayList Methods  As is the case with all classes, ArrayList implements methods that allow us to work with the object. Because the ArrayList class is designed to manage a series of objects, its methods relate to these management tasks as well. The following table lists many common ArrayList methods. The class of objects held by the ArrayList is not known until the ArrayList is instantiated. This class is indicated in the following table by a T for type . Once an ArrayList is instantiated, substitute T with the class specified within the diamond operator.   Common ArrayList methods    Method  Returns  Description    add(T element)  boolean  Add element to the end of the ArrayList.    add(int idx, T element)  void  Inserts element at position idx, shifting objects.    get(int idx)  T  Returns a reference to the element at index idx .    remove(int idx)  T  Removes and returns the item at index idx .    size()  int  Returns the number of elements in the ArrayList.    clear()  void  Removes all elements of the ArrayList, leaving it empty.    contains(T element)  boolean  Returns true if the ArrayList contains the element.    indexOf(T element)  int  Returns the index of the first object matching element       Filling ArrayLists and Accessing Elements  We can use what we know about iteration and our new ArrayList methods to fill an ArrayList with Ovals. The following code snippet creates 20 Oval objects using the default constructor and stores them in an ArrayList. Note that we are using the add(…) method of the ArrayList to add each new Oval object once it is created.   Oval o; \/\/ Helper variable and new ArrayList ArrayList<Oval> ovals = new ArrayList<>(); \/\/ While loop iterating 20 times int i = 0; while ( i < 20 ) { o = new Oval(); \/\/ Instantiate Oval ovals.add( o ); \/\/ Store Oval in ArrayList i++; }   Without a data structure like ArrayList, we would have had to declare 20 variables to hold each Oval object reference, and then instantiate and assign each in order. We would have not been able to use the while-statement. That would have been tedious at best. Instantiating 1000 Ovals would have been impractical.  Using a similar approach, we can access each Oval object. For example, if we wanted to change the fill color for each Oval, we could execute a code snippet like the following.   \/\/ While loop iterating over all elements int i = 0; while ( i < ovals.size() ) { o = ovals.get(i); \/\/ Get reference to Oval at index i o.setFillColor(255, 0, 0); \/\/ Set its fill color i++; }   In the above, we use the ArrayList's get(…) method to get a reference to the object at index i and assign the reference to the temporary helper variable. Then we use the helper variable to invoke the objects setFillColor(…) method.  When we set up the while-statement condition we did not enter 20 explicitly. Instead, we asked the ArrayList its size by invoking the size() method. In general, it is a better idea to avoid using fixed parameters in favor of looking up parameter values. Later, if we decide that we do want 1000 Ovals, we will not have to hunt down and fix all the places in our code where we entered 20 expilicitly.    Working with an ArrayList  Let's bring a number of skills together and have a closer look at a larger program. In the following RandomOvals.java example, we are applying several skils, including:  Importing classes, both from the Java core library and custom  Naming our top-level class and matching to file name  Declaring static variables in the outer class scope so the entire program has access  Starting execution at main(…)  Defining a helper method for abstraction and reuse  Instantiating new objects like Random and Oval  Generating random numbers in a defined range  Constructing a while-statement with an index that is used both to count iterations as well as to access ArrayList elements  Invoking ArrayList methods like add(…) , get(…) and size()  Invoking Oval methods like setFillColor(…) and setMousePressedHandler(…)  Handing mouse events     RandomOvals.java   \/\/ RandomOvals.java import java.util.ArrayList; \/\/ Import classes import java.util.Random; import doodlepad.*; \/\/ Import DoodlePad classes public class RandomOvals { \/\/ public class \/\/ Declare ArrayList of Ovals public static ArrayList<Oval> ovals = new ArrayList<>(); \/\/ Start of execution public static void main(String[] args) { Oval o; \/\/ Helper variable \/\/ Fill ArrayList with 20 randomly placed Oval objects \/\/ Use a while to iterate 20 times int i = 0; \/\/ Init counter while (i < 20) { \/\/ While-statement o = new Oval(); \/\/ Create an Oval object o.setMousePressedHandler( RandomOvals::recolor ); ovals.add( o ); \/\/ Add Oval to ArrayList i++; \/\/ Increment counter } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Oval o; Random rnd = new Random(); \/\/ Declare a Random object \/\/ Loop over all Oval objects and reset to a random fill color int i = 0; \/\/ Init counter while ( i < ovals.size() ) { \/\/ While loop o = ovals.get(i); \/\/ Get the Oval at index i r = rnd.nextInt(256); \/\/ Generate random color components g = rnd.nextInt(256); b = rnd.nextInt(256); o.setFillColor(r, g, b); \/\/ Change fill color i++; \/\/ Increment counter } } }    At the top of the program starts by importing all classes required that are not available by default. In this program we use the ArrayList and Random classes from the java.util package of Java core library as well as DoodlePad classes.  The main RandomOvals class contains two methods, the main(…) method where execution starts, as well as a helper method named recolor to be used as an event handler when Oval objects are clicked.  In the main(…) method we declare a helper variable and then set up a while-statement to help us create new Oval objects and fill the ArrayList. The loop counter i is initialized to 0 and incremented at the end of the statement code block. The conditional ensure that the loop repeats 20 times.  Within the while-statement code block, we create a new Oval object and assign a reference to the helper variable. Then we use this variable to both assign a method to be invoked when the object is clicked, as as as add the object to the end of the ArrayList.  The structure of the recolor(…) method is similar to main(…) . We start with helper variables and instantiate a Random object. Once again, we set up a while-statement to loop over all elements of the ArrayList. This time the condition does not specify the size of the ArrayList explicitly, but instead asks the ArrayList for the number of elements using its size() method.  Within the body of the while code block, we use the ArrayList get(…) method to get a reference to the object at index i . Note the i is used both as the loop counter as well as the index of each object in the ArrayList -- a dual purpose. Following this we generate three integers in the proper range for color elements, and then use them to set the Oval object's fill color to a random value. This repeats for all Ovals in the ArrayList.    The figure on the right show the program in action, after clicking one of the Oval objects. The console session for compiling and running is below (for Windows Command Prompt). Make sure you have a copy of the doodlepad.jar file in your project and that you are using the correct syntax for your shell.   javac -cp .;doodlepad.jar RandomOvals.java java -cp .;doodlepad.jar RandomOvals      RandomOvals.java       Autoboxing and Unboxing  A limitation of ArrayList is that it can hold objects only. But, as we know, primitive types are not objects, and we certainly want the option to store collections of primitives like int and double . How might we do that?  To address this clear limitation, Java provides wrapper classes that allow us to wrap each primitive in an object. With wrapper classes we are able to wrap primitives values in an object before storing in an ArrayList or other Collection. Java defines one wrapper class for each of the eight primitives. See . As you can see, in general, the name of the wrapper class is the primitive name starting with a capital letter (exceptions are int and char ).   Java Wrapper Classes    Primitive type  Wrapper class    byte  Byte    short  Short    int  Integer    long  Long    float  Float    double  Double    boolean  Boolean    char  Character     This makes it possible to wrap and and store primitives in an ArrayList, but it is not convenient. Constantly wrapping and unwrapping primitives can become tedious, and quickly.  Fortnately, there is a solution to this problem as well, called autoboxing and unboxing . Java automatically wraps, or \"boxes\" primitive types whenever necessary to place them in a collection like an ArrayList. It also automatically unboxes primitve types when removing from an ArrayList. We only need to remember the wrapper class name when naming the class type to be held by an ArrayList, and Java handles the rest.  In the following code snippet, we declare and fill and ArrayList<Integer> with 100 randomly generated integers. Once filled, we loop over the ArrayList<Integer> again, get each int at each successive index and print it. In both cases (adding and getting) we do not box or unbox the primitive type int . Java automatically boxes each int in an Integer before adding to the ArrayList, and unboxes the Integer to an int when getting and assigning to the primtiive variable.   Boxing and Unboxing   Random rnd = new Random(); \/\/ New Random and ArrayList objects ArrayList<Integer> ints = new ArrayList<>(); \/\/ Fill ArrayList with 1000 random ints \/\/ The int is not boxed in an Integer class before being added \/\/ Java takes care of this for us int i = 0; \/\/ Counter while (i < 1000) { \/\/ Loop ints.add( rnd.nextInt(100) ); \/\/ Add int to ArrayList i++; \/\/ Increment counter } \/\/ Get all ints and print \/\/ Notice how val is assigned without unboxing Integer object int val; \/\/ Helper variable i = 0; \/\/ Reset counter while (i < ints.size()) { \/\/ Loop val = ints.get( i ); \/\/ Get int System.out.println( val ); \/\/ Print int i++; \/\/ Increment counter }    Place the above in a complete Java program, compile and run to prove to yourself that this program works without error.    HashMap  (TODO)  Iterating over HashMaps    HashSet  (TODO)  Iterating over HashSet   "
 },
 {
-  "id": "p-501",
+  "id": "p-508",
   "level": "2",
-  "url": "section-c1-collection-classes.html#p-501",
+  "url": "section-c1-collection-classes.html#p-508",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2188,9 +2206,9 @@ var ptx_lunr_docs = [
   "body": " RandomOvals.java   "
 },
 {
-  "id": "p-520",
+  "id": "p-527",
   "level": "2",
-  "url": "section-c1-collection-classes.html#p-520",
+  "url": "section-c1-collection-classes.html#p-527",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2206,9 +2224,9 @@ var ptx_lunr_docs = [
   "body": " Java Wrapper Classes    Primitive type  Wrapper class    byte  Byte    short  Short    int  Integer    long  Long    float  Float    double  Double    boolean  Boolean    char  Character    "
 },
 {
-  "id": "p-522",
+  "id": "p-529",
   "level": "2",
-  "url": "section-c1-collection-classes.html#p-522",
+  "url": "section-c1-collection-classes.html#p-529",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2293,21 +2311,30 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.7",
   "title": "Block Scope",
-  "body": " Block Scope   Recall that the scope of a variable is defined by the location where it is declared. It is important to understand that the location in your program where a variable is declared dictates from where it may be accesses. In we introduces the main kinds of scope in Java. These were as follows, listed in order from most restrictive to most broad.   block scope (limited to a specific block of code),  method scope (limited to a specific method),  object (instance) scope (limited to a specific object),  class scope (accessible throughout the class), and  package scope (limited to a Java package).   Before closing this section, it is a good time to introduce block scope, the most restrictive scope in Java.  Variables may be declared almost anywhere in a Java program, including within a statement such as an if-statement or while-statement. The block of code associated with one of these statements forms its own scope, appropriately called block scope .  As with other scopes, if a variable is declared within a code block it may not be accessed outside that scope. The compiler can detect this mistake and will let us know when we try to violate this rule. Consider the following small example and the attempt to compile this program in the console session following. The compiler tells us that it cannot access the variable o because it was declared within the scope of the while-statement, a block scope, and so it cannot be accessed outside that scope. This is true even though we access the varaible within the block scope to initialize the fill color of all Oval objects to green.    \/\/ BlockScope.java import doodlepad.*; public class BlockScope { public static void main(String[] args) { int i = 0; \/\/ Init counter while (i < 10 ) { \/\/ Loop 10 times Oval o = new Oval(); \/\/ Create 10 Ovals o.setFillColor(0, 255, 0); \/\/ Set fill to green i++; \/\/ Increment counter } o.setFillColor(255, 0, 0); \/\/ Set fill of last Oval to red } }     javac -cp doodlepad.jar BlockScope.java  BlockScope.java:12: error: cannot find symbol o.setFillColor(255, 0, 0); ^ symbol: variable o location: class BlockScope 1 error   In general, it is a very good idea to declare your variables in a scope that is as narrow as feasible and still bea ble to solve your problem. You may be tempted to just declare all variables in the outer class scope so that you don't have to worry about declaring them again. Resist the temptation. This is often the cause for subtle bugs that can be very hard to find.  In the , we declare i once at the top of our program so we never have to worry about it again. In the main(…) method, we loop 5 times and each time invoke the helper method repeatChars(…) , which takes char and count parameters identifying the character to repeat and the number of times to repeat it in the returned String. The main(…) prints the constructed String and continues to the next iteration.   CharRepeats.java   public class CharRepeats { \/\/ Declare once for entire program public static int i = 0; public static void main(String[] args) { \/\/ Print strings with progressively longer char lengths i = 0; \/\/ Init counter while (i < 5) { \/\/ Repeat 5 times String repeated = repeatChars('A', i+1);\/\/ Build String System.out.println(repeated); \/\/ Print String i++; \/\/ Increment counter } } \/\/ Method to build a repeated-character String public static String repeatChars(char ch, int count) { StringBuilder sb = new StringBuilder(); \/\/ StringBuilder i = 0; \/\/ Init counter while (i < count) { \/\/ Loop for all chars sb.append(ch); \/\/ Append ch to StringBuilder i++; \/\/ Increment counter } return sb.toString(); \/\/ Return String } }    Next we compile and run the program. The program compiles and runs just fine, and it looks correct. In fact, when I tested the repeatChars(…) method individually, outside the iteration in the main(…) method, it worked correctly. The loop counter i is properly initialized and incremented by 1 every time. I expected the output \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAAA\". But as you can see below the output is \"A\", \"AAA\", \"AAAAA\". It is clear that the counter in main(…) increases by 1 each time. I can see with my own eyes the statement i++; . So what is the problem? Could it have something to do with the variable i that we declared in the outer class scope?   javac CharRepeats.java java CharRepeats  A AAA AAAAA   If you look closely you will see that i is used as the counter for the iteration in the main(…) method as well as in the repeatChars(…) method. In both cases i reset to 0, but repeatChars(…) leaves the value of i at count + 1 . When repeatChars(…) exits it returns to the while-statement in main(…) already in progress. This statement continues, but does with a value of i that has been changed by repeatChars(…) . In this case, the result is that the counter is advanced too quickly, resulting in some of the expected output being skipped.   Principle: Most Narrow Scope Feasible  Always declare your variables in the most narrow scope feasible, while still allowing your program to solve your problem. This practice minimizes the chances that a single variable declared in an outer scope but used in multiple inner scopes for different purposes are inadvertently modified unexpectedly. This avoid bugs that are hard to fine.    "
+  "body": " Block Scope   Recall that the scope of a variable is defined by the location where it is declared. It is important to understand that the location in your program where a variable is declared dictates from where it may be accesses. In we introduced the main kinds of program scope in Java. These were as follows, listed in order from least restrictive to most restrictive.   package scope (limited to a Java package).  class scope (accessible throughout a class), and  object (instance) scope (limited to a specific object),  method scope (limited to a specific method),  block scope (limited to a specific block of code),   Before closing this section, it is a good time to introduce block scope, the most restrictive scope in Java.  Variables may be declared almost anywhere in a Java program, including within a statement such as an if-statement or while-statement. The block of code associated with one of these statements forms its own scope, appropriately called block scope .  As with other scopes, if a variable is declared within a code block it may not be accessed outside that scope. The compiler can detect this mistake and will let us know when we try to violate this rule. Consider the following small example and the attempt to compile this program in the console session following. The compiler tells us that it cannot access the variable o because it was declared within the scope of the while-statement, a block scope, and so it cannot be accessed outside that scope. This is true even though we access the varaible within the block scope to initialize the fill color of all Oval objects to green.    \/\/ BlockScope.java import doodlepad.*; public class BlockScope { public static void main(String[] args) { int i = 0; \/\/ Init counter while (i < 10 ) { \/\/ Loop 10 times Oval o = new Oval(); \/\/ Create 10 Ovals o.setFillColor(0, 255, 0); \/\/ Set fill to green i++; \/\/ Increment counter } o.setFillColor(255, 0, 0); \/\/ Set fill of last Oval to red } }     javac -cp doodlepad.jar BlockScope.java  BlockScope.java:12: error: cannot find symbol o.setFillColor(255, 0, 0); ^ symbol: variable o location: class BlockScope 1 error   In general, it is a very good idea to declare your variables in a scope that is as narrow as feasible and still bea ble to solve your problem. You may be tempted to just declare all variables in the outer class scope so that you don't have to worry about declaring them again. Resist the temptation. This is often the cause for subtle bugs that can be very hard to find.  In the , we declare i once at the top of our program so we never have to worry about it again. In the main(…) method, we loop 5 times and each time invoke the helper method repeatChars(…) , which takes char and count parameters identifying the character to repeat and the number of times to repeat it in the returned String. The main(…) prints the constructed String and continues to the next iteration.   CharRepeats.java   public class CharRepeats { \/\/ Declare once for entire program public static int i = 0; public static void main(String[] args) { \/\/ Print strings with progressively longer char lengths i = 0; \/\/ Init counter while (i < 5) { \/\/ Repeat 5 times String repeated = repeatChars('A', i+1);\/\/ Build String System.out.println(repeated); \/\/ Print String i++; \/\/ Increment counter } } \/\/ Method to build a repeated-character String public static String repeatChars(char ch, int count) { StringBuilder sb = new StringBuilder(); \/\/ StringBuilder i = 0; \/\/ Init counter while (i < count) { \/\/ Loop for all chars sb.append(ch); \/\/ Append ch to StringBuilder i++; \/\/ Increment counter } return sb.toString(); \/\/ Return String } }    Next we compile and run the program. The program compiles and runs just fine, and it looks correct. In fact, when I tested the repeatChars(…) method individually, outside the iteration in the main(…) method, it worked correctly. The loop counter i is properly initialized and incremented by 1 every time. I expected the output \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAAA\". But as you can see below the output is \"A\", \"AAA\", \"AAAAA\". It is clear that the counter in main(…) increases by 1 each time. I can see with my own eyes the statement i++; . So what is the problem? Could it have something to do with the variable i that we declared in the outer class scope?   javac CharRepeats.java java CharRepeats  A AAA AAAAA   If you look closely you will see that i is used as the counter for the iteration in the main(…) method as well as in the repeatChars(…) method. In both cases i reset to 0, but repeatChars(…) leaves the value of i at count + 1 . When repeatChars(…) exits it returns to the while-statement in main(…) already in progress. This statement continues, but does with a value of i that has been changed by repeatChars(…) . In this case, the result is that the counter is advanced too quickly, resulting in some of the expected output being skipped.   Principle: Most Narrow Scope Feasible  Always declare your variables in the most narrow scope feasible, while still allowing your program to solve your problem. This practice minimizes the chances that a single variable declared in an outer scope but used in multiple inner scopes for different purposes are inadvertently modified unexpectedly. This avoid bugs that are hard to fine.    "
 },
 {
-  "id": "p-541",
+  "id": "p-548",
   "level": "2",
-  "url": "section-c1-block-scope.html#p-541",
+  "url": "section-c1-block-scope.html#p-548",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "scope "
 },
 {
-  "id": "p-543",
+  "id": "p-549",
   "level": "2",
-  "url": "section-c1-block-scope.html#p-543",
+  "url": "section-c1-block-scope.html#p-549",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "block "
+},
+{
+  "id": "p-550",
+  "level": "2",
+  "url": "section-c1-block-scope.html#p-550",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2359,9 +2386,9 @@ var ptx_lunr_docs = [
   "body": " for Statements   In we learned that the three important elements of a while-statement configured for counting were:   A counter is declared and initialized before the while-statement.  The counter is increment within the block of code associated with the while-statement.  The while-statement's conditional test check if the counter exceeds some value and stops.   A while-statement configured for counting turns out to be such an important control structure that a special statement was invented whose job is dedicated primarily to the execution of a block of code for a fixed number of iterations. This is the for-statement . The following diagram shows the parts of a for-statement.   Parts of a for-Statement     Similar to the while- and if-statements, the for-statement starts with a special keyword ( for ), and is followed by a pair of parentheses as well as a code block delimited by curly braces. An important difference between the for-statement and the while-statement is that the for-statement contains three expressions between its parentheses, not one. The three expressions are the initializer , test for continuation , and update , all separated with semicolons ( ; ). describes each in more detail.   if-Statement Expressions    Expression  Position  Description  Executes  Example    Initializer  left  Declares and\/or initializes a counter  Once at the start of an if-statement  int i = 0    Test for continuation  center  Checks if the next iteration should proceed.  Once before each iteration begins.  i < 10    Update  right  Increments a counter or other expression.  Once after each iteration ends.  i++     A for-statement is useful when iterating a fixed number of times, and is preferred over a while-statement whenever possible due to its compactness and clarity. Also, the break and continue statements work with a for-statement in manner identical to the while-statement. (See ).  is a rewrite of the example in with while-statements replaced by for-statements. Notice how the elements of the program responsible for iteration are more compact, and easier to read now that the three expressions are grouped together within the parentheses following the for keyword.  With the extra space available, we modified the logic a bit. Rather than instantiate new Rectangle when x != y , we are now performing the complementary action. When x == y we invoke continue which halts the iteration and returns back to the for-statement to check for another iteration. Note that it would have been tricky to use the same approach with while-statements. In the while-statement our loop counter was incremented at the end of the code block. If we executed a continue before the end of the code block the loop counter would have never been updated. This would cause the program to enter an infinite loop, and never terminate. With a for-statement, the increment is always executed, whether or not the code block completes. This make the continue statement much more convenient to use.  Another update we made in Grid4.java is the addition of fill colors for the Rectangles. We wanted to fill every other Rectangle with blue or gold. To achieve this we declared a boolean variable named flip . Each time through the inner code block, we negated flip with the statement flip = !flip . In other words, if flip == true then it became false . If flip == false then it because true . We used this flip-flop variable and an if-statement to decide which color to use to fill teh current Rectangle.    \/\/ Grid4.java import doodlepad.*; \/\/ Import graphics public class Grid4 { public static void main(String[] args) { \/\/ Start execution Rectangle r; \/\/ Helper variables boolean flip = false; for (int x = 5; x <= 550; x += 120) { \/\/ x-coordinate loop for (int y = 5; y <= 550; y += 60) {\/\/ y-coordinate loop if (x == y) { continue; } \/\/ Skip when x == y r = new Rectangle(x, y, 110, 50); \/\/ New Rectangle flip = !flip; \/\/ flip-flop if (flip) { \/\/ If flip r.setFillColor(0, 0, 255); \/\/ Fill blue } else { \/\/ If flop r.setFillColor(255, 215, 0); \/\/ Fill gold } } } } }      javac -cp doodlepad.jar Grid4.java java -cp .;doodlepad.jar Grid4     Grid4.java     There is one more item to note about for-statements associated with its block scope. In we introduced the concept of block scope and mentioned how all statements with a code block defines a new block scope. This is the case with for-statements. If we define a variable within the code block of a for-statement, that variable may not be accessed from outside the block scope.  With a for-statement, not only are declarations within the curly braces considered to exist within the scope of the code block, but any declarations within the parentheses also are considered to exist within the scope of the code block. To demonstrate, let's revisit and update it with a for-statement having a loop counter i that is declared when initialized.   BlockScope2.java   \/\/ BlockScope2.java import doodlepad.*; public class BlockScope2 { public static void main(String[] args) { for (int i = 0; i < 10; i++) { \/\/ Create 10 Ovals Oval o = new Oval(); } System.out.println( i ); \/\/ Print final value of i } }    When we attempt to compile this program, the compiler is unable to find the our loop counter variable i because it is declared within the parentheses of the for-statement, and therefore is considered to exist in that statement's block scope. If you do have a need to access i after the for-statement, you can circumvent this problem by declaring i before the for-statement, and use the first expression in the parentheses for initializing i only, without the declaration.   javac -cp doodlepad.jar BlockScope2.java  BlockScope2.java:9: error: cannot find symbol System.out.println( i ); \/\/ Print final value of i ^ symbol: variable i location: class BlockScope2 1 error   "
 },
 {
-  "id": "p-552",
+  "id": "p-559",
   "level": "2",
-  "url": "section-c2-for-statements.html#p-552",
+  "url": "section-c2-for-statements.html#p-559",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2458,9 +2485,9 @@ var ptx_lunr_docs = [
   "body": " for-each Statements   In we used a while-statement to iterate over the elements of an ArrayList to access each Oval object and change its fill color. We now know that we could done the job using a for-statement as well. In both cases we would declare, initialize, and update a loop counter. We also need to correctly write the condition that tests for continuation of the iteration. The need to access all elements of a Collection is common, and so a special statement was introduced to make this easier and less open to error by eliminating the counter variable altogether. The for-each statement, also known as the enahanced-for , will iterate over any Collection that supports it, without the need for a loop counter variable.    Part of a for-each  The for-each statement is simpler to construct than other statements used for iteration. See . Note that there is no need for a loop counter at all. The variable elm will refer to each element in the collection in order, first to last, and the code block of the executed for each.   Parts of a for-each statement    Let's rewrite only the parts of the recolor(…) method from that form the loop and element access to use the for-each statement instead of a while-statement. In the following, the original while- version is on the left and the updated for-each version in the right. It is pretty clear that the for-each version is more compact, with fewer moving parts.    public static void recolor(…) { Oval o; int i = 0; while ( i < ovals.size() ) { o = ovals.get(i); o.setFillColor(…); i++; } }     public static void recolor(…) { for (Oval o : ovals) { o.setFillColor(…); } }    When reading a for-each, it is convenient to read the : as \"in.\" We usually read the above example as \"for each Oval o in ovals.\"  Also note that the break and continue statements work as expected in a for-each. If a break is encountered, the iteration terminates and execution picks up immediately after the for-each bock. If a continue is encountered the code block execution terminates and control is returned to the for-each to see if there is another element in the Collection to be processed.    Limitations of the for-each Statement  The for-each does have a few limitations to be aware of. The temporary variable assigned to Collection elements must be declared within the scope of the for-each. In other words, it must have block scope. Unlike the other iteration statements, you cannot declare the variable assigned to Collection elements up front and then use it in the for-each statement.  Another limitation of the for-each statement is that you cannot modify the Collection while the iteration is underway. For example, you cannit us a for-each to search for certain elements in a Collection and then delete them when found. If you want to do this, you must use a form of iteration that makes use of an element index, and keep track of how element indexes change as the Collection is modified.   "
 },
 {
-  "id": "p-569",
+  "id": "p-576",
   "level": "2",
-  "url": "section-c2-enhanced-for-statements.html#p-569",
+  "url": "section-c2-enhanced-for-statements.html#p-576",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2485,9 +2512,9 @@ var ptx_lunr_docs = [
   "body": " switch Statements   Just like Java gives us multiple ways to iterate, it also gives us multiple ways to branch. The switch-statement is a more powerful form of branching in Java, especially when branching based on the value of a variable. The switch-statement takes a little effort to master, and is expanding functionality more recently in the Java language. Here we'll describe the original way switch- is used, at least for the time being. Watch this space.    Parts of a switch-statement   The parts of a switch-statement can be a little confusing at first. Take a moment to study and pay special attention to the break keyword, because leaving it out is valid, but it is often not what you intend to do. Leaving out a break when you meant to include it is a common mistake made by novice Java programmers.    Parts of a switch-statement     There are four keywords to identify: switch , case , break , and default . The switch keyword is followed by parentheses containing a selector expression , and a code block delimited by brackets. The selector expression must evaluate to a number, String, or other constant. Each label following a case identifies the number or String to be matched against the value obtained from the evaluated selector expression. If a match is found with a case  label , the statements following the case are executed. If\/when a break is encountered, the switch statement is exited. If the default branch is encountered, it executes automatically. No match is required.    Exiting a switch-statement  It is important to understand that a switch-statement is exited only in one of two situations: program control runs off the end of the code block, or a break is encountered.   Caution  If the statements after a case do not include a break , then program control proceed into the statements of the next case (if there is one), even if the next case  label does not match the selector expression value.   Make sure you understand this behavior of a switch-statement. The switch- does not exit a case branch automatically when finished executing its statements like an if-statement does. It keeps flowing into the statements of next case branch. It is a good idea to always include a break when you intend to exit a switch-statement.    When to use a switch-statement  A switch-statement is very convenient when comparing an expression to a list of number or String constant values. For example, referring back to our DoWhuleMenu.java example in , we prompted the user for an integer, and then tested the user's response against a list of integer options. We could have used a switch-statement instead of a multi-branch if-statement, which would have avoided the need to write test expressions for each branch of the if-statement. Below, we include the original multi-branch if-statement from on the left, and an updated version using a switch-statement on the right.    if (ans == 1) { Oval o = new Oval(); o.setFillColor(r, g, b); } else if (ans == 2) { Rectangle r1 = new Rectangle(); r1.setFillColor(r, g, b); } else if (ans == 3) { RoundRect r2 = new RoundRect(); r2.setFillColor(r, g, b); }     switch (ans) { case 1: Oval o = new Oval(); o.setFillColor(r, g, b); break; case 2: Rectangle r1 = new Rectangle(); r1.setFillColor(r, g, b); break; case 3: RoundRect r2 = new RoundRect(); r2.setFillColor(r, g, b); break; }    Adding a default: to the end of our switch-statement would be equivalent to adding an else to the end of our if-statement. Forgetting one of the break statements would cause the statements of multiple case branches to be executed.    When to leave out a break  Leaving out a break can be useful when you want to execute the same set of actions after matching multiple label values. A good example is when you are writing code that should handle the differences in behavior between different operating systems.  In we described the keyboard events that the DoodlePad library can handle. In  BoxDriver.java we gave an example. Methods capable of handling keyboard events must have the following signature.  void onKeyPressed(Pad p, String keyText, String keyMods)  Unfortunately, the value of the keyText parameter has different values for certain special keys when your program is running on different operating systems. lists differences for the arrow keys on macOS and Windows.   keyText value differences by operating system    Key  macOS  Windows    Left arrow  \"←\"  \"Left\"    Right arrow  \"→\"  \"Right\"    Up arrow  \"↑\"  \"Up\"    Down arrow  \"↓\"  \"Down\"     In our BoxDriver.java example of we handled this difference by writing complex conditional tests for each if-statement branch in the key-press event handler. The following two code snippets show the original multi-brach if-statement on the left and an updated version rewritten as a switch-statement on the right. Note how the switch-statement has two case labels for each branch with no break between them. Statements under each pair of case labels will be executed when either label matches the value of keyText . The switch-statement on the right has much less clutter as compared to the if-statement on the left. More importantly, eliminating the complex conditionals required for each if- branch reduces the number of opportunities for a mistake.    if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); }     switch (keyText) { case \"Left\": case \"←\": box.move(-10, 0); break; case \"Right\": case \"→\": box.move(10, 0); break; case \"Up\": case \"↑\": box.move(0, -10); break; case \"Down\": case \"↓\": box.move(0, 10); break; }      What's next for switch?  In a future version of the JDK, the switch-statement will get a major upgrade. Selector expressions will no longer be limited to Strings, numbers or constants. They will be permitted to evaluate to any valid type. Furthermore, case labels will be permitted to be patterns that are matched against the selector expression value. See JEP 433 if you are interested in learning how switch-statements will be enhanced in Java.   "
 },
 {
-  "id": "p-577",
+  "id": "p-584",
   "level": "2",
-  "url": "section-c2-switch-statements.html#p-577",
+  "url": "section-c2-switch-statements.html#p-584",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2503,9 +2530,9 @@ var ptx_lunr_docs = [
   "body": " Parts of a switch-statement   "
 },
 {
-  "id": "p-582",
+  "id": "p-589",
   "level": "2",
-  "url": "section-c2-switch-statements.html#p-582",
+  "url": "section-c2-switch-statements.html#p-589",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2530,9 +2557,9 @@ var ptx_lunr_docs = [
   "body": " Ternary Operator  The last way to \"branch\" on a condition that we'll discuss is not a statement at all, but in fact, it is an expression that makes use of a special ternary operator . Rather than modify the flow of control in a program, this ternary operator evalutes to one of two a values, depending upon whether its conditional subexpression evaluates to true of false .   Parts of a Ternary Operator  The Java ternary operator is composed of the symbols ? and : . Like any other expression, one that makes use of the ternary operator evalutes to a value. What makes this kind of expression unique is that it evaluates to a different value depending upon an internal subexprssion. This operator is ternary , meaning it has three operands. The first operand is the conditional expression to be evaluated. If the subexpression evaluates to true , the second operand is evaluated and its value returned. If the first operand subexpression evaluates to false the third operand of the ternary operator is evaluated and returned. The first two operands of the ternary operator are separated by ? and the second two by : .  The parts of an expression making use of a ternary operator are illustrated in It is useful to think of the first operand of the ternary operator as the question being asked. The first part of the ternary operator ( ? ) is a good reminder of that. If the answer to the question (the conditional subexpression result) evaluates to true , then the second operand is evaluated and returned, otherwise the third operands is evaluated and returned.   Expression using a Ternary Operator      When to use a Ternary Operator  Ternary operators are particularly useful when you want to substitute different values based on the value of a subexpression. Consider the following code snippet.   Is the number even or odd?  int num = 12; System.out.println( num + \" is \" + (num % 2 == 0? \"even\" : \"odd\" ) );   Let's test this in JShell. What you'll see below is that the exact same expression produces a different output, depending upon the result of the subexpression num % 2 == 0 .   jshell> int num = 12;  num ==> 12  jshell> System.out.println( num + \" is \" + (num % 2 == 0? \"even\" : \"odd\" ) );  12 is even  jshell> num = 13;  num ==> 13  jshell> System.out.println( num + \" is \" + (num % 2 == 0? \"even\" : \"odd\" ) );  13 is odd  jshell>   Think for a moment about the amount of code we'd need to produce the same output using an if-statement or a switch-statement. Either alternative would require several lines of code to accomplish. The ternary operator is a very compact way to do the same thing, only within the context of a single expression.   "
 },
 {
-  "id": "p-592",
+  "id": "p-599",
   "level": "2",
-  "url": "section-c2-ternary-operator.html#p-592",
+  "url": "section-c2-ternary-operator.html#p-599",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2566,9 +2593,9 @@ var ptx_lunr_docs = [
   "body": " Comparing Correctly  In all methods of flow control, some form of conditional expression if evaluated, and used to direct the flow to different parts of a program. Desired behavior depends entirely on the correctness of the comparisons made. In this section we examine the right way to make certain comparisons in Java, so you know that your program will always compare correctly.   .equals() vs. ==  Recall that in we learned that a String object is immutable. All String methods that seemingly modify internal character data, actually return a new String object. This behavior is an opportunity for the Java runtime to optimize memory usage. The String class makes use of the immutable feature of String objects by storing only a single copy of any String literal. For example, whenever I create a String using literal notation, say String feeling1 = \"Joy\"; , the String class will create the String \"Joy\" and store it in memory reseved for a special pool of Strings. The next time I create a String variable that refers to \"Joy\" , say String feeling2 = \"Joy\"; , rather than creating a new String, the String class finds the \"Joy\" String in the pool and returns a reference to the one that exists already. This is a process called String interning . By avoiding the creation and storage of multiple String objects, we conserve memory. String interning is possible only because String objects are immutable.  We can demonstrate that feeling1 and feeling2 refer to the exact same String object by comparing the variables using the == operator. Remember, the == operator uses object identity for the equivalence test.  If we create a third String object with the same character data, only this time using the String constructor instead of a literal, String feeling3 = new String(\"Joy\"); and then compare this new String variable to either the String variables feeling1 or feeling2 using the == operator, we will find that they are not the exact same String object, even though the character data in the objects refered to by feeling3 and feeling2 are identical. These two objects are not identical because String literals are interned in the String pool, but Strings objects created with the String constructor are stored elsewhere in memory, and so they are not identical. See the following JShell session for a demonstration.   jshell> String feeling1 = \"Joy\"; \/\/ First String literal feeling1 ==> \"Joy\" jshell> String feeling2 = \"Joy\"; \/\/ Second String literal feeling2 ==> \"Joy\" jshell> feeling1 == feeling2; \/\/ Are they the same object? $3 ==> true jshell> String feeling3 = new String(\"Joy\"); feeling3 ==> \"Joy\" \/\/ Third String using a constructor jshell> feeling3 == feeling2; \/\/ Are they the same object? $5 ==> false jshell> feeling3.equals(feeling2); \/\/ Are the character the same? $6 ==> true jshell>    Use .equals(…) to Compare Strings  If you are not absolutely certain how two Strings were created, always use the .equals(…) String method to compare Strings.     Comparing Floating-point Numbers  Have a look at the following program and the output below it.    public class CompareFloats { public static void main(String[] args) { double n1 = 0.1; \/\/ Init three doubles double n2 = 0.2; double n3 = 0.3; if (n1 + n2 == n3) { \/\/ 0.1 + 0.2 == 0.3? System.out.println( n1 + \" + \" + n2 + \" == \" + n3); } else { \/\/ 0.1 + 0.2 != 0.3? System.out.println( n1 + \" + \" + n2 + \" != \" + n3); } } }     javac CompareFloats.java java CompareFloats  0.1 + 0.2 != 0.3   That is a surprising result, wouldn't you agree? We all know that 0.1 + 0.2 == 0.3 . Why did Java tell us that they are not equal? Understanding the answer to this question requires a deeper understanding about how floating point numbers are represented in memory, especially when it comes to precision.  Without getting into to much detail, you know that data is store in memory in binary, in other words base-2 numbers (1s and 0s). But humans work (mostly) in decimal, base-10 numbers. It is not possible to store many base-10 numbers exactly using base-2 notation, especially when we have limited memory. For this reason, floating point number operations produce base-2 results that are as close as possible to the real base-10 numbers, given the precision possible in the available memory.  If we maintain the precision available for double s, but extend the number of decimal places further, we can derive the actual base-10 numbers that are stored in memory for one that is not representable exactly. Specifically,  0.1 → 0.1000000000000000055511151231257827021181583404541015625  0.2 → 0.2000000000000000111022302462515654042363166809082031250  0.3 → 0.2999999999999999888977697537484345957636833190917968750  The base-2 numbers written above in base-10 do achieve the necessary base-10 precision for a double type. But, also note that the representations for 0.1 and 0.2 both have a tiny positive error in the decimal places after the required precision.  If we add the first two numbers exactly, the result is,  0.1 + 0.2 = 0.3000000000000000166533453693773481063544750213623046875  which cannot be represented exactly in base-2. Instead the closest floating point number is chosen. In base-10 this number is,  0.1 + 0.2 → 0.3000000000000000444089209850062616169452667236328125000  Because this number is not the same as the base-2 number chosen by the floating-point system to represent the literal 0.3, the result of 0.1 + 0.2 == 0.3 is false . This is the best we can do with limited memory and therefore limited precision. In general, these tiny errors seldom cause problems. Nevertheless, it is best to compare floating-point numbers using a close enough approach. That is, compute the absolute value of the different between two floating-point numbers. If that difference is less than some small number considered close enough , then the two floating-point numbers are essentially equal, at least to the available precision. See the updated example below. Note that the outcome is now what we expect.    public class CompareFloats { public static void main(String[] args) { double n1 = 0.1; \/\/ Init three doubles double n2 = 0.2; double n3 = 0.3; \/\/ 0.1 + 0.2 == 0.3? if ( Math.abs( (n1 + n2) - n3 ) < 0.00000000000001 ) { System.out.println( n1 + \" + \" + n2 + \" == \" + n3); } else { \/\/ 0.1 + 0.2 != 0.3? System.out.println( n1 + \" + \" + n2 + \" != \" + n3); } } }     javac CompareFloats.java java CompareFloats  0.1 + 0.2 == 0.3    Check that floating-point numbers are close enough  Do not use == to compare floating-point numbers. Test for close enough by computing the absolute value of the difference and check that it is less than the desired precision.     Short-circuit Evaluation  We know that for a logical conjunction to be true, both the left and right subexpressions must evaluate to true . Proceeding left-to-right, if we find that the left subexpression of a conjunction evaluates to false there is no need to evaluate the right subexpression because we know already that the entire conjunction is false . Java skips the right subexpression and return false as soon as it finds the that left subexpression evaluates to false . This is called short-circuit evaluation .  demonstrates short-circuit evaluation with a helper method named eval(…) . This method takes two parameters: the first is a String label to be printed and the second is a boolean value to be returned. The purpose of this method is to see when the method is invoked by looking for the String label to be printed before the overall result is output. The program given in evaluates a conjunction where the left subexpression with label \"A\" is false but the right subexpression with label \"B\" is true. If both subexpressions in the conjunction are evaluated, then we'll see both the \"A\" and \"B\" label printed before the conjunction evaluates to false . If short-circuit evaluation is in play, only the \"A\" label will print.   ShortCircuit.java  \/\/ ShortCircuit.java public class ShortCircuit { public static void main(String[] args) { \/\/ Left subexpression is false, so the right is never evaluated if ( eval(\"A\", false) && eval(\"B\", true) ) { System.out.println(\"Conjunction is true\"); } else { System.out.println(\"Conjunction is false\"); } } \/\/ Print label and return boolean parameter value public static boolean eval(String label, boolean value) { System.out.println(label); return value; } }   In the following session we compile and run our test program. The only label printed by the test program is \"A\". Only the first subexpression of the conjunction was evaluated so Java must be practicing short-circuit evaluation.   javac ShortCircuit.java java ShortCircuit  A Conjunction is false   We can use this knowledge to make our programs more efficient by testing the more limiting or less costly condition first, on the left side of a conjunction, and putting the less limiting or more costly condition as the right-side subexpression.   Check the most limiting conditions first  When writing conjunctions, order more limiting or less costly subexpression on the left and the less limiting or more costly subexpression on the right. This will take advantage of short-circuit evaluation property of Java.    "
 },
 {
-  "id": "p-597",
+  "id": "p-604",
   "level": "2",
-  "url": "section-c2-comparisons.html#p-597",
+  "url": "section-c2-comparisons.html#p-604",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2593,9 +2620,9 @@ var ptx_lunr_docs = [
   "body": "  public class CompareFloats { public static void main(String[] args) { double n1 = 0.1; \/\/ Init three doubles double n2 = 0.2; double n3 = 0.3; \/\/ 0.1 + 0.2 == 0.3? if ( Math.abs( (n1 + n2) - n3 ) < 0.00000000000001 ) { System.out.println( n1 + \" + \" + n2 + \" == \" + n3); } else { \/\/ 0.1 + 0.2 != 0.3? System.out.println( n1 + \" + \" + n2 + \" != \" + n3); } } }   "
 },
 {
-  "id": "p-615",
+  "id": "p-622",
   "level": "2",
-  "url": "section-c2-comparisons.html#p-615",
+  "url": "section-c2-comparisons.html#p-622",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2611,9 +2638,9 @@ var ptx_lunr_docs = [
   "body": " ShortCircuit.java  \/\/ ShortCircuit.java public class ShortCircuit { public static void main(String[] args) { \/\/ Left subexpression is false, so the right is never evaluated if ( eval(\"A\", false) && eval(\"B\", true) ) { System.out.println(\"Conjunction is true\"); } else { System.out.println(\"Conjunction is false\"); } } \/\/ Print label and return boolean parameter value public static boolean eval(String label, boolean value) { System.out.println(label); return value; } }  "
 },
 {
-  "id": "section-66",
+  "id": "section-67",
   "level": "1",
-  "url": "section-66.html",
+  "url": "section-67.html",
   "type": "Section",
   "number": "7.7",
   "title": "Key Concepts",
@@ -2638,18 +2665,18 @@ var ptx_lunr_docs = [
   "body": " Creating, Initializing Arrays  A Java array stores in memory a sequence of data items with common data type. The entire sequence can be assigned to a single variable with each element accessed using the variable followed by a sequential integer index (offest) in square brackets, starting with 0. Arrays are incredibly useful when you must store a very large number of related values. Using an index for element access works well with iteration counters, very much like the way we access elements in an ArrayList using the .get(…) method.   Declaring Arrays  An array variable is declared just like any Java variable with a data type, only followed with a pair of square brackets ( [] ).   jshell> double[] data; data ==> null jshell>   In the JShell session above, we declare a double  array variable just like we would declare a single double variable, only we follow the type with [] . It's useful to read this declaration as double array data . In general, working with array variables is very similar to working single data variable, only with the additional of square brackets.  In the above JShell session, we see that the data array variable starts with the value null . This is very important to note. In Java, array variables are reference variables, just like variables having a class type are reference variable. As a reference type, all the same rules and behaviors that we investigated in apply to array variables as well.  Also like a class variable, declaring an array variable does not create the array. An array variable is only a variable that may reference an array, should we choose to create one and assign it to the variable. The variable itself is not the array, which is illustrated by its initial default value being null .  We can declare an array of any valid type in Java. In fact, we can declare arrays of arrays , which investigate more in . The following code snippet illustrates this idea. None of these variables are arrays. They are only variables that may reference an array, not the array itself.   double[] data; \/\/ An array variable of doubles int[] lengths; \/\/ An array variable of integers String[] names; \/\/ An array variable of Strings Random[] rands; \/\/ An array variable of Random objects     Creating Arrays  Similar to instantiating new objects using a constructor, the syntax for creating a new array makes use of the new keyword. This reinforces the fact that arrays are reference types. Unlike invoking an object constructor, the syntax for creating a new array follows the new keyword with the data type to be stored in elements of the array and then square backets containing the number of elements to be stored in the array. In the following code snippet, we create and assign arrays of size 100 for each of the array variables declared above.   data = new double[100]; lengths = new int[100]; names = new String[100]; rands = new Random[100];   Note that we can also use the combination declaration\/initialization statement just like we did with single-value variables.   double[] data = new double[100]; int[] lengths = new int[100]; String[] names = new String[100]; Random[] rands = new Random[100];     Accessing Array Elements  Once created, you may access and use the elements of an array just like you would a single-valued variable. The only difference is that you must follow your array variable with square brackets and an item index so that Java knows which element of the array that you want to access. In the example below, the data array variable is declared and initialized to a new array of doubles with length 100. These items are then accessed by following the array variable name data with square brackets and an index value, like data[0] .   jshell> double[] data = new double[100]; data ==> double[100] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ... 0.0, 0.0, 0.0, 0.0, 0.0 } jshell> System.out.println( data[0] ); \/\/ Access an array for printing 0.0 jshell> data[0] = 3.14; \/\/ Assign a value to an array element $3 ==> 3.14 jshell> System.out.println( data[0] ); 3.14 jshell>    Indexes Start at 0  In Java, when accessing a sequence of items, the index of the first item always starts at 0. Think of an index as an offset from the start of a sequence, not as an item's sequence position.     The idea that array is a sequence of data values is more than just a useful visual queue. Array elements are stored in contiguous memory, one after the other.  In the data example of , note that Java initializes double array items with the value 0.0 , just like it would initialize a single-valued double variable. This is the case with any array holding any numerical type.  If numeric array elements are initialized with 0, how about boolean array elements? What is the default value assigned to a single boolean variable? JShell is a useful tool to investigate Java's behavior.     An array stored in memory      jshell> boolean response; response ==> false jshell> System.out.println( response ); false jshell> boolean[] responses = new boolean[5]; responses ==> boolean[5] { false, false, false, false, false } jshell> System.out.println( responses[4] ); false jshell>   In both cases the default value of a boolean is false . Java sets the initial value of array elements to the same value that it would a single-values variable.    Initializing Arrays  Just like we can initialize a variable at the time of declaration, we also can initialize the elements of an array. We need to specify multiple element values for the array to be initialized. Syntactically, we following the creation of the array with a sequence of values delimited with braces ( {…} ) and separated by commas. In the following example we declare the double array variable data , assign it to a newly created double array, and initialize the double array to the values 10.0, 20.0, 30.0, 40.0 and 50.0.   double[] data = new double[] {10.0, 20.0, 30.0, 40.0 50.0};   Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.  We can shorten the above example even further. The new double[] part of the expression is redundant. Clearly, we want to create a new double array because we provided initial element values. There are legitimate reasons to declare an array variable without creating an array, but no legitimate reason if initial element values are provided. For this reason Java let's us accomplish the same task of creating and initializing the array without the need to include the new double[] part. In the example below, we create and initialize the array by going right to the initial values in braces, leaving out the new double[] .   double[] data = {10.0, 20.0, 30.0, 40.0 50.0};   This initialization syntax may be used with any type, provided you are able to write down the sequence of value in braces. In the examples below, pay careful attention to the rands array holding two Random objects. The only means of creating Random objects is to use the Random constructor.. Within the braces of the initializer, we invoked the Random constructor twice in create two objects which are stored in the rands array.   double[] data = {10.0, 20.0, 30.0, 40.0 50.0}; int[] lengths = {32, 34, 40}; String[] names = {\"Athos\", \"Porthos\", \"Aramis\"}; Random[] rands = {new Random(), new Random()}; boolean[] responses = {true, false, false, false, true};     The Java Array Three-Step Process  Take a moment to notice something important about arrays. In order to fully realize an array containing non-default element values, you must complete three steps .  There must be a variable that references the array. Without maintaining a reachable reference, the array is subject to garbage collection.  Declaring an array variable does NOT create an array. You must use the new keyword and follow the array declaration syntax with size (or initializing values) to create the actual array. The variable has the ability only to reference an existing array, not create the array. You must explicitly create the array in order for it to exist.  A newly created array contains element with default values for its type. A third step of initializing the array is required for it to contain something other than default values.     "
 },
 {
-  "id": "p-624",
+  "id": "p-631",
   "level": "2",
-  "url": "section-ar-creating.html#p-624",
+  "url": "section-ar-creating.html#p-631",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "does not "
 },
 {
-  "id": "p-626",
+  "id": "p-633",
   "level": "2",
-  "url": "section-ar-creating.html#p-626",
+  "url": "section-ar-creating.html#p-633",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2665,9 +2692,9 @@ var ptx_lunr_docs = [
   "body": " An array stored in memory   "
 },
 {
-  "id": "p-639",
+  "id": "p-646",
   "level": "2",
-  "url": "section-ar-creating.html#p-639",
+  "url": "section-ar-creating.html#p-646",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2782,9 +2809,9 @@ var ptx_lunr_docs = [
   "body": " NestedArrays3.java   \/\/ NestedArrays2.java public class NestedArrays3 { public static void main(String[] args) { double[][] arr2D = {{0.0, 0.1, 0.2}, \/\/ Right side is \"ragged\" {1.0, 1.1, 1.2, 1.3}, {2.0, 2.1}, {3.0, 3.1, 3.2}, {4.0}}; print2D( arr2D ); \/\/ Print array } \/\/ Print an arbitrary 2D double array public static void print2D( double[][] arr ) { for (double[] inarr : arr) { \/\/ Outer loop for (double val : inarr) { \/\/ Inner loop System.out.print( val + \" \"); \/\/ Print adjacent } System.out.println(); \/\/ Next line } } }   "
 },
 {
-  "id": "p-669",
+  "id": "p-676",
   "level": "2",
-  "url": "section-ar-multi.html#p-669",
+  "url": "section-ar-multi.html#p-676",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2872,9 +2899,9 @@ var ptx_lunr_docs = [
   "body": " MakeStar.java   "
 },
 {
-  "id": "section-74",
+  "id": "section-ar-concepts",
   "level": "1",
-  "url": "section-74.html",
+  "url": "section-ar-concepts.html",
   "type": "Section",
   "number": "8.7",
   "title": "Key Concepts",
@@ -2890,243 +2917,522 @@ var ptx_lunr_docs = [
   "body": " Chapter Exercises   "
 },
 {
-  "id": "section-76",
+  "id": "section-cl-class-v-instance",
   "level": "1",
-  "url": "section-76.html",
+  "url": "section-cl-class-v-instance.html",
   "type": "Section",
   "number": "9.1",
-  "title": "Class vs Instance",
-  "body": "Class vs Instance  There can only ever be one class. There can be zero or more instances.  static fields belong to the class. All non-static fields are copied into each instance.  static methods do not have access to non-static fields. Non-static methods may access the scope of the object through which they are executed.  Class vs Object scope.  "
+  "title": "Class vs. Instance",
+  "body": " Class vs. Instance   In a running Java program, there may exist only one of any given class. There might be as few as zero or many thousands of instances of the class (objects), but each class is unique. It is important to understand the distinction between a class and an object.  We see this difference when invoking static and object (non-static) methods. lists several examples.   Examples of static and object method invocations    Static methods  Object methods    Math.sqrt(…)  rnd.nextDouble()    String.valueOf(…)  myString.toLowerCase()    Arrays.sort(…)  myArrayList.add(…)     The left column of lists several static method examples and the right column several object method examples. In previous chapters we have used all of these examples. Note that all examples in the left column require a class name to specify the scope in which the method resides. That is, only class names appear to the left of the dot-operator. By contrast, methods in the right column are scoped by object names. In other words, an object must be instantiated before any of these methods can be invoked. Stated differently, static methods are scoped by class; non-static methods are scoped by object.   Static vs. Non-static Method Scoping > Static methods are scoped by class ; non-static methods are scoped by object .   The scoping distinction has ramifications on access. Statements within method defined as static may access only the statically-scoped members of the class. By contrast, statements in methods defined without the static keyword have access both to non-static member data declared within the object and more generally the static data scoped by class.  This object scope , also know as instance scope defines the fourth kind of Java scope that we have encountered. Anything defined within a class but without the static keyword exists in the scope of a particular the instance of the class, an object. See our list of Java scopes below.   package scope (limited to a Java package).  class scope (accessible throughout the class), and  object (instance) scope (limited to a specific object),  method scope (limited to a specific method),  block scope (limited to a specific block of code),   All of the methods that we've written in previous chapters were static (i.e. class scope). This was determined when adding the static keyword to the method declaration. By contrast, the object-scoped methods we used, were defined in either core Java libraries or other provided libraries, like those in DoodlePad. To take advantage of the object-oriented nature of Java we need to declare object-scoped fields that hold data specific to the instance and methods that have access to these fields. This enables us to define our own objects that encapsulate and manage data in accordance with the principles of object-oriented programming. Let's learn how to define our own instantiatable classes that encapsulate object-specific data.   "
 },
 {
-  "id": "section-77",
+  "id": "table-cl-static-v-non",
+  "level": "2",
+  "url": "section-cl-class-v-instance.html#table-cl-static-v-non",
+  "type": "Table",
+  "number": "9.1.1",
+  "title": "Examples of static and object method invocations",
+  "body": " Examples of static and object method invocations    Static methods  Object methods    Math.sqrt(…)  rnd.nextDouble()    String.valueOf(…)  myString.toLowerCase()    Arrays.sort(…)  myArrayList.add(…)    "
+},
+{
+  "id": "p-699",
+  "level": "2",
+  "url": "section-cl-class-v-instance.html#p-699",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "object scope "
+},
+{
+  "id": "p-700",
+  "level": "2",
+  "url": "section-cl-class-v-instance.html#p-700",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "encapsulate "
+},
+{
+  "id": "section-cl-constructors",
   "level": "1",
-  "url": "section-77.html",
+  "url": "section-cl-constructors.html",
   "type": "Section",
   "number": "9.2",
-  "title": "Constructors and Methods",
-  "body": "Constructors and Methods  Anatomy of a Constructor  Constructor patters - init object fields.  Non-static methods  Method vs Constructor  The this keyword to set object scope  Using class name to set static scope  "
+  "title": "Constructors",
+  "body": " Constructors   Most classes can be instantiated. But to be useful, these instantiated objects must be able to declare and manage their own data. This starts with the declaration of a special, method-like construct added to a class definition called a constructor .    Anatomy of a Constructor  A constructor is a block of code that is invoked when an object is instantiated using the new keyword. The statements in the constructor perfrom important initialization tasks required by an object is instantiated. outlines the unique makeup of a constructor and its five critical features.   Anatomy of a Constructor    The name of a constructor must match the name of its class.  Constructor parameter declarations are no different than method parameters.  A constructor has no return type, not even void .  There can be no return statement in a constructor.  To access the current object being initialized, use the scope defined by the this keyword.      The this Keyword  As a demonstration, let's create a graphic class named LED. This class will be a circular graphic object with width and height of 30 pixels. The graphic is filled with gray when it is off and red when it is on. When deciding what to include in any class, we need to stop and think about what is necessary to adequatley track the state of each instance. For an LED, we need to track whether it is on or off. We also need to manage its graphic representation, in this case an Oval object.  In we start the definition of our LED by declaring a class named LED and two instance variables named on and light . We call them instance variables because every instance of the class will get its own copy of these variables. We did not use the keyword static when declaring them; which makes them instance variables . Using static would have made them class variables , defined within the scope of the class. Because there is only one of any class, there would be only one of each static variable.  We also used the keyword private instead of our usual public visibility specifyer when declaring our LED instance variables. Using private ensures that the instance variables are not accessible from outside each instance. Instance variables declared with private visibility may be accessed only from within the scope of an object. No access from outside the object is permitted. We now have two visibility specifiers for the declaration of methods and instance variables, public and private .   LED.java (step 1)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object }    When we instantiate a new LED object we want to initialize these variables. That's where the constructor comes in. adds an LED constructor to our LED class declaration.   LED.java (step 2)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor (**NEW**) public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } }    Let compare our added LED constructor to the critical features given in .   The name of the constructor matches the name of the class, LED .  Two parameters are declared just like any method.  There is no return type, not even void .  There is no return statement in the body of the constructor.  And finally, instance variables are accessed from within the constructor using the this keyword.   The expressions this.on and this.light access and initialize the instance variables declared outside the scope of the constructor but within the scope of the object. All constructors must follow these same rules listed in .  Let's add a main(…) method to test our initial Java LED class. It is very convenient to use the main(…) method to test a class. As we'll see later, as our programs grow we rarely invoke an individual class's main(…) method in favor of using a special driver class with a main(…) method designed specifically to start up a program. To test our class we create two LED instances at different locations. See and . As expected, in two LED objects are shown at the given starting locations with a dark gray fill color.   LED.java (step 3)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } } \/\/ --- Test LED (**NEW**) public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); }     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED    LED.java (step 3)     "
 },
 {
-  "id": "section-78",
-  "level": "1",
-  "url": "section-78.html",
-  "type": "Section",
-  "number": "9.3",
-  "title": "Access Control",
-  "body": "Access Control  public vs private  "
-},
-{
-  "id": "section-79",
-  "level": "1",
-  "url": "section-79.html",
-  "type": "Section",
-  "number": "9.4",
-  "title": "Accessor and Mutator Methods",
-  "body": "Accessor and Mutator Methods  getters and setters  "
-},
-{
-  "id": "section-80",
-  "level": "1",
-  "url": "section-80.html",
-  "type": "Section",
-  "number": "9.5",
-  "title": "Encapsulation",
-  "body": "Encapsulation  The public interface  "
-},
-{
-  "id": "section-cl-enumerated",
-  "level": "1",
-  "url": "section-cl-enumerated.html",
-  "type": "Section",
-  "number": "9.6",
-  "title": "Enumerated Types",
-  "body": " Enumerated Types  In Java, enumerated types, also known as enums , provide a way to define a fixed set of named constants. Enums allow you to create a custom data type with a predefined and automatically assigned set of values, making your code more readable, maintainable, and type-safe.  To define an enum in Java, you use the enum keyword followed by the name of the enum type. Here's an example of a simple enum representing clothing sizes:  TODO: Replace following with a program  >jshell | Welcome to JShell -- Version 17.0.6 | For an introduction type: \/help intro jshell> enum Size { ...> XSMALL, ...> SMALL, ...> MEDIUM, ...> LARGE, ...> XLARGE ...> } | created enum Size jshell>  In this example, Size > is the name of the enum type, and the constants SMALL , MEDIUM , LARGE , etc., are the possible values of the enum. Note that capitalization of constant name is not required, but useful for communicating the fact that these are constants.  You can use enum constants in your code just like any other static variables. For example:  jshell> Size mySize = Size.LARGE; mySize ==> LARGE jshell> System.out.println(\"Please order a \" + mySize); Please order a LARGE jshell>  Enums also have some useful methods automatically provided by Java. For instance, you can retrieve the name of an enum constant using the name() method:  jshell> System.out.println(\"Please order a \" + mySize.name()); Please order a LARGE  You can compare enum constants using the equality operator (==) because each constant is a unique instance of the enum type. Enums can also be used in switch statements for easy branching based on the enum value.  TODO: Replace following with a program  jshell> switch (mySize) { ...> case XSMALL: ...> case XLARGE: ...> System.out.println(\"We are out of 'extra' sizes\"); ...> break; ...> default: ...> System.out.println(\"Order placed\"); ...> } We are out of 'extra' sizes jshell>  Enums can have constructors, fields, and methods like any other Java class. You can even define custom behavior for each enum constant.  In summary, Java enumerated types (enums) provide a convenient way to define a fixed set of named constants, making your code more expressive and robust. Enums are type-safe, can have custom behavior, and provide useful methods out-of-the-box for working with the constants they define.  "
+  "id": "p-701",
+  "level": "2",
+  "url": "section-cl-constructors.html#p-701",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "constructor "
 },
 {
   "id": "p-702",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-702",
+  "url": "section-cl-constructors.html#p-702",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "TODO: Replace following with a program "
+  "body": "constructor "
 },
 {
-  "id": "p-707",
+  "id": "figure-cl-constructor-anatomy",
   "level": "2",
-  "url": "section-cl-enumerated.html#p-707",
+  "url": "section-cl-constructors.html#figure-cl-constructor-anatomy",
+  "type": "Figure",
+  "number": "9.2.1",
+  "title": "",
+  "body": " Anatomy of a Constructor    The name of a constructor must match the name of its class.  Constructor parameter declarations are no different than method parameters.  A constructor has no return type, not even void .  There can be no return statement in a constructor.  To access the current object being initialized, use the scope defined by the this keyword.   "
+},
+{
+  "id": "p-704",
+  "level": "2",
+  "url": "section-cl-constructors.html#p-704",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "TODO: Replace following with a program "
+  "body": "instance variables class variables "
 },
 {
-  "id": "section-82",
+  "id": "p-705",
+  "level": "2",
+  "url": "section-cl-constructors.html#p-705",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "private visibility "
+},
+{
+  "id": "listing-cl-led1",
+  "level": "2",
+  "url": "section-cl-constructors.html#listing-cl-led1",
+  "type": "Listing",
+  "number": "9.2.2",
+  "title": "",
+  "body": " LED.java (step 1)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object }   "
+},
+{
+  "id": "listing-cl-led2",
+  "level": "2",
+  "url": "section-cl-constructors.html#listing-cl-led2",
+  "type": "Listing",
+  "number": "9.2.3",
+  "title": "",
+  "body": " LED.java (step 2)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor (**NEW**) public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } }   "
+},
+{
+  "id": "p-709",
+  "level": "2",
+  "url": "section-cl-constructors.html#p-709",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "driver "
+},
+{
+  "id": "listing-cl-led3",
+  "level": "2",
+  "url": "section-cl-constructors.html#listing-cl-led3",
+  "type": "Listing",
+  "number": "9.2.4",
+  "title": "",
+  "body": " LED.java (step 3)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } } \/\/ --- Test LED (**NEW**) public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); }   "
+},
+{
+  "id": "figure-cl-led3",
+  "level": "2",
+  "url": "section-cl-constructors.html#figure-cl-led3",
+  "type": "Figure",
+  "number": "9.2.5",
+  "title": "",
+  "body": " LED.java (step 3)   "
+},
+{
+  "id": "section-cl-methods",
   "level": "1",
-  "url": "section-82.html",
+  "url": "section-cl-methods.html",
+  "type": "Section",
+  "number": "9.3",
+  "title": "Methods",
+  "body": " Methods  Objects may have their own methods. Once again, we declare methods without using the static keyword because we want them to be created within the scope of the object, not the class. This gives the method access to the object instance itself through the this keyword and other items declared in the object, including those with private visibility. We need access to the object in order to effectively manage its internal state of the object.   Object Methods  We introduced methods in . The difference between what was described there and the figure below is that here we leave out the static keyword so as to define the method within the scope of the object. Otherwise, the same rules apply.   Anatomy of a method    As an example, let's add three methods to our LED class that turn the LED on and off, and return the state of the LED. Turning an the LED object on sets the internal on variable to true and changes the managed Oval fill color to red. Turning it off resets the on variable to false and the Oval fill color back to dark gray. Obtaining the state of the LED simply returns the value of the private on instance variable. We'll call these methods turnOn() , turnOff() , and isOn() . None of these new methods have parameters.   shows the code changes to our class definition. The added turnOn() and turnOff() methods do what we expect, setting and configuring the state of the object by modifying its private instance variables. The isOn() returns the boolean value of the on instance variable. Because we have abstracted the concept of the LED being off and on and exposed that as these new methods, it is wise to remove the initial explicit instance variable configuration statements from the constructor that starts the LED in the off state and replace them by invoking the turnOff() method directly.  Consider what might happen if we decided to leave the initialization of the LED object's instance variables by setting the object state explicitly in the constructor. Doing this requires us to make sure that the constructor and the turnOff() method remained in sync. If we decided to change the fill color of the LED when off, and we modified the code in turnOff() but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such an oversight can lead to more serious problems. This important software development principle has been dubbed Don't repeat yourself or DRY .   Principle: Don't Repeat Yourself (DRY)  Every concept must have a single, authoritative representation within a system. Reduce repetition of concepts likely to change by replacing them with reusable abstractions.   To test our new methods, in addition to replacing configuration statements in the constructor with turnOff() , we invoke turnOn() in main(…) on both LED objects after instantiation. We also test the state of the first LED object by invoking its isOn() method and printing the result. See the result in .   LED.java (step 4)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state by invoking method (**NEW**) } \/\/ Turn on LED (**NEW**) public void turnOn() { this.on = true; this.light.setFillColor(255, 0, 0); } \/\/ Turn off LED (**NEW**) public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED (**NEW**) public boolean isOn() { return this.on; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Turn on both LED objects (**NEW**) led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } }     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED  LED1 is on    LED.java (step 4)      Accessor and Mutator Methods  Encapsulation requires that we manage access to instance variables. We can make an instance variable accessible simply by declaring it with public visibility. This leaves the variable's value wide open to change. We lose the ability to manage it, such as by restricting its value to a valid range.  The standard way is to manage instance variables is to declare them with private visibility, and add methods that are used to set the value of the instance variable and to get the value of an instance variable. A method designed to set the value of an instance variable is called a mutator method, also known as a setter . A method designed to get the value of an instance variable is called an accessor method, also known as a getter . By convention, we typically name these methods by prepending the instance variable named with set in the case of a mutator method (setters), and get in the case of an accessor method (getters).  By defining mutator methods and accessor methods for an instance variable, we open up a wide range of options for managing instance variable values. For example, if we want to restict the value of an age instance variable to a number greater-than or equal-to 0.0, we could test the value before assigning it. The following setAge(…) method is a simple example.  \/\/ Age setter restricted to values >= 0.0 public void setAge(double age) { if (age >= 0.0) { \/\/ Assign this.age only if this.age = age; \/\/ condition is satisfied } }  As another example, consider that we can configure an instance variable to be read-only simply by defining a getter method and but not a corresponding setter method. Without a setter, we can never change the instance variable value, only read it.  Let's expand our LED class example once more. Let's assume that we can choose the color that the LED emits when it is on to one of four values: RED, GREEN, BLUE, and YELLOW. It is easy enough to add an instance variable that holds an LED color, but we also need to manage that variable, limiting it to one of the four possible values. To manage this instance variable, we must add to the LED class a setColor(…) method, a setter, and a getColor() method, a getter. To help with this addition, let's define an enum with constants for the four LED colors, similar to what we did in .   enum LEDColor { RED, GREEN, BLUE, YELLOW };   To work this option into our LED class, we made the following changes. Refer to .    Added the enum to the bottom of our LED.java file.  Added a private scoped LEDColor color instance variable to hold an enum constant.  Added setColor(…) method to the class that take the LEDColor enum constant as a parameter. This limits values to one of the four color constants.  Added a getColor() method to the class that returns an LEDColor enum constant.  Initialized the color instance variable in the LED constructor  Added a switch to the turnOn() method that sets color based on the value of color instance variable.    LED.java (step 5)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object private LEDColor color; \/\/ LED Color (**NEW**) \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state this.color = LEDColor.RED; \/\/ Default to RED (**NEW**) } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { \/\/ Set selected color (**NEW**) case RED: this.light.setFillColor(255, 0, 0); break; case GREEN: this.light.setFillColor(0, 255, 0); break; case BLUE: this.light.setFillColor(0, 0, 255); break; case YELLOW: this.light.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ MUTATOR method for LED Color (**NEW**) public void setColor(LEDColor color) { this.color = color; } \/\/ ACCESSOR method for LED Color (**NEW**) public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors (**NEW**) led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants (**NEW**) enum LEDColor { RED, GREEN, BLUE, YELLOW };     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED  LED1 is on    LED.java (step 5)      Method Overloading  When your source code specifies that a method is to be invoked, the Java compiler will match up that invocation with an method implementation. This way, when your program runs, the proper method is executed. This matching task considers more than just the name of the method. The match is performed on the entire method signature . A method signature is composed of the method name and its parameter list, including parameter type and order.  Matching on the entire signature, and not just the method name, lets us define multiple methods having the same name, provided the signatures are distinct. This is called method overloading . The thought is that the method name is given multiple meanings, and so it is overloaded .  A constructor may be overloaded as well. Multiple constructors exist in a class provided the signatures are distinct. Overloading a method or constructor gives us the ability to abstract the same concept using a single name, but permitting the user to pass different parameter values.  A good application of method overloading is to set default parameter values for a method or constructor. Consider the setFillColor(…) method of all DoodlePad shape objects. As we know, this method can take the three color components: red, green, and blue, and that is the way we've used it. But, in fact, there are several other options (overloads) for invoking setFillColor(…) .  Colors in DoodlePad may be partially or fully transparent. This is set using fourth value in [0, 255] known as alpha . An alpha of 0 means fully transparent and an alpha of 255 means fully opaque. All color-related DoodlePad methods can take four color component parameters, the fourth being transparency specified as alpha. If that fourth parameter is omitted, DoodlePad substitutes an alpha of 255, fully opaque. This is implemented by overloading the definition of setFillColor(…) , which you can observe in the DoodlePad source code .   \/** * Set the fill color with which to draw the shape * @param red the red component of the color [0, 255] * @param green the green component of the color [0, 255] * @param blue the blue component of the color [0, 255] *\/ public void setFillColor(double red, double green, double blue) { setFillColor( red, green, blue, 255 ); \/\/ Default alpha to 255 }   In the previous example of DoodlePad source code, the three-parameter overload of setFillColor(…) just invokes the four-parameter version with 255 passed as the alpha value.  All shades of gray in the RGB color model are formed by setting the red, green, and blue color components to the same value within [0, 255]. To save typing, DoodlePad provides an overload that repeats the first value three times when only one parameter is provided. See the following additional overload. The DoodlePad source code is an interesting repository to explore see applications of many of the principles that we study in this book.   \/** * Set the gray scale fill color with which to draw the shape. * @param gray the gray scale value in the range [0, 255] *\/ public void setFillColor(double gray) { this.setFillColor(gray, gray, gray, 255); }   Constructors may be overloaded as well. The Java compile matches the invoked constructor signature to available definitions to ensure the proper constructor implementation is invoked.  As an example, rather than defaulting the LED on color to RED and then being required to change it using the setColor(…) method, let's overload the constructor as two implementations. The the more general implementation takes the LED on color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value LEDColor.RED as the third parameter, making it the default. Note that a constructor overload is invoked using this instead of the class name, and no new keyword.   \/\/ Overloaded constructor defaults color to RED public LED(double x, double y) { \/\/ Invoke alternative constructor with RED as default this(x, y, LEDColor.RED); } \/\/ Main constructor expects color constant as a parameter public LED(double x, double y, LEDColor color) { this.light = new Oval(x, y, 30, 30); this.setColor(color); \/\/ Set LED on color this.turnOff(); \/\/ Init state }   It is common practice in Java to define one method or constructor that does all the real work, and then one or more overloads that provide default parameter values. This practice is also a good example of DRY .   "
+},
+{
+  "id": "figure-cl-method-anatomy",
+  "level": "2",
+  "url": "section-cl-methods.html#figure-cl-method-anatomy",
+  "type": "Figure",
+  "number": "9.3.1",
+  "title": "",
+  "body": " Anatomy of a method   "
+},
+{
+  "id": "p-713",
+  "level": "2",
+  "url": "section-cl-methods.html#p-713",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Don't repeat yourself DRY "
+},
+{
+  "id": "listing-cl-led4",
+  "level": "2",
+  "url": "section-cl-methods.html#listing-cl-led4",
+  "type": "Listing",
+  "number": "9.3.2",
+  "title": "",
+  "body": " LED.java (step 4)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state by invoking method (**NEW**) } \/\/ Turn on LED (**NEW**) public void turnOn() { this.on = true; this.light.setFillColor(255, 0, 0); } \/\/ Turn off LED (**NEW**) public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED (**NEW**) public boolean isOn() { return this.on; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Turn on both LED objects (**NEW**) led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } }   "
+},
+{
+  "id": "figure-cl-led4",
+  "level": "2",
+  "url": "section-cl-methods.html#figure-cl-led4",
+  "type": "Figure",
+  "number": "9.3.3",
+  "title": "",
+  "body": " LED.java (step 4)   "
+},
+{
+  "id": "p-717",
+  "level": "2",
+  "url": "section-cl-methods.html#p-717",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "mutator setter accessor getter "
+},
+{
+  "id": "listing-cl-led5",
+  "level": "2",
+  "url": "section-cl-methods.html#listing-cl-led5",
+  "type": "Listing",
+  "number": "9.3.4",
+  "title": "",
+  "body": " LED.java (step 5)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object private LEDColor color; \/\/ LED Color (**NEW**) \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state this.color = LEDColor.RED; \/\/ Default to RED (**NEW**) } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { \/\/ Set selected color (**NEW**) case RED: this.light.setFillColor(255, 0, 0); break; case GREEN: this.light.setFillColor(0, 255, 0); break; case BLUE: this.light.setFillColor(0, 0, 255); break; case YELLOW: this.light.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ MUTATOR method for LED Color (**NEW**) public void setColor(LEDColor color) { this.color = color; } \/\/ ACCESSOR method for LED Color (**NEW**) public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors (**NEW**) led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants (**NEW**) enum LEDColor { RED, GREEN, BLUE, YELLOW };   "
+},
+{
+  "id": "figure-cl-led5",
+  "level": "2",
+  "url": "section-cl-methods.html#figure-cl-led5",
+  "type": "Figure",
+  "number": "9.3.5",
+  "title": "",
+  "body": " LED.java (step 5)   "
+},
+{
+  "id": "p-722",
+  "level": "2",
+  "url": "section-cl-methods.html#p-722",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "method signature "
+},
+{
+  "id": "p-723",
+  "level": "2",
+  "url": "section-cl-methods.html#p-723",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "method overloading "
+},
+{
+  "id": "p-726",
+  "level": "2",
+  "url": "section-cl-methods.html#p-726",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "alpha "
+},
+{
+  "id": "section-cl-shadowing",
+  "level": "1",
+  "url": "section-cl-shadowing.html",
+  "type": "Section",
+  "number": "9.4",
+  "title": "Shadowing",
+  "body": " Shadowing   With nested scopes we can define a variable in the scope of a method or constructor and then another having the same name in an outer object or class scope. This doesn't cause a problem until we want to access one of the two variables by name from the inner scope. An ambiguity arises. Java cannot tell if you intended to reference the variable declared within the inner method scope or the outer object or class scope. To solve this problem, Java always chooses a variable by searching for the variable declaration in the current scope, and if not found, it proceeds to outer scopes progressively until the first match is found.    Shadowing Troubles  Consider the ClickThick.java program source code in . This program creates an initial Line shape object assigned to the variable line and is set up to invoke the object-scoped onPressed(…) method when the mouse clicks the line. If the left mouse button is used, the thickness of the line is doubled. If the right mouse button is used, the thickness of the line is halved.   ClickThick.java   \/\/ ClickThick.java import doodlepad.*; \/\/ Import Doodlepad \/\/ Classes \/\/ Class that illustrates Line thickness public class ClickThick { private Line line; \/\/ Object-scoped variable public ClickThick() { \/\/ Constructor \/\/ Create Line object and assign to variable Line line; \/\/ This variable SHADOWS line = new Line(100, 100, 500, 100); \/\/ the line variable above line.setStrokeWidth(10); line.setMousePressedHandler( this::onPressed ); \/\/ Assign event handler } \/\/ Event handler method public void onPressed(Shape shp, double x, double y, int button) { double w = line.getStrokeWidth(); \/\/ Current line thickness if (button == 1) { \/\/ Left mouse pressed line.setStrokeWidth( 2*w ); \/\/ Double thickness } else if (button == 3) { \/\/ Right mouse pressed line.setStrokeWidth( w\/2 ); \/\/ Halve thickness } } \/\/ Create object public static void main(String[] args) { new ClickThick(); } }    When we compile and run the program, the expected window appears ( ). But when we click the line, the console prints an error trace, the top several lines of which is in the shell session below. The main error reported is java.lang.NullPointerException  because \"this.line\" is null (line 18). This error is telling us that the line variable is null so our attempt to get the line thickness using line.getStrokeWidth() failed.   javac -cp doodlepad.jar ClickThick.java java -cp .;doodlepad.jar ClickThick  Exception in thread \"AWT-EventQueue-0\" java.lang.NullPointerException: Cannot invoke \"doodlepad.Line.getStrokeWidth()\" because \"this.line\" is null at ClickThick.onPressed(ClickThick.java:18) at doodlepad.Shape.onMousePressed(Shape.java:1402) at doodlepad.Shape$1.mousePressed(Shape.java:231) at doodlepad.Pad$7.mousePressed(Pad.java:454) ...    ClickThick.java    This might seem odd because it is clear that the line variable is initialized in the constructor, in the statement Line line = new Line(100, 100, 500, 100); Can you spot the error?  If you look closely, you will see that there are two line variables. One is declared in the constructor and the other in the outer scope of the object. In the constructor, only the locally scoped line variable is initialized. The other line variable declared in the scope of the object is never initialized. When the constructor exits, its scope is gone and so is its locally scoped line variable. When the Line object is clicked the onPressed(…) method is invoked. There is no line variable declared in this method and so the variable referenced is the one declared in the object scope, which has the value of null because it was never initialized. This is the source of the error.  The problem is in the constructor. The intention was to assign the object-scoped line variable. Unfortunately, the locally-scoped line variable shadows the object-scoped variable because it has the same name. The constructor initialized the wrote line variable. See for an illustration of the situation. To solve the problem we can eliminate the declaration of the locally-scoped line variable by removing the class name Line , leaving only the initialization. Specifically, line = new Line(100, 100, 500, 100) . With this modification, the program works correctly.   Shadowing line    This example illustrates how variable shadowing works, and how it can lead to trouble if you are not careful about where variables are declared and how they are initialized.    Peering Around a Shadow  Even when an outer-scoped variable is shadowed by a local variable declaration, the shadowed variable can be accessed directly by setting its scope explicitly. Recall that class scoped variables and methods may be accessed using the class name with the dot-operator, think about Math.sqrt(…) . Also, the current object scope is set using the this keyword with the dot-operator. These techniques may be from from inner scopes just as well as from outer scopes. For example, from within the ClickThick constructor in , to ensure that I was accessing the object-scope line variable and not the locallt-scoped line , I could have used this to set the scope explicitly, this.line = new Line(100, 100, 500, 100); . While Java will search progressively breader scopes for an identifier that matches one that you reference, explicit scoping using this or a class name and the dot-operator removes any ambiguity.  One common situation in which explicit object scoping is required is when defining a constructor that initializes a instance variables having the same name as constructor parameters. It is convenient to assign names to constructor parameters that match instance variable names they are intended to initialize. Of course, these parameters shadow the instance variables, so explicit scoping using this is required.  As a simple example, let's assume my program includes a Cat class that tracks the cat's name and age. The constructor is used to initialize these two instance variables. In you will see that the Cat class defines the instance variables name and age , and the constructor takes the two parameters also declared as name and age . For the constructor to perform the assignment correctly, it must explicitly set the scope of the instance variables to the object using this .   Cat.java   \/\/ Cat.java \/\/ Cat class public class Cat { private String name; \/\/ Instance variables private int age; \/\/ Constructor that initializes this instance public Cat(String name, int age) { this.name = name; \/\/ Avoids shadowing this.age = age; } \/\/ ... }    This pattern of using constructor parameters to initialize instance variables is a common one. The intentions are clear and the explicit scoping avoids any ambiguity.   "
+},
+{
+  "id": "listing-cl-click-thick",
+  "level": "2",
+  "url": "section-cl-shadowing.html#listing-cl-click-thick",
+  "type": "Listing",
+  "number": "9.4.1",
+  "title": "",
+  "body": " ClickThick.java   \/\/ ClickThick.java import doodlepad.*; \/\/ Import Doodlepad \/\/ Classes \/\/ Class that illustrates Line thickness public class ClickThick { private Line line; \/\/ Object-scoped variable public ClickThick() { \/\/ Constructor \/\/ Create Line object and assign to variable Line line; \/\/ This variable SHADOWS line = new Line(100, 100, 500, 100); \/\/ the line variable above line.setStrokeWidth(10); line.setMousePressedHandler( this::onPressed ); \/\/ Assign event handler } \/\/ Event handler method public void onPressed(Shape shp, double x, double y, int button) { double w = line.getStrokeWidth(); \/\/ Current line thickness if (button == 1) { \/\/ Left mouse pressed line.setStrokeWidth( 2*w ); \/\/ Double thickness } else if (button == 3) { \/\/ Right mouse pressed line.setStrokeWidth( w\/2 ); \/\/ Halve thickness } } \/\/ Create object public static void main(String[] args) { new ClickThick(); } }   "
+},
+{
+  "id": "figure-cl-click-thick",
+  "level": "2",
+  "url": "section-cl-shadowing.html#figure-cl-click-thick",
+  "type": "Figure",
+  "number": "9.4.2",
+  "title": "",
+  "body": " ClickThick.java   "
+},
+{
+  "id": "figure-cl-shadowing",
+  "level": "2",
+  "url": "section-cl-shadowing.html#figure-cl-shadowing",
+  "type": "Figure",
+  "number": "9.4.3",
+  "title": "",
+  "body": " Shadowing line   "
+},
+{
+  "id": "listing-cl-cat",
+  "level": "2",
+  "url": "section-cl-shadowing.html#listing-cl-cat",
+  "type": "Listing",
+  "number": "9.4.4",
+  "title": "",
+  "body": " Cat.java   \/\/ Cat.java \/\/ Cat class public class Cat { private String name; \/\/ Instance variables private int age; \/\/ Constructor that initializes this instance public Cat(String name, int age) { this.name = name; \/\/ Avoids shadowing this.age = age; } \/\/ ... }   "
+},
+{
+  "id": "section-cl-anonymous-objects",
+  "level": "1",
+  "url": "section-cl-anonymous-objects.html",
+  "type": "Section",
+  "number": "9.5",
+  "title": "Anonymous Objects",
+  "body": " Anonymous Objects   It is not always necessary to assign an object to a variable before using it. This occurs in several situation, including when chaining methods. Consider the following code snippet.   String saying1 = \"Be the change. \"; \/\/ Create String object String saying2 = saying1.trim(); \/\/ Trim whitespace String saying3 = saying2.toUpperCase(); \/\/ Convert to upper case System.out.println( saying3 ); \/\/ Print result   We know that String objects are immutable. Therefore, each time an operation is performed on a String, a new String object is created. The String object count for the above example is 3. Three String objects are created in total.  We could simplify this just a bit by reusing the saying String variable, as we did in the updated code snippet below. But it is important to realize that reusing the String variable does not change the fact that three String objects are created in the process. Our String object count remains 3.   String saying = \"Be the change. \"; \/\/ Create String object saying = saying.trim(); \/\/ Trim whitespace saying = saying.toUpperCase(); \/\/ Convert to upper case System.out.println( saying ); \/\/ Print result   Because each statement returns a new String object, there is no reason to assign results to the saying String variable at all, other than for clarity. If our ultimate goal is to produce the printed output then why use the saying String variable? In fact, we could chain these statement into one complex statement and pass as a parameter directly to the println(…) method. The JShell session that follows demonstrates this fact.   \/\/ Create String object, process, and print System.out.println( \"Be the change. \".trim().toUpperCase() );    jshell> System.out.println( \"Be the change. \".trim().toUpperCase() );  BE THE CHANGE.  jshell>   What is our String count in the above single line print statement? Of course, the answer remains 3. Even though we did not use intermediate variables, the process is the same. A String object was created, trimmed, converted to upper-case, and printed.  In situations like the above, when Java creates objects but does not assign them to a reference variable, we refer to the objects as anonymous because they are never given a variable name. This does not mean that the objects were not created. In fact, they were created, but they had a fleeting existence as they were passed down the chain of methods.   "
+},
+{
+  "id": "p-748",
+  "level": "2",
+  "url": "section-cl-anonymous-objects.html#p-748",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "anonymous "
+},
+{
+  "id": "section-cl-multi-file-programs",
+  "level": "1",
+  "url": "section-cl-multi-file-programs.html",
+  "type": "Section",
+  "number": "9.6",
+  "title": "Multi-File Programs",
+  "body": " Multi-File Programs   Because Java limits a single Java file to one public class definition, it follows that the source code of a program involving two or more custom classes must be made up of multiple Java source code files. Recall that there is no limit to the number of classes defined within a single source code file. But only one of those classes may be public and its name must match the file name. Any number of helper classes may be defined, which are used internally by the public class in the file.    Compiling Multi-file Programs  A program involving multiple source code files may be compiled by simply listing all source files after the javac command. The Java compiler identifies where to find each class by the name of the file. For example, if we have defined two custom classes in our program, Class1.java and Class2.java , then all must be compiled together using a shell command like the following.   javac Class1.java Class2.java   Simple list all source code file names after the javac command. If additional classes are defined in a JAR file, like doodlepad.jar , then add the standard classpath option to the command.   javac -cp doodlepad.jar Class1.java Class2.java   The compiler searches and finds all classes that it needs to produce compiled class files. The compiler will complain if it cannot find a class. Note that you will see a compiled .class file produced by the compiler for every class that you define, even if those classes are not public.    The Driver Class  In which class should the overall main(…) method be placed — the one that initializes all classes and starts running your program? It may not always be obvious. After all, for our individual class definitions to be reusable, it does not make a lot of sense to use a class's main(…) method to start a larger application. Furthermore, in we used the main(…) method to run tests on our custom class.  One approach is to author a separate class that defines only this top-level main(…) method that starts the larger program. In a sense, this main(…) method drives the rest of your program, hence the term Driver Class . In fact, you may define several Driver Classes in a program, each with a different purpose, and invoke each separately by sepcifying the name of the Driver Class of interest when running your program using the java command.  Let's say that we want to build a grid of multiple LED objects for a virtual panel of indicator lights. The panel consists of two rows of four lights, one of each color in each row. We can use our previous LED class and the following Driver class to build our virtual panel.  The LEDPanel class in implements only the main(…) method which sets up and runs the program. First in the main(…) method a Pad object is created directly with a title and custom dimensions. Rather than declare eight LED variables, and array of LED objects named leds is declared. Each element of the leds array is assigned to a new LED object with a set color. Note that we are using an LED class with the updated constructor overload that takes an additional color parameter used to initialize the LED on color.   LEDPanel.java   \/\/ LEDPanel.java import doodlepad.*; \/\/ Driver class public class LEDPanel { public static void main(String[] args) { \/\/ Create a Pad object with title and custom dimensions Pad panel = new Pad(\"LED Panel\", 550, 350); \/\/ Store LED objects in a 2D array matching layout LED[][] leds = new LED[2][4]; \/\/ Create and position all LED objects on panel leds[0][0] = new LED(100, 100, LEDColor.RED); leds[0][1] = new LED(200, 100, LEDColor.GREEN); leds[0][2] = new LED(300, 100, LEDColor.BLUE); leds[0][3] = new LED(400, 100, LEDColor.YELLOW); leds[1][0] = new LED(100, 200, LEDColor.RED); leds[1][1] = new LED(200, 200, LEDColor.GREEN); leds[1][2] = new LED(300, 200, LEDColor.BLUE); leds[1][3] = new LED(400, 200, LEDColor.YELLOW); \/\/ Turn on all LED objects for (int r=0; r<leds.length; r++) { for (int c=0; c<leds[r].length; c++) { leds[r][c].turnOn(); } } } }    When compiling, all classes are specified in a sequence following the javac command. Only the Driver Class is named when running the program with java because the driver class contains the main(…) method to be used to start the program.   \/\/ All Java files are compiled together javac -cp .;doodlepad.jar LEDPanel.java LED.java \/\/ Only the Driver Class name is used when run java -cp .;doodlepad.jar LEDPanel    LEDPanel.java     "
+},
+{
+  "id": "p-754",
+  "level": "2",
+  "url": "section-cl-multi-file-programs.html#p-754",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Driver Class "
+},
+{
+  "id": "listing-cl-led-panel",
+  "level": "2",
+  "url": "section-cl-multi-file-programs.html#listing-cl-led-panel",
+  "type": "Listing",
+  "number": "9.6.1",
+  "title": "",
+  "body": " LEDPanel.java   \/\/ LEDPanel.java import doodlepad.*; \/\/ Driver class public class LEDPanel { public static void main(String[] args) { \/\/ Create a Pad object with title and custom dimensions Pad panel = new Pad(\"LED Panel\", 550, 350); \/\/ Store LED objects in a 2D array matching layout LED[][] leds = new LED[2][4]; \/\/ Create and position all LED objects on panel leds[0][0] = new LED(100, 100, LEDColor.RED); leds[0][1] = new LED(200, 100, LEDColor.GREEN); leds[0][2] = new LED(300, 100, LEDColor.BLUE); leds[0][3] = new LED(400, 100, LEDColor.YELLOW); leds[1][0] = new LED(100, 200, LEDColor.RED); leds[1][1] = new LED(200, 200, LEDColor.GREEN); leds[1][2] = new LED(300, 200, LEDColor.BLUE); leds[1][3] = new LED(400, 200, LEDColor.YELLOW); \/\/ Turn on all LED objects for (int r=0; r<leds.length; r++) { for (int c=0; c<leds[r].length; c++) { leds[r][c].turnOn(); } } } }   "
+},
+{
+  "id": "figure-cl-led-panel",
+  "level": "2",
+  "url": "section-cl-multi-file-programs.html#figure-cl-led-panel",
+  "type": "Figure",
+  "number": "9.6.2",
+  "title": "",
+  "body": " LEDPanel.java   "
+},
+{
+  "id": "section-cl-packages",
+  "level": "1",
+  "url": "section-cl-packages.html",
   "type": "Section",
   "number": "9.7",
-  "title": "Multiple File Programs",
-  "body": "Multiple File Programs  Classes defined in multiple files.  Compiling and running programs spread over multiple files.  Multiple classes in the same file  Packages and file structure  A class's main() method is invoked automatically when the class is run.  jar files - just a zip archive of .class files  "
+  "title": "Packages",
+  "body": " Packages  As our Java programs grow in size, many more classes are defined. At some point we end up with a sea of classes that need some organizational structure to manage. This is where packages can help us.   Packages  A Java package is a bundle of related classes and other types that are grouped under a single name. The package name works like a scope in the sense that types in a package may be accessed using the package name and dot-notation. In large programs there are several good reasons to organize types into packages. These include:   Types in a single package suggest they are related. Packaging types avoids name conflicts with types having the same name in other packages because a type name can be disambiguated using the package name as its scope. Package have scoping rules that allow members of a single package unrestricted access to other members of the package, while restricting access to package members from outside the package. This is called package scoping with private visibility, often shortened to package-private .   To both define a package and place a class into the package, simply add a package statement as the first line in any file naming the package. For example,   package doodlepad;   If you refer to the DoodlePad source code repository, you will find this line at the top of every source code file. This puts all classes into the doodlepad package, and is the reason why we add a line like import doodlepad.*; to the top of our graphics programs. This import statement imports all types from the doodlepad package into your program. The package name is doodlepad and the * is a wildcard matching all types in the package. You are free to create your own packages using a similar syntax.  Using the doodlepad package name helps to disambiguate classes defined in that package from classes having the same name in other packages. For example, the DoodlePad Rectangle class has the same name as Java's Rectangle defined in its AWT package. These classes don't conflict because their fully-qualified names are different. Namely, the DoodlePad class has a fully-qualified name of doodlepad.Rectangle and the Java AWT class has the fully-qualified name java.awt.Rectangle .    The Default Package  Even if you don't specify a package name for your program, Java puts your classes into a package. The default package is the one named \"\" , in other words, the default package has no name. All the classes that we have created thus far have no package statement, therefore have been placed into the default package automatically.    Subpackages and Package Organization  It is a best practice to organize your source code files into a subfolder structure that matches the names and structure of your package organization scheme. Package names are usually chosen to be lowercase, in order to distinguish them from class names, which usually start with a capital letter.  We often see these best practices at play when working with commercial software. Companies that produce Java packages tend to use the reversed components of their Internet domain name as their package structure. This helps to make their packages globally unique because only they own their domain name. If you started a consulting company named \"Java Maniac\" and purchased the domain name javamaniac.com , you might organize your Java classes in a com.javamaniac package scheme, and arrange your source code in a \"com\/javamaniac\" subfolder structure. Note how this specifies both the folder named \"com\" and a further subfolder named \"javamaniac\" to contain your types. This avoids the name conflict that would occur with types from the Java Charmer company with the domain name \"javacharmer.com.\" They organize their classes in the \"com\/javacharmer\" subfolder structure. When you add the statement import com.javamaniac.*; to your program, the Java compiler will look in \"com\/javamaniac\" to find these compiled files and check that the way you use them match their definitions.  Let's consider another example. Let's assume you have defined two classes named \"Hammer\" and \"Drill\" and declared them to be grouped in a package named \"toolbox.\" You could define the two classes as in and , and place them in a subfolder of your project named \"toolbox.\" Let's assume that your main driver class is named \"Construction\" which is added to the folder above your \"toolbox\" subfolder (See ).   toolbox\/Hammer.java   \/\/ Hammer.java package toolbox; public class Hammer { \/\/ Hammer fields private String sound; \/\/ Hammer Constructor public Hammer() { this.sound = \"Bang!\"; } \/\/ String representation of a Hammer public String toString() { return this.sound; } }     toolbox\/Drill.java   \/\/ Drill.java package toolbox; public class Drill { \/\/ Drill fields private String sound; \/\/ Drill Constructor public Drill() { this.sound = \"Bzzz!\"; } \/\/ String representation of a Drill public String toString() { return this.sound; } }     Construction.java   \/\/ Construction.java public class Construction { public static void main(String[] args) { \/\/ Get tools from the toolbox toolbox.Hammer tool1 = new toolbox.Hammer(); toolbox.Drill tool2 = new toolbox.Drill(); \/\/ Sounds of the construction project. System.out.println( tool1 + \" \" + tool2 );; } }    To compile this multi-file program we can use commands like those in the following shell session. Note how we are not required to specify all files in the \"toolbox\" subfolder by name. We can make use of the wildcard character ( * ) as in toolbox\/*.java , which will compile all files in the \"toolbox\" subfolder with any name that has a .java extension. As expected, the output from running the Construction driver class is the sounds of all tools used on the construction project.   javac Construction.java toolbox\/*.java java Construction  Bang! Bzzz!   Because all of our toolbox classes are in the \"toolbox\" package, we accessed them using the package name. For example, see the toolbox. prefix in the following two lines from .   toolbox.Hammer tool1 = new toolbox.Hammer(); toolbox.Drill tool2 = new toolbox.Drill();   A more convenient option, especially when we intend to use most or all classes from a package, is to use the import statement and a the wildcard character ( * ) to bring all the type names into the current package, which we have seen many times when importing DoodlePad classes with import doodlepad.* . is an alternative implementation if the Construction driver class that imports all tool classes from the \"toolbox\" package at the top of the program file. This allows us to avoid the repeated explicit scoping of classes to the toolbox package. After an import , the classes are now available locally.   Construction.java   \/\/ Construction.java import toolbox.*; \/\/ Import all tools public class Construction { public static void main(String[] args) { \/\/ Get tools from the toolbox Hammer tool1 = new Hammer(); \/\/ No package needed Drill tool2 = new Drill(); \/\/ Sounds of the construction project. System.out.println( tool1 + \" \" + tool2 );; } }    Packages are extremely convenient for organizing the classes and other types in your larger projects and for avoiding name conflicts. Some developers use packages as a matter of course, and some programming editors will create them for you. We use packages only for larger examples. Otherwise, we rely on the default package in order to make our examples more readable and less cluttered.    Core Library Packages  It is no surprise that the Java core library organizes its types into packages. Most core library types are located in the java. top level package, but the core library organization changes on occasion and depends on your version of Java. It is best to refer to the Java API documentation for your to double-check.  Under the java. package in the core library, types are further divided into subpackages. For example, we've used many classes that are found in the java.util. subpackage, such as java.util.Random and java.util.Scanner . When we start working with files we'll use several classes in the java.io. subpackage. Its worth noting that all types in the java.lang. subpackage are imported automatically. That is were we find classes like String, and why we do not need to import java.lang.String in order to use the class.    Package Scope  It should be obvious by now that packages (and subpackages) form a space of names that are grouped together ( namespace ). A Java scope provides this namespace for us. We now have the complete set of Java scope definitions within which names can exist. These also let us know when we may have to use explicit scoping to reach a name defined in a different scope, or how to address a type in a different package when importing.   package scope (limited to a Java package).  class scope (accessible throughout a class), and  object (instance) scope (limited to a specific object),  method scope (limited to a specific method),  block scope (limited to a specific block of code),   Recall the Most Narrow Scope Feasible principle. We have learned how packages help us avoid name conflicts by grouping types in more narrow namespaces provided by a package scope.   "
 },
 {
-  "id": "section-83",
+  "id": "p-758",
+  "level": "2",
+  "url": "section-cl-packages.html#p-758",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "package "
+},
+{
+  "id": "listing-cl-hammer",
+  "level": "2",
+  "url": "section-cl-packages.html#listing-cl-hammer",
+  "type": "Listing",
+  "number": "9.7.1",
+  "title": "",
+  "body": " toolbox\/Hammer.java   \/\/ Hammer.java package toolbox; public class Hammer { \/\/ Hammer fields private String sound; \/\/ Hammer Constructor public Hammer() { this.sound = \"Bang!\"; } \/\/ String representation of a Hammer public String toString() { return this.sound; } }   "
+},
+{
+  "id": "listing-cl-drill",
+  "level": "2",
+  "url": "section-cl-packages.html#listing-cl-drill",
+  "type": "Listing",
+  "number": "9.7.2",
+  "title": "",
+  "body": " toolbox\/Drill.java   \/\/ Drill.java package toolbox; public class Drill { \/\/ Drill fields private String sound; \/\/ Drill Constructor public Drill() { this.sound = \"Bzzz!\"; } \/\/ String representation of a Drill public String toString() { return this.sound; } }   "
+},
+{
+  "id": "listing-cl-construction1",
+  "level": "2",
+  "url": "section-cl-packages.html#listing-cl-construction1",
+  "type": "Listing",
+  "number": "9.7.3",
+  "title": "",
+  "body": " Construction.java   \/\/ Construction.java public class Construction { public static void main(String[] args) { \/\/ Get tools from the toolbox toolbox.Hammer tool1 = new toolbox.Hammer(); toolbox.Drill tool2 = new toolbox.Drill(); \/\/ Sounds of the construction project. System.out.println( tool1 + \" \" + tool2 );; } }   "
+},
+{
+  "id": "listing-cl-construction2",
+  "level": "2",
+  "url": "section-cl-packages.html#listing-cl-construction2",
+  "type": "Listing",
+  "number": "9.7.4",
+  "title": "",
+  "body": " Construction.java   \/\/ Construction.java import toolbox.*; \/\/ Import all tools public class Construction { public static void main(String[] args) { \/\/ Get tools from the toolbox Hammer tool1 = new Hammer(); \/\/ No package needed Drill tool2 = new Drill(); \/\/ Sounds of the construction project. System.out.println( tool1 + \" \" + tool2 );; } }   "
+},
+{
+  "id": "p-772",
+  "level": "2",
+  "url": "section-cl-packages.html#p-772",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "namespace "
+},
+{
+  "id": "section-cl-concepts",
   "level": "1",
-  "url": "section-83.html",
+  "url": "section-cl-concepts.html",
   "type": "Section",
   "number": "9.8",
-  "title": "Driver Programs",
-  "body": "Driver Programs  Typically a top-level class with static methods that create and orchestrate other objects. May only have the static main() method.  "
+  "title": "Key Concepts",
+  "body": " Key Concepts   The driver class (aka driver program) is the class in a larger program containing the public static void main(String[] args) method designed to start the program.  A scope is an enclosing context in a program where variables and expressions are associated.  A member is a term used for all variables and methods defined within the scope of a class or object.  When using the static keyword to declare a variable or method, that member is defined in the class scope . Absense of static in a variable or method declaration means that member belongs to the object scope .  The scope of a method or instance variable name may be specified by preceding it with the name of the class or object and connected by a dot. This is called dot-notation .  It may be necessary to specify the scope of a static member with the class name in which it was defined in order to access the proper member.  Regardless of the number of object instances created, there is only one class and therefore one set of static class members.  Every object instantiated using a constructor will get its own members declared without using the static keyword.  A custom class constructor defines the code executed when the new keyword is used with a constructor to create a new instance of the class.  A constructor must have the same name as the class, have no return type, not even void, and no return statement.  The this keyword always resolves to a reference to the current object.  You may invoke one constructor from another constructor in the same class using the this keyword followed by the constructor argument list.  The visibility of methods and instance variables encapsulated by and object are controlled using certain keywords, including public and private .  The combination of a method name, parameters and parameter types are referred to as a method's signature .  Multiple methods having the same name may be defined within a class, provided their signatures are distinct. This is called overloading a method.  Instance variables and methods declared with private visibility are accessible only from code that is within the scope of an object.  A common Java best practice is to declare private all object instance variables, and to control access to these variables using methods.  Methods that control access to private instance variables are called accessor methods or \"getters\".  Accessor methods often are named using camel case, and formed by adding get to the front of the instance variable name being accessed. For example getAge() .  Methods that modify private instance variables are called mutator methods or \"setters\".  Mutator methods often are named using camel case, and formed by adding set to the front of the instance variable name beginning changed. For example setAge(double age) .  Objects should be designed to be self-governing . That is, an object should contain all the code and internal variables necessary to manage its instance variables. This is a core concept of object-oriented programming called encapsulation .  In addition to class scope and object scope, block scope is an enclosing context for a code block, such as when defining a code block that makes up an if-statement or for-statement.  Scopes are nested. Block scopes are nested within method scopes, and method scopes are nested within an object or class scope.  Shadowing occurs when variables defined in an inner scope have names identical to variables defined in an outer scope.  To access a shadowed variable, it is necessary to set the scope of the variable explicitly using dot-notation and the this keyword or the class name.  When choosing a scope to declare a variable, always use the most narrow scope feasible. This avoids program bugs that emerge when a variable value set by one method has an unexpected impact on the execution of another method.  The scope within which a variable is declared governs its lifetime. For example, when declaring a variable within a method, it comes into existence upon declaration and goes out of existence when the method scope exits. When declaring an instance variable in an object, it comes into existence when the object is instantiated and goes out of existence when the object is garbage collected.  Anonymous objects are objects created temporarily but never assigned to a variable. They occur when chaining methods, or when invoking a constructor to set a parameter value as part of calling a method.  The toString() method of an object is a special method used to return a String representation of an object. toString() is invoked by Java's print methods such as print(…) and println(…) , and it is the String representation that is printed to the terminal.   "
 },
 {
-  "id": "section-84",
+  "id": "section-cl-exercises",
   "level": "1",
-  "url": "section-84.html",
+  "url": "section-cl-exercises.html",
   "type": "Section",
   "number": "9.9",
-  "title": "Testing",
-  "body": "Testing  Using the main() method for testing  "
-},
-{
-  "id": "section-85",
-  "level": "1",
-  "url": "section-85.html",
-  "type": "Section",
-  "number": "9.10",
-  "title": "Review of Scope",
-  "body": "Review of Scope  block, method, object, class  One more, package  Scope sets variable lifetime. Be careful to define variables in the appropriate scope  The \"narrowest scope feasible\" principle.  "
+  "title": "Chapter Exercises",
+  "body": " Chapter Exercises   "
 },
 {
   "id": "section-86",
   "level": "1",
   "url": "section-86.html",
   "type": "Section",
-  "number": "9.11",
-  "title": "Shadowing",
-  "body": "Shadowing  We get used to declaring and initializing variables. This often causes shadowing errors.  "
-},
-{
-  "id": "section-87",
-  "level": "1",
-  "url": "section-87.html",
-  "type": "Section",
-  "number": "9.12",
-  "title": "Anonymous Objects",
-  "body": "Anonymous Objects  Created, used, and lost  "
-},
-{
-  "id": "section-88",
-  "level": "1",
-  "url": "section-88.html",
-  "type": "Section",
-  "number": "9.13",
-  "title": "Key Concepts",
-  "body": "Key Concepts   The Java Standard Library provides a large number of prewritten classes.  Other prewritten classes may be available from external libraries, often stored in JAR files.  JAR is an acronym for Java Archive.  The driver class (aka driver program) is the class in a larger program that contains the public static void main(String[] args) method. This is where the program begins execution.  An object member is a term used for all class or object variables and methods.  When using the static keyword to modify a variable or method declaration, that member belongs to the class.  A scope is an enclosing context in a program where variables and expressions are associated. Two examples are class scope and object scope.  The scope of a method or instance variable may be specified by preceding it with the name of the class or object followed by a dot. This is called dot-notation.  It may be necessary to specify the scope of a static member with the class name in which it was defined in order to access it.  Regardless of the number of object instances created, there is only one class and therefore one set of static class members.  Every object instantiated using a class will get its own members declared without using the static keyword.  A custom class constructor defines the code executed when the new keyword is used with a constructor to create a new instance of the class.  A constructor must have the same name as the class, have no return type, not even void, and no return statement.  The this keyword always resolves to a reference to the current object.  You may invoke one constructor from another constructor in the same class using the this keyword followed by the constructor argument list.  The visibility of methods and instance variables encapsulated by and object are controlled using certain keywords, including public and private.  The combination of a method name, parameters and parameter types are referred to as a method's signature.  Multiple methods having the same name may be defined within a class, provided their signatures are distinct. This situation is called overloading a method.  Instance variables and methods declared as private are accessible only from within the scope of an object.  A common Java best practice is to declare private all object instance variables, and to control access using methods.  Methods that access private instance variables are called accessor methods, or \"getters\".  Accessor methods often are named using camel case, beginning with the word get followed by the name of the instance variable being accessed.  Methods that modify private instance variables are called mutator methods, or \"setters\".  Mutator methods often are named using camel case, beginning with the word set followed by the name of the instance variable being modified.  Objects should be designed to be self-governing. That is, an object should contain all the code and internal variables necessary to manage its instance variables. This is a core concept of object-oriented programming called encapsulation.  In addition to class scope and object scope, block scope is an enclosing context for a code block, such as when defining a code block that makes up an if-statement or for-statement.  Scopes are nested. Block scopes are nested within method scopes, and method scopes are nested within an object or class scope.  Shadowing occurs when variables defined in an inner scope have names identical to variables defined in an outer scope.  To access a shadowed variable, it is necessary to set the scope of the variable explicitly using dot-notation and the this keyword or the Class name.  When choosing a scope to declare a variable, always use the most narrow scope feasible. This avoids program bugs that emerge when a variable value set by one method instance has an unexpected impact on the execution of another method instance.  The scope within which a variable is declared governs its lifetime. For example, when declaring a variable within a method, it comes into existence upon declaration and goes out of existence when the method scope exits. When declaring an instance variable in an object, it comes in to existence when the object is instantiated and goes out of existence when the object is garbage collected.  Anonymous objects are objects created temporarily but never assigned to a variable. They occur when chaining methods, or when invoking a constructor to set a parameter value as part of calling a method.  The toString() method of an object is a special method used to return a String representation of an object. toString() is invoked by Java's print methods and the String representation is what is printed to the terminal.   "
-},
-{
-  "id": "exercises-9",
-  "level": "1",
-  "url": "exercises-9.html",
-  "type": "Exercises",
-  "number": "9.14",
-  "title": "Exercises",
-  "body": "Exercises  "
-},
-{
-  "id": "section-89",
-  "level": "1",
-  "url": "section-89.html",
-  "type": "Section",
   "number": "10.1",
   "title": "Setting Up Inheritance",
   "body": "Setting Up Inheritance  extends and super keywords keyword  base class, derived class  Prevent subclassing using the final keyword  "
 },
 {
-  "id": "p-727",
+  "id": "p-777",
   "level": "2",
-  "url": "section-89.html#p-727",
+  "url": "section-86.html#p-777",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "final "
 },
 {
-  "id": "section-90",
+  "id": "section-87",
   "level": "1",
-  "url": "section-90.html",
+  "url": "section-87.html",
   "type": "Section",
   "number": "10.2",
   "title": "Benefits of Inheritance",
   "body": "Benefits of Inheritance  Subclassing automatically shares all functionality in base class. Derived class has a head start.  Modifications and updates apply to all derived classes  Reduction of code duplication  Reduction of excessive code maintenance  "
 },
 {
-  "id": "section-91",
+  "id": "section-88",
   "level": "1",
-  "url": "section-91.html",
+  "url": "section-88.html",
   "type": "Section",
   "number": "10.3",
   "title": "Generalization and Specialization",
   "body": "Generalization and Specialization  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  "
 },
 {
-  "id": "section-92",
+  "id": "section-89",
   "level": "1",
-  "url": "section-92.html",
+  "url": "section-89.html",
   "type": "Section",
   "number": "10.4",
   "title": "Subtype Polymorphism and Dynamic Binding",
   "body": "Subtype Polymorphism and Dynamic Binding  Assign an object of type derived class to a variable of type base class  Cast an object of type base class to a variable of type derived class  Dynamic binding  https:\/\/software.rajivprab.com\/2019\/08\/14\/nuances-of-overloading-and-overriding-in-java\/ Single Dispatch, Hidden Override, Exposed Override, Ambiguous Parameter, Multiple Inheritance - Interfaces, Multiple Inheritance - Class and Interface, Transitive Override, Private Override, Static Overrides, Static Linking  Using the @Override annotation on all override methods will help greatly in preventing regressions, by producing compile errors as soon as any base methods have their visibility changed.  "
 },
 {
-  "id": "p-740",
+  "id": "p-790",
   "level": "2",
-  "url": "section-92.html#p-740",
+  "url": "section-89.html#p-790",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "@Override "
 },
 {
-  "id": "section-93",
+  "id": "section-90",
   "level": "1",
-  "url": "section-93.html",
+  "url": "section-90.html",
   "type": "Section",
   "number": "10.5",
   "title": "protected Access",
-  "body": "protected Access  "
+  "body": "protected Access   summarizes the levels of access that is available from ...  https:\/\/docs.oracle.com\/javase\/tutorial\/java\/javaOO\/accesscontrol.html   Access Levels    Modifier  Class  Package  Subclass  World    public  Yes  Yes  Yes  Yes    protected  Yes  Yes  Yes  No    no modifier  Yes  Yes  No  No    private  Yes  No  No  No     "
 },
 {
-  "id": "section-94",
+  "id": "table-cl-access-levels",
+  "level": "2",
+  "url": "section-90.html#table-cl-access-levels",
+  "type": "Table",
+  "number": "10.5.1",
+  "title": "Access Levels",
+  "body": " Access Levels    Modifier  Class  Package  Subclass  World    public  Yes  Yes  Yes  Yes    protected  Yes  Yes  Yes  No    no modifier  Yes  Yes  No  No    private  Yes  No  No  No    "
+},
+{
+  "id": "section-91",
   "level": "1",
-  "url": "section-94.html",
+  "url": "section-91.html",
   "type": "Section",
   "number": "10.6",
   "title": "The Object Class",
   "body": "The Object Class  All Java classes inherit Object, even when there is no extends  The inherited toString() method and when to override  The inherited equals() and when to override  "
 },
 {
-  "id": "section-95",
+  "id": "section-92",
   "level": "1",
-  "url": "section-95.html",
+  "url": "section-92.html",
   "type": "Section",
   "number": "10.7",
   "title": "Testing for a specific Class",
   "body": "Testing for a specific Class  instanceof operator  "
 },
 {
-  "id": "section-96",
+  "id": "section-93",
   "level": "1",
-  "url": "section-96.html",
+  "url": "section-93.html",
   "type": "Section",
   "number": "10.8",
   "title": "Abstract Classes and Methods",
   "body": "Abstract Classes and Methods  Force a derived class to implement a method by declaring it abstract in the base class  A class with an abstract method must also be declared abstract  "
 },
 {
-  "id": "p-745",
+  "id": "p-797",
   "level": "2",
-  "url": "section-96.html#p-745",
+  "url": "section-93.html#p-797",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3151,576 +3457,576 @@ var ptx_lunr_docs = [
   "body": " PushButton2.java   \/\/ PushButton2.java import doodlepad.*; public class PushButton2 extends RoundRect { private boolean isOn; \/\/ Button state public PushButton2(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); \/\/ Initialize the button this.setFillColor(200); \/\/ Starts off isOn = false; } @Override public void onMousePressed(double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill color based on state if (isOn) { this.setFillColor(0, 255, 0); } else { this.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton2 PushButton2 myPushButton = new PushButton2(100, 100, 75, 50); } }   "
 },
 {
-  "id": "table-49",
+  "id": "table-51",
   "level": "2",
-  "url": "section-in-doodlepad.html#table-49",
+  "url": "section-in-doodlepad.html#table-51",
   "type": "Table",
   "number": "10.9.2",
   "title": "Overridable Shape Event Methods",
   "body": " Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.    "
 },
 {
-  "id": "table-50",
+  "id": "table-52",
   "level": "2",
-  "url": "section-in-doodlepad.html#table-50",
+  "url": "section-in-doodlepad.html#table-52",
   "type": "Table",
   "number": "10.9.3",
   "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",
   "body": " Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.    "
 },
 {
-  "id": "table-51",
+  "id": "table-53",
   "level": "2",
-  "url": "section-in-doodlepad.html#table-51",
+  "url": "section-in-doodlepad.html#table-53",
   "type": "Table",
   "number": "10.9.4",
   "title": "Overridable Pad Socket Event Methods",
   "body": " Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share    "
 },
 {
-  "id": "section-98",
+  "id": "section-95",
   "level": "1",
-  "url": "section-98.html",
+  "url": "section-95.html",
   "type": "Section",
   "number": "10.10",
   "title": "Key Concepts",
   "body": "Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding.  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.   "
 },
 {
-  "id": "exercises-10",
+  "id": "exercises-9",
   "level": "1",
-  "url": "exercises-10.html",
+  "url": "exercises-9.html",
   "type": "Exercises",
   "number": "10.11",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-99",
+  "id": "section-96",
   "level": "1",
-  "url": "section-99.html",
+  "url": "section-96.html",
   "type": "Section",
   "number": "11.1",
   "title": "Defining and Implementing Interfaces",
   "body": "Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
 },
 {
-  "id": "p-752",
+  "id": "p-804",
   "level": "2",
-  "url": "section-99.html#p-752",
+  "url": "section-96.html#p-804",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "class interface "
 },
 {
-  "id": "p-754",
+  "id": "p-806",
   "level": "2",
-  "url": "section-99.html#p-754",
+  "url": "section-96.html#p-806",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "extends implements "
 },
 {
-  "id": "section-100",
+  "id": "section-97",
   "level": "1",
-  "url": "section-100.html",
+  "url": "section-97.html",
   "type": "Section",
   "number": "11.2",
   "title": "Interfaces and Polymorphism",
   "body": "Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
 },
 {
-  "id": "section-101",
+  "id": "section-98",
   "level": "1",
-  "url": "section-101.html",
+  "url": "section-98.html",
   "type": "Section",
   "number": "11.3",
   "title": "Comparable&lt;T&gt; Interface",
   "body": "Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
 },
 {
-  "id": "section-102",
+  "id": "section-99",
   "level": "1",
-  "url": "section-102.html",
+  "url": "section-99.html",
   "type": "Section",
   "number": "11.4",
   "title": "Iterator&lt;T&gt; Interface",
   "body": "Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
 },
 {
-  "id": "section-103",
+  "id": "section-100",
   "level": "1",
-  "url": "section-103.html",
+  "url": "section-100.html",
   "type": "Section",
   "number": "11.5",
   "title": "Benefits of an Interface",
   "body": "Benefits of an Interface  An ArrayList holding objects of multiple types  "
 },
 {
-  "id": "section-104",
+  "id": "section-101",
   "level": "1",
-  "url": "section-104.html",
+  "url": "section-101.html",
   "type": "Section",
   "number": "11.6",
   "title": "Defining Your Own Interfaces",
   "body": "Defining Your Own Interfaces   "
 },
 {
-  "id": "section-105",
+  "id": "section-102",
   "level": "1",
-  "url": "section-105.html",
+  "url": "section-102.html",
   "type": "Section",
   "number": "11.7",
   "title": "Interfaces and Polymorphism",
   "body": "Interfaces and Polymorphism   "
 },
 {
-  "id": "section-106",
+  "id": "section-103",
   "level": "1",
-  "url": "section-106.html",
+  "url": "section-103.html",
   "type": "Section",
   "number": "11.8",
   "title": "Key Concepts",
   "body": "Key Concepts   An interface is a kind of contract to be fulfilled by a class definition.  An interface is made up of one or more method signatures.  A class implements an interface when it adds the implements keyword and name of the interface to the start of the class.  When a class implements an interface it is obligated to implement all methods signatures defined in that interface.  The compiler enforces the interface implementation contract. If the contract is not fulfilled completely, the compiler will fail with an error.  Interfaces may be defined using the angle brackets of generic notation which allows methods signatures to be parameterized by type.  By implementing the java.lang.Comparable Interface, objects may be sorted by Arrays.sort() or Collections.sort()  By implementing the java.util.Iterator Interface, objects may be iterated using the enhanced-for statement.  Polymorphism implies a single idea may have many forms. There are multiple forms of polymorphism in Java.  Polymorphic methods are implemented when multiple methods of the same name have distinct signatures  Polymorphic methods also appear when subclasses override superclass methods and dynamic binding.  Polymorphic reference variables occur when a variable of type superclass may reference a value of type subclass.  Polymorphic reference variables lso occur when a variable of type interface may reference any object that implements the interface.  As the number of objects in a program grows, so does its complexity. It is essential to design your program before starting to code.  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)   "
 },
 {
-  "id": "exercises-11",
+  "id": "exercises-10",
   "level": "1",
-  "url": "exercises-11.html",
+  "url": "exercises-10.html",
   "type": "Exercises",
   "number": "11.9",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-107",
+  "id": "section-104",
   "level": "1",
-  "url": "section-107.html",
+  "url": "section-104.html",
   "type": "Section",
   "number": "12.1",
   "title": "Software Development Life Cycled (SDLC)",
   "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
 },
 {
-  "id": "section-108",
+  "id": "section-105",
   "level": "1",
-  "url": "section-108.html",
+  "url": "section-105.html",
   "type": "Section",
   "number": "12.2",
   "title": "Encapsulation and Abstraction",
   "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
 },
 {
-  "id": "section-109",
+  "id": "section-106",
   "level": "1",
-  "url": "section-109.html",
+  "url": "section-106.html",
   "type": "Section",
   "number": "12.3",
   "title": "Object Relationships",
   "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
 },
 {
-  "id": "section-110",
+  "id": "section-107",
   "level": "1",
-  "url": "section-110.html",
+  "url": "section-107.html",
   "type": "Section",
   "number": "12.4",
   "title": "When to use Inheritance",
   "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
 },
 {
-  "id": "section-111",
+  "id": "section-108",
   "level": "1",
-  "url": "section-111.html",
+  "url": "section-108.html",
   "type": "Section",
   "number": "12.5",
   "title": "When to use Interfaces",
   "body": "When to use Interfaces  Common public interface  "
 },
 {
-  "id": "section-112",
+  "id": "section-109",
   "level": "1",
-  "url": "section-112.html",
+  "url": "section-109.html",
   "type": "Section",
   "number": "12.6",
   "title": "Cohesion and Coupling",
   "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
 },
 {
-  "id": "section-113",
+  "id": "section-110",
   "level": "1",
-  "url": "section-113.html",
+  "url": "section-110.html",
   "type": "Section",
   "number": "12.7",
   "title": "Unified Modeling Language (UML)",
   "body": "Unified Modeling Language (UML)  "
 },
 {
-  "id": "section-114",
+  "id": "section-111",
   "level": "1",
-  "url": "section-114.html",
+  "url": "section-111.html",
   "type": "Section",
   "number": "12.8",
   "title": "Class Diagram",
   "body": "Class Diagram  A structure diagram  "
 },
 {
-  "id": "section-115",
+  "id": "section-112",
   "level": "1",
-  "url": "section-115.html",
+  "url": "section-112.html",
   "type": "Section",
   "number": "12.9",
   "title": "Object Diagram",
   "body": "Object Diagram  A structure diagram  "
 },
 {
-  "id": "section-116",
+  "id": "section-113",
   "level": "1",
-  "url": "section-116.html",
+  "url": "section-113.html",
   "type": "Section",
   "number": "12.10",
   "title": "Activity Diagrams",
   "body": "Activity Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-117",
+  "id": "section-114",
   "level": "1",
-  "url": "section-117.html",
+  "url": "section-114.html",
   "type": "Section",
   "number": "12.11",
   "title": "State Machine Diagrams",
   "body": "State Machine Diagrams  A behavior diagram  "
 },
 {
-  "id": "section-118",
+  "id": "section-115",
   "level": "1",
-  "url": "section-118.html",
+  "url": "section-115.html",
   "type": "Section",
   "number": "12.12",
   "title": "Key Concepts",
   "body": "Key Concepts   Unified Modeling Language (UML) is a standard diagram specification for the design and visualization of software, especially when using an object oriented programming language.  The UML specification defines multiple diagram types. We focus on Class Diagrams.  A Class Diagram describes the classes in a program: including their instance variables and methods.  A Class Diagram also depicts the way classes in a program relate to one another.  Type of relationships include inheritance (implementation and interface), aggregation, and dependency  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)  Aggregation occurs when one object is contained by another object, like a field or a collection (comprises)  Dependency occurs when a class is used by another but is not a field (depends upon)  The cardinality of a relationship may be indicated using numeric annotations at the end of a connection   "
 },
 {
-  "id": "exercises-12",
+  "id": "exercises-11",
   "level": "1",
-  "url": "exercises-12.html",
+  "url": "exercises-11.html",
   "type": "Exercises",
   "number": "12.13",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-119",
+  "id": "section-116",
   "level": "1",
-  "url": "section-119.html",
+  "url": "section-116.html",
   "type": "Section",
   "number": "13.1",
   "title": "Syntax Errors",
   "body": "Syntax Errors  Caught by the compiler  "
 },
 {
-  "id": "section-120",
+  "id": "section-117",
   "level": "1",
-  "url": "section-120.html",
+  "url": "section-117.html",
   "type": "Section",
   "number": "13.2",
   "title": "Logic Errors",
   "body": "Logic Errors  The program runs, but produces the wrong output.  "
 },
 {
-  "id": "section-121",
+  "id": "section-118",
   "level": "1",
-  "url": "section-121.html",
+  "url": "section-118.html",
   "type": "Section",
   "number": "13.3",
   "title": "Runtime Errors",
   "body": "Runtime Errors  The program compiles, but something goes wrong while it is running. Java responds to the problem by throwing an exception. Like nearly everything else in Java, an exception is an object created by instantiating a suitable exception class that identifies the problem.  If there is no intervention, Java will eventually print the current state of the call stack when the exception object is thrown.  "
 },
 {
-  "id": "p-789",
+  "id": "p-841",
   "level": "2",
-  "url": "section-121.html#p-789",
+  "url": "section-118.html#p-841",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "call stack "
 },
 {
-  "id": "section-122",
+  "id": "section-119",
   "level": "1",
-  "url": "section-122.html",
+  "url": "section-119.html",
   "type": "Section",
   "number": "13.4",
   "title": "Common Exception Classes",
   "body": "Common Exception Classes  ArithmeticException  NullPointerException  IndexOutOfBoundsException  ArrayIndexOutOfBoundsException  IllegalArgumentException  Exception class hierarchy  printStackTrace() method  "
 },
 {
-  "id": "section-123",
+  "id": "section-120",
   "level": "1",
-  "url": "section-123.html",
+  "url": "section-120.html",
   "type": "Section",
   "number": "13.5",
   "title": "Catching Exceptions",
   "body": "Catching Exceptions  try-catch  try-catch-finally  "
 },
 {
-  "id": "section-124",
+  "id": "section-121",
   "level": "1",
-  "url": "section-124.html",
+  "url": "section-121.html",
   "type": "Section",
   "number": "13.6",
   "title": "Checked vs. Unchecked Exceptions",
   "body": "Checked vs. Unchecked Exceptions  Checked exceptions must be caught  Alternatively, the catching of a checked exception may be deferred using the throws keyword.  "
 },
 {
-  "id": "p-800",
+  "id": "p-852",
   "level": "2",
-  "url": "section-124.html#p-800",
+  "url": "section-121.html#p-852",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "throws "
 },
 {
-  "id": "section-125",
+  "id": "section-122",
   "level": "1",
-  "url": "section-125.html",
+  "url": "section-122.html",
   "type": "Section",
   "number": "13.7",
   "title": "Reading Files",
   "body": "Reading Files  Thow IO exceptions  IO exceptions are checked, and must be caught in a try-catch  Files need to be closed.  "
 },
 {
-  "id": "section-126",
+  "id": "section-123",
   "level": "1",
-  "url": "section-126.html",
+  "url": "section-123.html",
   "type": "Section",
   "number": "13.8",
   "title": "try-with-resources",
   "body": "try-with-resources  May be used with objects that implement the AutoClosable interface.  public interface AutoCloseable { void close() throws Exception; }  "
 },
 {
-  "id": "section-127",
+  "id": "section-124",
   "level": "1",
-  "url": "section-127.html",
+  "url": "section-124.html",
   "type": "Section",
   "number": "13.9",
   "title": "Key Concepts",
   "body": "Key Concepts   Three types of errors occur in Java: Syntax Errors, Logic Errors and Runtime Errors  Syntax errors occur when rules defined by Java are violated.  The Java compiler reports syntax errors when an attempt is made to compile a program.  Logic errors occur when a syntactically correct program compiles and runs, but produces output that is incorrect.  Logic errors are produced by mistakes in the way the program is written.  Runtime errors occur when an unexpected error occurs while a program is running.  Runtime errors may be due to unexpected situations such as invalid array indexes, missing files, etc. These are called exceptions.  With no special intervention, an exception will cause a Java program to halt with an indication of what caused the exception.  Runtime exceptions may be caught and handled by a Java program.  The try-catch and try-catch-finally statements are used to catch and handle runtime exceptions.  Exceptions are encapsulated as objects in the standard library and all Exception classes inherit the java.lang.Exception class.  Common exception classes include ArithmeticException, NullPointerException, IndexOutOfBoundsException, ArrayIndexOutOfBoundsException, IllegalArgumentException  The try block contains the code to be executed that may result in an exception.  The catch block is the code that will be executed if a matching exception is thrown.  The optional finally block is code that is guaranteed to execute, regardless of whether or not an exception was thrown.  The catch block may specify the class that it is willing to catch and handle, or it may be set up to handle all thrown exceptions.  Multiple catch blocks may be specified if different exception classes have their own way of being handled.  As a type of class, exceptions may be instantiated to create exception objects and the object may be thrown by the user. This is accomplished with the throw statement.  Exception classes may be subclassed to create custom catchable exception classes with unique data and behavior.  There are two important exception class categories: checked exceptions and unchecked exceptions.  The Java compiler requires that all checked exceptions be handled with a try-catch and will refuse to compile a program with a checked exception that is not caught.  IOExceptions and their subclasses, such as FileNotFoundException, are examples of checked exceptions.  The handling of checked exceptions may be deferred from one method to its calling method by adding a throws statement to the method declaration.  Unchecked exceptions are not required to be handled, and may cause a program to halt if one occurs outside a try-catch block.  RuntimeExceptions, such as IndexOutOfBoundException, are examples of unchecked exceptions.  There is a formal distinction between errors in exceptions in Java: unlike exceptions, errors are fatal and cannot be handled.  Exception objects have their own methods that may be invoked when an exception object is caught.  The printStackTrace() method of Exception objects will print to the terminal the entire state of a program at the time an exception occurred.  A variation on the try-catch statement will automatically close an open resource when an exception occurs, such as an open file. This is called try-with-resources.   "
 },
 {
-  "id": "exercises-13",
+  "id": "exercises-12",
   "level": "1",
-  "url": "exercises-13.html",
+  "url": "exercises-12.html",
   "type": "Exercises",
   "number": "13.10",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-128",
+  "id": "section-125",
   "level": "1",
-  "url": "section-128.html",
+  "url": "section-125.html",
   "type": "Section",
   "number": "14.1",
   "title": "Tracing Programs",
   "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
 },
 {
-  "id": "section-129",
+  "id": "section-126",
   "level": "1",
-  "url": "section-129.html",
+  "url": "section-126.html",
   "type": "Section",
   "number": "14.2",
   "title": "The Call Stack",
   "body": "The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
 },
 {
-  "id": "section-130",
+  "id": "section-127",
   "level": "1",
-  "url": "section-130.html",
+  "url": "section-127.html",
   "type": "Section",
   "number": "14.3",
   "title": "Recursion",
   "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
 },
 {
-  "id": "p-809",
+  "id": "p-861",
   "level": "2",
-  "url": "section-130.html#p-809",
+  "url": "section-127.html#p-861",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "recursion "
 },
 {
-  "id": "p-810",
+  "id": "p-862",
   "level": "2",
-  "url": "section-130.html#p-810",
+  "url": "section-127.html#p-862",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Direct recursion "
 },
 {
-  "id": "p-811",
+  "id": "p-863",
   "level": "2",
-  "url": "section-130.html#p-811",
+  "url": "section-127.html#p-863",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Indirect recursion "
 },
 {
-  "id": "section-131",
+  "id": "section-128",
   "level": "1",
-  "url": "section-131.html",
+  "url": "section-128.html",
   "type": "Section",
   "number": "14.4",
   "title": "Solving Problems with Recursion",
   "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
 },
 {
-  "id": "p-814",
+  "id": "p-866",
   "level": "2",
-  "url": "section-131.html#p-814",
+  "url": "section-128.html#p-866",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cases base case recursive case "
 },
 {
-  "id": "section-132",
+  "id": "section-129",
   "level": "1",
-  "url": "section-132.html",
+  "url": "section-129.html",
   "type": "Section",
   "number": "14.5",
   "title": "Example: Computing Factorial",
   "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-133",
+  "id": "section-130",
   "level": "1",
-  "url": "section-133.html",
+  "url": "section-130.html",
   "type": "Section",
   "number": "14.6",
   "title": "Example: Computing Fibonacci Numbers",
   "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
 },
 {
-  "id": "section-134",
+  "id": "section-131",
   "level": "1",
-  "url": "section-134.html",
+  "url": "section-131.html",
   "type": "Section",
   "number": "14.7",
   "title": "Example: Drawing a Pyramid",
   "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-135",
+  "id": "section-132",
   "level": "1",
-  "url": "section-135.html",
+  "url": "section-132.html",
   "type": "Section",
   "number": "14.8",
   "title": "Example: Building a Maze",
   "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-136",
+  "id": "section-133",
   "level": "1",
-  "url": "section-136.html",
+  "url": "section-133.html",
   "type": "Section",
   "number": "14.9",
   "title": "Key Concepts",
   "body": "Key Concepts   The call stack is a data structure that tracks all currently executing methods.  A stack frame tracks each executing method on the call stack.  A stack frame contains all information about the associated method.  Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.  When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.  The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.  When a method (eventually) invokes itself during execution, the process is called recursion.  When a recursively invoked method returns, the method call resolves to the returned value.  Many algorithms may be implemented using recursion.  Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.  Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.  Recursive programs may be divided into direct recursion and indirect recursion.  All recursive programs must have at least one base case and at least one recursive case.  The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.  A recursive case must move closer to the base case in some way to ensure the recursive program terminates.  There may be multiple base cases and multiple recursive cases in a recursive algorithm.   "
 },
 {
-  "id": "exercises-14",
+  "id": "exercises-13",
   "level": "1",
-  "url": "exercises-14.html",
+  "url": "exercises-13.html",
   "type": "Exercises",
   "number": "14.10",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-137",
+  "id": "section-134",
   "level": "1",
-  "url": "section-137.html",
+  "url": "section-134.html",
   "type": "Section",
   "number": "15.1",
   "title": "Searching and Sorting Algorithms",
   "body": " Searching and Sorting Algorithms   A class that holds only static methods capable of performing several algorithms on Java Collection classes  https:\/\/docs.oracle.com\/en\/java\/javase\/20\/docs\/api\/java.base\/java\/util\/Collections.html   "
 },
 {
-  "id": "section-138",
+  "id": "section-135",
   "level": "1",
-  "url": "section-138.html",
+  "url": "section-135.html",
   "type": "Section",
   "number": "15.2",
   "title": "Sequential Search",
   "body": "Sequential Search  "
 },
 {
-  "id": "section-139",
+  "id": "section-136",
   "level": "1",
-  "url": "section-139.html",
+  "url": "section-136.html",
   "type": "Section",
   "number": "15.3",
   "title": "Binary Search",
   "body": "Binary Search  Iterative implementation  Recursive implementation  "
 },
 {
-  "id": "section-140",
+  "id": "section-137",
   "level": "1",
-  "url": "section-140.html",
+  "url": "section-137.html",
   "type": "Section",
   "number": "15.4",
   "title": "Selection Sort",
   "body": "Selection Sort  "
 },
 {
-  "id": "section-141",
+  "id": "section-138",
   "level": "1",
-  "url": "section-141.html",
+  "url": "section-138.html",
   "type": "Section",
   "number": "15.5",
   "title": "Insertion Sort",
   "body": "Insertion Sort  "
 },
 {
-  "id": "section-142",
+  "id": "section-139",
   "level": "1",
-  "url": "section-142.html",
+  "url": "section-139.html",
   "type": "Section",
   "number": "15.6",
   "title": "Merge Sort",
   "body": "Merge Sort  "
 },
 {
-  "id": "section-143",
+  "id": "section-140",
   "level": "1",
-  "url": "section-143.html",
+  "url": "section-140.html",
   "type": "Section",
   "number": "15.7",
   "title": "Complexity",
   "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
 },
 {
-  "id": "section-144",
+  "id": "section-141",
   "level": "1",
-  "url": "section-144.html",
+  "url": "section-141.html",
   "type": "Section",
   "number": "15.8",
   "title": "Key Concepts",
   "body": "Key Concepts   Algorithms are systematic ways of solving a given problem.  Two categories of algorithms include searching for a value and sorting a linear sequence of values.  Algorithms for searching include sequential search and binary search  Sequential search is ...  Binary search is ...  Three algorithms for sorting include selection sort, insertion sort, and merge sort.  Selection sort is ...  Insertion sort is ...  Merge sort is ...  The cost of an algorithm may be determined by mathematical analysis. This result of analysis in a mathematical expression that describes how cost grows with some respect to some input, such as the the size of the data structure processed.  How an algorithms grows is referred to as Big-Oh notation.   "
 },
 {
-  "id": "exercises-15",
+  "id": "exercises-14",
   "level": "1",
-  "url": "exercises-15.html",
+  "url": "exercises-14.html",
   "type": "Exercises",
   "number": "15.9",
   "title": "Exercises",
@@ -3736,9 +4042,9 @@ var ptx_lunr_docs = [
   "body": " ASCII Table   Americal Standard Code Information Interchange (ASCII)    Decimal Code  Symbol  Description   0 NUL Null character  1 SOH Start of Heading  2 STX Start of Text  3 ETX End of Text  3 ETX End of Text  4 EOT End of Transmission  5 ENQ Enquiry  6 ACK Acknowledge  7 BEL Bell, Alert  8 BS Backspace  9 HT Horizontal Tab  10 LF Line Feed  11 VT Vertical Tabulation  12 FF Form Feed  13 CR Carriage Return  14 SO Shift Out  15 SI Shift In  16 DLE Data Link Escape  17 DC1 Device Control One (XON)  18 DC2 Device Control Two  19 DC3 Device Control Three (XOFF)  20 DC4 Device Control Four  21 NAK Negative Acknowledge  22 SYN Synchronous Idle  23 ETB End of Transmission Block  24 CAN Cancel  25 EM End of medium  26 SUB Substitute  27 ESC Escape  28 FS File Separator  29 GS Group Separator  30 RS Record Separator  31 US Unit Separator  32 SP Space  33 ! Exclamation mark  34 \" Double quotes (or speech marks)  35 # Number sign  36 $ Dollar  37 % Per cent sign  38 & Ampersand  39 ' Single quote  40 ( Open parenthesis (or open bracket)  41 ) Close parenthesis (or close bracket)  42 * Asterisk  43 + Plus  44 , Comma  45 - Hyphen-minus  46 . Period, dot or full stop  47 \/ Slash or divide  48 0 Zero  49 1 One  50 2 Two  51 3 Three  52 4 Four  53 5 Five  54 6 Six  55 7 Seven  56 8 Eight  57 9 Nine  58 : Colon  59 ; Semicolon  60 Less than (or open angled bracket)  61 = Equals  62 > Greater than (or close angled bracket)  63 ? Question mark  64 @ At sign  65 A Uppercase A  66 B Uppercase B  67 C Uppercase C  68 D Uppercase D  69 E Uppercase E  70 F Uppercase F  71 G Uppercase G  72 H Uppercase H  73 I Uppercase I  74 J Uppercase J  75 K Uppercase K  76 L Uppercase L  77 M Uppercase M  78 N Uppercase N  79 O Uppercase O  80 P Uppercase P  81 Q Uppercase Q  82 R Uppercase R  83 S Uppercase S  84 T Uppercase T  85 U Uppercase U  86 V Uppercase V  87 W Uppercase W  88 X Uppercase X  89 Y Uppercase Y  90 Z Uppercase Z  91 [ Opening bracket  92 \\ Backslash  93 ] Closing bracket  94 ^ Caret - circumflex  95 _ Underscore  96 ` Grave accent  97 a Lowercase a  98 b Lowercase b  99 c Lowercase c  100 d Lowercase d  101 e Lowercase e  102 f Lowercase f  103 g Lowercase g  104 h Lowercase h  105 i Lowercase i  106 j Lowercase j  107 k Lowercase k  108 l Lowercase l  109 m Lowercase m  110 n Lowercase n  111 o Lowercase o  112 p Lowercase p  113 q Lowercase q  114 r Lowercase r  115 s Lowercase s  116 t Lowercase t  117 u Lowercase u  118 v Lowercase v  119 w Lowercase w  120 x Lowercase x  121 y Lowercase y  122 z Lowercase z  123 { Opening brace  124 | Vertical bar  125 } Closing brace  126 ~ Equivalency sign - tilde  127 DEL Delete    "
 },
 {
-  "id": "table-52",
+  "id": "table-54",
   "level": "2",
-  "url": "appendix_ascii_table.html#table-52",
+  "url": "appendix_ascii_table.html#table-54",
   "type": "Table",
   "number": "A.0.1",
   "title": "Americal Standard Code Information Interchange (ASCII)",
@@ -3754,18 +4060,18 @@ var ptx_lunr_docs = [
   "body": " Common Shells and Commands   Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX      Shell commands    Task  Shell  Command    Get the current working directory  Command Prompt  cd     PowerShell  pwd     bash  pwd    List directory contents  Command Prompt  dir     PowerShell  dir     bash  ls    Change the current working directory  Command Prompt  cd  path\\to\\directory     PowerShell  cd  path\\to\\directory     bash  cd  path\/to\/directory    Move up one directory level  Command Prompt  cd ..     PowerShell  cd ..     bash  cd ..    Create a new directory  Command Prompt  mkdir  directoryname     PowerShell  mkdir  directoryname     bash  mkdir  directoryname    Copy a file  Command Prompt  copy  source\\file\\path destination\\file\\path     PowerShell  Copy-Item -Path  source\\file\\path  -Destination  destination\\file\\path     bash  cp  source\/file\/path destination\/file\/path    Delete a file  Command Prompt  del  filename     PowerShell  del  filename     bash  rm  filename     "
 },
 {
-  "id": "table-53",
+  "id": "table-55",
   "level": "2",
-  "url": "appendix_shells.html#table-53",
+  "url": "appendix_shells.html#table-55",
   "type": "Table",
   "number": "B.0.1",
   "title": "Operating systems and their common shell programs",
   "body": " Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX    "
 },
 {
-  "id": "table-54",
+  "id": "table-56",
   "level": "2",
-  "url": "appendix_shells.html#table-54",
+  "url": "appendix_shells.html#table-56",
   "type": "Table",
   "number": "B.0.2",
   "title": "Shell commands",
@@ -3790,9 +4096,9 @@ var ptx_lunr_docs = [
   "body": " Testing   Introduce and motivate testing  Use main() for testing  Learn the debugger   The Importance of Testing  The compiler tells us if we have syntax error s and the execution engine throws exceptions when something goes wrong while the program is running ( runtime errors ). How can we check when the program runs without error, but produces incorrect results ( logic errors )? The best way to check for logic errors is through testing.  A good test plan executes all paths through your source code and presents a wide range of possible inputs. It checks results produced to make sure all they are correct.   Java assertions and AssertionError  Java assertions and AssertionError   Unit Testing  Integration Testing  Key Concepts   Testing is an important part of software development during which time test cases are developed and run to ensure a program is correct.  Test cases should cover all behavior expected by a program. This is called test coverage.  Special testing situations include a boundary (edge) case, a corner case and a special case  Software testing includes unit testing and integration testing  During unit testing individual isolated parts (units) of a program are tested for correctness independently  During integration testing the interaction between software units is tested for correctness   "
 },
 {
-  "id": "p-838",
+  "id": "p-890",
   "level": "2",
-  "url": "appendix-testing.html#p-838",
+  "url": "appendix-testing.html#p-890",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3805,7 +4111,7 @@ var ptx_lunr_docs = [
   "type": "Glossary",
   "number": "",
   "title": "Glossary",
-  "body": "  abstract-class  abstract class  An abstract class is    abstract-method  abstract method  An abstract method is    abstraction  abstraction  A technique for handling complexity by hiding details and exposing only the high level concept. Abstraction is a key concept in object oriented programming.    glossary-ascii  ASCII  American Standard Code for Information Interchange    base-class  base class  Also called a superclass    constructor  constructor  A constructor is ...    derived-class  derived class  Also called a subclass    doodlepad  DoodlePad  DoodlePad is an open source, precompiled Java library of interactive Java Shape classes. DoodlePad is built on Java Swing, and is designed as a learning tool. A key feature of DoodlePad is that the standard Swing infrastructure is unnecessary. DoodlePad automatically bootstraps and necessary infrastructure to create a fully functioning Swing program with as little as a Shape class instantiation. Custom methods may be invoked automatically when interacting with Shape objects. Linking a Shape with a custom method is accomplished with method references, not by implementing the required Swing interfaces. Interfaces is a topic that is not covered until the end of a standard CS1 progression. (See DoodlePad ).    dynamic-binding  dynamic binding  When a method of a derived class is invoked at runtime using a variable of type base class.    encapsulation  encapsulation  The grouping of related data and behavior in a single computational unit. Encapsulation is a key concept in object oriented programming.    extends  extends  The Java keyword use to establish an inheritance relationship between two classes.    gc  Garbage Collection  ...    inheritance  inheritance  A relationship between two classes where one class may access the members of another class    instanceof  instanceof  The operator used to test of an object is the type of a class or one if its inherited base classes.    java  Java  The Java Programming Language is ...    jdk  JDK  The Java Development Kit (JDK) is ...    jre  JRE  The Java Runtime Environment (JRE) is ...    jshell  JShell  The Java Shell tool (JShell) is an interactive console for executing snippets using the Java programming language. When started in verbose mode, JShelll will evaluate Java code snippets and print the result as well as the result type.    jvm  JVM  The Java virtual machine (JVM) is an abstract computing machine that executes instructions from a well-defined standardized low-level instruction set. The JVM has been ported to a variety of computing platforms to abstract away platform-specific details making it possible to run the identical compiled Java and other JVM-based programs across platforms.    method_signature  method signature  A method signature is a combination of the name of a method and an ordered list of parameter types. A method signature must be unique. It is used by the Java compiler to bind a method invocation within a program with the correct method declaration.    nullary-constructor  nullary constructor  A constructor having no parameters    object  Object  The class inherited by all Java classes.    OOP  object oriented programming  A style of computer programming that focusses on the design and use of objects. It it characterized by several principles, including encapsulation and polymorphism.    overload  overload  To define two or more methods in a class with a common name but a different signatures    override  override  To define a method in a derived class having the same signature as a method in one of its base classes.    pemdas  PEMDAS  An acronym for \"parentheses, exponents, multiplication, division, addition, subtraction.\" Indicats the order in which operations are performed when evaluating a mathematical expression.    polymorphism  polymorphism  A key concept in object oriented programming where one item may have many forms.    protected  protected  Visibility modifier allowing access only from a derived class.    shadowing  shadowing  When a variable declared in a local scope has the same name as a variable declared in an outer scope    string  String  A class provided by Java that encapsulates a sequence of characters.    super  super  Keyword use to set base class scope    signature  signature  A method's unique name and the number, type and order of its parameters.    glossary-unicode  UNICODE  An international standard for encoding characters that make up in most of the world's writing systems   "
+  "body": "  abstract-class  abstract class  An abstract class is    abstract-method  abstract method  An abstract method is    abstraction  abstraction  A technique for handling complexity by hiding details and exposing only the high level concept. Abstraction is a key concept in object oriented programming.    glossary-ascii  ASCII  American Standard Code for Information Interchange    base-class  base class  Also called a superclass    constructor  constructor  A constructor is ...    derived-class  derived class  Also called a subclass    doodlepad  DoodlePad  DoodlePad is an open source, precompiled Java library of interactive Java Shape classes. DoodlePad is built on Java Swing, and is designed as a learning tool. A key feature of DoodlePad is that the standard Swing infrastructure is unnecessary. DoodlePad automatically bootstraps and necessary infrastructure to create a fully functioning Swing program with as little as a Shape class instantiation. Custom methods may be invoked automatically when interacting with Shape objects. Linking a Shape with a custom method is accomplished with method references, not by implementing the required Swing interfaces. Interfaces is a topic that is not covered until the end of a standard CS1 progression. (See DoodlePad ).    dynamic-binding  dynamic binding  When a method of a derived class is invoked at runtime using a variable of type base class.    encapsulation  encapsulation  The grouping of related data and behavior in a single computational unit. Encapsulation is a key concept in object oriented programming.    extends  extends  The Java keyword use to establish an inheritance relationship between two classes.    gc  Garbage Collection  ...    inheritance  inheritance  A relationship between two classes where one class may access the members of another class    instanceof  instanceof  The operator used to test of an object is the type of a class or one if its inherited base classes.    java  Java  The Java Programming Language is ...    jdk  JDK  The Java Development Kit (JDK) is ...    jre  JRE  The Java Runtime Environment (JRE) is ...    jshell  JShell  The Java Shell tool (JShell) is an interactive console for executing snippets using the Java programming language. When started in verbose mode, JShelll will evaluate Java code snippets and print the result as well as the result type.    jvm  JVM  The Java virtual machine (JVM) is an abstract computing machine that executes instructions from a well-defined standardized low-level instruction set. The JVM has been ported to a variety of computing platforms to abstract away platform-specific details making it possible to run the identical compiled Java and other JVM-based programs across platforms.    method_signature  method signature  A method signature is a combination of the name of a method and an ordered list of parameter types. A method signature must be unique. It is used by the Java compiler to bind a method invocation within a program with the correct method declaration.    nullary-constructor  nullary constructor  A constructor having no parameters    object  Object  The class inherited by all Java classes.    OOP  object oriented programming  A style of computer programming that focusses on the design and use of objects. It it characterized by several principles, including encapsulation and polymorphism.    overload  overload  To define two or more methods in a class with a common name but a different signatures    override  override  To define a method in a derived class having the same signature as a method in one of its base classes.    pemdas  PEMDAS  An acronym for \"parentheses, exponents, multiplication, division, addition, subtraction.\" Indicats the order in which operations are performed when evaluating a mathematical expression.    polymorphism  polymorphism  A key concept in object oriented programming where one item may have many forms.    protected  protected  Visibility modifier allowing access only from a derived class.    scope  scope  Scope of an item is the area within which the item (potentially) exists. If you can precede an item with a name (like package, class, or object) and a dot-operator to access it, then it has that scope. If the scope of an item does not exist, all items declared with that scope also do not exist. Scope is different than visibility. An item may be scoped to an object but visible and accessible from outside the scope of the object if declared public .    shadowing  shadowing  When a variable declared in a local scope has the same name as a variable declared in an outer scope    string  String  A class provided by Java that encapsulates a sequence of characters.    super  super  Keyword use to set base class scope    signature  signature  A method's unique name and the number, type and order of its parameters.    glossary-unicode  UNICODE  An international standard for encoding characters that make up in most of the world's writing systems    visibility  visibility  The visibility of an item determines from where in a program an item may be accessed. Visibility is different than scope. An item may be scoped to an object but visible and accessible from outside the scope of the object if declared public .   "
 },
 {
   "id": "references",
@@ -3835,18 +4141,18 @@ var ptx_lunr_docs = [
   "body": "   doodlepad.org   https:\/\/doodlepad.org   copyright  This book was authored in PreTeXt .  "
 },
 {
-  "id": "section-145",
+  "id": "section-142",
   "level": "1",
-  "url": "section-145.html",
+  "url": "section-142.html",
   "type": "Section",
   "number": "16.1",
   "title": "Visualizer",
   "body": " Visualizer   Visualize   "
 },
 {
-  "id": "section-146",
+  "id": "section-143",
   "level": "1",
-  "url": "section-146.html",
+  "url": "section-143.html",
   "type": "Section",
   "number": "16.2",
   "title": "Active Code",
@@ -3855,7 +4161,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-python",
   "level": "2",
-  "url": "section-146.html#program-activecode-python",
+  "url": "section-143.html#program-activecode-python",
   "type": "Listing",
   "number": "16.2.1",
   "title": "",
@@ -3864,7 +4170,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-java",
   "level": "2",
-  "url": "section-146.html#program-activecode-java",
+  "url": "section-143.html#program-activecode-java",
   "type": "Listing",
   "number": "16.2.2",
   "title": "Informal Java “Hello, World”",
@@ -3873,16 +4179,16 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-javascript",
   "level": "2",
-  "url": "section-146.html#program-activecode-javascript",
+  "url": "section-143.html#program-activecode-javascript",
   "type": "Listing",
   "number": "16.2.3",
   "title": "",
   "body": " An interactive JavaScript program, using Runestone   document.write('Hello, world!');   "
 },
 {
-  "id": "exercises-16",
+  "id": "exercises-15",
   "level": "1",
-  "url": "exercises-16.html",
+  "url": "exercises-15.html",
   "type": "Exercises",
   "number": "16.3",
   "title": "Exercises",
@@ -3891,7 +4197,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-21",
   "level": "2",
-  "url": "exercises-16.html#exercise-21",
+  "url": "exercises-15.html#exercise-21",
   "type": "Exercise",
   "number": "16.3.1",
   "title": "True\/False.",
@@ -3900,7 +4206,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-22",
   "level": "2",
-  "url": "exercises-16.html#exercise-22",
+  "url": "exercises-15.html#exercise-22",
   "type": "Exercise",
   "number": "16.3.2",
   "title": "Multiple Choice.",
@@ -3909,7 +4215,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-23",
   "level": "2",
-  "url": "exercises-16.html#exercise-23",
+  "url": "exercises-15.html#exercise-23",
   "type": "Exercise",
   "number": "16.3.3",
   "title": "Parson’s Problem.",
@@ -3918,7 +4224,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-24",
   "level": "2",
-  "url": "exercises-16.html#exercise-24",
+  "url": "exercises-15.html#exercise-24",
   "type": "Exercise",
   "number": "16.3.4",
   "title": "Matching.",
@@ -3927,7 +4233,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-25",
   "level": "2",
-  "url": "exercises-16.html#exercise-25",
+  "url": "exercises-15.html#exercise-25",
   "type": "Exercise",
   "number": "16.3.5",
   "title": "Clickable Area.",
@@ -3936,7 +4242,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-integer",
   "level": "2",
-  "url": "exercises-16.html#fillin-integer",
+  "url": "exercises-15.html#fillin-integer",
   "type": "Exercise",
   "number": "16.3.6",
   "title": "Fill-In, Integer Answer.",
@@ -3945,7 +4251,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-string-integer",
   "level": "2",
-  "url": "exercises-16.html#fillin-string-integer",
+  "url": "exercises-15.html#fillin-string-integer",
   "type": "Exercise",
   "number": "16.3.7",
   "title": "Fill-In, String and Number Answers.",
@@ -3954,7 +4260,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-case-insensitive",
   "level": "2",
-  "url": "exercises-16.html#fillin-case-insensitive",
+  "url": "exercises-15.html#fillin-case-insensitive",
   "type": "Exercise",
   "number": "16.3.8",
   "title": "Fill-In, Case-Insensitive Answer.",
@@ -3963,7 +4269,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-decimal",
   "level": "2",
-  "url": "exercises-16.html#fillin-decimal",
+  "url": "exercises-15.html#fillin-decimal",
   "type": "Exercise",
   "number": "16.3.9",
   "title": "Fill-In, Decimal Answer.",
@@ -3972,16 +4278,16 @@ var ptx_lunr_docs = [
 {
   "id": "short-answer-question",
   "level": "2",
-  "url": "exercises-16.html#short-answer-question",
+  "url": "exercises-15.html#short-answer-question",
   "type": "Exercise",
   "number": "16.3.10",
   "title": "Short Answer.",
   "body": "Short Answer  This sample book is configured to make some simple questions interactive on a capable platform, by adding a <response> element as a signal.  "
 },
 {
-  "id": "exercises-17",
+  "id": "exercises-16",
   "level": "1",
-  "url": "exercises-17.html",
+  "url": "exercises-16.html",
   "type": "Exercises",
   "number": "16.4",
   "title": "Exercises",
@@ -3990,7 +4296,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-31",
   "level": "2",
-  "url": "exercises-17.html#exercise-31",
+  "url": "exercises-16.html#exercise-31",
   "type": "Exercise",
   "number": "16.4.1",
   "title": "Identify valid variables names.",
@@ -3999,7 +4305,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-32",
   "level": "2",
-  "url": "exercises-17.html#exercise-32",
+  "url": "exercises-16.html#exercise-32",
   "type": "Exercise",
   "number": "16.4.2",
   "title": "Order of Operations.",
@@ -4008,16 +4314,16 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-33",
   "level": "2",
-  "url": "exercises-17.html#exercise-33",
+  "url": "exercises-16.html#exercise-33",
   "type": "Exercise",
   "number": "16.4.3",
   "title": "Predict expression evaluation value and type.",
   "body": "Predict expression evaluation value and type Follow automatic promotions. "
 },
 {
-  "id": "exercises-18",
+  "id": "exercises-17",
   "level": "1",
-  "url": "exercises-18.html",
+  "url": "exercises-17.html",
   "type": "Exercises",
   "number": "16.5",
   "title": "Exercises",
@@ -4026,7 +4332,7 @@ var ptx_lunr_docs = [
 {
   "id": "matching-java",
   "level": "2",
-  "url": "exercises-18.html#matching-java",
+  "url": "exercises-17.html#matching-java",
   "type": "Exercise",
   "number": "16.5.1",
   "title": "Matching.",
@@ -4035,7 +4341,7 @@ var ptx_lunr_docs = [
 {
   "id": "matching-oop",
   "level": "2",
-  "url": "exercises-18.html#matching-oop",
+  "url": "exercises-17.html#matching-oop",
   "type": "Exercise",
   "number": "16.5.2",
   "title": "Matching.",

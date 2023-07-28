@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">One implication of the do-while continuation condition occuring at the end of the code block is that the block statements execute at least once before the condition is tested. Compare this to both the while-statement and the for-statement where the condition is tested <em class="emphasis">before</em> the code block in both cases. Consequently, with while- and for-statements, the code block may never execute.</div>
-<span class="incontext"><a href="section-c2-do-while-statements.html#p-563" class="internal">in-context</a></span>
+<div class="para">With the extra space available, we modified the logic a bit. Rather than instantiate new Rectangle when <code class="code-inline tex2jax_ignore">x != y</code>, we are now performing the complementary action. When <code class="code-inline tex2jax_ignore">x == y</code> we invoke <code class="code-inline tex2jax_ignore">continue</code> which halts the iteration and returns back to the for-statement to check for another iteration. Note that it would have been tricky to use the same approach with while-statements. In the while-statement our loop counter was incremented at the end of the code block. If we executed a <code class="code-inline tex2jax_ignore">continue</code> before the end of the code block the loop counter would have never been updated. This would cause the program to enter an infinite loop, and never terminate. With a for-statement, the increment is always executed, whether or not the code block completes. This make the <code class="code-inline tex2jax_ignore">continue</code> statement much more convenient to use.</div>
+<span class="incontext"><a href="section-c2-for-statements.html#p-563" class="internal">in-context</a></span>
 </body>
 </html>

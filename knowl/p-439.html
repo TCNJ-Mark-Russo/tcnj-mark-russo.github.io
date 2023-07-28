@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">After marking all reachable objects, the garbage collector performs the sweep phase. It frees the memory occupied by objects that were not marked as reachable. This memory is then returned to the available memory pool for future allocations.</div>
-<span class="incontext"><a href="section-rt-gc.html#p-439" class="internal">in-context</a></span>
+<div class="para">When we performed the assignment <code class="code-inline tex2jax_ignore">sb1 = sb2</code> the object itself was not copied. Rather, the value of the address was copied. Nothing happened to the two StringBuilder objects (yet). Both <code class="code-inline tex2jax_ignore">sb1</code> and <code class="code-inline tex2jax_ignore">sb2</code> now hold the address for where to find the second StringBuilder object. After the assignment, we have no variables remaining that store the address of the first StringBuilder and two variables that store the address of the second StringBuilder. In a very real sense, we’ve lost track of the first StringBuilder object.</div>
+<span class="incontext"><a href="section-rt-refvars.html#p-439" class="internal">in-context</a></span>
 </body>
 </html>
