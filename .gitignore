@@ -1,2 +1,4 @@
-mongoose.exe
+*.exe
 *.bat
+*.class
+*.pptx
