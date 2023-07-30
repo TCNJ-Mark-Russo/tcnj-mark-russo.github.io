@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Inheritance in DoodlePad</title>
+<title>Overridable Event Handler Methods in DoodlePad</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -210,7 +210,7 @@ eBookConfig.enable_chatcodes =  false;
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-93.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-inheritance.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-95.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-in-overriding.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-inheritance.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-in-polymorph.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
@@ -375,7 +375,7 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="section-dp-events.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Event-Driven Programming</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-dp-events.html#subsection-29" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Connecting Events and Methods with Method References</span></a></div></li>
+<li><div class="toc-item"><a href="section-dp-events.html#subsection-dp-events-connecting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Connecting Events and Methods with Method References</span></a></div></li>
 <li><div class="toc-item"><a href="section-dp-events.html#subsection-30" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Shape Mouse Event-Related Methods</span></a></div></li>
 <li><div class="toc-item"><a href="section-dp-events.html#subsection-31" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Other Event-Related Shape Methods</span></a></div></li>
 <li><div class="toc-item"><a href="section-dp-events.html#subsection-32" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Pad Mouse Event-Related Methods</span></a></div></li>
@@ -621,56 +621,76 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-inheritance.html" class="internal"><span class="codenumber">10</span> <span class="title">Inheritance</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Setting Up Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Benefits of Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Subtype Polymorphism and Dynamic Binding</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">10.5</span> <span class="title">protected Access</span></a></div></li>
-<li><div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-92.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Testing for a specific Class</span></a></div></li>
-<li><div class="toc-item"><a href="section-93.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
-<li class="active">
-<div class="toc-item"><a href="section-in-doodlepad.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Inheritance in DoodlePad</span></a></div>
+<li><div class="toc-item"><a href="section-in-dp-design.html" class="internal"><span class="codenumber">10.1</span> <span class="title">DoodlePad Design</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-in-basics.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Basics of Inheritance</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-108" class="internal"><span class="codenumber">10.9.1</span> <span class="title">Handling Events by Overriding Base Class Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-109" class="internal"><span class="codenumber">10.9.2</span> <span class="title">Overridable Shape Event Methods</span></a></div></li>
-<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-110" class="internal"><span class="codenumber">10.9.3</span> <span class="title">Overridable Pad Event Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-basics.html#subsection-108" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Benefits of Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-basics.html#subsection-109" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Using Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-basics.html#subsection-110" class="internal"><span class="codenumber">10.2.3</span> <span class="title">A Better LED Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-basics.html#subsection-111" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Blocking Inheritance</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">10.11</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-in-overriding.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Method Overriding</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-in-overriding.html#subsection-112" class="internal"><span class="codenumber">10.3.1</span> <span class="title">Applications of Method Overriding</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-overriding.html#subsection-in-overriding-events" class="internal"><span class="codenumber">10.3.2</span> <span class="title">Overriding Event Handler Methods</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-in-doodlepad.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Overridable Event Handler Methods in DoodlePad</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-in-override-shape" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Overridable Shape Event Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-in-override-pad" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Overridable Pad Event Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-doodlepad.html#subsection-in-override-timer" class="internal"><span class="codenumber">10.4.3</span> <span class="title">Overridable Timer Event Methods</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-in-polymorph.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Subtype Polymorphism</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-117" class="internal"><span class="codenumber">10.5.1</span> <span class="title">The <em class="emphasis">Many Forms</em> of Derived Classes</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-118" class="internal"><span class="codenumber">10.5.2</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-119" class="internal"><span class="codenumber">10.5.3</span> <span class="title">Protected Visibility</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-in-object-class.html" class="internal"><span class="codenumber">10.6</span> <span class="title">The Object Class</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-abstract-class.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Abstract Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-concepts.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-exercises.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-interfaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Interfaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-95.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Defining and Implementing Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-96.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-97.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Comparable&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-98.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Iterator&lt;T&gt; Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Benefits of an Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Defining Your Own Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Interfaces and Polymorphism</span></a></div></li>
+<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">12</span> <span class="title">Program and Class Design</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.11</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.12</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">12.13</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
+<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
+<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Object Relationships</span></a></div></li>
+<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.4</span> <span class="title">When to use Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.5</span> <span class="title">When to use Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Class Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Object Diagram</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">12.11</span> <span class="title">Activity Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">12.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">12.13</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">12.14</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -685,7 +705,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Reading Files</span></a></div></li>
 <li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">13.8</span> <span class="title">try-with-resources</span></a></div></li>
 <li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -700,7 +720,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
 <li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
 <li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">14.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">14.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -714,7 +734,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Merge Sort</span></a></div></li>
 <li><div class="toc-item"><a href="section-140.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Complexity</span></a></div></li>
 <li><div class="toc-item"><a href="section-141.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -735,292 +755,284 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="section-142.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
 <li><div class="toc-item"><a href="section-143.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-17.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-16.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section-in-doodlepad"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">10.9</span> <span class="title">Inheritance in DoodlePad</span>
+<span class="type">Section</span> <span class="codenumber">10.4</span> <span class="title">Overridable Event Handler Methods in DoodlePad</span>
 </h2>
-<section class="introduction" id="introduction-52">Inheritance in DoodlePad</section><section class="subsection" id="subsection-108"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">10.9.1</span> <span class="title">Handling Events by Overriding Base Class Methods</span>
+<section class="introduction" id="introduction-55"><div class="para" id="p-809">DoodlePad graphic classes are organized in a hierarchy with the Shape class at its root. For your reference, <a href="" class="xref" data-knowl="./knowl/figure-in-doodlepad-hierarchy.html" title="Figure 10.1.1">Figure 10.1.1</a> illustrates this hierarchy. In addition to the Shape class and all its derived classes, DoodlePad implements several additional classes, including Pad, Timer and Sound. You can find details for all classes in the library’s <a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/package-summary.html" target="_blank">JavaDocs</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-123" id="fn-123"><sup> 1 </sup></a>.</div> <figure class="figure figure-like" id="figure-in-doodlepad-hierarchy"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/in-doodlepad-hierarchy.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.4.1<span class="period">.</span></span><span class="space"> </span>DoodlePad Class Hierarchy</figcaption></figure> <div class="para" id="p-810">In addition to overriding the <code class="code-inline tex2jax_ignore">onMousePressed()</code> method, as described in <a href="section-in-overriding.html#subsection-in-overriding-events" class="internal" title="Subsection 10.3.2: Overriding Event Handler Methods">Subsection 10.3.2</a>, classes that extend Shape implement several additional methods that may be overridden to handle mouse-related events. These are described in <a href="section-in-doodlepad.html#subsection-in-override-shape" class="internal" title="Subsection 10.4.1: Overridable Shape Event Methods">Subsection 10.4.1</a>.</div> <div class="para" id="p-811">The Pad class offers similar opportunities to handle events by overriding its methods. In addition to mouse-related events, the Pad class handles keyboard events, network socket events, as well as a global timer. These overridable methods are described in <a href="section-in-doodlepad.html#subsection-in-override-pad" class="internal" title="Subsection 10.4.2: Overridable Pad Event Methods">Subsection 10.4.2</a>.</div> <div class="para" id="p-812">DoodlePad implements a Timer class, that may be used to drive repeating events, like animations. You may create any number of Timer objects, set the tick-rate in ticks-per-second, start and stop TImer objects, and handle a Timer-related events by extending the class and overriding methods. Refer to <a href="section-in-doodlepad.html#subsection-in-override-pad" class="internal" title="Subsection 10.4.2: Overridable Pad Event Methods">Subsection 10.4.2</a> for details.</div></section><section class="subsection" id="subsection-in-override-shape"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.4.1</span> <span class="title">Overridable Shape Event Methods</span>
 </h3>
-<div class="para" id="p-799">Another way to associate Shape events with custom methods is to subclass Shape and override the appropriate base class method with an implementation to be invoked when the event fires. The Shape base class implements a series of placeholder methods that do nothing, but exist purely to be overridden by a subclass when custom behavior is desired. This represents an alternative to the method reference approach for setting up custom event handlers, and may be used when comfortable with the concept of inheritance.</div>
-<div class="para" id="p-800">The Shape implements a series of "on" methods: one for each mouse event. For example, Shape implements a method named onMousePressed which is invoked when a Shape is clicked with the mouse. The signature of this method as well as all other methods that correspond with mouse events share a common signature with the types: double, double and int. These are the mouse event x and y coordinates and an integer identifying the mouse button in use. These parameters are identical to the signature of methods used in the method reference approach, minus the first parameter identifying the Shape object.</div>
-<div class="para" id="p-801">The following example illustrates an alternate way to implement the previous <code class="code-inline tex2jax_ignore">PushButton</code> class. In this case the <code class="code-inline tex2jax_ignore">PushButton2</code> class extends the RoundRect Shape class. The mousePressed event is handled by overriding the onMousePressed() method. The remaining logic for this class is identical to the previous example.</div>
-<figure class="listing figure-like" id="listing-in-pushbutton2"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// PushButton2.java
-import doodlepad.*;
-
-public class PushButton2 extends RoundRect {
-    private boolean isOn;   // Button state
-
-    public PushButton2(double x, double y, double w, double h) {
-        super(x, y, w, h, 20, 20);
-
-        // Initialize the button
-        this.setFillColor(200);
-
-        // Starts off
-        isOn = false;
-    }
-
-    @Override
-    public void onMousePressed(double x, double y, int button) {
-        // Toggle button state
-        isOn = !isOn;
-
-        // Set button fill color based on state
-        if (isOn) {
-            this.setFillColor(0, 255, 0);
-        } else {
-            this.setFillColor(200);
-        }
-    }
-
-    public static void main(String[] args) {
-        // Create a new PushButton2
-        PushButton2 myPushButton = new PushButton2(100, 100, 75, 50);
-    }
-}
-</code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">10.9.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">PushButton2.java</code></figcaption></figure></section><section class="subsection" id="subsection-109"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">10.9.2</span> <span class="title">Overridable Shape Event Methods</span>
-</h3>
-<div class="para" id="p-802">As mentioned, the Shape class implements one overridable method for each mouse event. The following table lists all methods that may be overridden in order to handle a triggered mouse event.</div>
-<figure class="table table-like" id="table-51"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.9.2<span class="period">.</span></span><span class="space"> </span>Overridable Shape Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-813">The Shape class implements a series of "on" methods: one for each mouse event. For example, Shape implements a method named onMousePressed which is invoked when a Shape is pressed by the mouse. This method as well as all other methods that correspond with mouse events share a common signature with the types: double, double and int. These are the mouse event x and y coordinates and an integer identifying the mouse button in use. These parameters are identical to the signature of methods used in the method reference approach, minus the first parameter identifying the Shape object.</div>
+<div class="para" id="p-814">The following table lists all methods that may be overridden in order to handle a triggered mouse event.</div>
+<figure class="table table-like" id="table-50"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.4.2<span class="period">.</span></span><span class="space"> </span>Overridable Shape Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseClicked-double-double-int-" target="_blank">public void onMouseClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-121" id="fn-121"><sup> 1 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseClicked-double-double-int-" target="_blank">public void onMouseClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-124" id="fn-124"><sup> 2 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-click event</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDoubleClicked-double-double-int-" target="_blank">public void onMouseDoubleClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-122" id="fn-122"><sup> 2 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDoubleClicked-double-double-int-" target="_blank">public void onMouseDoubleClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-125" id="fn-125"><sup> 3 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-double-click event.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMousePressed-double-double-int-" target="_blank">public void onMousePressed(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-123" id="fn-123"><sup> 3 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMousePressed-double-double-int-" target="_blank">public void onMousePressed(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-126" id="fn-126"><sup> 4 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-pressed event - when a mouse button is depressed.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseReleased-double-double-int-" target="_blank">public void onMouseReleased(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-124" id="fn-124"><sup> 4 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseReleased-double-double-int-" target="_blank">public void onMouseReleased(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-127" id="fn-127"><sup> 5 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-released event - when a mouse button is released after being depressed.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseMoved-double-double-int-" target="_blank">public void onMouseMoved(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-125" id="fn-125"><sup> 5 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseMoved-double-double-int-" target="_blank">public void onMouseMoved(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-128" id="fn-128"><sup> 6 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDragged-double-double-int-" target="_blank">public void onMouseDragged(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-126" id="fn-126"><sup> 6 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDragged-double-double-int-" target="_blank">public void onMouseDragged(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-129" id="fn-129"><sup> 7 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseEntered-double-double-int-" target="_blank">public void onMouseEntered(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-127" id="fn-127"><sup> 7 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseEntered-double-double-int-" target="_blank">public void onMouseEntered(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-130" id="fn-130"><sup> 8 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseExited-double-double-int-" target="_blank">public void onMouseExited(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-128" id="fn-128"><sup> 8 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseExited-double-double-int-" target="_blank">public void onMouseExited(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-131" id="fn-131"><sup> 9 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.</td>
 </tr>
-</table></div></figure></section><section class="subsection" id="subsection-110"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">10.9.3</span> <span class="title">Overridable Pad Event Methods</span>
+</table></div></figure></section><section class="subsection" id="subsection-in-override-pad"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.4.2</span> <span class="title">Overridable Pad Event Methods</span>
 </h3>
-<figure class="table table-like" id="table-52"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.9.3<span class="period">.</span></span><span class="space"> </span>Overridable Pad Mouse, Keyboard and Timer Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="table-51"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.4.3<span class="period">.</span></span><span class="space"> </span>Overridable Pad Mouse, Keyboard and Timer Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMousePressed-double-double-int-" target="_blank">public void onMousePressed(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-129" id="fn-129"><sup> 9 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMousePressed-double-double-int-" target="_blank">public void onMousePressed(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-132" id="fn-132"><sup> 10 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse pressed events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseReleased-double-double-int-" target="_blank">public void onMouseReleased(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-130" id="fn-130"><sup> 10 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseReleased-double-double-int-" target="_blank">public void onMouseReleased(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-133" id="fn-133"><sup> 11 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse released events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseMoved-double-double-int-" target="_blank">public void onMouseMoved(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-131" id="fn-131"><sup> 11 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseMoved-double-double-int-" target="_blank">public void onMouseMoved(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-134" id="fn-134"><sup> 12 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse moved events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseClicked-double-double-int-" target="_blank">public void onMouseClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-132" id="fn-132"><sup> 12 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseClicked-double-double-int-" target="_blank">public void onMouseClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-135" id="fn-135"><sup> 13 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse clicked events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDoubleClicked-double-double-int-" target="_blank">public void onMouseDoubleClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-133" id="fn-133"><sup> 13 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDoubleClicked-double-double-int-" target="_blank">public void onMouseDoubleClicked(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-136" id="fn-136"><sup> 14 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse double-clicked events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDragged-double-double-int-" target="_blank">public void onMouseDragged(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-134" id="fn-134"><sup> 14 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDragged-double-double-int-" target="_blank">public void onMouseDragged(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-137" id="fn-137"><sup> 15 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseEntered-double-double-int-" target="_blank">public void onMouseEntered(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-135" id="fn-135"><sup> 15 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseEntered-double-double-int-" target="_blank">public void onMouseEntered(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-138" id="fn-138"><sup> 16 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse entered events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseExited-double-double-int-" target="_blank">public void onMouseExited(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-136" id="fn-136"><sup> 16 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseExited-double-double-int-" target="_blank">public void onMouseExited(double x, double y, int button)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-139" id="fn-139"><sup> 17 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle mouse exited events.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyPressed-java.lang.String-java.lang.String-" target="_blank">public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-137" id="fn-137"><sup> 17 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyPressed-java.lang.String-java.lang.String-" target="_blank">public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-140" id="fn-140"><sup> 18 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle key pressed events</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyReleased-java.lang.String-java.lang.String-" target="_blank">public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-138" id="fn-138"><sup> 18 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyReleased-java.lang.String-java.lang.String-" target="_blank">public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-141" id="fn-141"><sup> 19 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle key released events</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyTyped-char-" target="_blank">public void onKeyTyped(char keyChar)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-139" id="fn-139"><sup> 19 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyTyped-char-" target="_blank">public void onKeyTyped(char keyChar)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-142" id="fn-142"><sup> 20 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle key typed events</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onTick-long-" target="_blank">public void onTick(long when)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-140" id="fn-140"><sup> 20 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onTick-long-" target="_blank">public void onTick(long when)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-143" id="fn-143"><sup> 21 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.</td>
 </tr>
-</table></div></figure><figure class="table table-like" id="table-53"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.9.4<span class="period">.</span></span><span class="space"> </span>Overridable Pad Socket Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</table></div></figure><figure class="table table-like" id="table-52"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.4.4<span class="period">.</span></span><span class="space"> </span>Overridable Pad Socket Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-" target="_blank">public void onClientOpened(int id)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-141" id="fn-141"><sup> 21 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-" target="_blank">public void onClientOpened(int id)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-144" id="fn-144"><sup> 22 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when a new client connection opens</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-" target="_blank">public void onClientOpened(int id)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-142" id="fn-142"><sup> 22 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-" target="_blank">public void onClientOpened(int id)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-145" id="fn-145"><sup> 23 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when a new client connection opens</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientReceived-int-java.lang.String-" target="_blank">public void onClientReceived(int id, java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-143" id="fn-143"><sup> 23 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientReceived-int-java.lang.String-" target="_blank">public void onClientReceived(int id, java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-146" id="fn-146"><sup> 24 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when a connected client socket receives a message</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientClosed-int-" target="_blank">public void onClientClosed(int id)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-144" id="fn-144"><sup> 24 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientClosed-int-" target="_blank">public void onClientClosed(int id)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-147" id="fn-147"><sup> 25 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when a client connection is closed</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientError-int-java.lang.String-" target="_blank">public void onClientError(int id, java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-145" id="fn-145"><sup> 25 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientError-int-java.lang.String-" target="_blank">public void onClientError(int id, java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-148" id="fn-148"><sup> 26 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when a connected client socket has has error</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientInfo-int-java.lang.String-" target="_blank">public void onClientInfo(int id, java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-146" id="fn-146"><sup> 26 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientInfo-int-java.lang.String-" target="_blank">public void onClientInfo(int id, java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-149" id="fn-149"><sup> 27 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when a connected client socket has some information to share</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStarted--" target="_blank">public void onServerStarted()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-147" id="fn-147"><sup> 27 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStarted--" target="_blank">public void onServerStarted()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-150" id="fn-150"><sup> 28 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when the listening server starts</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStopped--" target="_blank">public void onServerStopped()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-148" id="fn-148"><sup> 28 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStopped--" target="_blank">public void onServerStopped()</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-151" id="fn-151"><sup> 29 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when the listening server stops and all connections are closed</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerError-java.lang.String-" target="_blank">public void onServerError(java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-149" id="fn-149"><sup> 29 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerError-java.lang.String-" target="_blank">public void onServerError(java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-152" id="fn-152"><sup> 30 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when the listening server has an error</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerInfo-java.lang.String-" target="_blank">public void onServerInfo(java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-150" id="fn-150"><sup> 30 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerInfo-java.lang.String-" target="_blank">public void onServerInfo(java.lang.String msg)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-153" id="fn-153"><sup> 31 </sup></a>
 </td>
 <td class="l t b0 r0 l0 t0 lines">Invoked when the listening server has some information to share</td>
 </tr>
-</table></div></figure></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-121"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseClicked-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-122"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDoubleClicked-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-123"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMousePressed-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-124"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseReleased-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-125"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseMoved-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-126"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDragged-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-127"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseEntered-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-128"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseExited-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-129"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMousePressed-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-130"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseReleased-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-131"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseMoved-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-132"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseClicked-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-133"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDoubleClicked-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-134"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDragged-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-135"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseEntered-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-136"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseExited-double-double-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-137"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyPressed-java.lang.String-java.lang.String-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-138"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyReleased-java.lang.String-java.lang.String-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-139"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyTyped-char-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-140"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onTick-long-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-141"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-142"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-143"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientReceived-int-java.lang.String-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-144"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientClosed-int-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-145"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientError-int-java.lang.String-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-146"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientInfo-int-java.lang.String-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-147"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStarted--</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-148"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStopped--</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-149"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerError-java.lang.String-</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-150"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerInfo-java.lang.String-</code></div></div>
+</table></div></figure></section><section class="subsection" id="subsection-in-override-timer"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.4.3</span> <span class="title">Overridable Timer Event Methods</span>
+</h3>
+<div class="para" id="p-815"></div>
+<figure class="table table-like" id="table-53"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.4.5<span class="period">.</span></span><span class="space"> </span>Overridable Pad Mouse, Keyboard and Timer Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Timer.html#onStart(long)" target="_blank">public void onStart(long when)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-154" id="fn-154"><sup> 32 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle the Timer’s start event. The timer is started by invoking the startTimer() method. The <code class="code-inline tex2jax_ignore">when</code> parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Timer.html#onStop(long)" target="_blank">public void onStop(long when)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-155" id="fn-155"><sup> 33 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle the Timer’s stop event. The timer is started by invoking the stopTimer() method. The <code class="code-inline tex2jax_ignore">when</code> parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Timer.html#onTick(long)" target="_blank">public void onTick(long when)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-156" id="fn-156"><sup> 34 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">A method that can be overridden to handle the Timer’s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method. The <code class="code-inline tex2jax_ignore">when</code> parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.</td>
+</tr>
+</table></div></figure></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-123"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/package-summary.html</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-124"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseClicked-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-125"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDoubleClicked-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-126"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMousePressed-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-127"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseReleased-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-128"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseMoved-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-129"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseDragged-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-130"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseEntered-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-131"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Shape.html#onMouseExited-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-132"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMousePressed-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-133"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseReleased-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-134"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseMoved-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-135"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseClicked-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-136"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDoubleClicked-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-137"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseDragged-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-138"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseEntered-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-139"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onMouseExited-double-double-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-140"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyPressed-java.lang.String-java.lang.String-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-141"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyReleased-java.lang.String-java.lang.String-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-142"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onKeyTyped-char-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-143"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onTick-long-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-144"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-145"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientOpened-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-146"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientReceived-int-java.lang.String-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-147"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientClosed-int-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-148"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientError-int-java.lang.String-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-149"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onClientInfo-int-java.lang.String-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-150"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStarted--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-151"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerStopped--</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-152"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerError-java.lang.String-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-153"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Pad.html#onServerInfo-java.lang.String-</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-154"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Timer.html#onStart(long)</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-155"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Timer.html#onStop(long)</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-156"><div class="fn"><code class="code-inline tex2jax_ignore">doodlepad.org/dist/javadoc/doodlepad/Timer.html#onTick(long)</code></div></div>
 </div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section-93.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-95.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="section-in-overriding.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-in-polymorph.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

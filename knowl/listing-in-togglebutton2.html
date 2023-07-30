@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ToggleButton.java
+import doodlepad.*;
+
+// ToggleButton class extends RoundRect
+public class ToggleButton extends RoundRect {
+  private boolean on;                 // Button state
+
+  // Constructor
+  public ToggleButton(double x, double y, double w, double h) {
+    super(x, y, w, h, 20, 20);
+
+    this.on = false;                  // Starts off
+    this.setFillColor(200);
+    this.setText("Off");
+  }
+
+  // Handle button click event using inheritance
+  @Override
+  public void onMousePressed(double x, double y, int btn) {
+    super.onMousePressed(x, y, btn);  // invoke default behavior
+    this.toggle();                    // Toggle button
+  }
+
+  // Toggle button
+  public void toggle() {
+    this.on = !this.on;               // Flip state
+    if (this.on) {                    // Update graphic 
+      this.setFillColor(0, 255, 0);
+      this.setText("On");
+    } else {
+      this.setFillColor(200);
+      this.setText("Off");
+    }
+  }
+  // Test the class
+  public static void main(String[] args) {
+    // Create a new ToggleButton
+    ToggleButton myButton = new ToggleButton(100, 100, 75, 50);
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">10.3.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ToggleButton.java</code> (version 2)</figcaption></figure><span class="incontext"><a href="section-in-overriding.html#listing-in-togglebutton2" class="internal">in-context</a></span>
+</body>
+</html>

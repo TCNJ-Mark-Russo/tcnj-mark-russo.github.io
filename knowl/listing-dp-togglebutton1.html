@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ToggleButton.java
+import doodlepad.*;
+
+// ToggleButton class
+public class ToggleButton {
+  private RoundRect shpButton;  // Button Shape
+  private boolean on;           // Button state
+
+  // Constructor
+  public ToggleButton() {
+    // Create button shape and initialize
+    shpButton = new RoundRect(100, 100, 75, 50, 20, 20);
+
+    on = false;                 // Starts off
+    shpButton.setFillColor(200);
+
+    // Set button click event handler method
+    shpButton.setMousePressedHandler(this::onPressed);
+  }
+  // Handle mouse-pressed event
+  private void onPressed(Shape shp, double x, double y, int button) {
+    toggle();
+  }
+  // Toggle button
+  public void toggle() {
+    on = !on;               // Flip state
+    if (on) {               // Update graphic 
+      shpButton.setFillColor(0, 255, 0);
+    } else {
+      shpButton.setFillColor(200);
+    }
+  }
+
+  public static void main(String[] args) {
+  // Create a new ToggleButton
+    ToggleButton myButton = new ToggleButton();
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.6.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ToggleButton.java</code></figcaption></figure><span class="incontext"><a href="section-dp-events.html#listing-dp-togglebutton1" class="internal">in-context</a></span>
+</body>
+</html>

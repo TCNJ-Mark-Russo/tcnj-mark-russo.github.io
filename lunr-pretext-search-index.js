@@ -384,8 +384,8 @@ var ptx_lunr_docs = [
   "url": "section-pe-integers.html",
   "type": "Section",
   "number": "2.3",
-  "title": "Integer Primitive Types",
-  "body": " Integer Primitive Types  Java divides numeric values into two broad categories: integers and floating point numbers . An integer is a numeric value having no decimal places. It may optionally be preceded by a sign, like - or +, but it may not have commas or a decimal place (.). Consequently, integers are whole numbers (positive, negative or zero). No fractional part is permitted. Examples of Java integer value include 2, -64, 0, and 2147483647. We may enter these values directly into JShell, with no comma, at least up to a point. For example, if we enter 2147483647, JShell happily reads it and saves it with a new variable name generated automatically (beginning with $ and followed a number). But if we enter a value that is larger by 1, that is 2147483648, we see an error.   jshell> 2147483647; $1 ==> 2147483647 | created scratch variable $1 : int jshell> 2147483648 | Error: | integer number too large: 2147483648; | 2147483648 | ^   The error tells us that the number is too large . More specifically, the number is too large to be stored in the memory allotted by the default type that JShell uses to store integers values, int . To store 2147483648 in memory, we must choose a different Java integer type, one capable of holding larger numbers by virtue of being allocated more memory.  Recall that Java provides four primitive integer types, byte , short , int , long . We use the term primitive because these types are fundamental to the Java language. These four types are listed in the following table along with the amount of memory used to store each as well as the range of values that may be stored as min and max. All integer variables are stored as one of these types. JShell chooses int to store integers by default. We can see this in the $1 scratch variable above when JShell produces the output created scratch variable $1 : int . The final int tells us that $1 is of type int . Attempting to create the value 2147483648 and store it as an int produces an error because, according to the following table, that value is outside the range of values capable of being stored as an int . What we really need is a way to store the number as a long .   Integer types, range, and memory requirements.    type min max memory    byte -128 127 1 byte    short -32,768 32,767 2 bytes    int -2,147,483,648 2,147,483,647 4 bytes    long -9,223,372,036,854,770,000 9,223,372,036,854,770,000 8 bytes     Any time we enter a number directly into a Java program, even if we don't store it using a variable, Java must interpret it and hold in memory, at least temporarily. Whenever any value is entered directly into a Java program, such as a number, it is called a literal . Integer literals of type int are written as a sequence of digits, using no other special syntax. But other literal types require extra care, such as by adding trailing characters to indicate their type. For example, a long literal is written as a sequence of digits followed by a trailing L . The special trailing character tells Java to set aside twice the amont of memory used to store an int (8 bytes). To create a long literal, terminate the literal's sequence of integer digits with an L , as follows. Note that when we enter an integer value like this, JShell in verbose mode tells us that the type is long .   jshell> 2147483648L; $3 ==> 2147483648 | created scratch variable $3 : long   Java now knows you intend to create a long and so is declares the scratch variable $3 with a type of long and initializes it with the value entered. This time, because a variable of type long is capable of storing the number 2147483648, JShell does not produce an error. long literals are made up of digits and a trailing L >. Unfortunately, Java provides no way to express a short and byte literals. We can declare short and byte variables and initialise them, but we must use integer literals as the initial value. Java handles the automatic conversion from an int to a short and byte before it is written to the variable's memory. If the initial value is too big to fit, we'll see an error.  As we've seen, declaring a variable is accomplished by entering a type followed by the name of the variable we wish to create and a final semicolon. For example, let's say we want to create a variable named n of type long . We would enter long n; . Java assigns a default value of 0 to all new integer variables that have not been initialized.  With the variable n and its associated memory created, we may safely assign our larger number to the variable because as a type long it is capable of holding the larger value.   jshell> long n; n ==> 0 | created variable n : long jshell> n = 2147483648L; n ==> 2147483648 | assigned to n : long jshell>   Using similar procedures you may declare variables with one of the four integer types and assign values. You may also use these variable names any place you would normally use its associated value, such as in a mathematical expression. Make sure to be careful that all variables assigned values have enough memory to hold assigned values. Assigning an int value to a long variable is permitted, but not the other way around.   Declare and initialize integer variables of all four integer types.  Write simple mathematical expressions that combine the different types.  What do you notice about the result type when you add an int and a long . Why is this the case?   "
+  "title": "Integer Primitives",
+  "body": " Integer Primitives  Java divides numeric values into two broad categories: integers and floating point numbers . An integer is a numeric value having no decimal places. It may optionally be preceded by a sign, like - or +, but it may not have commas or a decimal place (.). Consequently, integers are whole numbers (positive, negative or zero). No fractional part is permitted. Examples of Java integer value include 2, -64, 0, and 2147483647. We may enter these values directly into JShell, with no comma, at least up to a point. For example, if we enter 2147483647, JShell happily reads it and saves it with a new variable name generated automatically (beginning with $ and followed a number). But if we enter a value that is larger by 1, that is 2147483648, we see an error.   jshell> 2147483647; $1 ==> 2147483647 | created scratch variable $1 : int jshell> 2147483648 | Error: | integer number too large: 2147483648; | 2147483648 | ^   The error tells us that the number is too large . More specifically, the number is too large to be stored in the memory allotted by the default type that JShell uses to store integers values, int . To store 2147483648 in memory, we must choose a different Java integer type, one capable of holding larger numbers by virtue of being allocated more memory.  Recall that Java provides four primitive integer types, byte , short , int , long . We use the term primitive because these types are fundamental to the Java language. These four types are listed in the following table along with the amount of memory used to store each as well as the range of values that may be stored as min and max. All integer variables are stored as one of these types. JShell chooses int to store integers by default. We can see this in the $1 scratch variable above when JShell produces the output created scratch variable $1 : int . The final int tells us that $1 is of type int . Attempting to create the value 2147483648 and store it as an int produces an error because, according to the following table, that value is outside the range of values capable of being stored as an int . What we really need is a way to store the number as a long .   Integer types, range, and memory requirements.    type min max memory    byte -128 127 1 byte    short -32,768 32,767 2 bytes    int -2,147,483,648 2,147,483,647 4 bytes    long -9,223,372,036,854,770,000 9,223,372,036,854,770,000 8 bytes     Any time we enter a number directly into a Java program, even if we don't store it using a variable, Java must interpret it and hold in memory, at least temporarily. Whenever any value is entered directly into a Java program, such as a number, it is called a literal . Integer literals of type int are written as a sequence of digits, using no other special syntax. But other literal types require extra care, such as by adding trailing characters to indicate their type. For example, a long literal is written as a sequence of digits followed by a trailing L . The special trailing character tells Java to set aside twice the amont of memory used to store an int (8 bytes). To create a long literal, terminate the literal's sequence of integer digits with an L , as follows. Note that when we enter an integer value like this, JShell in verbose mode tells us that the type is long .   jshell> 2147483648L; $3 ==> 2147483648 | created scratch variable $3 : long   Java now knows you intend to create a long and so is declares the scratch variable $3 with a type of long and initializes it with the value entered. This time, because a variable of type long is capable of storing the number 2147483648, JShell does not produce an error. long literals are made up of digits and a trailing L >. Unfortunately, Java provides no way to express a short and byte literals. We can declare short and byte variables and initialise them, but we must use integer literals as the initial value. Java handles the automatic conversion from an int to a short and byte before it is written to the variable's memory. If the initial value is too big to fit, we'll see an error.  As we've seen, declaring a variable is accomplished by entering a type followed by the name of the variable we wish to create and a final semicolon. For example, let's say we want to create a variable named n of type long . We would enter long n; . Java assigns a default value of 0 to all new integer variables that have not been initialized.  With the variable n and its associated memory created, we may safely assign our larger number to the variable because as a type long it is capable of holding the larger value.   jshell> long n; n ==> 0 | created variable n : long jshell> n = 2147483648L; n ==> 2147483648 | assigned to n : long jshell>   Using similar procedures you may declare variables with one of the four integer types and assign values. You may also use these variable names any place you would normally use its associated value, such as in a mathematical expression. Make sure to be careful that all variables assigned values have enough memory to hold assigned values. Assigning an int value to a long variable is permitted, but not the other way around.   Declare and initialize integer variables of all four integer types.  Write simple mathematical expressions that combine the different types.  What do you notice about the result type when you add an int and a long . Why is this the case?   "
 },
 {
   "id": "table-pe-int-info",
@@ -438,8 +438,8 @@ var ptx_lunr_docs = [
   "url": "section-pe-chars.html",
   "type": "Section",
   "number": "2.4",
-  "title": "Character Primitive Type",
-  "body": " Character Primitive Type  In Java, the char primitive type is used to represent a single character. It can hold any character from the ASCII or Unicode character sets, which includes characters from various languages and scripts.  The char type is declared using the keyword char and occupies 2 bytes of memory. It can store characters using either their Unicode representation or the corresponding escape sequences. For example:  char letterA = 'A'; char digit7 = '7'; char euroSymbol = '\\u20AC'; \/\/ Unicode representation for the Euro symbol char newLine = '\\n'; \/\/ Escape sequence for a new line  In the above examples, letterA stores the character 'A', digit7 stores the character '7', euroSymbol stores the Euro symbol (€), and newLine stores the newline command character.  Java provides various methods and operators to work with char values. Some commonly used methods include:     Character.isLetter(char ch) Checks if the specified character is a letter.    Character.isDigit(char ch) Checks if the specified character is a digit.    Character.isWhitespace(char ch) Checks if the specified character is a whitespace character.    Character.toLowerCase(char ch) Converts the specified character to lowercase.    Character.toUpperCase(char ch) Converts the specified character to uppercase.     Note that char values can also be used in arithmetic expressions, as they are internally represented as two-byte integers. For example, in JShell:   jshell> char ch; \/\/ Declare a char variable ch ch ==> '\\000' \/\/ Default value of 0 | created variable ch : char jshell> ch = 'A' + 1; \/\/ Assign 'A' + 1 to it ch ==> 'B' | assigned to ch : char jshell> ch \/\/ The value of ch is 'B' ch ==> 'B' \/\/ ASCII code for 'A' is 65 and 'B' is 66 | value of ch : char jshell>  Overall, the char primitive type in Java allows you to work with individual characters, making it useful for text processing, string manipulation, and various other tasks involving character-level operations.   Using JShell in verbose mode, enter a char literal using the single-quote notation. Make sure that JShell tells you that your literal is of type char .  What happens if you enter a multi-char char literal, like 'abc' ? Why do you get that response?  char s are stored as two-byte numbers. To what does the expression 'A' + 0; evaluate?  What does the previous result tell you about the way capital-A is stored in memory? Is that consistent with the corresponding ASCII Table entry for capital-A?   "
+  "title": "Character Primitives",
+  "body": " Character Primitives  In Java, the char primitive type is used to represent a single character. It can hold any character from the ASCII or Unicode character sets, which includes characters from various languages and scripts.  The char type is declared using the keyword char and occupies 2 bytes of memory. It can store characters using either their Unicode representation or the corresponding escape sequences. For example:  char letterA = 'A'; char digit7 = '7'; char euroSymbol = '\\u20AC'; \/\/ Unicode representation for the Euro symbol char newLine = '\\n'; \/\/ Escape sequence for a new line  In the above examples, letterA stores the character 'A', digit7 stores the character '7', euroSymbol stores the Euro symbol (€), and newLine stores the newline command character.  Java provides various methods and operators to work with char values. Some commonly used methods include:     Character.isLetter(char ch) Checks if the specified character is a letter.    Character.isDigit(char ch) Checks if the specified character is a digit.    Character.isWhitespace(char ch) Checks if the specified character is a whitespace character.    Character.toLowerCase(char ch) Converts the specified character to lowercase.    Character.toUpperCase(char ch) Converts the specified character to uppercase.     Note that char values can also be used in arithmetic expressions, as they are internally represented as two-byte integers. For example, in JShell:   jshell> char ch; \/\/ Declare a char variable ch ch ==> '\\000' \/\/ Default value of 0 | created variable ch : char jshell> ch = 'A' + 1; \/\/ Assign 'A' + 1 to it ch ==> 'B' | assigned to ch : char jshell> ch \/\/ The value of ch is 'B' ch ==> 'B' \/\/ ASCII code for 'A' is 65 and 'B' is 66 | value of ch : char jshell>  Overall, the char primitive type in Java allows you to work with individual characters, making it useful for text processing, string manipulation, and various other tasks involving character-level operations.   Using JShell in verbose mode, enter a char literal using the single-quote notation. Make sure that JShell tells you that your literal is of type char .  What happens if you enter a multi-char char literal, like 'abc' ? Why do you get that response?  char s are stored as two-byte numbers. To what does the expression 'A' + 0; evaluate?  What does the previous result tell you about the way capital-A is stored in memory? Is that consistent with the corresponding ASCII Table entry for capital-A?   "
 },
 {
   "id": "table-3",
@@ -492,8 +492,8 @@ var ptx_lunr_docs = [
   "url": "section-pe-floats.html",
   "type": "Section",
   "number": "2.5",
-  "title": "Floating Point Primitive Number Types",
-  "body": " Floating Point Primitive Number Types   In Java, the float and double primitive types are used to represent floating-point numbers. Both types are used for storing numeric values with a fractional part. The main difference between the two lies in the precision and range of values they can store.  The float type is a single-precision floating-point number, while the double type is a double-precision floating-point number. Here are the key characteristics of each type:    Floating-point types, range, and memory requirements.    type  type suffix  min  max  memory  precision    float  F or f    4 bytes  6-7 digits    double  D or d    8 bytes  15-16 digits     Due to their larger size and higher precision, double is the preferred choice when working with floating-point numbers in Java. Use double s unless there are specific memory or performance constraints that necessitate the use of float . double is the default floating-point number type; if you write down a floating-point number literal with no special literal type suffix character, the type of that floating-point value is double . The literal 3.14 is a double . Adding an F or f to the end of a floating-point literal, like 3,14F , tells Java that you want the number of be a float .  Both float and double types support standard arithmetic and mathematical operations, such as addition, subtraction, multiplication, and division. Java provides built-in mathematical functions in the Math class that can be used with float and double values.  When performing calculations involving floating-point numbers, it is important to be aware of the limitations of floating-point representation. Floating-point numbers are stored as approximations, and certain calculations can introduce rounding errors. Therefore, comparing floating-point numbers for equality is not recommended. Instead, it is common practice to compare the difference between two floating-point values to a small epsilon value.  Here's an example in JShell showcasing the usage of float and double types:   jshell> float myFloat = 3.14F; myFloat ==> 3.14 | created variable myFloat : float jshell> double myDouble = 3.14; myDouble ==> 3.14 | created variable myDouble : double jshell> float result = myFloat * 2; result ==> 6.28 | created variable result : float jshell> double otherResult = myDouble \/ 2; otherResult ==> 1.57 | created variable otherResult : double jshell>  In summary, the float and double primitive types in Java are used for storing floating-point numbers. The choice between them depends on the desired precision and range of values. double provides higher precision and is the default choice, while float is used in situations where memory or performance constraints exist.  "
+  "title": "Floating Point Primitives",
+  "body": " Floating Point Primitives   In Java, the float and double primitive types are used to represent floating-point numbers. Both types are used for storing numeric values with a fractional part. The main difference between the two lies in the precision and range of values they can store.  The float type is a single-precision floating-point number, while the double type is a double-precision floating-point number. Here are the key characteristics of each type:    Floating-point types, range, and memory requirements.    type  type suffix  min  max  memory  precision    float  F or f    4 bytes  6-7 digits    double  D or d    8 bytes  15-16 digits     Due to their larger size and higher precision, double is the preferred choice when working with floating-point numbers in Java. Use double s unless there are specific memory or performance constraints that necessitate the use of float . double is the default floating-point number type; if you write down a floating-point number literal with no special literal type suffix character, the type of that floating-point value is double . The literal 3.14 is a double . Adding an F or f to the end of a floating-point literal, like 3,14F , tells Java that you want the number of be a float .  Both float and double types support standard arithmetic and mathematical operations, such as addition, subtraction, multiplication, and division. Java provides built-in mathematical functions in the Math class that can be used with float and double values.  When performing calculations involving floating-point numbers, it is important to be aware of the limitations of floating-point representation. Floating-point numbers are stored as approximations, and certain calculations can introduce rounding errors. Therefore, comparing floating-point numbers for equality is not recommended. Instead, it is common practice to compare the difference between two floating-point values to a small epsilon value.  Here's an example in JShell showcasing the usage of float and double types:   jshell> float myFloat = 3.14F; myFloat ==> 3.14 | created variable myFloat : float jshell> double myDouble = 3.14; myDouble ==> 3.14 | created variable myDouble : double jshell> float result = myFloat * 2; result ==> 6.28 | created variable result : float jshell> double otherResult = myDouble \/ 2; otherResult ==> 1.57 | created variable otherResult : double jshell>  In summary, the float and double primitive types in Java are used for storing floating-point numbers. The choice between them depends on the desired precision and range of values. double provides higher precision and is the default choice, while float is used in situations where memory or performance constraints exist.  "
 },
 {
   "id": "table-pe-float-info",
@@ -1420,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.6",
   "title": "Event-Driven Programming",
-  "body": " Event-Driven Programming   Perhaps the most distinguishing feature of the DoodlePad library is the ease and extent to which it supports event driven programming. All DoodlePad Shape objects as well as the Pad object may be set up to invoke custom methods in response to a wide range of user interaction. For example, you may want the change the fill cellor of one or more shapes when the user hovers over the shape or clicks the shape with the mouse. Alternatively, you may want to move a Shape in specific direction when the user presses one of the arrow keys. The Pad object implements timer functionality that raises tick events at a user-specified rate. You may want to invoke one or more of your custom methods each time the Pad's timer ticks, which may be accomplished using the Pad's tick event.  By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don't want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.  This ability to respond to mouse, keyboard, timer and other events allows DoodlePad to be used to develop a wide range of fun interactive graphics programs that are limited only by your imagination.    Connecting Events and Methods with Method References  The simplest way to invoke a method in response to an event is to connect the event associated with a given object to one of your methods. The most important prerequisite for making this connection is to ensure that your event handler method's signature matches what the event expects (by implementing the ShapeMouseEventHandler interface). Let's say you want to invoke a method when the user clicks on a Shape object of some kind. All mouse events, including the click event, requires that the method to be connected have the following four parameters in the given order:   Mouse Event Parameters    #  Type  Description    1.  Shape  The Shape object that initiated the mouse event    2.  double  The x-coordinate at which the event occurred    3.  double  The y-coordinate at which the event occurred    4.  int  A number identifying the mouse button used     For example, the following method may be invoked by a mouse event because it implements the necessary four parameter types in the specified order.    public void onPressed(Shape shp, double, x, double y, int button) { System.out.println(\"The mouse was pressed at coordinates (\" + x + \",\" + y + \")\"); }    Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the :: binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.  As an example, let's say your class implements the previous onPress method, and you would like to invoke this method when the mouse is pressed on an Oval Shape object, a reference to which was saved as an instance variable named myOval. The following statement establishes this connection, so that when the mouse is pressed on myOval the onPress method implemented by this will be invoked.    myOval.setMousePressedHandler( this::onPress );    The inherited setMousePressedHandler(...) method is what is used to establish the connection for mouse-pressed events.  Following is a complete program demonstrating event handing in DoodlePad using method references.   PushButton.java   \/\/ PushButton.java import doodlepad.*; public class PushButton { private RoundRect shpButton; \/\/ Button Shape private boolean isOn; \/\/ Button state public PushButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); shpButton.setFillcellor(200); \/\/ Starts off isOn = false; \/\/ Set button click event handler method shpButton.setMousePressedHandler( this::onPressed ); } private void onPressed(Shape shp, double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill cellor based on state if (isOn) { shpButton.setFillcellor(0, 255, 0); } else { shpButton.setFillcellor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton PushButton myPushButton = new PushButton(); } }     In this example we implement a simple graphical toggle button class named PushButton. For the button graphic we use a RoundRect Shape object. The PushButton constructor creates the RoundRect object and initializes its fill cellors to gray. The PushButton class tracks its state using an isOn boolean instance variable. The class is initialized with isOn = false implying the button is initially off. The constructor also uses the setMousePressedHandler method to indicate that the object's onPressed method should be invoked when the RoundRect shape is pressed with the mouse. The onPressed method toggles the value of isOn and then resets the RoundRect fill cellor based on the current PushButton state. When the RoundRect is pressed with the mouse, the PushButton object state is toggled and the RoundRect fill cellor changes to green, indicating that the button was pressed. A second press toggles PushButton off and sets the RoundRect fill cellor back to gray.    PushButton.java     The image on the right shows the output from running this example program and pressing the RoundRect Shape once with the mouse.    Shape Mouse Event-Related Methods  A wide variety of mouse events may be handled in a similar manner. Following is a list of all methods used to connect a mouse event with a Shape. Each method is used to associate a particular mouse event with a custom method. Each of the following methods takes a method reference as its only parameter. Each method reference must identify a method with a signature that matches the previously listed four parameter types in the given order, otherwise the compiler will complain.   Shape Mouse Event Methods    Method  Description    public void setMouseClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.    public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.    public void setMousePressedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.    public void setMouseReleasedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.    public void setMouseMovedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.    public void setMouseDraggedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.    public void setMouseEnteredHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.    public void setMouseExitedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.       Other Event-Related Shape Methods  Shapes triggers one additional event beyond the above list of mouse events. The selectionChanged event is triggered whenever the selection status of a Shape changes. For example, if the user clicks on a selectable Shape that is not already selected, the Shape becomes selected, which is indicated by a light gray rectangle drawn around the Shape. If a suitable event handler method is attached to the Shape's selectionChange event, then as the Shape becomes selected, the event method will be invoked, indicating the Shape object whose selection state changed as well as if the Shape is currently selected. Likewise, if another Shape is clicked causing the currently selected Shape to be unselected, the event handler method will once again be invoked.  Both the method reference and overriding methods of handling triggered selectionChanged events are supported. Event handler methods to be attached to the selectionChanged event trigger using the method reference approach must have a signature with two parameters: Shape and boolean. This implements the ShapeSelectionEventHandler interface. The first parameter indicates the Shape object whose selection changed, and the second parameter indicates if that Shape is currently selected (true) or not (false).  The following two methods are used for handling triggered selectionChanged events. The first method attaches an event handler using the method reference approach. Override the second method to handle the triggered event using the method overriding approach.   Shape Selection Event Methods    Method  Description    public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)  Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the ShapeSelectionEventHandler interface.    public void onSelectionChanged(boolean selected)  Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.       Pad Mouse Event-Related Methods   Pad Mouse Event-Related Methods    Method  Description    public void setMousePressedHandler(PadMouseEventHandler handler)  Assign an onMousePressed event handler using a method reference.    public void setMouseReleasedHandler(PadMouseEventHandler handler)  Assign an onMouseReleased event handler using a method reference.    public void setMouseMovedHandler(PadMouseEventHandler handler)  Assign an onMouseMoved event handler using a method reference.    public void setMouseClickedHandler(PadMouseEventHandler handler)  Assign an onMouseClicked event handler using a method reference.    public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)  Assign an onMouseDoubleClicked event handler using a method reference.    public void setMouseDraggedHandler(PadMouseEventHandler handler)  Assign an onMouseDragged event handler using a method reference.    public void setMouseEnteredHandler(PadMouseEventHandler handler)  Assign an onMouseEntered event handler using a method reference.    public void setMouseExitedHandler(PadMouseEventHandler handler)  Assign an onMouseExited event handler using a method reference.    public void addMouseListener(PadMouseListener o)  Add object to the list of items that are notified on Pad's mouse events.    public void removeMouseListener(PadMouseListener o)  Remove object from Pad's mouse listener list.       Pad Keyboard Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description   public void setKeyPressedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyPressed event handler using a method reference.  public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyReleased event handler using a method reference.  public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler) Assign an onKeyTyped event handler using a method reference.  public void addKeyListener(PadKeyListener o) Add object to the list of items that are notified on Pad's key events.  public void removeKeyListener(PadKeyListener o) Remove object from Pad's key listener list.      Pad Timer Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description    public void setTickHandler(Pad.PadTimerEventHandler handler)  Assign an onTick event handler using a method reference.    public void addTickListener(PadTickListener o)  Add object to the list if items that are notified on Pad's timer tick action.    public void removeTickListener(PadTickListener o)  Remove object from Pad's timer tick action listener list.       Box Driver Example  In the following example a blue Rectangle is created and positioned on a Pad object. The default Pad object's keyPressed event is handled with a custom method that reacts to the arrow keys being pressed. Only arrow keys are tested; all other keys are ignore. When the down arrow is pressed, the box object's move(...) method is used to move the box 10 pixels down (by increasing its y-location). Likewise, the remaining three arrow keys move the box left, right or up, depending upon the key pressed. The result is a simple program that can be used to drive a box around the Pad using the arrow keys.  One item to note is the way the key String being pressed is tested. For all arrows keys the keyText String argument passed to the event handler method is compared to both a String describing the key (e.g. \"Left\") and a symbol (e.g. \"←\"). An arrow key is identified with a positive match to either the description or symbol String. The reason we test both is that the String passed to the event handler may be different depending upon your operating system. Specifically, Windows sets keyText to key description (\"Left\") while macOS uses a symbol (e.g. \"←\"). Give it a try.   BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillColor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }     "
+  "body": " Event-Driven Programming   Perhaps the most distinguishing feature of the DoodlePad library is the ease and extent to which it supports event driven programming. All DoodlePad Shape objects as well as the Pad object may be set up to invoke custom methods in response to a wide range of user interaction. For example, you may want the change the fill color of one or more shapes when the user hovers over the shape or clicks the shape with the mouse. Alternatively, you may want to move a Shape in specific direction when the user presses one of the arrow keys. The Pad object implements timer functionality that raises tick events at a user-specified rate. You may want to invoke one or more of your custom methods each time the Pad's timer ticks, which may be accomplished using the Pad's tick event.  By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don't want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.  This ability to respond to mouse, keyboard, timer and other events allows DoodlePad to be used to develop a wide range of fun interactive graphics programs that are limited only by your imagination.    Connecting Events and Methods with Method References  The simplest way to invoke a method in response to an event is to connect the event associated with a given object to one of your methods. The most important prerequisite for making this connection is to ensure that your event handler method's signature matches what the event expects (by implementing the ShapeMouseEventHandler interface). Let's say you want to invoke a method when the user clicks on a Shape object of some kind. All mouse events, including the click event, requires that the method to be connected have the following four parameters in the given order:   Mouse Event Parameters    #  Type  Description    1.  Shape  The Shape object that initiated the mouse event    2.  double  The x-coordinate at which the event occurred    3.  double  The y-coordinate at which the event occurred    4.  int  A number identifying the mouse button used     For example, the following method may be invoked by a mouse event because it implements the necessary four parameter types in the specified order.    public void onPressed(Shape shp, double, x, double y, int button) { System.out.println(\"The mouse was pressed at coordinates (\" + x + \",\" + y + \")\"); }    Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the :: binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.  As an example, let's say your class implements the previous onPress method, and you would like to invoke this method when the mouse is pressed on an Oval Shape object, a reference to which was saved as an instance variable named myOval. The following statement establishes this connection, so that when the mouse is pressed on myOval the onPress method implemented by this will be invoked.    myOval.setMousePressedHandler( this::onPress );    The inherited setMousePressedHandler(...) method is what is used to establish the connection for mouse-pressed events.  Following is a complete program demonstrating event handing in DoodlePad using method references.   ToggleButton.java   \/\/ ToggleButton.java import doodlepad.*; \/\/ ToggleButton class public class ToggleButton { private RoundRect shpButton; \/\/ Button Shape private boolean on; \/\/ Button state \/\/ Constructor public ToggleButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); on = false; \/\/ Starts off shpButton.setFillColor(200); \/\/ Set button click event handler method shpButton.setMousePressedHandler(this::onPressed); } \/\/ Handle mouse-pressed event private void onPressed(Shape shp, double x, double y, int button) { toggle(); } \/\/ Toggle button public void toggle() { on = !on; \/\/ Flip state if (on) { \/\/ Update graphic shpButton.setFillColor(0, 255, 0); } else { shpButton.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new ToggleButton ToggleButton myButton = new ToggleButton(); } }     In this example we implement a simple graphical toggle button class named ToggleButton. For the button graphic we use a RoundRect Shape object. The ToggleButton class tracks its state using an on boolean instance variable. Its constructor creates the RoundRect object and initializes its fill color to gray and on = false implying the button is initially off. The constructor also uses the setMousePressedHandler(…) method to set the object's onPressed(…) method to be invoked when the RoundRect shape is pressed with the mouse. The onPressed(…) method invokes a toggle() method that flips the value of on and then resets the RoundRect fill color based on the current object state.    ToggleButton.java     The image on the right shows the output from running this example program and pressing the RoundRect Shape once with the mouse.    Shape Mouse Event-Related Methods  A wide variety of mouse events are captured and can be handled in a similar manner. Following is a list of all methods used to connect a mouse event with a Shape. Each method is used to associate a particular mouse event with a custom method. Each of the following methods takes a method reference as its only parameter. Each method reference must identify a method with a signature that matches the previously listed four parameter types in the given order, otherwise the compiler will complain.   Shape Mouse Event Methods    Method  Description    public void setMouseClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.    public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.    public void setMousePressedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.    public void setMouseReleasedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.    public void setMouseMovedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.    public void setMouseDraggedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.    public void setMouseEnteredHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.    public void setMouseExitedHandler(ShapeMouseEventHandler handler)  Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.       Other Event-Related Shape Methods  Shapes triggers one additional event beyond the above list of mouse events. The selectionChanged event is triggered whenever the selection status of a Shape changes. For example, if the user clicks on a selectable Shape that is not already selected, the Shape becomes selected, which is indicated by a light gray rectangle drawn around the Shape. If a suitable event handler method is attached to the Shape's selectionChange event, then as the Shape becomes selected, the event method will be invoked, indicating the Shape object whose selection state changed as well as if the Shape is currently selected. Likewise, if another Shape is clicked causing the currently selected Shape to be unselected, the event handler method will once again be invoked.  Both the method reference and overriding methods of handling triggered selectionChanged events are supported. Event handler methods to be attached to the selectionChanged event trigger using the method reference approach must have a signature with two parameters: Shape and boolean. This implements the ShapeSelectionEventHandler interface. The first parameter indicates the Shape object whose selection changed, and the second parameter indicates if that Shape is currently selected (true) or not (false).  The following two methods are used for handling triggered selectionChanged events. The first method attaches an event handler using the method reference approach. Override the second method to handle the triggered event using the method overriding approach.   Shape Selection Event Methods    Method  Description    public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)  Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the ShapeSelectionEventHandler interface.    public void onSelectionChanged(boolean selected)  Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.       Pad Mouse Event-Related Methods   Pad Mouse Event-Related Methods    Method  Description    public void setMousePressedHandler(PadMouseEventHandler handler)  Assign an onMousePressed event handler using a method reference.    public void setMouseReleasedHandler(PadMouseEventHandler handler)  Assign an onMouseReleased event handler using a method reference.    public void setMouseMovedHandler(PadMouseEventHandler handler)  Assign an onMouseMoved event handler using a method reference.    public void setMouseClickedHandler(PadMouseEventHandler handler)  Assign an onMouseClicked event handler using a method reference.    public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)  Assign an onMouseDoubleClicked event handler using a method reference.    public void setMouseDraggedHandler(PadMouseEventHandler handler)  Assign an onMouseDragged event handler using a method reference.    public void setMouseEnteredHandler(PadMouseEventHandler handler)  Assign an onMouseEntered event handler using a method reference.    public void setMouseExitedHandler(PadMouseEventHandler handler)  Assign an onMouseExited event handler using a method reference.    public void addMouseListener(PadMouseListener o)  Add object to the list of items that are notified on Pad's mouse events.    public void removeMouseListener(PadMouseListener o)  Remove object from Pad's mouse listener list.       Pad Keyboard Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description   public void setKeyPressedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyPressed event handler using a method reference.  public void setKeyReleasedHandler(Pad.PadKeyEventHandler handler) Assign an onKeyReleased event handler using a method reference.  public void setKeyTypedHandler(Pad.PadKeyTypedEventHandler handler) Assign an onKeyTyped event handler using a method reference.  public void addKeyListener(PadKeyListener o) Add object to the list of items that are notified on Pad's key events.  public void removeKeyListener(PadKeyListener o) Remove object from Pad's key listener list.      Pad Timer Event-Related Methods   Pad Keyboard Event-Related Methods    Method  Description    public void setTickHandler(Pad.PadTimerEventHandler handler)  Assign an onTick event handler using a method reference.    public void addTickListener(PadTickListener o)  Add object to the list if items that are notified on Pad's timer tick action.    public void removeTickListener(PadTickListener o)  Remove object from Pad's timer tick action listener list.       Box Driver Example  In the following example a blue Rectangle is created and positioned on a Pad object. The default Pad object's keyPressed event is handled with a custom method that reacts to the arrow keys being pressed. Only arrow keys are tested; all other keys are ignore. When the down arrow is pressed, the box object's move(...) method is used to move the box 10 pixels down (by increasing its y-location). Likewise, the remaining three arrow keys move the box left, right or up, depending upon the key pressed. The result is a simple program that can be used to drive a box around the Pad using the arrow keys.  One item to note is the way the key String being pressed is tested. For all arrows keys the keyText String argument passed to the event handler method is compared to both a String describing the key (e.g. \"Left\") and a symbol (e.g. \"←\"). An arrow key is identified with a positive match to either the description or symbol String. The reason we test both is that the String passed to the event handler may be different depending upon your operating system. Specifically, Windows sets keyText to key description (\"Left\") while macOS uses a symbol (e.g. \"←\"). Give it a try.   BoxDriver.java   \/\/ BoxDriver.java import doodlepad.*; public class BoxDriver { \/\/ The box to drive around the Pad private Rectangle box; public BoxDriver() { \/\/ Explicitly create a Pad and handle key-pressed event Pad p = new Pad(600, 600); p.setKeyPressedHandler( this::onKeyPressed ); \/\/ Create ans style the box to drive box = new Rectangle(100, 100, 50, 50); box.setFillColor(0, 0, 255); } \/\/ Key pressed event handler moves box according key pressed public void onKeyPressed(Pad p, String keyText, String keyMods) { if (keyText.equals(\"Left\") || keyText.equals(\"←\")) { box.move(-10, 0); } else if (keyText.equals(\"Right\") || keyText.equals(\"→\")) { box.move(10, 0); } else if (keyText.equals(\"Up\") || keyText.equals(\"↑\")) { box.move(0, -10); } else if (keyText.equals(\"Down\") || keyText.equals(\"↓\")) { box.move(0, 10); } } public static void main(String[] args) { BoxDriver myBoxDriver = new BoxDriver(); } }     "
 },
 {
   "id": "table-30",
@@ -1450,13 +1450,13 @@ var ptx_lunr_docs = [
   "body": "  myOval.setMousePressedHandler( this::onPress );   "
 },
 {
-  "id": "listing-dp-pushbutton",
+  "id": "listing-dp-togglebutton1",
   "level": "2",
-  "url": "section-dp-events.html#listing-dp-pushbutton",
+  "url": "section-dp-events.html#listing-dp-togglebutton1",
   "type": "Listing",
   "number": "4.6.4",
   "title": "",
-  "body": " PushButton.java   \/\/ PushButton.java import doodlepad.*; public class PushButton { private RoundRect shpButton; \/\/ Button Shape private boolean isOn; \/\/ Button state public PushButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); shpButton.setFillcellor(200); \/\/ Starts off isOn = false; \/\/ Set button click event handler method shpButton.setMousePressedHandler( this::onPressed ); } private void onPressed(Shape shp, double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill cellor based on state if (isOn) { shpButton.setFillcellor(0, 255, 0); } else { shpButton.setFillcellor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton PushButton myPushButton = new PushButton(); } }   "
+  "body": " ToggleButton.java   \/\/ ToggleButton.java import doodlepad.*; \/\/ ToggleButton class public class ToggleButton { private RoundRect shpButton; \/\/ Button Shape private boolean on; \/\/ Button state \/\/ Constructor public ToggleButton() { \/\/ Create button shape and initialize shpButton = new RoundRect(100, 100, 75, 50, 20, 20); on = false; \/\/ Starts off shpButton.setFillColor(200); \/\/ Set button click event handler method shpButton.setMousePressedHandler(this::onPressed); } \/\/ Handle mouse-pressed event private void onPressed(Shape shp, double x, double y, int button) { toggle(); } \/\/ Toggle button public void toggle() { on = !on; \/\/ Flip state if (on) { \/\/ Update graphic shpButton.setFillColor(0, 255, 0); } else { shpButton.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new ToggleButton ToggleButton myButton = new ToggleButton(); } }   "
 },
 {
   "id": "figure-13",
@@ -1465,7 +1465,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "4.6.5",
   "title": "",
-  "body": " PushButton.java   "
+  "body": " ToggleButton.java   "
 },
 {
   "id": "table-31",
@@ -2959,7 +2959,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.2",
   "title": "Constructors",
-  "body": " Constructors   Most classes can be instantiated. But to be useful, these instantiated objects must be able to declare and manage their own data. This starts with the declaration of a special, method-like construct added to a class definition called a constructor .    Anatomy of a Constructor  A constructor is a block of code that is invoked when an object is instantiated using the new keyword. The statements in the constructor perfrom important initialization tasks required by an object is instantiated. outlines the unique makeup of a constructor and its five critical features.   Anatomy of a Constructor    The name of a constructor must match the name of its class.  Constructor parameter declarations are no different than method parameters.  A constructor has no return type, not even void .  There can be no return statement in a constructor.  To access the current object being initialized, use the scope defined by the this keyword.      The this Keyword  As a demonstration, let's create a graphic class named LED. This class will be a circular graphic object with width and height of 30 pixels. The graphic is filled with gray when it is off and red when it is on. When deciding what to include in any class, we need to stop and think about what is necessary to adequatley track the state of each instance. For an LED, we need to track whether it is on or off. We also need to manage its graphic representation, in this case an Oval object.  In we start the definition of our LED by declaring a class named LED and two instance variables named on and light . We call them instance variables because every instance of the class will get its own copy of these variables. We did not use the keyword static when declaring them; which makes them instance variables . Using static would have made them class variables , defined within the scope of the class. Because there is only one of any class, there would be only one of each static variable.  We also used the keyword private instead of our usual public visibility specifyer when declaring our LED instance variables. Using private ensures that the instance variables are not accessible from outside each instance. Instance variables declared with private visibility may be accessed only from within the scope of an object. No access from outside the object is permitted. We now have two visibility specifiers for the declaration of methods and instance variables, public and private .   LED.java (step 1)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object }    When we instantiate a new LED object we want to initialize these variables. That's where the constructor comes in. adds an LED constructor to our LED class declaration.   LED.java (step 2)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor (**NEW**) public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } }    Let compare our added LED constructor to the critical features given in .   The name of the constructor matches the name of the class, LED .  Two parameters are declared just like any method.  There is no return type, not even void .  There is no return statement in the body of the constructor.  And finally, instance variables are accessed from within the constructor using the this keyword.   The expressions this.on and this.light access and initialize the instance variables declared outside the scope of the constructor but within the scope of the object. All constructors must follow these same rules listed in .  Let's add a main(…) method to test our initial Java LED class. It is very convenient to use the main(…) method to test a class. As we'll see later, as our programs grow we rarely invoke an individual class's main(…) method in favor of using a special driver class with a main(…) method designed specifically to start up a program. To test our class we create two LED instances at different locations. See and . As expected, in two LED objects are shown at the given starting locations with a dark gray fill color.   LED.java (step 3)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } } \/\/ --- Test LED (**NEW**) public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); }     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED    LED.java (step 3)     "
+  "body": " Constructors   Most classes can be instantiated. But to be useful, these instantiated objects must be able to declare and manage their own data. This starts with the declaration of a special, method-like construct added to a class definition called a constructor .    Anatomy of a Constructor  A constructor is a block of code that is invoked when an object is instantiated using the new keyword. The statements in the constructor perfrom important initialization tasks required by an object is instantiated. outlines the unique makeup of a constructor and its five critical features.   Anatomy of a Constructor    The name of a constructor must match the name of its class.  Constructor parameter declarations are no different than method parameters.  A constructor has no return type, not even void .  There can be no return statement in a constructor.  To access the current object being initialized, use the scope defined by the this keyword.      The this Keyword  As a demonstration, let's create a graphic class named LED. This class will be a circular graphic object with width and height of 30 pixels. The graphic is filled with gray when it is off and red when it is on. When deciding what to include in any class, we need to stop and think about what is necessary to adequatley track the state of each instance. For an LED, we need to track whether it is on or off. We also need to manage its graphic representation, in this case an Oval object.  In we start the definition of our LED by declaring a class named LED and two instance variables named on and light . We call them instance variables because every instance of the class will get its own copy of these variables. We did not use the keyword static when declaring them; which makes them instance variables . Using static would have made them class variables , defined within the scope of the class. Because there is only one of any class, there would be only one of each static variable.  We also used the keyword private instead of our usual public visibility specifyer when declaring our LED instance variables. Using private ensures that the instance variables are not accessible from outside each instance. Instance variables declared with private visibility may be accessed only from within the scope of an object. No access from outside the object is permitted. We now have two visibility specifiers for the declaration of methods and instance variables, public and private .   LED.java (version 1)   \/\/ LED.java (version 1) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object }    When we instantiate a new LED object we want to initialize these variables. That's where the constructor comes in. adds an LED constructor to our LED class declaration.   LED.java (version 2)   \/\/ LED.java (version 2) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor (**NEW**) public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } }    Let compare our added LED constructor to the critical features given in .   The name of the constructor matches the name of the class, LED .  Two parameters are declared just like any method.  There is no return type, not even void .  There is no return statement in the body of the constructor.  And finally, instance variables are accessed from within the constructor using the this keyword.   The expressions this.on and this.light access and initialize the instance variables declared outside the scope of the constructor but within the scope of the object. All constructors must follow these same rules listed in .  Let's add a main(…) method to test our initial Java LED class. It is very convenient to use the main(…) method to test a class. As we'll see later, as our programs grow we rarely invoke an individual class's main(…) method in favor of using a special driver class with a main(…) method designed specifically to start up a program. To test our class we create two LED instances at different locations. See and . As expected, in two LED objects are shown at the given starting locations with a dark gray fill color.   LED.java (version 3)   \/\/ LED.java (version 3) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } } \/\/ --- Test LED (**NEW**) public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); }     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED    LED.java (version 3)     "
 },
 {
   "id": "p-701",
@@ -3013,7 +3013,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "9.2.2",
   "title": "",
-  "body": " LED.java (step 1)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object }   "
+  "body": " LED.java (version 1)   \/\/ LED.java (version 1) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object }   "
 },
 {
   "id": "listing-cl-led2",
@@ -3022,7 +3022,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "9.2.3",
   "title": "",
-  "body": " LED.java (step 2)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor (**NEW**) public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } }   "
+  "body": " LED.java (version 2)   \/\/ LED.java (version 2) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor (**NEW**) public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } }   "
 },
 {
   "id": "p-709",
@@ -3040,7 +3040,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "9.2.4",
   "title": "",
-  "body": " LED.java (step 3)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } } \/\/ --- Test LED (**NEW**) public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); }   "
+  "body": " LED.java (version 3)   \/\/ LED.java (version 3) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.on = false; \/\/ Init instance variables this.light = new Oval(x, y, 30, 30); this.light.setFillColor(100, 100, 100); } } \/\/ --- Test LED (**NEW**) public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); }   "
 },
 {
   "id": "figure-cl-led3",
@@ -3049,7 +3049,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "9.2.5",
   "title": "",
-  "body": " LED.java (step 3)   "
+  "body": " LED.java (version 3)   "
 },
 {
   "id": "section-cl-methods",
@@ -3058,7 +3058,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.3",
   "title": "Methods",
-  "body": " Methods  Objects may have their own methods. Once again, we declare methods without using the static keyword because we want them to be created within the scope of the object, not the class. This gives the method access to the object instance itself through the this keyword and other items declared in the object, including those with private visibility. We need access to the object in order to effectively manage its internal state of the object.   Object Methods  We introduced methods in . The difference between what was described there and the figure below is that here we leave out the static keyword so as to define the method within the scope of the object. Otherwise, the same rules apply.   Anatomy of a method    As an example, let's add three methods to our LED class that turn the LED on and off, and return the state of the LED. Turning an the LED object on sets the internal on variable to true and changes the managed Oval fill color to red. Turning it off resets the on variable to false and the Oval fill color back to dark gray. Obtaining the state of the LED simply returns the value of the private on instance variable. We'll call these methods turnOn() , turnOff() , and isOn() . None of these new methods have parameters.   shows the code changes to our class definition. The added turnOn() and turnOff() methods do what we expect, setting and configuring the state of the object by modifying its private instance variables. The isOn() returns the boolean value of the on instance variable. Because we have abstracted the concept of the LED being off and on and exposed that as these new methods, it is wise to remove the initial explicit instance variable configuration statements from the constructor that starts the LED in the off state and replace them by invoking the turnOff() method directly.  Consider what might happen if we decided to leave the initialization of the LED object's instance variables by setting the object state explicitly in the constructor. Doing this requires us to make sure that the constructor and the turnOff() method remained in sync. If we decided to change the fill color of the LED when off, and we modified the code in turnOff() but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such an oversight can lead to more serious problems. This important software development principle has been dubbed Don't repeat yourself or DRY .   Principle: Don't Repeat Yourself (DRY)  Every concept must have a single, authoritative representation within a system. Reduce repetition of concepts likely to change by replacing them with reusable abstractions.   To test our new methods, in addition to replacing configuration statements in the constructor with turnOff() , we invoke turnOn() in main(…) on both LED objects after instantiation. We also test the state of the first LED object by invoking its isOn() method and printing the result. See the result in .   LED.java (step 4)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state by invoking method (**NEW**) } \/\/ Turn on LED (**NEW**) public void turnOn() { this.on = true; this.light.setFillColor(255, 0, 0); } \/\/ Turn off LED (**NEW**) public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED (**NEW**) public boolean isOn() { return this.on; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Turn on both LED objects (**NEW**) led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } }     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED  LED1 is on    LED.java (step 4)      Accessor and Mutator Methods  Encapsulation requires that we manage access to instance variables. We can make an instance variable accessible simply by declaring it with public visibility. This leaves the variable's value wide open to change. We lose the ability to manage it, such as by restricting its value to a valid range.  The standard way is to manage instance variables is to declare them with private visibility, and add methods that are used to set the value of the instance variable and to get the value of an instance variable. A method designed to set the value of an instance variable is called a mutator method, also known as a setter . A method designed to get the value of an instance variable is called an accessor method, also known as a getter . By convention, we typically name these methods by prepending the instance variable named with set in the case of a mutator method (setters), and get in the case of an accessor method (getters).  By defining mutator methods and accessor methods for an instance variable, we open up a wide range of options for managing instance variable values. For example, if we want to restict the value of an age instance variable to a number greater-than or equal-to 0.0, we could test the value before assigning it. The following setAge(…) method is a simple example.  \/\/ Age setter restricted to values >= 0.0 public void setAge(double age) { if (age >= 0.0) { \/\/ Assign this.age only if this.age = age; \/\/ condition is satisfied } }  As another example, consider that we can configure an instance variable to be read-only simply by defining a getter method and but not a corresponding setter method. Without a setter, we can never change the instance variable value, only read it.  Let's expand our LED class example once more. Let's assume that we can choose the color that the LED emits when it is on to one of four values: RED, GREEN, BLUE, and YELLOW. It is easy enough to add an instance variable that holds an LED color, but we also need to manage that variable, limiting it to one of the four possible values. To manage this instance variable, we must add to the LED class a setColor(…) method, a setter, and a getColor() method, a getter. To help with this addition, let's define an enum with constants for the four LED colors, similar to what we did in .   enum LEDColor { RED, GREEN, BLUE, YELLOW };   To work this option into our LED class, we made the following changes. Refer to .    Added the enum to the bottom of our LED.java file.  Added a private scoped LEDColor color instance variable to hold an enum constant.  Added setColor(…) method to the class that take the LEDColor enum constant as a parameter. This limits values to one of the four color constants.  Added a getColor() method to the class that returns an LEDColor enum constant.  Initialized the color instance variable in the LED constructor  Added a switch to the turnOn() method that sets color based on the value of color instance variable.    LED.java (step 5)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object private LEDColor color; \/\/ LED Color (**NEW**) \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state this.color = LEDColor.RED; \/\/ Default to RED (**NEW**) } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { \/\/ Set selected color (**NEW**) case RED: this.light.setFillColor(255, 0, 0); break; case GREEN: this.light.setFillColor(0, 255, 0); break; case BLUE: this.light.setFillColor(0, 0, 255); break; case YELLOW: this.light.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ MUTATOR method for LED Color (**NEW**) public void setColor(LEDColor color) { this.color = color; } \/\/ ACCESSOR method for LED Color (**NEW**) public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors (**NEW**) led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants (**NEW**) enum LEDColor { RED, GREEN, BLUE, YELLOW };     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED  LED1 is on    LED.java (step 5)      Method Overloading  When your source code specifies that a method is to be invoked, the Java compiler will match up that invocation with an method implementation. This way, when your program runs, the proper method is executed. This matching task considers more than just the name of the method. The match is performed on the entire method signature . A method signature is composed of the method name and its parameter list, including parameter type and order.  Matching on the entire signature, and not just the method name, lets us define multiple methods having the same name, provided the signatures are distinct. This is called method overloading . The thought is that the method name is given multiple meanings, and so it is overloaded .  A constructor may be overloaded as well. Multiple constructors exist in a class provided the signatures are distinct. Overloading a method or constructor gives us the ability to abstract the same concept using a single name, but permitting the user to pass different parameter values.  A good application of method overloading is to set default parameter values for a method or constructor. Consider the setFillColor(…) method of all DoodlePad shape objects. As we know, this method can take the three color components: red, green, and blue, and that is the way we've used it. But, in fact, there are several other options (overloads) for invoking setFillColor(…) .  Colors in DoodlePad may be partially or fully transparent. This is set using fourth value in [0, 255] known as alpha . An alpha of 0 means fully transparent and an alpha of 255 means fully opaque. All color-related DoodlePad methods can take four color component parameters, the fourth being transparency specified as alpha. If that fourth parameter is omitted, DoodlePad substitutes an alpha of 255, fully opaque. This is implemented by overloading the definition of setFillColor(…) , which you can observe in the DoodlePad source code .   \/** * Set the fill color with which to draw the shape * @param red the red component of the color [0, 255] * @param green the green component of the color [0, 255] * @param blue the blue component of the color [0, 255] *\/ public void setFillColor(double red, double green, double blue) { setFillColor( red, green, blue, 255 ); \/\/ Default alpha to 255 }   In the previous example of DoodlePad source code, the three-parameter overload of setFillColor(…) just invokes the four-parameter version with 255 passed as the alpha value.  All shades of gray in the RGB color model are formed by setting the red, green, and blue color components to the same value within [0, 255]. To save typing, DoodlePad provides an overload that repeats the first value three times when only one parameter is provided. See the following additional overload. The DoodlePad source code is an interesting repository to explore see applications of many of the principles that we study in this book.   \/** * Set the gray scale fill color with which to draw the shape. * @param gray the gray scale value in the range [0, 255] *\/ public void setFillColor(double gray) { this.setFillColor(gray, gray, gray, 255); }   Constructors may be overloaded as well. The Java compile matches the invoked constructor signature to available definitions to ensure the proper constructor implementation is invoked.  As an example, rather than defaulting the LED on color to RED and then being required to change it using the setColor(…) method, let's overload the constructor as two implementations. The the more general implementation takes the LED on color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value LEDColor.RED as the third parameter, making it the default. Note that a constructor overload is invoked using this instead of the class name, and no new keyword.   \/\/ Overloaded constructor defaults color to RED public LED(double x, double y) { \/\/ Invoke alternative constructor with RED as default this(x, y, LEDColor.RED); } \/\/ Main constructor expects color constant as a parameter public LED(double x, double y, LEDColor color) { this.light = new Oval(x, y, 30, 30); this.setColor(color); \/\/ Set LED on color this.turnOff(); \/\/ Init state }   It is common practice in Java to define one method or constructor that does all the real work, and then one or more overloads that provide default parameter values. This practice is also a good example of DRY .   "
+  "body": " Methods  Objects may have their own methods. Once again, we declare methods without using the static keyword because we want them to be created within the scope of the object, not the class. This gives the method access to the object instance itself through the this keyword and other items declared in the object, including those with private visibility. We need access to the object in order to effectively manage its internal state of the object.   Object Methods  We introduced methods in . The difference between what was described there and the figure below is that here we leave out the static keyword so as to define the method within the scope of the object. Otherwise, the same rules apply.   Anatomy of a method    As an example, let's add three methods to our LED class that turn the LED on and off, and return the state of the LED. Turning an the LED object on sets the internal on variable to true and changes the managed Oval fill color to red. Turning it off resets the on variable to false and the Oval fill color back to dark gray. Obtaining the state of the LED simply returns the value of the private on instance variable. We'll call these methods turnOn() , turnOff() , and isOn() . None of these new methods have parameters.   shows the code changes to our class definition. The added turnOn() and turnOff() methods do what we expect, setting and configuring the state of the object by modifying its private instance variables. The isOn() returns the boolean value of the on instance variable. Because we have abstracted the concept of the LED being off and on and exposed that as these new methods, it is wise to remove the initial explicit instance variable configuration statements from the constructor that starts the LED in the off state and replace them by invoking the turnOff() method directly.  Consider what might happen if we decided to leave the initialization of the LED object's instance variables by setting the object state explicitly in the constructor. Doing this requires us to make sure that the constructor and the turnOff() method remained in sync. If we decided to change the fill color of the LED when off, and we modified the code in turnOff() but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such an oversight can lead to more serious problems. This important software development principle has been dubbed Don't repeat yourself or DRY .   Principle: Don't Repeat Yourself (DRY)  Every concept must have a single, authoritative representation within a system. Reduce repetition of concepts likely to change by replacing them with reusable abstractions.   To test our new methods, in addition to replacing configuration statements in the constructor with turnOff() , we invoke turnOn() in main(…) on both LED objects after instantiation. We also test the state of the first LED object by invoking its isOn() method and printing the result. See the result in .   LED.java (version 4)   \/\/ LED.java (version 4) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state by invoking method (**NEW**) } \/\/ Turn on LED (**NEW**) public void turnOn() { this.on = true; this.light.setFillColor(255, 0, 0); } \/\/ Turn off LED (**NEW**) public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED (**NEW**) public boolean isOn() { return this.on; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Turn on both LED objects (**NEW**) led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } }     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED  LED1 is on    LED.java (version 4)      Accessor and Mutator Methods  Encapsulation requires that we manage access to instance variables. We can make an instance variable accessible simply by declaring it with public visibility. This leaves the variable's value wide open to change. We lose the ability to manage it, such as by restricting its value to a valid range.  The standard way is to manage instance variables is to declare them with private visibility, and add methods that are used to set the value of the instance variable and to get the value of an instance variable. A method designed to set the value of an instance variable is called a mutator method, also known as a setter . A method designed to get the value of an instance variable is called an accessor method, also known as a getter . By convention, we typically name these methods by prepending the instance variable named with set in the case of a mutator method (setters), and get in the case of an accessor method (getters).  By defining mutator methods and accessor methods for an instance variable, we open up a wide range of options for managing instance variable values. For example, if we want to restict the value of an age instance variable to a number greater-than or equal-to 0.0, we could test the value before assigning it. The following setAge(…) method is a simple example.  \/\/ Age setter restricted to values >= 0.0 public void setAge(double age) { if (age >= 0.0) { \/\/ Assign this.age only if this.age = age; \/\/ condition is satisfied } }  As another example, consider that we can configure an instance variable to be read-only simply by defining a getter method and but not a corresponding setter method. Without a setter, we can never change the instance variable value, only read it.  Let's expand our LED class example once more. Let's assume that we can choose the color that the LED emits when it is on to one of four values: RED, GREEN, BLUE, and YELLOW. It is easy enough to add an instance variable that holds an LED color, but we also need to manage that variable, limiting it to one of the four possible values. To manage this instance variable, we must add to the LED class a setColor(…) method, a setter, and a getColor() method, a getter. To help with this addition, let's define an enum with constants for the four LED colors, similar to what we did in .   enum LEDColor { RED, GREEN, BLUE, YELLOW };   To work this option into our LED class, we made the following changes. Refer to .    Added the enum to the bottom of our LED.java file.  Added a private scoped LEDColor color instance variable to hold an enum constant.  Added setColor(…) method to the class that take the LEDColor enum constant as a parameter. This limits values to one of the four color constants.  Added a getColor() method to the class that returns an LEDColor enum constant.  Initialized the color instance variable in the LED constructor  Added a switch to the turnOn() method that sets color based on the value of color instance variable.    LED.java (version 5)   \/\/ LED.java (version 5) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object private LEDColor color; \/\/ LED Color (**NEW**) \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state this.color = LEDColor.RED; \/\/ Default to RED (**NEW**) } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { \/\/ Set selected color (**NEW**) case RED: this.light.setFillColor(255, 0, 0); break; case GREEN: this.light.setFillColor(0, 255, 0); break; case BLUE: this.light.setFillColor(0, 0, 255); break; case YELLOW: this.light.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ MUTATOR method for LED Color (**NEW**) public void setColor(LEDColor color) { this.color = color; } \/\/ ACCESSOR method for LED Color (**NEW**) public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors (**NEW**) led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants (**NEW**) enum LEDColor { RED, GREEN, BLUE, YELLOW };     javac -cp doodlepad.jar LED.java java -cp .;doodlepad.jar LED  LED1 is on    LED.java (version 5)      Method Overloading  When your source code specifies that a method is to be invoked, the Java compiler will match up that invocation with an method implementation. This way, when your program runs, the proper method is executed. This matching task considers more than just the name of the method. The match is performed on the entire method signature . A method signature is composed of the method name and its parameter list, including parameter type and order.  Matching on the entire signature, and not just the method name, lets us define multiple methods having the same name, provided the signatures are distinct. This is called method overloading . The thought is that the method name is given multiple meanings, and so it is overloaded .  A constructor may be overloaded as well. Multiple constructors exist in a class provided the signatures are distinct. Overloading a method or constructor gives us the ability to abstract the same concept using a single name, but permitting the user to pass different parameter values.  A good application of method overloading is to set default parameter values for a method or constructor. Consider the setFillColor(…) method of all DoodlePad shape objects. As we know, this method can take the three color components: red, green, and blue, and that is the way we've used it. But, in fact, there are several other options (overloads) for invoking setFillColor(…) .  Colors in DoodlePad may be partially or fully transparent. This is set using fourth value in [0, 255] known as alpha . An alpha of 0 means fully transparent and an alpha of 255 means fully opaque. All color-related DoodlePad methods can take four color component parameters, the fourth being transparency specified as alpha. If that fourth parameter is omitted, DoodlePad substitutes an alpha of 255, fully opaque. This is implemented by overloading the definition of setFillColor(…) , which you can observe in the DoodlePad source code .   \/** * Set the fill color with which to draw the shape * @param red the red component of the color [0, 255] * @param green the green component of the color [0, 255] * @param blue the blue component of the color [0, 255] *\/ public void setFillColor(double red, double green, double blue) { setFillColor( red, green, blue, 255 ); \/\/ Default alpha to 255 }   In the previous example of DoodlePad source code, the three-parameter overload of setFillColor(…) just invokes the four-parameter version with 255 passed as the alpha value.  All shades of gray in the RGB color model are formed by setting the red, green, and blue color components to the same value within [0, 255]. To save typing, DoodlePad provides an overload that repeats the first value three times when only one parameter is provided. See the following additional overload. The DoodlePad source code is an interesting repository to explore see applications of many of the principles that we study in this book.   \/** * Set the gray scale fill color with which to draw the shape. * @param gray the gray scale value in the range [0, 255] *\/ public void setFillColor(double gray) { this.setFillColor(gray, gray, gray, 255); }   Constructors may be overloaded as well. The Java compile matches the invoked constructor signature to available definitions to ensure the proper constructor implementation is invoked.  As an example, rather than defaulting the LED on color to RED and then being required to change it using the setColor(…) method, let's overload the constructor as two implementations. The the more general implementation takes the LED on color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value LEDColor.RED as the third parameter, making it the default. Note that a constructor overload is invoked using this instead of the class name, and no new keyword.   \/\/ Overloaded constructor defaults color to RED public LED(double x, double y) { \/\/ Invoke alternative constructor with RED as default this(x, y, LEDColor.RED); } \/\/ Main constructor expects color constant as a parameter public LED(double x, double y, LEDColor color) { this.light = new Oval(x, y, 30, 30); this.setColor(color); \/\/ Set LED on color this.turnOff(); \/\/ Init state }   It is common practice in Java to define one method or constructor that does all the real work, and then one or more overloads that provide default parameter values. This practice is also a good example of DRY .   "
 },
 {
   "id": "figure-cl-method-anatomy",
@@ -3085,7 +3085,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "9.3.2",
   "title": "",
-  "body": " LED.java (step 4)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state by invoking method (**NEW**) } \/\/ Turn on LED (**NEW**) public void turnOn() { this.on = true; this.light.setFillColor(255, 0, 0); } \/\/ Turn off LED (**NEW**) public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED (**NEW**) public boolean isOn() { return this.on; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Turn on both LED objects (**NEW**) led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } }   "
+  "body": " LED.java (version 4)   \/\/ LED.java (version 4) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state by invoking method (**NEW**) } \/\/ Turn on LED (**NEW**) public void turnOn() { this.on = true; this.light.setFillColor(255, 0, 0); } \/\/ Turn off LED (**NEW**) public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED (**NEW**) public boolean isOn() { return this.on; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Turn on both LED objects (**NEW**) led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } }   "
 },
 {
   "id": "figure-cl-led4",
@@ -3094,7 +3094,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "9.3.3",
   "title": "",
-  "body": " LED.java (step 4)   "
+  "body": " LED.java (version 4)   "
 },
 {
   "id": "p-717",
@@ -3112,7 +3112,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "9.3.4",
   "title": "",
-  "body": " LED.java (step 5)   \/\/ LED.java \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object private LEDColor color; \/\/ LED Color (**NEW**) \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state this.color = LEDColor.RED; \/\/ Default to RED (**NEW**) } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { \/\/ Set selected color (**NEW**) case RED: this.light.setFillColor(255, 0, 0); break; case GREEN: this.light.setFillColor(0, 255, 0); break; case BLUE: this.light.setFillColor(0, 0, 255); break; case YELLOW: this.light.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ MUTATOR method for LED Color (**NEW**) public void setColor(LEDColor color) { this.color = color; } \/\/ ACCESSOR method for LED Color (**NEW**) public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors (**NEW**) led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants (**NEW**) enum LEDColor { RED, GREEN, BLUE, YELLOW };   "
+  "body": " LED.java (version 5)   \/\/ LED.java (version 5) \/\/ A simple LED display class import doodlepad.*; public class LED { private boolean on; \/\/ Tracks state of LED object private Oval light; \/\/ Visual display of object private LEDColor color; \/\/ LED Color (**NEW**) \/\/ Constructor public LED(double x, double y) { this.light = new Oval(x, y, 30, 30); this.turnOff(); \/\/ Init state this.color = LEDColor.RED; \/\/ Default to RED (**NEW**) } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { \/\/ Set selected color (**NEW**) case RED: this.light.setFillColor(255, 0, 0); break; case GREEN: this.light.setFillColor(0, 255, 0); break; case BLUE: this.light.setFillColor(0, 0, 255); break; case YELLOW: this.light.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.light.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ MUTATOR method for LED Color (**NEW**) public void setColor(LEDColor color) { this.color = color; } \/\/ ACCESSOR method for LED Color (**NEW**) public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors (**NEW**) led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants (**NEW**) enum LEDColor { RED, GREEN, BLUE, YELLOW };   "
 },
 {
   "id": "figure-cl-led5",
@@ -3121,7 +3121,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "9.3.5",
   "title": "",
-  "body": " LED.java (step 5)   "
+  "body": " LED.java (version 5)   "
 },
 {
   "id": "p-722",
@@ -3331,702 +3331,873 @@ var ptx_lunr_docs = [
   "body": " Chapter Exercises   "
 },
 {
-  "id": "section-86",
+  "id": "section-in-dp-design",
   "level": "1",
-  "url": "section-86.html",
+  "url": "section-in-dp-design.html",
   "type": "Section",
   "number": "10.1",
-  "title": "Setting Up Inheritance",
-  "body": "Setting Up Inheritance  extends and super keywords keyword  base class, derived class  Prevent subclassing using the final keyword  "
+  "title": "DoodlePad Design",
+  "body": " DoodlePad Design   The DoodlePad object graphics library includes a collection of classes that encapsulate graphic objects, including a series of shape classes. Rectangle, Oval, RoundRect, Text, Polygon, etc. are among the shape classes in the DoodlePad package.  Think about how you might design these shape classes. The obvious difference is the unique visual representation of each. Class implementations must include a method capable of drawing its unique and recognizable graphic, with adjustments and customizations defined by other object instance variables and their values.  What are the other features of shape classes that must be encapsulated? Every shape needs an (x, y) location and the dimensions (width, height). In DoodlePad we decided that these parameters would describe a shape's bounding box and that the shape would be drawn within that bounding box. Shape location is the location of the upper left corner of the bounding box and shape dimensions match the dimensions of the bounding box. These four instance variables (x, y, width, height) are common to all shape classes. Does that mean we must repeat these instance variable declarations in all shape classes?  Other shape features include fill color, stroke color, stroke width, whether the shape may be interactively selected or dragged, the text drawn at its center as well as font family, font size, font style, text colors, transformation, etc. If you consider this list, each one of these features is shared by all shape classes. Does that mean we must declare every one of these instance variables in every class definition? That is quite a lot of code repetition, which, by now, should tell you that something is not quite right. All this code repetition multiplies the effort to maintain your code and increases the chances of making a mistake.  Of course, there is a good solution to this code repetition problem. Inheritance gives us a way to share a single instance variable declaration or method implementation with multiple classes.  DoodlePad graphic classes are organized in a hierarchy with a Shape class at its root. For your reference, illustrates this hierarchy. In addition to the Shape class and all its derived classes, DoodlePad implements several additional classes, including Pad, Timer and Sound. You can find details for all classes in the library's JavaDocs .   DoodlePad Class Hierarchy     "
 },
 {
-  "id": "p-777",
+  "id": "p-779",
   "level": "2",
-  "url": "section-86.html#p-777",
+  "url": "section-in-dp-design.html#p-779",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "final "
+  "body": "Inheritance "
 },
 {
-  "id": "section-87",
+  "id": "figure-in-doodlepad-hierarchy",
+  "level": "2",
+  "url": "section-in-dp-design.html#figure-in-doodlepad-hierarchy",
+  "type": "Figure",
+  "number": "10.1.1",
+  "title": "",
+  "body": " DoodlePad Class Hierarchy   "
+},
+{
+  "id": "section-in-basics",
   "level": "1",
-  "url": "section-87.html",
+  "url": "section-in-basics.html",
   "type": "Section",
   "number": "10.2",
-  "title": "Benefits of Inheritance",
-  "body": "Benefits of Inheritance  Subclassing automatically shares all functionality in base class. Derived class has a head start.  Modifications and updates apply to all derived classes  Reduction of code duplication  Reduction of excessive code maintenance  "
+  "title": "Basics of Inheritance",
+  "body": " Basics of Inheritance    Inheritance is a relationship that we can established between classes. When one class inherits another, the inherited class can be thought of as providing a kind of default implementation for the class that inherits it. Inherited classes are often referred to a base classes or superclasses and inheriting classes are called derived classes or subclasses . We'll use the former term. In Java's implementation of inheritance, a base class may be related to one or more derived class , but a derived class may inherit at most one base class .  When one class inherits another, if a method is invoked or an instance variable accessed on the derived class, but the derived class does not implement it, Java will search for the missing member in the inherited class. This will continue if the base class inherits another class, and so on up the inheritance hierarchy. Inheritance is a way to share a single implementation of certain methods and instance variables in one class with many other classes.    Benefits of Inheritance  First and foremost, inheritance solves the code duplication problem. If a method in a base class needs updating, any changes made are inherited automatically by all derived classes, no extra effort required. This reduces the chance for errors caused by neglecting to make necessary changes to all implementations of a shared method. Of course, if an error is made in the base class method, all derived classes inherit the same broken method. But fixing that error once also means that the corrected method is fixed everywhere.  Another way to think about a base class is as a default implementation of some group of classes; it is a head start when implementing another form of a class within a related group. When a new class inherits a base class, it starts with all the shared members of that base class, automatically. The only requirement for implementing that new derived class is to implement the members that make the derived class different than the base class. Typically, this requires much less work than starting over with an empty class.  In terms of the DoodlePad shape classes, we recognise that there was quite a lot of shared behavior, including position, size, colors, text, etc. The one behavior that was different in each shape class was its graphical representation. It won't surprize you that DoodlePad shape classes benefit from inheritance.    Using Inheritance  To establish an inheritance relationship between a derived class and a base class, add the extends keyword and the base class name to the right of the first line in a derived class declaration. For example, in DoodlePad, all shape classes inherit a base class named Shape , so each shape class starts with a declaration like the following. Have a look at any one of the shape classes in the DoodlePad source code .   public class Rectangle extends Shape { …   This one addition to a derived class declaration has the potential to add quite a number of default behaviors, giving you as the developer a significant head start to completing your new class implementation.    A Better LED Class  Let's revisit our LED class from . Rather than encapsulate an Oval object, let's set up our LED class to extend Oval so that it starts with all Oval behavior by default. This means that we no longer need to instantiate and manage an Oval class in LED. The LED class now has access to all the behavior of an Oval class through inheritance, and so LED behaves like an Oval. One ramification of this is that, instead of relaying method invocations to an encapsulated Oval object (e.g. setFillColor(…)) the LED class itself has access to these methods and can invoke them directly. Even though LED does not implement Oval methods, inheritance takes care of finding suitable implementations automatically in the Oval base class.   LED.java (version 6)   \/\/ LED.java (version 6) \/\/ A simple LED display class that extends Oval import doodlepad.*; public class LED extends Oval { \/\/ Extend Oval private boolean on; \/\/ Tracks state of LED object private LEDColor color; \/\/ LED Color \/\/ Overloaded constructor defaults color to RED public LED(double x, double y) { this(x, y, LEDColor.RED); \/\/ Default to RED } public LED(double x, double y, LEDColor color) { super(x, y, 30, 30); \/\/ Invoke base class constructor this.setColor(color); \/\/ Set LED on color this.turnOff(); \/\/ Init state } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { case RED: this.setFillColor(255, 0, 0); break; case GREEN: this.setFillColor(0, 255, 0); break; case BLUE: this.setFillColor(0, 0, 255); break; case YELLOW: this.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ Set LED Color when illuminated public void setColor(LEDColor color) { this.color = color; } \/\/ Get LED Color when illuminated public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants enum LEDColor { RED, GREEN, BLUE, YELLOW };    Let's compare with The first thing to notice is that the LED class no longer declares a private light instance variable. This is not necessary because the LED itself is a kind of Oval, so no additional Oval object is required. Nevertheless, initialization is required. Because the LED is a kind of Oval, it must perform whatever initialization that an Oval requires, which is implemented by the Oval constructor. To invoke the constructor, we can use the super keyword. In the second LED constructor, in place of the line that initialized the light instance variable, we invoke the base class constructor using the line super(x, y, 30, 30) . This relays the (x, y) LED constructor parameter values to the base class constructor, and fixes the LED size to 30×30.  Note how the super keyword can invoke an alternative constructor in a base class in a manner directly analogous to the way we used the this keyword to invoke an overloaded alternative constructor in the current class. Similarly, we are able to use the super keyword to access the scope of the base class directly, in a manner directly analogous to the way we used the this keyword to access the current object scope. The this and super keywords should occupy adjacent places in your Java memory bank.  With the removal of the light instance variable, we must replacement of all references to this.light . For example, in the .turnOn() and .turnOff() methods, statements like this.light.setFillColor(…) are now shortened to this.setFillColor(…) . The LED class does not implement the setFillColor(…) method directly, but LED extends Oval, and Oval provides access to the method through inheritance.  Other than these changes, the remainder of the LED class remains unchanged. The outpur from this version of LED is identical to . Using inheritance we were able to remove several references from the derived class because we can now depend upon inheriting these from the base class. In fact, we gained a huge amount of behavior from the base class, which can be applied to expanding LED by invoking directly, without the need to relay to an encpasulated Oval object.    Blocking Inheritance  As a final note, you may decide that you do not want a class that you define to be derived. You can accomplish this by adding the final keyword to your class declaration.   public final class MyFinalClass( …   There may be something quirky about your class implementation that prevents a derived class from working correctly. Adding the final keyword will tell the Java compiler to prevent new classes from extending the final base class.   "
 },
 {
-  "id": "section-88",
-  "level": "1",
-  "url": "section-88.html",
-  "type": "Section",
-  "number": "10.3",
-  "title": "Generalization and Specialization",
-  "body": "Generalization and Specialization  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  "
-},
-{
-  "id": "section-89",
-  "level": "1",
-  "url": "section-89.html",
-  "type": "Section",
-  "number": "10.4",
-  "title": "Subtype Polymorphism and Dynamic Binding",
-  "body": "Subtype Polymorphism and Dynamic Binding  Assign an object of type derived class to a variable of type base class  Cast an object of type base class to a variable of type derived class  Dynamic binding  https:\/\/software.rajivprab.com\/2019\/08\/14\/nuances-of-overloading-and-overriding-in-java\/ Single Dispatch, Hidden Override, Exposed Override, Ambiguous Parameter, Multiple Inheritance - Interfaces, Multiple Inheritance - Class and Interface, Transitive Override, Private Override, Static Overrides, Static Linking  Using the @Override annotation on all override methods will help greatly in preventing regressions, by producing compile errors as soon as any base methods have their visibility changed.  "
-},
-{
-  "id": "p-790",
+  "id": "p-781",
   "level": "2",
-  "url": "section-89.html#p-790",
+  "url": "section-in-basics.html#p-781",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "@Override "
+  "body": "Inheritance base classes superclasses derived classes subclasses "
 },
 {
-  "id": "section-90",
+  "id": "p-786",
+  "level": "2",
+  "url": "section-in-basics.html#p-786",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "extends Shape "
+},
+{
+  "id": "listing-in-led6",
+  "level": "2",
+  "url": "section-in-basics.html#listing-in-led6",
+  "type": "Listing",
+  "number": "10.2.1",
+  "title": "",
+  "body": " LED.java (version 6)   \/\/ LED.java (version 6) \/\/ A simple LED display class that extends Oval import doodlepad.*; public class LED extends Oval { \/\/ Extend Oval private boolean on; \/\/ Tracks state of LED object private LEDColor color; \/\/ LED Color \/\/ Overloaded constructor defaults color to RED public LED(double x, double y) { this(x, y, LEDColor.RED); \/\/ Default to RED } public LED(double x, double y, LEDColor color) { super(x, y, 30, 30); \/\/ Invoke base class constructor this.setColor(color); \/\/ Set LED on color this.turnOff(); \/\/ Init state } \/\/ Turn on LED public void turnOn() { this.on = true; switch (this.color) { case RED: this.setFillColor(255, 0, 0); break; case GREEN: this.setFillColor(0, 255, 0); break; case BLUE: this.setFillColor(0, 0, 255); break; case YELLOW: this.setFillColor(255, 255, 0); break; } } \/\/ Turn off LED public void turnOff() { this.on = false; this.setFillColor(100, 100, 100); } \/\/ Return state of LED public boolean isOn() { return this.on; } \/\/ Set LED Color when illuminated public void setColor(LEDColor color) { this.color = color; } \/\/ Get LED Color when illuminated public LEDColor getColor() { return this.color; } \/\/ --- Test LED public static void main(String[] args) { \/\/ Create LED objects LED led1 = new LED(100, 100); LED led2 = new LED(200, 100); \/\/ Change LED colors led1.setColor(LEDColor.BLUE); led2.setColor(LEDColor.YELLOW); \/\/ Turn on both LED objects led1.turnOn(); led2.turnOn(); System.out.println( \"LED1 is\" + (led1.isOn() ? \"\" : \" not\") + \" on\"); } } \/\/ Enum for LED Color constants enum LEDColor { RED, GREEN, BLUE, YELLOW };   "
+},
+{
+  "id": "section-in-overriding",
   "level": "1",
-  "url": "section-90.html",
+  "url": "section-in-overriding.html",
   "type": "Section",
-  "number": "10.5",
-  "title": "protected Access",
-  "body": "protected Access   summarizes the levels of access that is available from ...  https:\/\/docs.oracle.com\/javase\/tutorial\/java\/javaOO\/accesscontrol.html   Access Levels    Modifier  Class  Package  Subclass  World    public  Yes  Yes  Yes  Yes    protected  Yes  Yes  Yes  No    no modifier  Yes  Yes  No  No    private  Yes  No  No  No     "
+  "number": "10.3",
+  "title": "Method Overriding",
+  "body": " Method Overriding   A method invoked on a derived class that does not implement the exact method signature, will cause Java to search for the method signature in the base class, and up the inheritance hierarchy. But, if a method with the signature is implemented in the dervied class, then that implementation will be invoked, even if the same method signature has been implemented in a base class. If a method in a dervied class has the same signature as one in its base class, we say that the derived class method overrides the one in the base class.    Applications of Method Overriding  It may be the case that a derived class shares many of the behaviors of a base class, but not all. The methods that differ may be reimplemented correctly in the derived class. Because the search for a particular method signature moves up an inheritance hierarchy, overriding a method in a derived class effectively replaces it.  In another scenario, a base class method may constitute part of what a derived class needs to be performed, but not all. In this case the derived class can override the base class method, and augment its behavior by invoking the base class method and adding to it. This could be as simple as logging the fact that the method was invoking overriding it with a derviced class method that invokes the base class method and adds a print statement.  In a third application, a derived class might override base class method as a way of stopping its execution, and simply returning. This might be used when using a derived class to mock the behavior of a base class during testing. If certain base class methods are expensive to execute, we can use a derived class to catch and surpress the execution of certain base class methods during testing, and then remove the derived class before final release.  Whether replacing , augmenting , or surpressing base class methods, method overriding is a powerful way to modify base class behavior.    Overriding Event Handler Methods  You are familiar with how DoodlePad's graphic objects can handle events such as a mouse click or key press. In we learned how to associate a method with an event by passing a method reference to a special method such as .setMousePressedHandler(…) . DoodlePad provides a second way to handle events. When extending a shape or the Pad class, you may override certain inherited methods as a way to handle associated events rather than assigning a method reference. This approach can be more convenient and intuitive to implement.  Let's do a better job at implementing our ToggleButton class, which we first created in . Now that we're familiar with what we can do using inheritance, let's reconsider ToggleButton's implementation. Refer to for all the details of the updated class.   ToggleButton.java (version 2)   \/\/ ToggleButton.java import doodlepad.*; \/\/ ToggleButton class extends RoundRect public class ToggleButton extends RoundRect { private boolean on; \/\/ Button state \/\/ Constructor public ToggleButton(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); this.on = false; \/\/ Starts off this.setFillColor(200); this.setText(\"Off\"); } \/\/ Handle button click event using inheritance @Override public void onMousePressed(double x, double y, int btn) { super.onMousePressed(x, y, btn); \/\/ invoke default behavior this.toggle(); \/\/ Toggle button } \/\/ Toggle button public void toggle() { this.on = !this.on; \/\/ Flip state if (this.on) { \/\/ Update graphic this.setFillColor(0, 255, 0); this.setText(\"On\"); } else { this.setFillColor(200); this.setText(\"Off\"); } } \/\/ Test the class public static void main(String[] args) { \/\/ Create a new ToggleButton ToggleButton myButton = new ToggleButton(100, 100, 75, 50); } }    This new implementation of ToggleButton takes advantage of inheritance by extending the RoundRect class instead of managing an internal RoundRect object. With this update we can now delete the internal RoundRect object instance variable used in . The new constructor was modified by first removing the statement to init the shpButton instance variable and replace it with a statement that invokes the base class constructor using super(…) . The new constructor was expanded to take the button's location and size. These parameter values are relayed to the base class constructor as parameters passed to super(…) . The former constructor was modified additionally by removing the setMousePressedHandler(…) method entirely. We will use method overriding to handle the mouse-pressed event.  The former onPressed(…) event handler method is renamed and its parameters were changed to match the signature onMousePressed(double x, double y, int btn) exactly. This is the signature of the base class method, and must be matched in order to replace it with the derived class method. We add the Java compiler directive @Override before the method as a precaution. This directive tells the compiler that we intend to override a base class method with the onMousePressed(…) method declaration and to please check it. If the method does not override a base class method, then please throw a compiler error. Using the @Override directive is highly recommended. Without it, a method that does not match a base class method would compile just fine and we'd never know that we made a mistake. Nothing else is required to override the base class method except to define a derived class method with the exact same signature (method name, parameter types, and order).  Note that we added a line to the new onMousePressed(…) method. We invoked the base class method with the same signature. This means we are augmenting the base class method with this override rather than replacing it. Overridable shape event handler methods perform core behaviors that make the event system work properly. Because we are augmenting the base class method and not simply replacing it, we want to ensure that all the default behavior is executed. We only want to add a toggle() method invocation. Invoking the base class method using super and relaying parameter values, ensures that all default behavior will be executed as well. See for examples if the new program.   ToggleButton.java (version 2). Off and On.        That's pretty good. It is a small upgrade to the previous version, but was it worth the effort? Looking at , it seems that the button text is a bit small. We'd like to increase the font size. No problem! Because the button is really just an extension of a RoundRect, it inherics all of the RoundRect behavior, including the ability to adjust font size. We can simply add the appropriate methods to our main(…) method, as follows.    public static void main(String[] args) { \/\/ Create a new ToggleButton ToggleButton myButton = new ToggleButton(100, 100, 75, 50); myButton.setFontSize(24); \/\/ Change font size and style myButton.setFontStyle(1); }    The ToggleButton does not implement setFontSize(…) and setFontStyle(…) , but it does inherit these methods from its base class. Modifying main(…) and rerunning our program, we see the update output in . This would have taken some work ahd we stuck with our old implementation. We would have had to implement all new methods that modified the encapsulated RoundRect. With inheritance, we get the behavior automatically. No modifications required.   ToggleButton.java (version 3). Off and On.        In addition to overriding the onMousePressed() method, classes that extend Shape implement several additional methods that may be overridden to handle mouse-related events. See for a list and more detail.   "
+},
+{
+  "id": "p-795",
+  "level": "2",
+  "url": "section-in-overriding.html#p-795",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "overrides "
+},
+{
+  "id": "listing-in-togglebutton2",
+  "level": "2",
+  "url": "section-in-overriding.html#listing-in-togglebutton2",
+  "type": "Listing",
+  "number": "10.3.1",
+  "title": "",
+  "body": " ToggleButton.java (version 2)   \/\/ ToggleButton.java import doodlepad.*; \/\/ ToggleButton class extends RoundRect public class ToggleButton extends RoundRect { private boolean on; \/\/ Button state \/\/ Constructor public ToggleButton(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); this.on = false; \/\/ Starts off this.setFillColor(200); this.setText(\"Off\"); } \/\/ Handle button click event using inheritance @Override public void onMousePressed(double x, double y, int btn) { super.onMousePressed(x, y, btn); \/\/ invoke default behavior this.toggle(); \/\/ Toggle button } \/\/ Toggle button public void toggle() { this.on = !this.on; \/\/ Flip state if (this.on) { \/\/ Update graphic this.setFillColor(0, 255, 0); this.setText(\"On\"); } else { this.setFillColor(200); this.setText(\"Off\"); } } \/\/ Test the class public static void main(String[] args) { \/\/ Create a new ToggleButton ToggleButton myButton = new ToggleButton(100, 100, 75, 50); } }   "
+},
+{
+  "id": "figure-in-togglebutton2",
+  "level": "2",
+  "url": "section-in-overriding.html#figure-in-togglebutton2",
+  "type": "Figure",
+  "number": "10.3.2",
+  "title": "",
+  "body": " ToggleButton.java (version 2). Off and On.       "
+},
+{
+  "id": "listing-in-togglebutton3",
+  "level": "2",
+  "url": "section-in-overriding.html#listing-in-togglebutton3",
+  "type": "Listing",
+  "number": "10.3.3",
+  "title": "",
+  "body": "  public static void main(String[] args) { \/\/ Create a new ToggleButton ToggleButton myButton = new ToggleButton(100, 100, 75, 50); myButton.setFontSize(24); \/\/ Change font size and style myButton.setFontStyle(1); }   "
+},
+{
+  "id": "figure-in-togglebutton3",
+  "level": "2",
+  "url": "section-in-overriding.html#figure-in-togglebutton3",
+  "type": "Figure",
+  "number": "10.3.4",
+  "title": "",
+  "body": " ToggleButton.java (version 3). Off and On.       "
+},
+{
+  "id": "section-in-polymorph",
+  "level": "1",
+  "url": "section-in-polymorph.html",
+  "type": "Section",
+  "number": "10.4",
+  "title": "Subtype Polymorphism",
+  "body": " Subtype Polymorphism   Inheritance is much more than a way to set up default behavior of a new class. In a very real sense, an object with the type of a derived class is also a kind of base class. One indication of this is that we can assign an object of type derived class to a variable of type base class . This is an outcome of subtype polymorphism , another feature of inheritance. Let's explore the ramifications of this benefit of inheritance.    The Many Forms of Derived Classes  One important ramification of subtype polymorphism is that a variable with a type of a base class, may reference objects with the type of one of its derived classes . After all, ifaa derived class is also a kind of base class, then such an assignment should be legal.  Consider our last ToggleButton class example in . Because this class extends RoundRect, due to subtype polymorphism , ToggleButton is also a kind of RoundRect as well as a kind of Shape. As a result, a ToggleButton object may be assigned to a variable of type RoundRect or Shape.  How is this useful?  Imagine having a large set of Shape objects of various types. Let's say we have a program that uses Rectangles, Ovals, RoundRects, Polygons, Texts, etc. We need to track and manage all of these Shapes. It would be terribly inconvenient to be forced to declare an ArrayList or other Collection for each type of Shape. Fortunately, this is not necessary. Because every one of these classes extends the Shape base class, we can store all objects in an ArrayList<Shape>. Our ability to do this is a direct result of polymorhism, which simplifies our job significantly.  One of the limitiations to note is that the Java compiler checks that every method invocation on a class is implemented by the declared class type. This means that while we can assign a ToggleButton to a Shape variable, we cannot invoke its toggle() method. The compiler will stop with an error telling us that the Shape does not implement toggle() . The compiler does run a program and so it cannot know that our shp variable actually references a ToggleButton object, so the program will run without an error. See the test program in and the attempt to compile it that follows.   TestToggle.java (version 1)   \/\/ TestToggle.java (version 1) import doodlepad.*; public class TestToggle { public static void main(String[] args) { \/\/ Allowed by dubtype polymorphism Shape shp = new ToggleButton(100, 100, 100, 50); \/\/ Forbidden by the compiler shp.toggle(); } }     javac -cp doodlepad.jar ToggleButton.java TestToggle.java  TestToggle.java:7: error: cannot find symbol shp.toggle(); ^ symbol: method toggle() location: variable shp of type Shape 1 error   Fortunately, we can avoid this problem by forcing the type of shp back to ToggleButton before attempting to invoke its toggle() method. This change of type is accomplished using the cast operator (…) , in a manner identical to the way we performed widening conversions with primitive types. Naturally, casting a type from a base class to one of its derived classes is legal. See for the corrected example that compiles and runs without error.   TestToggle.java (version 2)   \/\/ TestToggle.java import doodlepad.*; public class TestToggle { public static void main(String[] args) { \/\/ Allowed by subtype polymorphism Shape shp = new ToggleButton(100, 100, 100, 50); \/\/ Cast before invoking to make the compiler happy ToggleButton btn = (ToggleButton) shp; btn.toggle(); \/\/ Forbidden by the compiler \/\/shp.toggle(); } }     Let's return to our method-reference style of handling events for a moment and take another look at the method signature of event handler methods assigned using method references.  The original implementation of ToggleButton used this style of event handling. It defined the onPressed(…) method and then configured it to handle mouse-pressed events using the setMousePressedHandler(…) method. This onPressed(…) method from is repeated below for convenience.   \/\/ Handle mouse-pressed event private void onPressed(Shape shp, double x, double y, int button) { toggle(); }   The signature of methods capable of handling events is required to be (Shape, double, double, int). We can now explain why that first parameter can be of type Shape and is not required to be of type ToggleButton, even though we know that a reference to the pressed ToggleButton is passed to this method. The short answer is, once again, subtype polymorphism . Because ToggleButton extends RoundRect which extends Shape, we can receive the ToggleButton object reference as a Shape variable. If we really needed it to be of type ToggleButton in order to invoke one of its custom methods, we could simply cast it to a ToggleButton first. Without the flexibility that we get from subtype polymorphism, this type of event handling would be more difficult to implement.    Dynamic binding  When a derived class overrides a base class method signature, and an instance of the derived class is assigned to a base class typed variable, there is no reason to cast the base class variable to the derived class type before invoking the method. The method signature is implemented in the base class and so the compiler finds it and compiles without error. But this begs the question, which method implementation is invoked? Is it the base class method implementation because the variable has type base class, or is it the derived class implementation because the variable references a derived class object? Let's create a small test program and find out.   defines two classes, Base and Derived. Derived extends Base. (Recall that we can define multiple classes in one Java file provided only one is declared public.) Both have a private instance variable named name . The Base class constructor initializes name to \"Base Class\" and the Derived class constructor initialize name to \"Derived Class. Both implement a whodunnit() method. The Derived class version of whodunnit() overrides the Base class version. Both implementations return the name , which will be the name of the \"guilty party.\" Base implements a main(…) method that declares a variable named guilty which has type Base and initializes it to an object of type Derived. It then invokes invokes the whodunnit() method on guilty to find out, whodunnit .   Base.java with Derived   \/\/ Base.java \/\/ Demonstration of dynamic binding \/\/ Base class public class Base { \/\/ Instance variable private String name; \/\/ Constructor public Base() { this.name = \"Base Class\"; } \/\/ Method public String whodunnit() { return this.name; } \/\/ Run a test public static void main(String[] args) { \/\/ Declare a Base type variable and \/\/ assign to a Derived type object Base guilty = new Derived(); \/\/ Print the guilty party's name System.out.println( guilty.whodunnit() ); } } \/\/ Derived class class Derived extends Base { \/\/ Instance variable private String name; \/\/ Constructor public Derived() { this.name = \"Derived Class\"; } \/\/ Overridden Method public String whodunnit() { return this.name; } }     javac Base.java java Base  Derived Class   J'Accuse! The guilty party is ... Derived . What does this mean? Even though the variable guilty has type Base, it references an object of type Derived, and so it invokes the Derived class implementation of whodunnit() . This demonstrates dynamic binding in action.   Definition: Dynamic Binding  It is not the variable type that determines the method invoked; it is the type of the referenced object. The method to invoke is selected dynamically as the program runs. It is not selected by the compiler.   Does this present a problem for us? If we have a variable of type Base, but it actually references an object of type Derived, how can we know this? In one sense, we shouldn't need this information. The beauty of subtype polymorphism is that it doesn't matter. From the perspective of code with a Base-typed variable, the object is a Base class and should be treated as such. Nevertheless, if we really need to know, Java gives us instanceof .  The instanceof operator is a binary infix operator that evaluates to true if the left operand, and object, is a type of the right operand, a class. If we really wanted to know that guilty was an instance of Derived , rather than invoking a method that reveals the secret, we could asked the object directly using an expression like the first in the following code snippet, which prints true . More than only the instantiated type, instanceof will also test if an object has a class in its inheritance hierarchy. The second expression in the following code snippet also prints true because guilty inherits Base.   instanceof demonstration   System.out.println( guilty instanceof Derived ); System.out.println( guilty instanceof Base );      Protected Visibility  Inheritance has its privileges. We saw several examples in which a derived class has access to all base class behavior merely because it extends the base class. Recall how we were able to invoke setFontSize(…) and setFontStyle(…) on the ToggleButton class even when these methods were not implemented (See ). You may not have realized that this is possible only because the base class methods were declared public. Well, this doesn't seem like much of an advantage, does it? After all, public methods are accessible anywhere within a program. By comparison, private methods are accessible only from within the implementing class, and not from a derived class. illustrates this situation.   Public and Private Visibility     Derived class objects should have special access to base class members. It should be possible for a derived object to access certain base class members that unrelated objects cannot. Java calls this new level of visibility protected , which is illustrated in . When a base class member is declared as protected instead of public or private , objects of type base class as well as objects of type derived class may access the base class member.    Protected Visibility     Protected visibility helps us to eliminate the need to duplicate members in a derived class that are defined already in a base class. In both Base and Derived declared the private instance variable name . This is unnecessary duplication. In we change the visibility of the derived class name instance variable to protected , which makes the variable visible to the derived class as well. With this enhanced level of visibility, we can not remove the Derived instance variable name altogether, because Derived can use the one declared in Base. This change in design is more succinct and reflective of the implications of inheritance. If we compile and run this updated program, the outcome is unchanged.   Base.java with Derived and protected   \/\/ Base.java \/\/ Demonstration of dynamic binding \/\/ Base class public class Base { \/\/ Instance variable \/\/ private String name; protected String name; \/\/ Updated visibility \/\/ Constructor public Base() { this.name = \"Base Class\"; } \/\/ Method public String whodunnit() { return this.name; } \/\/ Run a test public static void main(String[] args) { \/\/ Declare a Base type variable and \/\/ assign to a Derived type object Base guilty = new Derived(); \/\/ Print the guilty party's name System.out.println( guilty.whodunnit() ); } } \/\/ Derived class class Derived extends Base { \/\/ Instance variable \/\/ private String name; \/\/ Removed \/\/ Constructor public Derived() { this.name = \"Derived Class\"; } \/\/ Overridden Method public String whodunnit() { return this.name; } }     javac Base.java java Base  Derived Class     Summary of Scope and Visibility   Let's investigate how our three visibility levels (private, public, and protected) impact our ability to access members from different scopes (Class\/Object, Package, Subclass, World). summarizes the impact.   Access Levels    Visibility Modifier  Class\/Object  Package  Subclass  World    public  Yes  Yes  Yes  Yes    protected  Yes  Yes  Yes  No    no modifier  Yes  Yes  No  No    private  Yes  No  No  No     Public members are accessible from anywhere in a program. Explicit scoping may be required, but access is granted. Protected members prohibit access from outside the implementing class other than derived classes, which can access protected members. Private member access is limited strictly to the implementing class and its objects. A fourth type of visibility occurs when no visibility modifier is specified. This type of visibility is called package-private because members with no visibility modifier are accessible from within the implementing class as well as from within its package, but not from no other scope.   "
+},
+{
+  "id": "p-810",
+  "level": "2",
+  "url": "section-in-polymorph.html#p-810",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "subtype polymorphism "
+},
+{
+  "id": "p-811",
+  "level": "2",
+  "url": "section-in-polymorph.html#p-811",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "subtype polymorphism "
+},
+{
+  "id": "listing-in-test-togglebutton1",
+  "level": "2",
+  "url": "section-in-polymorph.html#listing-in-test-togglebutton1",
+  "type": "Listing",
+  "number": "10.4.1",
+  "title": "",
+  "body": " TestToggle.java (version 1)   \/\/ TestToggle.java (version 1) import doodlepad.*; public class TestToggle { public static void main(String[] args) { \/\/ Allowed by dubtype polymorphism Shape shp = new ToggleButton(100, 100, 100, 50); \/\/ Forbidden by the compiler shp.toggle(); } }   "
+},
+{
+  "id": "listing-in-test-togglebutton2",
+  "level": "2",
+  "url": "section-in-polymorph.html#listing-in-test-togglebutton2",
+  "type": "Listing",
+  "number": "10.4.2",
+  "title": "",
+  "body": " TestToggle.java (version 2)   \/\/ TestToggle.java import doodlepad.*; public class TestToggle { public static void main(String[] args) { \/\/ Allowed by subtype polymorphism Shape shp = new ToggleButton(100, 100, 100, 50); \/\/ Cast before invoking to make the compiler happy ToggleButton btn = (ToggleButton) shp; btn.toggle(); \/\/ Forbidden by the compiler \/\/shp.toggle(); } }   "
+},
+{
+  "id": "listing-in-base-dynamic-binding",
+  "level": "2",
+  "url": "section-in-polymorph.html#listing-in-base-dynamic-binding",
+  "type": "Listing",
+  "number": "10.4.3",
+  "title": "",
+  "body": " Base.java with Derived   \/\/ Base.java \/\/ Demonstration of dynamic binding \/\/ Base class public class Base { \/\/ Instance variable private String name; \/\/ Constructor public Base() { this.name = \"Base Class\"; } \/\/ Method public String whodunnit() { return this.name; } \/\/ Run a test public static void main(String[] args) { \/\/ Declare a Base type variable and \/\/ assign to a Derived type object Base guilty = new Derived(); \/\/ Print the guilty party's name System.out.println( guilty.whodunnit() ); } } \/\/ Derived class class Derived extends Base { \/\/ Instance variable private String name; \/\/ Constructor public Derived() { this.name = \"Derived Class\"; } \/\/ Overridden Method public String whodunnit() { return this.name; } }   "
+},
+{
+  "id": "p-822",
+  "level": "2",
+  "url": "section-in-polymorph.html#p-822",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Derived "
+},
+{
+  "id": "listing-in-instanceof1",
+  "level": "2",
+  "url": "section-in-polymorph.html#listing-in-instanceof1",
+  "type": "Listing",
+  "number": "10.4.4",
+  "title": "",
+  "body": " instanceof demonstration   System.out.println( guilty instanceof Derived ); System.out.println( guilty instanceof Base );   "
+},
+{
+  "id": "figure-in-public-private",
+  "level": "2",
+  "url": "section-in-polymorph.html#figure-in-public-private",
+  "type": "Figure",
+  "number": "10.4.5",
+  "title": "",
+  "body": " Public and Private Visibility   "
+},
+{
+  "id": "p-827",
+  "level": "2",
+  "url": "section-in-polymorph.html#p-827",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "protected protected public private "
+},
+{
+  "id": "figure-in-protected",
+  "level": "2",
+  "url": "section-in-polymorph.html#figure-in-protected",
+  "type": "Figure",
+  "number": "10.4.6",
+  "title": "",
+  "body": " Protected Visibility   "
+},
+{
+  "id": "listing-in-base-dynamic-binding2",
+  "level": "2",
+  "url": "section-in-polymorph.html#listing-in-base-dynamic-binding2",
+  "type": "Listing",
+  "number": "10.4.7",
+  "title": "",
+  "body": " Base.java with Derived and protected   \/\/ Base.java \/\/ Demonstration of dynamic binding \/\/ Base class public class Base { \/\/ Instance variable \/\/ private String name; protected String name; \/\/ Updated visibility \/\/ Constructor public Base() { this.name = \"Base Class\"; } \/\/ Method public String whodunnit() { return this.name; } \/\/ Run a test public static void main(String[] args) { \/\/ Declare a Base type variable and \/\/ assign to a Derived type object Base guilty = new Derived(); \/\/ Print the guilty party's name System.out.println( guilty.whodunnit() ); } } \/\/ Derived class class Derived extends Base { \/\/ Instance variable \/\/ private String name; \/\/ Removed \/\/ Constructor public Derived() { this.name = \"Derived Class\"; } \/\/ Overridden Method public String whodunnit() { return this.name; } }   "
 },
 {
   "id": "table-cl-access-levels",
   "level": "2",
-  "url": "section-90.html#table-cl-access-levels",
+  "url": "section-in-polymorph.html#table-cl-access-levels",
   "type": "Table",
-  "number": "10.5.1",
+  "number": "10.4.8",
   "title": "Access Levels",
-  "body": " Access Levels    Modifier  Class  Package  Subclass  World    public  Yes  Yes  Yes  Yes    protected  Yes  Yes  Yes  No    no modifier  Yes  Yes  No  No    private  Yes  No  No  No    "
+  "body": " Access Levels    Visibility Modifier  Class\/Object  Package  Subclass  World    public  Yes  Yes  Yes  Yes    protected  Yes  Yes  Yes  No    no modifier  Yes  Yes  No  No    private  Yes  No  No  No    "
 },
 {
-  "id": "section-91",
+  "id": "p-831",
+  "level": "2",
+  "url": "section-in-polymorph.html#p-831",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "package-private "
+},
+{
+  "id": "section-in-object-class",
   "level": "1",
-  "url": "section-91.html",
+  "url": "section-in-object-class.html",
+  "type": "Section",
+  "number": "10.5",
+  "title": "The Object Class",
+  "body": " The Object Class  The designers of the Java language went all in on object oriented programming, especially with respect to inheritance. It turns out that all Java classes take part in an inheritance relationship, except for one. Even if we do not declare a class as extending another class, Java automatically sets of an inheritance relationship between our class and the special predefined class named Object .  We can demonstrate this quickly by adding one more line to , that is, to test if guilty is also an instanceof Object. Modifying with the new main() method in and running, produces the output that follows the listing. An output of three true's tells us that guilty does derive Object, event though Base did not name Object in an extends. In fact all Java classes extend Object. Java handles this automatically.   instanceof demonstration   \/\/ Run a test public static void main(String[] args) { \/\/ Declare a Base type variable and \/\/ assign to a Derived type object Base guilty = new Derived(); \/\/ Check inheritance relationships System.out.println( guilty instanceof Derived ); System.out.println( guilty instanceof Base ); System.out.println( guilty instanceof Object ); }     javac Base.java java Base  true true true   As we know, inheritance provides derived classes with access to all base class members. So, what do we get from Object? After all, if all classes inherit Object, then any non-private members that we find will be available to all of our classes. A little sleuthing uncovers the OpenJDK source code for the Object class . The source code for two inherited Object class methods are of particular interest. These are toString() and equals(…) . Source code for both is given below in and .    Object class source code for toString()   public String toString() { return getClass().getName() + \"@\" + Integer.toHexString(hashCode()); }     Object class source code for equals(…)   public boolean equals(Object obj) { return (this == obj); }    Now we understand why printing an object that does not override toString() generates that curious output. The default implementation of toString() returns a String constructed by concatenating the class name of an object with \"@\" and the hexidecimal representation of its unique hash code.  Also important to appreciate is that the default equals() method inherited by all classes simply defers to testing for object identity using the == operator. This explains why the String class overrides equals() to test equality character-by-character (See ). In general we want Strings to be equal when their character sequence is equal, even when they are not identical.  "
+},
+{
+  "id": "p-832",
+  "level": "2",
+  "url": "section-in-object-class.html#p-832",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Object "
+},
+{
+  "id": "listing-in-instanceof2",
+  "level": "2",
+  "url": "section-in-object-class.html#listing-in-instanceof2",
+  "type": "Listing",
+  "number": "10.5.1",
+  "title": "",
+  "body": " instanceof demonstration   \/\/ Run a test public static void main(String[] args) { \/\/ Declare a Base type variable and \/\/ assign to a Derived type object Base guilty = new Derived(); \/\/ Check inheritance relationships System.out.println( guilty instanceof Derived ); System.out.println( guilty instanceof Base ); System.out.println( guilty instanceof Object ); }   "
+},
+{
+  "id": "listing-in-object-tostring",
+  "level": "2",
+  "url": "section-in-object-class.html#listing-in-object-tostring",
+  "type": "Listing",
+  "number": "10.5.2",
+  "title": "",
+  "body": " Object class source code for toString()   public String toString() { return getClass().getName() + \"@\" + Integer.toHexString(hashCode()); }   "
+},
+{
+  "id": "listing-in-object-equals",
+  "level": "2",
+  "url": "section-in-object-class.html#listing-in-object-equals",
+  "type": "Listing",
+  "number": "10.5.3",
+  "title": "",
+  "body": " Object class source code for equals(…)   public boolean equals(Object obj) { return (this == obj); }   "
+},
+{
+  "id": "section-in-abstract-class",
+  "level": "1",
+  "url": "section-in-abstract-class.html",
   "type": "Section",
   "number": "10.6",
-  "title": "The Object Class",
-  "body": "The Object Class  All Java classes inherit Object, even when there is no extends  The inherited toString() method and when to override  The inherited equals() and when to override  "
-},
-{
-  "id": "section-92",
-  "level": "1",
-  "url": "section-92.html",
-  "type": "Section",
-  "number": "10.7",
-  "title": "Testing for a specific Class",
-  "body": "Testing for a specific Class  instanceof operator  "
-},
-{
-  "id": "section-93",
-  "level": "1",
-  "url": "section-93.html",
-  "type": "Section",
-  "number": "10.8",
   "title": "Abstract Classes and Methods",
-  "body": "Abstract Classes and Methods  Force a derived class to implement a method by declaring it abstract in the base class  A class with an abstract method must also be declared abstract  "
+  "body": " Abstract Classes and Methods  The DoodlePad Shape base class shares quite a bit of functionality with all its derived classes, including a wide array of pixel-perfect mouse events that each shape object may individually. But, what about the Shape class itself. What would happen if we attempted to instantiate Shape directly? How would it look?  An attempt to instantiate Shape will end with a compiler error, and that's a good thing. After all, Shape is an abstract concept, not an actual graphic. It has no visual representation. The Shape class exists primarily as as way to generalize the concept of a shape and to encapsulate the shared functionality of all concrete shape derived classes in one place, to avoid the problems assocaited with code duplication. In fact, the Shape class was designed to be abstract. Never was there an intention that concrete Shape objects would be instantiated. This was part of the original design, and we'd like Java to help us enforce that restriction.  Fortunately, Java does give us the ability to prevent classes from being instantiated directly. This is accomplished by adding the appropriately-named abstract modifier to a class declaration. Refering to the Shape class source code and you will see that Shape is declared with the abstract modifier.   \/** * Abstract base class for all graphical shape objects * * @author Mark F. Russo, Ph.D. * @version 1.1 *\/ public abstract class Shape { ...   But modifying a class with abstract is not enough. If a class is abstract then it must also contain at least one method that is modified with abstract as well. A method with the additional abstract modifier is required to have no implementation. Instead, an abstract method is composed of a method signature only, and this signals that all derived classes must provide a concrete implementation of the method. Once again, the Java compiler enforces this design constraint. Classes that extend an abstract base class must (eventually) provide a concrete implementation of all abstract methods.  If Shape is abstract, then it must have at least one abstract method declared. Of course it does. The one abstract method of Shape is draw(…) , which should make some sense. The one unique feature of all Shape's derived classes it their graphical representation. The draw(…) method is different for each derived class of Shape, and must be implemented. Modifying draw(…) with abstract enlists the compile to enforce the requirement that all derived classes must implement draw(…) .  The complete definition of draw(…) is given in . There is no method body! The definitin is a signature only, no curly braces, just a semicolon ( ; ). Shape can provide no implementation. But Shape methods depend upon there being a concrete implementation. This is guaranteed by the compiler by the addition of the abstract modifier.   Shape's abstract draw(…) method   \/** * Draw the shape. Abstract method to be overridden in derived classes. * @param g The Graphics2D object on which to draw. *\/ public abstract void draw(Graphics2D g); \/\/ Override in derived class    Abstract classes and abstrat methods give us a way to express intended design constraints into our class definitions, which are checked by the compiler. If a base class depends on its subclasses implementing certain methods that have no reasonable default implementation, then the base class is abstract. Modify the base class with abstract and include the abstract method signatures that are required in the base class. The Java comiler will ensure these abstract methods will be implemented in a derived class so that all base class behavior functions properly.  "
 },
 {
-  "id": "p-797",
+  "id": "p-840",
   "level": "2",
-  "url": "section-93.html#p-797",
+  "url": "section-in-abstract-class.html#p-840",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "abstract "
 },
 {
-  "id": "section-in-doodlepad",
-  "level": "1",
-  "url": "section-in-doodlepad.html",
-  "type": "Section",
-  "number": "10.9",
-  "title": "Inheritance in DoodlePad",
-  "body": " Inheritance in DoodlePad  Inheritance in DoodlePad   Handling Events by Overriding Base Class Methods  Another way to associate Shape events with custom methods is to subclass Shape and override the appropriate base class method with an implementation to be invoked when the event fires. The Shape base class implements a series of placeholder methods that do nothing, but exist purely to be overridden by a subclass when custom behavior is desired. This represents an alternative to the method reference approach for setting up custom event handlers, and may be used when comfortable with the concept of inheritance.  The Shape implements a series of \"on\" methods: one for each mouse event. For example, Shape implements a method named onMousePressed which is invoked when a Shape is clicked with the mouse. The signature of this method as well as all other methods that correspond with mouse events share a common signature with the types: double, double and int. These are the mouse event x and y coordinates and an integer identifying the mouse button in use. These parameters are identical to the signature of methods used in the method reference approach, minus the first parameter identifying the Shape object.  The following example illustrates an alternate way to implement the previous PushButton class. In this case the PushButton2 class extends the RoundRect Shape class. The mousePressed event is handled by overriding the onMousePressed() method. The remaining logic for this class is identical to the previous example.   PushButton2.java   \/\/ PushButton2.java import doodlepad.*; public class PushButton2 extends RoundRect { private boolean isOn; \/\/ Button state public PushButton2(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); \/\/ Initialize the button this.setFillColor(200); \/\/ Starts off isOn = false; } @Override public void onMousePressed(double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill color based on state if (isOn) { this.setFillColor(0, 255, 0); } else { this.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton2 PushButton2 myPushButton = new PushButton2(100, 100, 75, 50); } }      Overridable Shape Event Methods  As mentioned, the Shape class implements one overridable method for each mouse event. The following table lists all methods that may be overridden in order to handle a triggered mouse event.   Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.       Overridable Pad Event Methods   Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.      Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share      "
-},
-{
-  "id": "listing-in-pushbutton2",
+  "id": "p-841",
   "level": "2",
-  "url": "section-in-doodlepad.html#listing-in-pushbutton2",
-  "type": "Listing",
-  "number": "10.9.1",
+  "url": "section-in-abstract-class.html#p-841",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": " PushButton2.java   \/\/ PushButton2.java import doodlepad.*; public class PushButton2 extends RoundRect { private boolean isOn; \/\/ Button state public PushButton2(double x, double y, double w, double h) { super(x, y, w, h, 20, 20); \/\/ Initialize the button this.setFillColor(200); \/\/ Starts off isOn = false; } @Override public void onMousePressed(double x, double y, int button) { \/\/ Toggle button state isOn = !isOn; \/\/ Set button fill color based on state if (isOn) { this.setFillColor(0, 255, 0); } else { this.setFillColor(200); } } public static void main(String[] args) { \/\/ Create a new PushButton2 PushButton2 myPushButton = new PushButton2(100, 100, 75, 50); } }   "
+  "body": "abstract "
 },
 {
-  "id": "table-51",
+  "id": "listing-in-shape-draw",
   "level": "2",
-  "url": "section-in-doodlepad.html#table-51",
-  "type": "Table",
-  "number": "10.9.2",
-  "title": "Overridable Shape Event Methods",
-  "body": " Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.    "
+  "url": "section-in-abstract-class.html#listing-in-shape-draw",
+  "type": "Listing",
+  "number": "10.6.1",
+  "title": "",
+  "body": " Shape's abstract draw(…) method   \/** * Draw the shape. Abstract method to be overridden in derived classes. * @param g The Graphics2D object on which to draw. *\/ public abstract void draw(Graphics2D g); \/\/ Override in derived class   "
 },
 {
-  "id": "table-52",
-  "level": "2",
-  "url": "section-in-doodlepad.html#table-52",
-  "type": "Table",
-  "number": "10.9.3",
-  "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",
-  "body": " Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.    "
-},
-{
-  "id": "table-53",
-  "level": "2",
-  "url": "section-in-doodlepad.html#table-53",
-  "type": "Table",
-  "number": "10.9.4",
-  "title": "Overridable Pad Socket Event Methods",
-  "body": " Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share    "
-},
-{
-  "id": "section-95",
+  "id": "section-in-concepts",
   "level": "1",
-  "url": "section-95.html",
+  "url": "section-in-concepts.html",
   "type": "Section",
-  "number": "10.10",
+  "number": "10.7",
   "title": "Key Concepts",
-  "body": "Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding.  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.   "
+  "body": " Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding.  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.   "
 },
 {
-  "id": "exercises-9",
+  "id": "section-in-exercises",
   "level": "1",
-  "url": "exercises-9.html",
-  "type": "Exercises",
-  "number": "10.11",
-  "title": "Exercises",
-  "body": "Exercises  "
+  "url": "section-in-exercises.html",
+  "type": "Section",
+  "number": "10.8",
+  "title": "Chapter Exercises",
+  "body": " Chapter Exercises   "
 },
 {
-  "id": "section-96",
+  "id": "section-94",
   "level": "1",
-  "url": "section-96.html",
+  "url": "section-94.html",
   "type": "Section",
   "number": "11.1",
   "title": "Defining and Implementing Interfaces",
-  "body": "Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
+  "body": " Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
 },
 {
-  "id": "p-804",
+  "id": "p-847",
   "level": "2",
-  "url": "section-96.html#p-804",
+  "url": "section-94.html#p-847",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "class interface "
 },
 {
-  "id": "p-806",
+  "id": "p-849",
   "level": "2",
-  "url": "section-96.html#p-806",
+  "url": "section-94.html#p-849",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "extends implements "
 },
 {
+  "id": "section-95",
+  "level": "1",
+  "url": "section-95.html",
+  "type": "Section",
+  "number": "11.2",
+  "title": "Interfaces and Polymorphism",
+  "body": " Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
+},
+{
+  "id": "section-96",
+  "level": "1",
+  "url": "section-96.html",
+  "type": "Section",
+  "number": "11.3",
+  "title": "The Comparable&lt;T&gt; Interface",
+  "body": " The Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
+},
+{
   "id": "section-97",
   "level": "1",
   "url": "section-97.html",
   "type": "Section",
-  "number": "11.2",
-  "title": "Interfaces and Polymorphism",
-  "body": "Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
+  "number": "11.4",
+  "title": "The Iterator&lt;T&gt; Interface",
+  "body": " The Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
 },
 {
   "id": "section-98",
   "level": "1",
   "url": "section-98.html",
   "type": "Section",
-  "number": "11.3",
-  "title": "Comparable&lt;T&gt; Interface",
-  "body": "Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
+  "number": "11.5",
+  "title": "Benefits of an Interface",
+  "body": " Benefits of an Interface  An ArrayList holding objects of multiple types  "
 },
 {
   "id": "section-99",
   "level": "1",
   "url": "section-99.html",
   "type": "Section",
-  "number": "11.4",
-  "title": "Iterator&lt;T&gt; Interface",
-  "body": "Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
+  "number": "11.6",
+  "title": "Defining Your Own Interfaces",
+  "body": "Defining Your Own Interfaces   "
 },
 {
   "id": "section-100",
   "level": "1",
   "url": "section-100.html",
   "type": "Section",
-  "number": "11.5",
-  "title": "Benefits of an Interface",
-  "body": "Benefits of an Interface  An ArrayList holding objects of multiple types  "
+  "number": "11.7",
+  "title": "Key Concepts",
+  "body": "Key Concepts   An interface is a kind of contract to be fulfilled by a class definition.  An interface is made up of one or more method signatures.  A class implements an interface when it adds the implements keyword and name of the interface to the start of the class.  When a class implements an interface it is obligated to implement all methods signatures defined in that interface.  The compiler enforces the interface implementation contract. If the contract is not fulfilled completely, the compiler will fail with an error.  Interfaces may be defined using the angle brackets of generic notation which allows methods signatures to be parameterized by type.  By implementing the java.lang.Comparable Interface, objects may be sorted by Arrays.sort() or Collections.sort()  By implementing the java.util.Iterator Interface, objects may be iterated using the enhanced-for statement.  Polymorphism implies a single idea may have many forms. There are multiple forms of polymorphism in Java.  Polymorphic methods are implemented when multiple methods of the same name have distinct signatures  Polymorphic methods also appear when subclasses override superclass methods and dynamic binding.  Polymorphic reference variables occur when a variable of type superclass may reference a value of type subclass.  Polymorphic reference variables lso occur when a variable of type interface may reference any object that implements the interface.  As the number of objects in a program grows, so does its complexity. It is essential to design your program before starting to code.  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)   "
+},
+{
+  "id": "exercises-9",
+  "level": "1",
+  "url": "exercises-9.html",
+  "type": "Exercises",
+  "number": "11.8",
+  "title": "Exercises",
+  "body": "Exercises  "
 },
 {
   "id": "section-101",
   "level": "1",
   "url": "section-101.html",
   "type": "Section",
-  "number": "11.6",
-  "title": "Defining Your Own Interfaces",
-  "body": "Defining Your Own Interfaces   "
+  "number": "12.1",
+  "title": "Software Development Life Cycled (SDLC)",
+  "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
 },
 {
   "id": "section-102",
   "level": "1",
   "url": "section-102.html",
   "type": "Section",
-  "number": "11.7",
-  "title": "Interfaces and Polymorphism",
-  "body": "Interfaces and Polymorphism   "
+  "number": "12.2",
+  "title": "Encapsulation and Abstraction",
+  "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
 },
 {
   "id": "section-103",
   "level": "1",
   "url": "section-103.html",
   "type": "Section",
-  "number": "11.8",
-  "title": "Key Concepts",
-  "body": "Key Concepts   An interface is a kind of contract to be fulfilled by a class definition.  An interface is made up of one or more method signatures.  A class implements an interface when it adds the implements keyword and name of the interface to the start of the class.  When a class implements an interface it is obligated to implement all methods signatures defined in that interface.  The compiler enforces the interface implementation contract. If the contract is not fulfilled completely, the compiler will fail with an error.  Interfaces may be defined using the angle brackets of generic notation which allows methods signatures to be parameterized by type.  By implementing the java.lang.Comparable Interface, objects may be sorted by Arrays.sort() or Collections.sort()  By implementing the java.util.Iterator Interface, objects may be iterated using the enhanced-for statement.  Polymorphism implies a single idea may have many forms. There are multiple forms of polymorphism in Java.  Polymorphic methods are implemented when multiple methods of the same name have distinct signatures  Polymorphic methods also appear when subclasses override superclass methods and dynamic binding.  Polymorphic reference variables occur when a variable of type superclass may reference a value of type subclass.  Polymorphic reference variables lso occur when a variable of type interface may reference any object that implements the interface.  As the number of objects in a program grows, so does its complexity. It is essential to design your program before starting to code.  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)   "
-},
-{
-  "id": "exercises-10",
-  "level": "1",
-  "url": "exercises-10.html",
-  "type": "Exercises",
-  "number": "11.9",
-  "title": "Exercises",
-  "body": "Exercises  "
+  "number": "12.3",
+  "title": "Object Relationships",
+  "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
 },
 {
   "id": "section-104",
   "level": "1",
   "url": "section-104.html",
   "type": "Section",
-  "number": "12.1",
-  "title": "Software Development Life Cycled (SDLC)",
-  "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
+  "number": "12.4",
+  "title": "When to use Inheritance",
+  "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
 },
 {
   "id": "section-105",
   "level": "1",
   "url": "section-105.html",
   "type": "Section",
-  "number": "12.2",
-  "title": "Encapsulation and Abstraction",
-  "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
+  "number": "12.5",
+  "title": "When to use Interfaces",
+  "body": "When to use Interfaces  Common public interface  "
 },
 {
-  "id": "section-106",
+  "id": "section-de-gen-spec",
   "level": "1",
-  "url": "section-106.html",
+  "url": "section-de-gen-spec.html",
   "type": "Section",
-  "number": "12.3",
-  "title": "Object Relationships",
-  "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
+  "number": "12.6",
+  "title": "Generalization and Specialization",
+  "body": " Generalization and Specialization  Grouping fields and methods in a base class is a kind of generalization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  "
 },
 {
   "id": "section-107",
   "level": "1",
   "url": "section-107.html",
   "type": "Section",
-  "number": "12.4",
-  "title": "When to use Inheritance",
-  "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
+  "number": "12.7",
+  "title": "Cohesion and Coupling",
+  "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
 },
 {
   "id": "section-108",
   "level": "1",
   "url": "section-108.html",
   "type": "Section",
-  "number": "12.5",
-  "title": "When to use Interfaces",
-  "body": "When to use Interfaces  Common public interface  "
+  "number": "12.8",
+  "title": "Unified Modeling Language (UML)",
+  "body": "Unified Modeling Language (UML)  "
 },
 {
   "id": "section-109",
   "level": "1",
   "url": "section-109.html",
   "type": "Section",
-  "number": "12.6",
-  "title": "Cohesion and Coupling",
-  "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
+  "number": "12.9",
+  "title": "Class Diagram",
+  "body": "Class Diagram  A structure diagram  "
 },
 {
   "id": "section-110",
   "level": "1",
   "url": "section-110.html",
   "type": "Section",
-  "number": "12.7",
-  "title": "Unified Modeling Language (UML)",
-  "body": "Unified Modeling Language (UML)  "
+  "number": "12.10",
+  "title": "Object Diagram",
+  "body": "Object Diagram  A structure diagram  "
 },
 {
   "id": "section-111",
   "level": "1",
   "url": "section-111.html",
   "type": "Section",
-  "number": "12.8",
-  "title": "Class Diagram",
-  "body": "Class Diagram  A structure diagram  "
+  "number": "12.11",
+  "title": "Activity Diagrams",
+  "body": "Activity Diagrams  A behavior diagram  "
 },
 {
   "id": "section-112",
   "level": "1",
   "url": "section-112.html",
   "type": "Section",
-  "number": "12.9",
-  "title": "Object Diagram",
-  "body": "Object Diagram  A structure diagram  "
+  "number": "12.12",
+  "title": "State Machine Diagrams",
+  "body": "State Machine Diagrams  A behavior diagram  "
 },
 {
   "id": "section-113",
   "level": "1",
   "url": "section-113.html",
   "type": "Section",
-  "number": "12.10",
-  "title": "Activity Diagrams",
-  "body": "Activity Diagrams  A behavior diagram  "
+  "number": "12.13",
+  "title": "Key Concepts",
+  "body": "Key Concepts   Unified Modeling Language (UML) is a standard diagram specification for the design and visualization of software, especially when using an object oriented programming language.  The UML specification defines multiple diagram types. We focus on Class Diagrams.  A Class Diagram describes the classes in a program: including their instance variables and methods.  A Class Diagram also depicts the way classes in a program relate to one another.  Type of relationships include inheritance (implementation and interface), aggregation, and dependency  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)  Aggregation occurs when one object is contained by another object, like a field or a collection (comprises)  Dependency occurs when a class is used by another but is not a field (depends upon)  The cardinality of a relationship may be indicated using numeric annotations at the end of a connection   "
+},
+{
+  "id": "exercises-10",
+  "level": "1",
+  "url": "exercises-10.html",
+  "type": "Exercises",
+  "number": "12.14",
+  "title": "Exercises",
+  "body": "Exercises  "
 },
 {
   "id": "section-114",
   "level": "1",
   "url": "section-114.html",
   "type": "Section",
-  "number": "12.11",
-  "title": "State Machine Diagrams",
-  "body": "State Machine Diagrams  A behavior diagram  "
+  "number": "13.1",
+  "title": "Syntax Errors",
+  "body": "Syntax Errors  Caught by the compiler  "
 },
 {
   "id": "section-115",
   "level": "1",
   "url": "section-115.html",
   "type": "Section",
-  "number": "12.12",
-  "title": "Key Concepts",
-  "body": "Key Concepts   Unified Modeling Language (UML) is a standard diagram specification for the design and visualization of software, especially when using an object oriented programming language.  The UML specification defines multiple diagram types. We focus on Class Diagrams.  A Class Diagram describes the classes in a program: including their instance variables and methods.  A Class Diagram also depicts the way classes in a program relate to one another.  Type of relationships include inheritance (implementation and interface), aggregation, and dependency  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)  Aggregation occurs when one object is contained by another object, like a field or a collection (comprises)  Dependency occurs when a class is used by another but is not a field (depends upon)  The cardinality of a relationship may be indicated using numeric annotations at the end of a connection   "
-},
-{
-  "id": "exercises-11",
-  "level": "1",
-  "url": "exercises-11.html",
-  "type": "Exercises",
-  "number": "12.13",
-  "title": "Exercises",
-  "body": "Exercises  "
+  "number": "13.2",
+  "title": "Logic Errors",
+  "body": "Logic Errors  The program runs, but produces the wrong output.  "
 },
 {
   "id": "section-116",
   "level": "1",
   "url": "section-116.html",
   "type": "Section",
-  "number": "13.1",
-  "title": "Syntax Errors",
-  "body": "Syntax Errors  Caught by the compiler  "
-},
-{
-  "id": "section-117",
-  "level": "1",
-  "url": "section-117.html",
-  "type": "Section",
-  "number": "13.2",
-  "title": "Logic Errors",
-  "body": "Logic Errors  The program runs, but produces the wrong output.  "
-},
-{
-  "id": "section-118",
-  "level": "1",
-  "url": "section-118.html",
-  "type": "Section",
   "number": "13.3",
   "title": "Runtime Errors",
   "body": "Runtime Errors  The program compiles, but something goes wrong while it is running. Java responds to the problem by throwing an exception. Like nearly everything else in Java, an exception is an object created by instantiating a suitable exception class that identifies the problem.  If there is no intervention, Java will eventually print the current state of the call stack when the exception object is thrown.  "
 },
 {
-  "id": "p-841",
+  "id": "p-887",
   "level": "2",
-  "url": "section-118.html#p-841",
+  "url": "section-116.html#p-887",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "call stack "
 },
 {
-  "id": "section-119",
+  "id": "section-117",
   "level": "1",
-  "url": "section-119.html",
+  "url": "section-117.html",
   "type": "Section",
   "number": "13.4",
   "title": "Common Exception Classes",
   "body": "Common Exception Classes  ArithmeticException  NullPointerException  IndexOutOfBoundsException  ArrayIndexOutOfBoundsException  IllegalArgumentException  Exception class hierarchy  printStackTrace() method  "
 },
 {
-  "id": "section-120",
+  "id": "section-118",
   "level": "1",
-  "url": "section-120.html",
+  "url": "section-118.html",
   "type": "Section",
   "number": "13.5",
   "title": "Catching Exceptions",
   "body": "Catching Exceptions  try-catch  try-catch-finally  "
 },
 {
-  "id": "section-121",
+  "id": "section-119",
   "level": "1",
-  "url": "section-121.html",
+  "url": "section-119.html",
   "type": "Section",
   "number": "13.6",
   "title": "Checked vs. Unchecked Exceptions",
   "body": "Checked vs. Unchecked Exceptions  Checked exceptions must be caught  Alternatively, the catching of a checked exception may be deferred using the throws keyword.  "
 },
 {
-  "id": "p-852",
+  "id": "p-898",
   "level": "2",
-  "url": "section-121.html#p-852",
+  "url": "section-119.html#p-898",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "throws "
 },
 {
-  "id": "section-122",
+  "id": "section-120",
   "level": "1",
-  "url": "section-122.html",
+  "url": "section-120.html",
   "type": "Section",
   "number": "13.7",
   "title": "Reading Files",
   "body": "Reading Files  Thow IO exceptions  IO exceptions are checked, and must be caught in a try-catch  Files need to be closed.  "
 },
 {
-  "id": "section-123",
+  "id": "section-121",
   "level": "1",
-  "url": "section-123.html",
+  "url": "section-121.html",
   "type": "Section",
   "number": "13.8",
   "title": "try-with-resources",
   "body": "try-with-resources  May be used with objects that implement the AutoClosable interface.  public interface AutoCloseable { void close() throws Exception; }  "
 },
 {
-  "id": "section-124",
+  "id": "section-122",
   "level": "1",
-  "url": "section-124.html",
+  "url": "section-122.html",
   "type": "Section",
   "number": "13.9",
   "title": "Key Concepts",
   "body": "Key Concepts   Three types of errors occur in Java: Syntax Errors, Logic Errors and Runtime Errors  Syntax errors occur when rules defined by Java are violated.  The Java compiler reports syntax errors when an attempt is made to compile a program.  Logic errors occur when a syntactically correct program compiles and runs, but produces output that is incorrect.  Logic errors are produced by mistakes in the way the program is written.  Runtime errors occur when an unexpected error occurs while a program is running.  Runtime errors may be due to unexpected situations such as invalid array indexes, missing files, etc. These are called exceptions.  With no special intervention, an exception will cause a Java program to halt with an indication of what caused the exception.  Runtime exceptions may be caught and handled by a Java program.  The try-catch and try-catch-finally statements are used to catch and handle runtime exceptions.  Exceptions are encapsulated as objects in the standard library and all Exception classes inherit the java.lang.Exception class.  Common exception classes include ArithmeticException, NullPointerException, IndexOutOfBoundsException, ArrayIndexOutOfBoundsException, IllegalArgumentException  The try block contains the code to be executed that may result in an exception.  The catch block is the code that will be executed if a matching exception is thrown.  The optional finally block is code that is guaranteed to execute, regardless of whether or not an exception was thrown.  The catch block may specify the class that it is willing to catch and handle, or it may be set up to handle all thrown exceptions.  Multiple catch blocks may be specified if different exception classes have their own way of being handled.  As a type of class, exceptions may be instantiated to create exception objects and the object may be thrown by the user. This is accomplished with the throw statement.  Exception classes may be subclassed to create custom catchable exception classes with unique data and behavior.  There are two important exception class categories: checked exceptions and unchecked exceptions.  The Java compiler requires that all checked exceptions be handled with a try-catch and will refuse to compile a program with a checked exception that is not caught.  IOExceptions and their subclasses, such as FileNotFoundException, are examples of checked exceptions.  The handling of checked exceptions may be deferred from one method to its calling method by adding a throws statement to the method declaration.  Unchecked exceptions are not required to be handled, and may cause a program to halt if one occurs outside a try-catch block.  RuntimeExceptions, such as IndexOutOfBoundException, are examples of unchecked exceptions.  There is a formal distinction between errors in exceptions in Java: unlike exceptions, errors are fatal and cannot be handled.  Exception objects have their own methods that may be invoked when an exception object is caught.  The printStackTrace() method of Exception objects will print to the terminal the entire state of a program at the time an exception occurred.  A variation on the try-catch statement will automatically close an open resource when an exception occurs, such as an open file. This is called try-with-resources.   "
 },
 {
-  "id": "exercises-12",
+  "id": "exercises-11",
   "level": "1",
-  "url": "exercises-12.html",
+  "url": "exercises-11.html",
   "type": "Exercises",
   "number": "13.10",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-125",
+  "id": "section-123",
   "level": "1",
-  "url": "section-125.html",
+  "url": "section-123.html",
   "type": "Section",
   "number": "14.1",
   "title": "Tracing Programs",
   "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
 },
 {
-  "id": "section-126",
+  "id": "section-124",
   "level": "1",
-  "url": "section-126.html",
+  "url": "section-124.html",
   "type": "Section",
   "number": "14.2",
   "title": "The Call Stack",
   "body": "The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
 },
 {
-  "id": "section-127",
+  "id": "section-125",
   "level": "1",
-  "url": "section-127.html",
+  "url": "section-125.html",
   "type": "Section",
   "number": "14.3",
   "title": "Recursion",
   "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
 },
 {
-  "id": "p-861",
+  "id": "p-907",
   "level": "2",
-  "url": "section-127.html#p-861",
+  "url": "section-125.html#p-907",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "recursion "
 },
 {
-  "id": "p-862",
+  "id": "p-908",
   "level": "2",
-  "url": "section-127.html#p-862",
+  "url": "section-125.html#p-908",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Direct recursion "
 },
 {
-  "id": "p-863",
+  "id": "p-909",
   "level": "2",
-  "url": "section-127.html#p-863",
+  "url": "section-125.html#p-909",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Indirect recursion "
 },
 {
-  "id": "section-128",
+  "id": "section-126",
   "level": "1",
-  "url": "section-128.html",
+  "url": "section-126.html",
   "type": "Section",
   "number": "14.4",
   "title": "Solving Problems with Recursion",
   "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
 },
 {
-  "id": "p-866",
+  "id": "p-912",
   "level": "2",
-  "url": "section-128.html#p-866",
+  "url": "section-126.html#p-912",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cases base case recursive case "
 },
 {
-  "id": "section-129",
+  "id": "section-127",
   "level": "1",
-  "url": "section-129.html",
+  "url": "section-127.html",
   "type": "Section",
   "number": "14.5",
   "title": "Example: Computing Factorial",
   "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-130",
+  "id": "section-128",
   "level": "1",
-  "url": "section-130.html",
+  "url": "section-128.html",
   "type": "Section",
   "number": "14.6",
   "title": "Example: Computing Fibonacci Numbers",
   "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
 },
 {
-  "id": "section-131",
+  "id": "section-129",
   "level": "1",
-  "url": "section-131.html",
+  "url": "section-129.html",
   "type": "Section",
   "number": "14.7",
   "title": "Example: Drawing a Pyramid",
   "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-132",
+  "id": "section-130",
   "level": "1",
-  "url": "section-132.html",
+  "url": "section-130.html",
   "type": "Section",
   "number": "14.8",
   "title": "Example: Building a Maze",
   "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
 },
 {
-  "id": "section-133",
+  "id": "section-131",
   "level": "1",
-  "url": "section-133.html",
+  "url": "section-131.html",
   "type": "Section",
   "number": "14.9",
   "title": "Key Concepts",
   "body": "Key Concepts   The call stack is a data structure that tracks all currently executing methods.  A stack frame tracks each executing method on the call stack.  A stack frame contains all information about the associated method.  Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.  When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.  The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.  When a method (eventually) invokes itself during execution, the process is called recursion.  When a recursively invoked method returns, the method call resolves to the returned value.  Many algorithms may be implemented using recursion.  Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.  Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.  Recursive programs may be divided into direct recursion and indirect recursion.  All recursive programs must have at least one base case and at least one recursive case.  The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.  A recursive case must move closer to the base case in some way to ensure the recursive program terminates.  There may be multiple base cases and multiple recursive cases in a recursive algorithm.   "
 },
 {
-  "id": "exercises-13",
+  "id": "exercises-12",
   "level": "1",
-  "url": "exercises-13.html",
+  "url": "exercises-12.html",
   "type": "Exercises",
   "number": "14.10",
   "title": "Exercises",
   "body": "Exercises  "
 },
 {
-  "id": "section-134",
+  "id": "section-132",
   "level": "1",
-  "url": "section-134.html",
+  "url": "section-132.html",
   "type": "Section",
   "number": "15.1",
   "title": "Searching and Sorting Algorithms",
   "body": " Searching and Sorting Algorithms   A class that holds only static methods capable of performing several algorithms on Java Collection classes  https:\/\/docs.oracle.com\/en\/java\/javase\/20\/docs\/api\/java.base\/java\/util\/Collections.html   "
 },
 {
-  "id": "section-135",
+  "id": "section-133",
   "level": "1",
-  "url": "section-135.html",
+  "url": "section-133.html",
   "type": "Section",
   "number": "15.2",
   "title": "Sequential Search",
   "body": "Sequential Search  "
 },
 {
-  "id": "section-136",
+  "id": "section-134",
   "level": "1",
-  "url": "section-136.html",
+  "url": "section-134.html",
   "type": "Section",
   "number": "15.3",
   "title": "Binary Search",
   "body": "Binary Search  Iterative implementation  Recursive implementation  "
 },
 {
-  "id": "section-137",
+  "id": "section-135",
   "level": "1",
-  "url": "section-137.html",
+  "url": "section-135.html",
   "type": "Section",
   "number": "15.4",
   "title": "Selection Sort",
   "body": "Selection Sort  "
 },
 {
-  "id": "section-138",
+  "id": "section-136",
   "level": "1",
-  "url": "section-138.html",
+  "url": "section-136.html",
   "type": "Section",
   "number": "15.5",
   "title": "Insertion Sort",
   "body": "Insertion Sort  "
 },
 {
-  "id": "section-139",
+  "id": "section-137",
   "level": "1",
-  "url": "section-139.html",
+  "url": "section-137.html",
   "type": "Section",
   "number": "15.6",
   "title": "Merge Sort",
   "body": "Merge Sort  "
 },
 {
-  "id": "section-140",
+  "id": "section-138",
   "level": "1",
-  "url": "section-140.html",
+  "url": "section-138.html",
   "type": "Section",
   "number": "15.7",
   "title": "Complexity",
   "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
 },
 {
-  "id": "section-141",
+  "id": "section-139",
   "level": "1",
-  "url": "section-141.html",
+  "url": "section-139.html",
   "type": "Section",
   "number": "15.8",
   "title": "Key Concepts",
   "body": "Key Concepts   Algorithms are systematic ways of solving a given problem.  Two categories of algorithms include searching for a value and sorting a linear sequence of values.  Algorithms for searching include sequential search and binary search  Sequential search is ...  Binary search is ...  Three algorithms for sorting include selection sort, insertion sort, and merge sort.  Selection sort is ...  Insertion sort is ...  Merge sort is ...  The cost of an algorithm may be determined by mathematical analysis. This result of analysis in a mathematical expression that describes how cost grows with some respect to some input, such as the the size of the data structure processed.  How an algorithms grows is referred to as Big-Oh notation.   "
 },
 {
-  "id": "exercises-14",
+  "id": "exercises-13",
   "level": "1",
-  "url": "exercises-14.html",
+  "url": "exercises-13.html",
   "type": "Exercises",
   "number": "15.9",
   "title": "Exercises",
@@ -4042,9 +4213,9 @@ var ptx_lunr_docs = [
   "body": " ASCII Table   Americal Standard Code Information Interchange (ASCII)    Decimal Code  Symbol  Description   0 NUL Null character  1 SOH Start of Heading  2 STX Start of Text  3 ETX End of Text  3 ETX End of Text  4 EOT End of Transmission  5 ENQ Enquiry  6 ACK Acknowledge  7 BEL Bell, Alert  8 BS Backspace  9 HT Horizontal Tab  10 LF Line Feed  11 VT Vertical Tabulation  12 FF Form Feed  13 CR Carriage Return  14 SO Shift Out  15 SI Shift In  16 DLE Data Link Escape  17 DC1 Device Control One (XON)  18 DC2 Device Control Two  19 DC3 Device Control Three (XOFF)  20 DC4 Device Control Four  21 NAK Negative Acknowledge  22 SYN Synchronous Idle  23 ETB End of Transmission Block  24 CAN Cancel  25 EM End of medium  26 SUB Substitute  27 ESC Escape  28 FS File Separator  29 GS Group Separator  30 RS Record Separator  31 US Unit Separator  32 SP Space  33 ! Exclamation mark  34 \" Double quotes (or speech marks)  35 # Number sign  36 $ Dollar  37 % Per cent sign  38 & Ampersand  39 ' Single quote  40 ( Open parenthesis (or open bracket)  41 ) Close parenthesis (or close bracket)  42 * Asterisk  43 + Plus  44 , Comma  45 - Hyphen-minus  46 . Period, dot or full stop  47 \/ Slash or divide  48 0 Zero  49 1 One  50 2 Two  51 3 Three  52 4 Four  53 5 Five  54 6 Six  55 7 Seven  56 8 Eight  57 9 Nine  58 : Colon  59 ; Semicolon  60 Less than (or open angled bracket)  61 = Equals  62 > Greater than (or close angled bracket)  63 ? Question mark  64 @ At sign  65 A Uppercase A  66 B Uppercase B  67 C Uppercase C  68 D Uppercase D  69 E Uppercase E  70 F Uppercase F  71 G Uppercase G  72 H Uppercase H  73 I Uppercase I  74 J Uppercase J  75 K Uppercase K  76 L Uppercase L  77 M Uppercase M  78 N Uppercase N  79 O Uppercase O  80 P Uppercase P  81 Q Uppercase Q  82 R Uppercase R  83 S Uppercase S  84 T Uppercase T  85 U Uppercase U  86 V Uppercase V  87 W Uppercase W  88 X Uppercase X  89 Y Uppercase Y  90 Z Uppercase Z  91 [ Opening bracket  92 \\ Backslash  93 ] Closing bracket  94 ^ Caret - circumflex  95 _ Underscore  96 ` Grave accent  97 a Lowercase a  98 b Lowercase b  99 c Lowercase c  100 d Lowercase d  101 e Lowercase e  102 f Lowercase f  103 g Lowercase g  104 h Lowercase h  105 i Lowercase i  106 j Lowercase j  107 k Lowercase k  108 l Lowercase l  109 m Lowercase m  110 n Lowercase n  111 o Lowercase o  112 p Lowercase p  113 q Lowercase q  114 r Lowercase r  115 s Lowercase s  116 t Lowercase t  117 u Lowercase u  118 v Lowercase v  119 w Lowercase w  120 x Lowercase x  121 y Lowercase y  122 z Lowercase z  123 { Opening brace  124 | Vertical bar  125 } Closing brace  126 ~ Equivalency sign - tilde  127 DEL Delete    "
 },
 {
-  "id": "table-54",
+  "id": "table-51",
   "level": "2",
-  "url": "appendix_ascii_table.html#table-54",
+  "url": "appendix_ascii_table.html#table-51",
   "type": "Table",
   "number": "A.0.1",
   "title": "Americal Standard Code Information Interchange (ASCII)",
@@ -4060,49 +4231,94 @@ var ptx_lunr_docs = [
   "body": " Common Shells and Commands   Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX      Shell commands    Task  Shell  Command    Get the current working directory  Command Prompt  cd     PowerShell  pwd     bash  pwd    List directory contents  Command Prompt  dir     PowerShell  dir     bash  ls    Change the current working directory  Command Prompt  cd  path\\to\\directory     PowerShell  cd  path\\to\\directory     bash  cd  path\/to\/directory    Move up one directory level  Command Prompt  cd ..     PowerShell  cd ..     bash  cd ..    Create a new directory  Command Prompt  mkdir  directoryname     PowerShell  mkdir  directoryname     bash  mkdir  directoryname    Copy a file  Command Prompt  copy  source\\file\\path destination\\file\\path     PowerShell  Copy-Item -Path  source\\file\\path  -Destination  destination\\file\\path     bash  cp  source\/file\/path destination\/file\/path    Delete a file  Command Prompt  del  filename     PowerShell  del  filename     bash  rm  filename     "
 },
 {
-  "id": "table-55",
+  "id": "table-52",
   "level": "2",
-  "url": "appendix_shells.html#table-55",
+  "url": "appendix_shells.html#table-52",
   "type": "Table",
   "number": "B.0.1",
   "title": "Operating systems and their common shell programs",
   "body": " Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX    "
 },
 {
-  "id": "table-56",
+  "id": "table-53",
   "level": "2",
-  "url": "appendix_shells.html#table-56",
+  "url": "appendix_shells.html#table-53",
   "type": "Table",
   "number": "B.0.2",
   "title": "Shell commands",
   "body": " Shell commands    Task  Shell  Command    Get the current working directory  Command Prompt  cd     PowerShell  pwd     bash  pwd    List directory contents  Command Prompt  dir     PowerShell  dir     bash  ls    Change the current working directory  Command Prompt  cd  path\\to\\directory     PowerShell  cd  path\\to\\directory     bash  cd  path\/to\/directory    Move up one directory level  Command Prompt  cd ..     PowerShell  cd ..     bash  cd ..    Create a new directory  Command Prompt  mkdir  directoryname     PowerShell  mkdir  directoryname     bash  mkdir  directoryname    Copy a file  Command Prompt  copy  source\\file\\path destination\\file\\path     PowerShell  Copy-Item -Path  source\\file\\path  -Destination  destination\\file\\path     bash  cp  source\/file\/path destination\/file\/path    Delete a file  Command Prompt  del  filename     PowerShell  del  filename     bash  rm  filename    "
 },
 {
-  "id": "appendix-3",
+  "id": "appendix-shape-events",
   "level": "1",
-  "url": "appendix-3.html",
+  "url": "appendix-shape-events.html",
   "type": "Appendix",
   "number": "C",
-  "title": "Debugging",
-  "body": " Debugging    Debugging is the process of identifying and correcting errors in a program  The simplest form of debugging a program involved hand tracing its statements and program flow.  Another form of debugging involves strategically placed print statements in a program that reveal its intermediate state during execution.  Java assertions are statement that evaluate an expression that should evaluate to true. An AssertionError is thrown when the expression evaluates to false.  A debugger is special software what allows you to step through a program and introspect its state and values between each step.    "
+  "title": "DoodlePad Shape Events",
+  "body": " DoodlePad Shape Events  The Shape class implements a series of \"on\" methods: one for each mouse event. For example, Shape implements a method named onMousePressed which is invoked when a Shape is pressed by the mouse. This method as well as all other methods that correspond with mouse events share a common signature with the types: double, double and int. These are the mouse event x and y coordinates and an integer identifying the mouse button in use. These parameters are identical to the signature of methods used in the method reference approach, minus the first parameter identifying the Shape object.  The following table lists all methods that may be overridden in order to handle a triggered mouse event.   Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.     "
 },
 {
-  "id": "appendix-testing",
+  "id": "table-54",
+  "level": "2",
+  "url": "appendix-shape-events.html#table-54",
+  "type": "Table",
+  "number": "C.0.1",
+  "title": "Overridable Shape Event Methods",
+  "body": " Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.    "
+},
+{
+  "id": "appendix-pad-events",
   "level": "1",
-  "url": "appendix-testing.html",
+  "url": "appendix-pad-events.html",
   "type": "Appendix",
   "number": "D",
-  "title": "Testing",
-  "body": " Testing   Introduce and motivate testing  Use main() for testing  Learn the debugger   The Importance of Testing  The compiler tells us if we have syntax error s and the execution engine throws exceptions when something goes wrong while the program is running ( runtime errors ). How can we check when the program runs without error, but produces incorrect results ( logic errors )? The best way to check for logic errors is through testing.  A good test plan executes all paths through your source code and presents a wide range of possible inputs. It checks results produced to make sure all they are correct.   Java assertions and AssertionError  Java assertions and AssertionError   Unit Testing  Integration Testing  Key Concepts   Testing is an important part of software development during which time test cases are developed and run to ensure a program is correct.  Test cases should cover all behavior expected by a program. This is called test coverage.  Special testing situations include a boundary (edge) case, a corner case and a special case  Software testing includes unit testing and integration testing  During unit testing individual isolated parts (units) of a program are tested for correctness independently  During integration testing the interaction between software units is tested for correctness   "
+  "title": "DoodlePad Pad Events",
+  "body": " DoodlePad Pad Events  The Pad class offers several opportunities to handle events by overriding its methods. In addition to mouse-related events, the Pad class handles keyboard events, network socket events, as well as a global timer.   Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.      Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share     "
 },
 {
-  "id": "p-890",
+  "id": "table-55",
   "level": "2",
-  "url": "appendix-testing.html#p-890",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "syntax error runtime errors logic errors "
+  "url": "appendix-pad-events.html#table-55",
+  "type": "Table",
+  "number": "D.0.1",
+  "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",
+  "body": " Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.    "
+},
+{
+  "id": "table-56",
+  "level": "2",
+  "url": "appendix-pad-events.html#table-56",
+  "type": "Table",
+  "number": "D.0.2",
+  "title": "Overridable Pad Socket Event Methods",
+  "body": " Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share    "
+},
+{
+  "id": "appendix-timer-events",
+  "level": "1",
+  "url": "appendix-timer-events.html",
+  "type": "Appendix",
+  "number": "E",
+  "title": "DoodlePad Timer Events",
+  "body": " DoodlePad Timer Events  DoodlePad implements a Timer class, that may be used to drive repeating events, like animations. You may create any number of Timer objects, set the tick-rate in ticks-per-second, start and stop TImer objects, and handle a Timer-related events by extending the class and overriding methods.   Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onStart(long when)  A method that can be overridden to handle the Timer's start event. The timer is started by invoking the startTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.    public void onStop(long when)  A method that can be overridden to handle the Timer's stop event. The timer is started by invoking the stopTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.    public void onTick(long when)  A method that can be overridden to handle the Timer's tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.     "
+},
+{
+  "id": "table-57",
+  "level": "2",
+  "url": "appendix-timer-events.html#table-57",
+  "type": "Table",
+  "number": "E.0.1",
+  "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",
+  "body": " Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onStart(long when)  A method that can be overridden to handle the Timer's start event. The timer is started by invoking the startTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.    public void onStop(long when)  A method that can be overridden to handle the Timer's stop event. The timer is started by invoking the stopTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.    public void onTick(long when)  A method that can be overridden to handle the Timer's tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.    "
+},
+{
+  "id": "appendix-6",
+  "level": "1",
+  "url": "appendix-6.html",
+  "type": "Appendix",
+  "number": "F",
+  "title": "Debugging",
+  "body": " Debugging    Debugging is the process of identifying and correcting errors in a program  The simplest form of debugging a program involved hand tracing its statements and program flow.  Another form of debugging involves strategically placed print statements in a program that reveal its intermediate state during execution.  Java assertions are statement that evaluate an expression that should evaluate to true. An AssertionError is thrown when the expression evaluates to false.  A debugger is special software what allows you to step through a program and introspect its state and values between each step.    "
 },
 {
   "id": "glossary",
@@ -4141,18 +4357,18 @@ var ptx_lunr_docs = [
   "body": "   doodlepad.org   https:\/\/doodlepad.org   copyright  This book was authored in PreTeXt .  "
 },
 {
-  "id": "section-142",
+  "id": "section-140",
   "level": "1",
-  "url": "section-142.html",
+  "url": "section-140.html",
   "type": "Section",
   "number": "16.1",
   "title": "Visualizer",
   "body": " Visualizer   Visualize   "
 },
 {
-  "id": "section-143",
+  "id": "section-141",
   "level": "1",
-  "url": "section-143.html",
+  "url": "section-141.html",
   "type": "Section",
   "number": "16.2",
   "title": "Active Code",
@@ -4161,7 +4377,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-python",
   "level": "2",
-  "url": "section-143.html#program-activecode-python",
+  "url": "section-141.html#program-activecode-python",
   "type": "Listing",
   "number": "16.2.1",
   "title": "",
@@ -4170,7 +4386,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-java",
   "level": "2",
-  "url": "section-143.html#program-activecode-java",
+  "url": "section-141.html#program-activecode-java",
   "type": "Listing",
   "number": "16.2.2",
   "title": "Informal Java “Hello, World”",
@@ -4179,16 +4395,16 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-javascript",
   "level": "2",
-  "url": "section-143.html#program-activecode-javascript",
+  "url": "section-141.html#program-activecode-javascript",
   "type": "Listing",
   "number": "16.2.3",
   "title": "",
   "body": " An interactive JavaScript program, using Runestone   document.write('Hello, world!');   "
 },
 {
-  "id": "exercises-15",
+  "id": "exercises-14",
   "level": "1",
-  "url": "exercises-15.html",
+  "url": "exercises-14.html",
   "type": "Exercises",
   "number": "16.3",
   "title": "Exercises",
@@ -4197,7 +4413,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-21",
   "level": "2",
-  "url": "exercises-15.html#exercise-21",
+  "url": "exercises-14.html#exercise-21",
   "type": "Exercise",
   "number": "16.3.1",
   "title": "True\/False.",
@@ -4206,7 +4422,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-22",
   "level": "2",
-  "url": "exercises-15.html#exercise-22",
+  "url": "exercises-14.html#exercise-22",
   "type": "Exercise",
   "number": "16.3.2",
   "title": "Multiple Choice.",
@@ -4215,7 +4431,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-23",
   "level": "2",
-  "url": "exercises-15.html#exercise-23",
+  "url": "exercises-14.html#exercise-23",
   "type": "Exercise",
   "number": "16.3.3",
   "title": "Parson’s Problem.",
@@ -4224,7 +4440,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-24",
   "level": "2",
-  "url": "exercises-15.html#exercise-24",
+  "url": "exercises-14.html#exercise-24",
   "type": "Exercise",
   "number": "16.3.4",
   "title": "Matching.",
@@ -4233,7 +4449,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-25",
   "level": "2",
-  "url": "exercises-15.html#exercise-25",
+  "url": "exercises-14.html#exercise-25",
   "type": "Exercise",
   "number": "16.3.5",
   "title": "Clickable Area.",
@@ -4242,7 +4458,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-integer",
   "level": "2",
-  "url": "exercises-15.html#fillin-integer",
+  "url": "exercises-14.html#fillin-integer",
   "type": "Exercise",
   "number": "16.3.6",
   "title": "Fill-In, Integer Answer.",
@@ -4251,7 +4467,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-string-integer",
   "level": "2",
-  "url": "exercises-15.html#fillin-string-integer",
+  "url": "exercises-14.html#fillin-string-integer",
   "type": "Exercise",
   "number": "16.3.7",
   "title": "Fill-In, String and Number Answers.",
@@ -4260,7 +4476,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-case-insensitive",
   "level": "2",
-  "url": "exercises-15.html#fillin-case-insensitive",
+  "url": "exercises-14.html#fillin-case-insensitive",
   "type": "Exercise",
   "number": "16.3.8",
   "title": "Fill-In, Case-Insensitive Answer.",
@@ -4269,7 +4485,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-decimal",
   "level": "2",
-  "url": "exercises-15.html#fillin-decimal",
+  "url": "exercises-14.html#fillin-decimal",
   "type": "Exercise",
   "number": "16.3.9",
   "title": "Fill-In, Decimal Answer.",
@@ -4278,16 +4494,16 @@ var ptx_lunr_docs = [
 {
   "id": "short-answer-question",
   "level": "2",
-  "url": "exercises-15.html#short-answer-question",
+  "url": "exercises-14.html#short-answer-question",
   "type": "Exercise",
   "number": "16.3.10",
   "title": "Short Answer.",
   "body": "Short Answer  This sample book is configured to make some simple questions interactive on a capable platform, by adding a <response> element as a signal.  "
 },
 {
-  "id": "exercises-16",
+  "id": "exercises-15",
   "level": "1",
-  "url": "exercises-16.html",
+  "url": "exercises-15.html",
   "type": "Exercises",
   "number": "16.4",
   "title": "Exercises",
@@ -4296,7 +4512,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-31",
   "level": "2",
-  "url": "exercises-16.html#exercise-31",
+  "url": "exercises-15.html#exercise-31",
   "type": "Exercise",
   "number": "16.4.1",
   "title": "Identify valid variables names.",
@@ -4305,7 +4521,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-32",
   "level": "2",
-  "url": "exercises-16.html#exercise-32",
+  "url": "exercises-15.html#exercise-32",
   "type": "Exercise",
   "number": "16.4.2",
   "title": "Order of Operations.",
@@ -4314,16 +4530,16 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-33",
   "level": "2",
-  "url": "exercises-16.html#exercise-33",
+  "url": "exercises-15.html#exercise-33",
   "type": "Exercise",
   "number": "16.4.3",
   "title": "Predict expression evaluation value and type.",
   "body": "Predict expression evaluation value and type Follow automatic promotions. "
 },
 {
-  "id": "exercises-17",
+  "id": "exercises-16",
   "level": "1",
-  "url": "exercises-17.html",
+  "url": "exercises-16.html",
   "type": "Exercises",
   "number": "16.5",
   "title": "Exercises",
@@ -4332,7 +4548,7 @@ var ptx_lunr_docs = [
 {
   "id": "matching-java",
   "level": "2",
-  "url": "exercises-17.html#matching-java",
+  "url": "exercises-16.html#matching-java",
   "type": "Exercise",
   "number": "16.5.1",
   "title": "Matching.",
@@ -4341,7 +4557,7 @@ var ptx_lunr_docs = [
 {
   "id": "matching-oop",
   "level": "2",
-  "url": "exercises-17.html#matching-oop",
+  "url": "exercises-16.html#matching-oop",
   "type": "Exercise",
   "number": "16.5.2",
   "title": "Matching.",

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="900"
+   height="330"
+   overflow="hidden"
+   version="1.1"
+   id="svg208"
+   sodipodi:docname="hierarchy.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs212" />
+  <sodipodi:namedview
+     id="namedview210"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.72265625"
+     inkscape:cx="640"
+     inkscape:cy="360.47568"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg208" />
+  <rect
+     x="120.71621"
+     y="32.159462"
+     width="133"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect134" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text136"
+     x="156.90823"
+     y="72.659462">Shape</text>
+  <rect
+     x="29.716211"
+     y="146.15948"
+     width="132"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect138" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text140"
+     x="47.568218"
+     y="186.65948">Rectangle</text>
+  <path
+     d="m 95.049218,146.41946 v -24.297 h 92.196992 l -0.666,0.667 v -16.963 h 1.333 v 17.63 H 95.716218 l 0.667,-0.667 v 23.63 z m 88.196992,-39.26 4,-7.999994 4,7.999994 z"
+     id="path142" />
+  <rect
+     x="120.71621"
+     y="235.15948"
+     width="133"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect144" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text146"
+     x="165.16821"
+     y="275.65948">Oval</text>
+  <path
+     d="m 279.96988,146.41946 v -24.2965 h -92.25367 l 0.6667,0.6666 v -16.9632 h -1.3333 v 17.6299 h 92.2536 l -0.66667,-0.6667 v 23.6299 z m -88.25367,-39.2597 -4,-7.999994 -4,7.999994 z"
+     id="path148" />
+  <path
+     d="m 188.38288,235.46246 1e-4,-129.637 h -1.33334 l -1e-4,129.637 z m 3.33343,-128.303 -4,-7.999994 -4,7.999994 z"
+     id="path150" />
+  <rect
+     x="212.71622"
+     y="146.15948"
+     width="132"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect152" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text154"
+     x="225.45221"
+     y="186.65948">RoundRect</text>
+  <rect
+     x="300.71622"
+     y="235.15948"
+     width="133"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect156" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text158"
+     x="344.68024"
+     y="275.65948">Path</text>
+  <rect
+     x="389.71622"
+     y="146.15948"
+     width="132"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect160" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text162"
+     x="416.60623"
+     y="186.65948">Polygon</text>
+  <path
+     d="m 368.12188,235.46246 v -113.019 H 187.71621 l 0.667,0.667 v -17.284 h -1.334 v 17.951 h 180.406 l -0.66667,-0.667 v 112.352 z m -176.40567,-128.303 -4,-7.999994 -4,7.999994 z"
+     id="path164" />
+  <path
+     d="m 456.68688,146.41946 v -24.2965 H 187.71621 l 0.666,0.6667 v -16.9632 h -1.333 v 17.6299 h 268.971 l -0.66667,-0.6667 v 23.6298 z m -264.97067,-39.2596 -4,-7.999994 -4,7.999994 z"
+     id="path166" />
+  <rect
+     x="477.71622"
+     y="235.15948"
+     width="133"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect168" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text170"
+     x="523.73627"
+     y="275.65948">Line</text>
+  <rect
+     x="565.71625"
+     y="146.15948"
+     width="133"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect172" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text174"
+     x="615.85626"
+     y="186.65948">Arc</text>
+  <path
+     d="m 545.46088,235.46246 v -113.618 H 187.71621 l 0.666,0.666 v -16.684 h -1.333 v 17.351 h 357.745 l -0.66667,-0.667 v 112.952 z m -353.74467,-128.303 -4,-7.999994 -4,7.999994 z"
+     id="path176" />
+  <path
+     d="m 633.40488,146.41946 v -24.2967 H 187.71621 l 0.667,0.6666 v -16.9629 h -1.333 v 17.6296 h 445.688 l -0.66667,-0.6667 v 23.6301 z m -441.68867,-39.2596 -4,-7.999994 -4,7.999994 z"
+     id="path178" />
+  <rect
+     x="654.71625"
+     y="235.15948"
+     width="132"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect180" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text182"
+     x="700.65228"
+     y="275.65948">Text</text>
+  <rect
+     x="742.71625"
+     y="146.15948"
+     width="133"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#002060"
+     id="rect184" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text186"
+     x="778.66425"
+     y="186.65948">Image</text>
+  <path
+     d="m 721.99988,235.46246 v -113.218 H 187.71621 l 0.666,0.667 v -17.085 h -1.333 v 17.752 h 534.284 l -0.66667,-0.667 v 112.551 z m -530.28367,-128.303 -4,-7.999994 -4,7.999994 z"
+     id="path188" />
+  <path
+     d="m 810.12188,146.41946 v -24.4967 H 187.71621 l 0.667,0.6666 v -16.7629 h -1.334 v 17.4296 h 622.406 l -0.66667,-0.6667 v 23.8301 z m -618.40567,-39.2596 -4,-7.999994 -4,7.999994 z"
+     id="path190" />
+  <rect
+     x="300.71622"
+     y="32.159462"
+     width="133"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#c55a11"
+     id="rect192" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text194"
+     x="348.57022"
+     y="72.659462">Pad</text>
+  <rect
+     x="480.71622"
+     y="32.159462"
+     width="132"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#548235"
+     id="rect196" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text198"
+     x="517.97028"
+     y="72.659462">Timer</text>
+  <rect
+     x="660.71625"
+     y="32.159462"
+     width="132"
+     height="67"
+     stroke="#172c51"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#993366"
+     id="rect200" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text202"
+     x="695.20923"
+     y="72.659462">Sound</text>
+  <path
+     d="m 180.71621,110.15946 7,-10.999994 7,10.999994 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path204" />
+</svg>

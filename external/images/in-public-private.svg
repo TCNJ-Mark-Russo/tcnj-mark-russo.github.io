@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="950"
+   height="240"
+   overflow="hidden"
+   version="1.1"
+   id="svg366"
+   sodipodi:docname="in-public-private.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs370" />
+  <sodipodi:namedview
+     id="namedview368"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.0763889"
+     inkscape:cx="421.31613"
+     inkscape:cy="203.92258"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg366" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="11px"
+     id="text254"
+     x="4.0419898"
+     y="716">23F</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="13px"
+     id="text256"
+     x="1256.73"
+     y="713">20</text>
+  <path
+     d="m 23.751614,29.377419 c 0,-6.627 5.373,-12 12,-12 H 199.75161 c 6.627,0 12,5.373 12,12 v 48 c 0,6.627 -5.373,12 -12,12 H 35.751614 c -6.627,0 -12,-5.373 -12,-12 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path292" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text294"
+     x="36.018612"
+     y="50.877419">Base</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text296"
+     x="87.351616"
+     y="50.877419">C</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text298"
+     x="100.1856"
+     y="50.877419">lass</text>
+  <text
+     fill="#c00000"
+     font-family="'Courier New', 'Courier New_MSFontService', sans-serif"
+     font-weight="700"
+     font-size="16px"
+     id="text300"
+     x="36.018612"
+     y="71.877419">private</text>
+  <text
+     font-family="'Courier New', 'Courier New_MSFontService', sans-serif"
+     font-weight="400"
+     font-size="16px"
+     id="text302"
+     x="113.35161"
+     y="71.877419">method</text>
+  <path
+     d="m 105.75161,114.37742 12,-24.000001 12,24.000001 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path304" />
+  <path
+     d="m 116.75161,114.37742 v 38.951"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path306" />
+  <path
+     d="m 184.08661,153.42542 -0.446,-6.134 0.006,0.051 -0.806,-5.296 0.011,0.057 -1.116,-4.589 0.017,0.059 -1.378,-4.013 0.021,0.055 -1.591,-3.567 0.022,0.045 -1.756,-3.254 0.021,0.037 -3.814,-6.096 -3.902,-6.437 -1.871,-3.697 -1.741,-4.174 -1.562,-4.781 -1.334,-5.524996 -0.248,-1.796 1.321,-0.182 0.243,1.764 -0.013,-0.066 1.321,5.466996 -0.014,-0.051 1.545,4.731 -0.019,-0.05 1.722,4.127 -0.02,-0.045 1.849,3.653 -0.025,-0.044 3.886,6.411 -0.005,-0.008 3.823,6.109 1.778,3.295 1.614,3.618 1.398,4.07 1.131,4.648 0.814,5.351 0.448,6.161 z m -27.249,-56.973996 4.914,-14.074005 8.311,12.375005 z"
+     id="path308" />
+  <path
+     d="m 294.09061,154.46742 -0.432,-3.181 0.03,0.129 -1.023,-2.955 0.052,0.114 -1.575,-2.745 0.063,0.09 -2.087,-2.551 0.062,0.066 -2.56,-2.374 0.057,0.047 -2.995,-2.214 0.049,0.033 -3.39,-2.071 0.041,0.023 -3.746,-1.942 0.046,0.022 -8.404,-3.568 0.042,0.016 -9.36,-3.254 0.023,0.007 -10.004,-3.071 0.009,0.002 -10.336,-3.02 -10.364,-3.104 -10.083,-3.319 -9.494,-3.668 -8.584,-4.151 -3.871,-2.31 -3.523,-2.481 -3.142,-2.677 -2.75,-2.921996 -1.391,-2.53 1.169,-0.643 1.35,2.456 -0.099,-0.135 2.666,2.833 -0.053,-0.051 3.092,2.633996 -0.049,-0.038 3.478,2.449 -0.043,-0.027 3.825,2.282 -0.052,-0.028 8.533,4.126 -0.05,-0.021 9.453,3.653 -0.032,-0.012 10.058,3.311 -0.017,-0.005 10.353,3.1 -0.004,-0.002 10.338,3.022 10.02,3.076 9.393,3.266 8.448,3.586 3.789,1.965 3.435,2.098 3.048,2.254 2.622,2.431 2.151,2.63 1.633,2.847 1.065,3.076 0.442,3.246 z m -113.807,-56.254996 1.468,-14.835005 10.987,10.075 z"
+     id="path310" />
+  <path
+     d="m 239.75161,165.37742 c 0,-6.627 5.373,-12 12,-12 h 164 c 6.627,0 12,5.373 12,12 v 48 c 0,6.627 -5.373,12 -12,12 h -164 c -6.627,0 -12,-5.373 -12,-12 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path312" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text314"
+     x="252.01862"
+     y="196.87743">Other Class</text>
+  <path
+     d="m 23.751614,165.37742 c 0,-6.627 5.373,-12 12,-12 H 199.75161 c 6.627,0 12,5.373 12,12 v 48 c 0,6.627 -5.373,12 -12,12 H 35.751614 c -6.627,0 -12,-5.373 -12,-12 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path316" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text318"
+     x="36.018612"
+     y="196.87743">Derived</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text320"
+     x="117.45162"
+     y="196.87743">Class</text>
+  <path
+     d="m 160.75161,106.37742 24,26"
+     stroke="#c00000"
+     stroke-width="5.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path322" />
+  <path
+     d="m 160.75161,132.37742 24,-26"
+     stroke="#c00000"
+     stroke-width="5.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path324" />
+  <path
+     d="m 230.75161,106.37742 24,26"
+     stroke="#c00000"
+     stroke-width="5.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path326" />
+  <path
+     d="m 230.75161,132.37742 24,-26"
+     stroke="#c00000"
+     stroke-width="5.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path328" />
+  <path
+     d="m 526.75161,29.377419 c 0,-6.627 5.373,-12 12,-12 h 164 c 6.627,0 12,5.373 12,12 v 48 c 0,6.627 -5.373,12 -12,12 h -164 c -6.627,0 -12,-5.373 -12,-12 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path330" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text332"
+     x="538.91364"
+     y="50.877419">Base</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text334"
+     x="590.24664"
+     y="50.877419">C</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text336"
+     x="603.07965"
+     y="50.877419">lass</text>
+  <text
+     fill="#c00000"
+     font-family="'Courier New', 'Courier New_MSFontService', sans-serif"
+     font-weight="700"
+     font-size="16px"
+     id="text338"
+     x="538.91364"
+     y="71.877419">public</text>
+  <text
+     font-family="'Courier New', 'Courier New_MSFontService', sans-serif"
+     font-weight="400"
+     font-size="16px"
+     id="text340"
+     x="606.57965"
+     y="71.877419">method</text>
+  <path
+     d="m 608.75161,114.37742 12,-24.000001 12,24.000001 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path342" />
+  <path
+     d="m 619.75161,114.37742 v 38.951"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path344" />
+  <path
+     d="m 687.08661,153.42542 -0.446,-6.134 0.006,0.051 -0.806,-5.296 0.011,0.057 -1.116,-4.589 0.017,0.059 -1.378,-4.013 0.021,0.055 -1.591,-3.567 0.022,0.045 -1.756,-3.254 0.021,0.037 -3.814,-6.096 -3.902,-6.437 -1.871,-3.697 -1.741,-4.174 -1.562,-4.781 -1.334,-5.524996 -0.248,-1.796 1.321,-0.182 0.243,1.764 -0.013,-0.066 1.321,5.466996 -0.014,-0.051 1.545,4.731 -0.019,-0.05 1.722,4.127 -0.02,-0.045 1.849,3.653 -0.025,-0.044 3.886,6.411 -0.005,-0.008 3.823,6.109 1.778,3.295 1.614,3.618 1.398,4.07 1.131,4.648 0.814,5.351 0.448,6.161 z m -27.249,-56.973996 4.914,-14.074005 8.311,12.375005 z"
+     id="path346" />
+  <path
+     d="m 797.09161,154.46742 -0.43,-3.181 0.03,0.129 -1.03,-2.955 0.06,0.114 -1.58,-2.745 0.06,0.09 -2.08,-2.551 0.06,0.066 -2.56,-2.374 0.06,0.047 -2.999,-2.214 0.049,0.033 -3.39,-2.071 0.041,0.023 -3.746,-1.942 0.046,0.022 -8.404,-3.568 0.042,0.016 -9.36,-3.254 0.023,0.007 -10.004,-3.071 0.009,0.002 -10.336,-3.02 -10.364,-3.104 -10.083,-3.319 -9.494,-3.668 -8.584,-4.151 -3.871,-2.31 -3.523,-2.481 -3.142,-2.677 -2.75,-2.921996 -1.39,-2.53 1.168,-0.643 1.35,2.456 -0.099,-0.135 2.666,2.833 -0.053,-0.051 3.092,2.633996 -0.049,-0.038 3.478,2.449 -0.043,-0.027 3.824,2.282 -0.051,-0.028 8.533,4.126 -0.05,-0.021 9.453,3.653 -0.032,-0.012 10.058,3.311 -0.017,-0.005 10.353,3.1 -0.004,-0.002 10.338,3.022 10.02,3.076 9.393,3.266 8.448,3.586 3.789,1.965 3.435,2.098 3.05,2.254 2.62,2.431 2.15,2.63 1.63,2.847 1.07,3.076 0.44,3.246 z m -113.808,-56.254996 1.468,-14.835005 10.987,10.075 z"
+     id="path348" />
+  <path
+     d="m 742.75161,165.37742 c 0,-6.627 5.373,-12 12,-12 h 164 c 6.63,0 12,5.373 12,12 v 48 c 0,6.627 -5.37,12 -12,12 h -164 c -6.627,0 -12,-5.373 -12,-12 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path350" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text352"
+     x="754.91364"
+     y="196.87743">Other Class</text>
+  <path
+     d="m 526.75161,165.37742 c 0,-6.627 5.373,-12 12,-12 h 164 c 6.627,0 12,5.373 12,12 v 48 c 0,6.627 -5.373,12 -12,12 h -164 c -6.627,0 -12,-5.373 -12,-12 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path354" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text356"
+     x="538.91364"
+     y="196.87743">Derived</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text358"
+     x="620.34662"
+     y="196.87743">Class</text>
+  <path
+     d="m 666.75161,121.69942 c 2.833,8.281 6.881,13.827 8.5,13.675 1.619,-0.152 5.667,-16.942 8.5,-30.997"
+     stroke="#00b050"
+     stroke-width="5.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path360" />
+  <path
+     d="m 734.75161,121.69942 c 2.833,8.281 6.881,13.827 8.5,13.675 1.619,-0.152 5.667,-16.942 8.5,-30.997"
+     stroke="#00b050"
+     stroke-width="5.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path362" />
+</svg>
