@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RotatingSelector.java
+import doodlepad.*;
+
+public class RotatingSelector 
+                      extends Oval 
+                      implements TriOption, Comparable&lt;TriOption&gt; {
+  private int  option;              // Selected option
+  private Text display;             // Text display
+  private Line handle;              // Rotating handle
+
+  // Constructor sets up all encapsulated properties
+  public RotatingSelector(double x, double y) {
+    super(x, y, 75, 75);            // Base class constructor
+    this.handle = new Line(x+15, y+15, x+90, y+90);
+    this.handle.setEventsEnabled(false);
+    this.handle.setStrokeWidth(15); 
+    this.display = new Text("", x+28, y+85, 30, 30);
+    this.setOption1();              // Start at option 1
+  }
+  // Choose option based on mouse x-position
+  @Override
+  public void onMousePressed(double x, double y, int button) {
+    super.onMousePressed(x, y, button);
+    if (x &gt; this.getX()+50) {
+      setOption3();
+    } else if (x &gt; this.getX()+25) {
+      setOption2();
+    } else {
+      setOption1();
+    }
+  }
+  // Current option getter
+  public int getOption() {
+    return this.option;
+  }
+  // Set to option 1 and reconfigure display
+  public void setOption1() {
+    this.option = 1;
+    this.setFillColor(255, 0, 0);
+    this.handle.setPoints(x+15, y+15, x+60, y+60);
+    this.display.setText("1");
+  }
+  // Set to option 2 and reconfigure display
+  public void setOption2() {
+    this.option = 2;
+    this.setFillColor(255, 255, 0);
+    this.handle.setPoints(x+37, y+6, x+37, y+69);
+    this.display.setText("2");
+  }
+  // Set to option 3 and reconfigure display
+  public void setOption3() {
+    this.option = 3;
+    this.setFillColor(0, 255, 0);
+    this.handle.setPoints(x+60, y+15, x+15, y+60);
+    this.display.setText("3");
+  }
+  @Override
+  public int compareTo(TriOption other) {
+    return (this.getOption() - other.getOption());
+  }
+  public String toString() {
+    return "RotatingSelector (option=" + this.getOption() + ")";
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.6<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RotatingSelector.java</code></figcaption></figure><span class="incontext"><a href="section-if-custom.html#listing-if-rotatingselector" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomShapes.java
+import java.util.Random;                      // Import classes
+import doodlepad.*;                           // Import DoodlePad classes
+
+public class RandomShapes {                   // public class
+
+  public static void main(String[] args) {    // Start of execution
+
+    // Instantiate randomly placed Oval and Rectangle objects
+    for (int i = 0; i &lt; 10; i++) {            // For-statement
+      Oval o = new Oval();                    // Create an Oval object
+      o.setMousePressedHandler(RandomShapes::recolor);
+      Rectangle r = new Rectangle();          // Create a Rectangle object
+      r.setMousePressedHandler(RandomShapes::recolor);
+    }
+  }
+
+  // Event handler method that executes when an Oval is clicked
+  public static void recolor(Shape shp, double x, double y, int button) {
+    int r, g, b;                              // Helper variables
+    Random rnd = new Random();                // Declare Random object
+    Pad pad = Pad.getPad();                   // Get reference to Pad object   
+
+    // Loop over all Shape objects and reset to a random fill color
+    for (Shape s: pad) {
+      r = rnd.nextInt(256);                   // Random color components
+      g = rnd.nextInt(256);
+      b = rnd.nextInt(256);
+      s.setFillColor(r, g, b);                // Change fill color
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.1.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomShapes.java</code></figcaption></figure><span class="incontext"><a href="section-if-comparable.html#listing-if-randomshapes" class="internal">in-context</a></span>
+</body>
+</html>

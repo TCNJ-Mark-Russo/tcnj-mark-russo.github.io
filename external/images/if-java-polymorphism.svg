@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="730"
+   height="215"
+   overflow="hidden"
+   version="1.1"
+   id="svg202"
+   sodipodi:docname="if-java-polymorphism.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs206" />
+  <sodipodi:namedview
+     id="namedview204"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.0763889"
+     inkscape:cx="314.47742"
+     inkscape:cy="257.80645"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg202" />
+  <path
+     d="m 12.977519,45.487997 c 0,-17.6736 14.3272,-32.0008 32.0008,-32.0008 H 686.97642 c 17.674,0 32.001,14.3272 32.001,32.0008 V 173.4861 c 0,17.674 -14.327,32.001 -32.001,32.001 H 44.978319 c -17.6736,0 -32.0008,-14.327 -32.0008,-32.001 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#d9d9d9"
+     fill-rule="evenodd"
+     id="path172" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text174"
+     x="260.40741"
+     y="48.987095">Polymorphism in Java</text>
+  <path
+     d="m 22.977519,83.654097 c 0,-12.2424 9.9244,-22.1669 22.1669,-22.1669 H 339.81042 c 12.243,0 22.167,9.9245 22.167,22.1669 V 172.3201 c 0,12.243 -9.924,22.167 -22.167,22.167 H 45.144419 c -12.2425,0 -22.1669,-9.924 -22.1669,-22.167 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#f2f2f2"
+     fill-rule="evenodd"
+     id="path176" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text178"
+     x="79.915421"
+     y="93.987099">Method Polymorphism</text>
+  <path
+     d="m 370.97742,83.654097 c 0,-12.2425 9.925,-22.1669 22.167,-22.1669 h 295.666 c 12.243,0 22.167,9.9244 22.167,22.1669 V 172.3201 c 0,12.243 -9.924,22.167 -22.167,22.167 h -295.666 c -12.242,0 -22.167,-9.924 -22.167,-22.167 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#f2f2f2"
+     fill-rule="evenodd"
+     id="path180" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text182"
+     x="427.3894"
+     y="93.987099">Subtype Polymorphism</text>
+  <path
+     d="m 29.977519,122.8211 c 0,-6.812 5.5219,-12.334 12.3336,-12.334 H 175.64342 c 6.812,0 12.334,5.522 12.334,12.334 v 49.332 c 0,6.812 -5.522,12.334 -12.334,12.334 H 42.311119 c -6.8117,0 -12.3336,-5.522 -12.3336,-12.334 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path184" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text186"
+     x="49.494724"
+     y="154.98709">Overloading</text>
+  <path
+     d="m 195.97742,122.8211 c 0,-6.812 5.522,-12.334 12.334,-12.334 h 133.332 c 6.812,0 12.334,5.522 12.334,12.334 v 49.332 c 0,6.812 -5.522,12.334 -12.334,12.334 h -133.332 c -6.812,0 -12.334,-5.522 -12.334,-12.334 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path188" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text190"
+     x="222.99042"
+     y="154.98709">Overriding</text>
+  <path
+     d="m 378.97742,122.8211 c 0,-6.812 5.522,-12.334 12.334,-12.334 h 133.332 c 6.812,0 12.334,5.522 12.334,12.334 v 49.332 c 0,6.812 -5.522,12.334 -12.334,12.334 h -133.332 c -6.812,0 -12.334,-5.522 -12.334,-12.334 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path192" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text194"
+     x="402.12741"
+     y="154.98709">Inheritance</text>
+  <path
+     d="m 544.97742,122.8211 c 0,-6.812 5.522,-12.334 12.334,-12.334 h 133.332 c 6.812,0 12.334,5.522 12.334,12.334 v 49.332 c 0,6.812 -5.522,12.334 -12.334,12.334 h -133.332 c -6.812,0 -12.334,-5.522 -12.334,-12.334 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path196" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text198"
+     x="575.11639"
+     y="154.98709">Interfaces</text>
+</svg>

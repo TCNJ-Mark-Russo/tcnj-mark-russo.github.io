@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Sentence.java
+// Demonstrate Comparable&lt;&gt; interface and sorting
+
+import java.util.ArrayList;         // Helpers
+import java.util.Collections;
+
+public class Sentence implements Comparable&lt;Sentence&gt; {
+  private String sent;              // Store sentence String
+  private int wordCount;            // Store word count
+
+  // Constructor stores sentence string and precomputes word count
+  public Sentence(String sent) {
+    this.sent = sent;               // Precompute word count
+    this.wordCount = sent.split(" ").length;
+  }
+
+  // toString override returns sentence String
+  public String toString() {
+    return this.sent;
+  }
+
+  // WordCount getter
+  int getWordCount() {
+    return this.wordCount;
+  }
+
+  // Implement compareTo method to satisfy Comparable
+  public int compareTo(Sentence other) {
+
+    // Compare wordCounts
+    if (this.wordCount &gt; other.getWordCount()) {
+      return 1;
+    } else if (this.wordCount &lt; other.getWordCount()) {
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+
+  // Test
+  public static void main(String[] args) {
+    ArrayList&lt;Sentence&gt; juliet = new ArrayList&lt;&gt;();
+
+    // From Romeo and Juliet, spoken by Juliet. By William Shakespeare.
+    juliet.add(new Sentence("O Romeo, Romeo, wherefore art thou Romeo?"));
+    juliet.add(new Sentence("Deny thy father and refuse thy name."));
+    juliet.add(new Sentence("Or if thou wilt not, be but sworn my love "
+                          + "And I'll no longer be a Capulet."));
+    juliet.add(new Sentence("'Tis but thy name that is my enemy: "
+                          + "Thou art thyself, though not a Montague."));
+    juliet.add(new Sentence("What's Montague?"));
+    juliet.add(new Sentence("It is nor hand nor foot "
+                          + "Nor arm nor face nor any other part "
+                          + "Belonging to a man."));
+    juliet.add(new Sentence("O be some other name."));
+    juliet.add(new Sentence("What's in a name?."));
+    juliet.add(new Sentence("That which we call a rose "
+                          + "By any other name would smell as sweet; "
+                          + "So Romeo would, were he not Romeo call'd, "
+                          + "Retain that dear perfection which he owes "
+                          + "Without that title."));
+    juliet.add(new Sentence("Romeo, doff thy name, "
+                          + "And for that name, which is no part of thee, "
+                          + "Take all myself."));
+
+    // Sort ArrayList on Sentence word counts
+    Collections.sort(juliet);
+
+    // Print sorted ArrayList
+    for (Sentence line: juliet) {
+      System.out.println(line + "(" + line.getWordCount() + ")");
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.1.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Sentence.java</code></figcaption></figure><span class="incontext"><a href="section-if-comparable.html#listing-if-sentence" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Panel.java
+import java.util.Arrays;
+import doodlepad.*;
+
+public class Panel extends Pad {
+  private TriOption[] selectors;
+
+  public Panel() {
+    super("Selector Panel", 480, 300);    // Base class constructor
+    selectors = new TriOption[3];         // Create and fill array
+    selectors[0] = new SlidingSelector( 100, 100);
+    selectors[1] = new TogglingSelector(200, 110);
+    selectors[2] = new RotatingSelector(300, 110);
+  }
+  // Handle mouse-pressed on Pad
+  public void onMousePressed(double x, double y, int button) {
+    // Sort based on selected state
+    Arrays.sort(selectors);
+
+    // Print order
+    for (TriOption sel: selectors) {
+      System.out.println(sel);
+    }
+  }
+  // Start here
+  public static void main(String[] args) {
+    new Panel();
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.7<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RotatingSelector.java</code></figcaption></figure><span class="incontext"><a href="section-if-custom.html#listing-if-panel" class="internal">in-context</a></span>
+</body>
+</html>

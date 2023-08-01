@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// TogglingSelector.java
+import doodlepad.*;
+
+public class TogglingSelector 
+                      extends Oval 
+                      implements TriOption, Comparable&lt;TriOption&gt; {
+
+  // Constructor sets up all encapsulated properties
+  public TogglingSelector(double x, double y) {
+    super(x, y, 75, 75);            // Base class constructor
+    // …
+  }
+
+  // Cycle through options on each click
+  @Override
+  public void onMousePressed(double x, double y, int button) {
+    super.onMousePressed(x, y, button);
+    // …
+  }
+  // Method required by interface
+  public void setOption1() { … }
+  public void setOption2() { … }
+  public void setOption3() { … }
+  public void getOption()  { … }
+
+  @Override
+  public int compareTo(TriOption other) {
+    return (this.getOption() - other.getOption());
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">TogglingSelection.java</code> (version 1)</figcaption></figure><span class="incontext"><a href="section-if-custom.html#listing-if-widget-outline" class="internal">in-context</a></span>
+</body>
+</html>

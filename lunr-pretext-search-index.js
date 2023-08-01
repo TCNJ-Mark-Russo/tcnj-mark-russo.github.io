@@ -3661,7 +3661,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.7",
   "title": "Key Concepts",
-  "body": " Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding.  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.   "
+  "body": " Key Concepts   Inheritance is a hierarchical relationship set up between two classes called a subclass and a superclass.  Inheritance is set up in the subclass declaration using the extends keyword.  One of the benefits of inheritance is that the subclass automatically inherits -- gets access to -- members of a superclass, subject to visibility constraints.  If an attempt is made to access a method or instance variable of a subclass that is in an inheritance relationship, and the subclass does not have a suitable implementation of that variable or method, Java will search up the hierarchy in an attempt to find a suitable method or instance variable implemented by one of its superclasses.  The first suitable member found while searching up a hierarchy will be invoked.  When a subclass defines a member that matches one defined in a superclass, it is said that the subclass member overrides the superclass member.  The scope of a superclass may be specified explicitly using the super keyword.  Subclass constructors must invoke superclass constructors as part of the subclass constructor implementation. This may be accomplished using the super keyword.  Superclass methods may be invoked explicitly from within an object, skipping an overridden implementation in the subclass, by using super as the method's scope.  A method defined in a subclass may overload a superclass method if the method names are the same but the signatures differ.  Inheritance is often referred to an is-a relationship because the subclass is a kind of superclass.  An object of type subclass may be assigned to a variable of type superclass. This is a form of polymorphism found in Java and it is a ramification of the inheritance relationship.  Ramifications of polymorphism in Java include the ability to pass a parameter of type subclass to a method whose parameter declaration is of type superclass, and of storing multiple types of subclasses in an ArrayList declared to store objects of a common superclass type.  When a program invokes a method on an object of type subclass using a variable of type superclass, the method implementation in the subclass is invoked. This is called dynamic binding .  The particular methods invoked are governed by the type of the object referenced by a variable, not the type of object variable.  The Java compiler will not permit the invocation of methods declared by a subclass and not in a superclass if the invocation is attempted on a variable of type superclass even if it references an object of type subclass.  If a superclass member is intended to be access only by itself and its subclasses, and not to be made generally accessible by any external class, the member may be declared using the protected visibility modifier keyword. Compare to public and private visibility modifiers  Another benefit of inheritance is that it allows the program designer to group common members in a superclass, making them accessible to all subclasses, reducing code duplication.  Grouping fields and methods in a base class is a kind of specialization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  Inheritance may be prevented by modifying the declaration of a class with the final keyword  All classes ultimately inherit the Object class, even if the extends keyword is not used.  Several useful methods are inherited by all classes from Object, including equals() and toString()  The == operator tests two objects for equal identity, which is not always the desired behavior. Sometimes the notion of equality is different than object identity. For example, String objects should be considered equal when their character sequences are identical, even when the String objects themselves are distinct.  The default behavior of Object's equals() method is to test for object identity. The String class overrides equal() to replace the Object implementation with an implementation that tests characters sequence for equality.  When printing an object, the println() method of PrintStream invokes an object's toString() method to obtain a String representation of an object which is printed to the terminal. This is possible because the Object class provides a default implementation of toString().  It is often useful to override toString() in a custom class to provide a more informative String representation that is printed to the terminal by println().  The instanceof operator is a useful way to test if one object is an instance of a class. The instanceof operator takes inheritance into account; it will return true when testing if a subclass in an instance of a superclass due to the is a nature of the inheritance relationship.  An object of type subclass referenced by a variable of type superclass may be cast to a subclass type using parentheses. Often this is necessary when the object must be accessed as its original subclass type, such as when invoking a method implemented in the subclass only and when passing as a parameter to a method requiring the subclass type.  When a class should not be instantiated, declare it as abstract.  Abstract classes serve to collect common behavior to be inherited by subclasses.  Abstract classes are also useful as types that may reference objects of any subclass type.   "
 },
 {
   "id": "section-in-exercises",
@@ -3673,137 +3673,578 @@ var ptx_lunr_docs = [
   "body": " Chapter Exercises   "
 },
 {
-  "id": "section-94",
+  "id": "section-if-comparable",
   "level": "1",
-  "url": "section-94.html",
+  "url": "section-if-comparable.html",
   "type": "Section",
   "number": "11.1",
-  "title": "Defining and Implementing Interfaces",
-  "body": " Defining and Implementing Interfaces  Consider the following interface. Note how the structure of the interface looks like a class with only method signatures, where the class keyword is replaced with the interface keyword.  (example)  Implementing the interface also looks like extending a base class, only the keyword extends is replaced with the keyword implements .  (example)  Whereas a derived class can extend only a single base class, a class may implement any number of interfaces.  "
+  "title": "Core Library Interfaces",
+  "body": " Core Library Interfaces  The Java Core Library provides several interface implementations which are tightly integrated into the library. In this section we look at one in detail, and then briefly introduce a few others.   The Comparable<T> Interface  One of the more important interfaces provided by the Java core library is Comparable<T> , the source code of which is in . The Comparable<T> interface is widely used in Java. A class must implement the Comparable<T> interface before it may be processed by certain predefined algorithms in the Core Library, including sorting and searching. The compareTo(T o) method returns a negative int if this is ordered to the left of o , a positive int if this is ordered to the right of o , and 0 if this and o can appear in either order. What constitutes less-than, greater-than and equal-to is something that you are free to decide for yourself to suit your own needs.   Comparable<T> Interface   \/\/ Comparable.java package java.lang; import java.util.*; public interface Comparable<T> { public int compareTo(T o); }    The first thing to note is that the syntax of an interface declaration is the same as an abstract class having only abstract methods, except that the keyword abstract is removed everywhere and class is replaced with interface . Otherwise, the syntax should look familiar. Like classes, public interfaces must be defined in a file with a name that matches the interface.  It is interesting to note that the Comparable<> interface is generic like ArrayList<T> . When used, the T must be replaced with a type that is substituted into the interface definition before it is compiled. keyword.  The interface itself defines exactly one signature to be implemented, public int compareTo(T o) . A class that implements Comparable<T> must define a concrete method implemention that matches that signature.  Another huge benefit of interfaces is that a class is not limited to the implementation of only one interface. A class may implement many interfaces. By contrast, in Java a class extends at most one base class. If a base class is not specified, Java extends Object by default. An ability to implement many interfaces is a powerful concept that allows us to create multi-functional and highly flexible classes.  The syntax for implementing an interface is similar to extending a class, only the keyword extends followed by a base class name is replaced with the keyword implements followed by one or more comma-separated interface names. Let's consider an example.  The Java String class implements Comparable<T>. Strings order themselves lexographically , which is the same ordering of words when listed in a dictionary. First the underlying integer code of each successive character is compared until a difference is found. The String with the lesser character code value is ordered first. Also, shorter Strings are ordered first. We can explore this by invoking the compareTo(…) method on several String pairs in JShell.   jshell> \"cat\".compareTo(\"dog\"); \/\/ Negative result means cat < dog $1 ==> -1 jshell> \"dog\".compareTo(\"cat\"); \/\/ Positive means dog > cat $2 ==> 1 jshell> \"cat\".compareTo(\"cat\"); \/\/ Zero means cat == cat $3 ==> 0 jshell> \/\/ Lowercase encoding is greater than uppercase jshell> \"cat\".compareTo(\"Cat\"); \/\/ cat > Cat $4 ==> 32 jshell> \/\/ Shorter words are less than longer jshell> \"kit\".compareTo(\"kitten\"); \/\/ kit < kitten $5 ==> -3 jshell> \/\/ But char encoding tested before length jshell> \"kit\".compareTo(\"Kitten\"); \/\/ kit > Kitten $6 ==> 32 jshell>   Let's assume we have written a program that tracks Sentence objects in an ArrayList<Sentence>, and we need to order Sentences based on the number of words that each contains. To simplify a bit, let's assume each word in a Sentence is separated by a single space. Consider the Sentence class definition in which implements Comparable<Sentence> and tests the implementation.   Sentence.java   \/\/ Sentence.java \/\/ Demonstrate Comparable<> interface and sorting import java.util.ArrayList; \/\/ Helpers import java.util.Collections; public class Sentence implements Comparable<Sentence> { private String sent; \/\/ Store sentence String private int wordCount; \/\/ Store word count \/\/ Constructor stores sentence string and precomputes word count public Sentence(String sent) { this.sent = sent; \/\/ Precompute word count this.wordCount = sent.split(\" \").length; } \/\/ toString override returns sentence String public String toString() { return this.sent; } \/\/ WordCount getter int getWordCount() { return this.wordCount; } \/\/ Implement compareTo method to satisfy Comparable public int compareTo(Sentence other) { \/\/ Compare wordCounts if (this.wordCount > other.getWordCount()) { return 1; } else if (this.wordCount < other.getWordCount()) { return -1; } else { return 0; } } \/\/ Test public static void main(String[] args) { ArrayList<Sentence> juliet = new ArrayList<>(); \/\/ From Romeo and Juliet, spoken by Juliet. By William Shakespeare. juliet.add(new Sentence(\"O Romeo, Romeo, wherefore art thou Romeo?\")); juliet.add(new Sentence(\"Deny thy father and refuse thy name.\")); juliet.add(new Sentence(\"Or if thou wilt not, be but sworn my love \" + \"And I'll no longer be a Capulet.\")); juliet.add(new Sentence(\"'Tis but thy name that is my enemy: \" + \"Thou art thyself, though not a Montague.\")); juliet.add(new Sentence(\"What's Montague?\")); juliet.add(new Sentence(\"It is nor hand nor foot \" + \"Nor arm nor face nor any other part \" + \"Belonging to a man.\")); juliet.add(new Sentence(\"O be some other name.\")); juliet.add(new Sentence(\"What's in a name?.\")); juliet.add(new Sentence(\"That which we call a rose \" + \"By any other name would smell as sweet; \" + \"So Romeo would, were he not Romeo call'd, \" + \"Retain that dear perfection which he owes \" + \"Without that title.\")); juliet.add(new Sentence(\"Romeo, doff thy name, \" + \"And for that name, which is no part of thee, \" + \"Take all myself.\")); \/\/ Sort ArrayList on Sentence word counts Collections.sort(juliet); \/\/ Print sorted ArrayList for (Sentence line: juliet) { System.out.println(line + \"(\" + line.getWordCount() + \")\"); } } }     We import both ArrayList and Collections because we plan to use both.  Our Sentence class implements Comparable<Sentence> .  Sentence encapsulates the sentence String itself and word count.  Word count is precomputed in the constructor.  A toString() override returns Sentence String.  The getWordCount() accessor method returns word count.  The compareTo(Sentence other) interface method returns an int value that indicates Sentence order based on word count.  The main(…) method fills an ArrayList<Sentence> with Sentence objects from Juliet's famous speach.  The Collections.sort(…) static method is invoked to sort the ArrayList<Sentence> , which uses our overridden compareTo(Sentence other) .  Sorted Sentences are printed in order, with word count.    javac Sentence.java java Sentence  What's Montague?(2) What's in a name?.(4) O be some other name.(5) O Romeo, Romeo, wherefore art thou Romeo?(7) Deny thy father and refuse thy name.(7) 'Tis but thy name that is my enemy: Thou art thyself, though not a Montague.(15) Or if thou wilt not, be but sworn my love And I'll no longer be a Capulet.(17) Romeo, doff thy name, And for that name, which is no part of thee, Take all myself.(17) It is nor hand nor foot Nor arm nor face nor any other part Belonging to a man.(18) That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call'd, Retain that dear perfection which he owes Without that title.(32)   There is a much shorter and more clever implementation of compareTo(…) that merely returns the difference between word counts. Convince yourself that the following revision works just as well as the long-winded version in .   \/\/ Implement compareTo method to satisfy Comparable public int compareTo(Sentence other) { return this.wordCount - other.getWordCount(); }    Collections.sort(…) does its job because the only external dependency that the algorithm has is on an implementation of the compareTo(…) method to order two instances of objects stored in an ArrayList. We provide a way to solve that small task, and benefit from highly optimized sorting and searching algorithms that are built-in to the Core Library. This is a powerful opportunity to leverage the work of many others.    The Iterable<T> and Iterator<T> Interfaces  Another pair of interesting intefaces in Java's Core Library are the Iterator<T> and Iterable<T> interfaces. These interfaces are useful to make it possible to iterate over objects stored in a class that acts as a container. Specifically, fulfilling the Iterator<T> interface provides implementations of methods required to access the elements of a collection one at a time, and the Iterable<T> makes the custom container class compatible with a for-each statement.  Following are the the Java Core Library definitions of only the required signatures that must be implemented by both interfaces. Other signatures in each interface have default implementations.   public interface Iterator<T> { boolean hasNext(); \/\/ true if iteration has more elements. T next() \/\/ Returns next element in the iteration. }    public interface Iterable<T> { Iterator<T> iterator(); \/\/ Returns an iterator over elements of type T. }   These signatures are straightforward. Iterator<T> has two signatures, T next() returns the next element and a boolean hasNext() tests if there is another element to be returned. The only required signature in Iterable<T> is Iterator<T> iterator() which generates and return the Iterator<T> object.  In the DoodlePad library, the Pad class acts as a container of all Shape objects that are rendered on its window. It also implements the Iterable<T> interface which means that Shape object that are rendered on a Pad object may be iterated directly.   is the source code of a program named RandomOvals.java that instantiated, iterated over, and randomly recolored several Oval objects. Ovals were stored in an ArrayList<Oval>. In we updated that program to RandomOvals2.java which used an array to hold Oval objects. Let's update that program one more time. This time we will avoid the ArrayList and the array entirely by iterating over Shape objects using the Pad as a container instead. Note that the Pad.getPad() static method gets a reference to the current Pad object. Also note that we are not limited to Oval objects. Through the magic of subtype polymorphism that we get because all shapes inherit the Shape base class, we can generate any mixture of shape objects and still be able to iterate over all of them with one loop. Lets create a mixture of Oval and Rectangle objects to demonstrate this. Find the douce code of our updated program in named RandomShapes.java.   RandomShapes.java   \/\/ RandomShapes.java import java.util.Random; \/\/ Import classes import doodlepad.*; \/\/ Import DoodlePad classes public class RandomShapes { \/\/ public class public static void main(String[] args) { \/\/ Start of execution \/\/ Instantiate randomly placed Oval and Rectangle objects for (int i = 0; i < 10; i++) { \/\/ For-statement Oval o = new Oval(); \/\/ Create an Oval object o.setMousePressedHandler(RandomShapes::recolor); Rectangle r = new Rectangle(); \/\/ Create a Rectangle object r.setMousePressedHandler(RandomShapes::recolor); } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Random rnd = new Random(); \/\/ Declare Random object Pad pad = Pad.getPad(); \/\/ Get reference to Pad object \/\/ Loop over all Shape objects and reset to a random fill color for (Shape s: pad) { r = rnd.nextInt(256); \/\/ Random color components g = rnd.nextInt(256); b = rnd.nextInt(256); s.setFillColor(r, g, b); \/\/ Change fill color } } }    Notice that we no longer need a collection or array to hold the Shape objects. The Pad object holds them automatically. We create a mixture of Oval and Rectangle objects just to demonstrate that we can iterate over both using a single loop. The recolor(…) method performs the iteration using a single for-each statement which iterates using the Pad object as a iterator, specifically for (Shape s: pad) {… . See for the result.   RandomShapes.java     "
 },
 {
-  "id": "p-847",
+  "id": "listing-if-comparable",
   "level": "2",
-  "url": "section-94.html#p-847",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
+  "url": "section-if-comparable.html#listing-if-comparable",
+  "type": "Listing",
+  "number": "11.1.1",
   "title": "",
-  "body": "class interface "
+  "body": " Comparable<T> Interface   \/\/ Comparable.java package java.lang; import java.util.*; public interface Comparable<T> { public int compareTo(T o); }   "
 },
 {
-  "id": "p-849",
+  "id": "p-852",
   "level": "2",
-  "url": "section-94.html#p-849",
+  "url": "section-if-comparable.html#p-852",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "extends implements "
 },
 {
-  "id": "section-95",
+  "id": "listing-if-sentence",
+  "level": "2",
+  "url": "section-if-comparable.html#listing-if-sentence",
+  "type": "Listing",
+  "number": "11.1.2",
+  "title": "",
+  "body": " Sentence.java   \/\/ Sentence.java \/\/ Demonstrate Comparable<> interface and sorting import java.util.ArrayList; \/\/ Helpers import java.util.Collections; public class Sentence implements Comparable<Sentence> { private String sent; \/\/ Store sentence String private int wordCount; \/\/ Store word count \/\/ Constructor stores sentence string and precomputes word count public Sentence(String sent) { this.sent = sent; \/\/ Precompute word count this.wordCount = sent.split(\" \").length; } \/\/ toString override returns sentence String public String toString() { return this.sent; } \/\/ WordCount getter int getWordCount() { return this.wordCount; } \/\/ Implement compareTo method to satisfy Comparable public int compareTo(Sentence other) { \/\/ Compare wordCounts if (this.wordCount > other.getWordCount()) { return 1; } else if (this.wordCount < other.getWordCount()) { return -1; } else { return 0; } } \/\/ Test public static void main(String[] args) { ArrayList<Sentence> juliet = new ArrayList<>(); \/\/ From Romeo and Juliet, spoken by Juliet. By William Shakespeare. juliet.add(new Sentence(\"O Romeo, Romeo, wherefore art thou Romeo?\")); juliet.add(new Sentence(\"Deny thy father and refuse thy name.\")); juliet.add(new Sentence(\"Or if thou wilt not, be but sworn my love \" + \"And I'll no longer be a Capulet.\")); juliet.add(new Sentence(\"'Tis but thy name that is my enemy: \" + \"Thou art thyself, though not a Montague.\")); juliet.add(new Sentence(\"What's Montague?\")); juliet.add(new Sentence(\"It is nor hand nor foot \" + \"Nor arm nor face nor any other part \" + \"Belonging to a man.\")); juliet.add(new Sentence(\"O be some other name.\")); juliet.add(new Sentence(\"What's in a name?.\")); juliet.add(new Sentence(\"That which we call a rose \" + \"By any other name would smell as sweet; \" + \"So Romeo would, were he not Romeo call'd, \" + \"Retain that dear perfection which he owes \" + \"Without that title.\")); juliet.add(new Sentence(\"Romeo, doff thy name, \" + \"And for that name, which is no part of thee, \" + \"Take all myself.\")); \/\/ Sort ArrayList on Sentence word counts Collections.sort(juliet); \/\/ Print sorted ArrayList for (Sentence line: juliet) { System.out.println(line + \"(\" + line.getWordCount() + \")\"); } } }   "
+},
+{
+  "id": "listing-if-randomshapes",
+  "level": "2",
+  "url": "section-if-comparable.html#listing-if-randomshapes",
+  "type": "Listing",
+  "number": "11.1.3",
+  "title": "",
+  "body": " RandomShapes.java   \/\/ RandomShapes.java import java.util.Random; \/\/ Import classes import doodlepad.*; \/\/ Import DoodlePad classes public class RandomShapes { \/\/ public class public static void main(String[] args) { \/\/ Start of execution \/\/ Instantiate randomly placed Oval and Rectangle objects for (int i = 0; i < 10; i++) { \/\/ For-statement Oval o = new Oval(); \/\/ Create an Oval object o.setMousePressedHandler(RandomShapes::recolor); Rectangle r = new Rectangle(); \/\/ Create a Rectangle object r.setMousePressedHandler(RandomShapes::recolor); } } \/\/ Event handler method that executes when an Oval is clicked public static void recolor(Shape shp, double x, double y, int button) { int r, g, b; \/\/ Helper variables Random rnd = new Random(); \/\/ Declare Random object Pad pad = Pad.getPad(); \/\/ Get reference to Pad object \/\/ Loop over all Shape objects and reset to a random fill color for (Shape s: pad) { r = rnd.nextInt(256); \/\/ Random color components g = rnd.nextInt(256); b = rnd.nextInt(256); s.setFillColor(r, g, b); \/\/ Change fill color } } }   "
+},
+{
+  "id": "figure-if-randomshapes",
+  "level": "2",
+  "url": "section-if-comparable.html#figure-if-randomshapes",
+  "type": "Figure",
+  "number": "11.1.4",
+  "title": "",
+  "body": " RandomShapes.java   "
+},
+{
+  "id": "section-if-custom",
   "level": "1",
-  "url": "section-95.html",
+  "url": "section-if-custom.html",
   "type": "Section",
   "number": "11.2",
-  "title": "Interfaces and Polymorphism",
-  "body": " Interfaces and Polymorphism  Like a class, an interface can be used as a variable type. Furthermore, any instance of a class that implements an interface can be assigned to a variable of type interface. Only methods in the interface definition may be access through variable of type interface assigned to the variable.  "
+  "title": "Custom Interfaces",
+  "body": " Custom Interfaces   A custom interface is defined using the interface keyword and a list if method signatures. We saw the source code for three Java Core Library examples, the Comparable<T> interface in and the Iterable<T> and Iterator<T> interfaces in . Let's create a custom interface and implement it along with other interfaces.    Define a Custom Interface  In this section we want to build a graphical panel demonstration three kinds of tri-option selector widgets. The way these widgets look may be customized, but all must give the user the ability to select from the three options and provide a way to report the current option selected. To ensure that all tri-option widgets provide common capabilities, we define a TriOption interface that all selector widgets must implement. In we specify that the TriOption interface includes four signatures. This public interface must be saved to a file having the same name as the interface, and compiled with the other files in the projest, in a manner exactly analogous to any multi-file Java project.   TriOption.java   \/\/ TriOption.java \/\/ Required for selector widgets with three options public interface TriOption { public void setOption1(); \/\/ Set to option 1 public void setOption2(); \/\/ Set to option 2 public void setOption3(); \/\/ Set to option 3 public int getOption(); \/\/ Get current selected option }    To implement this interface we follow the same procedure as we did with Core Library interfaces. For example, if we were defining a class called TogglingSelector that implemented the TriOption interface, we would start the class with something like the following, and then implement in the the TogglingSelector class at least the four methods that match the four signatures in the interface.   public class TogglingSelector implements TriOption { \/\/ … public void setOption1() { … } public void setOption2() { … } public void setOption3() { … } public void getOption() { … } }     Implement Multiple Interfaces  We may implement multiple interfaces in the same class at the same time. The only requirement is that all mandated signatures from all interfaces must be implemented as concrete methods in the class. For our example, let's say that we want to sort all selectors on a panel according to the selected option number: 1, 2 or 3. We can make use of what we get in the Java Core Library and implement the Comparable<TriOption> interface and use the static sort() method built in to the provided Arrays or the Collections class. To implement multiple intrfaces, follow the implements keyword with a comma-separated list of interfaces, as in .   Implementing Multiple Interfaces   public class TogglingSelector implements TriOption, Comparable<TriOption> { \/\/ … public void setOption1() { … } public void setOption2() { … } public void setOption3() { … } public void getOption() { … } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } }      Add Inheritance  Selector widgets in our example will be based on DoodlePad shape classes. To get the maximum benefit we want to extend the existing shape classes so that we can inherit all behavior of the base shape class. Nothing prevents us from simultaneously extending an existing class and implementing multiple interfaces.  The TogglingSelector will be round and respond to mouse presses. Each time the mouse is pressed on a TogglingSelector object, it toggles through the three options available, and changes its color and text display to match. expands further so that it also inherits the Oval class. Note how the top line of the class definition both extends Oval and implements TriOption and Comparable<TriOption>. The constructor invokes a base class constructor on its first line by invoking super(…) and we override onMousePressed(…) to add custom mouse-pressed behavior to the class, but invoke super.onMousePressed(x, y, button) to ensure any default behavior is complete.   TogglingSelection.java (version 1)   \/\/ TogglingSelector.java import doodlepad.*; public class TogglingSelector extends Oval implements TriOption, Comparable<TriOption> { \/\/ Constructor sets up all encapsulated properties public TogglingSelector(double x, double y) { super(x, y, 75, 75); \/\/ Base class constructor \/\/ … } \/\/ Cycle through options on each click @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); \/\/ … } \/\/ Method required by interface public void setOption1() { … } public void setOption2() { … } public void setOption3() { … } public void getOption() { … } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } }    The remaining class implementation is detail. The following three sections provide the three TriOption selector widgets that we implement for this example.    TogglingSelector Widget  The TogglingSelector starts set at option 1 and filled with red. When clicked, it advanced to option 2 and changes to a yellow fill. Then third click changes to option 3 with a green fill. Another click cycles the widget back to option 1. The option number itself is displayed in the center of the Oval.   follows the outline in with code added to manage the visual details. Note that we are tracking the selected option using a private option integer. An example of the ToggleSelector widget is in the middle of .   TogglingSelector.java   \/\/ TogglingSelector.java import doodlepad.*; public class TogglingSelector extends Oval implements TriOption, Comparable<TriOption> { private int option; \/\/ Selected option \/\/ Constructor sets up all encapsulated properties public TogglingSelector(double x, double y) { super(x, y, 75, 75); \/\/ Base class constructor this.setFontSize(32); this.setOption1(); \/\/ Start at option 1 } \/\/ Cycle through options on each click @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); if (option == 1) { setOption2(); } else if (option == 2) { setOption3(); } else { setOption1(); } } \/\/ Current option getter public int getOption() { return this.option; } \/\/ Set to option 1 and reconfigure display public void setOption1() { this.option = 1; this.setFillColor(255, 0, 0); this.setText(\"1\"); } \/\/ Set to option 2 and reconfigure display public void setOption2() { this.option = 2; this.setFillColor(255, 255, 0); this.setText(\"2\"); } \/\/ Set to option 3 and reconfigure display public void setOption3() { this.option = 3; this.setFillColor(0, 255, 0); this.setText(\"3\"); } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } public String toString() { return \"TogglingSelector (option=\" + this.getOption() + \")\"; } }      SlidingSelector Widget  The SlidingSelector widget is made up of two Rectangles and a Text object. One Rectangle is used for the outer widget body and a second is used for the sliding button, which moves up and down into one of three positions corresponding to the three options. The SlidingSelector starts at option 1 with its button at the bottom of the widget and filled with red. When the widget background is clicked, the button moves up or down, depending upon the location of the mouse click. The button fill color changes with the option selected: red, yellow, green. The option number is displayed below the widget.   follows the same outline in with code added to manage the visual details. An example of the SlidingSelector widget is on the left of .   SlidingSelector.java   \/\/ SlidingSelector.java import doodlepad.*; public class SlidingSelector extends Rectangle implements TriOption, Comparable<TriOption> { private int option; \/\/ Selected option private Rectangle button; \/\/ button private Text display; \/\/ Text display \/\/ Constructor sets up all encapsulated properties public SlidingSelector(double x, double y) { super(x, y, 75, 90); \/\/ Base class constructor this.setFillColor(200); this.button = new Rectangle(x, y+60, 75, 30); this.button.setEventsEnabled(false); this.display = new Text(\"\", x+28, y+100, 30, 30); this.setOption1(); \/\/ Start at option 1 } \/\/ Choose option based on mouse y-position @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); if (y >= this.getY() + 60) { this.setOption1(); } else if (y >= this.getY() + 30) { this.setOption2(); } else { this.setOption3(); } } \/\/ Current option getter public int getOption() { return this.option; } \/\/ Set to option 1 and reconfigure display public void setOption1() { this.option = 1; this.button.setY(this.getY() + 60); this.button.setFillColor(255, 0, 0); this.display.setText(\"1\"); } \/\/ Set to option 2 and reconfigure display public void setOption2() { this.option = 2; this.button.setY(this.getY() + 30); this.button.setFillColor(255, 255, 0); this.display.setText(\"2\"); } \/\/ Set to option 3 and reconfigure display public void setOption3() { this.option = 3; this.button.setY(this.getY()); this.button.setFillColor(0, 255, 0); this.display.setText(\"3\"); } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } public String toString() { return \"SlidingSelector (option=\" + this.getOption() + \")\"; } }      RotatingSelector Widget  The RotatingSelector widget is made up an Oval, a thick line, and a Text object. The line is rotated left for option 1, right for option 3, and in between in a vertical position for option 2. The RotatingSelector starts at option 1 with its line rotated left. When the widget background is clicked, the line rotates left or right, depending upon the location of the mouse click. The button fill color changes with the option selected: red, yellow, green. The option number is displayed below the widget.  Once again, follows the same outline in with code added to manage the visual details. An example of the RotatingSelector widget is on the right of .   RotatingSelector.java   \/\/ RotatingSelector.java import doodlepad.*; public class RotatingSelector extends Oval implements TriOption, Comparable<TriOption> { private int option; \/\/ Selected option private Text display; \/\/ Text display private Line handle; \/\/ Rotating handle \/\/ Constructor sets up all encapsulated properties public RotatingSelector(double x, double y) { super(x, y, 75, 75); \/\/ Base class constructor this.handle = new Line(x+15, y+15, x+90, y+90); this.handle.setEventsEnabled(false); this.handle.setStrokeWidth(15); this.display = new Text(\"\", x+28, y+85, 30, 30); this.setOption1(); \/\/ Start at option 1 } \/\/ Choose option based on mouse x-position @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); if (x > this.getX()+50) { setOption3(); } else if (x > this.getX()+25) { setOption2(); } else { setOption1(); } } \/\/ Current option getter public int getOption() { return this.option; } \/\/ Set to option 1 and reconfigure display public void setOption1() { this.option = 1; this.setFillColor(255, 0, 0); this.handle.setPoints(x+15, y+15, x+60, y+60); this.display.setText(\"1\"); } \/\/ Set to option 2 and reconfigure display public void setOption2() { this.option = 2; this.setFillColor(255, 255, 0); this.handle.setPoints(x+37, y+6, x+37, y+69); this.display.setText(\"2\"); } \/\/ Set to option 3 and reconfigure display public void setOption3() { this.option = 3; this.setFillColor(0, 255, 0); this.handle.setPoints(x+60, y+15, x+15, y+60); this.display.setText(\"3\"); } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } public String toString() { return \"RotatingSelector (option=\" + this.getOption() + \")\"; } }      Panel Driver Class  To test our selector widget operation and sorting, we defined a Panel class, which is given in . The Panel class derives from the Pad class, and invokes the Pad constructor from within the Panel constructor with parameters to initialize the size and window title. Panel encapsulates a TriOption array of size 3 to hold references to each kind of selector widget. The array is declared and initialized in the Panel constructor. Note that because each selector widget implements the TriOption interface, so each can be assigned to TriOption array.   RotatingSelector.java   \/\/ Panel.java import java.util.Arrays; import doodlepad.*; public class Panel extends Pad { private TriOption[] selectors; public Panel() { super(\"Selector Panel\", 480, 300); \/\/ Base class constructor selectors = new TriOption[3]; \/\/ Create and fill array selectors[0] = new SlidingSelector( 100, 100); selectors[1] = new TogglingSelector(200, 110); selectors[2] = new RotatingSelector(300, 110); } \/\/ Handle mouse-pressed on Pad public void onMousePressed(double x, double y, int button) { \/\/ Sort based on selected state Arrays.sort(selectors); \/\/ Print order for (TriOption sel: selectors) { System.out.println(sel); } } \/\/ Start here public static void main(String[] args) { new Panel(); } }    The Panel class overrides the Pad's onMousePressed(…) method to handle mouse clicks on the window background. When the user clicks the Panel window, the TriOption array is sorted and the array order is printed to visualize the current order.  Our project now includes five files: TriOption.java, TogglingSelector.java, SlidingSelector.java, RotatingSelector.java, and Panel.java. To simplify the compilation command, all files are placed in a single directory with no other Java files so the wildcard character * can be used: javac -cp doodlepad.jar *.java . Because Panel has our main(…) method, we start the program with that class: java -cp .;doodlepad.jar Panel . shows the Panel program when it first starts.   javac -cp doodlepad.jar *.java java -cp .;doodlepad.jar Panel    Panel.java    If we click the Panel background. we see the following printed output in the shell. All selected option start at 1, so the sort operation names no changes.   SlidingSelector (option=1) TogglingSelector (option=1) RotatingSelector (option=1)   Next, we modify the options selected on each widget to look like , with option 1 selected by the RotatingSelector, option 2 by the TogglingSelector, and option 3 by the SlidingSelector. After clicking the Panel background, we see the output printed in the shell session that follows . Changing the optiosn again ( ) and clicking the Panel, the order changes again, matching the options selected. These examples confirm that sorting the TriOption array by the options selected reorders the items in the array by increasing option number.   Panel.java with options selected     RotatingSelector (option=1) TogglingSelector (option=2) SlidingSelector (option=3)    Panel.java with options changed     TogglingSelector (option=1) SlidingSelector (option=2) RotatingSelector (option=3)     The example presented in this section combines many different features of the Java programming language. Each of the classes defined encapsulate, initialize, and coordinate the many parts of object to produce self-managed cohesive widgets, each with a custom design and behavior. Inheritance was used to start our new classes with a large amount of baseline functionality, with only object-specific customizations added. An interface was defined and implemented as a way to require that certain methods are created in all implementing classes and to enable sorting of an array using prewritten algorithms provided by the Java Core Library. Overall, the many aspects of object oriented programming each have their distinct benefits and they fit together well to produce sophisticated results.   "
 },
 {
-  "id": "section-96",
+  "id": "listing-if-trioption",
+  "level": "2",
+  "url": "section-if-custom.html#listing-if-trioption",
+  "type": "Listing",
+  "number": "11.2.1",
+  "title": "",
+  "body": " TriOption.java   \/\/ TriOption.java \/\/ Required for selector widgets with three options public interface TriOption { public void setOption1(); \/\/ Set to option 1 public void setOption2(); \/\/ Set to option 2 public void setOption3(); \/\/ Set to option 3 public int getOption(); \/\/ Get current selected option }   "
+},
+{
+  "id": "listing-if-multiple-interfaces",
+  "level": "2",
+  "url": "section-if-custom.html#listing-if-multiple-interfaces",
+  "type": "Listing",
+  "number": "11.2.2",
+  "title": "",
+  "body": " Implementing Multiple Interfaces   public class TogglingSelector implements TriOption, Comparable<TriOption> { \/\/ … public void setOption1() { … } public void setOption2() { … } public void setOption3() { … } public void getOption() { … } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } }   "
+},
+{
+  "id": "listing-if-widget-outline",
+  "level": "2",
+  "url": "section-if-custom.html#listing-if-widget-outline",
+  "type": "Listing",
+  "number": "11.2.3",
+  "title": "",
+  "body": " TogglingSelection.java (version 1)   \/\/ TogglingSelector.java import doodlepad.*; public class TogglingSelector extends Oval implements TriOption, Comparable<TriOption> { \/\/ Constructor sets up all encapsulated properties public TogglingSelector(double x, double y) { super(x, y, 75, 75); \/\/ Base class constructor \/\/ … } \/\/ Cycle through options on each click @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); \/\/ … } \/\/ Method required by interface public void setOption1() { … } public void setOption2() { … } public void setOption3() { … } public void getOption() { … } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } }   "
+},
+{
+  "id": "listing-if-togglingselector",
+  "level": "2",
+  "url": "section-if-custom.html#listing-if-togglingselector",
+  "type": "Listing",
+  "number": "11.2.4",
+  "title": "",
+  "body": " TogglingSelector.java   \/\/ TogglingSelector.java import doodlepad.*; public class TogglingSelector extends Oval implements TriOption, Comparable<TriOption> { private int option; \/\/ Selected option \/\/ Constructor sets up all encapsulated properties public TogglingSelector(double x, double y) { super(x, y, 75, 75); \/\/ Base class constructor this.setFontSize(32); this.setOption1(); \/\/ Start at option 1 } \/\/ Cycle through options on each click @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); if (option == 1) { setOption2(); } else if (option == 2) { setOption3(); } else { setOption1(); } } \/\/ Current option getter public int getOption() { return this.option; } \/\/ Set to option 1 and reconfigure display public void setOption1() { this.option = 1; this.setFillColor(255, 0, 0); this.setText(\"1\"); } \/\/ Set to option 2 and reconfigure display public void setOption2() { this.option = 2; this.setFillColor(255, 255, 0); this.setText(\"2\"); } \/\/ Set to option 3 and reconfigure display public void setOption3() { this.option = 3; this.setFillColor(0, 255, 0); this.setText(\"3\"); } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } public String toString() { return \"TogglingSelector (option=\" + this.getOption() + \")\"; } }   "
+},
+{
+  "id": "listing-if-slidingselector",
+  "level": "2",
+  "url": "section-if-custom.html#listing-if-slidingselector",
+  "type": "Listing",
+  "number": "11.2.5",
+  "title": "",
+  "body": " SlidingSelector.java   \/\/ SlidingSelector.java import doodlepad.*; public class SlidingSelector extends Rectangle implements TriOption, Comparable<TriOption> { private int option; \/\/ Selected option private Rectangle button; \/\/ button private Text display; \/\/ Text display \/\/ Constructor sets up all encapsulated properties public SlidingSelector(double x, double y) { super(x, y, 75, 90); \/\/ Base class constructor this.setFillColor(200); this.button = new Rectangle(x, y+60, 75, 30); this.button.setEventsEnabled(false); this.display = new Text(\"\", x+28, y+100, 30, 30); this.setOption1(); \/\/ Start at option 1 } \/\/ Choose option based on mouse y-position @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); if (y >= this.getY() + 60) { this.setOption1(); } else if (y >= this.getY() + 30) { this.setOption2(); } else { this.setOption3(); } } \/\/ Current option getter public int getOption() { return this.option; } \/\/ Set to option 1 and reconfigure display public void setOption1() { this.option = 1; this.button.setY(this.getY() + 60); this.button.setFillColor(255, 0, 0); this.display.setText(\"1\"); } \/\/ Set to option 2 and reconfigure display public void setOption2() { this.option = 2; this.button.setY(this.getY() + 30); this.button.setFillColor(255, 255, 0); this.display.setText(\"2\"); } \/\/ Set to option 3 and reconfigure display public void setOption3() { this.option = 3; this.button.setY(this.getY()); this.button.setFillColor(0, 255, 0); this.display.setText(\"3\"); } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } public String toString() { return \"SlidingSelector (option=\" + this.getOption() + \")\"; } }   "
+},
+{
+  "id": "listing-if-rotatingselector",
+  "level": "2",
+  "url": "section-if-custom.html#listing-if-rotatingselector",
+  "type": "Listing",
+  "number": "11.2.6",
+  "title": "",
+  "body": " RotatingSelector.java   \/\/ RotatingSelector.java import doodlepad.*; public class RotatingSelector extends Oval implements TriOption, Comparable<TriOption> { private int option; \/\/ Selected option private Text display; \/\/ Text display private Line handle; \/\/ Rotating handle \/\/ Constructor sets up all encapsulated properties public RotatingSelector(double x, double y) { super(x, y, 75, 75); \/\/ Base class constructor this.handle = new Line(x+15, y+15, x+90, y+90); this.handle.setEventsEnabled(false); this.handle.setStrokeWidth(15); this.display = new Text(\"\", x+28, y+85, 30, 30); this.setOption1(); \/\/ Start at option 1 } \/\/ Choose option based on mouse x-position @Override public void onMousePressed(double x, double y, int button) { super.onMousePressed(x, y, button); if (x > this.getX()+50) { setOption3(); } else if (x > this.getX()+25) { setOption2(); } else { setOption1(); } } \/\/ Current option getter public int getOption() { return this.option; } \/\/ Set to option 1 and reconfigure display public void setOption1() { this.option = 1; this.setFillColor(255, 0, 0); this.handle.setPoints(x+15, y+15, x+60, y+60); this.display.setText(\"1\"); } \/\/ Set to option 2 and reconfigure display public void setOption2() { this.option = 2; this.setFillColor(255, 255, 0); this.handle.setPoints(x+37, y+6, x+37, y+69); this.display.setText(\"2\"); } \/\/ Set to option 3 and reconfigure display public void setOption3() { this.option = 3; this.setFillColor(0, 255, 0); this.handle.setPoints(x+60, y+15, x+15, y+60); this.display.setText(\"3\"); } @Override public int compareTo(TriOption other) { return (this.getOption() - other.getOption()); } public String toString() { return \"RotatingSelector (option=\" + this.getOption() + \")\"; } }   "
+},
+{
+  "id": "listing-if-panel",
+  "level": "2",
+  "url": "section-if-custom.html#listing-if-panel",
+  "type": "Listing",
+  "number": "11.2.7",
+  "title": "",
+  "body": " RotatingSelector.java   \/\/ Panel.java import java.util.Arrays; import doodlepad.*; public class Panel extends Pad { private TriOption[] selectors; public Panel() { super(\"Selector Panel\", 480, 300); \/\/ Base class constructor selectors = new TriOption[3]; \/\/ Create and fill array selectors[0] = new SlidingSelector( 100, 100); selectors[1] = new TogglingSelector(200, 110); selectors[2] = new RotatingSelector(300, 110); } \/\/ Handle mouse-pressed on Pad public void onMousePressed(double x, double y, int button) { \/\/ Sort based on selected state Arrays.sort(selectors); \/\/ Print order for (TriOption sel: selectors) { System.out.println(sel); } } \/\/ Start here public static void main(String[] args) { new Panel(); } }   "
+},
+{
+  "id": "figure-if-panel-start",
+  "level": "2",
+  "url": "section-if-custom.html#figure-if-panel-start",
+  "type": "Figure",
+  "number": "11.2.8",
+  "title": "",
+  "body": " Panel.java   "
+},
+{
+  "id": "figure-if-panel-step1",
+  "level": "2",
+  "url": "section-if-custom.html#figure-if-panel-step1",
+  "type": "Figure",
+  "number": "11.2.9",
+  "title": "",
+  "body": " Panel.java with options selected   "
+},
+{
+  "id": "figure-if-panel-step2",
+  "level": "2",
+  "url": "section-if-custom.html#figure-if-panel-step2",
+  "type": "Figure",
+  "number": "11.2.10",
+  "title": "",
+  "body": " Panel.java with options changed   "
+},
+{
+  "id": "section-if-polymorph",
   "level": "1",
-  "url": "section-96.html",
+  "url": "section-if-polymorph.html",
   "type": "Section",
   "number": "11.3",
-  "title": "The Comparable&lt;T&gt; Interface",
-  "body": " The Comparable<T> Interface  Comparable<T>  public interface Comparable<T>{ int compareTo(T o); }  Implementing the Comparable interface allows collections of objects to sorted and searched using algorithms built-in to Java.  "
+  "title": "Interfaces and Polymorphism",
+  "body": " Interfaces and Polymorphism   Like a class, an interface can be used as a type. Variables may be defined as type interface. Furthermore, any instance of a class that implements an interface may be assigned to a variable of type interface. When a derived class object is assigned to a variable of type base class, only methods implemented in the base class may be accessed using the base class typed variable. Similarly, when an object that implements an interface is assigned to a variable of type interface, only methods included in the interface definition may be access through the variable.  You will recognize this ability to assign any object that implements an interface to a variable of type interface as a form of subtype polymorphism , also known as polymorphic reference variables . In addition to inheritance, interfaces represent the second form of subtype polymorphism available in Java.  Subtype polymorphism joins method polymorphism as the two broader forms of polymorphism implemented by Java. Recall that method polymorphism itself has two forms, that is, overloading of a method by defining two method having the same name but different signatures, and overriding a method in a base class by redefining the exact same signature in a dervied class.  With the option for a Java class to implement multiple interfaces, the ability of a single class to \"morph\" into multiple other types provides a kind of enhancement over what is possible with inheritance alone. An object can take on as many forms as the interfaces it implements. In this way, it can become the subject of a wide variety of algorithms, each expecting the methods in a given interface are implemented fully.  To summarize, refer to . The two broad types of polymorphism in Java are subtype polymorphism and method polymorhism . Subtype polymorphism is divided into inheritance (also known as implementation inheritance ), and interfaces (also known as interface inheritance ). Method polymorphism is divided into overloading ( two methods in the same class having the same name but different signatures), and overriding (a method in a dervied class with the same signature as a method in a base class).   Polymorphism in Java    One minor shortcoming of multiple interface inheritance (implementing multiple interfaces) is that an object cannot be considered multiple interface types simultaneously . This means that an object must be cast from one interface type to another before it is considered to be of that type and usable as such. This minor limitation is vastly outweighed by the flexibility we get from implementing multiple interfaces coupled with the help of the compiler to verify that all interface contract terms are fulfilled.   "
 },
 {
-  "id": "section-97",
+  "id": "p-883",
+  "level": "2",
+  "url": "section-if-polymorph.html#p-883",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "polymorphic reference variables "
+},
+{
+  "id": "p-884",
+  "level": "2",
+  "url": "section-if-polymorph.html#p-884",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Subtype polymorphism method polymorphism "
+},
+{
+  "id": "p-886",
+  "level": "2",
+  "url": "section-if-polymorph.html#p-886",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "subtype polymorphism method polymorhism Subtype polymorphism inheritance implementation inheritance interfaces interface inheritance Method polymorphism overloading overriding "
+},
+{
+  "id": "figure-if-java-polymorphism",
+  "level": "2",
+  "url": "section-if-polymorph.html#figure-if-java-polymorphism",
+  "type": "Figure",
+  "number": "11.3.1",
+  "title": "",
+  "body": " Polymorphism in Java   "
+},
+{
+  "id": "section-if-concepts",
   "level": "1",
-  "url": "section-97.html",
+  "url": "section-if-concepts.html",
   "type": "Section",
   "number": "11.4",
-  "title": "The Iterator&lt;T&gt; Interface",
-  "body": " The Iterator<T> Interface  Iterator<T>  public interface Iterator<T> { boolean hasNext(); T next(); void remove(); \/\/optional }  Implementing the Iterator<E> interface allows collections of objects implementing the interfaced to be traversed with the enhanced-for statement.  "
+  "title": "Key Concepts",
+  "body": " Key Concepts   An interface is a kind of contract to be fulfilled by a class definition.  An interface is made up of one or more method signatures .  A class implements an interface when it adds the implements keyword and an interface name to the start line of the class.  When a class implements an interface it is obligated to implement all methods signatures defined in that interface.  The compiler enforces the interface implementation contract. If the contract is not fulfilled completely, the compiler will fail with an error.  Interfaces may be defined using the angle brackets of generic notation which allows methods signatures to be parameterized by type.  By implementing the java.lang.Comparable<T> Interface, objects may be sorted by Arrays.sort(…) or Collections.sort(…) .  By implementing the java.util.Iterator<T> and java.util.Iterable<T> interfaces, objects may be iterated using the enhanced-for statement.  Polymorphism occurs when a single idea has many forms. There are multiple ways that Java supports polymorphism.  Polymorphic methods are implemented when multiple methods of the same name have distinct signatures  Polymorphic methods also occur when derived classes override base class methods  Polymorphic reference variables occur when a variable of type base class reference a value of type derived class.  Polymorphic reference variables occur when a variable of type interface is capable of referencing any object that implements the interface.  As the number of objects in a program grows, so does its complexity. It is essential to design your program before starting to code.  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)   "
 },
 {
-  "id": "section-98",
+  "id": "section-if-exercises",
   "level": "1",
-  "url": "section-98.html",
+  "url": "section-if-exercises.html",
   "type": "Section",
   "number": "11.5",
-  "title": "Benefits of an Interface",
-  "body": " Benefits of an Interface  An ArrayList holding objects of multiple types  "
+  "title": "Chapter Exercises",
+  "body": " Chapter Exercises   "
 },
 {
   "id": "section-99",
   "level": "1",
   "url": "section-99.html",
   "type": "Section",
-  "number": "11.6",
-  "title": "Defining Your Own Interfaces",
-  "body": "Defining Your Own Interfaces   "
+  "number": "12.1",
+  "title": "Syntax Errors",
+  "body": "Syntax Errors  Caught by the compiler  "
 },
 {
   "id": "section-100",
   "level": "1",
   "url": "section-100.html",
   "type": "Section",
-  "number": "11.7",
-  "title": "Key Concepts",
-  "body": "Key Concepts   An interface is a kind of contract to be fulfilled by a class definition.  An interface is made up of one or more method signatures.  A class implements an interface when it adds the implements keyword and name of the interface to the start of the class.  When a class implements an interface it is obligated to implement all methods signatures defined in that interface.  The compiler enforces the interface implementation contract. If the contract is not fulfilled completely, the compiler will fail with an error.  Interfaces may be defined using the angle brackets of generic notation which allows methods signatures to be parameterized by type.  By implementing the java.lang.Comparable Interface, objects may be sorted by Arrays.sort() or Collections.sort()  By implementing the java.util.Iterator Interface, objects may be iterated using the enhanced-for statement.  Polymorphism implies a single idea may have many forms. There are multiple forms of polymorphism in Java.  Polymorphic methods are implemented when multiple methods of the same name have distinct signatures  Polymorphic methods also appear when subclasses override superclass methods and dynamic binding.  Polymorphic reference variables occur when a variable of type superclass may reference a value of type subclass.  Polymorphic reference variables lso occur when a variable of type interface may reference any object that implements the interface.  As the number of objects in a program grows, so does its complexity. It is essential to design your program before starting to code.  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)   "
-},
-{
-  "id": "exercises-9",
-  "level": "1",
-  "url": "exercises-9.html",
-  "type": "Exercises",
-  "number": "11.8",
-  "title": "Exercises",
-  "body": "Exercises  "
+  "number": "12.2",
+  "title": "Logic Errors",
+  "body": "Logic Errors  The program runs, but produces the wrong output.  "
 },
 {
   "id": "section-101",
   "level": "1",
   "url": "section-101.html",
   "type": "Section",
-  "number": "12.1",
-  "title": "Software Development Life Cycled (SDLC)",
-  "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
+  "number": "12.3",
+  "title": "Runtime Errors",
+  "body": "Runtime Errors  The program compiles, but something goes wrong while it is running. Java responds to the problem by throwing an exception. Like nearly everything else in Java, an exception is an object created by instantiating a suitable exception class that identifies the problem.  If there is no intervention, Java will eventually print the current state of the call stack when the exception object is thrown.  "
+},
+{
+  "id": "p-892",
+  "level": "2",
+  "url": "section-101.html#p-892",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "call stack "
 },
 {
   "id": "section-102",
   "level": "1",
   "url": "section-102.html",
   "type": "Section",
-  "number": "12.2",
-  "title": "Encapsulation and Abstraction",
-  "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
+  "number": "12.4",
+  "title": "Common Exception Classes",
+  "body": "Common Exception Classes  ArithmeticException  NullPointerException  IndexOutOfBoundsException  ArrayIndexOutOfBoundsException  IllegalArgumentException  Exception class hierarchy  printStackTrace() method  "
 },
 {
   "id": "section-103",
   "level": "1",
   "url": "section-103.html",
   "type": "Section",
-  "number": "12.3",
-  "title": "Object Relationships",
-  "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
+  "number": "12.5",
+  "title": "Catching Exceptions",
+  "body": "Catching Exceptions  try-catch  try-catch-finally  "
 },
 {
   "id": "section-104",
   "level": "1",
   "url": "section-104.html",
   "type": "Section",
-  "number": "12.4",
-  "title": "When to use Inheritance",
-  "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
+  "number": "12.6",
+  "title": "Checked vs. Unchecked Exceptions",
+  "body": "Checked vs. Unchecked Exceptions  Checked exceptions must be caught  Alternatively, the catching of a checked exception may be deferred using the throws keyword.  "
+},
+{
+  "id": "p-903",
+  "level": "2",
+  "url": "section-104.html#p-903",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "throws "
 },
 {
   "id": "section-105",
   "level": "1",
   "url": "section-105.html",
   "type": "Section",
-  "number": "12.5",
+  "number": "12.7",
+  "title": "Reading Files",
+  "body": "Reading Files  Thow IO exceptions  IO exceptions are checked, and must be caught in a try-catch  Files need to be closed.  "
+},
+{
+  "id": "section-106",
+  "level": "1",
+  "url": "section-106.html",
+  "type": "Section",
+  "number": "12.8",
+  "title": "try-with-resources",
+  "body": "try-with-resources  May be used with objects that implement the AutoClosable interface.  public interface AutoCloseable { void close() throws Exception; }  "
+},
+{
+  "id": "section-107",
+  "level": "1",
+  "url": "section-107.html",
+  "type": "Section",
+  "number": "12.9",
+  "title": "Key Concepts",
+  "body": "Key Concepts   Three types of errors occur in Java: Syntax Errors, Logic Errors and Runtime Errors  Syntax errors occur when rules defined by Java are violated.  The Java compiler reports syntax errors when an attempt is made to compile a program.  Logic errors occur when a syntactically correct program compiles and runs, but produces output that is incorrect.  Logic errors are produced by mistakes in the way the program is written.  Runtime errors occur when an unexpected error occurs while a program is running.  Runtime errors may be due to unexpected situations such as invalid array indexes, missing files, etc. These are called exceptions.  With no special intervention, an exception will cause a Java program to halt with an indication of what caused the exception.  Runtime exceptions may be caught and handled by a Java program.  The try-catch and try-catch-finally statements are used to catch and handle runtime exceptions.  Exceptions are encapsulated as objects in the standard library and all Exception classes inherit the java.lang.Exception class.  Common exception classes include ArithmeticException, NullPointerException, IndexOutOfBoundsException, ArrayIndexOutOfBoundsException, IllegalArgumentException  The try block contains the code to be executed that may result in an exception.  The catch block is the code that will be executed if a matching exception is thrown.  The optional finally block is code that is guaranteed to execute, regardless of whether or not an exception was thrown.  The catch block may specify the class that it is willing to catch and handle, or it may be set up to handle all thrown exceptions.  Multiple catch blocks may be specified if different exception classes have their own way of being handled.  As a type of class, exceptions may be instantiated to create exception objects and the object may be thrown by the user. This is accomplished with the throw statement.  Exception classes may be subclassed to create custom catchable exception classes with unique data and behavior.  There are two important exception class categories: checked exceptions and unchecked exceptions.  The Java compiler requires that all checked exceptions be handled with a try-catch and will refuse to compile a program with a checked exception that is not caught.  IOExceptions and their subclasses, such as FileNotFoundException, are examples of checked exceptions.  The handling of checked exceptions may be deferred from one method to its calling method by adding a throws statement to the method declaration.  Unchecked exceptions are not required to be handled, and may cause a program to halt if one occurs outside a try-catch block.  RuntimeExceptions, such as IndexOutOfBoundException, are examples of unchecked exceptions.  There is a formal distinction between errors in exceptions in Java: unlike exceptions, errors are fatal and cannot be handled.  Exception objects have their own methods that may be invoked when an exception object is caught.  The printStackTrace() method of Exception objects will print to the terminal the entire state of a program at the time an exception occurred.  A variation on the try-catch statement will automatically close an open resource when an exception occurs, such as an open file. This is called try-with-resources.   "
+},
+{
+  "id": "exercises-9",
+  "level": "1",
+  "url": "exercises-9.html",
+  "type": "Exercises",
+  "number": "12.10",
+  "title": "Exercises",
+  "body": "Exercises  "
+},
+{
+  "id": "section-108",
+  "level": "1",
+  "url": "section-108.html",
+  "type": "Section",
+  "number": "13.1",
+  "title": "Tracing Programs",
+  "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
+},
+{
+  "id": "section-109",
+  "level": "1",
+  "url": "section-109.html",
+  "type": "Section",
+  "number": "13.2",
+  "title": "The Call Stack",
+  "body": "The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
+},
+{
+  "id": "section-110",
+  "level": "1",
+  "url": "section-110.html",
+  "type": "Section",
+  "number": "13.3",
+  "title": "Recursion",
+  "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
+},
+{
+  "id": "p-912",
+  "level": "2",
+  "url": "section-110.html#p-912",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "recursion "
+},
+{
+  "id": "p-913",
+  "level": "2",
+  "url": "section-110.html#p-913",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Direct recursion "
+},
+{
+  "id": "p-914",
+  "level": "2",
+  "url": "section-110.html#p-914",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Indirect recursion "
+},
+{
+  "id": "section-111",
+  "level": "1",
+  "url": "section-111.html",
+  "type": "Section",
+  "number": "13.4",
+  "title": "Solving Problems with Recursion",
+  "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
+},
+{
+  "id": "p-917",
+  "level": "2",
+  "url": "section-111.html#p-917",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "cases base case recursive case "
+},
+{
+  "id": "section-112",
+  "level": "1",
+  "url": "section-112.html",
+  "type": "Section",
+  "number": "13.5",
+  "title": "Example: Computing Factorial",
+  "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
+},
+{
+  "id": "section-113",
+  "level": "1",
+  "url": "section-113.html",
+  "type": "Section",
+  "number": "13.6",
+  "title": "Example: Computing Fibonacci Numbers",
+  "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
+},
+{
+  "id": "section-114",
+  "level": "1",
+  "url": "section-114.html",
+  "type": "Section",
+  "number": "13.7",
+  "title": "Example: Drawing a Pyramid",
+  "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
+},
+{
+  "id": "section-115",
+  "level": "1",
+  "url": "section-115.html",
+  "type": "Section",
+  "number": "13.8",
+  "title": "Example: Building a Maze",
+  "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
+},
+{
+  "id": "section-116",
+  "level": "1",
+  "url": "section-116.html",
+  "type": "Section",
+  "number": "13.9",
+  "title": "Key Concepts",
+  "body": "Key Concepts   The call stack is a data structure that tracks all currently executing methods.  A stack frame tracks each executing method on the call stack.  A stack frame contains all information about the associated method.  Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.  When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.  The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.  When a method (eventually) invokes itself during execution, the process is called recursion.  When a recursively invoked method returns, the method call resolves to the returned value.  Many algorithms may be implemented using recursion.  Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.  Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.  Recursive programs may be divided into direct recursion and indirect recursion.  All recursive programs must have at least one base case and at least one recursive case.  The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.  A recursive case must move closer to the base case in some way to ensure the recursive program terminates.  There may be multiple base cases and multiple recursive cases in a recursive algorithm.   "
+},
+{
+  "id": "exercises-10",
+  "level": "1",
+  "url": "exercises-10.html",
+  "type": "Exercises",
+  "number": "13.10",
+  "title": "Exercises",
+  "body": "Exercises  "
+},
+{
+  "id": "section-117",
+  "level": "1",
+  "url": "section-117.html",
+  "type": "Section",
+  "number": "14.1",
+  "title": "Searching and Sorting Algorithms",
+  "body": " Searching and Sorting Algorithms   A class that holds only static methods capable of performing several algorithms on Java Collection classes  https:\/\/docs.oracle.com\/en\/java\/javase\/20\/docs\/api\/java.base\/java\/util\/Collections.html   "
+},
+{
+  "id": "section-118",
+  "level": "1",
+  "url": "section-118.html",
+  "type": "Section",
+  "number": "14.2",
+  "title": "Sequential Search",
+  "body": "Sequential Search  "
+},
+{
+  "id": "section-119",
+  "level": "1",
+  "url": "section-119.html",
+  "type": "Section",
+  "number": "14.3",
+  "title": "Binary Search",
+  "body": "Binary Search  Iterative implementation  Recursive implementation  "
+},
+{
+  "id": "section-120",
+  "level": "1",
+  "url": "section-120.html",
+  "type": "Section",
+  "number": "14.4",
+  "title": "Selection Sort",
+  "body": "Selection Sort  "
+},
+{
+  "id": "section-121",
+  "level": "1",
+  "url": "section-121.html",
+  "type": "Section",
+  "number": "14.5",
+  "title": "Insertion Sort",
+  "body": "Insertion Sort  "
+},
+{
+  "id": "section-122",
+  "level": "1",
+  "url": "section-122.html",
+  "type": "Section",
+  "number": "14.6",
+  "title": "Merge Sort",
+  "body": "Merge Sort  "
+},
+{
+  "id": "section-123",
+  "level": "1",
+  "url": "section-123.html",
+  "type": "Section",
+  "number": "14.7",
+  "title": "Complexity",
+  "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
+},
+{
+  "id": "section-124",
+  "level": "1",
+  "url": "section-124.html",
+  "type": "Section",
+  "number": "14.8",
+  "title": "Key Concepts",
+  "body": "Key Concepts   Algorithms are systematic ways of solving a given problem.  Two categories of algorithms include searching for a value and sorting a linear sequence of values.  Algorithms for searching include sequential search and binary search  Sequential search is ...  Binary search is ...  Three algorithms for sorting include selection sort, insertion sort, and merge sort.  Selection sort is ...  Insertion sort is ...  Merge sort is ...  The cost of an algorithm may be determined by mathematical analysis. This result of analysis in a mathematical expression that describes how cost grows with some respect to some input, such as the the size of the data structure processed.  How an algorithms grows is referred to as Big-Oh notation.   "
+},
+{
+  "id": "exercises-11",
+  "level": "1",
+  "url": "exercises-11.html",
+  "type": "Exercises",
+  "number": "14.9",
+  "title": "Exercises",
+  "body": "Exercises  "
+},
+{
+  "id": "section-125",
+  "level": "1",
+  "url": "section-125.html",
+  "type": "Section",
+  "number": "15.1",
+  "title": "Software Development Life Cycled (SDLC)",
+  "body": "Software Development Life Cycled (SDLC)  Design is the first step in the SDLC  When you move on the Software Engineering you will learn about the other parts of various SDLC models  "
+},
+{
+  "id": "section-126",
+  "level": "1",
+  "url": "section-126.html",
+  "type": "Section",
+  "number": "15.2",
+  "title": "Encapsulation and Abstraction",
+  "body": "Encapsulation and Abstraction  When to declare a new object  Public verses private behavior. The public interface.  A user of your class should not have to know how it is implemented.  "
+},
+{
+  "id": "section-127",
+  "level": "1",
+  "url": "section-127.html",
+  "type": "Section",
+  "number": "15.3",
+  "title": "Object Relationships",
+  "body": "Object Relationships  Dependency  Aggregation  Implementation Inheritance  Interface Inheritance  "
+},
+{
+  "id": "section-128",
+  "level": "1",
+  "url": "section-128.html",
+  "type": "Section",
+  "number": "15.4",
+  "title": "When to use Inheritance",
+  "body": "When to use Inheritance  Shared functionality  For generalization and specialization  "
+},
+{
+  "id": "section-129",
+  "level": "1",
+  "url": "section-129.html",
+  "type": "Section",
+  "number": "15.5",
   "title": "When to use Interfaces",
   "body": "When to use Interfaces  Common public interface  "
 },
@@ -3812,394 +4253,79 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-de-gen-spec.html",
   "type": "Section",
-  "number": "12.6",
+  "number": "15.6",
   "title": "Generalization and Specialization",
   "body": " Generalization and Specialization  Grouping fields and methods in a base class is a kind of generalization  Defining derived classes with unique state and behavior is a kind of specialization  Overriding methods to replace functionality is one way to specialize a derived class  Overriding methods to augment functionality is another way to specialize a derived class  "
-},
-{
-  "id": "section-107",
-  "level": "1",
-  "url": "section-107.html",
-  "type": "Section",
-  "number": "12.7",
-  "title": "Cohesion and Coupling",
-  "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
-},
-{
-  "id": "section-108",
-  "level": "1",
-  "url": "section-108.html",
-  "type": "Section",
-  "number": "12.8",
-  "title": "Unified Modeling Language (UML)",
-  "body": "Unified Modeling Language (UML)  "
-},
-{
-  "id": "section-109",
-  "level": "1",
-  "url": "section-109.html",
-  "type": "Section",
-  "number": "12.9",
-  "title": "Class Diagram",
-  "body": "Class Diagram  A structure diagram  "
-},
-{
-  "id": "section-110",
-  "level": "1",
-  "url": "section-110.html",
-  "type": "Section",
-  "number": "12.10",
-  "title": "Object Diagram",
-  "body": "Object Diagram  A structure diagram  "
-},
-{
-  "id": "section-111",
-  "level": "1",
-  "url": "section-111.html",
-  "type": "Section",
-  "number": "12.11",
-  "title": "Activity Diagrams",
-  "body": "Activity Diagrams  A behavior diagram  "
-},
-{
-  "id": "section-112",
-  "level": "1",
-  "url": "section-112.html",
-  "type": "Section",
-  "number": "12.12",
-  "title": "State Machine Diagrams",
-  "body": "State Machine Diagrams  A behavior diagram  "
-},
-{
-  "id": "section-113",
-  "level": "1",
-  "url": "section-113.html",
-  "type": "Section",
-  "number": "12.13",
-  "title": "Key Concepts",
-  "body": "Key Concepts   Unified Modeling Language (UML) is a standard diagram specification for the design and visualization of software, especially when using an object oriented programming language.  The UML specification defines multiple diagram types. We focus on Class Diagrams.  A Class Diagram describes the classes in a program: including their instance variables and methods.  A Class Diagram also depicts the way classes in a program relate to one another.  Type of relationships include inheritance (implementation and interface), aggregation, and dependency  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)  Aggregation occurs when one object is contained by another object, like a field or a collection (comprises)  Dependency occurs when a class is used by another but is not a field (depends upon)  The cardinality of a relationship may be indicated using numeric annotations at the end of a connection   "
-},
-{
-  "id": "exercises-10",
-  "level": "1",
-  "url": "exercises-10.html",
-  "type": "Exercises",
-  "number": "12.14",
-  "title": "Exercises",
-  "body": "Exercises  "
-},
-{
-  "id": "section-114",
-  "level": "1",
-  "url": "section-114.html",
-  "type": "Section",
-  "number": "13.1",
-  "title": "Syntax Errors",
-  "body": "Syntax Errors  Caught by the compiler  "
-},
-{
-  "id": "section-115",
-  "level": "1",
-  "url": "section-115.html",
-  "type": "Section",
-  "number": "13.2",
-  "title": "Logic Errors",
-  "body": "Logic Errors  The program runs, but produces the wrong output.  "
-},
-{
-  "id": "section-116",
-  "level": "1",
-  "url": "section-116.html",
-  "type": "Section",
-  "number": "13.3",
-  "title": "Runtime Errors",
-  "body": "Runtime Errors  The program compiles, but something goes wrong while it is running. Java responds to the problem by throwing an exception. Like nearly everything else in Java, an exception is an object created by instantiating a suitable exception class that identifies the problem.  If there is no intervention, Java will eventually print the current state of the call stack when the exception object is thrown.  "
-},
-{
-  "id": "p-887",
-  "level": "2",
-  "url": "section-116.html#p-887",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "call stack "
-},
-{
-  "id": "section-117",
-  "level": "1",
-  "url": "section-117.html",
-  "type": "Section",
-  "number": "13.4",
-  "title": "Common Exception Classes",
-  "body": "Common Exception Classes  ArithmeticException  NullPointerException  IndexOutOfBoundsException  ArrayIndexOutOfBoundsException  IllegalArgumentException  Exception class hierarchy  printStackTrace() method  "
-},
-{
-  "id": "section-118",
-  "level": "1",
-  "url": "section-118.html",
-  "type": "Section",
-  "number": "13.5",
-  "title": "Catching Exceptions",
-  "body": "Catching Exceptions  try-catch  try-catch-finally  "
-},
-{
-  "id": "section-119",
-  "level": "1",
-  "url": "section-119.html",
-  "type": "Section",
-  "number": "13.6",
-  "title": "Checked vs. Unchecked Exceptions",
-  "body": "Checked vs. Unchecked Exceptions  Checked exceptions must be caught  Alternatively, the catching of a checked exception may be deferred using the throws keyword.  "
-},
-{
-  "id": "p-898",
-  "level": "2",
-  "url": "section-119.html#p-898",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "throws "
-},
-{
-  "id": "section-120",
-  "level": "1",
-  "url": "section-120.html",
-  "type": "Section",
-  "number": "13.7",
-  "title": "Reading Files",
-  "body": "Reading Files  Thow IO exceptions  IO exceptions are checked, and must be caught in a try-catch  Files need to be closed.  "
-},
-{
-  "id": "section-121",
-  "level": "1",
-  "url": "section-121.html",
-  "type": "Section",
-  "number": "13.8",
-  "title": "try-with-resources",
-  "body": "try-with-resources  May be used with objects that implement the AutoClosable interface.  public interface AutoCloseable { void close() throws Exception; }  "
-},
-{
-  "id": "section-122",
-  "level": "1",
-  "url": "section-122.html",
-  "type": "Section",
-  "number": "13.9",
-  "title": "Key Concepts",
-  "body": "Key Concepts   Three types of errors occur in Java: Syntax Errors, Logic Errors and Runtime Errors  Syntax errors occur when rules defined by Java are violated.  The Java compiler reports syntax errors when an attempt is made to compile a program.  Logic errors occur when a syntactically correct program compiles and runs, but produces output that is incorrect.  Logic errors are produced by mistakes in the way the program is written.  Runtime errors occur when an unexpected error occurs while a program is running.  Runtime errors may be due to unexpected situations such as invalid array indexes, missing files, etc. These are called exceptions.  With no special intervention, an exception will cause a Java program to halt with an indication of what caused the exception.  Runtime exceptions may be caught and handled by a Java program.  The try-catch and try-catch-finally statements are used to catch and handle runtime exceptions.  Exceptions are encapsulated as objects in the standard library and all Exception classes inherit the java.lang.Exception class.  Common exception classes include ArithmeticException, NullPointerException, IndexOutOfBoundsException, ArrayIndexOutOfBoundsException, IllegalArgumentException  The try block contains the code to be executed that may result in an exception.  The catch block is the code that will be executed if a matching exception is thrown.  The optional finally block is code that is guaranteed to execute, regardless of whether or not an exception was thrown.  The catch block may specify the class that it is willing to catch and handle, or it may be set up to handle all thrown exceptions.  Multiple catch blocks may be specified if different exception classes have their own way of being handled.  As a type of class, exceptions may be instantiated to create exception objects and the object may be thrown by the user. This is accomplished with the throw statement.  Exception classes may be subclassed to create custom catchable exception classes with unique data and behavior.  There are two important exception class categories: checked exceptions and unchecked exceptions.  The Java compiler requires that all checked exceptions be handled with a try-catch and will refuse to compile a program with a checked exception that is not caught.  IOExceptions and their subclasses, such as FileNotFoundException, are examples of checked exceptions.  The handling of checked exceptions may be deferred from one method to its calling method by adding a throws statement to the method declaration.  Unchecked exceptions are not required to be handled, and may cause a program to halt if one occurs outside a try-catch block.  RuntimeExceptions, such as IndexOutOfBoundException, are examples of unchecked exceptions.  There is a formal distinction between errors in exceptions in Java: unlike exceptions, errors are fatal and cannot be handled.  Exception objects have their own methods that may be invoked when an exception object is caught.  The printStackTrace() method of Exception objects will print to the terminal the entire state of a program at the time an exception occurred.  A variation on the try-catch statement will automatically close an open resource when an exception occurs, such as an open file. This is called try-with-resources.   "
-},
-{
-  "id": "exercises-11",
-  "level": "1",
-  "url": "exercises-11.html",
-  "type": "Exercises",
-  "number": "13.10",
-  "title": "Exercises",
-  "body": "Exercises  "
-},
-{
-  "id": "section-123",
-  "level": "1",
-  "url": "section-123.html",
-  "type": "Section",
-  "number": "14.1",
-  "title": "Tracing Programs",
-  "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
-},
-{
-  "id": "section-124",
-  "level": "1",
-  "url": "section-124.html",
-  "type": "Section",
-  "number": "14.2",
-  "title": "The Call Stack",
-  "body": "The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
-},
-{
-  "id": "section-125",
-  "level": "1",
-  "url": "section-125.html",
-  "type": "Section",
-  "number": "14.3",
-  "title": "Recursion",
-  "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
-},
-{
-  "id": "p-907",
-  "level": "2",
-  "url": "section-125.html#p-907",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "recursion "
-},
-{
-  "id": "p-908",
-  "level": "2",
-  "url": "section-125.html#p-908",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Direct recursion "
-},
-{
-  "id": "p-909",
-  "level": "2",
-  "url": "section-125.html#p-909",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Indirect recursion "
-},
-{
-  "id": "section-126",
-  "level": "1",
-  "url": "section-126.html",
-  "type": "Section",
-  "number": "14.4",
-  "title": "Solving Problems with Recursion",
-  "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
-},
-{
-  "id": "p-912",
-  "level": "2",
-  "url": "section-126.html#p-912",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "cases base case recursive case "
-},
-{
-  "id": "section-127",
-  "level": "1",
-  "url": "section-127.html",
-  "type": "Section",
-  "number": "14.5",
-  "title": "Example: Computing Factorial",
-  "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
-},
-{
-  "id": "section-128",
-  "level": "1",
-  "url": "section-128.html",
-  "type": "Section",
-  "number": "14.6",
-  "title": "Example: Computing Fibonacci Numbers",
-  "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
-},
-{
-  "id": "section-129",
-  "level": "1",
-  "url": "section-129.html",
-  "type": "Section",
-  "number": "14.7",
-  "title": "Example: Drawing a Pyramid",
-  "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
-},
-{
-  "id": "section-130",
-  "level": "1",
-  "url": "section-130.html",
-  "type": "Section",
-  "number": "14.8",
-  "title": "Example: Building a Maze",
-  "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
 },
 {
   "id": "section-131",
   "level": "1",
   "url": "section-131.html",
   "type": "Section",
-  "number": "14.9",
-  "title": "Key Concepts",
-  "body": "Key Concepts   The call stack is a data structure that tracks all currently executing methods.  A stack frame tracks each executing method on the call stack.  A stack frame contains all information about the associated method.  Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.  When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.  The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.  When a method (eventually) invokes itself during execution, the process is called recursion.  When a recursively invoked method returns, the method call resolves to the returned value.  Many algorithms may be implemented using recursion.  Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.  Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.  Recursive programs may be divided into direct recursion and indirect recursion.  All recursive programs must have at least one base case and at least one recursive case.  The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.  A recursive case must move closer to the base case in some way to ensure the recursive program terminates.  There may be multiple base cases and multiple recursive cases in a recursive algorithm.   "
-},
-{
-  "id": "exercises-12",
-  "level": "1",
-  "url": "exercises-12.html",
-  "type": "Exercises",
-  "number": "14.10",
-  "title": "Exercises",
-  "body": "Exercises  "
+  "number": "15.7",
+  "title": "Cohesion and Coupling",
+  "body": "Cohesion and Coupling  Coupling is the degree to which objects and packages depend on one another. High coupling means that objects are tightly connected and changes to one may affect the others. In this case an object model is fragile. Low coupling means that objects are losely or not dependent one one another. Changes to one have little impact on the others.  Cohesion is the degree to which elements within an object or package work together to solve a problem. High cohesion means that objects are related and work together well to solve a problem. Low cohesion means that objects are loosely related and don't work together well.  As a general rule, software system should be designed with low coupling and high cohesion.  "
 },
 {
   "id": "section-132",
   "level": "1",
   "url": "section-132.html",
   "type": "Section",
-  "number": "15.1",
-  "title": "Searching and Sorting Algorithms",
-  "body": " Searching and Sorting Algorithms   A class that holds only static methods capable of performing several algorithms on Java Collection classes  https:\/\/docs.oracle.com\/en\/java\/javase\/20\/docs\/api\/java.base\/java\/util\/Collections.html   "
+  "number": "15.8",
+  "title": "Unified Modeling Language (UML)",
+  "body": "Unified Modeling Language (UML)  "
 },
 {
   "id": "section-133",
   "level": "1",
   "url": "section-133.html",
   "type": "Section",
-  "number": "15.2",
-  "title": "Sequential Search",
-  "body": "Sequential Search  "
+  "number": "15.9",
+  "title": "Class Diagram",
+  "body": "Class Diagram  A structure diagram  "
 },
 {
   "id": "section-134",
   "level": "1",
   "url": "section-134.html",
   "type": "Section",
-  "number": "15.3",
-  "title": "Binary Search",
-  "body": "Binary Search  Iterative implementation  Recursive implementation  "
+  "number": "15.10",
+  "title": "Object Diagram",
+  "body": "Object Diagram  A structure diagram  "
 },
 {
   "id": "section-135",
   "level": "1",
   "url": "section-135.html",
   "type": "Section",
-  "number": "15.4",
-  "title": "Selection Sort",
-  "body": "Selection Sort  "
+  "number": "15.11",
+  "title": "Activity Diagrams",
+  "body": "Activity Diagrams  A behavior diagram  "
 },
 {
   "id": "section-136",
   "level": "1",
   "url": "section-136.html",
   "type": "Section",
-  "number": "15.5",
-  "title": "Insertion Sort",
-  "body": "Insertion Sort  "
+  "number": "15.12",
+  "title": "State Machine Diagrams",
+  "body": "State Machine Diagrams  A behavior diagram  "
 },
 {
   "id": "section-137",
   "level": "1",
   "url": "section-137.html",
   "type": "Section",
-  "number": "15.6",
-  "title": "Merge Sort",
-  "body": "Merge Sort  "
-},
-{
-  "id": "section-138",
-  "level": "1",
-  "url": "section-138.html",
-  "type": "Section",
-  "number": "15.7",
-  "title": "Complexity",
-  "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
-},
-{
-  "id": "section-139",
-  "level": "1",
-  "url": "section-139.html",
-  "type": "Section",
-  "number": "15.8",
+  "number": "15.13",
   "title": "Key Concepts",
-  "body": "Key Concepts   Algorithms are systematic ways of solving a given problem.  Two categories of algorithms include searching for a value and sorting a linear sequence of values.  Algorithms for searching include sequential search and binary search  Sequential search is ...  Binary search is ...  Three algorithms for sorting include selection sort, insertion sort, and merge sort.  Selection sort is ...  Insertion sort is ...  Merge sort is ...  The cost of an algorithm may be determined by mathematical analysis. This result of analysis in a mathematical expression that describes how cost grows with some respect to some input, such as the the size of the data structure processed.  How an algorithms grows is referred to as Big-Oh notation.   "
+  "body": "Key Concepts   Unified Modeling Language (UML) is a standard diagram specification for the design and visualization of software, especially when using an object oriented programming language.  The UML specification defines multiple diagram types. We focus on Class Diagrams.  A Class Diagram describes the classes in a program: including their instance variables and methods.  A Class Diagram also depicts the way classes in a program relate to one another.  Type of relationships include inheritance (implementation and interface), aggregation, and dependency  Implementation inheritance in Java occurs when the extends keyword is used (is-a)  Interface inheritance in Java occurs when the implements keyword is used (another kind of is-a)  Aggregation occurs when one object is contained by another object, like a field or a collection (comprises)  Dependency occurs when a class is used by another but is not a field (depends upon)  The cardinality of a relationship may be indicated using numeric annotations at the end of a connection   "
 },
 {
-  "id": "exercises-13",
+  "id": "exercises-12",
   "level": "1",
-  "url": "exercises-13.html",
+  "url": "exercises-12.html",
   "type": "Exercises",
-  "number": "15.9",
+  "number": "15.14",
   "title": "Exercises",
   "body": "Exercises  "
 },
@@ -4357,18 +4483,18 @@ var ptx_lunr_docs = [
   "body": "   doodlepad.org   https:\/\/doodlepad.org   copyright  This book was authored in PreTeXt .  "
 },
 {
-  "id": "section-140",
+  "id": "section-138",
   "level": "1",
-  "url": "section-140.html",
+  "url": "section-138.html",
   "type": "Section",
   "number": "16.1",
   "title": "Visualizer",
   "body": " Visualizer   Visualize   "
 },
 {
-  "id": "section-141",
+  "id": "section-139",
   "level": "1",
-  "url": "section-141.html",
+  "url": "section-139.html",
   "type": "Section",
   "number": "16.2",
   "title": "Active Code",
@@ -4377,7 +4503,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-python",
   "level": "2",
-  "url": "section-141.html#program-activecode-python",
+  "url": "section-139.html#program-activecode-python",
   "type": "Listing",
   "number": "16.2.1",
   "title": "",
@@ -4386,7 +4512,7 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-java",
   "level": "2",
-  "url": "section-141.html#program-activecode-java",
+  "url": "section-139.html#program-activecode-java",
   "type": "Listing",
   "number": "16.2.2",
   "title": "Informal Java “Hello, World”",
@@ -4395,16 +4521,16 @@ var ptx_lunr_docs = [
 {
   "id": "program-activecode-javascript",
   "level": "2",
-  "url": "section-141.html#program-activecode-javascript",
+  "url": "section-139.html#program-activecode-javascript",
   "type": "Listing",
   "number": "16.2.3",
   "title": "",
   "body": " An interactive JavaScript program, using Runestone   document.write('Hello, world!');   "
 },
 {
-  "id": "exercises-14",
+  "id": "exercises-13",
   "level": "1",
-  "url": "exercises-14.html",
+  "url": "exercises-13.html",
   "type": "Exercises",
   "number": "16.3",
   "title": "Exercises",
@@ -4413,7 +4539,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-21",
   "level": "2",
-  "url": "exercises-14.html#exercise-21",
+  "url": "exercises-13.html#exercise-21",
   "type": "Exercise",
   "number": "16.3.1",
   "title": "True\/False.",
@@ -4422,7 +4548,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-22",
   "level": "2",
-  "url": "exercises-14.html#exercise-22",
+  "url": "exercises-13.html#exercise-22",
   "type": "Exercise",
   "number": "16.3.2",
   "title": "Multiple Choice.",
@@ -4431,7 +4557,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-23",
   "level": "2",
-  "url": "exercises-14.html#exercise-23",
+  "url": "exercises-13.html#exercise-23",
   "type": "Exercise",
   "number": "16.3.3",
   "title": "Parson’s Problem.",
@@ -4440,7 +4566,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-24",
   "level": "2",
-  "url": "exercises-14.html#exercise-24",
+  "url": "exercises-13.html#exercise-24",
   "type": "Exercise",
   "number": "16.3.4",
   "title": "Matching.",
@@ -4449,7 +4575,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-25",
   "level": "2",
-  "url": "exercises-14.html#exercise-25",
+  "url": "exercises-13.html#exercise-25",
   "type": "Exercise",
   "number": "16.3.5",
   "title": "Clickable Area.",
@@ -4458,7 +4584,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-integer",
   "level": "2",
-  "url": "exercises-14.html#fillin-integer",
+  "url": "exercises-13.html#fillin-integer",
   "type": "Exercise",
   "number": "16.3.6",
   "title": "Fill-In, Integer Answer.",
@@ -4467,7 +4593,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-string-integer",
   "level": "2",
-  "url": "exercises-14.html#fillin-string-integer",
+  "url": "exercises-13.html#fillin-string-integer",
   "type": "Exercise",
   "number": "16.3.7",
   "title": "Fill-In, String and Number Answers.",
@@ -4476,7 +4602,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-case-insensitive",
   "level": "2",
-  "url": "exercises-14.html#fillin-case-insensitive",
+  "url": "exercises-13.html#fillin-case-insensitive",
   "type": "Exercise",
   "number": "16.3.8",
   "title": "Fill-In, Case-Insensitive Answer.",
@@ -4485,7 +4611,7 @@ var ptx_lunr_docs = [
 {
   "id": "fillin-decimal",
   "level": "2",
-  "url": "exercises-14.html#fillin-decimal",
+  "url": "exercises-13.html#fillin-decimal",
   "type": "Exercise",
   "number": "16.3.9",
   "title": "Fill-In, Decimal Answer.",
@@ -4494,16 +4620,16 @@ var ptx_lunr_docs = [
 {
   "id": "short-answer-question",
   "level": "2",
-  "url": "exercises-14.html#short-answer-question",
+  "url": "exercises-13.html#short-answer-question",
   "type": "Exercise",
   "number": "16.3.10",
   "title": "Short Answer.",
   "body": "Short Answer  This sample book is configured to make some simple questions interactive on a capable platform, by adding a <response> element as a signal.  "
 },
 {
-  "id": "exercises-15",
+  "id": "exercises-14",
   "level": "1",
-  "url": "exercises-15.html",
+  "url": "exercises-14.html",
   "type": "Exercises",
   "number": "16.4",
   "title": "Exercises",
@@ -4512,7 +4638,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-31",
   "level": "2",
-  "url": "exercises-15.html#exercise-31",
+  "url": "exercises-14.html#exercise-31",
   "type": "Exercise",
   "number": "16.4.1",
   "title": "Identify valid variables names.",
@@ -4521,7 +4647,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-32",
   "level": "2",
-  "url": "exercises-15.html#exercise-32",
+  "url": "exercises-14.html#exercise-32",
   "type": "Exercise",
   "number": "16.4.2",
   "title": "Order of Operations.",
@@ -4530,16 +4656,16 @@ var ptx_lunr_docs = [
 {
   "id": "exercise-33",
   "level": "2",
-  "url": "exercises-15.html#exercise-33",
+  "url": "exercises-14.html#exercise-33",
   "type": "Exercise",
   "number": "16.4.3",
   "title": "Predict expression evaluation value and type.",
   "body": "Predict expression evaluation value and type Follow automatic promotions. "
 },
 {
-  "id": "exercises-16",
+  "id": "exercises-15",
   "level": "1",
-  "url": "exercises-16.html",
+  "url": "exercises-15.html",
   "type": "Exercises",
   "number": "16.5",
   "title": "Exercises",
@@ -4548,7 +4674,7 @@ var ptx_lunr_docs = [
 {
   "id": "matching-java",
   "level": "2",
-  "url": "exercises-16.html#matching-java",
+  "url": "exercises-15.html#matching-java",
   "type": "Exercise",
   "number": "16.5.1",
   "title": "Matching.",
@@ -4557,7 +4683,7 @@ var ptx_lunr_docs = [
 {
   "id": "matching-oop",
   "level": "2",
-  "url": "exercises-16.html#matching-oop",
+  "url": "exercises-15.html#matching-oop",
   "type": "Exercise",
   "number": "16.5.2",
   "title": "Matching.",

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// SlidingSelector.java
+import doodlepad.*;
+
+public class SlidingSelector 
+                      extends Rectangle 
+                      implements TriOption, Comparable&lt;TriOption&gt; {
+  private int  option;              // Selected option
+  private Rectangle button;         // button
+  private Text display;             // Text display
+
+  // Constructor sets up all encapsulated properties
+  public SlidingSelector(double x, double y) {
+    super(x, y, 75, 90);            // Base class constructor
+    this.setFillColor(200);
+    this.button = new Rectangle(x, y+60, 75, 30);
+    this.button.setEventsEnabled(false);
+    this.display = new Text("", x+28, y+100, 30, 30);
+    this.setOption1();              // Start at option 1
+  }
+  // Choose option based on mouse y-position
+  @Override
+  public void onMousePressed(double x, double y, int button) {
+    super.onMousePressed(x, y, button);
+    if (y &gt;= this.getY() + 60) {
+      this.setOption1();
+    } else if (y &gt;= this.getY() + 30) {
+      this.setOption2();
+    } else {
+      this.setOption3();
+    }
+  }
+  // Current option getter
+  public int getOption() {
+    return this.option;
+  }
+  // Set to option 1 and reconfigure display
+  public void setOption1() {
+    this.option = 1;
+    this.button.setY(this.getY() + 60);
+    this.button.setFillColor(255, 0, 0);
+    this.display.setText("1");
+  }
+  // Set to option 2 and reconfigure display
+  public void setOption2() {
+    this.option = 2;
+    this.button.setY(this.getY() + 30);
+    this.button.setFillColor(255, 255, 0);
+    this.display.setText("2");
+  }
+  // Set to option 3 and reconfigure display
+  public void setOption3() {
+    this.option = 3;
+    this.button.setY(this.getY());
+    this.button.setFillColor(0, 255, 0);
+    this.display.setText("3");
+  }
+  @Override
+  public int compareTo(TriOption other) {
+    return (this.getOption() - other.getOption());
+  }
+  public String toString() {
+    return "SlidingSelector  (option=" + this.getOption() + ")";
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.5<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">SlidingSelector.java</code></figcaption></figure><span class="incontext"><a href="section-if-custom.html#listing-if-slidingselector" class="internal">in-context</a></span>
+</body>
+</html>
