@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,34 +718,25 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-ar-reftypes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.3</span> <span class="title">Arrays and References</span>
 </h2>
-<section class="introduction" id="introduction-40"><div class="para" id="p-653">There are two items to consider when working with arrays and reference types. The first is that array variable types are reference types and following all the same rules. The second is that array elements that store objects are reference types as well, and so store only a reference to the object, not the object itself.</div></section><section class="subsection" id="subsection-87"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-40"><div class="para" id="p-652">There are two items to consider when working with arrays and reference types. The first is that array variable types are reference types and following all the same rules. The second is that array elements that store objects are reference types as well, and so store only a reference to the object, not the object itself.</div></section><section class="subsection" id="subsection-87"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.3.1</span> <span class="title">Array Variables as Reference Types</span>
 </h3>
-<div class="para" id="p-654">As a reference type, an array variable is only a name that references an array. There is nothing to stop us from declaring a second array variable and assigning it to the same array, giving us two names for the array. As we know, assigning one reference variable to another does not copy the object being referenced. Rather, the value of the second reference variable gets the address of the object referenced by the first variable. This is why both variables reference the same object. Using either variable, when we access and modify an array element, the single underlying array is being modified. Specifically, we can modify an array referenced using one variable, and see the modification when accessing it using the other array variable. Let’s run some tests.</div>
+<div class="para" id="p-653">As a reference type, an array variable is only a name that references an array. There is nothing to stop us from declaring a second array variable and assigning it to the same array, giving us two names for the array. As we know, assigning one reference variable to another does not copy the object being referenced. Rather, the value of the second reference variable gets the address of the object referenced by the first variable. This is why both variables reference the same object. Using either variable, when we access and modify an array element, the single underlying array is being modified. Specifically, we can modify an array referenced using one variable, and see the modification when accessing it using the other array variable. Let’s run some tests.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; String[] names = {"Athos", "Porthos", "Aramis"};
 names ==&gt; String[3] { "Athos", "Porthos", "Aramis" }
 
@@ -790,10 +751,10 @@ d'Artagnan
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-655">As we can see in the previous JShell session, we declared and initialized our <code class="code-inline tex2jax_ignore">names</code> array with three Strings. We also declared a second String array named <code class="code-inline tex2jax_ignore">musketeers</code>and assigned it to the name of the first array. At this point both array variables <code class="code-inline tex2jax_ignore">names</code> and <code class="code-inline tex2jax_ignore">musketeers</code> reference the same underlying array. We demonstrate this by by changing the content of the last item in the <code class="code-inline tex2jax_ignore">names</code> array and the print the last item in the <code class="code-inline tex2jax_ignore">mustketeers</code> array. The change made using the <code class="code-inline tex2jax_ignore">names</code> array variable is seen using the <code class="code-inline tex2jax_ignore">musketeers</code> array variable, because both reference the same underlying array.</div></section><section class="subsection" id="subsection-88"><h3 class="heading hide-type">
+<div class="para" id="p-654">As we can see in the previous JShell session, we declared and initialized our <code class="code-inline tex2jax_ignore">names</code> array with three Strings. We also declared a second String array named <code class="code-inline tex2jax_ignore">musketeers</code>and assigned it to the name of the first array. At this point both array variables <code class="code-inline tex2jax_ignore">names</code> and <code class="code-inline tex2jax_ignore">musketeers</code> reference the same underlying array. We demonstrate this by by changing the content of the last item in the <code class="code-inline tex2jax_ignore">names</code> array and the print the last item in the <code class="code-inline tex2jax_ignore">mustketeers</code> array. The change made using the <code class="code-inline tex2jax_ignore">names</code> array variable is seen using the <code class="code-inline tex2jax_ignore">musketeers</code> array variable, because both reference the same underlying array.</div></section><section class="subsection" id="subsection-88"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.3.2</span> <span class="title">Array Elements as Reference Types</span>
 </h3>
-<div class="para" id="p-656">If we declare an array of a primitive type, the elements of the array hold actual primitive values. For example, if we declare a double array, even without initializing the elements, the values held in the array element are set to the default double value of 0.0.</div>
+<div class="para" id="p-655">If we declare an array of a primitive type, the elements of the array hold actual primitive values. For example, if we declare a double array, even without initializing the elements, the values held in the array element are set to the default double value of 0.0.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; double[] data = new double[5];
 data ==&gt; double[5] { 0.0, 0.0, 0.0, 0.0, 0.0 }
 
@@ -808,15 +769,15 @@ jshell&gt; for (int i=0; i&lt;data.length; i++) {
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-657">The <code class="code-inline tex2jax_ignore">data</code> double array above holds 5 double values. But what about a String array? How many String objects exist after we declare a String array with length 3? Are there three empty String objects <code class="code-inline tex2jax_ignore">""</code>, or maybe something else? See the following JShell session.</div>
+<div class="para" id="p-656">The <code class="code-inline tex2jax_ignore">data</code> double array above holds 5 double values. But what about a String array? How many String objects exist after we declare a String array with length 3? Are there three empty String objects <code class="code-inline tex2jax_ignore">""</code>, or maybe something else? See the following JShell session.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; String[] names = new String[3];
 names ==&gt; String[3] { null, null, null }
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-658">After declaration of the String array variable and creation of the String array, JShell prints the array for us. We see that the three element of the String array are <code class="code-inline tex2jax_ignore">null, null, null</code>. Recall that the <code class="code-inline tex2jax_ignore">null</code> keywords signals the absense of an object. The <code class="code-inline tex2jax_ignore">names</code> array contains no objects, whatsoever. True, it has the space to reference three String objects should we create and assign them, but unless the array elements are initialized, we have completed only two of the three steps required for fully building out an array: the arrays is created, but its elements have not been initialized.</div>
-<div class="para" id="p-659">An array of some reference type has elements that themselves reference external objects. Array elements do not hold objects, they reference them. In this regard, the elements of the array themselves follow the reference type rules.</div>
-<div class="para" id="p-660">In the following JShell session we create an array of two StringBuilder objects named <code class="code-inline tex2jax_ignore">sbs1</code>. Then we create a second StringBuilder array named <code class="code-inline tex2jax_ignore">sbs2</code> and assign it to the first. We append Strings to both StringBuilders by accessing them using the elements of <code class="code-inline tex2jax_ignore">sbs1</code>, and then print the entire array <code class="code-inline tex2jax_ignore">sbs2</code>. We see that both StringBuilder objects as viewed through <code class="code-inline tex2jax_ignore">sbs2</code> hold the Strings appended to the StringBuilders accessed using <code class="code-inline tex2jax_ignore">sbs1</code>. The same reference variable rules apply to array elements if they too are reference types.</div>
+<div class="para" id="p-657">After declaration of the String array variable and creation of the String array, JShell prints the array for us. We see that the three element of the String array are <code class="code-inline tex2jax_ignore">null, null, null</code>. Recall that the <code class="code-inline tex2jax_ignore">null</code> keywords signals the absense of an object. The <code class="code-inline tex2jax_ignore">names</code> array contains no objects, whatsoever. True, it has the space to reference three String objects should we create and assign them, but unless the array elements are initialized, we have completed only two of the three steps required for fully building out an array: the arrays is created, but its elements have not been initialized.</div>
+<div class="para" id="p-658">An array of some reference type has elements that themselves reference external objects. Array elements do not hold objects, they reference them. In this regard, the elements of the array themselves follow the reference type rules.</div>
+<div class="para" id="p-659">In the following JShell session we create an array of two StringBuilder objects named <code class="code-inline tex2jax_ignore">sbs1</code>. Then we create a second StringBuilder array named <code class="code-inline tex2jax_ignore">sbs2</code> and assign it to the first. We append Strings to both StringBuilders by accessing them using the elements of <code class="code-inline tex2jax_ignore">sbs1</code>, and then print the entire array <code class="code-inline tex2jax_ignore">sbs2</code>. We see that both StringBuilder objects as viewed through <code class="code-inline tex2jax_ignore">sbs2</code> hold the Strings appended to the StringBuilders accessed using <code class="code-inline tex2jax_ignore">sbs1</code>. The same reference variable rules apply to array elements if they too are reference types.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; StringBuilder[] sbs1 = {new StringBuilder(), new StringBuilder()};
 sbs1 ==&gt; StringBuilder[2] { ,  }
 
@@ -836,8 +797,8 @@ jshell&gt;
 </b></pre></div></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.3.3</span> <span class="title">Arrays as Method Parameters</span>
 </h3>
-<div class="para" id="p-661">If a reference type is passed to a method as an argument, the method parameter gets a copy of the reference, not a copy of the entire object. Passing reference types to methods as arguments is equivalent to assigning the method parameters to the arguments passed. Consequently, a reference is passed to the method, not a copy of the argument. As a reference type, an array passed to a method actually passes only the array reference, not the entire array. This behavior allows us to write methods that receive and operate on arrays without the need to copy the entire array. For large arrays, this is far more efficient than copying all the array element and then possibly copying all the modified elements back to the original array.</div>
-<div class="para" id="p-662">The program in <a href="" class="xref" data-knowl="./knowl/listing-ar-arrayargs.html" title="Listing 8.3.1">Listing 8.3.1</a> defines three static methods. In addition to the <code class="code-inline tex2jax_ignore">main(…)</code> method you will find the <code class="code-inline tex2jax_ignore">printArr( double[] arr )</code> method and the <code class="code-inline tex2jax_ignore">doubleArr( double[] arr )</code>. Both methods take a double array parameter. The <code class="code-inline tex2jax_ignore">printArr(…)</code> method iterates over all elements of the array and prints each. The <code class="code-inline tex2jax_ignore">doubleArr(…)</code> method multiplies all elements by 2 and reassigns each updated value back to the array element.</div>
+<div class="para" id="p-660">If a reference type is passed to a method as an argument, the method parameter gets a copy of the reference, not a copy of the entire object. Passing reference types to methods as arguments is equivalent to assigning the method parameters to the arguments passed. Consequently, a reference is passed to the method, not a copy of the argument. As a reference type, an array passed to a method actually passes only the array reference, not the entire array. This behavior allows us to write methods that receive and operate on arrays without the need to copy the entire array. For large arrays, this is far more efficient than copying all the array element and then possibly copying all the modified elements back to the original array.</div>
+<div class="para" id="p-661">The program in <a href="" class="xref" data-knowl="./knowl/listing-ar-arrayargs.html" title="Listing 8.3.1">Listing 8.3.1</a> defines three static methods. In addition to the <code class="code-inline tex2jax_ignore">main(…)</code> method you will find the <code class="code-inline tex2jax_ignore">printArr( double[] arr )</code> method and the <code class="code-inline tex2jax_ignore">doubleArr( double[] arr )</code>. Both methods take a double array parameter. The <code class="code-inline tex2jax_ignore">printArr(…)</code> method iterates over all elements of the array and prints each. The <code class="code-inline tex2jax_ignore">doubleArr(…)</code> method multiplies all elements by 2 and reassigns each updated value back to the array element.</div>
 <figure class="listing figure-like" id="listing-ar-arrayargs"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ArrayArgs.java
 public class ArrayArgs {
   public static void main(String[] args) {
@@ -864,7 +825,7 @@ public class ArrayArgs {
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">8.3.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ArrayArgs.java</code></figcaption></figure><div class="para" id="p-663">Compiling and running the program in <a href="" class="xref" data-knowl="./knowl/listing-ar-arrayargs.html" title="Listing 8.3.1">Listing 8.3.1</a> produces the following output. Note that both methods have <code class="code-inline tex2jax_ignore">void</code> return types; nothing is returned from either method. In spite of this, the <code class="code-inline tex2jax_ignore">doubleArr(…)</code> method modifies the elements of the <em class="emphasis">original array</em>, which is demonstrated when the array is printed a second time and we see that all element values have been doubled. As we know, the reason that the original array elements are modified by <code class="code-inline tex2jax_ignore">doubleArr(…)</code> is because a reference to the orignal array is passed to the method, not a copy. Consequently, the original array elements are modified as well.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">8.3.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ArrayArgs.java</code></figcaption></figure><div class="para" id="p-662">Compiling and running the program in <a href="" class="xref" data-knowl="./knowl/listing-ar-arrayargs.html" title="Listing 8.3.1">Listing 8.3.1</a> produces the following output. Note that both methods have <code class="code-inline tex2jax_ignore">void</code> return types; nothing is returned from either method. In spite of this, the <code class="code-inline tex2jax_ignore">doubleArr(…)</code> method modifies the elements of the <em class="emphasis">original array</em>, which is demonstrated when the array is printed a second time and we see that all element values have been doubled. As we know, the reason that the original array elements are modified by <code class="code-inline tex2jax_ignore">doubleArr(…)</code> is because a reference to the orignal array is passed to the method, not a copy. Consequently, the original array elements are modified as well.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac ArrayArgs.java
 java ArrayArgs
 </b>1.2 2.3 3.4 4.5 
@@ -872,7 +833,7 @@ java ArrayArgs
 </pre></div></section><section class="subsection" id="subsection-90"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.3.4</span> <span class="title">Passing Arguments on the Command-line</span>
 </h3>
-<div class="para" id="p-664">We now know what the signature of the <code class="code-inline tex2jax_ignore">main(…)</code> method actually means. The <code class="code-inline tex2jax_ignore">String[] args</code> is an array of String objects, which is passed to the method when your program starts. Java reads all the items on the command-line that occur after the class name, and passes them to <code class="code-inline tex2jax_ignore">main(…)</code> in the <code class="code-inline tex2jax_ignore">args</code> String array. Study <a href="" class="xref" data-knowl="./knowl/listing-ar-commandline-args.html" title="Listing 8.3.2">Listing 8.3.2</a> and the console session that follows.</div>
+<div class="para" id="p-663">We now know what the signature of the <code class="code-inline tex2jax_ignore">main(…)</code> method actually means. The <code class="code-inline tex2jax_ignore">String[] args</code> is an array of String objects, which is passed to the method when your program starts. Java reads all the items on the command-line that occur after the class name, and passes them to <code class="code-inline tex2jax_ignore">main(…)</code> in the <code class="code-inline tex2jax_ignore">args</code> String array. Study <a href="" class="xref" data-knowl="./knowl/listing-ar-commandline-args.html" title="Listing 8.3.2">Listing 8.3.2</a> and the console session that follows.</div>
 <figure class="listing figure-like" id="listing-ar-commandline-args"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// CommandLine.java
 public class CommandLine {
 
@@ -893,7 +854,7 @@ java CommandLine Hello World
 Hello
 World
 </pre></div>
-<div class="para" id="p-665">Try running the <code class="code-inline tex2jax_ignore">CommandLine.java</code> program yourself with your own arguments. In addition to using the <code class="code-inline tex2jax_ignore">Scanner</code> object to prompt the user for input, passing arguments on the command-line is a way to pass data into your program on startup.</div></section></section></div>
+<div class="para" id="p-664">Try running the <code class="code-inline tex2jax_ignore">CommandLine.java</code> program yourself with your own arguments. In addition to using the <code class="code-inline tex2jax_ignore">Scanner</code> object to prompt the user for input, passing arguments on the command-line is a way to pass data into your program on startup.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-ar-iterating.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-ar-multi.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

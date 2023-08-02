@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,34 +718,25 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-if-custom"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">11.2</span> <span class="title">Custom Interfaces</span>
 </h2>
-<section class="introduction" id="introduction-58"><div class="para" id="p-863">A custom interface is defined using the <code class="code-inline tex2jax_ignore">interface</code> keyword and a list if method signatures. We saw the source code for three Java Core Library examples, the <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface in <a href="section-if-comparable.html#subsection-if-comparable" class="internal" title="Subsection 11.1.1: The Comparable&lt;T&gt; Interface">Subsection 11.1.1</a> and the <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> interfaces in <a href="section-if-comparable.html#subsection-if-iterable" class="internal" title="Subsection 11.1.2: The Iterable&lt;T&gt; and Iterator&lt;T&gt; Interfaces">Subsection 11.1.2</a>. Let’s create a custom interface and implement it along with other interfaces.</div></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-58"><div class="para" id="p-862">A custom interface is defined using the <code class="code-inline tex2jax_ignore">interface</code> keyword and a list if method signatures. We saw the source code for three Java Core Library examples, the <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface in <a href="section-if-comparable.html#subsection-if-comparable" class="internal" title="Subsection 11.1.1: The Comparable&lt;T&gt; Interface">Subsection 11.1.1</a> and the <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> interfaces in <a href="section-if-comparable.html#subsection-if-iterable" class="internal" title="Subsection 11.1.2: The Iterable&lt;T&gt; and Iterator&lt;T&gt; Interfaces">Subsection 11.1.2</a>. Let’s create a custom interface and implement it along with other interfaces.</div></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.1</span> <span class="title">Define a Custom Interface</span>
 </h3>
-<div class="para" id="p-864">In this section we want to build a graphical panel demonstration three kinds of tri-option selector widgets. The way these widgets look may be customized, but all must give the user the ability to select from the three options and provide a way to report the current option selected. To ensure that all tri-option widgets provide common capabilities, we define a TriOption interface that all selector widgets must implement. In <a href="" class="xref" data-knowl="./knowl/listing-if-trioption.html" title="Listing 11.2.1">Listing 11.2.1</a> we specify that the TriOption interface includes four signatures. This public interface must be saved to a file having the same name as the interface, and compiled with the other files in the projest, in a manner exactly analogous to any multi-file Java project.</div>
+<div class="para" id="p-863">In this section we want to build a graphical panel demonstration three kinds of tri-option selector widgets. The way these widgets look may be customized, but all must give the user the ability to select from the three options and provide a way to report the current option selected. To ensure that all tri-option widgets provide common capabilities, we define a TriOption interface that all selector widgets must implement. In <a href="" class="xref" data-knowl="./knowl/listing-if-trioption.html" title="Listing 11.2.1">Listing 11.2.1</a> we specify that the TriOption interface includes four signatures. This public interface must be saved to a file having the same name as the interface, and compiled with the other files in the projest, in a manner exactly analogous to any multi-file Java project.</div>
 <figure class="listing figure-like" id="listing-if-trioption"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// TriOption.java
 
 // Required for selector widgets with three options
@@ -786,7 +747,7 @@ public interface TriOption {
   public int  getOption();        // Get current selected option
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">TriOption.java</code></figcaption></figure><div class="para" id="p-865">To implement this interface we follow the same procedure as we did with Core Library interfaces. For example, if we were defining a class called TogglingSelector that implemented the TriOption interface, we would start the class with something like the following, and then implement in the the TogglingSelector class at least the four methods that match the four signatures in the interface.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">TriOption.java</code></figcaption></figure><div class="para" id="p-864">To implement this interface we follow the same procedure as we did with Core Library interfaces. For example, if we were defining a class called TogglingSelector that implemented the TriOption interface, we would start the class with something like the following, and then implement in the the TogglingSelector class at least the four methods that match the four signatures in the interface.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class TogglingSelector implements TriOption {
   // …
   public void setOption1() { … }
@@ -797,7 +758,7 @@ public interface TriOption {
 </code></pre></div></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.2</span> <span class="title">Implement Multiple Interfaces</span>
 </h3>
-<div class="para" id="p-866">We may implement multiple interfaces in the same class at the same time. The only requirement is that all mandated signatures from all interfaces must be implemented as concrete methods in the class. For our example, let’s say that we want to sort all selectors on a panel according to the selected option number: 1, 2 or 3. We can make use of what we get in the Java Core Library and implement the <code class="code-inline tex2jax_ignore">Comparable&lt;TriOption&gt;</code> interface and use the static sort() method built in to the provided Arrays or the Collections class. To implement multiple intrfaces, follow the <code class="code-inline tex2jax_ignore">implements</code> keyword with a comma-separated list of interfaces, as in <a href="" class="xref" data-knowl="./knowl/listing-if-multiple-interfaces.html" title="Listing 11.2.2">Listing 11.2.2</a>.</div>
+<div class="para" id="p-865">We may implement multiple interfaces in the same class at the same time. The only requirement is that all mandated signatures from all interfaces must be implemented as concrete methods in the class. For our example, let’s say that we want to sort all selectors on a panel according to the selected option number: 1, 2 or 3. We can make use of what we get in the Java Core Library and implement the <code class="code-inline tex2jax_ignore">Comparable&lt;TriOption&gt;</code> interface and use the static sort() method built in to the provided Arrays or the Collections class. To implement multiple intrfaces, follow the <code class="code-inline tex2jax_ignore">implements</code> keyword with a comma-separated list of interfaces, as in <a href="" class="xref" data-knowl="./knowl/listing-if-multiple-interfaces.html" title="Listing 11.2.2">Listing 11.2.2</a>.</div>
 <figure class="listing figure-like" id="listing-if-multiple-interfaces"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class TogglingSelector 
                       implements TriOption, Comparable&lt;TriOption&gt; {
   // …
@@ -815,8 +776,8 @@ public interface TriOption {
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.2<span class="period">.</span></span><span class="space"> </span>Implementing Multiple Interfaces</figcaption></figure></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.3</span> <span class="title">Add Inheritance</span>
 </h3>
-<div class="para" id="p-867">Selector widgets in our example will be based on DoodlePad shape classes. To get the maximum benefit we want to extend the existing shape classes so that we can inherit all behavior of the base shape class. Nothing prevents us from simultaneously extending an existing class and implementing multiple interfaces.</div>
-<div class="para" id="p-868">The TogglingSelector will be round and respond to mouse presses. Each time the mouse is pressed on a TogglingSelector object, it toggles through the three options available, and changes its color and text display to match. <a href="" class="xref" data-knowl="./knowl/listing-if-widget-outline.html" title="Listing 11.2.3">Listing 11.2.3</a> expands <a href="" class="xref" data-knowl="./knowl/listing-if-multiple-interfaces.html" title="Listing 11.2.2">Listing 11.2.2</a> further so that it also inherits the Oval class. Note how the top line of the class definition both <code class="code-inline tex2jax_ignore">extends</code> Oval and <code class="code-inline tex2jax_ignore">implements</code> TriOption and Comparable&lt;TriOption&gt;. The constructor invokes a base class constructor on its first line by invoking <code class="code-inline tex2jax_ignore">super(…)</code> and we override <code class="code-inline tex2jax_ignore">onMousePressed(…)</code> to add custom mouse-pressed behavior to the class, but invoke <code class="code-inline tex2jax_ignore">super.onMousePressed(x, y, button)</code> to ensure any default behavior is complete.</div>
+<div class="para" id="p-866">Selector widgets in our example will be based on DoodlePad shape classes. To get the maximum benefit we want to extend the existing shape classes so that we can inherit all behavior of the base shape class. Nothing prevents us from simultaneously extending an existing class and implementing multiple interfaces.</div>
+<div class="para" id="p-867">The TogglingSelector will be round and respond to mouse presses. Each time the mouse is pressed on a TogglingSelector object, it toggles through the three options available, and changes its color and text display to match. <a href="" class="xref" data-knowl="./knowl/listing-if-widget-outline.html" title="Listing 11.2.3">Listing 11.2.3</a> expands <a href="" class="xref" data-knowl="./knowl/listing-if-multiple-interfaces.html" title="Listing 11.2.2">Listing 11.2.2</a> further so that it also inherits the Oval class. Note how the top line of the class definition both <code class="code-inline tex2jax_ignore">extends</code> Oval and <code class="code-inline tex2jax_ignore">implements</code> TriOption and Comparable&lt;TriOption&gt;. The constructor invokes a base class constructor on its first line by invoking <code class="code-inline tex2jax_ignore">super(…)</code> and we override <code class="code-inline tex2jax_ignore">onMousePressed(…)</code> to add custom mouse-pressed behavior to the class, but invoke <code class="code-inline tex2jax_ignore">super.onMousePressed(x, y, button)</code> to ensure any default behavior is complete.</div>
 <figure class="listing figure-like" id="listing-if-widget-outline"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// TogglingSelector.java
 import doodlepad.*;
 
@@ -848,11 +809,11 @@ public class TogglingSelector
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">TogglingSelection.java</code> (version 1)</figcaption></figure><div class="para" id="p-869">The remaining class implementation is detail. The following three sections provide the three TriOption selector widgets that we implement for this example.</div></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">TogglingSelection.java</code> (version 1)</figcaption></figure><div class="para" id="p-868">The remaining class implementation is detail. The following three sections provide the three TriOption selector widgets that we implement for this example.</div></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.4</span> <span class="title">TogglingSelector Widget</span>
 </h3>
-<div class="para" id="p-870">The TogglingSelector starts set at option 1 and filled with red. When clicked, it advanced to option 2 and changes to a yellow fill. Then third click changes to option 3 with a green fill. Another click cycles the widget back to option 1. The option number itself is displayed in the center of the Oval.</div>
-<div class="para" id="p-871">
+<div class="para" id="p-869">The TogglingSelector starts set at option 1 and filled with red. When clicked, it advanced to option 2 and changes to a yellow fill. Then third click changes to option 3 with a green fill. Another click cycles the widget back to option 1. The option number itself is displayed in the center of the Oval.</div>
+<div class="para" id="p-870">
 <a href="" class="xref" data-knowl="./knowl/listing-if-togglingselector.html" title="Listing 11.2.4">Listing 11.2.4</a> follows the outline in <a href="" class="xref" data-knowl="./knowl/listing-if-widget-outline.html" title="Listing 11.2.3">Listing 11.2.3</a> with code added to manage the visual details. Note that we are tracking the selected option using a private <code class="code-inline tex2jax_ignore">option</code> integer. An example of the ToggleSelector widget is in the middle of <a href="" class="xref" data-knowl="./knowl/figure-if-panel-start.html" title="Figure 11.2.8">Figure 11.2.8</a>.</div>
 <figure class="listing figure-like" id="listing-if-togglingselector"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// TogglingSelector.java
 import doodlepad.*;
@@ -914,8 +875,8 @@ public class TogglingSelector
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">TogglingSelector.java</code></figcaption></figure></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.5</span> <span class="title">SlidingSelector Widget</span>
 </h3>
-<div class="para" id="p-872">The SlidingSelector widget is made up of two Rectangles and a Text object. One Rectangle is used for the outer widget body and a second is used for the sliding button, which moves up and down into one of three positions corresponding to the three options. The SlidingSelector starts at option 1 with its button at the bottom of the widget and filled with red. When the widget background is clicked, the button moves up or down, depending upon the location of the mouse click. The button fill color changes with the option selected: red, yellow, green. The option number is displayed below the widget.</div>
-<div class="para" id="p-873">
+<div class="para" id="p-871">The SlidingSelector widget is made up of two Rectangles and a Text object. One Rectangle is used for the outer widget body and a second is used for the sliding button, which moves up and down into one of three positions corresponding to the three options. The SlidingSelector starts at option 1 with its button at the bottom of the widget and filled with red. When the widget background is clicked, the button moves up or down, depending upon the location of the mouse click. The button fill color changes with the option selected: red, yellow, green. The option number is displayed below the widget.</div>
+<div class="para" id="p-872">
 <a href="" class="xref" data-knowl="./knowl/listing-if-slidingselector.html" title="Listing 11.2.5">Listing 11.2.5</a> follows the same outline in <a href="" class="xref" data-knowl="./knowl/listing-if-widget-outline.html" title="Listing 11.2.3">Listing 11.2.3</a> with code added to manage the visual details. An example of the SlidingSelector widget is on the left of <a href="" class="xref" data-knowl="./knowl/figure-if-panel-start.html" title="Figure 11.2.8">Figure 11.2.8</a>.</div>
 <figure class="listing figure-like" id="listing-if-slidingselector"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// SlidingSelector.java
 import doodlepad.*;
@@ -985,8 +946,8 @@ public class SlidingSelector
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.5<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">SlidingSelector.java</code></figcaption></figure></section><section class="subsection" id="subsection-125"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.6</span> <span class="title">RotatingSelector Widget</span>
 </h3>
-<div class="para" id="p-874">The RotatingSelector widget is made up an Oval, a thick line, and a Text object. The line is rotated left for option 1, right for option 3, and in between in a vertical position for option 2. The RotatingSelector starts at option 1 with its line rotated left. When the widget background is clicked, the line rotates left or right, depending upon the location of the mouse click. The button fill color changes with the option selected: red, yellow, green. The option number is displayed below the widget.</div>
-<div class="para" id="p-875">Once again, <a href="" class="xref" data-knowl="./knowl/listing-if-rotatingselector.html" title="Listing 11.2.6">Listing 11.2.6</a> follows the same outline in <a href="" class="xref" data-knowl="./knowl/listing-if-widget-outline.html" title="Listing 11.2.3">Listing 11.2.3</a> with code added to manage the visual details. An example of the RotatingSelector widget is on the right of <a href="" class="xref" data-knowl="./knowl/figure-if-panel-start.html" title="Figure 11.2.8">Figure 11.2.8</a>.</div>
+<div class="para" id="p-873">The RotatingSelector widget is made up an Oval, a thick line, and a Text object. The line is rotated left for option 1, right for option 3, and in between in a vertical position for option 2. The RotatingSelector starts at option 1 with its line rotated left. When the widget background is clicked, the line rotates left or right, depending upon the location of the mouse click. The button fill color changes with the option selected: red, yellow, green. The option number is displayed below the widget.</div>
+<div class="para" id="p-874">Once again, <a href="" class="xref" data-knowl="./knowl/listing-if-rotatingselector.html" title="Listing 11.2.6">Listing 11.2.6</a> follows the same outline in <a href="" class="xref" data-knowl="./knowl/listing-if-widget-outline.html" title="Listing 11.2.3">Listing 11.2.3</a> with code added to manage the visual details. An example of the RotatingSelector widget is on the right of <a href="" class="xref" data-knowl="./knowl/figure-if-panel-start.html" title="Figure 11.2.8">Figure 11.2.8</a>.</div>
 <figure class="listing figure-like" id="listing-if-rotatingselector"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RotatingSelector.java
 import doodlepad.*;
 
@@ -1055,7 +1016,7 @@ public class RotatingSelector
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.6<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RotatingSelector.java</code></figcaption></figure></section><section class="subsection" id="subsection-126"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.7</span> <span class="title">Panel Driver Class</span>
 </h3>
-<div class="para" id="p-876">To test our selector widget operation and sorting, we defined a Panel class, which is given in <a href="" class="xref" data-knowl="./knowl/listing-if-panel.html" title="Listing 11.2.7">Listing 11.2.7</a>. The Panel class derives from the Pad class, and invokes the Pad constructor from within the Panel constructor with parameters to initialize the size and window title. Panel encapsulates a TriOption array of size 3 to hold references to each kind of selector widget. The array is declared and initialized in the Panel constructor. Note that because each selector widget implements the TriOption interface, so each can be assigned to TriOption array.</div>
+<div class="para" id="p-875">To test our selector widget operation and sorting, we defined a Panel class, which is given in <a href="" class="xref" data-knowl="./knowl/listing-if-panel.html" title="Listing 11.2.7">Listing 11.2.7</a>. The Panel class derives from the Pad class, and invokes the Pad constructor from within the Panel constructor with parameters to initialize the size and window title. Panel encapsulates a TriOption array of size 3 to hold references to each kind of selector widget. The array is declared and initialized in the Panel constructor. Note that because each selector widget implements the TriOption interface, so each can be assigned to TriOption array.</div>
 <figure class="listing figure-like" id="listing-if-panel"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Panel.java
 import java.util.Arrays;
 import doodlepad.*;
@@ -1086,18 +1047,18 @@ public class Panel extends Pad {
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.7<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RotatingSelector.java</code></figcaption></figure><div class="para" id="p-877">The Panel class overrides the Pad’s <code class="code-inline tex2jax_ignore">onMousePressed(…)</code> method to handle mouse clicks on the window background. When the user clicks the Panel window, the TriOption array is sorted and the array order is printed to visualize the current order.</div>
-<div class="para" id="p-878">Our project now includes five files: TriOption.java, TogglingSelector.java, SlidingSelector.java, RotatingSelector.java, and Panel.java. To simplify the compilation command, all files are placed in a single directory with no other Java files so the wildcard character <code class="code-inline tex2jax_ignore">*</code> can be used: <code class="code-inline tex2jax_ignore">javac -cp doodlepad.jar *.java</code>. Because Panel has our <code class="code-inline tex2jax_ignore">main(…)</code> method, we start the program with that class: <code class="code-inline tex2jax_ignore">java -cp .;doodlepad.jar Panel</code>. <a href="" class="xref" data-knowl="./knowl/figure-if-panel-start.html" title="Figure 11.2.8">Figure 11.2.8</a> shows the Panel program when it first starts.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.2.7<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RotatingSelector.java</code></figcaption></figure><div class="para" id="p-876">The Panel class overrides the Pad’s <code class="code-inline tex2jax_ignore">onMousePressed(…)</code> method to handle mouse clicks on the window background. When the user clicks the Panel window, the TriOption array is sorted and the array order is printed to visualize the current order.</div>
+<div class="para" id="p-877">Our project now includes five files: TriOption.java, TogglingSelector.java, SlidingSelector.java, RotatingSelector.java, and Panel.java. To simplify the compilation command, all files are placed in a single directory with no other Java files so the wildcard character <code class="code-inline tex2jax_ignore">*</code> can be used: <code class="code-inline tex2jax_ignore">javac -cp doodlepad.jar *.java</code>. Because Panel has our <code class="code-inline tex2jax_ignore">main(…)</code> method, we start the program with that class: <code class="code-inline tex2jax_ignore">java -cp .;doodlepad.jar Panel</code>. <a href="" class="xref" data-knowl="./knowl/figure-if-panel-start.html" title="Figure 11.2.8">Figure 11.2.8</a> shows the Panel program when it first starts.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac -cp doodlepad.jar *.java
 java -cp .;doodlepad.jar Panel
 </b></pre></div>
 <figure class="figure figure-like" id="figure-if-panel-start"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/if-panel-start.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.2.8<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Panel.java</code></figcaption></figure><div class="para" id="p-879">If we click the Panel background. we see the following printed output in the shell. All selected option start at 1, so the sort operation names no changes.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.2.8<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Panel.java</code></figcaption></figure><div class="para" id="p-878">If we click the Panel background. we see the following printed output in the shell. All selected option start at 1, so the sort operation names no changes.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">SlidingSelector  (option=1)
 TogglingSelector (option=1)
 RotatingSelector (option=1)
 </pre></div>
-<div class="para" id="p-880">Next, we modify the options selected on each widget to look like <a href="" class="xref" data-knowl="./knowl/figure-if-panel-step1.html" title="Figure 11.2.9">Figure 11.2.9</a>, with option 1 selected by the RotatingSelector, option 2 by the TogglingSelector, and option 3 by the SlidingSelector. After clicking the Panel background, we see the output printed in the shell session that follows <a href="" class="xref" data-knowl="./knowl/figure-if-panel-step1.html" title="Figure 11.2.9">Figure 11.2.9</a>. Changing the optiosn again (<a href="" class="xref" data-knowl="./knowl/figure-if-panel-step2.html" title="Figure 11.2.10">Figure 11.2.10</a>) and clicking the Panel, the order changes again, matching the options selected. These examples confirm that sorting the TriOption array by the options selected reorders the items in the array by increasing option number.</div>
+<div class="para" id="p-879">Next, we modify the options selected on each widget to look like <a href="" class="xref" data-knowl="./knowl/figure-if-panel-step1.html" title="Figure 11.2.9">Figure 11.2.9</a>, with option 1 selected by the RotatingSelector, option 2 by the TogglingSelector, and option 3 by the SlidingSelector. After clicking the Panel background, we see the output printed in the shell session that follows <a href="" class="xref" data-knowl="./knowl/figure-if-panel-step1.html" title="Figure 11.2.9">Figure 11.2.9</a>. Changing the optiosn again (<a href="" class="xref" data-knowl="./knowl/figure-if-panel-step2.html" title="Figure 11.2.10">Figure 11.2.10</a>) and clicking the Panel, the order changes again, matching the options selected. These examples confirm that sorting the TriOption array by the options selected reorders the items in the array by increasing option number.</div>
 <figure class="figure figure-like" id="figure-if-panel-step1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/if-panel-step1.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.2.9<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Panel.java</code> with options selected</figcaption></figure><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">RotatingSelector (option=1)
 TogglingSelector (option=2)
@@ -1107,7 +1068,7 @@ SlidingSelector  (option=3)
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.2.10<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Panel.java</code> with options changed</figcaption></figure><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">TogglingSelector (option=1)
 SlidingSelector  (option=2)
 RotatingSelector (option=3)
-</pre></div></section><section class="conclusion" id="conclusion-3"><div class="para" id="p-881">The example presented in this section combines many different features of the Java programming language. Each of the classes defined encapsulate, initialize, and coordinate the many parts of object to produce self-managed cohesive widgets, each with a custom design and behavior. Inheritance was used to start our new classes with a large amount of baseline functionality, with only object-specific customizations added. An interface was defined and implemented as a way to require that certain methods are created in all implementing classes and to enable sorting of an array using prewritten algorithms provided by the Java Core Library. Overall, the many aspects of object oriented programming each have their distinct benefits and they fit together well to produce sophisticated results.</div></section></section></div>
+</pre></div></section><section class="conclusion" id="conclusion-3"><div class="para" id="p-880">The example presented in this section combines many different features of the Java programming language. Each of the classes defined encapsulate, initialize, and coordinate the many parts of object to produce self-managed cohesive widgets, each with a custom design and behavior. Inheritance was used to start our new classes with a large amount of baseline functionality, with only object-specific customizations added. An interface was defined and implemented as a way to require that certain methods are created in all implementing classes and to enable sorting of an array using prewritten algorithms provided by the Java Core Library. Overall, the many aspects of object oriented programming each have their distinct benefits and they fit together well to produce sophisticated results.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-if-comparable.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-if-polymorph.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

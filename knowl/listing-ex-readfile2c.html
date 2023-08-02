@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ReadFile2C.java
+import java.io.*;                         // Required imports
+
+public class ReadFile2C {
+  public static void main(String[] args) {
+    printFile("data.txt");                // Print file given path
+  }
+
+  // Utility to print a file's contents
+  public static void printFile(String fileName) {
+    String line;                          // Helper variables
+    
+    // Open a file using try-with-resources notation
+    try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+                                          // Read and assign line until null
+      while ( (line = br.readLine()) != null ) {
+        System.out.println(line);         // Print line
+      }
+    } 
+    catch (FileNotFoundException ex) {    // Thrown by FileReader
+      System.out.println( "File was not found: " + fileName );
+    } 
+    catch (IOException ex){               // Thrown by BufferedReader
+      System.out.println(ex);
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">12.5.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ReadFile2C.java</code></figcaption></figure><span class="incontext"><a href="section-try-with-resources.html#listing-ex-readfile2c" class="internal">in-context</a></span>
+</body>
+</html>

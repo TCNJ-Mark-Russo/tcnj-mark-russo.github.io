@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Also note that the <code class="code-inline tex2jax_ignore">break</code> and <code class="code-inline tex2jax_ignore">continue</code> statements work as expected in a for-each. If a <code class="code-inline tex2jax_ignore">break</code> is encountered, the iteration terminates and execution picks up immediately after the for-each bock. If a <code class="code-inline tex2jax_ignore">continue</code> is encountered the code block execution terminates and control is returned to the for-each to see if there is another element in the Collection to be processed.</div>
+<div class="para">The for-each does have a few limitations to be aware of. The temporary variable assigned to Collection elements must be declared within the scope of the for-each. In other words, it must have block scope. Unlike the other iteration statements, you cannot declare the variable assigned to Collection elements up front and then use it in the for-each statement.</div>
 <span class="incontext"><a href="section-c2-enhanced-for-statements.html#p-581" class="internal">in-context</a></span>
 </body>
 </html>

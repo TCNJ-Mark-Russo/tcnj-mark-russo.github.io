@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The <code class="code-inline tex2jax_ignore">data</code> double array above holds 5 double values. But what about a String array? How many String objects exist after we declare a String array with length 3? Are there three empty String objects <code class="code-inline tex2jax_ignore">""</code>, or maybe something else? See the following JShell session.</div>
+<div class="para">After declaration of the String array variable and creation of the String array, JShell prints the array for us. We see that the three element of the String array are <code class="code-inline tex2jax_ignore">null, null, null</code>. Recall that the <code class="code-inline tex2jax_ignore">null</code> keywords signals the absense of an object. The <code class="code-inline tex2jax_ignore">names</code> array contains no objects, whatsoever. True, it has the space to reference three String objects should we create and assign them, but unless the array elements are initialized, we have completed only two of the three steps required for fully building out an array: the arrays is created, but its elements have not been initialized.</div>
 <span class="incontext"><a href="section-ar-reftypes.html#p-657" class="internal">in-context</a></span>
 </body>
 </html>

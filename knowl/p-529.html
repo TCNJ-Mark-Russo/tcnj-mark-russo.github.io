@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Fortnately, there is a solution to this problem as well, called <dfn class="terminology">autoboxing</dfn> and <dfn class="terminology">unboxing</dfn>. Java <em class="emphasis">automatically</em> wraps, or "boxes" primitive types whenever necessary to place them in a collection like an ArrayList. It also automatically unboxes primitve types when removing from an ArrayList. We only need to remember the wrapper class name when naming the class type to be held by an ArrayList, and Java handles the rest.</div>
+<div class="para">In the following code snippet, we declare and fill and ArrayList&lt;Integer&gt; with 100 randomly generated integers. Once filled, we loop over the ArrayList&lt;Integer&gt; again, get each <code class="code-inline tex2jax_ignore">int</code> at each successive index and print it. In both cases (adding and getting) we do not box or unbox the primitive type <code class="code-inline tex2jax_ignore">int</code>. Java automatically boxes each <code class="code-inline tex2jax_ignore">int</code> in an <code class="code-inline tex2jax_ignore">Integer</code> before adding to the ArrayList, and unboxes the <code class="code-inline tex2jax_ignore">Integer</code> to an <code class="code-inline tex2jax_ignore">int</code> when getting and assigning to the primtiive variable.</div>
 <span class="incontext"><a href="section-c1-collection-classes.html#p-529" class="internal">in-context</a></span>
 </body>
 </html>

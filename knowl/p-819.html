@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The signature of methods capable of handling events is required to be (Shape, double, double, int). We can now explain why that first parameter can be of type Shape and is not required to be of type ToggleButton, even though we know that a reference to the pressed ToggleButton is passed to this method. The short answer is, once again, <em class="emphasis">subtype polymorphism</em>. Because ToggleButton extends RoundRect which extends Shape, we can receive the ToggleButton object reference as a Shape variable. If we really needed it to be of type ToggleButton in order to invoke one of its custom methods, we could simply cast it to a ToggleButton first. Without the flexibility that we get from subtype polymorphism, this type of event handling would be more difficult to implement.</div>
+<div class="para">When a derived class overrides a base class method signature, and an instance of the derived class is assigned to a base class typed variable, there is no reason to cast the base class variable to the derived class type before invoking the method. The method signature is implemented in the base class and so the compiler finds it and compiles without error. But this begs the question, which method implementation is invoked? Is it the base class method implementation because the variable has type base class, or is it the derived class implementation because the variable references a derived class object? Let’s create a small test program and find out.</div>
 <span class="incontext"><a href="section-in-polymorph.html#p-819" class="internal">in-context</a></span>
 </body>
 </html>

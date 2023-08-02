@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">With a for-statement, not only are declarations within the curly braces considered to exist within the scope of the code block, but any declarations within the parentheses also are considered to exist within the scope of the code block. To demonstrate, let’s revisit <a href="" class="xref" data-knowl="./knowl/listing-c1-block-scope.html" title="Listing 6.7.1">Listing 6.7.1</a> and update it with a for-statement having a loop counter <code class="code-inline tex2jax_ignore">i</code> that is declared when initialized.</div>
+<div class="para">When we attempt to compile this program, the compiler is unable to find the our loop counter variable <code class="code-inline tex2jax_ignore">i</code> because it is declared within the parentheses of the for-statement, and therefore is considered to exist in that statement’s block scope. If you do have a need to access <code class="code-inline tex2jax_ignore">i</code> after the for-statement, you can circumvent this problem by declaring <code class="code-inline tex2jax_ignore">i</code> before the for-statement, and use the first expression in the parentheses for initializing <code class="code-inline tex2jax_ignore">i</code> only, without the declaration.</div>
 <span class="incontext"><a href="section-c2-for-statements.html#p-567" class="internal">in-context</a></span>
 </body>
 </html>

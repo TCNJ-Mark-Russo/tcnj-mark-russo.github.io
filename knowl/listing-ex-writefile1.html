@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// WriteFile1.java
+import java.io.FileWriter;                                  // Import classes
+import java.io.IOException;
+
+public class WriteFile1 {
+  public static void main(String[] args) {
+    log("First message");                                   // Log a message
+    log("Second message");                                  // Log another message
+    log("Third message");                                   // And another message
+  }
+
+  // Utility method to log messages to a file
+  public static void log(String msg) {
+    try (FileWriter fw = new FileWriter("log.txt", true)) { // Opens a file for appending
+      fw.write(msg + "\n");                                 // Write added to end of file
+    }
+    catch (IOException e) { // Log                          // Handle exceptions
+      System.out.println(e);
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">12.6.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">WriteFile1.java</code></figcaption></figure><span class="incontext"><a href="section-ex-writing-files.html#listing-ex-writefile1" class="internal">in-context</a></span>
+</body>
+</html>

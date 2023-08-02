@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,24 +718,15 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -773,9 +734,9 @@ eBookConfig.enable_chatcodes =  false;
 <section class="section" id="section-in-abstract-class"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.6</span> <span class="title">Abstract Classes and Methods</span>
 </h2>
-<div class="para" id="p-838">The <a href="section-in-dp-design.html" class="internal" title="Section 10.1: DoodlePad Design">DoodlePad Shape base class</a> shares quite a bit of functionality with all its derived classes, including <a href="appendix-shape-events.html" class="internal" title="Appendix C: DoodlePad Shape Events">a wide array of pixel-perfect mouse events</a> that each shape object may individually. But, what about the Shape class itself. What would happen if we attempted to instantiate Shape directly? How would it look?</div>
-<div class="para" id="p-839">An attempt to instantiate Shape will end with a compiler error, and that’s a good thing. After all, Shape is an <em class="emphasis">abstract</em> concept, not an actual graphic. It has no visual representation. The Shape class exists primarily as as way to generalize the concept of a shape and to encapsulate the shared functionality of all concrete shape derived classes in one place, to avoid the problems assocaited with code duplication. In fact, the Shape class was designed to be abstract. Never was there an intention that concrete Shape objects would be instantiated. This was part of the original design, and we’d like Java to help us enforce that restriction.</div>
-<div class="para" id="p-840">Fortunately, Java does give us the ability to prevent classes from being instantiated directly. This is accomplished by adding the appropriately-named <dfn class="terminology">abstract</dfn> modifier to a class declaration. Refering to the <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">Shape class source code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-124" id="fn-124"><sup> 1 </sup></a> and you will see that Shape is declared with the <em class="emphasis">abstract</em> modifier.</div>
+<div class="para" id="p-837">The <a href="section-in-dp-design.html" class="internal" title="Section 10.1: DoodlePad Design">DoodlePad Shape base class</a> shares quite a bit of functionality with all its derived classes, including <a href="appendix-shape-events.html" class="internal" title="Appendix D: DoodlePad Shape Events">a wide array of pixel-perfect mouse events</a> that each shape object may individually. But, what about the Shape class itself. What would happen if we attempted to instantiate Shape directly? How would it look?</div>
+<div class="para" id="p-838">An attempt to instantiate Shape will end with a compiler error, and that’s a good thing. After all, Shape is an <em class="emphasis">abstract</em> concept, not an actual graphic. It has no visual representation. The Shape class exists primarily as as way to generalize the concept of a shape and to encapsulate the shared functionality of all concrete shape derived classes in one place, to avoid the problems assocaited with code duplication. In fact, the Shape class was designed to be abstract. Never was there an intention that concrete Shape objects would be instantiated. This was part of the original design, and we’d like Java to help us enforce that restriction.</div>
+<div class="para" id="p-839">Fortunately, Java does give us the ability to prevent classes from being instantiated directly. This is accomplished by adding the appropriately-named <dfn class="terminology">abstract</dfn> modifier to a class declaration. Refering to the <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">Shape class source code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-124" id="fn-124"><sup> 1 </sup></a> and you will see that Shape is declared with the <em class="emphasis">abstract</em> modifier.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">/**
 * Abstract base class for all graphical shape objects
 * 
@@ -784,16 +745,16 @@ eBookConfig.enable_chatcodes =  false;
 */
 public abstract class Shape { ...
 </code></pre></div>
-<div class="para" id="p-841">But modifying a class with <dfn class="terminology">abstract</dfn> is not enough. If a class is <em class="emphasis">abstract</em> then it must also contain at least one method that is modified with <em class="emphasis">abstract</em> as well. A method with the additional <em class="emphasis">abstract</em> modifier is required to have no implementation. Instead, an abstract method is composed of a method signature only, and this signals that all derived classes must provide a concrete implementation of the method. Once again, the Java compiler enforces this design constraint. Classes that extend an abstract base class must (eventually) provide a concrete implementation of all abstract methods.</div>
-<div class="para" id="p-842">If Shape is abstract, then it must have at least one abstract method declared. Of course it does. The one abstract method of Shape is <code class="code-inline tex2jax_ignore">draw(…)</code>, which should make some sense. The one unique feature of all Shape’s derived classes it their graphical representation. The <code class="code-inline tex2jax_ignore">draw(…)</code> method is different for each derived class of Shape, and must be implemented. Modifying <code class="code-inline tex2jax_ignore">draw(…)</code> with <code class="code-inline tex2jax_ignore">abstract</code> enlists the compile to enforce the requirement that all derived classes must implement <code class="code-inline tex2jax_ignore">draw(…)</code>.</div>
-<div class="para" id="p-843">The complete definition of <code class="code-inline tex2jax_ignore">draw(…)</code> is given in <a href="" class="xref" data-knowl="./knowl/listing-in-shape-draw.html" title="Listing 10.6.1">Listing 10.6.1</a>. There is no method body! The definitin is a signature only, no curly braces, just a semicolon (<code class="code-inline tex2jax_ignore">;</code>). Shape can provide no implementation. But Shape methods depend upon there being a concrete implementation. This is guaranteed by the compiler by the addition of the <em class="emphasis">abstract</em> modifier.</div>
+<div class="para" id="p-840">But modifying a class with <dfn class="terminology">abstract</dfn> is not enough. If a class is <em class="emphasis">abstract</em> then it must also contain at least one method that is modified with <em class="emphasis">abstract</em> as well. A method with the additional <em class="emphasis">abstract</em> modifier is required to have no implementation. Instead, an abstract method is composed of a method signature only, and this signals that all derived classes must provide a concrete implementation of the method. Once again, the Java compiler enforces this design constraint. Classes that extend an abstract base class must (eventually) provide a concrete implementation of all abstract methods.</div>
+<div class="para" id="p-841">If Shape is abstract, then it must have at least one abstract method declared. Of course it does. The one abstract method of Shape is <code class="code-inline tex2jax_ignore">draw(…)</code>, which should make some sense. The one unique feature of all Shape’s derived classes it their graphical representation. The <code class="code-inline tex2jax_ignore">draw(…)</code> method is different for each derived class of Shape, and must be implemented. Modifying <code class="code-inline tex2jax_ignore">draw(…)</code> with <code class="code-inline tex2jax_ignore">abstract</code> enlists the compile to enforce the requirement that all derived classes must implement <code class="code-inline tex2jax_ignore">draw(…)</code>.</div>
+<div class="para" id="p-842">The complete definition of <code class="code-inline tex2jax_ignore">draw(…)</code> is given in <a href="" class="xref" data-knowl="./knowl/listing-in-shape-draw.html" title="Listing 10.6.1">Listing 10.6.1</a>. There is no method body! The definitin is a signature only, no curly braces, just a semicolon (<code class="code-inline tex2jax_ignore">;</code>). Shape can provide no implementation. But Shape methods depend upon there being a concrete implementation. This is guaranteed by the compiler by the addition of the <em class="emphasis">abstract</em> modifier.</div>
 <figure class="listing figure-like" id="listing-in-shape-draw"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">/**
 * Draw the shape. Abstract method to be overridden in derived classes.
 * @param g The Graphics2D object on which to draw.
 */
 public abstract void draw(Graphics2D g);    // Override in derived class
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">10.6.1<span class="period">.</span></span><span class="space"> </span>Shape’s abstract <code class="code-inline tex2jax_ignore">draw(…)</code> method</figcaption></figure><div class="para" id="p-844">Abstract classes and abstrat methods give us a way to express intended design constraints into our class definitions, which are checked by the compiler. If a base class depends on its subclasses implementing certain methods that have no reasonable default implementation, then the base class is abstract. Modify the base class with <code class="code-inline tex2jax_ignore">abstract</code> and include the abstract method signatures that are required in the base class. The Java comiler will ensure these abstract methods will be implemented in a derived class so that all base class behavior functions properly.</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-124"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java</code></div></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">10.6.1<span class="period">.</span></span><span class="space"> </span>Shape’s abstract <code class="code-inline tex2jax_ignore">draw(…)</code> method</figcaption></figure><div class="para" id="p-843">Abstract classes and abstrat methods give us a way to express intended design constraints into our class definitions, which are checked by the compiler. If a base class depends on its subclasses implementing certain methods that have no reasonable default implementation, then the base class is abstract. Modify the base class with <code class="code-inline tex2jax_ignore">abstract</code> and include the abstract method signatures that are required in the base class. The Java comiler will ensure these abstract methods will be implemented in a derived class so that all base class behavior functions properly.</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-124"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-in-object-class.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-in-concepts.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

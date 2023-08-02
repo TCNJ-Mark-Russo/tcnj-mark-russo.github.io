@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,24 +718,15 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -777,13 +738,12 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="p-38">Imagine that you have been called upon to write a program that manages the items in a brick-and-mortar library. Among other things, the job of a library is to maintain, track, and lend items from its collection, including books, reference materials, digital recordings, and more. It must also track who has permission to borrow items from the library. What then might be the objects associated with a library management system? There are several material items that we can identify right away. For example, a Book, a DVD, a Borrower, or even a Bookshelf, might be items that your library management software system might need to model and manage. A Book object may be described by several data items, including a title, authors, publication date, a Dewey Decimal identifier, library storage location, and whether or not it is currently checked out or available for circulation. Each of these data items are properties of a Book object and, in accordinate with the the principles of object oriented programming, should be encapsulated within the Book software object. The same arguments may be made for other library system objects, such as DVD, Borrower, and Bookshelf.</div>
 <div class="para" id="p-39">It is not necessary for objects to be physical. For example, a book Collection might itself be an object. A book Collection might have encapsulated properties such as the number of Book objects it contains, the name of the building to which the Collection belongs, who is responsible for the collection, and of course the Book objects themselves. A book Collection object may be able to do things, such as add a Book object to or remove a Book object from its collection and iterate over the collection, returning one Book object at a time.</div>
 <figure class="figure figure-like" id="figure-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span>Objects in a Library Management System</figcaption></figure><div class="para" id="p-40">Another example of an object might be the relationship between a Book object and a Borrower object. A Book may have had many Borrowers and a Borrower may be borrowing many Books. Rather than choose to encapsulate a list of Books in a Borrower or a list of Borrows in a Book, you might want an object that models that relationship between a book and a borrower. We might encapsualte the properties of this relationship a Circulate object. A Circulate object might have one reference to a Book, one to a Borrower, a date that the Book was lent, a date that the Book is due to be returned to the Library, and whether or not it is overdue.</div>
-<div class="para" id="p-41">The process of mapping a problem on to models of objects is called <em class="emphasis">software design</em>. We will consider some of the basic principles of design and object modeling in the chapter <a href="chapter-design.html" class="internal" title="Chapter 15: Program and Class Design">Program and Class Design</a>.</div>
-<div class="para" id="p-42">Because we may have many kinds of objects (e.g. Book vs. Borrower), and there may be many instances of each kind, we must have a unique template for creating each kind. In object oriented programming this template is called a <em class="emphasis">class</em>. Classes serve as blueprints for creating new objects. They define the data that each object instance can hold (e.g. title and author) as well as what it can do (e.g. add or remove a Book). We will learn how to do this in the chapter <a href="chapter-classes.html" class="internal" title="Chapter 9: Custom Classes">Custom Classes</a>.</div>
-<div class="para" id="p-43">One of the real benefits of object oriented programming is <em class="emphasis">abstraction</em>. When I drive a car, I don’t need to know all the underlying details. I know that if I press the button in my electric car, then engine comes on. I know if I put the car in gear and press the accelerator, the car moves. There is quite a lot of engineering that makes this possible, but I don’t need to know all the details. From my perspective as a driver, I need only understand how to make the car move, turn, and stop. The details of how the car works have been abstracted away, making it possible for me to operate a car with minimal knowledge. This is power of abstraction.</div>
-<div class="para" id="p-44">Let’s think about our library Collection object. A Collection knows how to add a reference to a Book object so the Book is considered to be in the Collection. How does this work? What is involved with actually putting a Book object in a Collection object? If you are creating this behavior in the Collection class, then you’ll need to know the details. But if you are only using the behavior, then you can ignore the details and just invoke the behavior when you need it, very similar to driving a car. You can just ask your Collection object to add a Book object to itself. The details don’t matter (assuming you trust the author). They have been abstracted away. As we’ll learn, most modern programming languages come with prewritten and tested software libraries that we can use to write our programs. It is not necessary for us to learn how each works. That detail has been abstracted away and encapsulated in libraries of classes that we can use. Nice.</div>
-<div class="para" id="p-45">One more benefit of object oriented programning is <em class="emphasis">inheritance</em>. In most object oriented programming languages it is possible to relate classes to one another in a hierarchical fashion. For example, a Book class and a DVD class might both be related to a more general class called CirculationItem, which encapsualtes all the common properties and behavior shared by all items in a library that circulate. A Book object has its unique properties, like number of pages, and a DVD object has its unique properties, such as run duration, but both have properties like Decimal Dewey number or storage location. Rather than duplicate these common properties in each class, we can add them to the more general CirculationItem class, and then relate both Book and DVD to CirculationItem through <em class="emphasis">inheritance</em>. The inheritance relationship allows both Book and DVD access to the properties and behaviors in the more general CirculationItem class. As programmers, this allows us to author common properties and behaviors once, in CirculationItem, but give all inheriting classes access to the same properties and behaviors. Updating the behaviors in CirculationItem automatically updates the behavior of both Book and DVD. When used correctly, inheritance can be very powerful.</div>
-<div class="para" id="p-46">From an object oriented programming standpoint, both Book and DVD are two <em class="emphasis">kinds</em> of CirculationItem. In that sense, Book and DVD are different <em class="emphasis">forms</em> of CirculationItem, and so it is possible to treat both as if they were CirculationItem classes. This is one way that object oriented programming supports another concept called <em class="emphasis">polymorphism</em> (many forms). We’ll learn more about <em class="emphasis">inheritance</em> in the chapter <a href="chapter-inheritance.html" class="internal" title="Chapter 10: Inheritance">Chapter 10</a> and the many forms of <em class="emphasis">polymorphism</em> in object oriented programming throughout the remainder of this book.</div>
-<figure class="figure figure-like" id="figure-3"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.2<span class="period">.</span></span><span class="space"> </span>The CirculationItem inheritance hierarchy</figcaption></figure><div class="para logical" id="p-47">
+<div class="para" id="p-41">Because we may have many kinds of objects (e.g. Book vs. Borrower), and there may be many instances of each kind, we must have a unique template for creating each kind. In object oriented programming this template is called a <em class="emphasis">class</em>. Classes serve as blueprints for creating new objects. They define the data that each object instance can hold (e.g. title and author) as well as what it can do (e.g. add or remove a Book). We will learn how to do this in the chapter <a href="chapter-classes.html" class="internal" title="Chapter 9: Custom Classes">Custom Classes</a>.</div>
+<div class="para" id="p-42">One of the real benefits of object oriented programming is <em class="emphasis">abstraction</em>. When I drive a car, I don’t need to know all the underlying details. I know that if I press the button in my electric car, then engine comes on. I know if I put the car in gear and press the accelerator, the car moves. There is quite a lot of engineering that makes this possible, but I don’t need to know all the details. From my perspective as a driver, I need only understand how to make the car move, turn, and stop. The details of how the car works have been abstracted away, making it possible for me to operate a car with minimal knowledge. This is power of abstraction.</div>
+<div class="para" id="p-43">Let’s think about our library Collection object. A Collection knows how to add a reference to a Book object so the Book is considered to be in the Collection. How does this work? What is involved with actually putting a Book object in a Collection object? If you are creating this behavior in the Collection class, then you’ll need to know the details. But if you are only using the behavior, then you can ignore the details and just invoke the behavior when you need it, very similar to driving a car. You can just ask your Collection object to add a Book object to itself. The details don’t matter (assuming you trust the author). They have been abstracted away. As we’ll learn, most modern programming languages come with prewritten and tested software libraries that we can use to write our programs. It is not necessary for us to learn how each works. That detail has been abstracted away and encapsulated in libraries of classes that we can use. Nice.</div>
+<div class="para" id="p-44">One more benefit of object oriented programning is <em class="emphasis">inheritance</em>. In most object oriented programming languages it is possible to relate classes to one another in a hierarchical fashion. For example, a Book class and a DVD class might both be related to a more general class called CirculationItem, which encapsualtes all the common properties and behavior shared by all items in a library that circulate. A Book object has its unique properties, like number of pages, and a DVD object has its unique properties, such as run duration, but both have properties like Decimal Dewey number or storage location. Rather than duplicate these common properties in each class, we can add them to the more general CirculationItem class, and then relate both Book and DVD to CirculationItem through <em class="emphasis">inheritance</em>. The inheritance relationship allows both Book and DVD access to the properties and behaviors in the more general CirculationItem class. As programmers, this allows us to author common properties and behaviors once, in CirculationItem, but give all inheriting classes access to the same properties and behaviors. Updating the behaviors in CirculationItem automatically updates the behavior of both Book and DVD. When used correctly, inheritance can be very powerful.</div>
+<div class="para" id="p-45">From an object oriented programming standpoint, both Book and DVD are two <em class="emphasis">kinds</em> of CirculationItem. In that sense, Book and DVD are different <em class="emphasis">forms</em> of CirculationItem, and so it is possible to treat both as if they were CirculationItem classes. This is one way that object oriented programming supports another concept called <em class="emphasis">polymorphism</em> (many forms). We’ll learn more about <em class="emphasis">inheritance</em> in the chapter <a href="chapter-inheritance.html" class="internal" title="Chapter 10: Inheritance">Chapter 10</a> and the many forms of <em class="emphasis">polymorphism</em> in object oriented programming throughout the remainder of this book.</div>
+<figure class="figure figure-like" id="figure-3"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.2<span class="period">.</span></span><span class="space"> </span>The CirculationItem inheritance hierarchy</figcaption></figure><div class="para logical" id="p-46">
 <div class="para">Taken together, the key principles of object-oriented programming are:</div>
 <ol class="decimal">
 <li id="li-15"><div class="para" id="p-derived-li-15">
@@ -796,8 +756,8 @@ eBookConfig.enable_chatcodes =  false;
 <dfn class="terminology">Abstraction</dfn>: Abstraction focuses on capturing the essential features and behaviors of an object while hiding unnecessary details. It allows you to create abstract classes or interfaces that define a set of methods without specifying their implementation. Concrete classes that inherit from abstract classes or implement interfaces provide the implementation details. Abstraction helps in designing complex systems by breaking them down into manageable and modular components.</div></li>
 </ol>
 </div>
-<div class="para" id="p-48">By applying these principles, object oriented programming promotes modular, reusable, and maintainable code. It allows you to model real-world entities or concepts as objects, which interact with each other to solve problems or simulate systems. OOP languages, such as Java, C++, and Python, provide constructs to support these principles and enable the creation of object oriented systems.</div>
-<div class="para" id="p-49">Don’t worry if these concept seem vague or confusing. They will become more clear as we explore examples of how each is implemented in Java and explain their benefits.</div></section></div>
+<div class="para" id="p-47">By applying these principles, object oriented programming promotes modular, reusable, and maintainable code. It allows you to model real-world entities or concepts as objects, which interact with each other to solve problems or simulate systems. OOP languages, such as Java, C++, and Python, provide constructs to support these principles and enable the creation of object oriented systems.</div>
+<div class="para" id="p-48">Don’t worry if these concept seem vague or confusing. They will become more clear as we explore examples of how each is implemented in Java and explain their benefits.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-gs-languages.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-gs-java.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

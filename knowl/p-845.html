@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">Abstract classes and methods are very useful. Centralizing shared behavior and requiring derived classes to implement dependent custom behavior enforces design constraints and ensures compatibility. What if we take this idea to an extreme and mark all methodsas  abstract? We would be left with an abstract base class having only abstract method signatures, no implementations, all of which must be implemented by derived classes. This idea turns out to be a very useful concept on its own, called an <dfn class="terminology">interface</dfn>.</div>
+<div class="para">Unlike base classes which are <em class="emphasis">extended</em> by another class, interfaces are <dfn class="terminology">implemented</dfn> by a class. Otherwise, an interface can be thought of an abstract base class with nothing but abstract method signatures. <em class="emphasis">Implementing</em> a interface is a kind of <em class="emphasis">contract</em> that must be fulfilled by the implementing derived class. To fulfill the contract, a class that implements an interface must provide concrete method implementations with signatures that match all those found in the interface. As with abstract methods, the Java compiler enforces the contract, raising compile-time errors if an interface’s signature is not implemented.</div>
 <span class="incontext"><a href="chapter-interfaces.html#p-845" class="internal">in-context</a></span>
 </body>
 </html>

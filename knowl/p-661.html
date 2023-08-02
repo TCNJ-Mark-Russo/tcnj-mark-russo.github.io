@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If a reference type is passed to a method as an argument, the method parameter gets a copy of the reference, not a copy of the entire object. Passing reference types to methods as arguments is equivalent to assigning the method parameters to the arguments passed. Consequently, a reference is passed to the method, not a copy of the argument. As a reference type, an array passed to a method actually passes only the array reference, not the entire array. This behavior allows us to write methods that receive and operate on arrays without the need to copy the entire array. For large arrays, this is far more efficient than copying all the array element and then possibly copying all the modified elements back to the original array.</div>
+<div class="para">The program in <a href="" class="xref" data-knowl="./knowl/listing-ar-arrayargs.html" title="Listing 8.3.1">Listing 8.3.1</a> defines three static methods. In addition to the <code class="code-inline tex2jax_ignore">main(…)</code> method you will find the <code class="code-inline tex2jax_ignore">printArr( double[] arr )</code> method and the <code class="code-inline tex2jax_ignore">doubleArr( double[] arr )</code>. Both methods take a double array parameter. The <code class="code-inline tex2jax_ignore">printArr(…)</code> method iterates over all elements of the array and prints each. The <code class="code-inline tex2jax_ignore">doubleArr(…)</code> method multiplies all elements by 2 and reassigns each updated value back to the array element.</div>
 <span class="incontext"><a href="section-ar-reftypes.html#p-661" class="internal">in-context</a></span>
 </body>
 </html>

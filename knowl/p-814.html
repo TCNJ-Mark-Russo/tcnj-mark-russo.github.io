@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Imagine having a large set of Shape objects of various types. Let’s say we have a program that uses Rectangles, Ovals, RoundRects, Polygons, Texts, etc. We need to track and manage all of these Shapes. It would be terribly inconvenient to be forced to declare an ArrayList or other Collection for each type of Shape. Fortunately, this is not necessary. Because every one of these classes extends the Shape base class, we can store all objects in an ArrayList&lt;Shape&gt;. Our ability to do this is a direct result of polymorhism, which simplifies our job significantly.</div>
+<div class="para">One of the limitiations to note is that the Java compiler checks that every method invocation on a class is implemented by the <em class="emphasis">declared</em> class type. This means that while we can assign a ToggleButton to a Shape variable, we cannot invoke its <code class="code-inline tex2jax_ignore">toggle()</code> method. The compiler will stop with an error telling us that the Shape does not implement <code class="code-inline tex2jax_ignore">toggle()</code>. The compiler does run a program and so it cannot know that our <code class="code-inline tex2jax_ignore">shp</code> variable actually references a ToggleButton object, so the program will run without an error. See the test program in <a href="" class="xref" data-knowl="./knowl/listing-in-test-togglebutton1.html" title="Listing 10.4.1">Listing 10.4.1</a> and the attempt to compile it that follows.</div>
 <span class="incontext"><a href="section-in-polymorph.html#p-814" class="internal">in-context</a></span>
 </body>
 </html>

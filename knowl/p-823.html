@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">It is not the variable type that determines the method invoked; it is the type of the referenced object. The method to invoke is selected <em class="emphasis">dynamically</em> as the program runs. It is not selected by the compiler.</div>
+<div class="para">Does this present a problem for us? If we have a variable of type Base, but it actually references an object of type Derived, how can we know this? In one sense, we shouldn’t need this information. The beauty of subtype polymorphism is that it doesn’t matter. From the perspective of code with a Base-typed variable, the object is a Base class and should be treated as such. Nevertheless, if we really need to know, Java gives us <em class="emphasis">instanceof</em>.</div>
 <span class="incontext"><a href="section-in-polymorph.html#p-823" class="internal">in-context</a></span>
 </body>
 </html>

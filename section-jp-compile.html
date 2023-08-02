@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,34 +718,25 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-jp-compile"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Your First Java Program</span>
 </h2>
-<section class="introduction" id="introduction-10"><div class="para" id="p-247">In <a href="section-gs-install.html#subsection-gs-install-jdk" class="internal" title="Subsection 1.7.1: Install the Java Development Kit (JDK)">Subsection 1.7.1</a> <a href="section-gs-install.html#subsection-gs-install-jdk" class="internal" title="Subsection 1.7.1: Install the Java Development Kit (JDK)">Install the Java Development Kit (JDK)</a> we installed the entire JDK, which includes not only JShell, but several other tools including the Java compiler program (<code class="code-inline tex2jax_ignore">javac</code>) and the program that runs compiled Java programs (<code class="code-inline tex2jax_ignore">java</code>). Beginning in this section we will start using these tools to compile and run our Java programs. JShell remains an incredibly useful tool for testing Java expressions and small code snippets. Keep it close.</div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-10"><div class="para" id="p-246">In <a href="section-gs-install.html#subsection-gs-install-jdk" class="internal" title="Subsection 1.7.1: Install the Java Development Kit (JDK)">Subsection 1.7.1</a> <a href="section-gs-install.html#subsection-gs-install-jdk" class="internal" title="Subsection 1.7.1: Install the Java Development Kit (JDK)">Install the Java Development Kit (JDK)</a> we installed the entire JDK, which includes not only JShell, but several other tools including the Java compiler program (<code class="code-inline tex2jax_ignore">javac</code>) and the program that runs compiled Java programs (<code class="code-inline tex2jax_ignore">java</code>). Beginning in this section we will start using these tools to compile and run our Java programs. JShell remains an incredibly useful tool for testing Java expressions and small code snippets. Keep it close.</div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">A Java Program File</span>
 </h3>
-<div class="para logical" id="p-248">
+<div class="para logical" id="p-247">
 <div class="para">Java programs can be composed of a sequence of the declarations, initializations, and expressions that we have studied thus far. There are several additional requirements that must be satisfied before your program will compile.</div>
 <ol class="decimal">
 <li id="li-101"><div class="para" id="p-derived-li-101">Your statements must be written to a file with the proper name and the ".java" extension.</div></li>
@@ -784,7 +745,7 @@ eBookConfig.enable_chatcodes =  false;
 <li id="li-104"><div class="para" id="p-derived-li-104">Unlike JShell, a Java program does not print results to the terminal automatially. Results must be printed explicitly. In Java, the command <code class="code-inline tex2jax_ignore">System.out.println(...)</code> may be used to print the results of an expression to the terminal. We’ll need a print statement in order to see the computed result.</div></li>
 </ol>
 </div>
-<div class="para" id="p-249">Let’s say we want to calculate the distance between two points. One point is at the coordinates <span class="process-math">\((x_1,\ y_1)\)</span> and the other is at <span class="process-math">\((x_2,\ y_2)\text{.}\)</span> Once computed we want to print the result to the terminal. In order to write a complete Java program that will compile and run, we need to fulfill all the above requirements. The following program satisfies these requirements. Using your programmer’s editor, create a new file at a known location and enter the text of the following program into that file. Save the program to a file with name <code class="code-inline tex2jax_ignore">ComputeDistance.java</code> (satisfying the first requirement). Don’t forget the curly braces (<code class="code-inline tex2jax_ignore">{}</code>) that enclose the body of the entire class and the nested curly braces that enclose the statements in the <code class="code-inline tex2jax_ignore">main()</code> method. These are important syntactical elements that must be present.</div>
+<div class="para" id="p-248">Let’s say we want to calculate the distance between two points. One point is at the coordinates <span class="process-math">\((x_1,\ y_1)\)</span> and the other is at <span class="process-math">\((x_2,\ y_2)\text{.}\)</span> Once computed we want to print the result to the terminal. In order to write a complete Java program that will compile and run, we need to fulfill all the above requirements. The following program satisfies these requirements. Using your programmer’s editor, create a new file at a known location and enter the text of the following program into that file. Save the program to a file with name <code class="code-inline tex2jax_ignore">ComputeDistance.java</code> (satisfying the first requirement). Don’t forget the curly braces (<code class="code-inline tex2jax_ignore">{}</code>) that enclose the body of the entire class and the nested curly braces that enclose the statements in the <code class="code-inline tex2jax_ignore">main()</code> method. These are important syntactical elements that must be present.</div>
 <figure class="listing figure-like" id="listing-jp-computedistance"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class ComputeDistance {              // 1) Open the class
 
   public static void main(String[] args) {  // 2) Start the method
@@ -801,19 +762,19 @@ eBookConfig.enable_chatcodes =  false;
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.1.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ComputeDistance.java</code></figcaption></figure></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Compiling a Java Program</span>
 </h3>
-<div class="para" id="p-250">Once saved, open a terminal on your computer. The terminal will run a shell program automically that let’s you interact with your operating system. Use your shell’s commands to make sure the current working directory is set to the location on your file system where your Java program file is saved.</div>
-<div class="para" id="p-251">Different operating systems support a variety of terminals and shell programs implementing a variety of commands. Choose the terminal and shell that you prefer. Refer tp <a href="appendix_shells.html" class="internal" title="Appendix B: Common Shells and Commands">Appendix B</a> for more information about common shell programs and shell commands.</div>
-<div class="para" id="p-252">Into your shell enter the following command, which compiles your Java program.</div>
+<div class="para" id="p-249">Once saved, open a terminal on your computer. The terminal will run a shell program automically that let’s you interact with your operating system. Use your shell’s commands to make sure the current working directory is set to the location on your file system where your Java program file is saved.</div>
+<div class="para" id="p-250">Different operating systems support a variety of terminals and shell programs implementing a variety of commands. Choose the terminal and shell that you prefer. Refer tp <a href="appendix_shells.html" class="internal" title="Appendix B: Common Shells and Commands">Appendix B</a> for more information about common shell programs and shell commands.</div>
+<div class="para" id="p-251">Into your shell enter the following command, which compiles your Java program.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac ComputeDistance.java
 </b></pre></div>
-<div class="para" id="p-253">If you see errors, correct them and try again. When the command executes without error, your progam has compiled successfully. If you list the files in your directory, you will see that the <code class="code-inline tex2jax_ignore">javac</code> program created a new file named <code class="code-inline tex2jax_ignore">CalculateDistance.class</code>. This is your compiled program.</div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<div class="para" id="p-252">If you see errors, correct them and try again. When the command executes without error, your progam has compiled successfully. If you list the files in your directory, you will see that the <code class="code-inline tex2jax_ignore">javac</code> program created a new file named <code class="code-inline tex2jax_ignore">CalculateDistance.class</code>. This is your compiled program.</div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Running a Compiled Java Program</span>
 </h3>
-<div class="para" id="p-254">To run your compiled Java program, enter the following command into your shell. Note that the <code class="code-inline tex2jax_ignore">java</code> command does not take the name of the compiled program, but rather takes the name of the Class with the <code class="code-inline tex2jax_ignore">main()</code> static method to run. In our case, the name of the class is <code class="code-inline tex2jax_ignore">ComputeDistance</code>. If you see the following output, yu have successfully compiled and run your first Java program. Make sure you have mastered the <code class="code-inline tex2jax_ignore">javac</code> and <code class="code-inline tex2jax_ignore">java</code> commands. You will be using them quite a lot.</div>
+<div class="para" id="p-253">To run your compiled Java program, enter the following command into your shell. Note that the <code class="code-inline tex2jax_ignore">java</code> command does not take the name of the compiled program, but rather takes the name of the Class with the <code class="code-inline tex2jax_ignore">main()</code> static method to run. In our case, the name of the class is <code class="code-inline tex2jax_ignore">ComputeDistance</code>. If you see the following output, yu have successfully compiled and run your first Java program. Make sure you have mastered the <code class="code-inline tex2jax_ignore">javac</code> and <code class="code-inline tex2jax_ignore">java</code> commands. You will be using them quite a lot.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>java ComputeDistance
 </b>36.05551275463989
 </pre></div>
-<div class="para" id="p-255">Once you have that working, try the following longer program, which computes and print the roots of a quadratic polynomial using the quadratic formula. Study this program carefully. Every part of it should look familiar to you. Notice the use of the <code class="code-inline tex2jax_ignore">+</code> and <code class="code-inline tex2jax_ignore">+=</code> operators to assemble the output.</div>
+<div class="para" id="p-254">Once you have that working, try the following longer program, which computes and print the roots of a quadratic polynomial using the quadratic formula. Study this program carefully. Every part of it should look familiar to you. Notice the use of the <code class="code-inline tex2jax_ignore">+</code> and <code class="code-inline tex2jax_ignore">+=</code> operators to assemble the output.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Roots.java
 public class Roots {
   public static void main(String[] args) {
@@ -840,7 +801,7 @@ public class Roots {
 </b>Coefficients: a=1.0, b=0.0, c=-4.0
 Roots: -2.0 and 2.0
 </pre></div>
-<div class="para" id="p-256">Many programming editors streamline the compile and run process by running all steps for you at the click of a button. Make sure you first master at least one shell as well as the commands necessary to work with your computer’s operating system and the commands required to compile and run a Java program. Once you feel comfortable, feel free to use your editor’s shortcut buttons. You’ll understand exactly what they do.</div></section></section></div>
+<div class="para" id="p-255">Many programming editors streamline the compile and run process by running all steps for you at the click of a button. Make sure you first master at least one shell as well as the commands necessary to work with your computer’s operating system and the commands required to compile and run a Java program. Once you feel comfortable, feel free to use your editor’s shortcut buttons. You’ll understand exactly what they do.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="chapter-java-programs.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-jp-static-methods.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

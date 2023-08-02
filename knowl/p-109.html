@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Java divides numeric values into two broad categories: <em class="emphasis">integers</em> and <em class="emphasis">floating point numbers</em>. An integer is a numeric value having no decimal places. It may optionally be preceded by a sign, like - or +, but it may not have commas or a decimal place (.). Consequently, integers are whole numbers (positive, negative or zero). No fractional part is permitted. Examples of Java integer value include 2, -64, 0, and 2147483647. We may enter these values directly into JShell, with no comma, at least up to a point. For example, if we enter 2147483647, JShell happily reads it and saves it with a new variable name generated automatically (beginning with <code class="code-inline tex2jax_ignore">$</code> and followed a number). But if we enter a value that is larger by 1, that is 2147483648, we see an error.</div>
+<div class="para">The error tells us that the number is <em class="emphasis">too large</em>. More specifically, the number is too large to be stored in the memory allotted by the default type that JShell uses to store integers values, <code class="code-inline tex2jax_ignore">int</code>. To store 2147483648 in memory, we must choose a different Java integer type, one capable of holding larger numbers by virtue of being allocated more memory.</div>
 <span class="incontext"><a href="section-pe-integers.html#p-109" class="internal">in-context</a></span>
 </body>
 </html>

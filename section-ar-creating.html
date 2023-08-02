@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,24 +718,15 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -775,16 +736,16 @@ eBookConfig.enable_chatcodes =  false;
 <section class="introduction" id="introduction-38">A Java <dfn class="terminology">array</dfn> stores in memory a sequence of data items with common data type. The entire sequence can be assigned to a single variable with each element accessed using the variable followed by a sequential integer index (offest) in square brackets, starting with 0. Arrays are incredibly useful when you must store a very large number of related values. Using an index for element access works well with iteration counters, very much like the way we access elements in an ArrayList using the <code class="code-inline tex2jax_ignore">.get(…)</code> method.</section><section class="subsection" id="subsection-79"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.1.1</span> <span class="title">Declaring Arrays</span>
 </h3>
-<div class="para" id="p-628">An array variable is declared just like any Java variable with a data type, only followed with a pair of square brackets (<code class="code-inline tex2jax_ignore">[]</code>).</div>
+<div class="para" id="p-627">An array variable is declared just like any Java variable with a data type, only followed with a pair of square brackets (<code class="code-inline tex2jax_ignore">[]</code>).</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; double[] data;
 data ==&gt; null
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-629">In the JShell session above, we declare a <code class="code-inline tex2jax_ignore">double</code> <em class="emphasis">array</em> variable just like we would declare a single <code class="code-inline tex2jax_ignore">double</code> variable, only we follow the type with <code class="code-inline tex2jax_ignore">[]</code>. It’s useful to read this declaration as <em class="emphasis">double array data</em>. In general, working with array variables is very similar to working single data variable, only with the additional of square brackets.</div>
-<div class="para" id="p-630">In the above JShell session, we see that the <code class="code-inline tex2jax_ignore">data</code> array variable starts with the value <code class="code-inline tex2jax_ignore">null</code>. This is very important to note. In Java, array variables are <em class="emphasis">reference</em> variables, just like variables having a class type are reference variable. As a reference type, all the same rules and behaviors that we investigated in <a href="chapter-reftypes.html" class="internal" title="Chapter 5: Reference Types">Chapter 5</a> apply to array variables as well.</div>
-<div class="para" id="p-631">Also like a class variable, declaring an array variable <dfn class="terminology">does not</dfn> create the array. An array variable is only a variable that <em class="emphasis">may</em> reference an array, should we choose to create one and assign it to the variable. The variable itself is not the array, which is illustrated by its initial default value being <code class="code-inline tex2jax_ignore">null</code>.</div>
-<div class="para" id="p-632">We can declare an array of <em class="emphasis">any</em> valid type in Java. In fact, we can declare <em class="emphasis">arrays of arrays</em>, which investigate more in <a href="section-ar-multi.html" class="internal" title="Section 8.4: Multidimensional Arrays">Section 8.4</a>. The following code snippet illustrates this idea. None of these variables are arrays. They are only variables that may reference an array, not the array itself.</div>
+<div class="para" id="p-628">In the JShell session above, we declare a <code class="code-inline tex2jax_ignore">double</code> <em class="emphasis">array</em> variable just like we would declare a single <code class="code-inline tex2jax_ignore">double</code> variable, only we follow the type with <code class="code-inline tex2jax_ignore">[]</code>. It’s useful to read this declaration as <em class="emphasis">double array data</em>. In general, working with array variables is very similar to working single data variable, only with the additional of square brackets.</div>
+<div class="para" id="p-629">In the above JShell session, we see that the <code class="code-inline tex2jax_ignore">data</code> array variable starts with the value <code class="code-inline tex2jax_ignore">null</code>. This is very important to note. In Java, array variables are <em class="emphasis">reference</em> variables, just like variables having a class type are reference variable. As a reference type, all the same rules and behaviors that we investigated in <a href="chapter-reftypes.html" class="internal" title="Chapter 5: Reference Types">Chapter 5</a> apply to array variables as well.</div>
+<div class="para" id="p-630">Also like a class variable, declaring an array variable <dfn class="terminology">does not</dfn> create the array. An array variable is only a variable that <em class="emphasis">may</em> reference an array, should we choose to create one and assign it to the variable. The variable itself is not the array, which is illustrated by its initial default value being <code class="code-inline tex2jax_ignore">null</code>.</div>
+<div class="para" id="p-631">We can declare an array of <em class="emphasis">any</em> valid type in Java. In fact, we can declare <em class="emphasis">arrays of arrays</em>, which investigate more in <a href="section-ar-multi.html" class="internal" title="Section 8.4: Multidimensional Arrays">Section 8.4</a>. The following code snippet illustrates this idea. None of these variables are arrays. They are only variables that may reference an array, not the array itself.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data;      // An array variable of doubles
 int[]    lengths;   // An array variable of integers
 String[] names;     // An array variable of Strings
@@ -792,13 +753,13 @@ Random[] rands;     // An array variable of Random objects
 </code></pre></div></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.1.2</span> <span class="title">Creating Arrays</span>
 </h3>
-<div class="para" id="p-633">Similar to instantiating new objects using a constructor, the syntax for creating a new array makes use of the <dfn class="terminology">new</dfn> keyword. This reinforces the fact that arrays are reference types. Unlike invoking an object constructor, the syntax for creating a new array follows the <em class="emphasis">new</em> keyword with the <em class="emphasis">data type</em> to be stored in elements of the array and then square backets containing the number of elements to be stored in the array. In the following code snippet, we create and assign arrays of size 100 for each of the array variables declared above.</div>
+<div class="para" id="p-632">Similar to instantiating new objects using a constructor, the syntax for creating a new array makes use of the <dfn class="terminology">new</dfn> keyword. This reinforces the fact that arrays are reference types. Unlike invoking an object constructor, the syntax for creating a new array follows the <em class="emphasis">new</em> keyword with the <em class="emphasis">data type</em> to be stored in elements of the array and then square backets containing the number of elements to be stored in the array. In the following code snippet, we create and assign arrays of size 100 for each of the array variables declared above.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">data        = new double[100];
 lengths     = new int[100];
 names       = new String[100];
 rands       = new Random[100];
 </code></pre></div>
-<div class="para" id="p-634">Note that we can also use the combination declaration/initialization statement just like we did with single-value variables.</div>
+<div class="para" id="p-633">Note that we can also use the combination declaration/initialization statement just like we did with single-value variables.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data    = new double[100];
 int[]    lengths = new int[100];
 String[] names   = new String[100];
@@ -806,7 +767,7 @@ Random[] rands   = new Random[100];
 </code></pre></div></section><section class="subsection" id="subsection-81"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.1.3</span> <span class="title">Accessing Array Elements</span>
 </h3>
-<div class="para" id="p-635">Once created, you may access and use the elements of an array just like you would a single-valued variable. The only difference is that you must follow your array variable with square brackets and an item index so that Java knows which element of the array that you want to access. In the example below, the <code class="code-inline tex2jax_ignore">data</code> array variable is declared and initialized to a new array of doubles with length 100. These items are then accessed by following the array variable name <code class="code-inline tex2jax_ignore">data</code> with square brackets and an index value, like <code class="code-inline tex2jax_ignore">data[0]</code>.</div>
+<div class="para" id="p-634">Once created, you may access and use the elements of an array just like you would a single-valued variable. The only difference is that you must follow your array variable with square brackets and an item index so that Java knows which element of the array that you want to access. In the example below, the <code class="code-inline tex2jax_ignore">data</code> array variable is declared and initialized to a new array of doubles with length 100. These items are then accessed by following the array variable name <code class="code-inline tex2jax_ignore">data</code> with square brackets and an index value, like <code class="code-inline tex2jax_ignore">data[0]</code>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; double[] data = new double[100];
 data ==&gt; double[100] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,  ...  0.0, 0.0, 0.0, 0.0, 0.0 }
 
@@ -822,13 +783,13 @@ jshell&gt; System.out.println( data[0] );
 jshell&gt;
 </b></pre></div>
 <article class="assemblage assemblage-like" id="assemblage-10"><h4 class="heading"><span class="title">Indexes Start at 0.</span></h4>
-<div class="para" id="p-636">In Java, when accessing a sequence of items, the index of the first item always starts at 0. Think of an index as an <em class="emphasis">offset</em> from the start of a sequence, not as an item’s sequence position.</div></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="para" id="p-635">In Java, when accessing a sequence of items, the index of the first item always starts at 0. Think of an index as an <em class="emphasis">offset</em> from the start of a sequence, not as an item’s sequence position.</div></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:77%;">
-<div class="para" id="p-637">The idea that array is a sequence of data values is more than just a useful visual queue. Array elements are stored in contiguous memory, one after the other.</div>
-<div class="para" id="p-638">In the <code class="code-inline tex2jax_ignore">data</code> example of <a href="" class="xref" data-knowl="./knowl/figure-ar-array-memory.html" title="Figure 8.1.1">Figure 8.1.1</a>, note that Java initializes double array items with the value <code class="code-inline tex2jax_ignore">0.0</code>, just like it would initialize a single-valued double variable. This is the case with any array holding any numerical type.</div>
-<div class="para" id="p-639">If numeric array elements are initialized with 0, how about boolean array elements? What is the default value assigned to a single boolean variable? JShell is a useful tool to investigate Java’s behavior.</div>
+<div class="para" id="p-636">The idea that array is a sequence of data values is more than just a useful visual queue. Array elements are stored in contiguous memory, one after the other.</div>
+<div class="para" id="p-637">In the <code class="code-inline tex2jax_ignore">data</code> example of <a href="" class="xref" data-knowl="./knowl/figure-ar-array-memory.html" title="Figure 8.1.1">Figure 8.1.1</a>, note that Java initializes double array items with the value <code class="code-inline tex2jax_ignore">0.0</code>, just like it would initialize a single-valued double variable. This is the case with any array holding any numerical type.</div>
+<div class="para" id="p-638">If numeric array elements are initialized with 0, how about boolean array elements? What is the default value assigned to a single boolean variable? JShell is a useful tool to investigate Java’s behavior.</div>
 </div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-640"></div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-639"></div></div>
 <div class="sbspanel top" style="width:20%;"><figure class="figure figure-like" id="figure-ar-array-memory"><img src="external/images/ar-array-memory.svg" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.1<span class="period">.</span></span><span class="space"> </span>An array stored in memory</figcaption></figure></div>
 </div></div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; boolean response;
@@ -845,17 +806,17 @@ false
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-641">In both cases the default value of a boolean is <code class="code-inline tex2jax_ignore">false</code>. Java sets the initial value of array elements to the same value that it would a single-values variable.</div></section><section class="subsection" id="subsection-82"><h3 class="heading hide-type">
+<div class="para" id="p-640">In both cases the default value of a boolean is <code class="code-inline tex2jax_ignore">false</code>. Java sets the initial value of array elements to the same value that it would a single-values variable.</div></section><section class="subsection" id="subsection-82"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.1.4</span> <span class="title">Initializing Arrays</span>
 </h3>
-<div class="para" id="p-642">Just like we can initialize a variable at the time of declaration, we also can initialize the elements of an array. We need to specify multiple element values for the array to be initialized. Syntactically, we following the creation of the array with a sequence of values delimited with braces (<code class="code-inline tex2jax_ignore">{…}</code>) and separated by commas. In the following example we declare the double array variable <code class="code-inline tex2jax_ignore">data</code>, assign it to a newly created double array, and initialize the double array to the values 10.0, 20.0, 30.0, 40.0 and 50.0.</div>
+<div class="para" id="p-641">Just like we can initialize a variable at the time of declaration, we also can initialize the elements of an array. We need to specify multiple element values for the array to be initialized. Syntactically, we following the creation of the array with a sequence of values delimited with braces (<code class="code-inline tex2jax_ignore">{…}</code>) and separated by commas. In the following example we declare the double array variable <code class="code-inline tex2jax_ignore">data</code>, assign it to a newly created double array, and initialize the double array to the values 10.0, 20.0, 30.0, 40.0 and 50.0.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data = new double[] {10.0, 20.0, 30.0, 40.0 50.0};
 </code></pre></div>
-<div class="para" id="p-643">Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.</div>
-<div class="para" id="p-644">We can shorten the above example even further. The <code class="code-inline tex2jax_ignore">new double[]</code> part of the expression is redundant. Clearly, we want to create a new double array because we provided initial element values. There are legitimate reasons to declare an array variable without creating an array, but no legitimate reason if initial element values are provided. For this reason Java let’s us accomplish the same task of creating and initializing the array without the need to include the <code class="code-inline tex2jax_ignore">new double[]</code> part. In the example below, we create and initialize the array by going right to the initial values in braces, leaving out the <code class="code-inline tex2jax_ignore">new double[]</code>.</div>
+<div class="para" id="p-642">Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.</div>
+<div class="para" id="p-643">We can shorten the above example even further. The <code class="code-inline tex2jax_ignore">new double[]</code> part of the expression is redundant. Clearly, we want to create a new double array because we provided initial element values. There are legitimate reasons to declare an array variable without creating an array, but no legitimate reason if initial element values are provided. For this reason Java let’s us accomplish the same task of creating and initializing the array without the need to include the <code class="code-inline tex2jax_ignore">new double[]</code> part. In the example below, we create and initialize the array by going right to the initial values in braces, leaving out the <code class="code-inline tex2jax_ignore">new double[]</code>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data = {10.0, 20.0, 30.0, 40.0 50.0};
 </code></pre></div>
-<div class="para" id="p-645">This initialization syntax may be used with any type, provided you are able to write down the sequence of value in braces. In the examples below, pay careful attention to the <code class="code-inline tex2jax_ignore">rands</code> array holding two Random objects. The only means of creating Random objects is to use the Random constructor.. Within the braces of the initializer, we invoked the Random constructor twice in create two objects which are stored in the <code class="code-inline tex2jax_ignore">rands</code> array.</div>
+<div class="para" id="p-644">This initialization syntax may be used with any type, provided you are able to write down the sequence of value in braces. In the examples below, pay careful attention to the <code class="code-inline tex2jax_ignore">rands</code> array holding two Random objects. The only means of creating Random objects is to use the Random constructor.. Within the braces of the initializer, we invoked the Random constructor twice in create two objects which are stored in the <code class="code-inline tex2jax_ignore">rands</code> array.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[]  data      = {10.0, 20.0, 30.0, 40.0 50.0};
 int[]     lengths   = {32, 34, 40};
 String[]  names     = {"Athos", "Porthos", "Aramis"};
@@ -864,7 +825,7 @@ boolean[] responses = {true, false, false, false, true};
 </code></pre></div></section><section class="subsection" id="subsection-83"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.1.5</span> <span class="title">The Java Array Three-Step Process</span>
 </h3>
-<div class="para logical" id="p-646">
+<div class="para logical" id="p-645">
 <div class="para">Take a moment to notice something important about arrays. In order to fully realize an array containing non-default element values, you must complete <em class="emphasis">three steps</em>.</div>
 <ol class="decimal">
 <li id="li-234"><div class="para" id="p-derived-li-234">There must be a variable that references the array. Without maintaining a reachable reference, the array is subject to garbage collection.</div></li>

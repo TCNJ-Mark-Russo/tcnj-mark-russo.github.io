@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,36 +718,27 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-c2-for-statements"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title"><code class="code-inline tex2jax_ignore">for</code> Statements</span>
 </h2>
-<section class="introduction" id="introduction-31"><div class="para" id="p-558">In <a href="section-c1-while-statements.html" class="internal" title="Section 6.3: while-Statements">Section 6.3</a> we learned that the three important elements of a while-statement configured for counting were:</div> <ol class="decimal">
+<section class="introduction" id="introduction-31"><div class="para" id="p-557">In <a href="section-c1-while-statements.html" class="internal" title="Section 6.3: while-Statements">Section 6.3</a> we learned that the three important elements of a while-statement configured for counting were:</div> <ol class="decimal">
 <li id="li-215"><div class="para" id="p-derived-li-215">A counter is declared and initialized before the while-statement.</div></li>
 <li id="li-216"><div class="para" id="p-derived-li-216">The counter is increment within the block of code associated with the while-statement.</div></li>
 <li id="li-217"><div class="para" id="p-derived-li-217">The while-statement’s conditional test check if the counter exceeds some value and stops.</div></li>
-</ol> <div class="para" id="p-559">A while-statement configured for counting turns out to be such an important control structure that a special statement was invented whose job is dedicated primarily to the execution of a block of code for a fixed number of iterations. This is the <dfn class="terminology">for-statement</dfn>. The following diagram shows the parts of a for-statement.</div> <figure class="figure figure-like" id="figure-c2-for-statement-schematic"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/c2-for-statement-schematic.svg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.1<span class="period">.</span></span><span class="space"> </span>Parts of a for-Statement</figcaption></figure></section><div class="para" id="p-560">Similar to the while- and if-statements, the for-statement starts with a special keyword (<code class="code-inline tex2jax_ignore">for</code>), and is followed by a pair of parentheses as well as a code block delimited by curly braces. An important difference between the for-statement and the while-statement is that the for-statement contains <em class="emphasis">three</em> expressions between its parentheses, not one. The three expressions are the <em class="emphasis">initializer</em>, <em class="emphasis">test for continuation</em>, and <em class="emphasis">update</em>, all separated with semicolons (<code class="code-inline tex2jax_ignore">;</code>). <a href="" class="xref" data-knowl="./knowl/table-c2-if-statement.html" title="Table 7.1.2: if-Statement Expressions">Table 7.1.2</a> describes each in more detail.</div>
+</ol> <div class="para" id="p-558">A while-statement configured for counting turns out to be such an important control structure that a special statement was invented whose job is dedicated primarily to the execution of a block of code for a fixed number of iterations. This is the <dfn class="terminology">for-statement</dfn>. The following diagram shows the parts of a for-statement.</div> <figure class="figure figure-like" id="figure-c2-for-statement-schematic"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/c2-for-statement-schematic.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.1<span class="period">.</span></span><span class="space"> </span>Parts of a for-Statement</figcaption></figure></section><div class="para" id="p-559">Similar to the while- and if-statements, the for-statement starts with a special keyword (<code class="code-inline tex2jax_ignore">for</code>), and is followed by a pair of parentheses as well as a code block delimited by curly braces. An important difference between the for-statement and the while-statement is that the for-statement contains <em class="emphasis">three</em> expressions between its parentheses, not one. The three expressions are the <em class="emphasis">initializer</em>, <em class="emphasis">test for continuation</em>, and <em class="emphasis">update</em>, all separated with semicolons (<code class="code-inline tex2jax_ignore">;</code>). <a href="" class="xref" data-knowl="./knowl/table-c2-if-statement.html" title="Table 7.1.2: if-Statement Expressions">Table 7.1.2</a> describes each in more detail.</div>
 <figure class="table table-like" id="table-c2-if-statement"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.1.2<span class="period">.</span></span><span class="space"> </span>if-Statement Expressions</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Expression</th>
@@ -807,11 +768,11 @@ eBookConfig.enable_chatcodes =  false;
 <td class="l t b0 r0 l0 t0 lines">Once after each iteration ends.</td>
 <td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">i++</code></td>
 </tr>
-</table></div></figure><div class="para" id="p-561">A for-statement is useful when iterating a fixed number of times, and is preferred over a while-statement whenever possible due to its compactness and clarity. Also, the <code class="code-inline tex2jax_ignore">break</code> and <code class="code-inline tex2jax_ignore">continue</code> statements work with a for-statement in manner identical to the while-statement. (See <a href="section-c1-break-continue.html" class="internal" title="Section 6.4: break and continue">Section 6.4</a>).</div>
-<div class="para" id="p-562">
+</table></div></figure><div class="para" id="p-560">A for-statement is useful when iterating a fixed number of times, and is preferred over a while-statement whenever possible due to its compactness and clarity. Also, the <code class="code-inline tex2jax_ignore">break</code> and <code class="code-inline tex2jax_ignore">continue</code> statements work with a for-statement in manner identical to the while-statement. (See <a href="section-c1-break-continue.html" class="internal" title="Section 6.4: break and continue">Section 6.4</a>).</div>
+<div class="para" id="p-561">
 <a href="" class="xref" data-knowl="./knowl/listing-c2-grid4.html" title="Listing 7.1.3">Listing 7.1.3</a> is a rewrite of the example in <a href="" class="xref" data-knowl="./knowl/listing-c1-grid3.html" title="Listing 6.6.5">Listing 6.6.5</a> with while-statements replaced by for-statements. Notice how the elements of the program responsible for iteration are more compact, and easier to read now that the three expressions are grouped together within the parentheses following the <code class="code-inline tex2jax_ignore">for</code> keyword.</div>
-<div class="para" id="p-563">With the extra space available, we modified the logic a bit. Rather than instantiate new Rectangle when <code class="code-inline tex2jax_ignore">x != y</code>, we are now performing the complementary action. When <code class="code-inline tex2jax_ignore">x == y</code> we invoke <code class="code-inline tex2jax_ignore">continue</code> which halts the iteration and returns back to the for-statement to check for another iteration. Note that it would have been tricky to use the same approach with while-statements. In the while-statement our loop counter was incremented at the end of the code block. If we executed a <code class="code-inline tex2jax_ignore">continue</code> before the end of the code block the loop counter would have never been updated. This would cause the program to enter an infinite loop, and never terminate. With a for-statement, the increment is always executed, whether or not the code block completes. This make the <code class="code-inline tex2jax_ignore">continue</code> statement much more convenient to use.</div>
-<div class="para" id="p-564">Another update we made in <code class="code-inline tex2jax_ignore">Grid4.java</code> is the addition of fill colors for the Rectangles. We wanted to fill every other Rectangle with blue or gold. To achieve this we declared a <code class="code-inline tex2jax_ignore">boolean</code> variable named <code class="code-inline tex2jax_ignore">flip</code>. Each time through the inner code block, we negated <code class="code-inline tex2jax_ignore">flip</code> with the statement <code class="code-inline tex2jax_ignore">flip = !flip</code>. In other words, if <code class="code-inline tex2jax_ignore">flip == true</code> then it became <code class="code-inline tex2jax_ignore">false</code>. If <code class="code-inline tex2jax_ignore">flip == false</code> then it because <code class="code-inline tex2jax_ignore">true</code>. We used this flip-flop variable and an if-statement to decide which color to use to fill teh current Rectangle.</div>
+<div class="para" id="p-562">With the extra space available, we modified the logic a bit. Rather than instantiate new Rectangle when <code class="code-inline tex2jax_ignore">x != y</code>, we are now performing the complementary action. When <code class="code-inline tex2jax_ignore">x == y</code> we invoke <code class="code-inline tex2jax_ignore">continue</code> which halts the iteration and returns back to the for-statement to check for another iteration. Note that it would have been tricky to use the same approach with while-statements. In the while-statement our loop counter was incremented at the end of the code block. If we executed a <code class="code-inline tex2jax_ignore">continue</code> before the end of the code block the loop counter would have never been updated. This would cause the program to enter an infinite loop, and never terminate. With a for-statement, the increment is always executed, whether or not the code block completes. This make the <code class="code-inline tex2jax_ignore">continue</code> statement much more convenient to use.</div>
+<div class="para" id="p-563">Another update we made in <code class="code-inline tex2jax_ignore">Grid4.java</code> is the addition of fill colors for the Rectangles. We wanted to fill every other Rectangle with blue or gold. To achieve this we declared a <code class="code-inline tex2jax_ignore">boolean</code> variable named <code class="code-inline tex2jax_ignore">flip</code>. Each time through the inner code block, we negated <code class="code-inline tex2jax_ignore">flip</code> with the statement <code class="code-inline tex2jax_ignore">flip = !flip</code>. In other words, if <code class="code-inline tex2jax_ignore">flip == true</code> then it became <code class="code-inline tex2jax_ignore">false</code>. If <code class="code-inline tex2jax_ignore">flip == false</code> then it because <code class="code-inline tex2jax_ignore">true</code>. We used this flip-flop variable and an if-statement to decide which color to use to fill teh current Rectangle.</div>
 <figure class="listing figure-like" id="listing-c2-grid4"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Grid4.java
 import doodlepad.*;                         // Import graphics
 
@@ -842,11 +803,11 @@ public class Grid4 {
 <div class="sbspanel top" style="width:47%;"><pre class="console"><b>javac -cp doodlepad.jar Grid4.java 
 java -cp .;doodlepad.jar Grid4
 </b></pre></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-565"></div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-564"></div></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-c2-grid4"><img src="external/images/figure-c2-grid4.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Grid4.java</code></figcaption></figure></div>
 </div></div>
-<div class="para" id="p-566">There is one more item to note about for-statements associated with its block scope. In <a href="section-c1-block-scope.html" class="internal" title="Section 6.7: Block Scope">Section 6.7</a> we introduced the concept of block scope and mentioned how all statements with a code block defines a new block scope. This is the case with for-statements. If we define a variable within the code block of a for-statement, that variable may not be accessed from outside the block scope.</div>
-<div class="para" id="p-567">With a for-statement, not only are declarations within the curly braces considered to exist within the scope of the code block, but any declarations within the parentheses also are considered to exist within the scope of the code block. To demonstrate, let’s revisit <a href="" class="xref" data-knowl="./knowl/listing-c1-block-scope.html" title="Listing 6.7.1">Listing 6.7.1</a> and update it with a for-statement having a loop counter <code class="code-inline tex2jax_ignore">i</code> that is declared when initialized.</div>
+<div class="para" id="p-565">There is one more item to note about for-statements associated with its block scope. In <a href="section-c1-block-scope.html" class="internal" title="Section 6.7: Block Scope">Section 6.7</a> we introduced the concept of block scope and mentioned how all statements with a code block defines a new block scope. This is the case with for-statements. If we define a variable within the code block of a for-statement, that variable may not be accessed from outside the block scope.</div>
+<div class="para" id="p-566">With a for-statement, not only are declarations within the curly braces considered to exist within the scope of the code block, but any declarations within the parentheses also are considered to exist within the scope of the code block. To demonstrate, let’s revisit <a href="" class="xref" data-knowl="./knowl/listing-c1-block-scope.html" title="Listing 6.7.1">Listing 6.7.1</a> and update it with a for-statement having a loop counter <code class="code-inline tex2jax_ignore">i</code> that is declared when initialized.</div>
 <figure class="listing figure-like" id="listing-c2-block-scope2"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// BlockScope2.java
 import doodlepad.*;
 
@@ -859,7 +820,7 @@ public class BlockScope2 {
     }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">7.1.5<span class="period">.</span></span><span class="space"> </span>BlockScope2.java</figcaption></figure><div class="para" id="p-568">When we attempt to compile this program, the compiler is unable to find the our loop counter variable <code class="code-inline tex2jax_ignore">i</code> because it is declared within the parentheses of the for-statement, and therefore is considered to exist in that statement’s block scope. If you do have a need to access <code class="code-inline tex2jax_ignore">i</code> after the for-statement, you can circumvent this problem by declaring <code class="code-inline tex2jax_ignore">i</code> before the for-statement, and use the first expression in the parentheses for initializing <code class="code-inline tex2jax_ignore">i</code> only, without the declaration.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">7.1.5<span class="period">.</span></span><span class="space"> </span>BlockScope2.java</figcaption></figure><div class="para" id="p-567">When we attempt to compile this program, the compiler is unable to find the our loop counter variable <code class="code-inline tex2jax_ignore">i</code> because it is declared within the parentheses of the for-statement, and therefore is considered to exist in that statement’s block scope. If you do have a need to access <code class="code-inline tex2jax_ignore">i</code> after the for-statement, you can circumvent this problem by declaring <code class="code-inline tex2jax_ignore">i</code> before the for-statement, and use the first expression in the parentheses for initializing <code class="code-inline tex2jax_ignore">i</code> only, without the declaration.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac -cp doodlepad.jar BlockScope2.java
 </b>BlockScope2.java:9: error: cannot find symbol
 System.out.println( i );        // Print final value of i

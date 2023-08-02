@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,40 +718,31 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-dp-transformations"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.11</span> <span class="title">Graphic Transformations</span>
 </h2>
-<section class="introduction" id="introduction-22"><div class="para" id="p-406">As described in Graphic Object Position and Size, each Shape object may be moved and sized using methods such as setLocation(...) and setSize(...). This approach to moving and resizing Shapes has limitations, including the inability to rotate a Shape object, including Text. Consider for a moment how you might draw an oval rotated at a 45° angle. This is not possible using setLocation(...) and setSize(...). Fortunately, there is another way.</div> <div class="para" id="p-407">Most 2-D computer graphics systems implement a form of linear 2-D geometric transformations known as affine transformations, and include operations such as scale, rotate, and translate. This class of transformations provides a way to modify a shape while preserving its essential nature, e.g. points remain points and parallel lines remain parallel. The easiest way to understand how 2-D transformations work in computer graphics is to imagine that each and every object has its own coordinate system. As described in DoodlePad Drawing Model, when a new DoodlePad Shape object is created its coordinate system is defined with its origin in the upper left corner of the Pad window: x-coordinate values increasing from left to right, y-coordinate values increasing from top to bottom, and distances measured in pixels. Geometric transformation operations give you the ability to move and modify the coordinate system of each and every Shape object independently, with respect to a master coordinate system of the Pad window. For example, it is possible to create two Rectangle Shapes, both with their location set to (0, 0), but appearing at different parts of the Pad. If the coordinate system of one Rectangle is translated to another part of the Pad, then the two Rectangle Shapes would not be drawn at the same location in spite of the fact that they had the same x- and y-coordinate values.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:65%;"><div class="para" id="p-408">For example, the image on the right depicts two Rectangle Shapes, both with dimensions 50 pixels × 50 pixels and coordinates x=0, y=0. One Rectangle has a red fill and the other has a green fill. The difference between the two Shapes is that the green Rectangle has been transformed by translating it to the location (100, 100). In other words, the origin of the green Rectangle’s coordinate system has been moved (translated) to (100, 100). The green Rectangle’s coordinates (0, 0) are at the same screen location as the red Rectangle’s coordinates (100, 100). In spite of the fact that both Rectangles have identical dimensions and location with respect to their own coordinate systems, they are drawn at different parts of the Pad due to the fact that the green Rectangle’s coordinate system was translated from its default value.</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-409"></div></div>
+<section class="introduction" id="introduction-22"><div class="para" id="p-405">As described in Graphic Object Position and Size, each Shape object may be moved and sized using methods such as setLocation(...) and setSize(...). This approach to moving and resizing Shapes has limitations, including the inability to rotate a Shape object, including Text. Consider for a moment how you might draw an oval rotated at a 45° angle. This is not possible using setLocation(...) and setSize(...). Fortunately, there is another way.</div> <div class="para" id="p-406">Most 2-D computer graphics systems implement a form of linear 2-D geometric transformations known as affine transformations, and include operations such as scale, rotate, and translate. This class of transformations provides a way to modify a shape while preserving its essential nature, e.g. points remain points and parallel lines remain parallel. The easiest way to understand how 2-D transformations work in computer graphics is to imagine that each and every object has its own coordinate system. As described in DoodlePad Drawing Model, when a new DoodlePad Shape object is created its coordinate system is defined with its origin in the upper left corner of the Pad window: x-coordinate values increasing from left to right, y-coordinate values increasing from top to bottom, and distances measured in pixels. Geometric transformation operations give you the ability to move and modify the coordinate system of each and every Shape object independently, with respect to a master coordinate system of the Pad window. For example, it is possible to create two Rectangle Shapes, both with their location set to (0, 0), but appearing at different parts of the Pad. If the coordinate system of one Rectangle is translated to another part of the Pad, then the two Rectangle Shapes would not be drawn at the same location in spite of the fact that they had the same x- and y-coordinate values.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:65%;"><div class="para" id="p-407">For example, the image on the right depicts two Rectangle Shapes, both with dimensions 50 pixels × 50 pixels and coordinates x=0, y=0. One Rectangle has a red fill and the other has a green fill. The difference between the two Shapes is that the green Rectangle has been transformed by translating it to the location (100, 100). In other words, the origin of the green Rectangle’s coordinate system has been moved (translated) to (100, 100). The green Rectangle’s coordinates (0, 0) are at the same screen location as the red Rectangle’s coordinates (100, 100). In spite of the fact that both Rectangles have identical dimensions and location with respect to their own coordinate systems, they are drawn at different parts of the Pad due to the fact that the green Rectangle’s coordinate system was translated from its default value.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-408"></div></div>
 <div class="sbspanel top" style="width:32%;"><figure class="figure figure-like" id="figure-22"><img src="external/images/translate1.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.11.1<span class="period">.</span></span><span class="space"> </span>Rectangle Translation</figcaption></figure></div>
 </div></div></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.11.1</span> <span class="title">Translate</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:65%;"><div class="para" id="p-410">As suggested by the terminology used in the previous example, the coordinate system of a Shape may be moved in the x- and y-directions by invoking a Shape object’s translate(...) method. The translate(...) method takes two double arguments. The first indicates how far to move the Shape’s coordinate system in the x-direction, and the second indicates how far to move the Shape’s coordinate system in the y-direction. The following example program implements the previous red/green Rectangle example using DoodlePad. The class constructor creates two Rectangle objects with identical location and dimension values, but different fill colors. Following this, only the green Rectangle is translated by (100, 100) by executing the statement grnRect.translate(100, 100). Because the starting location of the green Rectangle is (0, 0), after the translation by (100, 100), the new coordinates for the origin of the green Rectangle is (100, 100). The image on the right illustrates the result of executing the following example program.</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-411"></div></div>
+<div class="sbspanel top" style="width:65%;"><div class="para" id="p-409">As suggested by the terminology used in the previous example, the coordinate system of a Shape may be moved in the x- and y-directions by invoking a Shape object’s translate(...) method. The translate(...) method takes two double arguments. The first indicates how far to move the Shape’s coordinate system in the x-direction, and the second indicates how far to move the Shape’s coordinate system in the y-direction. The following example program implements the previous red/green Rectangle example using DoodlePad. The class constructor creates two Rectangle objects with identical location and dimension values, but different fill colors. Following this, only the green Rectangle is translated by (100, 100) by executing the statement grnRect.translate(100, 100). Because the starting location of the green Rectangle is (0, 0), after the translation by (100, 100), the new coordinates for the origin of the green Rectangle is (100, 100). The image on the right illustrates the result of executing the following example program.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-410"></div></div>
 <div class="sbspanel top" style="width:32%;"><figure class="figure figure-like" id="figure-23"><img src="external/images/translate1.jpg" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.11.2<span class="period">.</span></span><span class="space"> </span>Rectangle Translation</figcaption></figure></div>
 </div></div>
 <figure class="listing figure-like" id="listing-24"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Transform1.java
@@ -813,15 +774,15 @@ public class Transform1 {
 <span class="type">Subsection</span> <span class="codenumber">4.11.2</span> <span class="title">Scale</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:65%;"><div class="para" id="p-412">The second transformation is scale(...). In effect, a scale(...) transformation zooms in or zooms out on the coordinate system of an object. For example, invoking the scale(...) method with an argument of 2 essentially zooms in by a factor of 2. The coordinate x=50 of the unscaled coordinate system will move to a screen location where x=100 used to be located. Similarly, if a coordinate system is scaled by 0.5, the coordinate x=50 in the unscaled coodinate system will move to a screen location where x=25 used to be located. The same arguments apply to the y-coordinate of the coordinate system. When a shape’s coordinate system is scaled by a number greater than 1, the effect is to increase the size or zoom in on the shape, thus drawing it larger with respect to other shapes with unscaled coordinate systems. With a scale factor less than 1, the effect is to reduce the size or zoom out on a shape as compared to other shapes with unscaled coordinate systems.</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-413"></div></div>
+<div class="sbspanel top" style="width:65%;"><div class="para" id="p-411">The second transformation is scale(...). In effect, a scale(...) transformation zooms in or zooms out on the coordinate system of an object. For example, invoking the scale(...) method with an argument of 2 essentially zooms in by a factor of 2. The coordinate x=50 of the unscaled coordinate system will move to a screen location where x=100 used to be located. Similarly, if a coordinate system is scaled by 0.5, the coordinate x=50 in the unscaled coodinate system will move to a screen location where x=25 used to be located. The same arguments apply to the y-coordinate of the coordinate system. When a shape’s coordinate system is scaled by a number greater than 1, the effect is to increase the size or zoom in on the shape, thus drawing it larger with respect to other shapes with unscaled coordinate systems. With a scale factor less than 1, the effect is to reduce the size or zoom out on a shape as compared to other shapes with unscaled coordinate systems.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-412"></div></div>
 <div class="sbspanel top" style="width:32%;"><figure class="figure figure-like" id="figure-24"><img src="external/images/scale1.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.11.4<span class="period">.</span></span><span class="space"> </span>Rectangle Scale</figcaption></figure></div>
 </div></div>
-<div class="para" id="p-414">The scale(...) transformation comes in different forms. Thus far we have assumed that the scale factor is applied equally to the x- and y-axes, but this is not necessary. Different scale factors may be applied to the x- and y-axes, and certain overloads of the scale(...) method permit different scale factors for each axis. Also note that when the axes of a Shape’s coordinate system are modified due to a scale(...) transformation, by default all changes are performed around the origin (0, 0). That is to say, all points in the scaled coordinate system will appear to move, except (0, 0). The origin remains fixed, unless a special overload of the transformation is applied. The Shape class implements four overloads of the scale(...) method to account for all these options. The first option is scale(double factor) that takes one scale factor applies it to both the x- and y-axes around the origin (0, 0). The second option is scale(double xFactor, double yFactor) in which the separate scale factors may be applied to each axis. The third option is scale(double factor, double xCenter, double yCenter) in which the same scale factor is applied to both axes, but the scale is applied around the point (xCenter, yCenter) instead of (0,0). This is convenient when a point other than the origin should remain fixed, for example when you want to grow or shrink the size of a shape at its current location. The fourth option is scale(double xFactor, double yFactor, double xCenter, double yCenter) in which independent scale factors are to be applied and a point other than the origin should remain fixed.</div>
-<div class="para" id="p-415">Applying the scale transformation is a very convenient way to change the size of an object, but the outcome may not be what you expect. When a coodinate system is scaled, everything that is drawn is scaled, including a Shape’s stroke width. Consider a Shape drawn with a stroke width of 1. After applying a scale transformation of 2 to the Shape’s coodinate system, the Shape with the scaled coordinate system will appear to be drawn with stroke width of 2. From the perspective of the scaled Shape, the stroke width is 1. But when compared to Shapes with unscaled coordinate systems, the stroke will appear to have a width of 2. Often, this is not the desired outcome.</div>
+<div class="para" id="p-413">The scale(...) transformation comes in different forms. Thus far we have assumed that the scale factor is applied equally to the x- and y-axes, but this is not necessary. Different scale factors may be applied to the x- and y-axes, and certain overloads of the scale(...) method permit different scale factors for each axis. Also note that when the axes of a Shape’s coordinate system are modified due to a scale(...) transformation, by default all changes are performed around the origin (0, 0). That is to say, all points in the scaled coordinate system will appear to move, except (0, 0). The origin remains fixed, unless a special overload of the transformation is applied. The Shape class implements four overloads of the scale(...) method to account for all these options. The first option is scale(double factor) that takes one scale factor applies it to both the x- and y-axes around the origin (0, 0). The second option is scale(double xFactor, double yFactor) in which the separate scale factors may be applied to each axis. The third option is scale(double factor, double xCenter, double yCenter) in which the same scale factor is applied to both axes, but the scale is applied around the point (xCenter, yCenter) instead of (0,0). This is convenient when a point other than the origin should remain fixed, for example when you want to grow or shrink the size of a shape at its current location. The fourth option is scale(double xFactor, double yFactor, double xCenter, double yCenter) in which independent scale factors are to be applied and a point other than the origin should remain fixed.</div>
+<div class="para" id="p-414">Applying the scale transformation is a very convenient way to change the size of an object, but the outcome may not be what you expect. When a coodinate system is scaled, everything that is drawn is scaled, including a Shape’s stroke width. Consider a Shape drawn with a stroke width of 1. After applying a scale transformation of 2 to the Shape’s coodinate system, the Shape with the scaled coordinate system will appear to be drawn with stroke width of 2. From the perspective of the scaled Shape, the stroke width is 1. But when compared to Shapes with unscaled coordinate systems, the stroke will appear to have a width of 2. Often, this is not the desired outcome.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:65%;"><div class="para" id="p-416">Once again, consider our red and green Rectangle shapes, both with dimensions 50 × 50. After applying a scale factor of 2 to the green Rectangle, the width and height of the green rectangle doubles. Note that the total area of the Rectangle quadruples. The following example program Transform2 demonstrates the result.</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-417"></div></div>
+<div class="sbspanel top" style="width:65%;"><div class="para" id="p-415">Once again, consider our red and green Rectangle shapes, both with dimensions 50 × 50. After applying a scale factor of 2 to the green Rectangle, the width and height of the green rectangle doubles. Note that the total area of the Rectangle quadruples. The following example program Transform2 demonstrates the result.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-416"></div></div>
 <div class="sbspanel top" style="width:32%;"><figure class="figure figure-like" id="figure-25"><img src="external/images/scale1.jpg" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.11.5<span class="period">.</span></span><span class="space"> </span>Rectangle Scale</figcaption></figure></div>
 </div></div>
 <figure class="listing figure-like" id="listing-25"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Transform2.java
@@ -853,14 +814,14 @@ public class Transform2 {
 <span class="type">Subsection</span> <span class="codenumber">4.11.3</span> <span class="title">Rotate</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:65%;"><div class="para" id="p-418">The last transformation method is rotate(...). The rotate(...) method takes an angle argument in degrees and rotates the coordinate system of a Shape around the origin (0, 0) by that angle in a clockwise direction. You may be accustomed to the rotation of an angle to be in the counter-clockwise direction. In fact, this is not inconsistent with 2-D computer graphics. Because the drawing model of 2-D graphics inverts the orientation of the y-axis, the rotation angle appears to proceed in the clockwise direction.</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-419"></div></div>
+<div class="sbspanel top" style="width:65%;"><div class="para" id="p-417">The last transformation method is rotate(...). The rotate(...) method takes an angle argument in degrees and rotates the coordinate system of a Shape around the origin (0, 0) by that angle in a clockwise direction. You may be accustomed to the rotation of an angle to be in the counter-clockwise direction. In fact, this is not inconsistent with 2-D computer graphics. Because the drawing model of 2-D graphics inverts the orientation of the y-axis, the rotation angle appears to proceed in the clockwise direction.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-418"></div></div>
 <div class="sbspanel top" style="width:32%;"><figure class="figure figure-like" id="figure-26"><img src="external/images/rotate1.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.11.7<span class="period">.</span></span><span class="space"> </span>Rectangle Rotation</figcaption></figure></div>
 </div></div>
-<div class="para" id="p-420">As with scale(...), there are multiple overloads of the rotate(...) method. The first overload is rotate(double angle) which expects a single argument indicating the angle in degrees to rotate the coordinate system of a Shape object. The rotate occurs around the origin (0, 0). A second overload is rotate(double angle, double xCenter, double yCenter). This option allows you to set the point about which the Shape’s coordinate system is rotated. This is useful when you want to rotate an object in place.</div>
+<div class="para" id="p-419">As with scale(...), there are multiple overloads of the rotate(...) method. The first overload is rotate(double angle) which expects a single argument indicating the angle in degrees to rotate the coordinate system of a Shape object. The rotate occurs around the origin (0, 0). A second overload is rotate(double angle, double xCenter, double yCenter). This option allows you to set the point about which the Shape’s coordinate system is rotated. This is useful when you want to rotate an object in place.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:65%;"><div class="para" id="p-421">In the example program Transform3 our red and green Rectangle are located at (100, 0). We rotate our green Rectangle’s coordinate system by 45° while the red Rectangle’s coordinate system remains unchanged. Note how the coordinate system is rotated around the origin (0, 0).</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-422"></div></div>
+<div class="sbspanel top" style="width:65%;"><div class="para" id="p-420">In the example program Transform3 our red and green Rectangle are located at (100, 0). We rotate our green Rectangle’s coordinate system by 45° while the red Rectangle’s coordinate system remains unchanged. Note how the coordinate system is rotated around the origin (0, 0).</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-421"></div></div>
 <div class="sbspanel top" style="width:32%;"><figure class="figure figure-like" id="figure-27"><img src="external/images/rotate1.jpg" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.11.8<span class="period">.</span></span><span class="space"> </span>Rectangle Rotation</figcaption></figure></div>
 </div></div>
 <figure class="listing figure-like" id="listing-26"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Transform3.java
@@ -891,10 +852,10 @@ public class Transform3 {
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.11.9<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Transform3.java</code></figcaption></figure></section><section class="subsection" id="subsection-51"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.11.4</span> <span class="title">Reset</span>
 </h3>
-<div class="para" id="p-423">You are free to apply as many transformations as you like, in any order. All transformations are cumulative; you will see only the final accumulated result. For example, if we create a Shape object, translate it by (50, 50), and then translate it by (50, 50) a second time, the Shape’s coordinate system will have its origin located at (100, 100). Use the Shape’s reset() method to set all transformations back to their default values.</div></section><section class="subsection" id="subsection-52"><h3 class="heading hide-type">
+<div class="para" id="p-422">You are free to apply as many transformations as you like, in any order. All transformations are cumulative; you will see only the final accumulated result. For example, if we create a Shape object, translate it by (50, 50), and then translate it by (50, 50) a second time, the Shape’s coordinate system will have its origin located at (100, 100). Use the Shape’s reset() method to set all transformations back to their default values.</div></section><section class="subsection" id="subsection-52"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.11.5</span> <span class="title">Pad Transformations</span>
 </h3>
-<div class="para" id="p-424">In addition to Shape objects, transformations may be applied to a Pad object. In fact, the same transformation methods and their overloads may be applied to a Pad object in a manner identical to a Shape object. Furthermore, when the Pad’s coordinate system is transformed, the transformations are applied to all Shapes drawn on the Pad because Shape coordinate systems are relative to their Pad’s coordinate system. When you are interested in zooming or rotating an entire diagram rather than an individual Shape object, applying transformations to the Pad object is a much simpler way to go.</div></section></section></div>
+<div class="para" id="p-423">In addition to Shape objects, transformations may be applied to a Pad object. In fact, the same transformation methods and their overloads may be applied to a Pad object in a manner identical to a Shape object. Furthermore, when the Pad’s coordinate system is transformed, the transformations are applied to all Shapes drawn on the Pad because Shape coordinate systems are relative to their Pad’s coordinate system. When you are interested in zooming or rotating an entire diagram rather than an individual Shape object, applying transformations to the Pad object is a much simpler way to go.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-dp-sprites.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-dp-concepts.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

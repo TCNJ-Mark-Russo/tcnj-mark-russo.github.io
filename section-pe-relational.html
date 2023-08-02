@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,32 +718,23 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-pe-relational"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.10</span> <span class="title">Relational Expressions</span>
 </h2>
-<div class="para" id="p-181">Relational expressions include the familiar <em class="emphasis">greater-than</em> (<code class="code-inline tex2jax_ignore">&gt;</code>), <em class="emphasis">less-than</em> (<code class="code-inline tex2jax_ignore">&lt;</code>) and <em class="emphasis">equal-to</em> (<code class="code-inline tex2jax_ignore">==</code>) operators. Note that testing for equality in Java uses the double-equal operator (<code class="code-inline tex2jax_ignore">==</code>) because the <em class="emphasis">single-equal</em> operator (<code class="code-inline tex2jax_ignore">=</code>) is reserved for assignment.</div>
-<div class="para" id="p-182">In addition to these operators, Java implements <em class="emphasis">compound relational operators</em>, including <em class="emphasis">greater-than or equal-to</em> (<code class="code-inline tex2jax_ignore">&gt;=</code>), <em class="emphasis">less-than or equal-to</em> (<code class="code-inline tex2jax_ignore">&lt;=</code>) and <em class="emphasis">not-equal-to</em> (<code class="code-inline tex2jax_ignore">!=</code>). These have the obvious interpretations.</div>
+<div class="para" id="p-180">Relational expressions include the familiar <em class="emphasis">greater-than</em> (<code class="code-inline tex2jax_ignore">&gt;</code>), <em class="emphasis">less-than</em> (<code class="code-inline tex2jax_ignore">&lt;</code>) and <em class="emphasis">equal-to</em> (<code class="code-inline tex2jax_ignore">==</code>) operators. Note that testing for equality in Java uses the double-equal operator (<code class="code-inline tex2jax_ignore">==</code>) because the <em class="emphasis">single-equal</em> operator (<code class="code-inline tex2jax_ignore">=</code>) is reserved for assignment.</div>
+<div class="para" id="p-181">In addition to these operators, Java implements <em class="emphasis">compound relational operators</em>, including <em class="emphasis">greater-than or equal-to</em> (<code class="code-inline tex2jax_ignore">&gt;=</code>), <em class="emphasis">less-than or equal-to</em> (<code class="code-inline tex2jax_ignore">&lt;=</code>) and <em class="emphasis">not-equal-to</em> (<code class="code-inline tex2jax_ignore">!=</code>). These have the obvious interpretations.</div>
 <figure class="table table-like" id="table-8"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.10.1<span class="period">.</span></span><span class="space"> </span>Type Promotion</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Operator</th>
@@ -810,8 +771,8 @@ eBookConfig.enable_chatcodes =  false;
 <td class="l m b0 r0 l0 t0 lines">binary, infix</td>
 <td class="l m b0 r0 l0 t0 lines">not equal-to</td>
 </tr>
-</table></div></figure><div class="para" id="p-183">All relational operators evaluate to a <code class="code-inline tex2jax_ignore">boolean</code> value (<code class="code-inline tex2jax_ignore">true</code> or <code class="code-inline tex2jax_ignore">false</code>). If you think about that for a moment, you should see the <em class="emphasis">logic</em> in that statement. In general, relational operators involving <code class="code-inline tex2jax_ignore">&gt;</code> or <code class="code-inline tex2jax_ignore">&lt;</code> take numerical operands only.</div>
-<div class="para" id="p-184">Relational operators may be used in larger expressions that also involve arithmetic and even assignment operators. All relational operators have a precedence that is lower than arithmetic operators. When evaluating expressions that mix both, evaluate the arithmetic operators first, and then the relational operators. Consider the following examples.</div>
+</table></div></figure><div class="para" id="p-182">All relational operators evaluate to a <code class="code-inline tex2jax_ignore">boolean</code> value (<code class="code-inline tex2jax_ignore">true</code> or <code class="code-inline tex2jax_ignore">false</code>). If you think about that for a moment, you should see the <em class="emphasis">logic</em> in that statement. In general, relational operators involving <code class="code-inline tex2jax_ignore">&gt;</code> or <code class="code-inline tex2jax_ignore">&lt;</code> take numerical operands only.</div>
+<div class="para" id="p-183">Relational operators may be used in larger expressions that also involve arithmetic and even assignment operators. All relational operators have a precedence that is lower than arithmetic operators. When evaluating expressions that mix both, evaluate the arithmetic operators first, and then the relational operators. Consider the following examples.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; int a = 1, b = 2, c = 3;
 a ==&gt; 1
 |  created variable a : int
@@ -862,31 +823,31 @@ jshell&gt; a &lt; b &lt; c;
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-185">Note how that last example in the above results in a "bad operand type" error. The syntax <code class="code-inline tex2jax_ignore">a &lt; b &lt; c</code> is common mathematics notation, but it is invalid Java. When evaluating this expression, the left-most operator is evaluated first to the <code class="code-inline tex2jax_ignore">boolean</code> value of <code class="code-inline tex2jax_ignore">true</code>. That is, <code class="code-inline tex2jax_ignore">a &lt; b</code> becomes <code class="code-inline tex2jax_ignore">true</code>. Then the right-most operator is evaluated as <code class="code-inline tex2jax_ignore">true &lt; c</code>. The <code class="code-inline tex2jax_ignore">&lt;</code> operator cannot take a <code class="code-inline tex2jax_ignore">boolean</code> value type as an operand, therefore the expression results in an error.</div>
-<div class="para" id="p-186">Consider one more example.</div>
+<div class="para" id="p-184">Note how that last example in the above results in a "bad operand type" error. The syntax <code class="code-inline tex2jax_ignore">a &lt; b &lt; c</code> is common mathematics notation, but it is invalid Java. When evaluating this expression, the left-most operator is evaluated first to the <code class="code-inline tex2jax_ignore">boolean</code> value of <code class="code-inline tex2jax_ignore">true</code>. That is, <code class="code-inline tex2jax_ignore">a &lt; b</code> becomes <code class="code-inline tex2jax_ignore">true</code>. Then the right-most operator is evaluated as <code class="code-inline tex2jax_ignore">true &lt; c</code>. The <code class="code-inline tex2jax_ignore">&lt;</code> operator cannot take a <code class="code-inline tex2jax_ignore">boolean</code> value type as an operand, therefore the expression results in an error.</div>
+<div class="para" id="p-185">Consider one more example.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; 0.1 + 0.2 == 0.3;
 $12 ==&gt; false
 |  created scratch variable $12 : boolean
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-187">Clearly, we know that <span class="process-math">\(0.1 + 0.2\)</span> is exactly equal to <span class="process-math">\(0.3\text{.}\)</span> Why does Java evaluate this expression to <code class="code-inline tex2jax_ignore">false</code>? Is Java broken?</div>
-<div class="para" id="p-188">It turns out that the problem is not with Java, but with floating point number representation in general. The explanation is obvious by observing the result of <code class="code-inline tex2jax_ignore">01 + 0.2</code>.</div>
+<div class="para" id="p-186">Clearly, we know that <span class="process-math">\(0.1 + 0.2\)</span> is exactly equal to <span class="process-math">\(0.3\text{.}\)</span> Why does Java evaluate this expression to <code class="code-inline tex2jax_ignore">false</code>? Is Java broken?</div>
+<div class="para" id="p-187">It turns out that the problem is not with Java, but with floating point number representation in general. The explanation is obvious by observing the result of <code class="code-inline tex2jax_ignore">01 + 0.2</code>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; 0.1 + 0.2;
 $13 ==&gt; 0.30000000000000004
 |  created scratch variable $13 : double
 
 jshell&gt;
 </b></pre></div>
-<div class="para" id="p-189">The answer is not the expected value of 0.3, but instead it has an extra "4" way out in the last decimal place. The fundamental reason for this is that the numbers <code class="code-inline tex2jax_ignore">0.1</code>, <code class="code-inline tex2jax_ignore">0.2</code>, and <code class="code-inline tex2jax_ignore">0.3</code> cannot be represented exactly in the 16 decimal places of a double-precision number. Recall from <a href="section-gs-computers.html" class="internal" title="Section 1.2: Computers and Computational Devices">Section 1.2</a> <a href="section-gs-computers.html" class="internal" title="Section 1.2: Computers and Computational Devices">Computers and Computational Devices</a> that computer memory stores numeric values in binary (base 2 numbers), not base 10. While integer values may be represented exactly in binary, certain fractional floating-point numbers are not.</div>
-<div class="para" id="p-190">The nearest binary-encoded floating-point number to the value <code class="code-inline tex2jax_ignore">0.3</code>, out to 55 decimal places, is</div>
-<div class="para" id="p-191">
+<div class="para" id="p-188">The answer is not the expected value of 0.3, but instead it has an extra "4" way out in the last decimal place. The fundamental reason for this is that the numbers <code class="code-inline tex2jax_ignore">0.1</code>, <code class="code-inline tex2jax_ignore">0.2</code>, and <code class="code-inline tex2jax_ignore">0.3</code> cannot be represented exactly in the 16 decimal places of a double-precision number. Recall from <a href="section-gs-computers.html" class="internal" title="Section 1.2: Computers and Computational Devices">Section 1.2</a> <a href="section-gs-computers.html" class="internal" title="Section 1.2: Computers and Computational Devices">Computers and Computational Devices</a> that computer memory stores numeric values in binary (base 2 numbers), not base 10. While integer values may be represented exactly in binary, certain fractional floating-point numbers are not.</div>
+<div class="para" id="p-189">The nearest binary-encoded floating-point number to the value <code class="code-inline tex2jax_ignore">0.3</code>, out to 55 decimal places, is</div>
+<div class="para" id="p-190">
 <code class="code-inline tex2jax_ignore">0.299999999999999988897769753748434595763683319091796875</code>.</div>
-<div class="para" id="p-192">By contrast, without considering all the technical detail associated with the rounding and approximation required, the sum <code class="code-inline tex2jax_ignore">0.1 + 0.2</code> evaluates to the value</div>
-<div class="para" id="p-193"><code class="code-inline tex2jax_ignore">0.3000000000000000444089209850062616169452667236328125</code></div>
-<div class="para" id="p-194">a different number. This helps explain why <code class="code-inline tex2jax_ignore">0.1 + 0.2 == 0.3</code> evaluates to <code class="code-inline tex2jax_ignore">false</code>, and teaches us an important lesson about comparing floating-point numbers.</div>
-<div class="para" id="p-195"><dfn class="terminology">Never compare floating-point numbers with <code class="code-inline tex2jax_ignore">==</code>.</dfn></div>
-<div class="para" id="p-196">Instead, when testing floating-point numbers, check if the absolute value of the difference between two floating-point values is <em class="emphasis">close enough</em>, for your purposes. See the following example for the better way to test if <code class="code-inline tex2jax_ignore">0.1 + 0.2</code> is "close enough" to <code class="code-inline tex2jax_ignore">0.3</code>.</div>
+<div class="para" id="p-191">By contrast, without considering all the technical detail associated with the rounding and approximation required, the sum <code class="code-inline tex2jax_ignore">0.1 + 0.2</code> evaluates to the value</div>
+<div class="para" id="p-192"><code class="code-inline tex2jax_ignore">0.3000000000000000444089209850062616169452667236328125</code></div>
+<div class="para" id="p-193">a different number. This helps explain why <code class="code-inline tex2jax_ignore">0.1 + 0.2 == 0.3</code> evaluates to <code class="code-inline tex2jax_ignore">false</code>, and teaches us an important lesson about comparing floating-point numbers.</div>
+<div class="para" id="p-194"><dfn class="terminology">Never compare floating-point numbers with <code class="code-inline tex2jax_ignore">==</code>.</dfn></div>
+<div class="para" id="p-195">Instead, when testing floating-point numbers, check if the absolute value of the difference between two floating-point values is <em class="emphasis">close enough</em>, for your purposes. See the following example for the better way to test if <code class="code-inline tex2jax_ignore">0.1 + 0.2</code> is "close enough" to <code class="code-inline tex2jax_ignore">0.3</code>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; Math.abs((0.1 + 0.2) - 0.3) &lt; 0.000000000000001;
 $1 ==&gt; true
 |  created scratch variable $1 : boolean
@@ -897,12 +858,12 @@ jshell&gt;
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-18"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-197">Start with the following declarations.</div>
+<div class="para" id="p-196">Start with the following declarations.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double xc = 0.5, yc = 0.5, r = 0.3, x = 0.6, y = 0.7;
 </code></pre></div>
-<div class="para" id="p-198">Write one or more Java expressions that test if the distance between the points <span class="process-math">\((x, y)\)</span> and <span class="process-math">\((xc, yc)\)</span> is less than <span class="process-math">\(r\text{.}\)</span> Recall the distance formula <span class="process-math">\(distance = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}\text{.}\)</span>
+<div class="para" id="p-197">Write one or more Java expressions that test if the distance between the points <span class="process-math">\((x, y)\)</span> and <span class="process-math">\((xc, yc)\)</span> is less than <span class="process-math">\(r\text{.}\)</span> Recall the distance formula <span class="process-math">\(distance = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}\text{.}\)</span>
 </div>
-<div class="para" id="p-199">If <span class="process-math">\((xc, yc)\)</span> is the center of a circle with radius <span class="process-math">\(r\text{,}\)</span> then your computation will test if the point <span class="process-math">\((x, y)\)</span> is within the circle.</div></article></section></section></div>
+<div class="para" id="p-198">If <span class="process-math">\((xc, yc)\)</span> is the center of a circle with radius <span class="process-math">\(r\text{,}\)</span> then your computation will test if the point <span class="process-math">\((x, y)\)</span> is within the circle.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-pe-assignment.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-pe-logical.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

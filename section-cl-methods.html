@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,24 +718,15 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -776,14 +737,14 @@ eBookConfig.enable_chatcodes =  false;
 <section class="introduction" id="introduction-46">Objects may have their own methods. Once again, we declare methods <em class="emphasis">without</em> using the <code class="code-inline tex2jax_ignore">static</code> keyword because we want them to be created within the scope of the object, not the class. This gives the method access to the object instance itself through the <code class="code-inline tex2jax_ignore">this</code> keyword and other items declared in the object, including those with private visibility. We need access to the object in order to effectively manage its internal state of the object.</section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Object Methods</span>
 </h3>
-<div class="para" id="p-710">We introduced methods in <a href="section-jp-static-methods.html" class="internal" title="Section 3.2: Static Methods">Section 3.2</a>. The difference between what was described there and the figure below is that here we leave out the <code class="code-inline tex2jax_ignore">static</code> keyword so as to define the method within the scope of the object. Otherwise, the same rules apply.</div>
+<div class="para" id="p-709">We introduced methods in <a href="section-jp-static-methods.html" class="internal" title="Section 3.2: Static Methods">Section 3.2</a>. The difference between what was described there and the figure below is that here we leave out the <code class="code-inline tex2jax_ignore">static</code> keyword so as to define the method within the scope of the object. Otherwise, the same rules apply.</div>
 <figure class="figure figure-like" id="figure-cl-method-anatomy"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/cl-method-anatomy.svg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.3.1<span class="period">.</span></span><span class="space"> </span>Anatomy of a method</figcaption></figure><div class="para" id="p-711">As an example, let’s add three methods to our LED class that turn the LED on and off, and return the state of the LED. Turning an the LED object on sets the internal <code class="code-inline tex2jax_ignore">on</code> variable to <code class="code-inline tex2jax_ignore">true</code> and changes the managed Oval fill color to red. Turning it off resets the <code class="code-inline tex2jax_ignore">on</code> variable to <code class="code-inline tex2jax_ignore">false</code> and the Oval fill color back to dark gray. Obtaining the state of the LED simply returns the value of the private <code class="code-inline tex2jax_ignore">on</code> instance variable. We’ll call these methods <code class="code-inline tex2jax_ignore">turnOn()</code>, <code class="code-inline tex2jax_ignore">turnOff()</code>, and <code class="code-inline tex2jax_ignore">isOn()</code>. None of these new methods have parameters.</div>
-<div class="para" id="p-712">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.3.1<span class="period">.</span></span><span class="space"> </span>Anatomy of a method</figcaption></figure><div class="para" id="p-710">As an example, let’s add three methods to our LED class that turn the LED on and off, and return the state of the LED. Turning an the LED object on sets the internal <code class="code-inline tex2jax_ignore">on</code> variable to <code class="code-inline tex2jax_ignore">true</code> and changes the managed Oval fill color to red. Turning it off resets the <code class="code-inline tex2jax_ignore">on</code> variable to <code class="code-inline tex2jax_ignore">false</code> and the Oval fill color back to dark gray. Obtaining the state of the LED simply returns the value of the private <code class="code-inline tex2jax_ignore">on</code> instance variable. We’ll call these methods <code class="code-inline tex2jax_ignore">turnOn()</code>, <code class="code-inline tex2jax_ignore">turnOff()</code>, and <code class="code-inline tex2jax_ignore">isOn()</code>. None of these new methods have parameters.</div>
+<div class="para" id="p-711">
 <a href="" class="xref" data-knowl="./knowl/listing-cl-led4.html" title="Listing 9.3.2">Listing 9.3.2</a> shows the code changes to our class definition. The added <code class="code-inline tex2jax_ignore">turnOn()</code> and <code class="code-inline tex2jax_ignore">turnOff()</code> methods do what we expect, setting and configuring the state of the object by modifying its private instance variables. The <code class="code-inline tex2jax_ignore">isOn()</code> returns the boolean value of the <code class="code-inline tex2jax_ignore">on</code> instance variable. Because we have <em class="emphasis">abstracted</em> the concept of the LED being off and on and exposed that as these new methods, it is wise to remove the initial explicit instance variable configuration statements from the constructor that starts the LED in the off state and replace them by invoking the <code class="code-inline tex2jax_ignore">turnOff()</code> method directly.</div>
-<div class="para" id="p-713">Consider what might happen if we decided to leave the initialization of the LED object’s instance variables by setting the object state explicitly in the constructor. Doing this requires us to make sure that the constructor and the <code class="code-inline tex2jax_ignore">turnOff()</code> method remained in sync. If we decided to change the fill color of the LED when off, and we modified the code in <code class="code-inline tex2jax_ignore">turnOff()</code> but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such an oversight can lead to more serious problems. This important software development principle has been dubbed <dfn class="terminology">Don’t repeat yourself</dfn> or <dfn class="terminology">DRY</dfn>.</div>
+<div class="para" id="p-712">Consider what might happen if we decided to leave the initialization of the LED object’s instance variables by setting the object state explicitly in the constructor. Doing this requires us to make sure that the constructor and the <code class="code-inline tex2jax_ignore">turnOff()</code> method remained in sync. If we decided to change the fill color of the LED when off, and we modified the code in <code class="code-inline tex2jax_ignore">turnOff()</code> but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such an oversight can lead to more serious problems. This important software development principle has been dubbed <dfn class="terminology">Don’t repeat yourself</dfn> or <dfn class="terminology">DRY</dfn>.</div>
 <article class="assemblage assemblage-like" id="assemblage-dry"><h4 class="heading"><span class="title">Principle: Don’t Repeat Yourself (DRY).</span></h4>
-<div class="para" id="p-714">Every concept must have a single, authoritative representation within a system. Reduce repetition of concepts likely to change by replacing them with reusable abstractions.</div></article><div class="para" id="p-715">To test our new methods, in addition to replacing configuration statements in the constructor with <code class="code-inline tex2jax_ignore">turnOff()</code>, we invoke <code class="code-inline tex2jax_ignore">turnOn()</code> in <code class="code-inline tex2jax_ignore">main(…)</code> on both LED objects after instantiation. We also test the state of the first LED object by invoking its <code class="code-inline tex2jax_ignore">isOn()</code> method and printing the result. See the result in <a href="" class="xref" data-knowl="./knowl/figure-cl-led4.html" title="Figure 9.3.3">Figure 9.3.3</a>.</div>
+<div class="para" id="p-713">Every concept must have a single, authoritative representation within a system. Reduce repetition of concepts likely to change by replacing them with reusable abstractions.</div></article><div class="para" id="p-714">To test our new methods, in addition to replacing configuration statements in the constructor with <code class="code-inline tex2jax_ignore">turnOff()</code>, we invoke <code class="code-inline tex2jax_ignore">turnOn()</code> in <code class="code-inline tex2jax_ignore">main(…)</code> on both LED objects after instantiation. We also test the state of the first LED object by invoking its <code class="code-inline tex2jax_ignore">isOn()</code> method and printing the result. See the result in <a href="" class="xref" data-knowl="./knowl/figure-cl-led4.html" title="Figure 9.3.3">Figure 9.3.3</a>.</div>
 <figure class="listing figure-like" id="listing-cl-led4"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LED.java (version 4)
 // A simple LED display class
 import doodlepad.*;
@@ -834,15 +795,15 @@ java -cp .;doodlepad.jar LED
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.3.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LED.java</code> (version 4)</figcaption></figure></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.2</span> <span class="title">Accessor and Mutator Methods</span>
 </h3>
-<div class="para" id="p-716">Encapsulation requires that we manage access to instance variables. We can make an instance variable accessible simply by declaring it with public visibility. This leaves the variable’s value wide open to change. We lose the ability to manage it, such as by restricting its value to a valid range.</div>
-<div class="para" id="p-717">The standard way is to manage instance variables is to declare them with private visibility, and add methods that are used to set the value of the instance variable and to get the value of an instance variable. A method designed to set the value of an instance variable is called a <dfn class="terminology">mutator</dfn> method, also known as a <dfn class="terminology">setter</dfn>. A method designed to get the value of an instance variable is called an <dfn class="terminology">accessor</dfn> method, also known as a <dfn class="terminology">getter</dfn>. By convention, we typically name these methods by prepending the instance variable named with <code class="code-inline tex2jax_ignore">set</code> in the case of a mutator method (setters), and <code class="code-inline tex2jax_ignore">get</code> in the case of an accessor method (getters).</div>
-<div class="para" id="p-718">By defining mutator methods and accessor methods for an instance variable, we open up a wide range of options for managing instance variable values. For example, if we want to restict the value of an <code class="code-inline tex2jax_ignore">age</code> instance variable to a number greater-than or equal-to 0.0, we could test the value before assigning it. The following <code class="code-inline tex2jax_ignore">setAge(…)</code> method is a simple example.</div>
+<div class="para" id="p-715">Encapsulation requires that we manage access to instance variables. We can make an instance variable accessible simply by declaring it with public visibility. This leaves the variable’s value wide open to change. We lose the ability to manage it, such as by restricting its value to a valid range.</div>
+<div class="para" id="p-716">The standard way is to manage instance variables is to declare them with private visibility, and add methods that are used to set the value of the instance variable and to get the value of an instance variable. A method designed to set the value of an instance variable is called a <dfn class="terminology">mutator</dfn> method, also known as a <dfn class="terminology">setter</dfn>. A method designed to get the value of an instance variable is called an <dfn class="terminology">accessor</dfn> method, also known as a <dfn class="terminology">getter</dfn>. By convention, we typically name these methods by prepending the instance variable named with <code class="code-inline tex2jax_ignore">set</code> in the case of a mutator method (setters), and <code class="code-inline tex2jax_ignore">get</code> in the case of an accessor method (getters).</div>
+<div class="para" id="p-717">By defining mutator methods and accessor methods for an instance variable, we open up a wide range of options for managing instance variable values. For example, if we want to restict the value of an <code class="code-inline tex2jax_ignore">age</code> instance variable to a number greater-than or equal-to 0.0, we could test the value before assigning it. The following <code class="code-inline tex2jax_ignore">setAge(…)</code> method is a simple example.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<div class="para" id="p-719">As another example, consider that we can configure an instance variable to be <em class="emphasis">read-only</em> simply by defining a getter method and but not a corresponding setter method. Without a setter, we can never change the instance variable value, only read it.</div>
-<div class="para" id="p-720">Let’s expand our LED class example once more. Let’s assume that we can choose the color that the LED emits when it is on to one of four values: RED, GREEN, BLUE, and YELLOW. It is easy enough to add an instance variable that holds an LED color, but we also need to manage that variable, limiting it to one of the four possible values. To manage this instance variable, we must add to the LED class a <code class="code-inline tex2jax_ignore">setColor(…)</code> method, a setter, and a <code class="code-inline tex2jax_ignore">getColor()</code> method, a getter. To help with this addition, let’s define an enum with constants for the four LED colors, similar to what we did in <a href="section-pe-enumerated.html" class="internal" title="Section 2.7: Enumerated Types">Section 2.7</a>.</div>
+<div class="para" id="p-718">As another example, consider that we can configure an instance variable to be <em class="emphasis">read-only</em> simply by defining a getter method and but not a corresponding setter method. Without a setter, we can never change the instance variable value, only read it.</div>
+<div class="para" id="p-719">Let’s expand our LED class example once more. Let’s assume that we can choose the color that the LED emits when it is on to one of four values: RED, GREEN, BLUE, and YELLOW. It is easy enough to add an instance variable that holds an LED color, but we also need to manage that variable, limiting it to one of the four possible values. To manage this instance variable, we must add to the LED class a <code class="code-inline tex2jax_ignore">setColor(…)</code> method, a setter, and a <code class="code-inline tex2jax_ignore">getColor()</code> method, a getter. To help with this addition, let’s define an enum with constants for the four LED colors, similar to what we did in <a href="section-pe-enumerated.html" class="internal" title="Section 2.7: Enumerated Types">Section 2.7</a>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">enum LEDColor { RED, GREEN, BLUE, YELLOW };
 </code></pre></div>
-<div class="para" id="p-721">To work this option into our LED class, we made the following changes. Refer to <a href="" class="xref" data-knowl="./knowl/listing-cl-led5.html" title="Listing 9.3.4">Listing 9.3.4</a>.</div>
+<div class="para" id="p-720">To work this option into our LED class, we made the following changes. Refer to <a href="" class="xref" data-knowl="./knowl/listing-cl-led5.html" title="Listing 9.3.4">Listing 9.3.4</a>.</div>
 <ol class="decimal">
 <li id="li-281"><div class="para" id="p-derived-li-281"></div></li>
 <li id="li-282"><div class="para" id="p-derived-li-282">Added the enum to the bottom of our LED.java file.</div></li>
@@ -932,11 +893,11 @@ java -cp .;doodlepad.jar LED
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.3.5<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LED.java</code> (version 5)</figcaption></figure></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.3</span> <span class="title">Method Overloading</span>
 </h3>
-<div class="para" id="p-722">When your source code specifies that a method is to be invoked, the Java compiler will match up that invocation with an method implementation. This way, when your program runs, the proper method is executed. This matching task considers more than just the name of the method. The match is performed on the entire <dfn class="terminology">method signature</dfn>. A method signature is composed of the method name and its parameter list, including parameter type and order.</div>
-<div class="para" id="p-723">Matching on the entire signature, and not just the method name, lets us define multiple methods having the same name, provided the signatures are distinct. This is called <dfn class="terminology">method overloading</dfn>. The thought is that the method <em class="emphasis">name</em> is given multiple meanings, and so it is <em class="emphasis">overloaded</em>.</div>
-<div class="para" id="p-724">A constructor may be overloaded as well. Multiple constructors exist in a class provided the signatures are distinct. Overloading a method or constructor gives us the ability to abstract the same concept using a single name, but permitting the user to pass different parameter values.</div>
-<div class="para" id="p-725">A good application of method overloading is to set default parameter values for a method or constructor. Consider the <code class="code-inline tex2jax_ignore">setFillColor(…)</code> method of all DoodlePad shape objects. As we know, this method can take the three color components: red, green, and blue, and that is the way we’ve used it. But, in fact, there are several other options (overloads) for invoking <code class="code-inline tex2jax_ignore">setFillColor(…)</code>.</div>
-<div class="para" id="p-726">Colors in DoodlePad may be partially or fully transparent. This is set using fourth value in [0, 255] known as <dfn class="terminology">alpha</dfn>. An alpha of 0 means fully transparent and an alpha of 255 means fully opaque. All color-related DoodlePad methods can take four color component parameters, the fourth being transparency specified as alpha. If that fourth parameter is omitted, DoodlePad substitutes an alpha of 255, fully opaque. This is implemented by overloading the definition of <code class="code-inline tex2jax_ignore">setFillColor(…)</code>, which you can observe in the <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">DoodlePad source code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-117" id="fn-117"><sup> 1 </sup></a>.</div>
+<div class="para" id="p-721">When your source code specifies that a method is to be invoked, the Java compiler will match up that invocation with an method implementation. This way, when your program runs, the proper method is executed. This matching task considers more than just the name of the method. The match is performed on the entire <dfn class="terminology">method signature</dfn>. A method signature is composed of the method name and its parameter list, including parameter type and order.</div>
+<div class="para" id="p-722">Matching on the entire signature, and not just the method name, lets us define multiple methods having the same name, provided the signatures are distinct. This is called <dfn class="terminology">method overloading</dfn>. The thought is that the method <em class="emphasis">name</em> is given multiple meanings, and so it is <em class="emphasis">overloaded</em>.</div>
+<div class="para" id="p-723">A constructor may be overloaded as well. Multiple constructors exist in a class provided the signatures are distinct. Overloading a method or constructor gives us the ability to abstract the same concept using a single name, but permitting the user to pass different parameter values.</div>
+<div class="para" id="p-724">A good application of method overloading is to set default parameter values for a method or constructor. Consider the <code class="code-inline tex2jax_ignore">setFillColor(…)</code> method of all DoodlePad shape objects. As we know, this method can take the three color components: red, green, and blue, and that is the way we’ve used it. But, in fact, there are several other options (overloads) for invoking <code class="code-inline tex2jax_ignore">setFillColor(…)</code>.</div>
+<div class="para" id="p-725">Colors in DoodlePad may be partially or fully transparent. This is set using fourth value in [0, 255] known as <dfn class="terminology">alpha</dfn>. An alpha of 0 means fully transparent and an alpha of 255 means fully opaque. All color-related DoodlePad methods can take four color component parameters, the fourth being transparency specified as alpha. If that fourth parameter is omitted, DoodlePad substitutes an alpha of 255, fully opaque. This is implemented by overloading the definition of <code class="code-inline tex2jax_ignore">setFillColor(…)</code>, which you can observe in the <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">DoodlePad source code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-117" id="fn-117"><sup> 1 </sup></a>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">/**
 * Set the fill color with which to draw the shape
 * @param   red     the red component of the color [0, 255]
@@ -947,8 +908,8 @@ java -cp .;doodlepad.jar LED
      setFillColor( red, green, blue, 255 );   // Default alpha to 255
  }
 </code></pre></div>
-<div class="para" id="p-727">In the previous example of DoodlePad source code, the three-parameter overload of <code class="code-inline tex2jax_ignore">setFillColor(…)</code> just invokes the four-parameter version with <code class="code-inline tex2jax_ignore">255</code> passed as the alpha value.</div>
-<div class="para" id="p-728">All shades of gray in the RGB color model are formed by setting the red, green, and blue color components to the same value within [0, 255]. To save typing, DoodlePad provides an overload that repeats the first value three times when only one parameter is provided. See the following additional overload. The <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">DoodlePad source code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-118" id="fn-118"><sup> 2 </sup></a> is an interesting repository to explore see applications of many of the principles that we study in this book.</div>
+<div class="para" id="p-726">In the previous example of DoodlePad source code, the three-parameter overload of <code class="code-inline tex2jax_ignore">setFillColor(…)</code> just invokes the four-parameter version with <code class="code-inline tex2jax_ignore">255</code> passed as the alpha value.</div>
+<div class="para" id="p-727">All shades of gray in the RGB color model are formed by setting the red, green, and blue color components to the same value within [0, 255]. To save typing, DoodlePad provides an overload that repeats the first value three times when only one parameter is provided. See the following additional overload. The <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">DoodlePad source code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-118" id="fn-118"><sup> 2 </sup></a> is an interesting repository to explore see applications of many of the principles that we study in this book.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">/**
 * Set the gray scale fill color with which to draw the shape.
 * @param gray the gray scale value in the range [0, 255]
@@ -957,8 +918,8 @@ public void setFillColor(double gray) {
     this.setFillColor(gray, gray, gray, 255);
 }
 </code></pre></div>
-<div class="para" id="p-729">Constructors may be overloaded as well. The Java compile matches the invoked constructor signature to available definitions to ensure the proper constructor implementation is invoked.</div>
-<div class="para" id="p-730">As an example, rather than defaulting the LED on color to RED and then being required to change it using the <code class="code-inline tex2jax_ignore">setColor(…)</code> method, let’s overload the constructor as two implementations. The the more general implementation takes the LED on color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value <code class="code-inline tex2jax_ignore">LEDColor.RED</code> as the third parameter, making it the default. Note that a constructor overload is invoked using <code class="code-inline tex2jax_ignore">this</code> instead of the class name, and no <code class="code-inline tex2jax_ignore">new</code> keyword.</div>
+<div class="para" id="p-728">Constructors may be overloaded as well. The Java compile matches the invoked constructor signature to available definitions to ensure the proper constructor implementation is invoked.</div>
+<div class="para" id="p-729">As an example, rather than defaulting the LED on color to RED and then being required to change it using the <code class="code-inline tex2jax_ignore">setColor(…)</code> method, let’s overload the constructor as two implementations. The the more general implementation takes the LED on color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value <code class="code-inline tex2jax_ignore">LEDColor.RED</code> as the third parameter, making it the default. Note that a constructor overload is invoked using <code class="code-inline tex2jax_ignore">this</code> instead of the class name, and no <code class="code-inline tex2jax_ignore">new</code> keyword.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Overloaded constructor defaults color to RED
 public LED(double x, double y) {
   // Invoke alternative constructor with RED as default
@@ -971,7 +932,7 @@ public LED(double x, double y, LEDColor color) {
   this.turnOff();             // Init state
 }
 </code></pre></div>
-<div class="para" id="p-731">It is common practice in Java to define one method or constructor that does all the real work, and then one or more overloads that provide default parameter values. This practice is also a good example of <a href="" class="xref" data-knowl="./knowl/assemblage-dry.html" title="Assemblage: Principle: Don’t Repeat Yourself (DRY)">DRY</a>.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-117"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java</code></div></div>
+<div class="para" id="p-730">It is common practice in Java to define one method or constructor that does all the real work, and then one or more overloads that provide default parameter values. This practice is also a good example of <a href="" class="xref" data-knowl="./knowl/assemblage-dry.html" title="Assemblage: Principle: Don’t Repeat Yourself (DRY)">DRY</a>.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-117"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-118"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java</code></div></div>
 </div>
 <div class="ptx-content-footer">

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ExceptionTest.java
+public class ExceptionTest {
+  public static void main(String[] args) {
+    int[] nums = {0, 6, 2};
+    int result;
+
+    try {
+      result = nums[3]/nums[0];   // Throws exception
+      //result = nums[1]/nums[2];   // Does not throw exception
+      System.out.println("result: " + result);
+    }
+    catch (ArithmeticException e) {
+      System.out.println("You divided by 0");
+    }
+    catch (Exception e) {       // Catch Exception objects
+      System.out.println(e);    // Something else happened
+    }
+    finally {                   // Time to clean up
+      System.out.println("Cleaning up...");
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">12.3.5<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ExceptionTest.java</code> (version 3)</figcaption></figure><span class="incontext"><a href="section-ex-catching.html#listing-ex-extest3" class="internal">in-context</a></span>
+</body>
+</html>

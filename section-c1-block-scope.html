@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,31 +718,22 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-c1-block-scope"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.7</span> <span class="title">Block Scope</span>
 </h2>
-<section class="introduction" id="introduction-29"><div class="para" id="p-548">Recall that the <dfn class="terminology">scope</dfn> of a variable is defined by the location where it is declared. It is important to understand that the location in your program where a variable is declared dictates from where it may be accesses. In <a href="section-rt-scope.html" class="internal" title="Section 5.4: Variable Scope and Lifetime">Section 5.4</a> we introduced the main kinds of program scope in Java. These were as follows, listed in order from least restrictive to most restrictive.</div> <ol class="decimal">
+<section class="introduction" id="introduction-29"><div class="para" id="p-547">Recall that the <dfn class="terminology">scope</dfn> of a variable is defined by the location where it is declared. It is important to understand that the location in your program where a variable is declared dictates from where it may be accesses. In <a href="section-rt-scope.html" class="internal" title="Section 5.4: Variable Scope and Lifetime">Section 5.4</a> we introduced the main kinds of program scope in Java. These were as follows, listed in order from least restrictive to most restrictive.</div> <ol class="decimal">
 <li id="li-177"><div class="para" id="p-derived-li-177">
 <em class="emphasis">package scope</em> (limited to a Java package).</div></li>
 <li id="li-178"><div class="para" id="p-derived-li-178">
@@ -783,7 +744,7 @@ eBookConfig.enable_chatcodes =  false;
 <dfn class="terminology">method scope</dfn> (limited to a specific method),</div></li>
 <li id="li-181"><div class="para" id="p-derived-li-181">
 <dfn class="terminology">block scope</dfn> (limited to a specific block of code),</div></li>
-</ol> <div class="para" id="p-549">Before closing this section, it is a good time to introduce <dfn class="terminology">block</dfn> scope, the most restrictive scope in Java.</div> <div class="para" id="p-550">Variables may be declared almost anywhere in a Java program, including within a statement such as an if-statement or while-statement. The block of code associated with one of these statements forms its own scope, appropriately called <dfn class="terminology">block scope</dfn>.</div> <div class="para" id="p-551">As with other scopes, if a variable is declared within a code block it may not be accessed outside that scope. The compiler can detect this mistake and will let us know when we try to violate this rule. Consider the following small example and the attempt to compile this program in the console session following. The compiler tells us that it cannot access the variable <code class="code-inline tex2jax_ignore">o</code> because it was declared within the scope of the while-statement, a block scope, and so it cannot be accessed outside that scope. This is true even though we access the varaible within the block scope to initialize the fill color of all Oval objects to green.</div> <figure class="listing figure-like" id="listing-c1-block-scope"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// BlockScope.java
+</ol> <div class="para" id="p-548">Before closing this section, it is a good time to introduce <dfn class="terminology">block</dfn> scope, the most restrictive scope in Java.</div> <div class="para" id="p-549">Variables may be declared almost anywhere in a Java program, including within a statement such as an if-statement or while-statement. The block of code associated with one of these statements forms its own scope, appropriately called <dfn class="terminology">block scope</dfn>.</div> <div class="para" id="p-550">As with other scopes, if a variable is declared within a code block it may not be accessed outside that scope. The compiler can detect this mistake and will let us know when we try to violate this rule. Consider the following small example and the attempt to compile this program in the console session following. The compiler tells us that it cannot access the variable <code class="code-inline tex2jax_ignore">o</code> because it was declared within the scope of the while-statement, a block scope, and so it cannot be accessed outside that scope. This is true even though we access the varaible within the block scope to initialize the fill color of all Oval objects to green.</div> <figure class="listing figure-like" id="listing-c1-block-scope"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// BlockScope.java
 import doodlepad.*;
 
 public class BlockScope {
@@ -805,7 +766,7 @@ public class BlockScope {
     symbol:   variable o
     location: class BlockScope
 1 error
-</pre></div> <div class="para" id="p-552">In general, it is a very good idea to declare your variables in a scope that is as narrow as feasible and still bea ble to solve your problem. You may be tempted to just declare all variables in the outer class scope so that you don’t have to worry about declaring them again. Resist the temptation. This is often the cause for subtle bugs that can be very hard to find.</div> <div class="para" id="p-553">In the <a href="" class="xref" data-knowl="./knowl/listing-c1-charrepeats.html" title="Listing 6.7.2">Listing 6.7.2</a>, we declare <code class="code-inline tex2jax_ignore">i</code> once at the top of our program so we never have to worry about it again. In the <code class="code-inline tex2jax_ignore">main(…)</code> method, we loop 5 times and each time invoke the helper method <code class="code-inline tex2jax_ignore">repeatChars(…)</code>, which takes <code class="code-inline tex2jax_ignore">char</code> and <code class="code-inline tex2jax_ignore">count</code> parameters identifying the character to repeat and the number of times to repeat it in the returned String. The <code class="code-inline tex2jax_ignore">main(…)</code> prints the constructed String and continues to the next iteration.</div> <figure class="listing figure-like" id="listing-c1-charrepeats"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class CharRepeats {
+</pre></div> <div class="para" id="p-551">In general, it is a very good idea to declare your variables in a scope that is as narrow as feasible and still bea ble to solve your problem. You may be tempted to just declare all variables in the outer class scope so that you don’t have to worry about declaring them again. Resist the temptation. This is often the cause for subtle bugs that can be very hard to find.</div> <div class="para" id="p-552">In the <a href="" class="xref" data-knowl="./knowl/listing-c1-charrepeats.html" title="Listing 6.7.2">Listing 6.7.2</a>, we declare <code class="code-inline tex2jax_ignore">i</code> once at the top of our program so we never have to worry about it again. In the <code class="code-inline tex2jax_ignore">main(…)</code> method, we loop 5 times and each time invoke the helper method <code class="code-inline tex2jax_ignore">repeatChars(…)</code>, which takes <code class="code-inline tex2jax_ignore">char</code> and <code class="code-inline tex2jax_ignore">count</code> parameters identifying the character to repeat and the number of times to repeat it in the returned String. The <code class="code-inline tex2jax_ignore">main(…)</code> prints the constructed String and continues to the next iteration.</div> <figure class="listing figure-like" id="listing-c1-charrepeats"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class CharRepeats {
     // Declare once for entire program
     public static int i = 0;
 
@@ -831,13 +792,13 @@ public class BlockScope {
     }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.7.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">CharRepeats.java</code></figcaption></figure> <div class="para" id="p-554">Next we compile and run the program. The program compiles and runs just fine, and it looks correct. In fact, when I tested the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method individually, outside the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method, it worked correctly. The loop counter <code class="code-inline tex2jax_ignore">i</code> is properly initialized and incremented by 1 every time. I expected the output "A", "AA", "AAA", "AAAA", "AAAAA". But as you can see below the output is "A", "AAA", "AAAAA". It is clear that the counter in <code class="code-inline tex2jax_ignore">main(…)</code> increases by 1 each time. I can see with my own eyes the statement <code class="code-inline tex2jax_ignore">i++;</code>. So what is the problem? Could it have something to do with the variable <code class="code-inline tex2jax_ignore">i</code> that we declared in the outer class scope?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac CharRepeats.java
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.7.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">CharRepeats.java</code></figcaption></figure> <div class="para" id="p-553">Next we compile and run the program. The program compiles and runs just fine, and it looks correct. In fact, when I tested the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method individually, outside the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method, it worked correctly. The loop counter <code class="code-inline tex2jax_ignore">i</code> is properly initialized and incremented by 1 every time. I expected the output "A", "AA", "AAA", "AAAA", "AAAAA". But as you can see below the output is "A", "AAA", "AAAAA". It is clear that the counter in <code class="code-inline tex2jax_ignore">main(…)</code> increases by 1 each time. I can see with my own eyes the statement <code class="code-inline tex2jax_ignore">i++;</code>. So what is the problem? Could it have something to do with the variable <code class="code-inline tex2jax_ignore">i</code> that we declared in the outer class scope?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac CharRepeats.java
 java CharRepeats
 </b>A
 AAA
 AAAAA
-</pre></div> <div class="para" id="p-555">If you look closely you will see that <code class="code-inline tex2jax_ignore">i</code> is used as the counter for the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method as well as in the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method. In both cases <code class="code-inline tex2jax_ignore">i</code> reset to 0, but <code class="code-inline tex2jax_ignore">repeatChars(…)</code> leaves the value of <code class="code-inline tex2jax_ignore">i</code> at <code class="code-inline tex2jax_ignore">count + 1</code>. When <code class="code-inline tex2jax_ignore">repeatChars(…)</code> exits it returns to the while-statement in <code class="code-inline tex2jax_ignore">main(…)</code> already in progress. This statement continues, but does with a value of <code class="code-inline tex2jax_ignore">i</code> that has been changed by <code class="code-inline tex2jax_ignore">repeatChars(…)</code>. In this case, the result is that the counter is advanced too quickly, resulting in some of the expected output being skipped.</div> <article class="assemblage assemblage-like" id="assemblage-c1-most-narrow-scope"><h3 class="heading"><span class="title">Principle: Most Narrow Scope Feasible.</span></h3>
-<div class="para" id="p-556">Always declare your variables in the most narrow scope feasible, while still allowing your program to solve your problem. This practice minimizes the chances that a single variable declared in an outer scope but used in multiple inner scopes for different purposes are inadvertently modified unexpectedly. This avoid bugs that are hard to fine.</div></article></section></section></div>
+</pre></div> <div class="para" id="p-554">If you look closely you will see that <code class="code-inline tex2jax_ignore">i</code> is used as the counter for the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method as well as in the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method. In both cases <code class="code-inline tex2jax_ignore">i</code> reset to 0, but <code class="code-inline tex2jax_ignore">repeatChars(…)</code> leaves the value of <code class="code-inline tex2jax_ignore">i</code> at <code class="code-inline tex2jax_ignore">count + 1</code>. When <code class="code-inline tex2jax_ignore">repeatChars(…)</code> exits it returns to the while-statement in <code class="code-inline tex2jax_ignore">main(…)</code> already in progress. This statement continues, but does with a value of <code class="code-inline tex2jax_ignore">i</code> that has been changed by <code class="code-inline tex2jax_ignore">repeatChars(…)</code>. In this case, the result is that the counter is advanced too quickly, resulting in some of the expected output being skipped.</div> <article class="assemblage assemblage-like" id="assemblage-c1-most-narrow-scope"><h3 class="heading"><span class="title">Principle: Most Narrow Scope Feasible.</span></h3>
+<div class="para" id="p-555">Always declare your variables in the most narrow scope feasible, while still allowing your program to solve your problem. This practice minimizes the chances that a single variable declared in an outer scope but used in multiple inner scopes for different purposes are inadvertently modified unexpectedly. This avoid bugs that are hard to fine.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-c1-nested-control.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-c1-concepts.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

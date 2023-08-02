@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="850"
+   height="650"
+   overflow="hidden"
+   version="1.1"
+   id="svg314"
+   sodipodi:docname="ex-exception-class-hierachy.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs318" />
+  <sodipodi:namedview
+     id="namedview316"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.0763889"
+     inkscape:cx="453.83226"
+     inkscape:cy="287.53548"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg314" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="11px"
+     id="text228"
+     x="4.61092"
+     y="717">23F</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="13px"
+     id="text230"
+     x="1268.6801"
+     y="712">5</text>
+  <path
+     d="m 321.25484,99.316129 c 0,-3.59 2.91,-6.5 6.5,-6.5 h 149 c 3.59,0 6.5,2.91 6.5,6.5 v 26.000001 c 0,3.59 -2.91,6.5 -6.5,6.5 h -149 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path234" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text236"
+     x="350.27985"
+     y="119.31613">Throwable</text>
+  <path
+     d="m 159.25484,213.31613 c 0,-3.59 2.91,-6.5 6.5,-6.5 h 149 c 3.59,0 6.5,2.91 6.5,6.5 v 26 c 0,3.59 -2.91,6.5 -6.5,6.5 h -149 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path238" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text240"
+     x="192.12685"
+     y="233.31613">Exception</text>
+  <path
+     d="m 483.25484,213.31613 c 0,-3.59 2.91,-6.5 6.5,-6.5 h 149 c 3.59,0 6.5,2.91 6.5,6.5 v 26 c 0,3.59 -2.91,6.5 -6.5,6.5 h -149 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path242" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text244"
+     x="539.51691"
+     y="233.31613">Error</text>
+  <path
+     d="m 402.60784,131.81613 v 37.248 h -162.353 v 37.247"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path246" />
+  <path
+     d="m 402.25484,131.81613 v 37.2476 h 162 v 37.2475"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path248" />
+  <path
+     d="m 392.25484,147.81613 10,-15 10,15 z"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path250" />
+  <path
+     d="m 547.25484,329.31613 c 0,-3.59 2.91,-6.5 6.5,-6.5 h 215 c 3.59,0 6.5,2.91 6.5,6.5 v 26 c 0,3.59 -2.91,6.5 -6.5,6.5 h -215 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path252" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text254"
+     x="571.7959"
+     y="349.31613">RuntimeException</text>
+  <path
+     d="m 240.25484,245.81613 v 38.2048 h 421.059 v 38.2049"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path256" />
+  <path
+     d="m 483.25484,506.48313 c 0,-3.682 2.985,-6.667 6.667,-6.667 h 338.663 c 3.69,0 6.67,2.985 6.67,6.667 v 26.666 c 0,3.682 -2.98,6.667 -6.67,6.667 h -338.663 c -3.682,0 -6.667,-2.985 -6.667,-6.667 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path258" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text260"
+     x="518.39691"
+     y="526.3161">IndexOutOfBoundsException</text>
+  <text
+     fill="#203864"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text262"
+     x="660.41388"
+     y="547.3161">.</text>
+  <text
+     fill="#203864"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text264"
+     x="660.41388"
+     y="560.3161">.</text>
+  <text
+     fill="#203864"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text266"
+     x="660.41388"
+     y="574.3161">.</text>
+  <path
+     d="m 661.05784,361.81613 -1.80262,137.913"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path268" />
+  <path
+     d="m 651.25484,377.81613 10,-15 10,15 z"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path270" />
+  <path
+     d="m 483.25484,409.31613 c 0,-3.59 2.91,-6.5 6.5,-6.5 h 339 c 3.59,0 6.5,2.91 6.5,6.5 v 26 c 0,3.59 -2.91,6.5 -6.5,6.5 h -339 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path272" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text274"
+     x="559.86285"
+     y="429.31613">ArithmeticException</text>
+  <path
+     d="m 483.25484,457.48313 c 0,-3.682 2.985,-6.667 6.667,-6.667 h 338.663 c 3.69,0 6.67,2.985 6.67,6.667 v 26.666 c 0,3.682 -2.98,6.667 -6.67,6.667 h -338.663 c -3.682,0 -6.667,-2.985 -6.667,-6.667 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path276" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text278"
+     x="556.52991"
+     y="478.31613">NullPointerException</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="32px"
+     id="text280"
+     x="514.29889"
+     y="616.3161">(unchecked exceptions)</text>
+  <path
+     d="m 20.254839,409.31613 c 0,-3.59 2.91,-6.5 6.5,-6.5 H 291.75484 c 3.59,0 6.5,2.91 6.5,6.5 v 26 c 0,3.59 -2.91,6.5 -6.5,6.5 H 26.754839 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path282" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text284"
+     x="45.550846"
+     y="429.31613">FileNotFoundException</text>
+  <text
+     fill="#203864"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text286"
+     x="158.53185"
+     y="457.31613">.</text>
+  <text
+     fill="#203864"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text288"
+     x="158.53185"
+     y="470.31613">.</text>
+  <text
+     fill="#203864"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text290"
+     x="158.53185"
+     y="484.31613">.</text>
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="32px"
+     id="text292"
+     x="26.667835"
+     y="616.3161">(checked exceptions)</text>
+  <path
+     d="m 159.25484,402.46313 v -118.442 h 80.823 v -38.205"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path294" />
+  <path
+     d="m 230.25484,262.81613 10,-16 10,16 z"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path296" />
+  <path
+     d="m 321.25484,23.316129 c 0,-3.59 2.91,-6.4999 6.5,-6.4999 h 149 c 3.59,0 6.5,2.9099 6.5,6.4999 v 26 c 0,3.59 -2.91,6.5 -6.5,6.5 h -149 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path298" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text300"
+     x="369.82379"
+     y="43.316128">Object</text>
+  <path
+     d="m 402.25484,55.816129 v 36.271"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="none"
+     fill-rule="evenodd"
+     id="path302" />
+  <path
+     d="m 392.25484,72.816129 10,-16 10,16 z"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path304" />
+  <path
+     d="m 149.25484,376.81613 10,-15 10,15 z"
+     stroke="#2e75b6"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path306" />
+  <path
+     d="m 45.254839,329.31613 c 0,-3.59 2.91,-6.5 6.5,-6.5 H 266.75484 c 3.59,0 6.5,2.91 6.5,6.5 v 26 c 0,3.59 -2.91,6.5 -6.5,6.5 H 51.754839 c -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
+     stroke="#2f528f"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#4472c4"
+     fill-rule="evenodd"
+     id="path308" />
+  <text
+     fill="#ffffff"
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     font-weight="400"
+     font-size="24px"
+     id="text310"
+     x="100.38683"
+     y="349.31613">IOException</text>
+</svg>

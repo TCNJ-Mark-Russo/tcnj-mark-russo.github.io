@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Do not use <code class="code-inline tex2jax_ignore">==</code> to compare floating-point numbers. Test for <em class="emphasis">close enough</em> by computing the absolute value of the difference and check that it is less than the desired precision.</div>
+<div class="para">We know that for a logical conjunction to be true, both the left and right subexpressions must evaluate to <code class="code-inline tex2jax_ignore">true</code>. Proceeding left-to-right, if we find that the left subexpression of a conjunction evaluates to <code class="code-inline tex2jax_ignore">false</code> there is no need to evaluate the right subexpression because we know already that the entire conjunction is <code class="code-inline tex2jax_ignore">false</code>. Java skips the right subexpression and return <code class="code-inline tex2jax_ignore">false</code> as soon as it finds the that left subexpression evaluates to <code class="code-inline tex2jax_ignore">false</code>. This is called <dfn class="terminology">short-circuit evaluation</dfn>.</div>
 <span class="incontext"><a href="section-c2-comparisons.html#p-621" class="internal">in-context</a></span>
 </body>
 </html>

@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,24 +718,15 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -776,17 +737,17 @@ eBookConfig.enable_chatcodes =  false;
 <section class="introduction" id="introduction-4">To get the most from this book you must install (1) a recent version of the Java JDK and (2) a good programmer’s editor. There are no-cost and paid options for both of these tools. We will focus on the no-cost options. Typically, paid options include a better experience and support. Note that these tools change quickly, and so the information in this section may be somewhat out of date. Use your best judgement to acquire or get access to the tools you need.</section><section class="subsection" id="subsection-gs-install-jdk"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.7.1</span> <span class="title">Install the Java Development Kit (JDK)</span>
 </h3>
-<div class="para" id="p-63">As we discussed in <a href="section-gs-toolkit.html" class="internal" title="Section 1.6: The Java Development Kit">Section 1.6</a>, to develop Java programs, you must install or have available the Java Development Kit (JDK). Only the JDK includes necessary tools, including the Java compiler (<dfn class="terminology">javac</dfn>).</div>
-<div class="para" id="p-64">JDK installers are specific to the operating system of your computer. As we’ve described, the JVM executes Java bytecode in a platform-independent manner. That is possible because there is a different JVM for each platform which runs Java bytecode by translating bytecode to native platform instructions.</div>
-<div class="para" id="p-65">To download an installer, visit <a class="external" href="" target="_blank">https://adoptium.net/</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a> with a browser from your computer. You will be offered for download the correct installer for OpenJDK, an open-source implementation of the Java Platform, Standard Edition. Download and run the matching installer. Follow the instructions for your particular operating system to install the JDK.</div>
-<div class="para" id="p-66">JDK tools like <dfn class="terminology">javac</dfn> are executed using programs like a terminal or command prompt program. Every operating system provides one or more terminal programs for executing commands, and they differ in subtle ways. Typically, these programs start as black boxes that accept text commands and usually output results as text as well. Terminal programs may run a shell, which provides more sophisticated capabilities for running commands and interacting with the underlying operating system. The shell you choose also can impact how commands are entered. While we cannot cover the details of every terminal and every shell, we will point out common pitfalls for popular options.</div>
-<div class="para" id="p-67">One pitfall often experienced after a new installation is the inability to access JDK commands from a terminal. The JDK installs successfully, the new user opens and terminal, and proceeds to test the new installation by entering the command <code class="code-inline tex2jax_ignore">java -version</code>, which should print the version of Java that is installed. Instead, the command is not found and an error is printed to the terminal. If the JDK is indeed installs successfully, the program is almost always associated with the directory paths that a terminal searches for a command after the command is entered. Only if the command program can be found on one of those paths can the command be executed. These search paths are stored in an operating system environment variable, frequently named <code class="code-inline tex2jax_ignore">PATH</code>. For example, on Windows you can search for the "Environment Variables" program and use that to inspect the <code class="code-inline tex2jax_ignore">PATH</code> environment variable and edit it to add a filesystem path to the <code class="code-inline tex2jax_ignore">bin</code> subdirectory under the location of where the JDK is installed. It is the <code class="code-inline tex2jax_ignore">bin</code> subdirectory where you’ll find the JDK commands.</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<div class="para" id="p-62">As we discussed in <a href="section-gs-toolkit.html" class="internal" title="Section 1.6: The Java Development Kit">Section 1.6</a>, to develop Java programs, you must install or have available the Java Development Kit (JDK). Only the JDK includes necessary tools, including the Java compiler (<dfn class="terminology">javac</dfn>).</div>
+<div class="para" id="p-63">JDK installers are specific to the operating system of your computer. As we’ve described, the JVM executes Java bytecode in a platform-independent manner. That is possible because there is a different JVM for each platform which runs Java bytecode by translating bytecode to native platform instructions.</div>
+<div class="para" id="p-64">To download an installer, visit <a class="external" href="" target="_blank">https://adoptium.net/</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a> with a browser from your computer. You will be offered for download the correct installer for OpenJDK, an open-source implementation of the Java Platform, Standard Edition. Download and run the matching installer. Follow the instructions for your particular operating system to install the JDK.</div>
+<div class="para" id="p-65">JDK tools like <dfn class="terminology">javac</dfn> are executed using programs like a terminal or command prompt program. Every operating system provides one or more terminal programs for executing commands, and they differ in subtle ways. Typically, these programs start as black boxes that accept text commands and usually output results as text as well. Terminal programs may run a shell, which provides more sophisticated capabilities for running commands and interacting with the underlying operating system. The shell you choose also can impact how commands are entered. While we cannot cover the details of every terminal and every shell, we will point out common pitfalls for popular options.</div>
+<div class="para" id="p-66">One pitfall often experienced after a new installation is the inability to access JDK commands from a terminal. The JDK installs successfully, the new user opens and terminal, and proceeds to test the new installation by entering the command <code class="code-inline tex2jax_ignore">java -version</code>, which should print the version of Java that is installed. Instead, the command is not found and an error is printed to the terminal. If the JDK is indeed installs successfully, the program is almost always associated with the directory paths that a terminal searches for a command after the command is entered. Only if the command program can be found on one of those paths can the command be executed. These search paths are stored in an operating system environment variable, frequently named <code class="code-inline tex2jax_ignore">PATH</code>. For example, on Windows you can search for the "Environment Variables" program and use that to inspect the <code class="code-inline tex2jax_ignore">PATH</code> environment variable and edit it to add a file system path to the <code class="code-inline tex2jax_ignore">bin</code> subdirectory under the location of where the JDK is installed. It is the <code class="code-inline tex2jax_ignore">bin</code> subdirectory where you’ll find the JDK commands.</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.7.2</span> <span class="title">Install a Programming Editor</span>
 </h3>
-<div class="para" id="p-68">A Java source code program is a "plain text file." When a file is referred to as "plain text" the implication is that the file contains characters only, from the default character set of the file. You will find no formatting or other commands that set font family or font style, such as bold or italics. Characters are the only items in the file. One import feature of a programming editor is that it edits and saves plain text files.</div>
-<div class="para" id="p-69">Another import feature of a good programming editor is knowledge of the programming language being edited. This gives the editor the ability to categorize and colorize the symbols and keywords in a given program file, and to format and indent the program’s text automatically, using standard rules. Modern editors can do even more, such as detecting syntax errors or performing advanced context aware searching and editing of the file.</div>
-<div class="para" id="p-70">There are many good programming editors available for use. You may choose any editor known to be suitable for writing Java programs. If you do not have an editor installed or in mind, the <a class="external" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 2 </sup></a> (VSCode) editor from Microsoft, is a good option. Note that the VS Code editor is different that the Visual Studio Integrated Development Environment, which is a much more full-featured environment. VSCode is a simple and freely available editor suitable for many programming languages. Visit the url https://code.visualstudio.com, download a suitable installer, and install on your computer. Using a suitable editor will pay off quickly.</div>
-<div class="para" id="p-71">If you do choose to install VSCode, consider adding the <a class="external" href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack" target="_blank">Extension Pack for Java</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 3 </sup></a>. Installing this extension pack will add functionality to the editor specific for the Java programming language.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore"></code></div></div>
+<div class="para" id="p-67">A Java source code program is a "plain text file." When a file is referred to as "plain text" the implication is that the file contains characters only, from the default character set of the file. You will find no formatting or other commands that set font family or font style, such as bold or italics. Characters are the only items in the file. One import feature of a programming editor is that it edits and saves plain text files.</div>
+<div class="para" id="p-68">Another import feature of a good programming editor is knowledge of the programming language being edited. This gives the editor the ability to categorize and colorize the symbols and keywords in a given program file, and to format and indent the program’s text automatically, using standard rules. Modern editors can do even more, such as detecting syntax errors or performing advanced context aware searching and editing of the file.</div>
+<div class="para" id="p-69">There are many good programming editors available for use. You may choose any editor known to be suitable for writing Java programs. If you do not have an editor installed or in mind, the <a class="external" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 2 </sup></a> (VSCode) editor from Microsoft, is a good option. Note that the VS Code editor is different that the Visual Studio Integrated Development Environment, which is a much more full-featured environment. VSCode is a simple and freely available editor suitable for many programming languages. Visit the url https://code.visualstudio.com, download a suitable installer, and install on your computer. Using a suitable editor will pay off quickly.</div>
+<div class="para" id="p-70">If you do choose to install VSCode, consider adding the <a class="external" href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack" target="_blank">Extension Pack for Java</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 3 </sup></a>. Installing this extension pack will add functionality to the editor specific for the Java programming language.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore"></code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">code.visualstudio.com/</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</code></div></div>
 </div>

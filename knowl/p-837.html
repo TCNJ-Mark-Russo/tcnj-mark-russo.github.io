@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Also important to appreciate is that the default <code class="code-inline tex2jax_ignore">equals()</code> method inherited by all classes simply defers to testing for object identity using the <code class="code-inline tex2jax_ignore">==</code> operator. This explains why the String class overrides <code class="code-inline tex2jax_ignore">equals()</code> to test equality character-by-character (See <a href="section-jp-string.html#subsection-jp-string-methods" class="internal" title="Subsection 3.3.2: String Methods">Subsection 3.3.2</a>). In general we want Strings to be equal when their character sequence is equal, even when they are not identical.</div>
-<span class="incontext"><a href="section-in-object-class.html#p-837" class="internal">in-context</a></span>
+<div class="para">The <a href="section-in-dp-design.html" class="internal" title="Section 10.1: DoodlePad Design">DoodlePad Shape base class</a> shares quite a bit of functionality with all its derived classes, including <a href="appendix-shape-events.html" class="internal" title="Appendix D: DoodlePad Shape Events">a wide array of pixel-perfect mouse events</a> that each shape object may individually. But, what about the Shape class itself. What would happen if we attempted to instantiate Shape directly? How would it look?</div>
+<span class="incontext"><a href="section-in-abstract-class.html#p-837" class="internal">in-context</a></span>
 </body>
 </html>

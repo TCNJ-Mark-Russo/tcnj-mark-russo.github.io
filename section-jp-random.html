@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,24 +718,15 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -775,15 +736,15 @@ eBookConfig.enable_chatcodes =  false;
 <section class="introduction" id="introduction-13">Another useful class provided by the JDK is <code class="code-inline tex2jax_ignore">Random</code>. This class gives you the ability to generate pseudorandom numbers. The <code class="code-inline tex2jax_ignore">Random</code> class is a great example of encapsulation in object oriented programming. Performing high quality pseudorandom number generation can be tricky. I should not need to implement an algorithm when high quality an thoroughly debugged algorithms exist already. I can understand <em class="emphasis">what</em> the algorithm produces without knowing the specific details for <em class="emphasis">how</em> the algorithm works. The <code class="code-inline tex2jax_ignore">Random</code> class encapsulates these algorithms and exposes them using simple methods. Let’s explore a bit more of what <code class="code-inline tex2jax_ignore">Random</code> can do.</section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Instantiating a Random Object</span>
 </h3>
-<div class="para" id="p-285">Pseudorandom numbers are just that -- not <em class="emphasis">truly</em> random, but rather an approximation of true randomness. While they appear random, that are generated in a well-defined order using a deterministic algorithm. A sequence of pseudorandom numbers is repeated when it starts at the same <em class="emphasis">seed</em> value, which has type <code class="code-inline tex2jax_ignore">long</code>. A <code class="code-inline tex2jax_ignore">Random</code> object may be instantiated with a seed as the parameter, or with no parameters at all. If no seed is specified in the <code class="code-inline tex2jax_ignore">Random</code> constructor, then one is selected for you, usually derived from current value of the running JVM’s high-resolution time source.</div>
-<div class="para" id="p-286">Like <code class="code-inline tex2jax_ignore">Scanner</code>, the <code class="code-inline tex2jax_ignore">Random</code> class is not available automatically in java. It must first be imported from <code class="code-inline tex2jax_ignore">java.util.Random</code>. A <code class="code-inline tex2jax_ignore">Random</code> object is instantiated using the <dfn class="terminology">new</dfn> keyword and the standard constructor syntax. Once instantiated, the <code class="code-inline tex2jax_ignore">Random</code> object can be used to generate various types of random numbers.</div>
+<div class="para" id="p-284">Pseudorandom numbers are just that -- not <em class="emphasis">truly</em> random, but rather an approximation of true randomness. While they appear random, that are generated in a well-defined order using a deterministic algorithm. A sequence of pseudorandom numbers is repeated when it starts at the same <em class="emphasis">seed</em> value, which has type <code class="code-inline tex2jax_ignore">long</code>. A <code class="code-inline tex2jax_ignore">Random</code> object may be instantiated with a seed as the parameter, or with no parameters at all. If no seed is specified in the <code class="code-inline tex2jax_ignore">Random</code> constructor, then one is selected for you, usually derived from current value of the running JVM’s high-resolution time source.</div>
+<div class="para" id="p-285">Like <code class="code-inline tex2jax_ignore">Scanner</code>, the <code class="code-inline tex2jax_ignore">Random</code> class is not available automatically in java. It must first be imported from <code class="code-inline tex2jax_ignore">java.util.Random</code>. A <code class="code-inline tex2jax_ignore">Random</code> object is instantiated using the <dfn class="terminology">new</dfn> keyword and the standard constructor syntax. Once instantiated, the <code class="code-inline tex2jax_ignore">Random</code> object can be used to generate various types of random numbers.</div>
 <figure class="listing figure-like" id="listing-jp-random-constructor"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">Random rnd1 = new Random(123L);   // Create Random object with seed 123L
 Random rnd2 = new Random();       // Create Random object with automatic seed
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Random</code> constructor examples.</figcaption></figure></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Random Methods</span>
 </h3>
-<div class="para" id="p-287">
+<div class="para" id="p-286">
 <code class="code-inline tex2jax_ignore">Random</code> object methods give us the ability to generate a variety of different random number types, selected from uniform and normal distributions. The following table describes many of these methods.</div>
 <figure class="table table-like" id="table-23"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span>Several <code class="code-inline tex2jax_ignore">Random</code> Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
@@ -819,7 +780,7 @@ Random rnd2 = new Random();       // Create Random object with automatic seed
 </table></div></figure></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Random Example</span>
 </h3>
-<div class="para" id="p-288">In the following example program we create a <code class="code-inline tex2jax_ignore">Random</code> object and assign it to the variable <code class="code-inline tex2jax_ignore">rnd</code>. Then we use the object to test the <code class="code-inline tex2jax_ignore">.nextInt(...)</code>, <code class="code-inline tex2jax_ignore">.nextDouble()</code>, and <code class="code-inline tex2jax_ignore">.nextGaussian()</code> methods.</div>
+<div class="para" id="p-287">In the following example program we create a <code class="code-inline tex2jax_ignore">Random</code> object and assign it to the variable <code class="code-inline tex2jax_ignore">rnd</code>. Then we use the object to test the <code class="code-inline tex2jax_ignore">.nextInt(...)</code>, <code class="code-inline tex2jax_ignore">.nextDouble()</code>, and <code class="code-inline tex2jax_ignore">.nextGaussian()</code> methods.</div>
 <code class="code-inline tex2jax_ignore">.nextInt(...)</code><code class="code-inline tex2jax_ignore">int</code><em class="emphasis">exclusive</em><code class="code-inline tex2jax_ignore">rnd.nextInt(10)</code><figure class="listing figure-like" id="listing-jp-randomexmaple"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomExample.java 
 import java.util.Random;
 
@@ -866,27 +827,27 @@ java RandomExample
 0.06465674365837526, 0.6659245501706238
 0.6516158074847989, -0.678154539495678, -0.7702039482811629
 </pre></div>
-<div class="para" id="p-289">While the <code class="code-inline tex2jax_ignore">Random</code> object methods give us the basis for generating pseudorandom numbers, practical applications will require us to modify the range within which the numbers are generated to suit our application requirements. Specifically, we’ll often need to scale random number ranges to make them wider or more narrow, and we’ll often have to translate (shift) ranges to higher and lower values. It is fortunate that the pseudorandom number generator methods include 0 at one end of the range of generated numbers. As you’ll see, this is convenient when manipulating these numeric ranges.</div>
-<div class="para" id="p-290">The easist way to scale and translate pseudorandom number ranges is to operate on their lower and higher bounds. If we modify the bounds correctly, the inner values of the range will follow. For example, we can easily modify the width of a range by multiplying values generated by a suitable scale factor. For example, if we are interested in a pseudorandom <code class="code-inline tex2jax_ignore">double</code> in the range [0.0, 2.0) we would simply multiply values returned from <code class="code-inline tex2jax_ignore">.nextDouble()</code> by 2.0, as follows. We know that the new generated values will fall in the range [0.0, 2.0). <figure class="table table-like" id="table-24"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-288">While the <code class="code-inline tex2jax_ignore">Random</code> object methods give us the basis for generating pseudorandom numbers, practical applications will require us to modify the range within which the numbers are generated to suit our application requirements. Specifically, we’ll often need to scale random number ranges to make them wider or more narrow, and we’ll often have to translate (shift) ranges to higher and lower values. It is fortunate that the pseudorandom number generator methods include 0 at one end of the range of generated numbers. As you’ll see, this is convenient when manipulating these numeric ranges.</div>
+<div class="para" id="p-289">The easist way to scale and translate pseudorandom number ranges is to operate on their lower and higher bounds. If we modify the bounds correctly, the inner values of the range will follow. For example, we can easily modify the width of a range by multiplying values generated by a suitable scale factor. For example, if we are interested in a pseudorandom <code class="code-inline tex2jax_ignore">double</code> in the range [0.0, 2.0) we would simply multiply values returned from <code class="code-inline tex2jax_ignore">.nextDouble()</code> by 2.0, as follows. We know that the new generated values will fall in the range [0.0, 2.0). <figure class="table table-like" id="table-24"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2.0 \times [0.0, 1.0)\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\([2.0\times0.0, 2.0\times1.0)\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\([0.0, 2.0)\)</span></td></tr>
 </table></div></figure> Similarly, we can add a constant to a range to translate it to a new location.</div>
-<div class="para" id="p-291">Consider the following examples. In all cases assume <code class="code-inline tex2jax_ignore">rnd</code> is a previously instantiated <code class="code-inline tex2jax_ignore">Random</code> object.</div>
+<div class="para" id="p-290">Consider the following examples. In all cases assume <code class="code-inline tex2jax_ignore">rnd</code> is a previously instantiated <code class="code-inline tex2jax_ignore">Random</code> object.</div>
 <article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><div class="para" id="p-292">Write a Java expression that returns a uniformly distributed <code class="code-inline tex2jax_ignore">double</code> in the range [-1.0, 1.0).</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">First multiply the range by a suitable scale factor, then shift by subtracting a suitable constant.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">2.0 * rnd.nextDouble() - 1.0</code></div></div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><div class="para" id="p-291">Write a Java expression that returns a uniformly distributed <code class="code-inline tex2jax_ignore">double</code> in the range [-1.0, 1.0).</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">First multiply the range by a suitable scale factor, then shift by subtracting a suitable constant.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">2.0 * rnd.nextDouble() - 1.0</code></div></div></article></div>
 <article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><div class="para" id="p-293">Write a Java expression that returns a uniformly distributed <code class="code-inline tex2jax_ignore">int</code> in the range [1, 10].</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Watch out for the upper bound; it is inclusive of 10. Also note that the range includes 10 integers, and is shifted by 1.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">rnd.nextInt(10) + 1</code></div></div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><div class="para" id="p-292">Write a Java expression that returns a uniformly distributed <code class="code-inline tex2jax_ignore">int</code> in the range [1, 10].</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Watch out for the upper bound; it is inclusive of 10. Also note that the range includes 10 integers, and is shifted by 1.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">rnd.nextInt(10) + 1</code></div></div></article></div>
 <article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.7</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><div class="para" id="p-294">Write a Java expression that returns a uniformly distributed <code class="code-inline tex2jax_ignore">int</code> in the range [-10, -5].</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like">Watch out for the lower bound; it is inclusive of -10. The range includes 6 integers and is shifted. Multiplying by a negative number causes the bounds of a range to swap roles.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><div class="para" id="p-293">Write a Java expression that returns a uniformly distributed <code class="code-inline tex2jax_ignore">int</code> in the range [-10, -5].</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like">Watch out for the lower bound; it is inclusive of -10. The range includes 6 integers and is shifted. Multiplying by a negative number causes the bounds of a range to swap roles.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like">
 <code class="code-inline tex2jax_ignore">rnd.nextInt(6) - 10</code> or <code class="code-inline tex2jax_ignore">-5 - rnd.nextInt(6)</code>
 </div></div></article></div>
 <article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.8</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><div class="para" id="p-295">Write a Java expression that returns a normally distributed <code class="code-inline tex2jax_ignore">double</code> with mean 5.0 and standard deviation of 2.0.</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like">Multiply to scale range to width of standard deviation and add a constant to translate to mean.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">rnd.nextGaussian()*2.0 + 5.0</code></div></div></article></div></section></section></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><div class="para" id="p-294">Write a Java expression that returns a normally distributed <code class="code-inline tex2jax_ignore">double</code> with mean 5.0 and standard deviation of 2.0.</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like">Multiply to scale range to width of standard deviation and add a constant to translate to mean.</div></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">rnd.nextGaussian()*2.0 + 5.0</code></div></div></article></div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-jp-scanner.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-jp-concepts.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

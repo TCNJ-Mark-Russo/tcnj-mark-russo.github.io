@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">There are two items to consider when working with arrays and reference types. The first is that array variable types are reference types and following all the same rules. The second is that array elements that store objects are reference types as well, and so store only a reference to the object, not the object itself.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">As a reference type, an array variable is only a name that references an array. There is nothing to stop us from declaring a second array variable and assigning it to the same array, giving us two names for the array. As we know, assigning one reference variable to another does not copy the object being referenced. Rather, the value of the second reference variable gets the address of the object referenced by the first variable. This is why both variables reference the same object. Using either variable, when we access and modify an array element, the single underlying array is being modified. Specifically, we can modify an array referenced using one variable, and see the modification when accessing it using the other array variable. Let’s run some tests.</div>
 <span class="incontext"><a href="section-ar-reftypes.html#p-653" class="internal">in-context</a></span>
 </body>
 </html>

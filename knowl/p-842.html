@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">If Shape is abstract, then it must have at least one abstract method declared. Of course it does. The one abstract method of Shape is <code class="code-inline tex2jax_ignore">draw(…)</code>, which should make some sense. The one unique feature of all Shape’s derived classes it their graphical representation. The <code class="code-inline tex2jax_ignore">draw(…)</code> method is different for each derived class of Shape, and must be implemented. Modifying <code class="code-inline tex2jax_ignore">draw(…)</code> with <code class="code-inline tex2jax_ignore">abstract</code> enlists the compile to enforce the requirement that all derived classes must implement <code class="code-inline tex2jax_ignore">draw(…)</code>.</div>
+<div class="para">The complete definition of <code class="code-inline tex2jax_ignore">draw(…)</code> is given in <a href="" class="xref" data-knowl="./knowl/listing-in-shape-draw.html" title="Listing 10.6.1">Listing 10.6.1</a>. There is no method body! The definitin is a signature only, no curly braces, just a semicolon (<code class="code-inline tex2jax_ignore">;</code>). Shape can provide no implementation. But Shape methods depend upon there being a concrete implementation. This is guaranteed by the compiler by the addition of the <em class="emphasis">abstract</em> modifier.</div>
 <span class="incontext"><a href="section-in-abstract-class.html#p-842" class="internal">in-context</a></span>
 </body>
 </html>

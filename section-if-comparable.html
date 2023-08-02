@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,24 +718,15 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -775,7 +736,7 @@ eBookConfig.enable_chatcodes =  false;
 <section class="introduction" id="introduction-57">The Java Core Library provides several interface implementations which are tightly integrated into the library. In this section we look at one in detail, and then briefly introduce a few others.</section><section class="subsection" id="subsection-if-comparable"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.1.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> Interface</span>
 </h3>
-<div class="para" id="p-847">One of the more important interfaces provided by the Java core library is <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code>, the source code of which is in <a href="" class="xref" data-knowl="./knowl/listing-if-comparable.html" title="Listing 11.1.1">Listing 11.1.1</a>. The <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface is widely used in Java. A class must implement the <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface before it may be processed by certain predefined algorithms in the Core Library, including sorting and searching. The <code class="code-inline tex2jax_ignore">compareTo(T o)</code> method returns a negative int if <code class="code-inline tex2jax_ignore">this</code> is ordered to the left of <code class="code-inline tex2jax_ignore">o</code>, a positive int if <code class="code-inline tex2jax_ignore">this</code> is ordered to the right of <code class="code-inline tex2jax_ignore">o</code>, and 0 if <code class="code-inline tex2jax_ignore">this</code> and <code class="code-inline tex2jax_ignore">o</code> can appear in either order. What constitutes less-than, greater-than and equal-to is something that you are free to decide for yourself to suit your own needs.</div>
+<div class="para" id="p-846">One of the more important interfaces provided by the Java core library is <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code>, the source code of which is in <a href="" class="xref" data-knowl="./knowl/listing-if-comparable.html" title="Listing 11.1.1">Listing 11.1.1</a>. The <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface is widely used in Java. A class must implement the <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface before it may be processed by certain predefined algorithms in the Core Library, including sorting and searching. The <code class="code-inline tex2jax_ignore">compareTo(T o)</code> method returns a negative int if <code class="code-inline tex2jax_ignore">this</code> is ordered to the left of <code class="code-inline tex2jax_ignore">o</code>, a positive int if <code class="code-inline tex2jax_ignore">this</code> is ordered to the right of <code class="code-inline tex2jax_ignore">o</code>, and 0 if <code class="code-inline tex2jax_ignore">this</code> and <code class="code-inline tex2jax_ignore">o</code> can appear in either order. What constitutes less-than, greater-than and equal-to is something that you are free to decide for yourself to suit your own needs.</div>
 <figure class="listing figure-like" id="listing-if-comparable"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Comparable.java
 package java.lang;
 import java.util.*;
@@ -784,12 +745,12 @@ public interface Comparable&lt;T&gt; {
   public int compareTo(T o);
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.1.1<span class="period">.</span></span><span class="space"> </span>Comparable&lt;T&gt; Interface</figcaption></figure><div class="para" id="p-848">The first thing to note is that the syntax of an <em class="emphasis">interface</em> declaration is the same as an abstract class having only abstract methods, except that the keyword <code class="code-inline tex2jax_ignore">abstract</code> is removed everywhere and <code class="code-inline tex2jax_ignore">class</code> is replaced with <code class="code-inline tex2jax_ignore">interface</code>. Otherwise, the syntax should look familiar. Like classes, public interfaces must be defined in a file with a name that matches the interface.</div>
-<div class="para" id="p-849">It is interesting to note that the <code class="code-inline tex2jax_ignore">Comparable&lt;&gt;</code> interface is <em class="emphasis">generic</em> like <code class="code-inline tex2jax_ignore">ArrayList&lt;T&gt;</code>. When used, the <code class="code-inline tex2jax_ignore">T</code> must be replaced with a type that is substituted into the interface definition before it is compiled. keyword.</div>
-<div class="para" id="p-850">The interface itself defines exactly one signature to be implemented, <code class="code-inline tex2jax_ignore">public int compareTo(T o)</code>. A class that <em class="emphasis">implements Comparable&lt;T&gt;</em> must define a concrete method implemention that matches that signature.</div>
-<div class="para" id="p-851">Another huge benefit of interfaces is that a class is not limited to the implementation of only one interface. A class may implement many interfaces. By contrast, in Java a class extends at most one base class. If a base class is not specified, Java extends Object by default. An ability to implement many interfaces is a powerful concept that allows us to create multi-functional and highly flexible classes.</div>
-<div class="para" id="p-852">The syntax for <em class="emphasis">implementing an interface</em> is similar to extending a class, only the keyword <dfn class="terminology">extends</dfn> followed by a base class name is replaced with the keyword <dfn class="terminology">implements</dfn> followed by one or more comma-separated interface names. Let’s consider an example.</div>
-<div class="para" id="p-853">The Java String class implements Comparable&lt;T&gt;. Strings order themselves <em class="emphasis">lexographically</em>, which is the same ordering of words when listed in a dictionary. First the underlying integer code of each successive character is compared until a difference is found. The String with the lesser character code value is ordered first. Also, shorter Strings are ordered first. We can explore this by invoking the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method on several String pairs in JShell.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.1.1<span class="period">.</span></span><span class="space"> </span>Comparable&lt;T&gt; Interface</figcaption></figure><div class="para" id="p-847">The first thing to note is that the syntax of an <em class="emphasis">interface</em> declaration is the same as an abstract class having only abstract methods, except that the keyword <code class="code-inline tex2jax_ignore">abstract</code> is removed everywhere and <code class="code-inline tex2jax_ignore">class</code> is replaced with <code class="code-inline tex2jax_ignore">interface</code>. Otherwise, the syntax should look familiar. Like classes, public interfaces must be defined in a file with a name that matches the interface.</div>
+<div class="para" id="p-848">It is interesting to note that the <code class="code-inline tex2jax_ignore">Comparable&lt;&gt;</code> interface is <em class="emphasis">generic</em> like <code class="code-inline tex2jax_ignore">ArrayList&lt;T&gt;</code>. When used, the <code class="code-inline tex2jax_ignore">T</code> must be replaced with a type that is substituted into the interface definition before it is compiled. keyword.</div>
+<div class="para" id="p-849">The interface itself defines exactly one signature to be implemented, <code class="code-inline tex2jax_ignore">public int compareTo(T o)</code>. A class that <em class="emphasis">implements Comparable&lt;T&gt;</em> must define a concrete method implemention that matches that signature.</div>
+<div class="para" id="p-850">Another huge benefit of interfaces is that a class is not limited to the implementation of only one interface. A class may implement many interfaces. By contrast, in Java a class extends at most one base class. If a base class is not specified, Java extends Object by default. An ability to implement many interfaces is a powerful concept that allows us to create multi-functional and highly flexible classes.</div>
+<div class="para" id="p-851">The syntax for <em class="emphasis">implementing an interface</em> is similar to extending a class, only the keyword <dfn class="terminology">extends</dfn> followed by a base class name is replaced with the keyword <dfn class="terminology">implements</dfn> followed by one or more comma-separated interface names. Let’s consider an example.</div>
+<div class="para" id="p-852">The Java String class implements Comparable&lt;T&gt;. Strings order themselves <em class="emphasis">lexographically</em>, which is the same ordering of words when listed in a dictionary. First the underlying integer code of each successive character is compared until a difference is found. The String with the lesser character code value is ordered first. Also, shorter Strings are ordered first. We can explore this by invoking the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method on several String pairs in JShell.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; "cat".compareTo("dog");     // Negative result means cat &lt; dog
 </b>$1 ==&gt; -1
 <b>jshell&gt; "dog".compareTo("cat");     // Positive means dog &gt; cat
@@ -807,7 +768,7 @@ jshell&gt; "kit".compareTo("Kitten");  // kit &gt; Kitten
 </b>$6 ==&gt; 32
 <b>jshell&gt;
 </b></pre></div>
-<div class="para" id="p-854">Let’s assume we have written a program that tracks Sentence objects in an ArrayList&lt;Sentence&gt;, and we need to order Sentences based on the number of words that each contains. To simplify a bit, let’s assume each word in a Sentence is separated by a single space. Consider the Sentence class definition in <a href="" class="xref" data-knowl="./knowl/listing-if-sentence.html" title="Listing 11.1.2">Listing 11.1.2</a> which implements Comparable&lt;Sentence&gt; and tests the implementation.</div>
+<div class="para" id="p-853">Let’s assume we have written a program that tracks Sentence objects in an ArrayList&lt;Sentence&gt;, and we need to order Sentences based on the number of words that each contains. To simplify a bit, let’s assume each word in a Sentence is separated by a single space. Consider the Sentence class definition in <a href="" class="xref" data-knowl="./knowl/listing-if-sentence.html" title="Listing 11.1.2">Listing 11.1.2</a> which implements Comparable&lt;Sentence&gt; and tests the implementation.</div>
 <figure class="listing figure-like" id="listing-if-sentence"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Sentence.java
 // Demonstrate Comparable&lt;&gt; interface and sorting
 
@@ -908,18 +869,18 @@ Romeo, doff thy name, And for that name, which is no part of thee, Take all myse
 It is nor hand nor foot Nor arm nor face nor any other part Belonging to a man.(18)
 That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call'd, Retain that dear perfection which he owes Without that title.(32)
 </pre></div>
-<div class="para" id="p-855">There is a much shorter and more clever implementation of <code class="code-inline tex2jax_ignore">compareTo(…)</code> that merely returns the difference between word counts. Convince yourself that the following revision works just as well as the long-winded version in <a href="" class="xref" data-knowl="./knowl/listing-if-sentence.html" title="Listing 11.1.2">Listing 11.1.2</a>.</div>
+<div class="para" id="p-854">There is a much shorter and more clever implementation of <code class="code-inline tex2jax_ignore">compareTo(…)</code> that merely returns the difference between word counts. Convince yourself that the following revision works just as well as the long-winded version in <a href="" class="xref" data-knowl="./knowl/listing-if-sentence.html" title="Listing 11.1.2">Listing 11.1.2</a>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Implement compareTo method to satisfy Comparable
 public int compareTo(Sentence other) {
   return this.wordCount - other.getWordCount();
 }
 </code></pre></div>
-<div class="para" id="p-856">
+<div class="para" id="p-855">
 <code class="code-inline tex2jax_ignore">Collections.sort(…)</code> does its job because the only external dependency that the algorithm has is on an implementation of the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method to order two instances of objects stored in an ArrayList. We provide a way to solve that small task, and benefit from highly optimized sorting and searching algorithms that are built-in to the Core Library. This is a powerful opportunity to leverage the work of many others.</div></section><section class="subsection" id="subsection-if-iterable"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.1.2</span> <span class="title">The <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> Interfaces</span>
 </h3>
-<div class="para" id="p-857">Another pair of interesting intefaces in Java’s Core Library are the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> interfaces. These interfaces are useful to make it possible to iterate over objects stored in a class that acts as a container. Specifically, fulfilling the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> interface provides implementations of methods required to access the elements of a collection one at a time, and the <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> makes the custom container class compatible with a for-each statement.</div>
-<div class="para" id="p-858">Following are the the Java Core Library definitions of only the <em class="emphasis">required</em> signatures that must be implemented by both interfaces. Other signatures in each interface have default implementations.</div>
+<div class="para" id="p-856">Another pair of interesting intefaces in Java’s Core Library are the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> interfaces. These interfaces are useful to make it possible to iterate over objects stored in a class that acts as a container. Specifically, fulfilling the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> interface provides implementations of methods required to access the elements of a collection one at a time, and the <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> makes the custom container class compatible with a for-each statement.</div>
+<div class="para" id="p-857">Following are the the Java Core Library definitions of only the <em class="emphasis">required</em> signatures that must be implemented by both interfaces. Other signatures in each interface have default implementations.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public interface Iterator&lt;T&gt; {
   boolean hasNext();          // true if iteration has more elements.
   T       next()              // Returns next element in the iteration.
@@ -929,9 +890,9 @@ public int compareTo(Sentence other) {
   Iterator&lt;T&gt; iterator();     // Returns an iterator over elements of type T.
 }
 </code></pre></div>
-<div class="para" id="p-859">These signatures are straightforward. <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> has two signatures, <code class="code-inline tex2jax_ignore">T next()</code> returns the next element and a <code class="code-inline tex2jax_ignore">boolean hasNext()</code> tests if there is another element to be returned. The only required signature in <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> is <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt; iterator()</code> which generates and return the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> object.</div>
-<div class="para" id="p-860">In the DoodlePad library, the Pad class acts as a container of all Shape objects that are rendered on its window. It also implements the <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> interface which means that Shape object that are rendered on a Pad object may be iterated directly.</div>
-<div class="para" id="p-861">
+<div class="para" id="p-858">These signatures are straightforward. <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> has two signatures, <code class="code-inline tex2jax_ignore">T next()</code> returns the next element and a <code class="code-inline tex2jax_ignore">boolean hasNext()</code> tests if there is another element to be returned. The only required signature in <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> is <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt; iterator()</code> which generates and return the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> object.</div>
+<div class="para" id="p-859">In the DoodlePad library, the Pad class acts as a container of all Shape objects that are rendered on its window. It also implements the <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> interface which means that Shape object that are rendered on a Pad object may be iterated directly.</div>
+<div class="para" id="p-860">
 <a href="" class="xref" data-knowl="./knowl/listing-c1-randomovals.html" title="Listing 6.5.2">Listing 6.5.2</a> is the source code of a program named RandomOvals.java that instantiated, iterated over, and randomly recolored several Oval objects. Ovals were stored in an ArrayList&lt;Oval&gt;. In <a href="" class="xref" data-knowl="./knowl/listing-ar-randomovals2.html" title="Listing 8.2.1">Listing 8.2.1</a> we updated that program to RandomOvals2.java which used an array to hold Oval objects. Let’s update that program one more time. This time we will avoid the ArrayList and the array entirely by iterating over Shape objects using the Pad as a container instead. Note that the <code class="code-inline tex2jax_ignore">Pad.getPad()</code> static method gets a reference to the current Pad object. Also note that we are not limited to Oval objects. Through the magic of subtype polymorphism that we get because all shapes inherit the Shape base class, we can generate any mixture of shape objects and still be able to iterate over all of them with one loop. Lets create a mixture of Oval and Rectangle objects to demonstrate this. Find the douce code of our updated program in <a href="" class="xref" data-knowl="./knowl/listing-if-randomshapes.html" title="Listing 11.1.3">Listing 11.1.3</a> named RandomShapes.java.</div>
 <figure class="listing figure-like" id="listing-if-randomshapes"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomShapes.java
 import java.util.Random;                      // Import classes
@@ -966,7 +927,7 @@ public class RandomShapes {                   // public class
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.1.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomShapes.java</code></figcaption></figure><div class="para" id="p-862">Notice that we no longer need a collection or array to hold the Shape objects. The Pad object holds them automatically. We create a mixture of Oval and Rectangle objects just to demonstrate that we can iterate over both using a single loop. The <code class="code-inline tex2jax_ignore">recolor(…)</code> method performs the iteration using a single for-each statement which iterates using the Pad object as a iterator, specifically <code class="code-inline tex2jax_ignore">for (Shape s: pad) {…</code>. See <a href="" class="xref" data-knowl="./knowl/figure-if-randomshapes.html" title="Figure 11.1.4">Figure 11.1.4</a> for the result.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">11.1.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomShapes.java</code></figcaption></figure><div class="para" id="p-861">Notice that we no longer need a collection or array to hold the Shape objects. The Pad object holds them automatically. We create a mixture of Oval and Rectangle objects just to demonstrate that we can iterate over both using a single loop. The <code class="code-inline tex2jax_ignore">recolor(…)</code> method performs the iteration using a single for-each statement which iterates using the Pad object as a iterator, specifically <code class="code-inline tex2jax_ignore">for (Shape s: pad) {…</code>. See <a href="" class="xref" data-knowl="./knowl/figure-if-randomshapes.html" title="Figure 11.1.4">Figure 11.1.4</a> for the result.</div>
 <figure class="figure figure-like" id="figure-if-randomshapes"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/if-randomshapes.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.1.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">RandomShapes.java</code></figcaption></figure></section></section></div>
 <div class="ptx-content-footer">

@@ -12,7 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">It may surprise you to learn that <code class="code-inline tex2jax_ignore">String</code> is a class because it also has a handy literal notation that allows us to create <code class="code-inline tex2jax_ignore">String</code>s objects directly using double-quotes (<code class="code-inline tex2jax_ignore">""</code>). In fact, there is a second way to instantiate a new <code class="code-inline tex2jax_ignore">String</code>, which is the way we instantiate <em class="emphasis">any</em> object in Java. That is, by using the <dfn class="terminology">new</dfn> keyword to invoke the class <dfn class="terminology"><a href="" class="xref" data-knowl="./knowl/glossary-constructor.html" title="Term: constructor">constructor</a></dfn>. In the following program we create two <code class="code-inline tex2jax_ignore">String</code> objects, one using literal notation and the other by invoking the <code class="code-inline tex2jax_ignore">String</code> constructor using <dfn class="terminology">new</dfn>. Both result in a new <code class="code-inline tex2jax_ignore">String</code> object.</div>
+<div class="para">Once we know the name of the class we want to create and the parameters expected by its constructor we use the <dfn class="terminology">new</dfn> keyword to invoke the constructor using the following pattern for invocation. The result is a new object, an instance of the class, which we save by assigning to a variable declared with the class type. The following figure demonstrates constructor invocation and assignment of the created object. <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.2<span class="period">.</span></span><span class="space"> </span>Invoking a constructor (TODO: Replace with figure)</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c b b1 r1 l1 t1 lines"><em class="emphasis">variable</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">assign</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">keyword</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">class</em></td>
+<td class="c b b1 r1 l0 t1 lines"><em class="emphasis">parameters</em></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">name2</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">=</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">new</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">String</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">("Porthos")</code></td>
+</tr>
+</table></div></figure>
+</div>
 <span class="incontext"><a href="section-jp-string.html#p-266" class="internal">in-context</a></span>
 </body>
 </html>

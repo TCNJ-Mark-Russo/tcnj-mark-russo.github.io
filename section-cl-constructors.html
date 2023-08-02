@@ -64,37 +64,6 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./styles/mfr.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.7';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runtime.fd9ce61c3c71cb22.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.7/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -218,7 +187,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
-\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
@@ -683,64 +651,66 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="chapter-exceptions.html" class="internal"><span class="codenumber">12</span> <span class="title">Files and Exceptions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-99.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Syntax Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-100.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Logic Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-101.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Runtime Errors</span></a></div></li>
-<li><div class="toc-item"><a href="section-102.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Common Exception Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-103.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Catching Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-104.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
-<li><div class="toc-item"><a href="section-105.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Reading Files</span></a></div></li>
-<li><div class="toc-item"><a href="section-106.html" class="internal"><span class="codenumber">12.8</span> <span class="title">try-with-resources</span></a></div></li>
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">12.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">12.10</span> <span class="title">Exercises</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-errors.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Types of Errors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-127" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Syntax Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-128" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Logic Errors</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-errors.html#subsection-129" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Runtime Errors</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-ex-classes.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Common Exception Classes</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-ex-catching.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Catching Exceptions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-try-catch" class="internal"><span class="codenumber">12.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-multiple-catch" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Multiple Catch-blocks</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-ex-finally" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Finally Block</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-catching.html#subsection-133" class="internal"><span class="codenumber">12.3.4</span> <span class="title">Checked vs. Unchecked Exceptions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ex-reading-files.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Reading Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-134" class="internal"><span class="codenumber">12.4.1</span> <span class="title">The Nature of a File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-135" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Reading with Scanner and File</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-136" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Reading with FileReader and BufferedReader</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-137" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">12.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">12.6</span> <span class="title">Writing Files</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">12.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">12.8</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-108.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
+<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
+<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-124.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-11.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter-design.html" class="internal"><span class="codenumber">15</span> <span class="title">Program and Class Design</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-125.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Software Development Life Cycled (SDLC)</span></a></div></li>
-<li><div class="toc-item"><a href="section-126.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Encapsulation and Abstraction</span></a></div></li>
-<li><div class="toc-item"><a href="section-127.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Object Relationships</span></a></div></li>
-<li><div class="toc-item"><a href="section-128.html" class="internal"><span class="codenumber">15.4</span> <span class="title">When to use Inheritance</span></a></div></li>
-<li><div class="toc-item"><a href="section-129.html" class="internal"><span class="codenumber">15.5</span> <span class="title">When to use Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-de-gen-spec.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Generalization and Specialization</span></a></div></li>
-<li><div class="toc-item"><a href="section-131.html" class="internal"><span class="codenumber">15.7</span> <span class="title">Cohesion and Coupling</span></a></div></li>
-<li><div class="toc-item"><a href="section-132.html" class="internal"><span class="codenumber">15.8</span> <span class="title">Unified Modeling Language (UML)</span></a></div></li>
-<li><div class="toc-item"><a href="section-133.html" class="internal"><span class="codenumber">15.9</span> <span class="title">Class Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-134.html" class="internal"><span class="codenumber">15.10</span> <span class="title">Object Diagram</span></a></div></li>
-<li><div class="toc-item"><a href="section-135.html" class="internal"><span class="codenumber">15.11</span> <span class="title">Activity Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-136.html" class="internal"><span class="codenumber">15.12</span> <span class="title">State Machine Diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="section-137.html" class="internal"><span class="codenumber">15.13</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-12.html" class="internal"><span class="codenumber">15.14</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -748,34 +718,25 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
 <li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-6.html" class="internal"><span class="codenumber">F</span> <span class="title">Debugging</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-timer-events.html" class="internal"><span class="codenumber">F</span> <span class="title">DoodlePad Timer Events</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-7.html" class="internal"><span class="codenumber">G</span> <span class="title">Debugging</span></a></div></li>
 <li><div class="toc-item"><a href="glossary.html" class="internal"><span class="title">Glossary</span></a></div></li>
 <li><div class="toc-item"><a href="references.html" class="internal"><span class="title">References</span></a></div></li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter-extra.html" class="internal"><span class="codenumber">16</span> <span class="title">Extra - To Be Deleted</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-138.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Visualizer</span></a></div></li>
-<li><div class="toc-item"><a href="section-139.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Active Code</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-13.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-14.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-15.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-cl-constructors"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title">Constructors</span>
 </h2>
-<section class="introduction" id="introduction-45"><div class="para" id="p-701">Most classes can be instantiated. But to be useful, these instantiated objects must be able to declare and manage their own data. This starts with the declaration of a special, <em class="emphasis">method-like</em> construct added to a class definition called a <dfn class="terminology">constructor</dfn>.</div></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-45"><div class="para" id="p-700">Most classes can be instantiated. But to be useful, these instantiated objects must be able to declare and manage their own data. This starts with the declaration of a special, <em class="emphasis">method-like</em> construct added to a class definition called a <dfn class="terminology">constructor</dfn>.</div></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.2.1</span> <span class="title">Anatomy of a Constructor</span>
 </h3>
-<div class="para" id="p-702">A <dfn class="terminology">constructor</dfn> is a block of code that is invoked when an object is instantiated using the <code class="code-inline tex2jax_ignore">new</code> keyword. The statements in the constructor perfrom important initialization tasks required by an object is instantiated. <a href="" class="xref" data-knowl="./knowl/figure-cl-constructor-anatomy.html" title="Figure 9.2.1">Figure 9.2.1</a> outlines the unique makeup of a constructor and its five critical features.</div>
+<div class="para" id="p-701">A <dfn class="terminology">constructor</dfn> is a block of code that is invoked when an object is instantiated using the <code class="code-inline tex2jax_ignore">new</code> keyword. The statements in the constructor perfrom important initialization tasks required by an object is instantiated. <a href="" class="xref" data-knowl="./knowl/figure-cl-constructor-anatomy.html" title="Figure 9.2.1">Figure 9.2.1</a> outlines the unique makeup of a constructor and its five critical features.</div>
 <figure class="figure figure-like" id="figure-cl-constructor-anatomy"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/cl-constructor-anatomy.svg" class="contained"></div>
 <ol class="decimal">
 <li id="li-271"><div class="para" id="p-derived-li-271">The name of a constructor must match the name of its class.</div></li>
@@ -787,9 +748,9 @@ eBookConfig.enable_chatcodes =  false;
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.2.1<span class="period">.</span></span><span class="space"> </span>Anatomy of a Constructor</figcaption></figure></section><section class="subsection" id="subsection-95"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.2.2</span> <span class="title">The <code class="code-inline tex2jax_ignore">this</code> Keyword</span>
 </h3>
-<div class="para" id="p-703">As a demonstration, let’s create a graphic class named LED. This class will be a circular graphic object with width and height of 30 pixels. The graphic is filled with gray when it is off and red when it is on. When deciding what to include in any class, we need to stop and think about what is necessary to adequatley track the state of each instance. For an LED, we need to track whether it is on or off. We also need to manage its graphic representation, in this case an Oval object.</div>
-<div class="para" id="p-704">In <a href="" class="xref" data-knowl="./knowl/listing-cl-led1.html" title="Listing 9.2.2">Listing 9.2.2</a> we start the definition of our LED by declaring a class named LED and two <dfn class="terminology">instance variables</dfn> named <code class="code-inline tex2jax_ignore">on</code> and <code class="code-inline tex2jax_ignore">light</code>. We call them <em class="emphasis">instance variables</em> because every instance of the class will get its own copy of these variables. We did not use the keyword <code class="code-inline tex2jax_ignore">static</code> when declaring them; which makes them <em class="emphasis">instance variables</em>. Using <code class="code-inline tex2jax_ignore">static</code> would have made them <dfn class="terminology">class variables</dfn>, defined within the scope of the class. Because there is only one of any class, there would be only one of each static variable.</div>
-<div class="para" id="p-705">We also used the keyword <code class="code-inline tex2jax_ignore">private</code> instead of our usual <code class="code-inline tex2jax_ignore">public</code> visibility specifyer when declaring our LED instance variables. Using <code class="code-inline tex2jax_ignore">private</code> ensures that the instance variables are not accessible from outside each instance. Instance variables declared with <dfn class="terminology">private visibility</dfn> may be accessed only from within the scope of an object. No access from outside the object is permitted. We now have two visibility specifiers for the declaration of methods and instance variables, <code class="code-inline tex2jax_ignore">public</code> and <code class="code-inline tex2jax_ignore">private</code>.</div>
+<div class="para" id="p-702">As a demonstration, let’s create a graphic class named LED. This class will be a circular graphic object with width and height of 30 pixels. The graphic is filled with gray when it is off and red when it is on. When deciding what to include in any class, we need to stop and think about what is necessary to adequatley track the state of each instance. For an LED, we need to track whether it is on or off. We also need to manage its graphic representation, in this case an Oval object.</div>
+<div class="para" id="p-703">In <a href="" class="xref" data-knowl="./knowl/listing-cl-led1.html" title="Listing 9.2.2">Listing 9.2.2</a> we start the definition of our LED by declaring a class named LED and two <dfn class="terminology">instance variables</dfn> named <code class="code-inline tex2jax_ignore">on</code> and <code class="code-inline tex2jax_ignore">light</code>. We call them <em class="emphasis">instance variables</em> because every instance of the class will get its own copy of these variables. We did not use the keyword <code class="code-inline tex2jax_ignore">static</code> when declaring them; which makes them <em class="emphasis">instance variables</em>. Using <code class="code-inline tex2jax_ignore">static</code> would have made them <dfn class="terminology">class variables</dfn>, defined within the scope of the class. Because there is only one of any class, there would be only one of each static variable.</div>
+<div class="para" id="p-704">We also used the keyword <code class="code-inline tex2jax_ignore">private</code> instead of our usual <code class="code-inline tex2jax_ignore">public</code> visibility specifyer when declaring our LED instance variables. Using <code class="code-inline tex2jax_ignore">private</code> ensures that the instance variables are not accessible from outside each instance. Instance variables declared with <dfn class="terminology">private visibility</dfn> may be accessed only from within the scope of an object. No access from outside the object is permitted. We now have two visibility specifiers for the declaration of methods and instance variables, <code class="code-inline tex2jax_ignore">public</code> and <code class="code-inline tex2jax_ignore">private</code>.</div>
 <figure class="listing figure-like" id="listing-cl-led1"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LED.java (version 1)
 // A simple LED display class
 import doodlepad.*;
@@ -799,7 +760,7 @@ public class LED {
   private Oval light;           // Visual display of object
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">9.2.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LED.java (version 1)</code></figcaption></figure><div class="para" id="p-706">When we instantiate a new LED object we want to initialize these variables. That’s where the constructor comes in. <a href="" class="xref" data-knowl="./knowl/listing-cl-led2.html" title="Listing 9.2.3">Listing 9.2.3</a> adds an LED constructor to our LED class declaration.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">9.2.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LED.java (version 1)</code></figcaption></figure><div class="para" id="p-705">When we instantiate a new LED object we want to initialize these variables. That’s where the constructor comes in. <a href="" class="xref" data-knowl="./knowl/listing-cl-led2.html" title="Listing 9.2.3">Listing 9.2.3</a> adds an LED constructor to our LED class declaration.</div>
 <figure class="listing figure-like" id="listing-cl-led2"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LED.java (version 2)
 // A simple LED display class
 import doodlepad.*;
@@ -816,7 +777,7 @@ public class LED {
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">9.2.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LED.java (version 2)</code></figcaption></figure><div class="para" id="p-707">Let compare our added LED constructor to the critical features given in <a href="" class="xref" data-knowl="./knowl/figure-cl-constructor-anatomy.html" title="Figure 9.2.1">Figure 9.2.1</a>.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">9.2.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">LED.java (version 2)</code></figcaption></figure><div class="para" id="p-706">Let compare our added LED constructor to the critical features given in <a href="" class="xref" data-knowl="./knowl/figure-cl-constructor-anatomy.html" title="Figure 9.2.1">Figure 9.2.1</a>.</div>
 <ol class="decimal">
 <li id="li-276"><div class="para" id="p-derived-li-276">The name of the constructor matches the name of the class, <code class="code-inline tex2jax_ignore">LED</code>.</div></li>
 <li id="li-277"><div class="para" id="p-derived-li-277">Two parameters are declared just like any method.</div></li>
@@ -824,8 +785,8 @@ public class LED {
 <li id="li-279"><div class="para" id="p-derived-li-279">There is no return statement in the body of the constructor.</div></li>
 <li id="li-280"><div class="para" id="p-derived-li-280">And finally, instance variables are accessed from within the constructor using the <code class="code-inline tex2jax_ignore">this</code> keyword.</div></li>
 </ol>
-<div class="para" id="p-708">The expressions <code class="code-inline tex2jax_ignore">this.on</code> and <code class="code-inline tex2jax_ignore">this.light</code> access and initialize the instance variables declared outside the scope of the constructor but within the scope of the object. All constructors must follow these same rules listed in <a href="" class="xref" data-knowl="./knowl/figure-cl-constructor-anatomy.html" title="Figure 9.2.1">Figure 9.2.1</a>.</div>
-<div class="para" id="p-709">Let’s add a <code class="code-inline tex2jax_ignore">main(…)</code> method to test our initial Java LED class. It is very convenient to use the <code class="code-inline tex2jax_ignore">main(…)</code> method to test a class. As we’ll see later, as our programs grow we rarely invoke an individual class’s <code class="code-inline tex2jax_ignore">main(…)</code> method in favor of using a special <dfn class="terminology">driver</dfn> class with a <code class="code-inline tex2jax_ignore">main(…)</code> method designed specifically to start up a program. To test our class we create two LED instances at different locations. See <a href="" class="xref" data-knowl="./knowl/listing-cl-led3.html" title="Listing 9.2.4">Listing 9.2.4</a> and <a href="" class="xref" data-knowl="./knowl/figure-cl-led3.html" title="Figure 9.2.5">Figure 9.2.5</a>. As expected, in <a href="" class="xref" data-knowl="./knowl/figure-cl-led3.html" title="Figure 9.2.5">Figure 9.2.5</a> two LED objects are shown at the given starting locations with a dark gray fill color.</div>
+<div class="para" id="p-707">The expressions <code class="code-inline tex2jax_ignore">this.on</code> and <code class="code-inline tex2jax_ignore">this.light</code> access and initialize the instance variables declared outside the scope of the constructor but within the scope of the object. All constructors must follow these same rules listed in <a href="" class="xref" data-knowl="./knowl/figure-cl-constructor-anatomy.html" title="Figure 9.2.1">Figure 9.2.1</a>.</div>
+<div class="para" id="p-708">Let’s add a <code class="code-inline tex2jax_ignore">main(…)</code> method to test our initial Java LED class. It is very convenient to use the <code class="code-inline tex2jax_ignore">main(…)</code> method to test a class. As we’ll see later, as our programs grow we rarely invoke an individual class’s <code class="code-inline tex2jax_ignore">main(…)</code> method in favor of using a special <dfn class="terminology">driver</dfn> class with a <code class="code-inline tex2jax_ignore">main(…)</code> method designed specifically to start up a program. To test our class we create two LED instances at different locations. See <a href="" class="xref" data-knowl="./knowl/listing-cl-led3.html" title="Listing 9.2.4">Listing 9.2.4</a> and <a href="" class="xref" data-knowl="./knowl/figure-cl-led3.html" title="Figure 9.2.5">Figure 9.2.5</a>. As expected, in <a href="" class="xref" data-knowl="./knowl/figure-cl-led3.html" title="Figure 9.2.5">Figure 9.2.5</a> two LED objects are shown at the given starting locations with a dark gray fill color.</div>
 <figure class="listing figure-like" id="listing-cl-led3"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LED.java (version 3)
 // A simple LED display class
 import doodlepad.*;

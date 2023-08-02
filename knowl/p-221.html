@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">We can test if a point is within a circle by checking if the distance between a point and the center of the circle is less than the radius of the circle. The distance formula (<span class="process-math">\(distance = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}\)</span>) gives us the way to compute the distance between <span class="process-math">\((x_1, y_1)\)</span> and <span class="process-math">\((x_2, y_2)\text{,}\)</span> where one of the two points will be chosen as the circle center and the other is the point we are testing. Because our game board is a set of nested circles, the distance formula will be an integral part of our logical expressions.</div>
+<div class="para">A simple relational expression will tell us if a dart’s landing coordinate falls within the centermost circle. It is convenient to compute the distance to the circle center first and save it to a temporary variable, and then test the value of that distance variable. The following code snippet initializes variables, computes distance, and tests that distance to see if the dart has landed in the centermost circle. Note how we have organized these computations as a sequence of steps.</div>
 <span class="incontext"><a href="section-pe-logical.html#p-221" class="internal">in-context</a></span>
 </body>
 </html>

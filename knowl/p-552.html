@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">In general, it is a very good idea to declare your variables in a scope that is as narrow as feasible and still bea ble to solve your problem. You may be tempted to just declare all variables in the outer class scope so that you don’t have to worry about declaring them again. Resist the temptation. This is often the cause for subtle bugs that can be very hard to find.</div>
+<div class="para">In the <a href="" class="xref" data-knowl="./knowl/listing-c1-charrepeats.html" title="Listing 6.7.2">Listing 6.7.2</a>, we declare <code class="code-inline tex2jax_ignore">i</code> once at the top of our program so we never have to worry about it again. In the <code class="code-inline tex2jax_ignore">main(…)</code> method, we loop 5 times and each time invoke the helper method <code class="code-inline tex2jax_ignore">repeatChars(…)</code>, which takes <code class="code-inline tex2jax_ignore">char</code> and <code class="code-inline tex2jax_ignore">count</code> parameters identifying the character to repeat and the number of times to repeat it in the returned String. The <code class="code-inline tex2jax_ignore">main(…)</code> prints the constructed String and continues to the next iteration.</div>
 <span class="incontext"><a href="section-c1-block-scope.html#p-552" class="internal">in-context</a></span>
 </body>
 </html>

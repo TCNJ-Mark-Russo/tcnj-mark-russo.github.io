@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">There may be something quirky about your class implementation that prevents a derived class from working correctly. Adding the <code class="code-inline tex2jax_ignore">final</code> keyword will tell the Java compiler to prevent new classes from extending the final base class.</div>
-<span class="incontext"><a href="section-in-basics.html#p-794" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">A method invoked on a derived class that does not implement the exact method signature, will cause Java to search for the method signature in the base class, and up the inheritance hierarchy. But, if a method with the signature is implemented in the dervied class, then that implementation will be invoked, even if the same method signature has been implemented in a base class. If a method in a dervied class has the same signature as one in its base class, we say that the derived class method <dfn class="terminology">overrides</dfn> the one in the base class.</div>
+<span class="incontext"><a href="section-in-overriding.html#p-794" class="internal">in-context</a></span>
 </body>
 </html>

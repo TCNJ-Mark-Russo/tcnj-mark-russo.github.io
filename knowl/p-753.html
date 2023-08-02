@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In which class should the overall <code class="code-inline tex2jax_ignore">main(…)</code> method be placed — the one that initializes all classes and starts running your program? It may not always be obvious. After all, for our individual class definitions to be reusable, it does not make a lot of sense to use a class’s <code class="code-inline tex2jax_ignore">main(…)</code> method to start a larger application. Furthermore, in <a href="section-cl-methods.html" class="internal" title="Section 9.3: Methods">Section 9.3</a> we used the <code class="code-inline tex2jax_ignore">main(…)</code> method to run tests on our custom class.</div>
+<div class="para">One approach is to author a separate class that defines only this top-level <code class="code-inline tex2jax_ignore">main(…)</code> method that starts the larger program. In a sense, this <code class="code-inline tex2jax_ignore">main(…)</code> method <em class="emphasis">drives</em> the rest of your program, hence the term <dfn class="terminology">Driver Class</dfn>. In fact, you may define several Driver Classes in a program, each with a different purpose, and invoke each separately by sepcifying the name of the Driver Class of interest when running your program using the <code class="code-inline tex2jax_ignore">java</code> command.</div>
 <span class="incontext"><a href="section-cl-multi-file-programs.html#p-753" class="internal">in-context</a></span>
 </body>
 </html>

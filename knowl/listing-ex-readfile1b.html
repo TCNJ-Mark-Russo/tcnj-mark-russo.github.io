@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ReadFile1B.java
+import java.util.Scanner;                 // Required imports
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class ReadFile1B {
+  public static void main(String[] args) {
+    try {                                 // Catch exceptions
+      printFile("data.txt");              // Print file Scanner
+    }
+    catch( FileNotFoundException e ) {    // Handle checked exception
+      System.out.println(e);
+    }
+  }
+
+  // Utility to print a file's contents. Defer handling FileNotFoundException
+  public static void printFile(String fileName) throws FileNotFoundException {
+    String line;                          // Helper to hold read line String
+    File fp = new File(fileName);         // Create a new File object
+    Scanner scn = new Scanner(fp);        // Wrap File in a Scanner
+
+    while (scn.hasNextLine()) {           // Continue while more to read
+      line = scn.nextLine();              // Read line from file
+      System.out.println( line );         // Print line
+    }
+    scn.close();                          // Close the Scanner
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">12.4.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ReadFile1B.java</code></figcaption></figure><span class="incontext"><a href="section-ex-reading-files.html#listing-ex-readfile1b" class="internal">in-context</a></span>
+</body>
+</html>
