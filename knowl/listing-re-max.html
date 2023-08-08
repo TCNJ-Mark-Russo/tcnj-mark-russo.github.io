@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Max.java
+public class Max {
+  public static double iterativeMax(double[] arr) {
+    // Assume max is first element
+    double max = arr[0];
+
+    // Check if any another value is better
+    for (int i=1; i&lt;arr.length; i++) {
+      if (arr[i] &gt; max) max = arr[i];
+    }
+    // Return max value
+    return max;
+  }
+
+  public static double recursiveMax(double[] arr) {
+    // Call method overload starting a index 0
+    return recursiveMax(arr, 0);
+  }
+
+  public static double recursiveMax(double[] arr, int idx) {
+    // Base case when only 1 item left in array.
+    if (idx == arr.length - 1) {
+      return arr[idx];
+
+    // Recursive case
+    } else {
+      // Compute max of remaining part of array
+      double max = recursiveMax(arr, idx+1);
+
+      // Compare item at idx with max and return greatest
+      if (arr[idx] &gt; max) {
+        return arr[idx];
+      } else {
+        return max;
+      }
+    }
+  }
+
+  // Test
+  public static void main(String[] args) {
+    double[] arr = {2.1, 6.2, 5.9, 3.7, 9.8, 8.0};
+    System.out.println( iterativeMax(arr) );
+    System.out.println( recursiveMax(arr) );
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.3.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Max.java</code></figcaption></figure><span class="incontext"><a href="section-re-characterising.html#listing-re-max" class="internal">in-context</a></span>
+</body>
+</html>

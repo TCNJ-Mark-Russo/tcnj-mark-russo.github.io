@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Sums.java
+public class Sums {
+
+  // Iterative solution to sum a sequence of integers
+  public static int iterativeSum(int begin, int end) {
+    int sum = 0;                      // Init accumulator variable
+    for (int i=begin; i&lt;=end; i++) {  // Generate all integers
+      sum += i;                       // Accumulate      
+    }
+    return sum;                       // Return result
+  }  
+
+  // Recursive solution to sum a sequence of integers
+  public static int recursiveSum(int begin, int end) {
+    // Base case when begin &gt; end.
+    if (begin &gt; end) {
+      return 0;                       // Sum is 0
+
+    // Recursive case
+    } else {
+      // Total sum is current number plus remaining sum
+      return begin + recursiveSum(begin+1, end);
+    }
+  }  
+
+  // Test
+  public static void main(String[] args) {
+    System.out.println( "Iterative sum: " + iterativeSum( 1, 10) );
+    System.out.println( "Recursive sum: " + recursiveSum( 1, 10) );
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.3.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Sums.java</code></figcaption></figure><span class="incontext"><a href="section-re-characterising.html#listing-re-sums" class="internal">in-context</a></span>
+</body>
+</html>

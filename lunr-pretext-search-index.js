@@ -4168,207 +4168,369 @@ var ptx_lunr_docs = [
   "body": " Chapter Exercises   "
 },
 {
-  "id": "section-107",
+  "id": "section-re-thinking",
   "level": "1",
-  "url": "section-107.html",
+  "url": "section-re-thinking.html",
   "type": "Section",
   "number": "13.1",
-  "title": "Tracing Programs",
-  "body": "Tracing Programs  A running method must suspend when it calls another method. All the state of the running method must be saved so that when the called method returns the suspended method must accept the returned value and continue executing where it left off.  "
+  "title": "Recursive Thinking",
+  "body": " Recursive Thinking  A palindrome is a word, phrase, or sentence that reads the same, backward or forward, excluding spaces, punctuation, and letter case. For example, \"racecar\" and \"Was it a car or a cat I saw?\" are well-known palindromes. How might you write a program to test whether a String is a palindrome?  An iterative algorithm for checking that a String is a palindrome involves simultaneously iterating from the front and the back towards the center. On each iteration we must test that corresponding characters are equal. The moment the equality test fails, we know we don't have a palindrome.   is an iterative implementation of a method that tests a String for a palindrome.   isPalindrome(…) Iterative Implementation   \/\/ Palindrome.java public class Palindrome { \/\/ Iterative implementation of palindrome checking public static boolean isPalindrome(String lets) { \/\/ Loop from 0 to center of lets for (int i=0; i < lets.length()\/2; i++) { \/\/ Compute last char index from first and length int j = lets.length()-1-i; \/\/ Fail if char mismatch if ( lets.charAt(i) != lets.charAt(j) ) { return false; } } return true; } public static void main(String[] args) { \/\/ Palindrome tests String pal1 = \"RACECAR\"; String pal2 = \"WASITACARORACATISAW\"; \/\/ Was it a car or a cat I saw? String pal3 = \"TURNYOURWOUNDSINTOWISDOM\"; \/\/ Turn your wounds into wisdom. System.out.println( isPalindrome(pal2) ); System.out.println( isPalindrome(pal3) ); } }    Otherwise, we iterate i starting at 0 and continue while i < lets.length()\/2 . Within the loop we calculate j = lets.length()-1-i .  When testing Strings having an even number of chars, for example when lets.length() == 6 , then the index of the first char is 0 and the last is 5. In other words, when i == 0 , j = 6-1-0 = 5 ; we are comparing the first and last chars of the String. When i == 1 , j = 5-1-1=4 , and when i == 2 , j == 3 . The pair of indexes of chars to compare are calculated correctly.  For a String having an odd number of chars, say 7, the loop extent does not change. lets.length()\/2 is still 3 because we lose the fractional part with integer division. The variable i starts at 0 and again increments to 1 and then 2. The value of j is computed as 7-1-0 == 6 and decrements to 5 and 4. The char at index 3 is not tested. This is not a problem because the char at index 3 is the middle char, whichs is a singleton and can be ignored in a String having an odd number of chars because it has no char to match against.  The following test of our interative method produces the expected results.   javac Palindrome.java java Palindrome  true false   What about a recursive version of isPalindrome(String lets) ? Can you identify a way to dtermine if a String is a palindrome involving a the test that a substring of the main String is a palindrome?  The first step is to check that the first and last chars are equal. What's left is to continue with the chars in the middle. In a way, we are checking that the middle chars themselves constitute a smaller palindrome. Why not use the same isPalindrome(…) method to check this inner substring, without the first and last chars? Wouldn't this solve our problem? In other words, we can say that a String is a palindrome if the first and last chars are equal and the remaining part of the String is also a palindrome.   is a recursive program that implements this idea.   isPalindrome(…) Recursive Implementation   \/\/ Palindrome.java public class Palindrome { \/\/ Recursive implementation of palindrome checking public static boolean isPalindrome( String lets ) { System.out.println(lets); \/\/ Show string tested if (lets.length() <= 1) { \/\/ BASE CASE 1 return true; } else if ( lets.charAt(0) == lets.charAt(lets.length()-1)) { String smaller = lets.substring( 1, lets.length()-1); return isPalindrome( smaller ); \/\/ RECURSIVE CASE } else { return false; \/\/ BASE CASE 2 (no match) } } public static void main(String[] args) { \/\/ Palindrome tests String pal1 = \"RACECAR\"; String pal2 = \"WASITACARORACATISAW\"; \/\/ Was it a car or a cat I saw? String pal3 = \"TURNYOURWOUNDSINTOWISDOM\"; \/\/ Turn your wounds into wisdom. System.out.println( isPalindrome(pal2) ); System.out.println( isPalindrome(pal3) ); } }    We start our method by checking for special cases. Any String of length 0 or 1 is automatically considered a palindrome, by definition. There is nothing more to do so we return true immediately. This is called the base case .  Otherwise, the String is a palindrome if the characters at both ends are equal and the substring excluding the end chars is also a palindrome. To test for the smaller palindrome, we invoke the same method again passing a smaller substring and returning as the overall result what that recursive call returns. This is called the recursive case.  In the test of our recursive method we print the intermediate Strings tested in order to watch our method recurse.   javac Palindrome.java java Palindrome  WASITACARORACATISAW ASITACARORACATISA SITACARORACATIS ITACARORACATI TACARORACAT ACARORACA CARORAC ARORA ROR O true TURNYOURWOUNDSINTOWISDOM false   How do these two implementations compare? More thought went into the iterative version to make sure we calculated the indexes correctly. Arguably, once you see it, the recursive version is more elegant and easier to understand. The recursive version of isPalindrome(…) says that Strings of length 0 or 1 are a palindrome by definition, and if the end chars are equal then the answer is the same as if the middle chars constitute a palindrome.  We've constructed a way to solve the problem in terms of itself . This is recursion .  Recursive methods always handle one or more recursive cases and one or more bases cases. An if-statement is commonly used to separate these cases, but the cases are not always as obvious. Nevertheless, at least one of each case is handled, always.  Recognize how this method stops executing. The String being tested gets smaller on each recursive call. This makes progress toward moving us closer to the base case of a String with 1 or even 0 chars. We must always be moving toward the base case to avoid an infinite recursion. For example, what would happen if we swapped the order of the first two branches in the if-statement of ?  "
 },
 {
-  "id": "re-section-call-stack",
+  "id": "listing-re-palindrome-iterative",
+  "level": "2",
+  "url": "section-re-thinking.html#listing-re-palindrome-iterative",
+  "type": "Listing",
+  "number": "13.1.1",
+  "title": "",
+  "body": " isPalindrome(…) Iterative Implementation   \/\/ Palindrome.java public class Palindrome { \/\/ Iterative implementation of palindrome checking public static boolean isPalindrome(String lets) { \/\/ Loop from 0 to center of lets for (int i=0; i < lets.length()\/2; i++) { \/\/ Compute last char index from first and length int j = lets.length()-1-i; \/\/ Fail if char mismatch if ( lets.charAt(i) != lets.charAt(j) ) { return false; } } return true; } public static void main(String[] args) { \/\/ Palindrome tests String pal1 = \"RACECAR\"; String pal2 = \"WASITACARORACATISAW\"; \/\/ Was it a car or a cat I saw? String pal3 = \"TURNYOURWOUNDSINTOWISDOM\"; \/\/ Turn your wounds into wisdom. System.out.println( isPalindrome(pal2) ); System.out.println( isPalindrome(pal3) ); } }   "
+},
+{
+  "id": "listing-re-palindrome-recursive",
+  "level": "2",
+  "url": "section-re-thinking.html#listing-re-palindrome-recursive",
+  "type": "Listing",
+  "number": "13.1.2",
+  "title": "",
+  "body": " isPalindrome(…) Recursive Implementation   \/\/ Palindrome.java public class Palindrome { \/\/ Recursive implementation of palindrome checking public static boolean isPalindrome( String lets ) { System.out.println(lets); \/\/ Show string tested if (lets.length() <= 1) { \/\/ BASE CASE 1 return true; } else if ( lets.charAt(0) == lets.charAt(lets.length()-1)) { String smaller = lets.substring( 1, lets.length()-1); return isPalindrome( smaller ); \/\/ RECURSIVE CASE } else { return false; \/\/ BASE CASE 2 (no match) } } public static void main(String[] args) { \/\/ Palindrome tests String pal1 = \"RACECAR\"; String pal2 = \"WASITACARORACATISAW\"; \/\/ Was it a car or a cat I saw? String pal3 = \"TURNYOURWOUNDSINTOWISDOM\"; \/\/ Turn your wounds into wisdom. System.out.println( isPalindrome(pal2) ); System.out.println( isPalindrome(pal3) ); } }   "
+},
+{
+  "id": "p-964",
+  "level": "2",
+  "url": "section-re-thinking.html#p-964",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "section-re-call-stack",
   "level": "1",
-  "url": "re-section-call-stack.html",
+  "url": "section-re-call-stack.html",
   "type": "Section",
   "number": "13.2",
   "title": "The Call Stack",
-  "body": " The Call Stack  Tracks the state of executing and suspended methods while a program runs.  Each time a method is invoked, a new stack frame is created and pushed on the call stack. Stack frames track a number of facts about the method being executed, including all the declared variables, their instantaneous values, and the command being executed.  "
+  "body": " The Call Stack  A running method suspends when it calls another method. The state of the suspended method must be saved so that when the called method returns the suspended method can continue executing where it left off.  The state of a suspended method is saved in an internal data structure called a stack frame . The stack frame tracks the suspended method's scope (variables and their instantaneous values) and knows where to continue execution when the invoked method completes. There are as many stack frames as your program has suspended methods, all of which are stored in the call stack . Think of a stack data structure like a stack of dinner plates. Typically, you add to the top of a stack, and remove from the top of the stack. It is the same with the call stack. When a new stack frame is created as a result of one method invoking another, the stack frame is pushed onto the top of the call stack. When the invoked method completes, the stack frame describing the suspended method is popped off the top of the stack and used to resume execution.  Each time a method suspends, it gets its own new stack frame, even when the method is invoking itself, which is what happens when executing a recursive method. Consider the recursive method countdown(int n) in .   ListOff.java   public class LiftOff { public static void main(String[] args) { countdown(10); } \/\/ Count down from N public static void countdown(int N) { \/\/ When N reaches 0, Lift Off! if (N <= 0) { System.out.println(\"We have lift off!\"); \/\/ Print current count and recurse with decremented value } else { System.out.println(N); countdown(N-1); } } }      Each time the else-branch in the countdown(…) method in is invoked, the state of the invoking method is captured in a stack frame and pushed on the call stack. During recursion this repeats itself with each new value of N until the base case is reached. is an illustrative diagram of the call stack when the recursion hits the base case. All stack frames hold the value of N when it was suspended. After reaching the base case, each method starts to return, which pops the stack from off the call stack, returning control flow to the suspended method.  Every one of the stack frames depicted in represents a suspended version of the countdown(…) method. Recursion works because each newly invoked method has its own scope and its own set of method-scoped variables, even when the method invoked is the same as the invoking method.     Call Stack at the base case     A wonderful tool for visualizing the call stack in action is the Java Visualizer , one instance of which is hosted by the University of Waterloo Centre for Education in Mathematics and Computing. With this tool you can paste a small Java program into the editor and watch it execute, step-by-step. The current state of the call stack is illustrated on the right as you step through the program animation. below is an embedded version of the visualizer for the LiftOff.java program. Scroll to the right to see the call stack. Drag left the right edge of the code window to bring both into view. Click the [Forward] button to step through the program. Alternatively, click here to visualize the program on the site directly.  Try your own programs by visiting the Java Visualizer site.    Visualize LiftOff.java    "
 },
 {
-  "id": "section-109",
+  "id": "p-971",
+  "level": "2",
+  "url": "section-re-call-stack.html#p-971",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "stack frame call stack "
+},
+{
+  "id": "listing-re-countdown",
+  "level": "2",
+  "url": "section-re-call-stack.html#listing-re-countdown",
+  "type": "Listing",
+  "number": "13.2.1",
+  "title": "",
+  "body": " ListOff.java   public class LiftOff { public static void main(String[] args) { countdown(10); } \/\/ Count down from N public static void countdown(int N) { \/\/ When N reaches 0, Lift Off! if (N <= 0) { System.out.println(\"We have lift off!\"); \/\/ Print current count and recurse with decremented value } else { System.out.println(N); countdown(N-1); } } }   "
+},
+{
+  "id": "figure-re-countdown",
+  "level": "2",
+  "url": "section-re-call-stack.html#figure-re-countdown",
+  "type": "Figure",
+  "number": "13.2.2",
+  "title": "",
+  "body": " Call Stack at the base case   "
+},
+{
+  "id": "figure-re-countdown-visualizer",
+  "level": "2",
+  "url": "section-re-call-stack.html#figure-re-countdown-visualizer",
+  "type": "Figure",
+  "number": "13.2.3",
+  "title": "",
+  "body": " Visualize LiftOff.java   "
+},
+{
+  "id": "section-re-characterising",
   "level": "1",
-  "url": "section-109.html",
+  "url": "section-re-characterising.html",
   "type": "Section",
   "number": "13.3",
-  "title": "Recursion",
-  "body": "Recursion  When tracing a program, if a method (eventually) invokes itself, this is called recursion .  Direct recursion occurs when a method invokes itself, directly.  Indirect recursion occurs when a method invokes other methods that eventually traces back to the original method.  Every method invocation gets a new stack frame, even if it is the same method invoked multiple times. Each invocation gets its own stack frame.  "
+  "title": "Characterizing Recursion",
+  "body": " Characterizing Recursion  Exploring the characteristics of a recursive method or methods help us to better understand this solution technique. In this chapter let's explore the many variations on recursion and how the core technique is used to solve a variety of problems.   Accumulating Recursion  Similar to iteration, we can use a recursive technique to accumulate a result. Let's consider the simple problem of summing a sequence of integers in some range [begin, end]. includes two methods to solve this problem: one iterative and one recursive. The main(…) method tests both on the integer range [1, 10]. Both produce the correct value of 55.   Sums.java   \/\/ Sums.java public class Sums { \/\/ Iterative solution to sum a sequence of integers public static int iterativeSum(int begin, int end) { int sum = 0; \/\/ Init accumulator variable for (int i=begin; i<=end; i++) { \/\/ Generate all integers sum += i; \/\/ Accumulate } return sum; \/\/ Return result } \/\/ Recursive solution to sum a sequence of integers public static int recursiveSum(int begin, int end) { \/\/ Base case when begin > end. if (begin > end) { return 0; \/\/ Sum is 0 \/\/ Recursive case } else { \/\/ Total sum is current number plus remaining sum return begin + recursiveSum(begin+1, end); } } \/\/ Test public static void main(String[] args) { System.out.println( \"Iterative sum: \" + iterativeSum( 1, 10) ); System.out.println( \"Recursive sum: \" + recursiveSum( 1, 10) ); } }     javac Sums.java java Sums  Iterative sum: 55 Recursive sum: 55   The iterativeSum(…) method uses the obvious approach of generating the integers to sum with a for-statement. The sum variable is initialized to 0 and incremented each time through the loop before returning the final result after the loop completes all iterations.  The recursiveSum(…) method reformulates the solution technique to be recursive. It recasts the solution as the first number in the sequence plus the sum of the remaining numbers in the sequence . The base case terminates the recursion when the first parameter begin is greater than the second parameter end , returning a value of 0. This is the result we'd get when invoking iterativeSum(…) with the same parameter values.  An interesting distinction between these two methods is that the iterative method accumulates the sum as integer range increases, whereas the recursive technique accumulates the sum after the base case is reached and each stack frame is popped off the call stack.    All-pairs Comparison  Solving problems that require the comparison of element pairs to reach an answer also has a recursive formulation. One simple example is finding an overall maximum of a collection. includes an iterative and a recursive approach to finding the maximum value in a range of doubles. The main(…) method tests both methods on an arbitrary array of doubles. Both produce the correct result of 9.8.   Max.java   \/\/ Max.java public class Max { public static double iterativeMax(double[] arr) { \/\/ Assume max is first element double max = arr[0]; \/\/ Check if any another value is better for (int i=1; i<arr.length; i++) { if (arr[i] > max) max = arr[i]; } \/\/ Return max value return max; } public static double recursiveMax(double[] arr) { \/\/ Call method overload starting a index 0 return recursiveMax(arr, 0); } public static double recursiveMax(double[] arr, int idx) { \/\/ Base case when only 1 item left in array. if (idx == arr.length - 1) { return arr[idx]; \/\/ Recursive case } else { \/\/ Compute max of remaining part of array double max = recursiveMax(arr, idx+1); \/\/ Compare item at idx with max and return greatest if (arr[idx] > max) { return arr[idx]; } else { return max; } } } \/\/ Test public static void main(String[] args) { double[] arr = {2.1, 6.2, 5.9, 3.7, 9.8, 8.0}; System.out.println( iterativeMax(arr) ); System.out.println( recursiveMax(arr) ); } }    The iterativeMax(…) method temporarily chooses the max variable to be the first value in the array. A loop is used to compare this value to the remaining array values. If better value is found that exceeds the current maximum, the max variable value is replaced. The final value of max is returned as the overall maximum of all array values.  We use the method polymorphism to overload the recursiveMax(…) method with two implementations. The first overload takes only the double array as a parameter. This is a helper method, which is not recursive. It serves only to help us invoke the second overload, which is a recursive method. This second implementation takes the double array as well as the starting index ( idx ) in the array from which the maximum should be calculated in the remaining elements. The second overload starts by checking for a base case, which occurs when the index from which to start is the last index of the array. The maximum value of one array element is that array element value. This value is returned immediately. If idx is not the last index, the method is invoked recursively with the double array and a starting index of idx+1 , which computes the the maximum value of the remaining elements in the array, excluding the first. The value returned from this recursive invocation is compared to the element at idx and the maximum of the two is returned. The main(…) method tests both methods on an arbitrary array of doubles. Both produce the correct result of 9.8.  Compare recursiveMax(…) to recursiveSum(…) and note the similarity in implementation. In both cases the computation is performed on a smaller version of the problem. The result from this smaller version is an intermediate result which is used to compute the solution to a larger version of the problem.    Direct and Indirect Recursion  All recursive methods we've explored thus far are examples of direct recursion , which occurs when a recursive method invokes itself directly . It is possible to write a program in which no individual method invokes itself, yet is considered recursive. In the simplest case, one method might invoke a second, which invokes the first, and so one. This is an example of indirect recursion . As long as an invoked method traces back to itself, the program is considered recursive.   is a simple demonstration of indirect recursion . The left(…) prints \"left\" and the right(…) method prints \"right.\" Neither the left(…) nor the right(…) methods are recursive by themselves. But, because left(…) invokes right(…) and right(…) invokes left(…) , the program is indirectly recursive . Both methods implement a base case that prints \"arrived\" and stops the recursion when the step count N reaches 0.   Walk.java   \/\/ Walk.java public class Walk { \/\/ A journey of a thousand miles begins with a single step. public static void main(String[] args) { left(10); \/\/ Take the first step } \/\/ Left foot public static void left(int N) { if (N <= 0) { System.out.println(\"arrived\"); } else { System.out.println(\"left\"); right(N-1); } } \/\/ Right foot public static void right(int N) { if (N <= 0) { System.out.println(\"arrived\"); } else { System.out.println(\"right\"); left(N-1); } } }     javac Walk.java java Walk  left right left right left right left right left right arrived     Multiple Cases and Multiple Invocations  A recursive method must encode at least one base case and one recursive case to work properly. These cases may not always be obvious. For example, a base case of a void method may simply be a scenario in which program control causes the method to exit because no recursive case condition was satisfied.  A recursive method may have more than one base case and\/or more than one recursive case. Multi-base and multi-recursive case methods encode multiple conditions that trigger base cases or multiple conditions that trigger a recursive cases. Furthermore, the recursion may not be direct. We'll refer to this scenario as multi-case recursion .  Another interesting variation on recursion occurs when the block of code that implements a single recursive case invokes multiple recursive methods. We'll refer to this scenario as multiple recursion .  A good example of both multi-case and multiple recursion is a naive implementation of the Fibonacci Number calculation. The mathematical definition of the Fibonacci Number is as follows, where is the Fibonacci number (see ).    Fibonacci Number:    The Fibonacci Number: , for .      First 10 Fibonacci Numbers                 0  1  1  2  3  5  8  13  21  34  55     Let's explore two alternative ways to calculate Fibonacci number: . To help better understand the difference between these implementations, we'll measure and report a few metrics, including recursion\/iteration count as well as elapsed wall-clock time.   Fibonacci.java (version 1)   \/\/ Fibonacci.java public class Fibonacci { public static long count = 0L; \/\/ Counter public static long start = 0L; \/\/ Start time public static long recursiveFibonacci( int N ) { \/\/ Count recursive invocations count++; \/\/ Two base cases if (N == 0) { return 0; } else if (N == 1) { return 1; } \/\/ One base case - multiple recursion \/\/ Return Fibonacci number F[N] else { return recursiveFibonacci(N - 1) + recursiveFibonacci(N - 2); } } public static void main(String[] arg) { int N = 50; count = 0; \/\/ Reset metrics start = System.currentTimeMillis(); long FN = recursiveFibonacci(N); System.out.println( \"F(\" + N + \") = \" + FN ); System.out.println(\"recursion count: \" + count + \", elapsed time: \" + (System.currentTimeMillis() - start) + \" ms\"); } }    is a classic implementation of the recursive definition of the Fibonacci number. The program includes the recursive recursiveFibonacci(…) method. Note that this method has two base cases , one each for the two definitions F[0] = 0 and F[1] = 1 . Also note that the recusive case invokes recursiveFibonacci(…) twice. This method demonstrates both multi-case recursion having two base cases and multiple recursion , having multiple recursive calls in one recursive case.  The Fibonacci class has two static variables used for tracking metrics. The count long will be used to count the number of recursive calls or iterations in a method, and the start long will hold the moment a method starts execution n milliseconds since 00:00 on January 1, 1970, which will be subtracted from a second measurement of milliseconds after a method completes to estimate the method's execution duration in milliseconds. The built in static Java utility method System.currentTimeMillis() returns the number of milliseconds that have elapsed since January 1, 1970 at 00:00. It is convenient tool to use to calculate elpased time. The first line in recursiveFibonacci(…) increments the count variable so it will hold the total number of times the method was invoked.   main() in resets both count and start and then it invokes recursiveFibonacci(…) with an N parameter of 50. It then prints the computed Fibonacci number, the recursion count, and it computes and prints the elapsed time.  In the following console session using a laptop computer, you will see that the Fibonacci number computed was 12586269025, the computation took over 51 seconds to complete, and the number of recursive calls was well over 40 billion!   javac Fibonacci.java java Fibonacci  F(50) = 12586269025 recursion count: 40730022147, elapsed time: 51248 ms     Dynamic Programming  If you dig in to the details of Fibonacci number computation, it becomes obvious that the naive implementation of the recursive definition is very inefficient. To compute we must compute and . To compute we first (recursively) compute and . We need to compute , but we are computing it for and then throwing it away! We are forced to recompute twice, once for and a second time for . For we need and , but again, we are computing for and throwing it away, but we need it for as well. The result is a highly inefficient compounding and repetition of the same computation over and over, as you proceed down the chain of dependencies. It certainly seems it would be much more efficient to cache intermediate Fibonacci numbers and look them up if they are needed again.  When a subproblem in a recursive computation is repeated, it may be worth saving intermediate results and looking them up when needed instead of recomputing them. This idea is at the heart of dynamic programming . With over 40 billion recursions required to calculate F[50] , Calculating the Fibonacci number certainly appears to be a good candidate for dynamic programming .  With the Fibonacci number, we can do one better. We know that to compute F[N] we must compute all F[i] for i from 2 up to and including N , so why not just perform that computation from the start. That is, when we need the value of F[N] , let's declare an array named F[] of size N+1, init the base cases values F[0] = 0 and F[1] = 1 , and then use iteration to compute F[2] up to F[N] , storing intermediate results in the F[] array, and return F[N] as the result?   adds a second method to our Fibonacci.java program named iterativeFibonacci(…) that implements of dynamic programming version of the Fibonacci number calculation. To the main() method we add a second test by calling our new method with an iteration count and a measurement of the elapsed time.   Fibonacci.java (version 2)   \/\/ Fibonacci.java public class Fibonacci { public static long count = 0L; \/\/ Counter public static long start = 0L; \/\/ Start time public static long recursiveFibonacci( int N ) { \/\/ ... } \/\/ Iterative Fibonacci number calculation using Dynamic Programming public static long iterativeFibonacci(int N) { long[] F = new long[N+1]; \/\/ Array for all intermediate values F[0] = 0L; \/\/ Init first two by definition F[1] = 1L; for (int i=2; i<=N; i++) { \/\/ Calculate remaining Fibonacci.count++; \/\/ Count iterations F[i] = F[i-1] + F[i-2]; \/\/ Fibonacci number calculation } return F[N]; \/\/ Return F[N] } public static void main(String[] arg) { int N = 50; count = 0; \/\/ Reset metrics start = System.currentTimeMillis(); long FN = recursiveFibonacci(N); System.out.println( \"F(\" + N + \") = \" + FN ); System.out.println(\"recursion count: \" + count + \", elapsed time: \" + (System.currentTimeMillis() - start) + \" ms\"); count = 0; \/\/ Reset metrics start = System.currentTimeMillis(); FN = iterativeFibonacci(N); System.out.println( \"F(\" + N + \") = \" + FN ); System.out.println(\"iteration count: \" + count + \", elapsed time: \" + (System.currentTimeMillis() - start) + \" ms\"); } }     javac Fibonacci.java java Fibonacci  F(50) = 12586269025 recursion count: 40730022147, elapsed time: 51264 ms F(50) = 12586269025 iteration count: 49, elapsed time: 0 ms   The elapsed time to execute the iterativeFibonacci(50) method is less that 1 millisecond with an iteration count of 49. That is much better than the recursive method which takes more than 51 seconds to complete.  When a recursive solution repeats the computation of its subproblems over and over, reformualting a solution using dynamic programming is likely a better option.   "
 },
 {
-  "id": "p-956",
+  "id": "listing-re-sums",
   "level": "2",
-  "url": "section-109.html#p-956",
+  "url": "section-re-characterising.html#listing-re-sums",
+  "type": "Listing",
+  "number": "13.3.1",
+  "title": "",
+  "body": " Sums.java   \/\/ Sums.java public class Sums { \/\/ Iterative solution to sum a sequence of integers public static int iterativeSum(int begin, int end) { int sum = 0; \/\/ Init accumulator variable for (int i=begin; i<=end; i++) { \/\/ Generate all integers sum += i; \/\/ Accumulate } return sum; \/\/ Return result } \/\/ Recursive solution to sum a sequence of integers public static int recursiveSum(int begin, int end) { \/\/ Base case when begin > end. if (begin > end) { return 0; \/\/ Sum is 0 \/\/ Recursive case } else { \/\/ Total sum is current number plus remaining sum return begin + recursiveSum(begin+1, end); } } \/\/ Test public static void main(String[] args) { System.out.println( \"Iterative sum: \" + iterativeSum( 1, 10) ); System.out.println( \"Recursive sum: \" + recursiveSum( 1, 10) ); } }   "
+},
+{
+  "id": "listing-re-max",
+  "level": "2",
+  "url": "section-re-characterising.html#listing-re-max",
+  "type": "Listing",
+  "number": "13.3.2",
+  "title": "",
+  "body": " Max.java   \/\/ Max.java public class Max { public static double iterativeMax(double[] arr) { \/\/ Assume max is first element double max = arr[0]; \/\/ Check if any another value is better for (int i=1; i<arr.length; i++) { if (arr[i] > max) max = arr[i]; } \/\/ Return max value return max; } public static double recursiveMax(double[] arr) { \/\/ Call method overload starting a index 0 return recursiveMax(arr, 0); } public static double recursiveMax(double[] arr, int idx) { \/\/ Base case when only 1 item left in array. if (idx == arr.length - 1) { return arr[idx]; \/\/ Recursive case } else { \/\/ Compute max of remaining part of array double max = recursiveMax(arr, idx+1); \/\/ Compare item at idx with max and return greatest if (arr[idx] > max) { return arr[idx]; } else { return max; } } } \/\/ Test public static void main(String[] args) { double[] arr = {2.1, 6.2, 5.9, 3.7, 9.8, 8.0}; System.out.println( iterativeMax(arr) ); System.out.println( recursiveMax(arr) ); } }   "
+},
+{
+  "id": "p-987",
+  "level": "2",
+  "url": "section-re-characterising.html#p-987",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "recursion "
+  "body": "direct recursion indirect recursion "
 },
 {
-  "id": "p-957",
+  "id": "listing-re-walk",
   "level": "2",
-  "url": "section-109.html#p-957",
+  "url": "section-re-characterising.html#listing-re-walk",
+  "type": "Listing",
+  "number": "13.3.3",
+  "title": "",
+  "body": " Walk.java   \/\/ Walk.java public class Walk { \/\/ A journey of a thousand miles begins with a single step. public static void main(String[] args) { left(10); \/\/ Take the first step } \/\/ Left foot public static void left(int N) { if (N <= 0) { System.out.println(\"arrived\"); } else { System.out.println(\"left\"); right(N-1); } } \/\/ Right foot public static void right(int N) { if (N <= 0) { System.out.println(\"arrived\"); } else { System.out.println(\"right\"); left(N-1); } } }   "
+},
+{
+  "id": "p-989",
+  "level": "2",
+  "url": "section-re-characterising.html#p-989",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Direct recursion "
+  "body": "base case recursive case "
 },
 {
-  "id": "p-958",
+  "id": "p-990",
   "level": "2",
-  "url": "section-109.html#p-958",
+  "url": "section-re-characterising.html#p-990",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Indirect recursion "
+  "body": "multi-case recursion "
 },
 {
-  "id": "section-110",
+  "id": "p-991",
+  "level": "2",
+  "url": "section-re-characterising.html#p-991",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "multiple recursion "
+},
+{
+  "id": "definition-re-fibonacci",
+  "level": "2",
+  "url": "section-re-characterising.html#definition-re-fibonacci",
+  "type": "Definition",
+  "number": "13.3.4",
+  "title": "",
+  "body": "  Fibonacci Number:    The Fibonacci Number: , for .    "
+},
+{
+  "id": "table-re-fibonacci",
+  "level": "2",
+  "url": "section-re-characterising.html#table-re-fibonacci",
+  "type": "Table",
+  "number": "13.3.5",
+  "title": "First 10 Fibonacci Numbers",
+  "body": " First 10 Fibonacci Numbers                 0  1  1  2  3  5  8  13  21  34  55    "
+},
+{
+  "id": "listing-re-fibonacci-recursive",
+  "level": "2",
+  "url": "section-re-characterising.html#listing-re-fibonacci-recursive",
+  "type": "Listing",
+  "number": "13.3.6",
+  "title": "",
+  "body": " Fibonacci.java (version 1)   \/\/ Fibonacci.java public class Fibonacci { public static long count = 0L; \/\/ Counter public static long start = 0L; \/\/ Start time public static long recursiveFibonacci( int N ) { \/\/ Count recursive invocations count++; \/\/ Two base cases if (N == 0) { return 0; } else if (N == 1) { return 1; } \/\/ One base case - multiple recursion \/\/ Return Fibonacci number F[N] else { return recursiveFibonacci(N - 1) + recursiveFibonacci(N - 2); } } public static void main(String[] arg) { int N = 50; count = 0; \/\/ Reset metrics start = System.currentTimeMillis(); long FN = recursiveFibonacci(N); System.out.println( \"F(\" + N + \") = \" + FN ); System.out.println(\"recursion count: \" + count + \", elapsed time: \" + (System.currentTimeMillis() - start) + \" ms\"); } }   "
+},
+{
+  "id": "p-995",
+  "level": "2",
+  "url": "section-re-characterising.html#p-995",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "multi-case recursion multiple recursion "
+},
+{
+  "id": "p-1000",
+  "level": "2",
+  "url": "section-re-characterising.html#p-1000",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dynamic programming "
+},
+{
+  "id": "listing-re-fibonacci-iterative1",
+  "level": "2",
+  "url": "section-re-characterising.html#listing-re-fibonacci-iterative1",
+  "type": "Listing",
+  "number": "13.3.7",
+  "title": "",
+  "body": " Fibonacci.java (version 2)   \/\/ Fibonacci.java public class Fibonacci { public static long count = 0L; \/\/ Counter public static long start = 0L; \/\/ Start time public static long recursiveFibonacci( int N ) { \/\/ ... } \/\/ Iterative Fibonacci number calculation using Dynamic Programming public static long iterativeFibonacci(int N) { long[] F = new long[N+1]; \/\/ Array for all intermediate values F[0] = 0L; \/\/ Init first two by definition F[1] = 1L; for (int i=2; i<=N; i++) { \/\/ Calculate remaining Fibonacci.count++; \/\/ Count iterations F[i] = F[i-1] + F[i-2]; \/\/ Fibonacci number calculation } return F[N]; \/\/ Return F[N] } public static void main(String[] arg) { int N = 50; count = 0; \/\/ Reset metrics start = System.currentTimeMillis(); long FN = recursiveFibonacci(N); System.out.println( \"F(\" + N + \") = \" + FN ); System.out.println(\"recursion count: \" + count + \", elapsed time: \" + (System.currentTimeMillis() - start) + \" ms\"); count = 0; \/\/ Reset metrics start = System.currentTimeMillis(); FN = iterativeFibonacci(N); System.out.println( \"F(\" + N + \") = \" + FN ); System.out.println(\"iteration count: \" + count + \", elapsed time: \" + (System.currentTimeMillis() - start) + \" ms\"); } }   "
+},
+{
+  "id": "p-1004",
+  "level": "2",
+  "url": "section-re-characterising.html#p-1004",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dynamic programming "
+},
+{
+  "id": "section-re-graphics",
   "level": "1",
-  "url": "section-110.html",
+  "url": "section-re-graphics.html",
   "type": "Section",
   "number": "13.4",
-  "title": "Solving Problems with Recursion",
-  "body": "Solving Problems with Recursion  The core idea behind recursive problem solving is formulate a solution strategy whose steps include a smaller version of the original problem.  A recursive method can be categorized into two cases : the base case and the recursive case .  The recursive case occurs when the recursive method invokes itself.  The base case is the condition that stops the recursion and begins to unwind the call stack.  "
+  "title": "Recursive Graphics",
+  "body": " Recursive Graphics   Fractal art is composed of algorithmically generated graphical illustrations where each part of the illustation can be identified as a reduced-size copy of the original. This self-similar property of fractal art makes recursive programs ideal for its generation.   Fractal Tree  One example of fractal art is the Fractal Tree . The recursive method of a Fractal Tree draws one linear branch of the tree and then recursively draws two shorter linear branches starting at the end of the current branch with an added incrementally positive and incrementally negative angle of rotation and with an incrementally shorter length.   draws a Fractal Tree, with the recursive method branch(…) . The branch(…) method takes size parameters:  x1 : Branch starting x-location  y1 : Branch starting y-location  angle : Angle with which to rotate branch [degrees]  length : Length of branch  dangle : Amount to rotate next branch (positive and negative) [degrees].  dlength : Amount to shorten next branch  The branch(…) method calls itself twice, with new angles and a shorter length. This method is an example of multiple recursion due to the double recursive invocations. The base case stops recursion when branch length is less than 10. shows output from .  Try modifying the initial parameters of branch(…) to better understand how it impacts the resulting figure.   FractalTree.java   \/\/ FractalTree.java import doodlepad.*; public class FractalTree { public static void main(String[] args) { \/\/ Grow from bottom center of window branch(450, 600, 90, 100, 25, 9); } \/\/ Draw one branch and then invoke recursively for two new branches public static void branch(int x1, int y1, int angle, int length, int dangle, int dlength) { \/\/ Base case - reached last branch if (length & 10) { return; } \/\/ Convert degrees to radians double rads = Math.toRadians(angle); \/\/ Compute line ends int x2 = x1 - (int)Math.round(Math.cos(rads) * length); int y2 = y1 - (int)Math.round(Math.sin(rads) * length); \/\/ Create Line object new Line(x1, y1, x2, y2); \/\/ Recurively draw branches at new angles with length decreased by 10 branch(x2, y2, angle+dangle, length-dlength, dangle, dlength); branch(x2, y2, angle-dangle, length-dlength, dangle, dlength); } }     FractalTree.java      Sierpiński Carpet  Another good example of Fractal Art is Sierpiński Carpet. One way for drawing a Sierpiński Carpet starts with an empty square canvas. A new square is drawn at the center of the square canvas, having a width and height that is 1\/3 the width and 1\/3 the height of the canvas square. This step is repeated recursively for square areas at the eight points surrounding the central square.   lists the program that generates . The main recursive method square(…) includes eight direct recursive invocations for each of the eight surrounding squares.   SierpinskiCarpet.java   \/\/ SierpinskiCarpet.java import doodlepad.*; public class SierpinskiCarpet { public static void main(String[] args) { \/\/ Init Window new Pad(\"Sierpinski Carpet\", 600, 600); \/\/ Draw Sierpinski Carpet for entire window square(0, 0, 600, 600); } public static void square(double x, double y, double w, double h) { \/\/ Base case \/\/ Terminate recursion when side is less than 5 if (w & 5) { return; } \/\/ Calculate square dimensions and location double w1 = w \/ 3.0; double h1 = h \/ 3.0; double x1 = x + w1; double y1 = y + h1; \/\/ Draw square Rectangle r = new Rectangle(x1, y1, w1, h1); r.setFillColor(0); \/\/ Eight recursive invocations around square square(x, y, w1, h1); square(x + w1, y, w1, h1); square(x + 2*w1, y, w1, h1); square(x, y + h1, w1, h1); square(x + 2*w1, y + h1, w1, h1); square(x, y + 2*h1, w1, h1); square(x + w1, y + 2*h1, w1, h1); square(x + 2*w1, y + 2*h1, w1, h1); } }     SierpinskiCarpet.java     "
 },
 {
-  "id": "p-961",
+  "id": "p-1006",
   "level": "2",
-  "url": "section-110.html#p-961",
+  "url": "section-re-graphics.html#p-1006",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "cases base case recursive case "
+  "body": "multiple recursion "
 },
 {
-  "id": "section-111",
+  "id": "listing-re-fractal-tree",
+  "level": "2",
+  "url": "section-re-graphics.html#listing-re-fractal-tree",
+  "type": "Listing",
+  "number": "13.4.1",
+  "title": "",
+  "body": " FractalTree.java   \/\/ FractalTree.java import doodlepad.*; public class FractalTree { public static void main(String[] args) { \/\/ Grow from bottom center of window branch(450, 600, 90, 100, 25, 9); } \/\/ Draw one branch and then invoke recursively for two new branches public static void branch(int x1, int y1, int angle, int length, int dangle, int dlength) { \/\/ Base case - reached last branch if (length & 10) { return; } \/\/ Convert degrees to radians double rads = Math.toRadians(angle); \/\/ Compute line ends int x2 = x1 - (int)Math.round(Math.cos(rads) * length); int y2 = y1 - (int)Math.round(Math.sin(rads) * length); \/\/ Create Line object new Line(x1, y1, x2, y2); \/\/ Recurively draw branches at new angles with length decreased by 10 branch(x2, y2, angle+dangle, length-dlength, dangle, dlength); branch(x2, y2, angle-dangle, length-dlength, dangle, dlength); } }   "
+},
+{
+  "id": "figure-re-fractal-tree",
+  "level": "2",
+  "url": "section-re-graphics.html#figure-re-fractal-tree",
+  "type": "Figure",
+  "number": "13.4.2",
+  "title": "",
+  "body": " FractalTree.java   "
+},
+{
+  "id": "listing-re-sierpinski-carpet",
+  "level": "2",
+  "url": "section-re-graphics.html#listing-re-sierpinski-carpet",
+  "type": "Listing",
+  "number": "13.4.3",
+  "title": "",
+  "body": " SierpinskiCarpet.java   \/\/ SierpinskiCarpet.java import doodlepad.*; public class SierpinskiCarpet { public static void main(String[] args) { \/\/ Init Window new Pad(\"Sierpinski Carpet\", 600, 600); \/\/ Draw Sierpinski Carpet for entire window square(0, 0, 600, 600); } public static void square(double x, double y, double w, double h) { \/\/ Base case \/\/ Terminate recursion when side is less than 5 if (w & 5) { return; } \/\/ Calculate square dimensions and location double w1 = w \/ 3.0; double h1 = h \/ 3.0; double x1 = x + w1; double y1 = y + h1; \/\/ Draw square Rectangle r = new Rectangle(x1, y1, w1, h1); r.setFillColor(0); \/\/ Eight recursive invocations around square square(x, y, w1, h1); square(x + w1, y, w1, h1); square(x + 2*w1, y, w1, h1); square(x, y + h1, w1, h1); square(x + 2*w1, y + h1, w1, h1); square(x, y + 2*h1, w1, h1); square(x + w1, y + 2*h1, w1, h1); square(x + 2*w1, y + 2*h1, w1, h1); } }   "
+},
+{
+  "id": "figure-re-sierpinski-carpet",
+  "level": "2",
+  "url": "section-re-graphics.html#figure-re-sierpinski-carpet",
+  "type": "Figure",
+  "number": "13.4.4",
+  "title": "",
+  "body": " SierpinskiCarpet.java   "
+},
+{
+  "id": "section-re-concepts",
   "level": "1",
-  "url": "section-111.html",
+  "url": "section-re-concepts.html",
   "type": "Section",
   "number": "13.5",
-  "title": "Example: Computing Factorial",
-  "body": "Example: Computing Factorial  Iterative solution  Recursive solution  "
+  "title": "Key Concepts",
+  "body": " Key Concepts   The call stack is a data structure that tracks all currently executing methods.  A stack frame tracks each executing method on the call stack.  A stack frame contains all information about the associated method.  Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.  When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.  The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.  When a method (eventually) invokes itself during execution, the process is called recursion.  When a recursively invoked method returns, the method call resolves to the returned value.  Many algorithms may be implemented using recursion.  Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.  Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.  Recursive programs may be divided into direct recursion and indirect recursion.  All recursive programs must have at least one base case and at least one recursive case.  The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.  A recursive case must move closer to the base case in some way to ensure the recursive program terminates.  There may be multiple base cases and multiple recursive cases in a recursive algorithm.   "
 },
 {
-  "id": "section-112",
+  "id": "section-re-exercises",
   "level": "1",
-  "url": "section-112.html",
+  "url": "section-re-exercises.html",
   "type": "Section",
   "number": "13.6",
-  "title": "Example: Computing Fibonacci Numbers",
-  "body": "Example: Computing Fibonacci Numbers  Iterative solution  Recursive solution  Doubly recursive  "
+  "title": "Chapter Exercises",
+  "body": " Chapter Exercises   "
 },
 {
   "id": "section-113",
   "level": "1",
   "url": "section-113.html",
   "type": "Section",
-  "number": "13.7",
-  "title": "Example: Drawing a Pyramid",
-  "body": "Example: Drawing a Pyramid  Iterative solution  Recursive solution  "
+  "number": "14.1",
+  "title": "Searching and Sorting Algorithms",
+  "body": " Searching and Sorting Algorithms   A class that holds only static methods capable of performing several algorithms on Java Collection classes  https:\/\/docs.oracle.com\/en\/java\/javase\/20\/docs\/api\/java.base\/java\/util\/Collections.html   "
 },
 {
   "id": "section-114",
   "level": "1",
   "url": "section-114.html",
   "type": "Section",
-  "number": "13.8",
-  "title": "Example: Building a Maze",
-  "body": "Example: Building a Maze  Iterative solution  Recursive solution  "
+  "number": "14.2",
+  "title": "Sequential Search",
+  "body": "Sequential Search  "
 },
 {
   "id": "section-115",
   "level": "1",
   "url": "section-115.html",
   "type": "Section",
-  "number": "13.9",
-  "title": "Key Concepts",
-  "body": "Key Concepts   The call stack is a data structure that tracks all currently executing methods.  A stack frame tracks each executing method on the call stack.  A stack frame contains all information about the associated method.  Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.  When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.  The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.  When a method (eventually) invokes itself during execution, the process is called recursion.  When a recursively invoked method returns, the method call resolves to the returned value.  Many algorithms may be implemented using recursion.  Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.  Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.  Recursive programs may be divided into direct recursion and indirect recursion.  All recursive programs must have at least one base case and at least one recursive case.  The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.  A recursive case must move closer to the base case in some way to ensure the recursive program terminates.  There may be multiple base cases and multiple recursive cases in a recursive algorithm.   "
-},
-{
-  "id": "exercises-9",
-  "level": "1",
-  "url": "exercises-9.html",
-  "type": "Exercises",
-  "number": "13.10",
-  "title": "Exercises",
-  "body": "Exercises  "
+  "number": "14.3",
+  "title": "Binary Search",
+  "body": "Binary Search  Iterative implementation  Recursive implementation  "
 },
 {
   "id": "section-116",
   "level": "1",
   "url": "section-116.html",
   "type": "Section",
-  "number": "14.1",
-  "title": "Searching and Sorting Algorithms",
-  "body": " Searching and Sorting Algorithms   A class that holds only static methods capable of performing several algorithms on Java Collection classes  https:\/\/docs.oracle.com\/en\/java\/javase\/20\/docs\/api\/java.base\/java\/util\/Collections.html   "
+  "number": "14.4",
+  "title": "Selection Sort",
+  "body": "Selection Sort  "
 },
 {
   "id": "section-117",
   "level": "1",
   "url": "section-117.html",
   "type": "Section",
-  "number": "14.2",
-  "title": "Sequential Search",
-  "body": "Sequential Search  "
+  "number": "14.5",
+  "title": "Insertion Sort",
+  "body": "Insertion Sort  "
 },
 {
   "id": "section-118",
   "level": "1",
   "url": "section-118.html",
   "type": "Section",
-  "number": "14.3",
-  "title": "Binary Search",
-  "body": "Binary Search  Iterative implementation  Recursive implementation  "
+  "number": "14.6",
+  "title": "Merge Sort",
+  "body": "Merge Sort  "
 },
 {
   "id": "section-119",
   "level": "1",
   "url": "section-119.html",
   "type": "Section",
-  "number": "14.4",
-  "title": "Selection Sort",
-  "body": "Selection Sort  "
+  "number": "14.7",
+  "title": "Complexity",
+  "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
 },
 {
   "id": "section-120",
   "level": "1",
   "url": "section-120.html",
   "type": "Section",
-  "number": "14.5",
-  "title": "Insertion Sort",
-  "body": "Insertion Sort  "
-},
-{
-  "id": "section-121",
-  "level": "1",
-  "url": "section-121.html",
-  "type": "Section",
-  "number": "14.6",
-  "title": "Merge Sort",
-  "body": "Merge Sort  "
-},
-{
-  "id": "section-122",
-  "level": "1",
-  "url": "section-122.html",
-  "type": "Section",
-  "number": "14.7",
-  "title": "Complexity",
-  "body": "Complexity  Worst case complexity (Big-Oh)  Best case complexity  Average case complexity  "
-},
-{
-  "id": "section-123",
-  "level": "1",
-  "url": "section-123.html",
-  "type": "Section",
   "number": "14.8",
   "title": "Key Concepts",
   "body": "Key Concepts   Algorithms are systematic ways of solving a given problem.  Two categories of algorithms include searching for a value and sorting a linear sequence of values.  Algorithms for searching include sequential search and binary search  Sequential search is ...  Binary search is ...  Three algorithms for sorting include selection sort, insertion sort, and merge sort.  Selection sort is ...  Insertion sort is ...  Merge sort is ...  The cost of an algorithm may be determined by mathematical analysis. This result of analysis in a mathematical expression that describes how cost grows with some respect to some input, such as the the size of the data structure processed.  How an algorithms grows is referred to as Big-Oh notation.   "
 },
 {
-  "id": "exercises-10",
+  "id": "exercises-9",
   "level": "1",
-  "url": "exercises-10.html",
+  "url": "exercises-9.html",
   "type": "Exercises",
   "number": "14.9",
   "title": "Exercises",
@@ -4384,9 +4546,9 @@ var ptx_lunr_docs = [
   "body": " ASCII Table   Americal Standard Code Information Interchange (ASCII)    Decimal Code  Symbol  Description   0 NUL Null character  1 SOH Start of Heading  2 STX Start of Text  3 ETX End of Text  3 ETX End of Text  4 EOT End of Transmission  5 ENQ Enquiry  6 ACK Acknowledge  7 BEL Bell, Alert  8 BS Backspace  9 HT Horizontal Tab  10 LF Line Feed  11 VT Vertical Tabulation  12 FF Form Feed  13 CR Carriage Return  14 SO Shift Out  15 SI Shift In  16 DLE Data Link Escape  17 DC1 Device Control One (XON)  18 DC2 Device Control Two  19 DC3 Device Control Three (XOFF)  20 DC4 Device Control Four  21 NAK Negative Acknowledge  22 SYN Synchronous Idle  23 ETB End of Transmission Block  24 CAN Cancel  25 EM End of medium  26 SUB Substitute  27 ESC Escape  28 FS File Separator  29 GS Group Separator  30 RS Record Separator  31 US Unit Separator  32 SP Space  33 ! Exclamation mark  34 \" Double quotes (or speech marks)  35 # Number sign  36 $ Dollar  37 % Per cent sign  38 & Ampersand  39 ' Single quote  40 ( Open parenthesis (or open bracket)  41 ) Close parenthesis (or close bracket)  42 * Asterisk  43 + Plus  44 , Comma  45 - Hyphen-minus  46 . Period, dot or full stop  47 \/ Slash or divide  48 0 Zero  49 1 One  50 2 Two  51 3 Three  52 4 Four  53 5 Five  54 6 Six  55 7 Seven  56 8 Eight  57 9 Nine  58 : Colon  59 ; Semicolon  60 Less than (or open angled bracket)  61 = Equals  62 > Greater than (or close angled bracket)  63 ? Question mark  64 @ At sign  65 A Uppercase A  66 B Uppercase B  67 C Uppercase C  68 D Uppercase D  69 E Uppercase E  70 F Uppercase F  71 G Uppercase G  72 H Uppercase H  73 I Uppercase I  74 J Uppercase J  75 K Uppercase K  76 L Uppercase L  77 M Uppercase M  78 N Uppercase N  79 O Uppercase O  80 P Uppercase P  81 Q Uppercase Q  82 R Uppercase R  83 S Uppercase S  84 T Uppercase T  85 U Uppercase U  86 V Uppercase V  87 W Uppercase W  88 X Uppercase X  89 Y Uppercase Y  90 Z Uppercase Z  91 [ Opening bracket  92 \\ Backslash  93 ] Closing bracket  94 ^ Caret - circumflex  95 _ Underscore  96 ` Grave accent  97 a Lowercase a  98 b Lowercase b  99 c Lowercase c  100 d Lowercase d  101 e Lowercase e  102 f Lowercase f  103 g Lowercase g  104 h Lowercase h  105 i Lowercase i  106 j Lowercase j  107 k Lowercase k  108 l Lowercase l  109 m Lowercase m  110 n Lowercase n  111 o Lowercase o  112 p Lowercase p  113 q Lowercase q  114 r Lowercase r  115 s Lowercase s  116 t Lowercase t  117 u Lowercase u  118 v Lowercase v  119 w Lowercase w  120 x Lowercase x  121 y Lowercase y  122 z Lowercase z  123 { Opening brace  124 | Vertical bar  125 } Closing brace  126 ~ Equivalency sign - tilde  127 DEL Delete    "
 },
 {
-  "id": "table-51",
+  "id": "table-52",
   "level": "2",
-  "url": "appendix_ascii_table.html#table-51",
+  "url": "appendix_ascii_table.html#table-52",
   "type": "Table",
   "number": "A.0.1",
   "title": "Americal Standard Code Information Interchange (ASCII)",
@@ -4402,18 +4564,18 @@ var ptx_lunr_docs = [
   "body": " Common Shells and Commands   Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX      Shell commands    Task  Shell  Command    Get the current working directory  Command Prompt  cd     PowerShell  pwd     bash  pwd    List directory contents  Command Prompt  dir     PowerShell  dir     bash  ls    Change the current working directory  Command Prompt  cd  path\\to\\directory     PowerShell  cd  path\\to\\directory     bash  cd  path\/to\/directory    Move up one directory level  Command Prompt  cd ..     PowerShell  cd ..     bash  cd ..    Create a new directory  Command Prompt  mkdir  directoryname     PowerShell  mkdir  directoryname     bash  mkdir  directoryname    Copy a file  Command Prompt  copy  source\\file\\path destination\\file\\path     PowerShell  Copy-Item -Path  source\\file\\path  -Destination  destination\\file\\path     bash  cp  source\/file\/path destination\/file\/path    Delete a file  Command Prompt  del  filename     PowerShell  del  filename     bash  rm  filename     "
 },
 {
-  "id": "table-52",
+  "id": "table-53",
   "level": "2",
-  "url": "appendix_shells.html#table-52",
+  "url": "appendix_shells.html#table-53",
   "type": "Table",
   "number": "B.0.1",
   "title": "Operating systems and their common shell programs",
   "body": " Operating systems and their common shell programs    Shell  Operating System    Command (Prompt) Shell  Windows    PowerShell  Windows    bash (Bourne-again Shell)  macOS    bash (Bourne-again Shell)  Linux\/UNIX    "
 },
 {
-  "id": "table-53",
+  "id": "table-54",
   "level": "2",
-  "url": "appendix_shells.html#table-53",
+  "url": "appendix_shells.html#table-54",
   "type": "Table",
   "number": "B.0.2",
   "title": "Shell commands",
@@ -4438,9 +4600,9 @@ var ptx_lunr_docs = [
   "body": " DoodlePad Shape Events  The Shape class implements a series of \"on\" methods: one for each mouse event. For example, Shape implements a method named onMousePressed which is invoked when a Shape is pressed by the mouse. This method as well as all other methods that correspond with mouse events share a common signature with the types: double, double and int. These are the mouse event x and y coordinates and an integer identifying the mouse button in use. These parameters are identical to the signature of methods used in the method reference approach, minus the first parameter identifying the Shape object.  The following table lists all methods that may be overridden in order to handle a triggered mouse event.   Overridable Shape Event Methods    Method  Description    public void onMouseClicked(double x, double y, int button)  Override to handle a mouse-click event    public void onMouseDoubleClicked(double x, double y, int button)  Override to handle a mouse-double-click event.    public void onMousePressed(double x, double y, int button)  Override to handle a mouse-pressed event - when a mouse button is depressed.    public void onMouseReleased(double x, double y, int button)  Override to handle a mouse-released event - when a mouse button is released after being depressed.    public void onMouseMoved(double x, double y, int button)  Override to handle a mouse-moved event. This occurs when the mouse is moved over a Shape while no buttons are depressed.    public void onMouseDragged(double x, double y, int button)  Override to handle a mouse-dragged event. This occurs when the mouse is moved over a Shape while simultaneously holding a mouse button down.    public void onMouseEntered(double x, double y, int button)  Override to handle a mouse-entered event. This occurs when the mouse moves over a Shape from another Shape or the Pad.    public void onMouseExited(double x, double y, int button)  Override to handle a mouse-exited event. This occurs when the mouse moves off a Shape on to another Shape or the Pad.     "
 },
 {
-  "id": "table-54",
+  "id": "table-55",
   "level": "2",
-  "url": "appendix-shape-events.html#table-54",
+  "url": "appendix-shape-events.html#table-55",
   "type": "Table",
   "number": "D.0.1",
   "title": "Overridable Shape Event Methods",
@@ -4456,18 +4618,18 @@ var ptx_lunr_docs = [
   "body": " DoodlePad Pad Events  The Pad class offers several opportunities to handle events by overriding its methods. In addition to mouse-related events, the Pad class handles keyboard events, network socket events, as well as a global timer.   Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.      Overridable Pad Socket Event Methods    Method  Description    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientOpened(int id)  Invoked when a new client connection opens    public void onClientReceived(int id, java.lang.String msg)  Invoked when a connected client socket receives a message    public void onClientClosed(int id)  Invoked when a client connection is closed    public void onClientError(int id, java.lang.String msg)  Invoked when a connected client socket has has error    public void onClientInfo(int id, java.lang.String msg)  Invoked when a connected client socket has some information to share    public void onServerStarted()  Invoked when the listening server starts    public void onServerStopped()  Invoked when the listening server stops and all connections are closed    public void onServerError(java.lang.String msg)  Invoked when the listening server has an error    public void onServerInfo(java.lang.String msg)  Invoked when the listening server has some information to share     "
 },
 {
-  "id": "table-55",
+  "id": "table-56",
   "level": "2",
-  "url": "appendix-pad-events.html#table-55",
+  "url": "appendix-pad-events.html#table-56",
   "type": "Table",
   "number": "E.0.1",
   "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",
   "body": " Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onMousePressed(double x, double y, int button)  A method that can be overridden to handle mouse pressed events.    public void onMouseReleased(double x, double y, int button)  A method that can be overridden to handle mouse released events.    public void onMouseMoved(double x, double y, int button)  A method that can be overridden to handle mouse moved events.    public void onMouseClicked(double x, double y, int button)  A method that can be overridden to handle mouse clicked events.    public void onMouseDoubleClicked(double x, double y, int button)  A method that can be overridden to handle mouse double-clicked events.    public void onMouseDragged(double x, double y, int button)  A method that can be overridden to handle mouse dragged events. A mouse dragged event is the same as a mouse moved event while the mouse is pressed.    public void onMouseEntered(double x, double y, int button)  A method that can be overridden to handle mouse entered events.    public void onMouseExited(double x, double y, int button)  A method that can be overridden to handle mouse exited events.    public void onKeyPressed(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key pressed events    public void onKeyReleased(java.lang.String keyText, java.lang.String keyModifiers)  A method that can be overridden to handle key released events    public void onKeyTyped(char keyChar)  A method that can be overridden to handle key typed events    public void onTick(long when)  A method that can be overridden to handle the Pad timer`s tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method.    "
 },
 {
-  "id": "table-56",
+  "id": "table-57",
   "level": "2",
-  "url": "appendix-pad-events.html#table-56",
+  "url": "appendix-pad-events.html#table-57",
   "type": "Table",
   "number": "E.0.2",
   "title": "Overridable Pad Socket Event Methods",
@@ -4483,9 +4645,9 @@ var ptx_lunr_docs = [
   "body": " DoodlePad Timer Events  DoodlePad implements a Timer class, that may be used to drive repeating events, like animations. You may create any number of Timer objects, set the tick-rate in ticks-per-second, start and stop TImer objects, and handle a Timer-related events by extending the class and overriding methods.   Overridable Pad Mouse, Keyboard and Timer Event Methods    Method  Description    public void onStart(long when)  A method that can be overridden to handle the Timer's start event. The timer is started by invoking the startTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.    public void onStop(long when)  A method that can be overridden to handle the Timer's stop event. The timer is started by invoking the stopTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.    public void onTick(long when)  A method that can be overridden to handle the Timer's tick event. The timer tick rate is set with the setTickRate() method. The timer is started by invoking the startTimer() method. The timer is stopped by invoking the stopTimer() method. The when parameter is the difference in milliseconds between the timestamp of when this event occurred and midnight, January 1, 1970 UTC.     "
 },
 {
-  "id": "table-57",
+  "id": "table-58",
   "level": "2",
-  "url": "appendix-timer-events.html#table-57",
+  "url": "appendix-timer-events.html#table-58",
   "type": "Table",
   "number": "F.0.1",
   "title": "Overridable Pad Mouse, Keyboard and Timer Event Methods",

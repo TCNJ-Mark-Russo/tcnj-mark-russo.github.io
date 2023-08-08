@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Key Concepts</title>
+<title>Binary Search</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -179,7 +179,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-114.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-recursion.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="exercises-9.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-114.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-algorithms.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-116.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
@@ -687,30 +687,41 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="chapter-recursion.html" class="internal"><span class="codenumber">13</span> <span class="title">Recursion</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-107.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Tracing Programs</span></a></div></li>
-<li><div class="toc-item"><a href="re-section-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
-<li><div class="toc-item"><a href="section-109.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-110.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Solving Problems with Recursion</span></a></div></li>
-<li><div class="toc-item"><a href="section-111.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Example: Computing Factorial</span></a></div></li>
-<li><div class="toc-item"><a href="section-112.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Example: Computing Fibonacci Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Example: Drawing a Pyramid</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">13.8</span> <span class="title">Example: Building a Maze</span></a></div></li>
-<li class="active"><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">13.9</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">13.10</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-thinking.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Recursive Thinking</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-call-stack.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Call Stack</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-re-characterising.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Characterizing Recursion</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-re-characterising.html#subsection-138" class="internal"><span class="codenumber">13.3.1</span> <span class="title">Accumulating Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-characterising.html#subsection-139" class="internal"><span class="codenumber">13.3.2</span> <span class="title">All-pairs Comparison</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-characterising.html#subsection-140" class="internal"><span class="codenumber">13.3.3</span> <span class="title">Direct and Indirect Recursion</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-characterising.html#subsection-141" class="internal"><span class="codenumber">13.3.4</span> <span class="title">Multiple Cases and Multiple Invocations</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-characterising.html#subsection-142" class="internal"><span class="codenumber">13.3.5</span> <span class="title">Dynamic Programming</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-re-graphics.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Recursive Graphics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-re-graphics.html#subsection-143" class="internal"><span class="codenumber">13.4.1</span> <span class="title">Fractal Tree</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-graphics.html#subsection-144" class="internal"><span class="codenumber">13.4.2</span> <span class="title">Sierpiński Carpet</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-re-concepts.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="section-re-exercises.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-121.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-122.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
-<li><div class="toc-item"><a href="section-123.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-10.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
+<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -731,28 +742,12 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-115"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">13.9</span> <span class="title">Key Concepts</span>
+<span class="type">Section</span> <span class="codenumber">14.3</span> <span class="title">Binary Search</span>
 </h2>
-<ol class="decimal">
-<li id="li-420"><div class="para" id="p-derived-li-420">The call stack is a data structure that tracks all currently executing methods.</div></li>
-<li id="li-421"><div class="para" id="p-derived-li-421">A stack frame tracks each executing method on the call stack.</div></li>
-<li id="li-422"><div class="para" id="p-derived-li-422">A stack frame contains all information about the associated method.</div></li>
-<li id="li-423"><div class="para" id="p-derived-li-423">Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.</div></li>
-<li id="li-424"><div class="para" id="p-derived-li-424">When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.</div></li>
-<li id="li-425"><div class="para" id="p-derived-li-425">The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.</div></li>
-<li id="li-426"><div class="para" id="p-derived-li-426">When a method (eventually) invokes itself during execution, the process is called recursion.</div></li>
-<li id="li-427"><div class="para" id="p-derived-li-427">When a recursively invoked method returns, the method call resolves to the returned value.</div></li>
-<li id="li-428"><div class="para" id="p-derived-li-428">Many algorithms may be implemented using recursion.</div></li>
-<li id="li-429"><div class="para" id="p-derived-li-429">Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.</div></li>
-<li id="li-430"><div class="para" id="p-derived-li-430">Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.</div></li>
-<li id="li-431"><div class="para" id="p-derived-li-431">Recursive programs may be divided into direct recursion and indirect recursion.</div></li>
-<li id="li-432"><div class="para" id="p-derived-li-432">All recursive programs must have at least one base case and at least one recursive case.</div></li>
-<li id="li-433"><div class="para" id="p-derived-li-433">The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.</div></li>
-<li id="li-434"><div class="para" id="p-derived-li-434">A recursive case must move closer to the base case in some way to ensure the recursive program terminates.</div></li>
-<li id="li-435"><div class="para" id="p-derived-li-435">There may be multiple base cases and multiple recursive cases in a recursive algorithm.</div></li>
-</ol></section></div>
+<div class="para" id="p-1013">Iterative implementation</div>
+<div class="para" id="p-1014">Recursive implementation</div></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section-114.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="exercises-9.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="section-114.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-116.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

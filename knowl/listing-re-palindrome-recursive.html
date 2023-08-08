@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Palindrome.java
+public class Palindrome {
+  // Recursive implementation of palindrome checking
+  public static boolean isPalindrome( String lets ) {
+    System.out.println(lets);             // Show string tested
+    if (lets.length() &lt;= 1) {             // BASE CASE 1
+      return true;
+    }                                     
+    else if ( lets.charAt(0) == lets.charAt(lets.length()-1)) {
+      String smaller = lets.substring( 1, lets.length()-1);
+      return isPalindrome( smaller );     // RECURSIVE CASE
+    } else {
+      return false;                       // BASE CASE 2 (no match)  
+    }
+  }
+
+  public static void main(String[] args) {
+    // Palindrome tests
+    String pal1 = "RACECAR";
+    String pal2 = "WASITACARORACATISAW";      // Was it a car or a cat I saw?
+    String pal3 = "TURNYOURWOUNDSINTOWISDOM"; // Turn your wounds into wisdom.
+
+    System.out.println( isPalindrome(pal2) );
+    System.out.println( isPalindrome(pal3) );
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.1.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">isPalindrome(…)</code> Recursive Implementation</figcaption></figure><span class="incontext"><a href="section-re-thinking.html#listing-re-palindrome-recursive" class="internal">in-context</a></span>
+</body>
+</html>

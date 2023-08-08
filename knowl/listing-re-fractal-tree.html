@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// FractalTree.java
+import doodlepad.*;
+
+public class FractalTree {
+  public static void main(String[] args) {
+    // Grow from bottom center of window
+    branch(450, 600, 90, 100, 25, 9);
+  }
+
+  // Draw one branch and then invoke recursively for two new branches
+  public static void branch(int x1, int y1, int angle, int length, 
+                            int dangle, int dlength) {
+
+    // Base case - reached last branch
+    if (length &amp; 10) { return; }
+
+    // Convert degrees to radians
+    double rads = Math.toRadians(angle);
+
+    // Compute line ends 
+    int x2 = x1 - (int)Math.round(Math.cos(rads) * length);
+    int y2 = y1 - (int)Math.round(Math.sin(rads) * length);
+
+    // Create Line object
+    new Line(x1, y1, x2, y2);
+
+    // Recurively draw branches at new angles with length decreased by 10
+    branch(x2, y2, angle+dangle, length-dlength, dangle, dlength);
+    branch(x2, y2, angle-dangle, length-dlength, dangle, dlength);
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.4.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">FractalTree.java</code></figcaption></figure><span class="incontext"><a href="section-re-graphics.html#listing-re-fractal-tree" class="internal">in-context</a></span>
+</body>
+</html>

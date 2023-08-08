@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Fibonacci.java
+public class Fibonacci {
+  public static long count = 0L;    // Counter
+  public static long start = 0L;    // Start time
+
+  public static long recursiveFibonacci( int N ) {
+    // ...
+  }
+
+  // Iterative Fibonacci number calculation using Dynamic Programming
+  public static long iterativeFibonacci(int N) {
+    long[] F = new long[N+1];       // Array for all intermediate values
+    F[0] = 0L;                      // Init first two by definition
+    F[1] = 1L;
+
+    for (int i=2; i&lt;=N; i++) {      // Calculate remaining
+      Fibonacci.count++;            // Count iterations
+      F[i] = F[i-1] + F[i-2];       // Fibonacci number calculation
+    }
+    return F[N];                    // Return F[N]
+  }
+
+  public static void main(String[] arg) {
+    int N = 50;
+
+    count = 0;                      // Reset metrics
+    start = System.currentTimeMillis();
+    long FN = recursiveFibonacci(N);
+    System.out.println( "F(" + N + ") = " + FN );
+    System.out.println("recursion count: " + count 
+    + ", elapsed time: " + (System.currentTimeMillis() - start) + " ms");
+
+    count = 0;                      // Reset metrics
+    start = System.currentTimeMillis();
+    FN = iterativeFibonacci(N);
+    System.out.println( "F(" + N + ") = " + FN );
+    System.out.println("iteration count: " + count
+    + ", elapsed time: " + (System.currentTimeMillis() - start) + " ms");
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.3.7<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Fibonacci.java</code> (version 2)</figcaption></figure><span class="incontext"><a href="section-re-characterising.html#listing-re-fibonacci-iterative1" class="internal">in-context</a></span>
+</body>
+</html>

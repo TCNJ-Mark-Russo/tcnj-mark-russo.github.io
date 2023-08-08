@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Fibonacci.java
+public class Fibonacci {
+  public static long count = 0L;    // Counter
+  public static long start = 0L;    // Start time
+
+  public static long recursiveFibonacci( int N ) {
+    // ...
+  }
+
+  // Iterative Fibonacci number calculation using Dynamic Programming
+  public static long iterativeFibonacci(int N) {
+    // ...
+  }
+
+  // Iterative Fibonacci calculation using space-efficient Dynamic Programming
+  public static long dynamicFibonacci(int N) {
+    long[] F = new long[3];         // Array for all intermediate values
+    F[0] = 0L;                      // Init first two by definition
+    F[1] = 1L;
+
+    int i;                          // Declared outside block scope
+    for (i=2; i&amp;=N; i++) {          // Calculate remaining, reusing array elements
+      Fibonacci.count++;            // Count iterations
+      F[i%3]=F[(i+2)%3]+F[(i+1)%3]; // Fibonacci number calculation
+    }
+    return F[(i+2)%3];              // Return F[N]
+  }
+
+  public static void main(String[] arg) {
+    int N = 50;
+
+    count = 0;                      // Reset metrics
+    start = System.currentTimeMillis();
+    long FN = recursiveFibonacci(N);
+    System.out.println( "F(" + N + ") = " + FN );
+    System.out.println("recursion count: " + Fibonacci.count 
+    + ", elapsed time: " + (System.currentTimeMillis() - Fibonacci.start) + " ms");
+
+    count = 0;                      // Reset metrics
+    start = System.currentTimeMillis();
+    FN = iterativeFibonacci(N);
+    System.out.println( "F(" + N + ") = " + FN );
+    System.out.println("iteration count: " + Fibonacci.count
+    + ", elapsed time: " + (System.currentTimeMillis() - Fibonacci.start) + " ms");
+
+    count = 0;                      // Reset metrics
+    start = System.currentTimeMillis();
+    FN = dynamicFibonacci(N);
+    System.out.println( "F(" + N + ") = " + FN );
+    System.out.println("iteration count: " + Fibonacci.count
+    + ", elapsed time: " + (System.currentTimeMillis() - Fibonacci.start) + " ms");
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.3.8<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Fibonacci.java</code> (version 3)</figcaption></figure><span class="incontext"><a href="section-re-characterising.html#listing-re-fibonacci-iterative2" class="internal">in-context</a></span>
+</body>
+</html>

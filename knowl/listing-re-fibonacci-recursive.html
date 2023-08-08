@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Fibonacci.java
+public class Fibonacci {
+  public static long count = 0L;    // Counter
+  public static long start = 0L;    // Start time
+
+  public static long recursiveFibonacci( int N ) {
+    // Count recursive invocations
+    count++;
+
+    // Two base cases
+    if (N == 0) {
+      return 0;
+    } else if (N == 1) {
+      return 1;
+    }
+    // One base case - multiple recursion
+    // Return Fibonacci number F[N]
+    else {
+      return recursiveFibonacci(N - 1) + recursiveFibonacci(N - 2);
+    }
+  }
+
+  public static void main(String[] arg) {
+    int N = 50;
+
+    count = 0;                      // Reset metrics
+    start = System.currentTimeMillis();
+    long FN = recursiveFibonacci(N);
+    System.out.println( "F(" + N + ") = " + FN );
+    System.out.println("recursion count: " + count 
+    + ", elapsed time: " + (System.currentTimeMillis() - start) + " ms");
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.3.6<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Fibonacci.java</code> (version 1)</figcaption></figure><span class="incontext"><a href="section-re-characterising.html#listing-re-fibonacci-recursive" class="internal">in-context</a></span>
+</body>
+</html>

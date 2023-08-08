@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class LiftOff {
+  public static void main(String[] args) {
+    countdown(10);
+  }
+
+  // Count down from N
+  public static void countdown(int N) {
+    // When N reaches 0, Lift Off!
+    if (N &lt;= 0) {
+      System.out.println("We have lift off!");
+
+    // Print current count and recurse with decremented value
+    } else {
+      System.out.println(N);
+      countdown(N-1);
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.2.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ListOff.java</code></figcaption></figure><span class="incontext"><a href="section-re-call-stack.html#listing-re-countdown" class="internal">in-context</a></span>
+</body>
+</html>

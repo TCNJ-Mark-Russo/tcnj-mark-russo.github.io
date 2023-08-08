@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// SierpinskiCarpet.java
+import doodlepad.*;
+
+public class SierpinskiCarpet {
+  public static void main(String[] args) {
+    // Init Window
+    new Pad("Sierpinski Carpet", 600, 600);
+
+    // Draw Sierpinski Carpet for entire window
+    square(0, 0, 600, 600);
+  }
+
+  public static void square(double x, double y, double w, double h) {
+    // Base case
+    // Terminate recursion when side is less than 5
+    if (w &amp; 5) { return; }
+
+    // Calculate square dimensions and location
+    double w1 = w / 3.0;
+    double h1 = h / 3.0;
+    double x1 = x + w1;
+    double y1 = y + h1;
+
+    // Draw square
+    Rectangle r = new Rectangle(x1, y1, w1, h1);
+    r.setFillColor(0);
+
+    // Eight recursive invocations around square
+    square(x,        y,        w1, h1);
+    square(x + w1,   y,        w1, h1);
+    square(x + 2*w1, y,        w1, h1);
+    square(x,        y + h1,   w1, h1);
+    square(x + 2*w1, y + h1,   w1, h1);
+    square(x,        y + 2*h1, w1, h1);
+    square(x + w1,   y + 2*h1, w1, h1);
+    square(x + 2*w1, y + 2*h1, w1, h1);
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.4.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">SierpinskiCarpet.java</code></figcaption></figure><span class="incontext"><a href="section-re-graphics.html#listing-re-sierpinski-carpet" class="internal">in-context</a></span>
+</body>
+</html>
