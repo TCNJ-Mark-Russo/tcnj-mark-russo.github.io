@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">When testing Strings having an even number of chars, for example when <code class="code-inline tex2jax_ignore">lets.length() == 6</code>, then the index of the first char is 0 and the last is 5. In other words, when <code class="code-inline tex2jax_ignore">i == 0</code>, <code class="code-inline tex2jax_ignore">j = 6-1-0 = 5</code>; we are comparing the first and last chars of the String. When <code class="code-inline tex2jax_ignore">i == 1</code>, <code class="code-inline tex2jax_ignore">j = 5-1-1=4</code>, and when <code class="code-inline tex2jax_ignore">i == 2</code>, <code class="code-inline tex2jax_ignore">j == 3</code>. The pair of indexes of chars to compare are calculated correctly.</div>
+<div class="para">For a String having an odd number of chars, say 7, the loop extent does not change, but iteration terminates with one lone character at the center. <code class="code-inline tex2jax_ignore">lets.length()/2</code> is still 3 because we lose the fractional part with integer division. The variable <code class="code-inline tex2jax_ignore">i</code> starts at 0 and again increments to 1 and then 2. The value of <code class="code-inline tex2jax_ignore">j</code> is computed as <code class="code-inline tex2jax_ignore">7-1-0 == 6</code> and decrements to 5 and 4. The char at index 3 is not tested. This is not a problem because this is the middle char, which is a singleton and can be ignored because it has no char that must be matched.</div>
 <span class="incontext"><a href="section-re-thinking.html#p-957" class="internal">in-context</a></span>
 </body>
 </html>

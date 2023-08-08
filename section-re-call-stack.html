@@ -745,9 +745,9 @@ window.MathJax = {
 <section class="section" id="section-re-call-stack"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">13.2</span> <span class="title">The Call Stack</span>
 </h2>
-<div class="para" id="p-970">A running method suspends when it calls another method. The state of the suspended method must be saved so that when the called method returns the suspended method can continue executing where it left off.</div>
-<div class="para" id="p-971">The state of a suspended method is saved in an internal data structure called a <dfn class="terminology">stack frame</dfn>. The stack frame tracks the suspended method’s scope (variables and their instantaneous values) and knows where to continue execution when the invoked method completes. There are as many stack frames as your program has suspended methods, all of which are stored in the <dfn class="terminology">call stack</dfn>. Think of a stack data structure like a stack of dinner plates. Typically, you add to the top of a stack, and remove from the top of the stack. It is the same with the call stack. When a new stack frame is created as a result of one method invoking another, the stack frame is <em class="emphasis">pushed</em> onto the top of the call stack. When the invoked method completes, the stack frame describing the suspended method is <em class="emphasis">popped</em> off the top of the stack and used to resume execution.</div>
-<div class="para" id="p-972">Each time a method suspends, it gets its own new stack frame, even when the method is invoking itself, which is what happens when executing a recursive method. Consider the recursive method <code class="code-inline tex2jax_ignore">countdown(int n)</code> in <a href="" class="xref" data-knowl="./knowl/listing-re-countdown.html" title="Listing 13.2.1">Listing 13.2.1</a>.</div>
+<div class="para" id="p-969">A running method must suspend when it invokes another method. The state of the suspended method must be saved so that when the invoked method returns the suspended method can pick upwhere it left off.</div>
+<div class="para" id="p-970">The state of a suspended method is saved in an internal data structure called a <dfn class="terminology">stack frame</dfn>. A stack frame tracks the suspended method’s scope (variables and their instantaneous values) and on which instruction to continue execution when the invoked method completes. There are as many stack frames as your program has suspended methods, all of which are stored in another data structure called the <dfn class="terminology">call stack</dfn>. To visualize a call statck, think of a stack of clean dinner plates. Typically, you add to the top of a stack, and remove from the top of the stack. It is the same with the call stack. When a new stack frame (dinner plate) is created as a result of one method invoking another, the stack frame is <em class="emphasis">pushed</em> onto the top of the call stack. When the invoked method completes, the stack frame describing the suspended method is <em class="emphasis">popped</em> off the top of the stack and used to resume execution.</div>
+<div class="para" id="p-971">Each time a method suspends, it gets its own new stack frame to save its state. This happens even when the method is invoking itself, which is what happens when executing a recursive method. Consider the recursive method <code class="code-inline tex2jax_ignore">countdown(int n)</code> in <a href="" class="xref" data-knowl="./knowl/listing-re-countdown.html" title="Listing 13.2.1">Listing 13.2.1</a>.</div>
 <figure class="listing figure-like" id="listing-re-countdown"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class LiftOff {
   public static void main(String[] args) {
     countdown(10);
@@ -767,18 +767,92 @@ window.MathJax = {
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.2.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ListOff.java</code></figcaption></figure><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.2.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">ListOff.java</code></figcaption></figure><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac LiftOff.java
+java LiftOff
+</b>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+We have lift off!
+</pre></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:60%;">
-<div class="para" id="p-973">Each time the else-branch in the <code class="code-inline tex2jax_ignore">countdown(…)</code> method in <a href="" class="xref" data-knowl="./knowl/listing-re-countdown.html" title="Listing 13.2.1">Listing 13.2.1</a> is invoked, the state of the invoking method is captured in a stack frame and pushed on the call stack. During recursion this repeats itself with each new value of N until the base case is reached. <a href="" class="xref" data-knowl="./knowl/figure-re-countdown.html" title="Figure 13.2.2">Figure 13.2.2</a> is an illustrative diagram of the call stack when the recursion hits the base case. All stack frames hold the value of N when it was suspended. After reaching the base case, each method starts to return, which pops the stack from off the call stack, returning control flow to the suspended method.</div>
-<div class="para" id="p-974">Every one of the stack frames depicted in <a href="" class="xref" data-knowl="./knowl/figure-re-countdown.html" title="Figure 13.2.2">Figure 13.2.2</a> represents a suspended version of the <code class="code-inline tex2jax_ignore">countdown(…)</code> method. Recursion works because each newly invoked method has its own scope and its own set of method-scoped variables, even when the method invoked is the same as the invoking method.</div>
+<div class="para" id="p-972">Each time the else-branch in the <code class="code-inline tex2jax_ignore">countdown(…)</code> method in <a href="" class="xref" data-knowl="./knowl/listing-re-countdown.html" title="Listing 13.2.1">Listing 13.2.1</a> is invoked, the state of the invoking method is captured in a stack frame and pushed on the call stack. During recursion this repeats itself with each new value of N until the base case is reached. <a href="" class="xref" data-knowl="./knowl/figure-re-countdown.html" title="Figure 13.2.2">Figure 13.2.2</a> is an illustrative diagram of the call stack when this recursion hits the base case. All stack frames hold the value of N when it was suspended. After reaching the base case, each suspended method returns in reverse order, which pops the next stack frame off the call stack, returning control flow to the suspended method.</div>
+<div class="para" id="p-973">Every one of the stack frames depicted in <a href="" class="xref" data-knowl="./knowl/figure-re-countdown.html" title="Figure 13.2.2">Figure 13.2.2</a> represents a suspended version of the <code class="code-inline tex2jax_ignore">countdown(…)</code> method. Recursion works because each newly invoked method has its own scope and its own set of method-scoped variables, even when the method invoked is the same as the invoking method.</div>
 </div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-975"></div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-974"></div></div>
 <div class="sbspanel top" style="width:37%;"><figure class="figure figure-like" id="figure-re-countdown"><img src="external/images/re-countdown.svg" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">13.2.2<span class="period">.</span></span><span class="space"> </span>Call Stack at the base case</figcaption></figure></div>
 </div></div>
-<div class="para" id="p-976">A wonderful tool for visualizing the call stack in action is the <a class="external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/" target="_blank">Java Visualizer</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-125" id="fn-125"><sup> 1 </sup></a>, one instance of which is hosted by the University of Waterloo Centre for Education in Mathematics and Computing. With this tool you can paste a small Java program into the editor and watch it execute, step-by-step. The current state of the call stack is illustrated on the right as you step through the program animation. <a href="" class="xref" data-knowl="./knowl/figure-re-countdown-visualizer.html" title="Figure 13.2.3">Figure 13.2.3</a> below is an embedded version of the visualizer for the <code class="code-inline tex2jax_ignore">LiftOff.java</code> program. Scroll to the right to see the call stack. Drag left the right edge of the code window to bring both into view. Click the [Forward] button to step through the program. Alternatively, <a class="external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+LiftOff+%7B%0A++public+static+void+main(String%5B%5D+args)+%7B%0A++++countdown(10)%3B%0A++%7D%0A%0A++//+Count+down+from+N%0A++public+static+void+countdown(int+N)+%7B%0A++++//+When+N+reaches+0,+Lift+Off!%0A++++if+(N+%3C%3D+0)+%7B%0A++++++System.out.println(%22We+have+lift+off!%22)%3B%0A%0A++++//+Print+current+count+and+recurse+with+decremented+value%0A++++%7D+else+%7B%0A++++++System.out.println(N)%3B%0A++++++countdown(N-1)%3B%0A++++%7D%0A++%7D%0A%7D&amp;mode=display" target="_blank">click here</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-126" id="fn-126"><sup> 2 </sup></a> to visualize the program on the site directly.</div>
-<div class="para" id="p-977">Try your own programs by visiting the <a class="external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/" target="_blank">Java Visualizer</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-127" id="fn-127"><sup> 3 </sup></a> site.</div>
-<div class="para" id="p-978"></div>
-<figure class="figure figure-like" id="figure-re-countdown-visualizer"><iframe src="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+LiftOff+%7B%0A++public+static+void+main(String%5B%5D+args)+%7B%0A++++countdown(10)%3B%0A++%7D%0A%0A++//+Count+down+from+N%0A++public+static+void+countdown(int+N)+%7B%0A++++//+When+N+reaches+0,+Lift+Off!%0A++++if+(N+%3C%3D+0)+%7B%0A++++++System.out.println(%22We+have+lift+off!%22)%3B%0A%0A++++//+Print+current+count+and+recurse+with+decremented+value%0A++++%7D+else+%7B%0A++++++System.out.println(N)%3B%0A++++++countdown(N-1)%3B%0A++++%7D%0A++%7D%0A%7D&amp;mode=display" id="interactive-19" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">13.2.3<span class="period">.</span></span><span class="space"> </span>Visualize LiftOff.java</figcaption></figure></section><div class="hidden-content tex2jax_ignore" id="hk-fn-125"><div class="fn"><code class="code-inline tex2jax_ignore">cscircles.cemc.uwaterloo.ca/java_visualize/</code></div></div>
+<div class="para" id="p-975">A wonderful tool for visualizing the call stack in action is the <a class="external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/" target="_blank">Java Visualizer</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-125" id="fn-125"><sup> 1 </sup></a>, one instance of which is hosted by the <em class="emphasis">University of Waterloo Centre for Education in Mathematics and Computing</em>. You can paste a small Java program into the editor of this tool and watch it execute, step-by-step. The current state of the call stack is illustrated on the right as you step through the program animation. <a href="" class="xref" data-knowl="./knowl/figure-re-countdown-visualizer.html" title="Figure 13.2.3">Figure 13.2.3</a> below is an embedded version of the visualizer for the <code class="code-inline tex2jax_ignore">LiftOff.java</code> program. Scroll to the right to see the call stack. Drag left the right edge of the editor window to bring both into view. Click the [Forward] button to step through the program. Alternatively, <a class="external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+LiftOff+%7B%0A++public+static+void+main(String%5B%5D+args)+%7B%0A++++countdown(10)%3B%0A++%7D%0A%0A++//+Count+down+from+N%0A++public+static+void+countdown(int+N)+%7B%0A++++//+When+N+reaches+0,+Lift+Off!%0A++++if+(N+%3C%3D+0)+%7B%0A++++++System.out.println(%22We+have+lift+off!%22)%3B%0A%0A++++//+Print+current+count+and+recurse+with+decremented+value%0A++++%7D+else+%7B%0A++++++System.out.println(N)%3B%0A++++++countdown(N-1)%3B%0A++++%7D%0A++%7D%0A%7D&amp;mode=display" target="_blank">click here</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-126" id="fn-126"><sup> 2 </sup></a> to visualize the program on the site, directly.</div>
+<div class="para" id="p-976">Try your own programs by visiting the <a class="external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/" target="_blank">Java Visualizer</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-127" id="fn-127"><sup> 3 </sup></a> site.</div>
+<div class="para" id="p-977"></div>
+<figure class="figure figure-like" id="figure-re-countdown-visualizer"><iframe src="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+LiftOff+%7B%0A++public+static+void+main(String%5B%5D+args)+%7B%0A++++countdown(10)%3B%0A++%7D%0A%0A++//+Count+down+from+N%0A++public+static+void+countdown(int+N)+%7B%0A++++//+When+N+reaches+0,+Lift+Off!%0A++++if+(N+%3C%3D+0)+%7B%0A++++++System.out.println(%22We+have+lift+off!%22)%3B%0A%0A++++//+Print+current+count+and+recurse+with+decremented+value%0A++++%7D+else+%7B%0A++++++System.out.println(N)%3B%0A++++++countdown(N-1)%3B%0A++++%7D%0A++%7D%0A%7D&amp;mode=display" id="interactive-19" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">13.2.3<span class="period">.</span></span><span class="space"> </span>Visualize LiftOff.java</figcaption></figure><div class="para" id="p-978">What happens if we make an error in the base case condition, or forget it altogether? Let’s test it by making a second version of <code class="code-inline tex2jax_ignore">LiftOff.java</code> with the base case commented out. See <a href="" class="xref" data-knowl="./knowl/listing-re-no-base-case.html" title="Listing 13.2.4">Listing 13.2.4</a> and its console session.</div>
+<figure class="listing figure-like" id="listing-re-no-base-case"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// NoBaseCase.java
+public class NoBaseCase {
+  public static void main(String[] args) {
+    countdown(10);
+  }
+
+  // Count down from N
+  public static void countdown(int N) {
+    // When N reaches 0, Lift Off!
+    // if (N &lt;= 0) {
+    //   System.out.println("We have lift off!");
+
+    // // Print current count and recurse with decremented value
+    // } else {
+      System.out.println(N);
+      countdown(N-1);
+    // }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.2.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">NoBaseCase.java</code></figcaption></figure><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac NoBaseCase.java 
+java NoBaseCase
+</b>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+-1
+-2
+-3
+…
+-14396
+-14397
+-14398
+Exception in thread "main" java.lang.StackOverflowError
+        at java.base/java.nio.CharBuffer.wrap(CharBuffer.java:408)
+        at java.base/sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:281)
+        at java.base/sun.nio.cs.StreamEncoder.write(StreamEncoder.java:132)
+        at java.base/java.io.OutputStreamWriter.write(OutputStreamWriter.java:205)
+        at java.base/java.io.BufferedWriter.flushBuffer(BufferedWriter.java:120)
+        at java.base/java.io.PrintStream.writeln(PrintStream.java:722)
+        at java.base/java.io.PrintStream.println(PrintStream.java:938)
+        at NoBaseCase.countdown(NoBaseCase.java:15)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+        at NoBaseCase.countdown(NoBaseCase.java:16)
+…
+</pre></div>
+<div class="para" id="p-979">The two ellipses (…) in the previous console session output show where many lines were deleted. The call stack built up about 14,400+ stack frames before it overflowed and threw and error. The line right after the last countdown value was printed shows the <code class="code-inline tex2jax_ignore">java.lang.StackOverflowError</code> and a very long dump of the call stack, which includes the 14,400+ recursive calls at line 16 of <code class="code-inline tex2jax_ignore">NoBaseCase.java</code>. The call stack does not have infinite memory in which to hold all stack frames. This is what happens when it runs out.</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-125"><div class="fn"><code class="code-inline tex2jax_ignore">cscircles.cemc.uwaterloo.ca/java_visualize/</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-126"><div class="fn"><code class="code-inline tex2jax_ignore">cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+LiftOff+%7B%0A++public+static+void+main(String%5B%5D+args)+%7B%0A++++countdown(10)%3B%0A++%7D%0A%0A++//+Count+down+from+N%0A++public+static+void+countdown(int+N)+%7B%0A++++//+When+N+reaches+0,+Lift+Off!%0A++++if+(N+%3C%3D+0)+%7B%0A++++++System.out.println(%22We+have+lift+off!%22)%3B%0A%0A++++//+Print+current+count+and+recurse+with+decremented+value%0A++++%7D+else+%7B%0A++++++System.out.println(N)%3B%0A++++++countdown(N-1)%3B%0A++++%7D%0A++%7D%0A%7D&amp;mode=display</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-127"><div class="fn"><code class="code-inline tex2jax_ignore">cscircles.cemc.uwaterloo.ca/java_visualize/</code></div></div>
 </div>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">We start our method by checking for special cases. Any String of length 0 or 1 is automatically considered a palindrome, by definition. There is nothing more to do so we return <code class="code-inline tex2jax_ignore">true</code> immediately. This is called the <code class="code-inline tex2jax_ignore">base case</code>.</div>
+<div class="para">Otherwise, the String is a palindrome if the characters at both ends are equal and the substring excluding the end characters is also a palindrome. To test for the smaller palindrome, we invoke the same method, passing a smaller substring and returning as the overall result whatever the recursive method returns. This is called the <dfn class="terminology">recursive case</dfn>.</div>
 <span class="incontext"><a href="section-re-thinking.html#p-963" class="internal">in-context</a></span>
 </body>
 </html>
