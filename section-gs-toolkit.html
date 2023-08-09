@@ -201,7 +201,7 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-getting-started.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-gs-learning.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Learning to Program</span></a></div></li>
-<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computers and Computational Devices</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computational Devices</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-languages.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Programming Languages</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-oop.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Object Oriented Programming</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-java.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The Java Programming Language</span></a></div></li>
@@ -714,21 +714,21 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Merge Sort</span></a></div></li>
 <li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-al-exercises.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
-<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
+<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Shells and Commands</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
@@ -744,27 +744,28 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-gs-toolkit"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">The Java Development Kit</span>
 </h2>
-<section class="introduction" id="introduction-3">The <dfn class="terminology">Java Development Kit (JDK)</dfn> is a software development kit that allows developers to create, compile, and run Java applications. It includes tools, libraries, and documentation necessary for Java development. The JDK is available for multiple platforms, including Windows, macOS, and Linux.</section><div class="para logical" id="p-57">
+<section class="introduction" id="introduction-3">The <dfn class="terminology">Java Development Kit (JDK)</dfn> is a software development kit that allows developers to create, compile, and run Java applications. It includes tools, libraries, and documentation necessary for Java development. The JDK is available for multiple platforms, including Windows, macOS, and Linux.</section><div class="para logical" id="p-66">
 <div class="para">The key components and features of the Java Development Kit include the following.</div>
 <ol class="decimal">
-<li id="li-26"><div class="para" id="p-derived-li-26">
-<dfn class="terminology">Java Compiler (javac)</dfn> for translating source code into bytecode.</div></li>
 <li id="li-27"><div class="para" id="p-derived-li-27">
-<dfn class="terminology">Java Virtual Machine (JVM)</dfn> which is responsible for executing Java bytecode.</div></li>
+<dfn class="terminology">Java Compiler (javac)</dfn> for compiling source code into bytecode.</div></li>
 <li id="li-28"><div class="para" id="p-derived-li-28">
+<dfn class="terminology">Java Virtual Machine (JVM)</dfn> which is responsible for executing Java bytecode.</div></li>
+<li id="li-29"><div class="para" id="p-derived-li-29">
 <dfn class="terminology">Java Runtime Environment (JRE)</dfn> which contains the JVM and essential class libraries required to run Java applications.</div></li>
-<li id="li-29"><div class="para" id="p-derived-li-29">The <dfn class="terminology">Java Shell (JShell)</dfn> is a Read-Evaluate-Print Loop tool (REPL) that runs in a terminal. It evaluates entered declarations, statements, and expressions immediately and prints results.</div></li>
-<li id="li-30"><div class="para" id="p-derived-li-30">Other Java Development Tools including the <dfn class="terminology">Java Debugger (jdb)</dfn> and the <dfn class="terminology">Java Archive (JAR) tool</dfn>.</div></li>
-<li id="li-31"><div class="para" id="p-derived-li-31">
-<dfn class="terminology">Libraries and APIs</dfn>, a large set of core class libraries and APIs that provide pre-built functionality for various tasks.</div></li>
+<li id="li-30"><div class="para" id="p-derived-li-30">The <dfn class="terminology">Java Shell (JShell)</dfn> is a Read-Evaluate-Print Loop (REPL) application that runs in a terminal. It evaluates entered declarations, statements, and expressions immediately and prints results.</div></li>
+<li id="li-31"><div class="para" id="p-derived-li-31">Other Java Development Tools including the <dfn class="terminology">Java Debugger (jdb)</dfn> and the <dfn class="terminology">Java Archive (JAR) tool</dfn>.</div></li>
 <li id="li-32"><div class="para" id="p-derived-li-32">
+<dfn class="terminology">Libraries and APIs</dfn>, a large set of core class libraries and APIs that provide pre-built functionality for various tasks.</div></li>
+<li id="li-33"><div class="para" id="p-derived-li-33">
 <dfn class="terminology">Development Documentation</dfn>, a comprehensive set of documentation that describes all of the above.</div></li>
 </ol>
 </div>
-<div class="para" id="p-58">One item worth highlighting is the platform-independence of the Java Virtual Machine. The JVM plays a fundamental role in achieving Java’s "write once, run anywhere" capability. Since the JVM executes bytecode, which is a platform-neutral format, Java programs can be executed on any system that has a compatible JVM. This makes Java programs highly portable and eliminates the need to recompile the code for different operating systems or architectures.</div>
-<div class="para" id="p-59">Another item worth expanding upon is the JShell REPL. JShell provides a lightweight and interactive way to explore and experiment with Java code. It is particularly useful for learning the Java language, prototyping, and debugging small code snippets. It offers a flexible and dynamic environment for interactive Java development without the need to set up a complete project structure or compile and run separate Java files. JShell tracks history and stores past results. It also acts as an interactive help tool.</div>
-<div class="para" id="p-60">In verbose mode JShell not only produces the output from evaluating Java, but it also prints the type of the result -- something that we will be using extensively in the next chapter.</div>
-<div class="para" id="p-61">Overall, the Java Development Kit is an essential tool for Java developers, providing everything needed to create, compile, and run Java applications. It offers a rich set of development tools, libraries, and documentation, enabling developers to build robust and platform-independent Java software.</div></section></div>
+<div class="para" id="p-67">One item worth highlighting is the platform-independence of the Java Virtual Machine (see <a href="" class="xref" data-knowl="./knowl/gs-java-platform-independence.html" title="Figure 1.6.1">Figure 1.6.1</a>). The JVM plays a fundamental role in achieving Java’s "write once, run anywhere" capability. Since the JVM executes bytecode, which is a platform-neutral format, Java programs can be executed on any system that has a compatible platform-specific JVM. This makes Java programs highly portable and eliminates the need to recompile the code for different operating systems or architectures.</div>
+<figure class="figure figure-like" id="gs-java-platform-independence"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/java-platform-independence.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.6.1<span class="period">.</span></span><span class="space"> </span>Java programs are platform-independent. The JVM is not.</figcaption></figure><div class="para" id="p-68">Another item worth expanding upon is the JShell REPL. JShell provides a lightweight and interactive way to explore and experiment with Java code. It is particularly useful for learning the Java language, prototyping, and debugging small code snippets. It offers a flexible and dynamic environment for interactive Java development without the need to set up a complete project structure or compile and run separate Java files. JShell tracks history and stores past results. It also acts as an interactive help tool.</div>
+<div class="para" id="p-69">In verbose mode JShell not only produces the output from evaluating Java, but it also prints the type of the result -- something that we will be using extensively in the next chapter.</div>
+<div class="para" id="p-70">Overall, the Java Development Kit is an essential tool for Java developers, providing everything needed to create, compile, and run Java applications. It offers a rich set of development tools, libraries, and documentation, enabling developers to build robust and platform-independent Java software.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-gs-java.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-gs-install.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Selection Sort</title>
+<title>Binary Search</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -201,7 +201,7 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-getting-started.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-gs-learning.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Learning to Program</span></a></div></li>
-<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computers and Computational Devices</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computational Devices</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-languages.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Programming Languages</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-oop.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Object Oriented Programming</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-java.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The Java Programming Language</span></a></div></li>
@@ -714,21 +714,21 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li class="active"><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sequential Search</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Merge Sort</span></a></div></li>
 <li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-al-exercises.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
-<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
+<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Shells and Commands</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
@@ -742,8 +742,13 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-116"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">14.4</span> <span class="title">Selection Sort</span>
-</h2></section></div>
+<span class="type">Section</span> <span class="codenumber">14.4</span> <span class="title">Binary Search</span>
+</h2>
+<div class="para" id="p-1029">Requires a sorted sequence to start</div>
+<div class="para" id="p-1030">Eliminates half the linear sequence by comparing the middle element to element searched</div>
+<div class="para" id="p-1031">Iterative implementation</div>
+<div class="para" id="p-1032">Recursive implementation</div>
+<div class="para" id="p-1033">Complexity</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-115.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-117.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

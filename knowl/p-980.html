@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Similar to iteration, we can use a recursive technique to accumulate a result. Let’s consider the simple problem of summing a sequence of integers in a range [begin, end]. <a href="" class="xref" data-knowl="./knowl/listing-re-sums.html" title="Listing 13.3.1">Listing 13.3.1</a> includes two methods to solve this problem: one iterative and one recursive. The <code class="code-inline tex2jax_ignore">main(…)</code> method tests both on the integer range [1, 10]. Both produce the correct value of 55.</div>
-<span class="incontext"><a href="section-re-characterising.html#p-980" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">The state of a suspended method is saved in an internal data structure called a <dfn class="terminology">stack frame</dfn>. A stack frame tracks the suspended method’s scope (variables and their instantaneous values) and on which instruction to continue execution when the invoked method completes. There are as many stack frames as your program has suspended methods, all of which are stored in another data structure called the <dfn class="terminology">call stack</dfn>. To visualize a call statck, think of a stack of clean dinner plates. Typically, you add to the top of a stack, and remove from the top of the stack. It is the same with the call stack. When a new stack frame (dinner plate) is created as a result of one method invoking another, the stack frame is <em class="emphasis">pushed</em> onto the top of the call stack. When the invoked method completes, the stack frame describing the suspended method is <em class="emphasis">popped</em> off the top of the stack and used to resume execution.</div>
+<span class="incontext"><a href="section-re-call-stack.html#p-980" class="internal">in-context</a></span>
 </body>
 </html>

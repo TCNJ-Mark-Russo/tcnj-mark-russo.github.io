@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">Unlike base classes which are <em class="emphasis">extended</em> by another class, interfaces are <dfn class="terminology">implemented</dfn> by a class. Otherwise, an interface can be thought of an abstract base class with nothing but abstract method signatures. <em class="emphasis">Implementing</em> a interface is a kind of <em class="emphasis">contract</em> that must be fulfilled by the implementing derived class. To fulfill the contract, a class that implements an interface must provide concrete method implementations with signatures that match all those found in the interface. As with abstract methods, the Java compiler enforces the contract, raising compile-time errors if an interface’s signature is not implemented.</div>
-<span class="incontext"><a href="chapter-interfaces.html#p-845" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Now we understand why printing an object that does not override <code class="code-inline tex2jax_ignore">toString()</code> generates that curious output. The default implementation of <code class="code-inline tex2jax_ignore">toString()</code> returns a String constructed by concatenating the class name of an object with "@" and the hexidecimal representation of its unique hash code.</div>
+<span class="incontext"><a href="section-in-object-class.html#p-845" class="internal">in-context</a></span>
 </body>
 </html>

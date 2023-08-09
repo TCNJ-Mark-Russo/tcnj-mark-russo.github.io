@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s revisit our LED class from <a href="section-cl-methods.html" class="internal" title="Section 9.3: Methods">Section 9.3</a>. Rather than encapsulate an Oval object, let’s set up our LED class to <em class="emphasis">extend</em> Oval so that it starts with all Oval behavior by default. This means that we no longer need to instantiate and manage an Oval class in LED. The LED class now has access to all the behavior of an Oval class through inheritance, and so LED behaves like an Oval. One ramification of this is that, instead of relaying method invocations to an encapsulated Oval object (e.g. setFillColor(…)) the LED class itself has access to these methods and can invoke them directly. Even though LED does not implement Oval methods, inheritance takes care of <em class="emphasis">finding</em> suitable implementations automatically in the Oval base class.</div>
-<span class="incontext"><a href="section-in-basics.html#p-787" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Other shape features include fill color, stroke color, stroke width, whether the shape may be interactively selected or dragged, the text drawn at its center as well as font family, font size, font style, text colors, transformation, etc. If you consider this list, each one of these features is shared by all shape classes. Does that mean we must declare every one of these instance variables in every class definition? That is quite a lot of code repetition, which, by now, should tell you that something is not quite right. All this code repetition multiplies the effort to maintain your code and increases the chances of making a mistake.</div>
+<span class="incontext"><a href="section-in-dp-design.html#p-787" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">An attempt to instantiate Shape will end with a compiler error, and that’s a good thing. After all, Shape is an <em class="emphasis">abstract</em> concept, not an actual graphic. It has no visual representation. The Shape class exists primarily as as way to generalize the concept of a shape and to encapsulate the shared functionality of all concrete shape derived classes in one place, to avoid the problems assocaited with code duplication. In fact, the Shape class was designed to be abstract. Never was there an intention that concrete Shape objects would be instantiated. This was part of the original design, and we’d like Java to help us enforce that restriction.</div>
-<span class="incontext"><a href="section-in-abstract-class.html#p-838" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Protected visibility helps us to eliminate the need to duplicate members in a derived class that are defined already in a base class. In <a href="" class="xref" data-knowl="./knowl/listing-in-base-dynamic-binding.html" title="Listing 10.4.3">Listing 10.4.3</a> both Base and Derived declared the private instance variable <code class="code-inline tex2jax_ignore">name</code>. This is unnecessary duplication. In <a href="" class="xref" data-knowl="./knowl/listing-in-base-dynamic-binding2.html" title="Listing 10.4.7">Listing 10.4.7</a> we change the visibility of the derived class <code class="code-inline tex2jax_ignore">name</code> instance variable to <code class="code-inline tex2jax_ignore">protected</code>, which makes the variable visible to the derived class as well. With this enhanced level of visibility, we can not remove the Derived instance variable <code class="code-inline tex2jax_ignore">name</code> altogether, because Derived can use the one declared in Base. This change in design is more succinct and reflective of the implications of inheritance. If we compile and run this updated program, the outcome is unchanged.</div>
+<span class="incontext"><a href="section-in-polymorph.html#p-838" class="internal">in-context</a></span>
 </body>
 </html>

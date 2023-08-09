@@ -201,7 +201,7 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-getting-started.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-gs-learning.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Learning to Program</span></a></div></li>
-<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computers and Computational Devices</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computational Devices</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-languages.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Programming Languages</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-oop.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Object Oriented Programming</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-java.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The Java Programming Language</span></a></div></li>
@@ -714,21 +714,21 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Merge Sort</span></a></div></li>
 <li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-al-exercises.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
-<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
+<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Shells and Commands</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
@@ -744,7 +744,7 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="chapter-interfaces"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">11</span> <span class="title">Interfaces</span>
 </h2>
-<section class="introduction" id="introduction-56"><div class="para" id="p-844">Abstract classes and methods are very useful. Centralizing shared behavior and requiring derived classes to implement dependent custom behavior enforces design constraints and ensures compatibility. What if we take this idea to an extreme and mark all methodsas  abstract? We would be left with an abstract base class having only abstract method signatures, no implementations, all of which must be implemented by derived classes. This idea turns out to be a very useful concept on its own, called an <dfn class="terminology">interface</dfn>.</div> <div class="para" id="p-845">Unlike base classes which are <em class="emphasis">extended</em> by another class, interfaces are <dfn class="terminology">implemented</dfn> by a class. Otherwise, an interface can be thought of an abstract base class with nothing but abstract method signatures. <em class="emphasis">Implementing</em> a interface is a kind of <em class="emphasis">contract</em> that must be fulfilled by the implementing derived class. To fulfill the contract, a class that implements an interface must provide concrete method implementations with signatures that match all those found in the interface. As with abstract methods, the Java compiler enforces the contract, raising compile-time errors if an interface’s signature is not implemented.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="introduction-56"><div class="para" id="p-854">Abstract classes and methods are very useful. Centralizing shared behavior and requiring derived classes to implement dependent custom behavior enforces design constraints and ensures compatibility. What if we take this idea to an extreme and mark all methodsas  abstract? We would be left with an abstract base class having only abstract method signatures, no implementations, all of which must be implemented by derived classes. This idea turns out to be a very useful concept on its own, called an <dfn class="terminology">interface</dfn>.</div> <div class="para" id="p-855">Unlike base classes which are <em class="emphasis">extended</em> by another class, interfaces are <dfn class="terminology">implemented</dfn> by a class. Otherwise, an interface can be thought of an abstract base class with nothing but abstract method signatures. <em class="emphasis">Implementing</em> a interface is a kind of <em class="emphasis">contract</em> that must be fulfilled by the implementing derived class. To fulfill the contract, a class that implements an interface must provide concrete method implementations with signatures that match all those found in the interface. As with abstract methods, the Java compiler enforces the contract, raising compile-time errors if an interface’s signature is not implemented.</div></section><nav class="summary-links"><ul>
 <li><a href="section-if-comparable.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Core Library Interfaces</span></a></li>
 <li><a href="section-if-custom.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Custom Interfaces</span></a></li>
 <li><a href="section-if-polymorph.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Interfaces and Polymorphism</span></a></li>

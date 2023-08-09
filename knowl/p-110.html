@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Recall that Java provides four primitive integer types, <code class="code-inline tex2jax_ignore">byte</code>, <code class="code-inline tex2jax_ignore">short</code>, <code class="code-inline tex2jax_ignore">int</code>, <code class="code-inline tex2jax_ignore">long</code>. We use the term primitive because these types are fundamental to the Java language. These four types are listed in the following table along with the amount of memory used to store each as well as the range of values that may be stored as min and max. All integer variables are stored as one of these types. JShell chooses <code class="code-inline tex2jax_ignore">int</code> to store integers by default. We can see this in the <code class="code-inline tex2jax_ignore">$1</code> scratch variable above when JShell produces the output <code class="code-inline tex2jax_ignore">created scratch variable $1 : int</code>. The final <code class="code-inline tex2jax_ignore">int</code> tells us that <code class="code-inline tex2jax_ignore">$1</code> is of type <code class="code-inline tex2jax_ignore">int</code>. Attempting to create the value 2147483648 and store it as an <code class="code-inline tex2jax_ignore">int</code> produces an error because, according to the following table, that value is outside the range of values capable of being stored as an <code class="code-inline tex2jax_ignore">int</code>. What we really need is a way to store the number as a <code class="code-inline tex2jax_ignore">long</code>.</div>
-<span class="incontext"><a href="section-pe-integers.html#p-110" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">You may not choose just any sequence of characters for your variable name. Java variable names must follow certain rules.</div>
+<ol class="decimal">
+<li><div class="para">Variable names must start with a letter (upper or lower case), an underscore ( _ ) or a dollar sign ($)</div></li>
+<li><div class="para">After the first character, variable names may be made up of additional letters (A-Za-z), digits (1-9), an underscore ( _ ) and/or a dollar sign ($)</div></li>
+<li><div class="para">Spaces are not permitted in a variable name.</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="section-pe-variables.html#p-110" class="internal">in-context</a></span>
 </body>
 </html>

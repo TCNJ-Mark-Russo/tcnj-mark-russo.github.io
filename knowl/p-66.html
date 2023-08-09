@@ -11,8 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">One pitfall often experienced after a new installation is the inability to access JDK commands from a terminal. The JDK installs successfully, the new user opens and terminal, and proceeds to test the new installation by entering the command <code class="code-inline tex2jax_ignore">java -version</code>, which should print the version of Java that is installed. Instead, the command is not found and an error is printed to the terminal. If the JDK is indeed installs successfully, the program is almost always associated with the directory paths that a terminal searches for a command after the command is entered. Only if the command program can be found on one of those paths can the command be executed. These search paths are stored in an operating system environment variable, frequently named <code class="code-inline tex2jax_ignore">PATH</code>. For example, on Windows you can search for the "Environment Variables" program and use that to inspect the <code class="code-inline tex2jax_ignore">PATH</code> environment variable and edit it to add a file system path to the <code class="code-inline tex2jax_ignore">bin</code> subdirectory under the location of where the JDK is installed. It is the <code class="code-inline tex2jax_ignore">bin</code> subdirectory where you’ll find the JDK commands.</div>
-<span class="incontext"><a href="section-gs-install.html#p-66" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">The key components and features of the Java Development Kit include the following.</div>
+<ol class="decimal">
+<li><div class="para">
+<dfn class="terminology">Java Compiler (javac)</dfn> for compiling source code into bytecode.</div></li>
+<li><div class="para">
+<dfn class="terminology">Java Virtual Machine (JVM)</dfn> which is responsible for executing Java bytecode.</div></li>
+<li><div class="para">
+<dfn class="terminology">Java Runtime Environment (JRE)</dfn> which contains the JVM and essential class libraries required to run Java applications.</div></li>
+<li><div class="para">The <dfn class="terminology">Java Shell (JShell)</dfn> is a Read-Evaluate-Print Loop (REPL) application that runs in a terminal. It evaluates entered declarations, statements, and expressions immediately and prints results.</div></li>
+<li><div class="para">Other Java Development Tools including the <dfn class="terminology">Java Debugger (jdb)</dfn> and the <dfn class="terminology">Java Archive (JAR) tool</dfn>.</div></li>
+<li><div class="para">
+<dfn class="terminology">Libraries and APIs</dfn>, a large set of core class libraries and APIs that provide pre-built functionality for various tasks.</div></li>
+<li><div class="para">
+<dfn class="terminology">Development Documentation</dfn>, a comprehensive set of documentation that describes all of the above.</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="section-gs-toolkit.html#p-66" class="internal">in-context</a></span>
 </body>
 </html>

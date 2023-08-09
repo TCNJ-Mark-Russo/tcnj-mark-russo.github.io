@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The format of a try-with-resources is exactly like a try-catch, only with a parenthesized object declaration added between the <code class="code-inline tex2jax_ignore">try</code> keyword and its opening <code class="code-inline tex2jax_ignore">{</code>. Because both Scanner and BufferedReader implement the AutoClosable interface, we can rewrite the <code class="code-inline tex2jax_ignore">printFile(…)</code> implementations in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 12.4.1">Listing 12.4.1</a> and <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 12.4.2">Listing 12.4.2</a> to use try-with-resources instead. This simplifies the code and ensures the resources will always be closed properly.</div>
-<span class="incontext"><a href="section-try-with-resources.html#p-942" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">With the File object instantiated, the next step is to pass it to the Scanner class constructor to create a new Scanner configured to read from the File object. A Scanner that wraps a File object throws a FileNotFoundException. Because this is a checked exception, the Scanner must be created in a try-block. In the following code snippet, we declare the Scanner variable in the outer method scope because we will use it later, but the instantiation of the Scanner object must be done in the try-block.</div>
+<span class="incontext"><a href="section-ex-reading-files.html#p-942" class="internal">in-context</a></span>
 </body>
 </html>

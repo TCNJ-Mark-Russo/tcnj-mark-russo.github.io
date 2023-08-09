@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">To test our new methods, in addition to replacing configuration statements in the constructor with <code class="code-inline tex2jax_ignore">turnOff()</code>, we invoke <code class="code-inline tex2jax_ignore">turnOn()</code> in <code class="code-inline tex2jax_ignore">main(…)</code> on both LED objects after instantiation. We also test the state of the first LED object by invoking its <code class="code-inline tex2jax_ignore">isOn()</code> method and printing the result. See the result in <a href="" class="xref" data-knowl="./knowl/figure-cl-led4.html" title="Figure 9.3.3">Figure 9.3.3</a>.</div>
-<span class="incontext"><a href="section-cl-methods.html#p-714" class="internal">in-context</a></span>
+<div class="para">We also used the keyword <code class="code-inline tex2jax_ignore">private</code> instead of our usual <code class="code-inline tex2jax_ignore">public</code> visibility specifyer when declaring our LED instance variables. Using <code class="code-inline tex2jax_ignore">private</code> ensures that the instance variables are not accessible from outside each instance. Instance variables declared with <dfn class="terminology">private visibility</dfn> may be accessed only from within the scope of an object. No access from outside the object is permitted. We now have two visibility specifiers for the declaration of methods and instance variables, <code class="code-inline tex2jax_ignore">public</code> and <code class="code-inline tex2jax_ignore">private</code>.</div>
+<span class="incontext"><a href="section-cl-constructors.html#p-714" class="internal">in-context</a></span>
 </body>
 </html>

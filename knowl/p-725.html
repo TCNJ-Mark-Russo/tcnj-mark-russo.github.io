@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Colors in DoodlePad may be partially or fully transparent. This is set using fourth value in [0, 255] known as <dfn class="terminology">alpha</dfn>. An alpha of 0 means fully transparent and an alpha of 255 means fully opaque. All color-related DoodlePad methods can take four color component parameters, the fourth being transparency specified as alpha. If that fourth parameter is omitted, DoodlePad substitutes an alpha of 255, fully opaque. This is implemented by overloading the definition of <code class="code-inline tex2jax_ignore">setFillColor(…)</code>, which you can observe in the <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">DoodlePad source code</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-117-hidden.html" title="Footnote 9.3.1"><sup> 1 </sup></a>.</div>
+<div class="para">Encapsulation requires that we manage access to instance variables. We can make an instance variable accessible simply by declaring it with public visibility. This leaves the variable’s value wide open to change. We lose the ability to manage it, such as by restricting its value to a valid range.</div>
 <span class="incontext"><a href="section-cl-methods.html#p-725" class="internal">in-context</a></span>
 </body>
 </html>

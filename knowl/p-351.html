@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the <code class="code-inline tex2jax_ignore">::</code> binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.</div>
-<span class="incontext"><a href="section-dp-events.html#p-351" class="internal">in-context</a></span>
+<div class="para">Each Shape object’s fill color and stroke color may be specified using color component values. There are two mutator methods for setting Shape color: <code class="code-inline tex2jax_ignore">setFillColor(...)</code> and <code class="code-inline tex2jax_ignore">getStrokeColor(...)</code>. These setter methods each have three overloads. The base method signature has four parameters, one for each of the four color components: red, green, blue and alpha. A second overloaded method has only three parameters, which specify red, green and blue components. In this case the alpha component is assumed to have a value of 255, meaning that the Shape color has no transparency. The third overloaded method has only one parameter, often called gray. In this case the parameter value is repeated for all three color components, and alpha once again is set to 255.</div>
+<span class="incontext"><a href="section-dp-colors.html#p-351" class="internal">in-context</a></span>
 </body>
 </html>

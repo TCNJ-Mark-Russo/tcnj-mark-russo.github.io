@@ -11,9 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">
-<a href="" class="xref" data-knowl="./knowl/figure-ar-star-polygon.html" title="Figure 8.6.4">Figure 8.6.4</a> shows the output of running the program in <a href="" class="xref" data-knowl="./knowl/listing-ar-makestar.html" title="Listing 8.6.3: MakeStar.java">Listing 8.6.3</a>. The red 50-point star is composed of 100 vertices. Building this polygon from scratch would be far too tedious to do by hand. Fortunately, with a bit of reasoning, a cople arrays, and iteration, we can accomplish this relatively easily.</div>
-<span class="incontext"><a href="section-ar-polygons.html#p-689" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">One final item to note is the update we made to the <code class="code-inline tex2jax_ignore">print2D(…)</code> method. Because our internal array references can be <code class="code-inline tex2jax_ignore">null</code>, we need to test for this case. After all, the outer array is just an array of references, which can have the value <code class="code-inline tex2jax_ignore">null</code>. To avoid a runtime error that would occur if we tried to print <code class="code-inline tex2jax_ignore">arr2D</code> with an unassigned element reference, we added an if-statement to the <code class="code-inline tex2jax_ignore">print2D(…)</code> that checks that each inner array reference is not <code class="code-inline tex2jax_ignore">null</code> before attempting to print its elements. If it is <code class="code-inline tex2jax_ignore">null</code>, the method just goes ahead and prints the element. Looking at the output from compiling and running <a href="" class="xref" data-knowl="./knowl/listing-arr-raggeassembly.html" title="Listing 8.4.5">Listing 8.4.5</a>, you will see that this all checks out.</div>
+<span class="incontext"><a href="section-ar-multi.html#p-689" class="internal">in-context</a></span>
 </body>
 </html>

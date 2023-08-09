@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s rewrite only the parts of the <code class="code-inline tex2jax_ignore">recolor(…)</code> method from <a href="" class="xref" data-knowl="./knowl/listing-c1-randomovals.html" title="Listing 6.5.2">Listing 6.5.2</a> that form the loop and element access to use the for-each statement instead of a while-statement. In the following, the original while- version is on the left and the updated for-each version in the right. It is pretty clear that the for-each version is more compact, with fewer moving parts.</div>
-<span class="incontext"><a href="section-c2-enhanced-for-statements.html#p-577" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">When we attempt to compile this program, the compiler is unable to find the our loop counter variable <code class="code-inline tex2jax_ignore">i</code> because it is declared within the parentheses of the for-statement, and therefore is considered to exist in that statement’s block scope. If you do have a need to access <code class="code-inline tex2jax_ignore">i</code> after the for-statement, you can circumvent this problem by declaring <code class="code-inline tex2jax_ignore">i</code> before the for-statement, and use the first expression in the parentheses for initializing <code class="code-inline tex2jax_ignore">i</code> only, without the declaration.</div>
+<span class="incontext"><a href="section-c2-for-statements.html#p-577" class="internal">in-context</a></span>
 </body>
 </html>

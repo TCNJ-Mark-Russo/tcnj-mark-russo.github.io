@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="340"
+   height="200"
+   overflow="hidden"
+   version="1.1"
+   id="svg208"
+   sodipodi:docname="gs-figure-circulationitem-hierarchy.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs212" />
+  <sodipodi:namedview
+     id="namedview210"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.0439805"
+     inkscape:cx="264.435"
+     inkscape:cy="167.07595"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg208" />
+  <path
+     d="M 79.060524,123.63 V 99.332999 h 92.196996 l -0.666,0.667 V 83.036995 h 1.333 V 100.667 H 79.727524 l 0.667,-0.667001 V 123.63 Z m 88.196996,-39.260005 4,-7.999994 4,7.999994 z"
+     id="path142" />
+  <path
+     d="M 263.98119,123.63 V 99.333499 h -92.25367 l 0.6667,0.666601 V 83.036895 h -1.3333 V 100.6668 h 92.2536 l -0.66667,-0.6667 V 123.63 Z m -88.25367,-39.259705 -4,-7.999994 -4,7.999994 z"
+     id="path148" />
+  <path
+     d="m 164.72752,87.369995 7,-10.999994 7,10.999994 z"
+     stroke="#000000"
+     stroke-width="1.33333"
+     stroke-miterlimit="8"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="path204" />
+  <g
+     id="g5"
+     transform="translate(-71.988696,-24.789465)">
+    <rect
+       x="120.71621"
+       y="32.159462"
+       width="245.96533"
+       height="67"
+       stroke="#172c51"
+       stroke-width="1.33333"
+       stroke-miterlimit="8"
+       fill="#002060"
+       id="rect134" />
+    <text
+       fill="#ffffff"
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="24px"
+       id="text136"
+       x="169.27896"
+       y="73.710243"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Calibri, Calibri_MSFontService, sans-serif;-inkscape-font-specification:'Calibri, Calibri_MSFontService, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="169.27896"
+         y="73.710243">CirculationItem</tspan></text>
+  </g>
+  <g
+     id="g7"
+     transform="translate(-45.988696,-22.789465)">
+    <rect
+       x="59.786488"
+       y="147.08612"
+       width="133"
+       height="67"
+       stroke="#172c51"
+       stroke-width="1.33333"
+       stroke-miterlimit="8"
+       fill="#c55a11"
+       id="rect192" />
+    <text
+       fill="#ffffff"
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="24px"
+       id="text136-8"
+       x="100.86852"
+       y="188.6369"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Calibri, Calibri_MSFontService, sans-serif;-inkscape-font-specification:'Calibri, Calibri_MSFontService, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="100.86852"
+         y="188.6369">Book</tspan></text>
+  </g>
+  <g
+     id="g6"
+     transform="translate(-45.988696,-22.789465)">
+    <rect
+       x="242.22974"
+       y="147.08612"
+       width="132"
+       height="67"
+       stroke="#172c51"
+       stroke-width="1.33333"
+       stroke-miterlimit="8"
+       fill="#548235"
+       id="rect196" />
+    <text
+       fill="#ffffff"
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="24px"
+       id="text136-8-5"
+       x="286.33325"
+       y="188.16815"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Calibri, Calibri_MSFontService, sans-serif;-inkscape-font-specification:'Calibri, Calibri_MSFontService, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="286.33325"
+         y="188.16815">DVD</tspan></text>
+  </g>
+</svg>

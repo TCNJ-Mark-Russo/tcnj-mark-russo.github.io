@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s do a better job at implementing our ToggleButton class, which we first created in <a href="" class="xref" data-knowl="./knowl/listing-dp-togglebutton1.html" title="Listing 4.6.4">Listing 4.6.4</a>. Now that we’re familiar with what we can do using inheritance, let’s reconsider ToggleButton’s implementation. Refer to <a href="" class="xref" data-knowl="./knowl/listing-in-togglebutton2.html" title="Listing 10.3.1">Listing 10.3.1</a> for all the details of the updated class.</div>
-<span class="incontext"><a href="section-in-overriding.html#p-800" class="internal">in-context</a></span>
+<div class="para">With the removal of the <code class="code-inline tex2jax_ignore">light</code> instance variable, we must replacement of all references to <code class="code-inline tex2jax_ignore">this.light</code>. For example, in the <code class="code-inline tex2jax_ignore">.turnOn()</code> and <code class="code-inline tex2jax_ignore">.turnOff()</code> methods, statements like <code class="code-inline tex2jax_ignore">this.light.setFillColor(…)</code> are now shortened to <code class="code-inline tex2jax_ignore">this.setFillColor(…)</code>. The LED class does not implement the <code class="code-inline tex2jax_ignore">setFillColor(…)</code> method directly, but LED <em class="emphasis">extends</em> Oval, and Oval provides access to the method through inheritance.</div>
+<span class="incontext"><a href="section-in-basics.html#p-800" class="internal">in-context</a></span>
 </body>
 </html>

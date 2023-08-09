@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">As we know, inheritance provides derived classes with access to all base class members. So, what do we get from Object? After all, if all classes inherit Object, then any non-private members that we find will be available to all of our classes. A little sleuthing uncovers the <a class="external" href="https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/Object.java" target="_blank">OpenJDK source code for the Object class</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-123-hidden.html" title="Footnote 10.5.1"><sup> 1 </sup></a>. The source code for two inherited Object class methods are of particular interest. These are <code class="code-inline tex2jax_ignore">toString()</code> and <code class="code-inline tex2jax_ignore">equals(…)</code>. Source code for both is given below in <a href="" class="xref" data-knowl="./knowl/listing-in-object-tostring.html" title="Listing 10.5.2">Listing 10.5.2</a> and <a href="" class="xref" data-knowl="./knowl/listing-in-object-equals.html" title="Listing 10.5.3">Listing 10.5.3</a>.</div>
-<span class="incontext"><a href="section-in-object-class.html#p-833" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Does this present a problem for us? If we have a variable of type Base, but it actually references an object of type Derived, how can we know this? In one sense, we shouldn’t need this information. The beauty of subtype polymorphism is that it doesn’t matter. From the perspective of code with a Base-typed variable, the object is a Base class and should be treated as such. Nevertheless, if we really need to know, Java gives us <em class="emphasis">instanceof</em>.</div>
+<span class="incontext"><a href="section-in-polymorph.html#p-833" class="internal">in-context</a></span>
 </body>
 </html>

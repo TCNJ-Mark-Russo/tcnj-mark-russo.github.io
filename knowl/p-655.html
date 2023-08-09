@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If we declare an array of a primitive type, the elements of the array hold actual primitive values. For example, if we declare a double array, even without initializing the elements, the values held in the array element are set to the default double value of 0.0.</div>
-<span class="incontext"><a href="section-ar-reftypes.html#p-655" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Take a moment to notice something important about arrays. In order to fully realize an array containing non-default element values, you must complete <em class="emphasis">three steps</em>.</div>
+<ol class="decimal">
+<li><div class="para">There must be a variable that references the array. Without maintaining a reachable reference, the array is subject to garbage collection.</div></li>
+<li><div class="para">Declaring an array variable does NOT create an array. You must use the <dfn class="terminology">new</dfn> keyword and follow the array declaration syntax with size (or initializing values) to create the actual array. The variable has the ability only to reference an existing array, not create the array. You must explicitly create the array in order for it to exist.</div></li>
+<li><div class="para">A newly created array contains element with default values for its type. A third step of initializing the array is required for it to contain something other than default values.</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="section-ar-creating.html#p-655" class="internal">in-context</a></span>
 </body>
 </html>

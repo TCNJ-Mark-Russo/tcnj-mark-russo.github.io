@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In the next section we will discuss reading and writing files using Java. Related classes have the potential to throw IOExceptions, therefore most of what we do will be placed in a try-block.</div>
+<div class="para">But why did we recieve an ArrayIndexOutOfBoundsException exception and not an ArithmeticException? The answer relates to how a quotient is evaluated, left-to-right. The numerator is evaluted before the denominator, and so the out-of-bounds index in the array is detected first. Had the index be in-bounds, the ArithmeticException would have been thrown instead.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-921" class="internal">in-context</a></span>
 </body>
 </html>

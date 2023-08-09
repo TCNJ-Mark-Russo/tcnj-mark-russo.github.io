@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">When we performed the assignment <code class="code-inline tex2jax_ignore">sb1 = sb2</code> the object itself was not copied. Rather, the value of the address was copied. Nothing happened to the two StringBuilder objects (yet). Both <code class="code-inline tex2jax_ignore">sb1</code> and <code class="code-inline tex2jax_ignore">sb2</code> now hold the address for where to find the second StringBuilder object. After the assignment, we have no variables remaining that store the address of the first StringBuilder and two variables that store the address of the second StringBuilder. In a very real sense, we’ve lost track of the first StringBuilder object.</div>
-<span class="incontext"><a href="section-rt-refvars.html#p-438" class="internal">in-context</a></span>
+<div class="para">String immutability is not a problem when concatenating a few small Strings, but when large Strings are concatenated over and over to build even larger String objects, your program can slow down because larger and larger chuncks of memory are repeatedly allocated and deallocated. A more efficient approach to concatenating large and numerous String objects would be a dedicated class with the job of collecting all Strings and then managing the underlying memory more efficiently. This is what Java’s built-in StringBuilder class does for us.</div>
+<span class="incontext"><a href="section-rt-stringbuilder.html#p-438" class="internal">in-context</a></span>
 </body>
 </html>

@@ -201,7 +201,7 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-getting-started.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-gs-learning.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Learning to Program</span></a></div></li>
-<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computers and Computational Devices</span></a></div></li>
+<li><div class="toc-item"><a href="section-gs-computers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Computational Devices</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-languages.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Programming Languages</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-oop.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Object Oriented Programming</span></a></div></li>
 <li><div class="toc-item"><a href="section-gs-java.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The Java Programming Language</span></a></div></li>
@@ -714,21 +714,21 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-algorithms.html" class="internal"><span class="codenumber">14</span> <span class="title">Algorithms</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-113.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Searching and Sorting Algorithms</span></a></div></li>
-<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Sequential Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Binary Search</span></a></div></li>
-<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Selection Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Insertion Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Merge Sort</span></a></div></li>
-<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-114.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Complexity</span></a></div></li>
+<li><div class="toc-item"><a href="section-115.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sequential Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-116.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Binary Search</span></a></div></li>
+<li><div class="toc-item"><a href="section-117.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Selection Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-118.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Insertion Sort</span></a></div></li>
+<li><div class="toc-item"><a href="section-119.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Merge Sort</span></a></div></li>
 <li><div class="toc-item"><a href="section-120.html" class="internal"><span class="codenumber">14.8</span> <span class="title">Key Concepts</span></a></div></li>
-<li><div class="toc-item"><a href="exercises-9.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="section-al-exercises.html" class="internal"><span class="codenumber">14.9</span> <span class="title">Chapter Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="appendix_ascii_table.html" class="internal"><span class="codenumber">A</span> <span class="title">ASCII Table</span></a></div></li>
-<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Common Shells and Commands</span></a></div></li>
+<li><div class="toc-item"><a href="appendix_shells.html" class="internal"><span class="codenumber">B</span> <span class="title">Shells and Commands</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-dp-classes.html" class="internal"><span class="codenumber">C</span> <span class="title">DoodlePad Classes and Methods</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-shape-events.html" class="internal"><span class="codenumber">D</span> <span class="title">DoodlePad Shape Events</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-pad-events.html" class="internal"><span class="codenumber">E</span> <span class="title">DoodlePad Pad Events</span></a></div></li>
@@ -744,18 +744,18 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-dp-model"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Drawing Model</span>
 </h2>
-<div class="para" id="p-311">In DoodlePad a Pad object encapsulates the graphic window on which zero or more graphics objects may be drawn. In fact, a Pad is a kind of container that holds graphic objects. Graphic objects may be created and added to a Pad. (See diagram). You may create more than one Pad object in a single DoodlePad program, but at least one Pad is required.</div>
+<div class="para" id="p-321">In DoodlePad a Pad object encapsulates the graphic window on which zero or more graphics objects may be drawn. In fact, a Pad is a kind of container that holds graphic objects. Graphic objects may be created and added to a Pad. (See diagram). You may create more than one Pad object in a single DoodlePad program, but at least one Pad is required.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-312">An interesting feature of DoodlePad is that if you do not explicitly create a Pad object, one will be created for you. This is a good example of DoodlePad’s core design philosophy, which is to automatically provide missing components and default parameters as necessary so that your program runs successfully right off the bat <code class="code-inline tex2jax_ignore">:-)</code>. You need to create only an instance of a graphic object; DoodlePad will create a default Pad for you automatically and add your object to the Pad.</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-313"></div></div>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-322">An interesting feature of DoodlePad is that if you do not explicitly create a Pad object, one will be created for you. This is a good example of DoodlePad’s core design philosophy, which is to automatically provide missing components and default parameters as necessary so that your program runs successfully right off the bat <code class="code-inline tex2jax_ignore">:-)</code>. You need to create only an instance of a graphic object; DoodlePad will create a default Pad for you automatically and add your object to the Pad.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-323"></div></div>
 <div class="sbspanel top" style="width:37%;"><figure class="figure figure-like" id="figure-dp-model"><img src="external/images/pad_and_shapes.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span>DoodlePad Drawing Model</figcaption></figure></div>
 </div></div>
-<div class="para" id="p-314">Of course, you may create one or more Pad objects yourself and add graphic objects to them selectively. In fact, this may be necessary in order to achieve the goals of your particular program. You may also create graphic objects that are not automatically placed in a Pad container. This is accomplished using the appropriate graphic object constructor and specifying a <code class="code-inline tex2jax_ignore">null</code> pad. At a later time your graphic objects may be added to or removed from Pads using standard methods.</div>
-<div class="para" id="p-315">Many of the examples that follow will illustrate how to create one or more Pad objects manually, and how to add and/or remove graphic objects from a Pad.</div>
+<div class="para" id="p-324">Of course, you may create one or more Pad objects yourself and add graphic objects to them selectively. In fact, this may be necessary in order to achieve the goals of your particular program. You may also create graphic objects that are not automatically placed in a Pad container. This is accomplished using the appropriate graphic object constructor and specifying a <code class="code-inline tex2jax_ignore">null</code> pad. At a later time your graphic objects may be added to or removed from Pads using standard methods.</div>
+<div class="para" id="p-325">Many of the examples that follow will illustrate how to create one or more Pad objects manually, and how to add and/or remove graphic objects from a Pad.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:37%;"><figure class="figure figure-like" id="figure-dp-coordinates"><img src="external/images/coordinates.png" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span>Drawing Coordinates</figcaption></figure></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-316"></div></div>
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-317">By default, distances on a Pad are measured in pixels. While x-coordinate values increase from left to right, y-coordinate values increase from top to bottom. As a result, the origin (0,0) in located in the upper left corner of the Pad window. The coordinate system of a Pad window and each individual graphic object may be modified using affine transformations. This technique is discussed in more detail later.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-326"></div></div>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-327">By default, distances on a Pad are measured in pixels. While x-coordinate values increase from left to right, y-coordinate values increase from top to bottom. As a result, the origin (0,0) in located in the upper left corner of the Pad window. The coordinate system of a Pad window and each individual graphic object may be modified using affine transformations. This technique is discussed in more detail later.</div></div>
 </div></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-dp-doodlepad.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-dp-shapes.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -12,8 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">
-<a href="" class="xref" data-knowl="./knowl/listing-re-palindrome-iterative.html" title="Listing 13.1.1">Listing 13.1.1</a> is an iterative implementation of a method that tests a String for a palindrome. This program iterates <code class="code-inline tex2jax_ignore">i</code> starting at 0 and continues while <code class="code-inline tex2jax_ignore">i &lt; lets.length()/2</code> (half the String length). Within the loop we calculate the other character index to compare as <code class="code-inline tex2jax_ignore">j = lets.length()-1-i</code>.</div>
-<span class="incontext"><a href="section-re-thinking.html#p-955" class="internal">in-context</a></span>
+<div class="para">There is important option to be aware of when opening a file to write using the FileWriter class. That is, where in the file should writing begin? While it is not uncommon to read an entire file all at once, files are often written incrementally, a bit at a time. For example, you might open a file and write a few lines and then close it. Open it again later in your program and close it again. The implication here is that writing will begin <em class="emphasis">at the end of hte file</em>. If we begin writing from the beginning each time, then the fill will contain only the last data written because the file is being overwritten each time.</div>
+<span class="incontext"><a href="section-ex-writing-files.html#p-955" class="internal">in-context</a></span>
 </body>
 </html>

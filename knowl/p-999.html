@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In the following console session using a laptop computer, you will see that the Fibonacci number computed was 12586269025, the computation took over 51 seconds to complete, and the number of recursive calls was well over 40 billion!</div>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-re-walk.html" title="Listing 13.3.3">Listing 13.3.3</a> is a simple demonstration of <em class="emphasis">indirect recursion</em>. The <code class="code-inline tex2jax_ignore">left(…)</code> method prints "left" and the <code class="code-inline tex2jax_ignore">right(…)</code> method prints "right." Neither the <code class="code-inline tex2jax_ignore">left(…)</code> nor the <code class="code-inline tex2jax_ignore">right(…)</code> methods are recursive by themselves. But, because <code class="code-inline tex2jax_ignore">left(…)</code> invokes <code class="code-inline tex2jax_ignore">right(…)</code> and <code class="code-inline tex2jax_ignore">right(…)</code> invokes <code class="code-inline tex2jax_ignore">left(…)</code>, the program is <em class="emphasis">indirectly recursive</em>. Both methods implement a base case that prints "arrived" and stops the recursion when the step count <code class="code-inline tex2jax_ignore">N</code> reaches 0.</div>
 <span class="incontext"><a href="section-re-characterising.html#p-999" class="internal">in-context</a></span>
 </body>
 </html>

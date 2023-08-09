@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">In general, it is a very good idea to declare your variables in a scope that is as narrow as feasible and still bea ble to solve your problem. You may be tempted to just declare all variables in the outer class scope so that you don’t have to worry about declaring them again. Resist the temptation. This is often the cause for subtle bugs that can be very hard to find.</div>
-<span class="incontext"><a href="section-c1-block-scope.html#p-551" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">To demonstrate this idea, study the <code class="code-inline tex2jax_ignore">onPadClicked(…)</code> method in <a href="" class="xref" data-knowl="./knowl/listing-c1-nested-ifs.html" title="Listing 6.6.3">Listing 6.6.3</a>. Compile and run the program to try it yourself. As the window is clicked, a new Rectangle object is instantiated and filled with a color that depends on both mouse coordinate values. Notice how we use the <code class="code-inline tex2jax_ignore">else</code> in each if-statement to simplify the conditional tests. With nested branches we only actually evaluate two relational statements, <code class="code-inline tex2jax_ignore">x &lt; 300</code> and <code class="code-inline tex2jax_ignore">y &lt; 300</code>. This is much simpler than the four-branch if-statement in the snippet above. Fewer details to get right means fewer ways to get it wrong.</div>
+<span class="incontext"><a href="section-c1-nested-control.html#p-551" class="internal">in-context</a></span>
 </body>
 </html>

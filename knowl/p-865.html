@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">We may implement multiple interfaces in the same class at the same time. The only requirement is that all mandated signatures from all interfaces must be implemented as concrete methods in the class. For our example, let’s say that we want to sort all selectors on a panel according to the selected option number: 1, 2 or 3. We can make use of what we get in the Java Core Library and implement the <code class="code-inline tex2jax_ignore">Comparable&lt;TriOption&gt;</code> interface and use the static sort() method built in to the provided Arrays or the Collections class. To implement multiple intrfaces, follow the <code class="code-inline tex2jax_ignore">implements</code> keyword with a comma-separated list of interfaces, as in <a href="" class="xref" data-knowl="./knowl/listing-if-multiple-interfaces.html" title="Listing 11.2.2">Listing 11.2.2</a>.</div>
-<span class="incontext"><a href="section-if-custom.html#p-865" class="internal">in-context</a></span>
+<div class="para">
+<code class="code-inline tex2jax_ignore">Collections.sort(…)</code> does its job because the only external dependency that the algorithm has is on an implementation of the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method to order two instances of objects stored in an ArrayList. We provide a way to solve that small task, and benefit from highly optimized sorting and searching algorithms that are built-in to the Core Library. This is a powerful opportunity to leverage the work of many others.</div>
+<span class="incontext"><a href="section-if-comparable.html#p-865" class="internal">in-context</a></span>
 </body>
 </html>

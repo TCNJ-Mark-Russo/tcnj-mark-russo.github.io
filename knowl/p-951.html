@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The implementation of <code class="code-inline tex2jax_ignore">log(…)</code> in <a href="" class="xref" data-knowl="./knowl/listing-ex-writefile1.html" title="Listing 12.6.1">Listing 12.6.1</a> includes all the required components: the IOException thrown by a FileWriter is caught, and the FileWriter object is instantiated in a try-with-resources to ensure it is closed.</div>
-<span class="incontext"><a href="section-ex-writing-files.html#p-951" class="internal">in-context</a></span>
+<div class="para">For an object resource to be suitable for use in a try-with-resources, it must implement the <dfn class="terminology">AutoClosable</dfn> interface, given below. This interface includes one signature for the <code class="code-inline tex2jax_ignore">close()</code> method. This is the method invoked by a try-with-resources when its block scope is exited.</div>
+<span class="incontext"><a href="section-try-with-resources.html#p-951" class="internal">in-context</a></span>
 </body>
 </html>

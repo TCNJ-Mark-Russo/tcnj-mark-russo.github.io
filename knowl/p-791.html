@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Other than these changes, the remainder of the LED class remains unchanged. The outpur from this version of LED is identical to <a href="" class="xref" data-knowl="./knowl/figure-cl-led5.html" title="Figure 9.3.5">Figure 9.3.5</a>. Using inheritance we were able to remove several references from the derived class because we can now depend upon inheriting these from the base class. In fact, we gained a huge amount of behavior from the base class, which can be applied to expanding LED by invoking directly, without the need to relay to an encpasulated Oval object.</div>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">When one class inherits another, if a method is invoked or an instance variable accessed on the derived class, but the derived class does not implement it, Java will search for the missing member in the inherited class. This will continue if the base class inherits another class, and so on up the inheritance hierarchy. Inheritance is a way to share a single implementation of certain methods and instance variables in one class with many other classes.</div>
 <span class="incontext"><a href="section-in-basics.html#p-791" class="internal">in-context</a></span>
 </body>
 </html>
