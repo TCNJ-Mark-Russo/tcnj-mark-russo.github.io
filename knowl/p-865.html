@@ -11,9 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<code class="code-inline tex2jax_ignore">Collections.sort(…)</code> does its job because the only external dependency that the algorithm has is on an implementation of the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method to order two instances of objects stored in an ArrayList. We provide a way to solve that small task, and benefit from highly optimized sorting and searching algorithms that are built-in to the Core Library. This is a powerful opportunity to leverage the work of many others.</div>
-<span class="incontext"><a href="section-if-comparable.html#p-865" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">When testing Strings having an even number of chars, pairs of character indexes to compare move inward toward each other and meet at adjacent points. For example when <code class="code-inline tex2jax_ignore">lets.length() == 6</code>, the index of the first char is 0 and the last is 5. In other words, when <code class="code-inline tex2jax_ignore">i == 0</code>, <code class="code-inline tex2jax_ignore">j = 6-1-0 = 5</code>; we are comparing the first and last chars of the String. When <code class="code-inline tex2jax_ignore">i == 1</code>, <code class="code-inline tex2jax_ignore">j = 5-1-1=4</code>, and when <code class="code-inline tex2jax_ignore">i == 2</code>, <code class="code-inline tex2jax_ignore">j == 3</code>, and our iteration is complete.</div>
+<span class="incontext"><a href="section-re-thinking.html#p-865" class="internal">in-context</a></span>
 </body>
 </html>

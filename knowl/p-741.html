@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">With nested scopes we can define a variable in the scope of a method or constructor and then another having the same name in an outer object or class scope. This doesn’t cause a problem until we want to access one of the two variables by name from the inner scope. An ambiguity arises. Java cannot tell if you intended to reference the variable declared within the inner method scope or the outer object or class scope. To solve this problem, Java always chooses a variable by searching for the variable declaration in the current scope, and if not found, it proceeds to outer scopes progressively until the first match is found.</div>
-<span class="incontext"><a href="section-cl-shadowing.html#p-741" class="internal">in-context</a></span>
+<div class="para">We can demonstrate this quickly by adding one more line to <a href="" class="xref" data-knowl="./knowl/listing-in-instanceof1.html" title="Listing 9.4.4">Listing 9.4.4</a>, that is, to test if <code class="code-inline tex2jax_ignore">guilty</code> is also an <em class="emphasis">instanceof</em> Object. Modifying <a href="" class="xref" data-knowl="./knowl/listing-in-base-dynamic-binding.html" title="Listing 9.4.3">Listing 9.4.3</a> with the new <code class="code-inline tex2jax_ignore">main()</code> method in <a href="" class="xref" data-knowl="./knowl/listing-in-instanceof2.html" title="Listing 9.5.1">Listing 9.5.1</a> and running, produces the output that follows the listing. An output of three true’s tells us that <code class="code-inline tex2jax_ignore">guilty</code> does derive Object, event though Base did not name Object in an extends. In fact <em class="emphasis">all</em> Java classes extend Object. Java handles this automatically.</div>
+<span class="incontext"><a href="section-in-object-class.html#p-741" class="internal">in-context</a></span>
 </body>
 </html>

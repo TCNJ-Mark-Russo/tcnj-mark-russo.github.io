@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">One important ramification of <dfn class="terminology">subtype polymorphism</dfn> is that <em class="emphasis">a variable with a type of a base class, may reference objects with the type of one of its derived classes</em>. After all, ifaa derived class is also a <em class="emphasis">kind</em> of base class, then such an assignment should be legal.</div>
-<span class="incontext"><a href="section-in-polymorph.html#p-820" class="internal">in-context</a></span>
+<div class="para">But why did we recieve an ArrayIndexOutOfBoundsException exception and not an ArithmeticException? The answer relates to how a quotient is evaluated, left-to-right. The numerator is evaluted before the denominator, and so the out-of-bounds index in the array is detected first. Had the index be in-bounds, the ArithmeticException would have been thrown instead.</div>
+<span class="incontext"><a href="section-ex-catching.html#p-820" class="internal">in-context</a></span>
 </body>
 </html>

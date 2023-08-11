@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Another way that we benefit from encapsulation is unique to object oriented programming. That is to encapsulate both state (data) and behavior (methods) in a larger structure called an <dfn class="terminology">object</dfn>. The way that we create an <dfn class="terminology">instance</dfn> of an object is by using the code we write when declaring a <dfn class="terminology">class</dfn>. In fact, an <em class="emphasis">object</em> is often referred to as an <em class="emphasis">instance of a class</em>, and creating a new object as <em class="emphasis">instanciating a class</em>. We won’t be writing new classes to be instantiated until a bit later. Fortunately, The <a href="" class="xref" data-knowl="./knowl/glossary-jdk.html" title="Term: JDK">JDK</a> ships with a huge number of prewritten and debugged classes that we can use directly. The first class we will investigate is <code class="code-inline tex2jax_ignore">String</code>.</div>
-<span class="incontext"><a href="section-jp-string.html#p-274" class="internal">in-context</a></span>
+<div class="para">When you perform arithmetic operations like <code class="code-inline tex2jax_ignore">+</code> on byte or short integers, you’ll notice that the result is always of type int, and not byte or short. The reason for this is that Java does not define arithmetic operators for byte and short integer types. Instead, it promotes both operands to an int before performing the operation. This is the reason the result is always an int. If you really want the result to be a byte or a short integer expression, you’ll have to explicitly convert the result back to the desired type. This is the subject of the next section.</div>
+<span class="incontext"><a href="section-pe-conversion.html#p-274" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">What happens if two dissimilar types are passed as operands to an operator? For example, what happens if we add an <code class="code-inline tex2jax_ignore">int</code> and a <code class="code-inline tex2jax_ignore">double</code>? And what happens if we add a <code class="code-inline tex2jax_ignore">String</code> and a <code class="code-inline tex2jax_ignore">double</code>, or subtract a <code class="code-inline tex2jax_ignore">double</code> from a <code class="code-inline tex2jax_ignore">String</code>? Let’s find out.</div>
-<span class="incontext"><a href="section-pe-conversion.html#p-239" class="internal">in-context</a></span>
+<div class="para">Logical operator precedence is lower than relational operators. That means that relational subexpressions involving inequalities used as operands for a logical operator, will be evaluated before the logical operator is evaluated. This is a good thing because relational expressions evaluate exclusively to <code class="code-inline tex2jax_ignore">boolean</code>s and logical expression operands are exclusively <code class="code-inline tex2jax_ignore">boolean</code>, so the two work together nicely.</div>
+<span class="incontext"><a href="section-pe-logical.html#p-239" class="internal">in-context</a></span>
 </body>
 </html>

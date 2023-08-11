@@ -11,8 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Logical operator precedence is lower than relational operators. That means that relational subexpressions involving inequalities used as operands for a logical operator, will be evaluated before the logical operator is evaluated. This is a good thing because relational expressions evaluate to exclusively to <code class="code-inline tex2jax_ignore">boolean</code>s and logical expression operands are exclusively <code class="code-inline tex2jax_ignore">boolean</code>, so the two fit together nicely.</div>
-<span class="incontext"><a href="section-pe-logical.html#p-211" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">jshell&gt; int x = 0;
+x ==&gt; 0
+|  created variable x : int
+
+jshell&gt; ++x;
+$2 ==&gt; 1
+|  created scratch variable $2 : int
+</pre></div></div>
+<span class="incontext"><a href="section-pe-assignment.html#p-211" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">But modifying a class with <dfn class="terminology">abstract</dfn> is not enough. If a class is <em class="emphasis">abstract</em> then it must also contain at least one method that is modified with <em class="emphasis">abstract</em> as well. A method with the additional <em class="emphasis">abstract</em> modifier is required to have no implementation. Instead, an abstract method is composed of a method signature only, and this signals that all derived classes must provide a concrete implementation of the method. Once again, the Java compiler enforces this design constraint. Classes that extend an abstract base class must (eventually) provide a concrete implementation of all abstract methods.</div>
-<span class="incontext"><a href="section-in-abstract-class.html#p-850" class="internal">in-context</a></span>
+<div class="para">For an object resource to be suitable for use in a try-with-resources, it must implement the <dfn class="terminology">AutoClosable</dfn> interface, given below. This interface includes one signature for the <code class="code-inline tex2jax_ignore">close()</code> method. This is the method invoked by a try-with-resources when its block scope is exited.</div>
+<span class="incontext"><a href="section-try-with-resources.html#p-850" class="internal">in-context</a></span>
 </body>
 </html>

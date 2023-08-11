@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">To demonstrate this idea, study the <code class="code-inline tex2jax_ignore">onPadClicked(…)</code> method in <a href="" class="xref" data-knowl="./knowl/listing-c1-nested-ifs.html" title="Listing 6.6.3">Listing 6.6.3</a>. Compile and run the program to try it yourself. As the window is clicked, a new Rectangle object is instantiated and filled with a color that depends on both mouse coordinate values. Notice how we use the <code class="code-inline tex2jax_ignore">else</code> in each if-statement to simplify the conditional tests. With nested branches we only actually evaluate two relational statements, <code class="code-inline tex2jax_ignore">x &lt; 300</code> and <code class="code-inline tex2jax_ignore">y &lt; 300</code>. This is much simpler than the four-branch if-statement in the snippet above. Fewer details to get right means fewer ways to get it wrong.</div>
-<span class="incontext"><a href="section-c1-nested-control.html#p-551" class="internal">in-context</a></span>
+<div class="para">Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.</div>
+<span class="incontext"><a href="section-ar-creating.html#p-551" class="internal">in-context</a></span>
 </body>
 </html>

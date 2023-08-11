@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">As an example, rather than defaulting the LED on color to RED and then being required to change it using the <code class="code-inline tex2jax_ignore">setColor(…)</code> method, let’s overload the constructor as two implementations. The the more general implementation takes the LED on color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value <code class="code-inline tex2jax_ignore">LEDColor.RED</code> as the third parameter, making it the default. Note that a constructor overload is invoked using <code class="code-inline tex2jax_ignore">this</code> instead of the class name, and no <code class="code-inline tex2jax_ignore">new</code> keyword.</div>
-<span class="incontext"><a href="section-cl-methods.html#p-739" class="internal">in-context</a></span>
+<div class="para">Public members are accessible from anywhere in a program. Explicit scoping may be required, but access is granted. Protected members prohibit access from outside the implementing class other than derived classes, which can access protected members. Private member access is limited strictly to the implementing class and its objects. A fourth type of visibility occurs when no visibility modifier is specified. This type of visibility is called <dfn class="terminology">package-private</dfn> because members with no visibility modifier are accessible from within the implementing class as well as from within its package, but not from no other scope.</div>
+<span class="incontext"><a href="section-in-polymorph.html#p-739" class="internal">in-context</a></span>
 </body>
 </html>

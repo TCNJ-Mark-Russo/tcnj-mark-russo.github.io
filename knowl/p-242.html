@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">How do we know when and which operand will be <dfn class="terminology">promoted</dfn>? The answer is that <em class="emphasis">automatic type conversions</em> generally take place for <dfn class="terminology">widening primitive conversions</dfn>. A widening primtiive conversion occurs when the initial data type requires less memory than the converted type. In the case of adding an <code class="code-inline tex2jax_ignore">int</code> and a <code class="code-inline tex2jax_ignore">double</code>, we know from <a href="" class="xref" data-knowl="./knowl/table-pe-int-info.html" title="Table 2.3.1: Integer types, range, and memory requirements.">Table 2.3.1</a> and <a href="" class="xref" data-knowl="./knowl/table-pe-float-info.html" title="Table 2.5.1: Floating-point types, range, and memory requirements.">Table 2.5.1</a> that a <code class="code-inline tex2jax_ignore">double</code> consumes 8 bytes of memory while an <code class="code-inline tex2jax_ignore">int</code> consumes only 4 bytes of memory. Consequently, automatic promotion will occur from an <code class="code-inline tex2jax_ignore">int</code> to a <code class="code-inline tex2jax_ignore">double</code>, but not the other way around.</div>
-<span class="incontext"><a href="section-pe-conversion.html#p-242" class="internal">in-context</a></span>
+<div class="para">As an example, if <code class="code-inline tex2jax_ignore">day</code> is a variable holding the number of the day in any given month following is a logical expression that tells us to pay the rent during the first week of the month: <code class="code-inline tex2jax_ignore">day &gt;= 1 &amp;&amp; day &lt;=7</code>.</div>
+<span class="incontext"><a href="section-pe-logical.html#p-242" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Image2.java
+import java.util.Random;
+import doodlepad.*;
+
+public class Image2 {
+    public static void main(String[] args) {
+        double x1, x2, y1, y2, w;
+        int r, g, b;
+
+        // Create a Pad object, an Image object for the Pad,
+        // and a Random object for generating random numbers.
+        Pad pad    = new Pad(400, 400);
+        Image im   = new Image(0, 0, 400, 400);
+        Random rnd = new Random();
+        
+        for (int i=0; i&lt;100; i++) {
+            // Random numbers
+            y1 = 400*rnd.nextDouble();
+            x1 = 200*rnd.nextDouble();
+            x2 = 200+200*rnd.nextDouble();
+            w  = 10*rnd.nextDouble();
+            r  = rnd.nextInt(256);
+            g  = rnd.nextInt(256);
+            b  = rnd.nextInt(256);
+            
+            // Draw line on Image
+            im.setStrokeColor(r,g,b);
+            im.setStrokeWidth(w);
+            im.drawLine(x1,y1,x2,y1);
+            
+            // More random numbers
+            x1 = 400*rnd.nextDouble();
+            y1 = 200*rnd.nextDouble();
+            y2 = 200+200*rnd.nextDouble();
+            w  = 10*rnd.nextDouble();
+            r  = rnd.nextInt(256);
+            g  = rnd.nextInt(256);
+            b  = rnd.nextInt(256);
+            
+            // Draw line on Image
+            im.setStrokeColor(r,g,b);
+            im.setStrokeWidth(w);
+            im.drawLine(x1,y1,x1,y2);
+        }
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.8.7<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Image2.java</code></figcaption></figure><span class="incontext"><a href="section-dp-images.html#listing-108" class="internal">in-context</a></span>
+</body>
+</html>

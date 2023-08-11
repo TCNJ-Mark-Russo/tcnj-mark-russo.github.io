@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="answer solution-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">jshell&gt; boolean A, B;
+A ==&gt; false
+|  created variable A : boolean
+B ==&gt; false
+|  created variable B : boolean
+
+jshell&gt; !(A || B) == (!A &amp;&amp; !B)
+$3 ==&gt; true
+|  created scratch variable $3 : boolean
+
+jshell&gt; A = true
+A ==&gt; true
+|  assigned to A : boolean
+
+jshell&gt; !(A || B) == (!A &amp;&amp; !B)
+$5 ==&gt; true
+|  created scratch variable $5 : boolean
+
+jshell&gt; B = true
+B ==&gt; true
+|  assigned to B : boolean
+
+jshell&gt; !(A || B) == (!A &amp;&amp; !B)
+$7 ==&gt; true
+|  created scratch variable $7 : boolean
+
+jshell&gt; A = false
+A ==&gt; false
+|  assigned to A : boolean
+
+jshell&gt; !(A || B) == (!A &amp;&amp; !B)
+$9 ==&gt; true
+|  created scratch variable $9 : boolean
+
+jshell&gt; A = B = false;
+A ==&gt; false
+|  assigned to A : boolean
+
+jshell&gt; !(A &amp;&amp; B) == !A || !B;
+$11 ==&gt; true
+|  created scratch variable $11 : boolean
+
+jshell&gt; A = true;
+A ==&gt; true
+|  assigned to A : boolean
+
+jshell&gt; !(A &amp;&amp; B) == !A || !B;
+$13 ==&gt; true
+|  created scratch variable $13 : boolean
+
+jshell&gt; B = true;
+B ==&gt; true
+|  assigned to B : boolean
+
+jshell&gt; !(A &amp;&amp; B) == !A || !B;
+$15 ==&gt; true
+|  created scratch variable $15 : boolean
+
+jshell&gt; A = false;
+A ==&gt; false
+|  assigned to A : boolean
+
+jshell&gt; !(A &amp;&amp; B) == !A || !B;
+$17 ==&gt; true
+|  created scratch variable $17 : boolean
+
+jshell&gt;
+</pre></div></div></body>
+</html>

@@ -10,5 +10,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">rnd.nextGaussian()*2.0 + 5.0</code></div></body>
+<body class="ignore-math"><div class="answer solution-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">jshell&gt; long _supercalifragilisticexpialidocious = 9223372036854775807L;
+_supercalifragilisticexpialidocious ==&gt; 9223372036854775807
+|  created variable _supercalifragilisticexpialidocious : long
+jshell&gt; // It works!
+
+jshell&gt; _supercalifragilisticexpialidocious = 9223372036854775808L;
+|  Error:
+|  integer number too large
+|  _supercalifragilisticexpialidocious = 9223372036854775808L;
+jshell&gt; // The number exceeds the size of a long
+
+jshell&gt; _supercalifragilisticexpialidocious = 9223372036854775807;
+|  Error:
+|  integer number too large
+|  _supercalifragilisticexpialidocious = 9223372036854775807;
+|                                        ^
+jshell&gt; // The literal initializer is too big for an int literal
+</pre></div></div></body>
 </html>

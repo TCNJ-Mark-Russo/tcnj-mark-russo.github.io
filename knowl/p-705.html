@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The left column of <a href="" class="xref" data-knowl="./knowl/table-cl-static-v-non.html" title="Table 9.1.1: Examples of static and object method invocations">Table 9.1.1</a> lists several static method examples and the right column several object method examples. In previous chapters we have used all of these examples. Note that all examples in the left column require a class name to specify the scope in which the method resides. That is, only class names appear to the left of the dot-operator. By contrast, methods in the right column are scoped by object names. In other words, an object must be instantiated before any of these methods can be invoked. Stated differently, static methods are scoped by class; non-static methods are scoped by object.</div>
-<span class="incontext"><a href="section-cl-class-v-instance.html#p-705" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">In another scenario, a base class method may constitute <em class="emphasis">part</em> of what a derived class needs to be performed, but not all. In this case the derived class can override the base class method, and <em class="emphasis">augment</em> its behavior by invoking the base class method and adding to it. This could be as simple as logging the fact that the method was invoking overriding it with a derviced class method that invokes the base class method and adds a print statement.</div>
+<span class="incontext"><a href="section-in-overriding.html#p-705" class="internal">in-context</a></span>
 </body>
 </html>

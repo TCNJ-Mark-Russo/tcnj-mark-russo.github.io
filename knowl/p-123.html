@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">As we’ve seen, declaring a variable is accomplished by entering a type followed by the name of the variable we wish to create and a final semicolon. For example, let’s say we want to create a variable named <code class="code-inline tex2jax_ignore">n</code> of type <code class="code-inline tex2jax_ignore">long</code>. We would enter <code class="code-inline tex2jax_ignore">long n;</code>. Java assigns a default value of 0 to all new integer variables that have not been initialized.</div>
+<div class="para">The error tells us that the number is <em class="emphasis">too large</em>. More specifically, the number is too large to be stored in the memory allotted by the default type that JShell uses to store integers values, <code class="code-inline tex2jax_ignore">int</code>. To store 2147483648 in memory, we must choose a different Java integer type, one capable of holding larger numbers by virtue of being allocated more memory.</div>
 <span class="incontext"><a href="section-pe-integers.html#p-123" class="internal">in-context</a></span>
 </body>
 </html>

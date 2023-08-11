@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.9.1<span class="period">.</span></span><span class="space"> </span>Timer Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Method Signature</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setTickRate-double-" target="_blank">public final void setTickRate(double tps)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-125-hidden.html" title="Footnote 14.9.1"><sup> 1 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Set the rate at which the Pad’s internal timer fires. The single method argument is the tick rate, provided in the units ticks-per-second. The default tick rate value is 60.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#getTickRate--" target="_blank">public final double getTickRate()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-126-hidden.html" title="Footnote 14.9.2"><sup> 2 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Return the current tick rate value in ticks-per-second that has been set for a Pad object’s internal timer.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setTickHandler-doodlepad.Pad.PadTimerEventHandler-" target="_blank">public void setTickHandler(Pad.PadTimerEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-127-hidden.html" title="Footnote 14.9.3"><sup> 3 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Provide a method reference for a method to be executed when a Pad timer ticks, the tick event handler. The method signature for the handler must match the signature void handler(Pad pad, long when).</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#startTimer--" target="_blank">public void startTimer()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-128-hidden.html" title="Footnote 14.9.4"><sup> 4 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Start a Pad’s timer ticking. The timer will invoke the associated tick event handler at its preset tick rate.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#stopTimer--" target="_blank">public void stopTimer()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-129-hidden.html" title="Footnote 14.9.5"><sup> 5 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Stop a Pad’s timer ticking.</td>
+</tr>
+</table></div></figure><span class="incontext"><a href="section-dp-timers.html#table-49" class="internal">in-context</a></span>
+</body>
+</html>

@@ -11,8 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">When we attempt to compile this program, the compiler is unable to find the our loop counter variable <code class="code-inline tex2jax_ignore">i</code> because it is declared within the parentheses of the for-statement, and therefore is considered to exist in that statement’s block scope. If you do have a need to access <code class="code-inline tex2jax_ignore">i</code> after the for-statement, you can circumvent this problem by declaring <code class="code-inline tex2jax_ignore">i</code> before the for-statement, and use the first expression in the parentheses for initializing <code class="code-inline tex2jax_ignore">i</code> only, without the declaration.</div>
-<span class="incontext"><a href="section-c2-for-statements.html#p-577" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-arr-nestedarrays1.html" title="Listing 7.4.2">Listing 7.4.2</a> demonstrates these ideas. This program has two method defined, <code class="code-inline tex2jax_ignore">main(…)</code> and <code class="code-inline tex2jax_ignore">print2D(…)</code>. Both methods use the nested iteration approach to access array elements. In <code class="code-inline tex2jax_ignore">main(…)</code> we access each element and initialize values to random doubles. In <code class="code-inline tex2jax_ignore">print2D(…)</code> we access each element for printing. Pay special attention to the inner loop continuation test, <code class="code-inline tex2jax_ignore">j&lt;arr2D[i].length</code>. We are querying each inner array for its length, each array at <code class="code-inline tex2jax_ignore">arr2D[i]</code>. In the next section we’ll learn why we want to ask each inner array for its length, and not just the first, or use a constant.</div>
+<span class="incontext"><a href="section-ar-multi.html#p-577" class="internal">in-context</a></span>
 </body>
 </html>

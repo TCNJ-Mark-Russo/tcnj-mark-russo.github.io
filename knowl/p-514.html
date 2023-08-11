@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">(Example of continue)</div>
-<span class="incontext"><a href="section-c1-break-continue.html#p-514" class="internal">in-context</a></span>
+<div class="para">If we create a third String object with the same character data, only this time using the String constructor instead of a literal, <code class="code-inline tex2jax_ignore">String feeling3 = new String("Joy");</code> and then compare this new String variable to either the String variables <code class="code-inline tex2jax_ignore">feeling1</code> or <code class="code-inline tex2jax_ignore">feeling2</code> using the <code class="code-inline tex2jax_ignore">==</code> operator, we will find that they are not the exact same String object, even though the character data in the objects refered to by <code class="code-inline tex2jax_ignore">feeling3</code> and <code class="code-inline tex2jax_ignore">feeling2</code> are identical. These two objects are not identical because String literals are interned in the String pool, but Strings objects created with the String constructor are stored elsewhere in memory, and so they are not identical. See the following JShell session for a demonstration.</div>
+<span class="incontext"><a href="section-c2-comparisons.html#p-514" class="internal">in-context</a></span>
 </body>
 </html>

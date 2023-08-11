@@ -12,25 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">
-<a href="" class="xref" data-knowl="./knowl/listing-re-fractal-tree.html" title="Listing 13.4.1">Listing 13.4.1</a> draws a Fractal Tree, with the recursive method <code class="code-inline tex2jax_ignore">branch(…)</code>. The <code class="code-inline tex2jax_ignore">branch(…)</code> method takes six parameters:</div>
-<ol class="decimal">
-<li><div class="para">
-<code class="code-inline tex2jax_ignore">x1</code>: Branch starting x-location</div></li>
-<li><div class="para">
-<code class="code-inline tex2jax_ignore">y1</code>: Branch starting y-location</div></li>
-<li><div class="para">
-<code class="code-inline tex2jax_ignore">angle</code>: Angle with which to rotate branch [degrees]</div></li>
-<li><div class="para">
-<code class="code-inline tex2jax_ignore">length</code>: Length of branch</div></li>
-<li><div class="para">
-<code class="code-inline tex2jax_ignore">dangle</code>: Amount to rotate next branch (positive and negative) [degrees].</div></li>
-<li><div class="para">
-<code class="code-inline tex2jax_ignore">dlength</code>: Amount to shorten next branch [pixels]</div></li>
-</ol>
-<div class="para">The <code class="code-inline tex2jax_ignore">branch(…)</code> method calls itself twice, with new angles and a shorter length. This method is an example of <dfn class="terminology">multiple recursion</dfn> due to the two recursive invocations. The base case stops recursion when branch length is reduced to a value that is less than 10. <a href="" class="xref" data-knowl="./knowl/figure-re-fractal-tree.html" title="Figure 13.4.2">Figure 13.4.2</a> shows output from <a href="" class="xref" data-knowl="./knowl/listing-re-fractal-tree.html" title="Listing 13.4.1">Listing 13.4.1</a>.</div>
-</div>
-<span class="incontext"><a href="section-re-graphics.html#p-1017" class="internal">in-context</a></span>
+<div class="para">The following listing for the PathDemo2 class is identical to PathDemo1 only the second side is changed from from a line to a quadratic curve segment. Notice that in line 4 the quadTo(…) method takes four numeric parameters. The endpoint of (50.0, 150.0) is preceded with a control point of (100.0, 200.0), which defines how the side will curve.</div>
+<span class="incontext"><a href="section-dp-paths.html#p-1017" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">To test our new methods, in addition to replacing configuration statements in the constructor with <code class="code-inline tex2jax_ignore">turnOff()</code>, we invoke <code class="code-inline tex2jax_ignore">turnOn()</code> in <code class="code-inline tex2jax_ignore">main(…)</code> on both LED objects after instantiation. We also test the state of the first LED object by invoking its <code class="code-inline tex2jax_ignore">isOn()</code> method and printing the result. See the result in <a href="" class="xref" data-knowl="./knowl/figure-cl-led4.html" title="Figure 9.3.3">Figure 9.3.3</a>.</div>
-<span class="incontext"><a href="section-cl-methods.html#p-724" class="internal">in-context</a></span>
+<div class="para">Fortunately, we can avoid this problem by forcing the type of <code class="code-inline tex2jax_ignore">shp</code> back to ToggleButton before attempting to invoke its <code class="code-inline tex2jax_ignore">toggle()</code> method. This change of type is accomplished using the cast operator <code class="code-inline tex2jax_ignore">(…)</code>, in a manner identical to the way we performed widening conversions with primitive types. Naturally, casting a type from a base class to one of its derived classes is legal. See <a href="" class="xref" data-knowl="./knowl/listing-in-test-togglebutton2.html" title="Listing 9.4.2">Listing 9.4.2</a> for the corrected example that compiles and runs without error.</div>
+<span class="incontext"><a href="section-in-polymorph.html#p-724" class="internal">in-context</a></span>
 </body>
 </html>

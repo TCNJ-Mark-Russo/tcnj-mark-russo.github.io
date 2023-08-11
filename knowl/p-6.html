@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">DoodlePad was designed conservatively. All user-initiated graphics commands are first checked to see if they are being invoked on a thread different than the main AWT event-dispatching thread. If so, it uses <code class="code-inline tex2jax_ignore">SwingUtils.invokeLater()</code> to invoke the user-initiated command to ensure that the command is added to the AWT event-dispatching thread. This makes it possible for student programs to interact with Swing programs seamlessly. It also makes the interactive nature of invoking graphics programs from JShell work without a hitch. While crossing thread boundaries does incur a performance penalty, it shelters introductory students from the complexities of cross-thread programming and achieves one of the libraries main goals, which is for a program to "just work."</div>
+<div class="para">Note that JShell and DoodlePad may be used together. For example, the following interactive JShell session containing three lines is all that is necessary for the student to create their first Java AWT/Swing Program with an interactive Oval displayed. This gives students the ability to get running very quickly, on the first day. It builds confidence and dispels the real fear felt by so many introductory programming students entering a Java class for the first time.</div>
 <span class="incontext"><a href="preface-1.html#p-6" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Using the <code class="code-inline tex2jax_ignore">doodlepad</code> package name helps to disambiguate classes defined in that package from classes having the same name in other packages. For example, the DoodlePad <code class="code-inline tex2jax_ignore">Rectangle</code> class has the same name as Java’s <code class="code-inline tex2jax_ignore">Rectangle</code> defined in its AWT package. These classes don’t conflict because their <em class="emphasis">fully-qualified</em> names are different. Namely, the DoodlePad class has a fully-qualified name of <code class="code-inline tex2jax_ignore">doodlepad.Rectangle</code> and the Java AWT class has the fully-qualified name <code class="code-inline tex2jax_ignore">java.awt.Rectangle</code>.</div>
-<span class="incontext"><a href="section-cl-packages.html#p-770" class="internal">in-context</a></span>
+<div class="para">Notice that we no longer need a collection or array to hold the Shape objects. The Pad object holds them automatically. We create a mixture of Oval and Rectangle objects just to demonstrate that we can iterate over both using a single loop. The <code class="code-inline tex2jax_ignore">recolor(…)</code> method performs the iteration using a single for-each statement which iterates using the Pad object as a iterator, specifically <code class="code-inline tex2jax_ignore">for (Shape s: pad) {…</code>. See <a href="" class="xref" data-knowl="./knowl/figure-if-randomshapes.html" title="Figure 10.1.4">Figure 10.1.4</a> for the result.</div>
+<span class="incontext"><a href="section-if-comparable.html#p-770" class="internal">in-context</a></span>
 </body>
 </html>

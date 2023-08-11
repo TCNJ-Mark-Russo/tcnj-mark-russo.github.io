@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">Abstract classes and methods are very useful. Centralizing shared behavior and requiring derived classes to implement dependent custom behavior enforces design constraints and ensures compatibility. What if we take this idea to an extreme and mark all methodsas  abstract? We would be left with an abstract base class having only abstract method signatures, no implementations, all of which must be implemented by derived classes. This idea turns out to be a very useful concept on its own, called an <dfn class="terminology">interface</dfn>.</div>
-<span class="incontext"><a href="chapter-interfaces.html#p-854" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">There is important option to be aware of when opening a file to write using the FileWriter class. That is, where in the file should writing begin? While it is not uncommon to read an entire file all at once, files are often written incrementally, a bit at a time. For example, you might open a file and write a few lines and then close it. Open it again later in your program and close it again. The implication here is that writing will begin <em class="emphasis">at the end of hte file</em>. If we begin writing from the beginning each time, then the fill will contain only the last data written because the file is being overwritten each time.</div>
+<span class="incontext"><a href="section-ex-writing-files.html#p-854" class="internal">in-context</a></span>
 </body>
 </html>

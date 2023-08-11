@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">String immutability is not a problem when concatenating a few small Strings, but when large Strings are concatenated over and over to build even larger String objects, your program can slow down because larger and larger chuncks of memory are repeatedly allocated and deallocated. A more efficient approach to concatenating large and numerous String objects would be a dedicated class with the job of collecting all Strings and then managing the underlying memory more efficiently. This is what Java’s built-in StringBuilder class does for us.</div>
-<span class="incontext"><a href="section-rt-stringbuilder.html#p-438" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">In the following code snippet, we declare and fill and ArrayList&lt;Integer&gt; with 100 randomly generated integers. Once filled, we loop over the ArrayList&lt;Integer&gt; again, get each <code class="code-inline tex2jax_ignore">int</code> at each successive index and print it. In both cases (adding and getting) we do not box or unbox the primitive type <code class="code-inline tex2jax_ignore">int</code>. Java automatically boxes each <code class="code-inline tex2jax_ignore">int</code> in an <code class="code-inline tex2jax_ignore">Integer</code> before adding to the ArrayList, and unboxes the <code class="code-inline tex2jax_ignore">Integer</code> to an <code class="code-inline tex2jax_ignore">int</code> when getting and assigning to the primtiive variable.</div>
+<span class="incontext"><a href="section-c1-collection-classes.html#p-438" class="internal">in-context</a></span>
 </body>
 </html>

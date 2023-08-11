@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Because we can define many types of objects (e.g. Book vs. Borrower), and there may be many instances of each kind, we must have a unique template for creating each type. In object oriented programming this template is called a <em class="emphasis">class</em>. Classes serve as <em class="emphasis">blueprints</em> for creating new objects. They define the data that each object instance can hold (e.g. title and author) as well as what it can do (e.g. add or remove a Book). We will learn how to do this ourselves in the chapter <a href="chapter-classes.html" class="internal" title="Chapter 9: Custom Classes">Custom Classes</a>.</div>
+<div class="para">Another example of an object might be the relationship between a Book object and a Borrower object. A Book may have had many Borrowers and a Borrower may be borrowing many Books. Rather than choose to encapsulate a list of Books in a Borrower or a list of Borrows in a Book, you might want an object that captures that relationship between a book and a borrower. We might encapsulate the properties of this relationship in a Circulate object. A Circulate object might have one reference to a Book, one to a Borrower, a date that the Book was lent, a date that the Book is due to be returned to the Library, and whether or not it is overdue.</div>
 <span class="incontext"><a href="section-gs-oop.html#p-45" class="internal">in-context</a></span>
 </body>
 </html>

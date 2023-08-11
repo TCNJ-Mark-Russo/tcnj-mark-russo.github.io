@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="answer solution-like">
+<div class="para">Divide by 13 using integer division to compute the number of baker’s dozens, and then use modulus to compute the remaining single bagels. Multply each result by their respoective prices and add both for the total.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">jshell&gt; int nbagels = 100;
+nbagels ==&gt; 100
+|  created variable nbagels : int
+
+jshell&gt; int bdozens = nbagels / 13;
+bdozens ==&gt; 7
+|  created variable bdozens : int
+
+jshell&gt; int nsingle = nbagels % 13;
+nsingle ==&gt; 9
+|  created variable nsingle : int
+
+jshell&gt; "Charge for " + bdozens + " baker's dozens and " + nsingle + " single bagels"
+$4 ==&gt; "Charge for 7 baker's dozens and 9 single bagels"
+|  created scratch variable $4 : String
+</pre></div>
+</div></body>
+</html>

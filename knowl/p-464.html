@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The <code class="code-inline tex2jax_ignore">Counter</code> class implements <code class="code-inline tex2jax_ignore">enter()</code>, <code class="code-inline tex2jax_ignore">exit()</code>, and <code class="code-inline tex2jax_ignore">reset()</code> methods, which are used to manage the value of the <code class="code-inline tex2jax_ignore">total</code> variable. When we access the <code class="code-inline tex2jax_ignore">total</code> variable we precede it the with the name of the class, for example <code class="code-inline tex2jax_ignore">Counter.total</code>. This ensures that we are accessing the class scope and the variables defined within it. We also invoke the class methods with a similar explicit setting of class scope, namely, <code class="code-inline tex2jax_ignore">Counter.enter()</code> and <code class="code-inline tex2jax_ignore">Counter.exit()</code>. While you will find that this explicit scoping is not necessary, it helps to communicate that we intend to access the class scope.</div>
-<span class="incontext"><a href="section-rt-scope.html#p-464" class="internal">in-context</a></span>
+<div class="para">Always declare your variables in the most narrow scope feasible, while still allowing your program to solve your problem. This practice minimizes the chances that a single variable declared in an outer scope but used in multiple inner scopes for different purposes are inadvertently modified unexpectedly. This avoid bugs that are hard to fine.</div>
+<span class="incontext"><a href="section-c1-block-scope.html#p-464" class="internal">in-context</a></span>
 </body>
 </html>

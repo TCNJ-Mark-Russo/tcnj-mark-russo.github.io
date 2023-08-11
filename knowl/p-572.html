@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">With the extra space available, we modified the logic a bit. Rather than instantiate new Rectangle when <code class="code-inline tex2jax_ignore">x != y</code>, we are now performing the complementary action. When <code class="code-inline tex2jax_ignore">x == y</code> we invoke <code class="code-inline tex2jax_ignore">continue</code> which halts the iteration and returns back to the for-statement to check for another iteration. Note that it would have been tricky to use the same approach with while-statements. In the while-statement our loop counter was incremented at the end of the code block. If we executed a <code class="code-inline tex2jax_ignore">continue</code> before the end of the code block the loop counter would have never been updated. This would cause the program to enter an infinite loop, and never terminate. With a for-statement, the increment is always executed, whether or not the code block completes. This make the <code class="code-inline tex2jax_ignore">continue</code> statement much more convenient to use.</div>
-<span class="incontext"><a href="section-c2-for-statements.html#p-572" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">We now know what the signature of the <code class="code-inline tex2jax_ignore">main(…)</code> method actually means. The <code class="code-inline tex2jax_ignore">String[] args</code> is an array of String objects, which is passed to the method when your program starts. Java reads all the items on the command-line that occur after the class name, and passes them to <code class="code-inline tex2jax_ignore">main(…)</code> in the <code class="code-inline tex2jax_ignore">args</code> String array. Study <a href="" class="xref" data-knowl="./knowl/listing-ar-commandline-args.html" title="Listing 7.3.2">Listing 7.3.2</a> and the console session that follows.</div>
+<span class="incontext"><a href="section-ar-reftypes.html#p-572" class="internal">in-context</a></span>
 </body>
 </html>

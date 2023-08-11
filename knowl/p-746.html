@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The problem is in the constructor. The intention was to assign the object-scoped <code class="code-inline tex2jax_ignore">line</code> variable. Unfortunately, the locally-scoped <code class="code-inline tex2jax_ignore">line</code> variable <em class="emphasis">shadows</em> the object-scoped variable because it has the same name. The constructor initialized the wrote <code class="code-inline tex2jax_ignore">line</code> variable. See <a href="" class="xref" data-knowl="./knowl/figure-cl-shadowing.html" title="Figure 9.4.3">Figure 9.4.3</a> for an illustration of the situation. To solve the problem we can eliminate the declaration of the locally-scoped <code class="code-inline tex2jax_ignore">line</code> variable by removing the class name <code class="code-inline tex2jax_ignore">Line</code>, leaving only the initialization. Specifically, <code class="code-inline tex2jax_ignore">line = new Line(100, 100, 500, 100)</code>. With this modification, the program works correctly.</div>
-<span class="incontext"><a href="section-cl-shadowing.html#p-746" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">The <a href="section-in-dp-design.html" class="internal" title="Section 9.1: DoodlePad Design">DoodlePad Shape base class</a> shares quite a bit of functionality with all its derived classes, including <a href="appendix-shape-events.html" class="internal" title="Appendix D: DoodlePad Shape Events">a wide array of pixel-perfect mouse events</a> that each shape object may individually. But, what about the Shape class itself. What would happen if we attempted to instantiate Shape directly? How would it look?</div>
+<span class="incontext"><a href="section-in-abstract-class.html#p-746" class="internal">in-context</a></span>
 </body>
 </html>

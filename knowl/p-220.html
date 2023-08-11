@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Test if <code class="code-inline tex2jax_ignore">age</code> is greater than 17 AND less than or equal to 67.</div>
-<span class="incontext"><a href="section-pe-logical.html#p-220" class="internal">in-context</a></span>
+<div class="para">Note how that last example in the above results in a "bad operand type" error. The syntax <code class="code-inline tex2jax_ignore">a &lt; b &lt; c</code> is common mathematics notation, but it is invalid Java. When evaluating this expression, the left-most operator is evaluated first to the <code class="code-inline tex2jax_ignore">boolean</code> value of <code class="code-inline tex2jax_ignore">true</code>. That is, <code class="code-inline tex2jax_ignore">a &lt; b</code> becomes <code class="code-inline tex2jax_ignore">true</code>. Then the right-most operator is evaluated as <code class="code-inline tex2jax_ignore">true &lt; c</code>. The <code class="code-inline tex2jax_ignore">&lt;</code> operator cannot take a <code class="code-inline tex2jax_ignore">boolean</code> value type as an operand, therefore the expression results in an error.</div>
+<span class="incontext"><a href="section-pe-relational.html#p-220" class="internal">in-context</a></span>
 </body>
 </html>

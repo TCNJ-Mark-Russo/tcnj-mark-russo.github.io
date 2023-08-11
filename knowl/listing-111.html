@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// FlyingBird.java
+import doodlepad.*;
+
+public class FlyingBird {
+
+    public static void main(String[] args) {
+        // Create a Pad and a Sprite
+        Pad pad = new Pad(300, 300);
+        Sprite sprite = new Sprite("FlyingBird.png", 50, 50, 190, 5);
+        
+        // Set Pad timer with a Java lambda function that advances sprite
+        pad.setTickHandler( (Pad p, long when) -&gt; { sprite.advance(); } );
+        pad.setTickRate(10);
+        pad.startTimer();
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.10.5<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">FlyingBird.java</code></figcaption></figure><span class="incontext"><a href="section-dp-sprites.html#listing-111" class="internal">in-context</a></span>
+</body>
+</html>
