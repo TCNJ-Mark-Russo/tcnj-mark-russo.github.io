@@ -65,13 +65,170 @@
 </head>
 <body>
 <hr/>
-<p>Identify valid variable names</p>
-<hr/>
-<p>Identify types by literal notation, int, long, float, double, char, String</p>
-<hr/>
-<p>Evaluate relational and logical expressions</p>
-<hr/>
 <q-multipledropdowns data-qid="Q01">
+<p>Which of the following are valid Java identifiers?</p>
+<table>
+    <tr><th style="text-align:left;">Identifier</th><th style="text-align:left;">Valid?</th><tr>
+    <tr><td><code class="language-java">A </code></td> <td>__Q1A</td> </tr>
+    <tr><td><code class="language-java">88</code></td> <td>__Q1B</td> </tr>
+    <tr><td><code class="language-java">abc</code></td> <td>__Q1C</td> </tr>
+    <tr><td><code class="language-java">_abc</code></td> <td>__Q1D</td> </tr>
+    <tr><td><code class="language-java">$$</code></td> <td>__Q1E</td> </tr>
+    <tr><td><code class="language-java">ab c</code></td> <td>__Q1F</td> </tr>
+    <tr><td><code class="language-java">1Z</code></td> <td>__Q1G</td> </tr>
+    <tr><td><code class="language-java">lookupinthesky</code></td> <td>__Q1H</td> </tr>
+    <tr><td><code class="language-java">thing_one</code></td> <td>__Q1I</td> </tr>
+    <tr><td><code class="language-java">thing-one</code></td> <td>__Q1J</td> </tr>
+</table>
+<script type="application/json">
+{   "title":  "Valid Identifiers",
+    "options":{
+        "__Q1A": ["valid", "invalid"],
+        "__Q1B": ["valid", "invalid"],
+        "__Q1C": ["valid", "invalid"],
+        "__Q1D": ["valid", "invalid"],
+        "__Q1E": ["valid", "invalid"],
+        "__Q1F": ["valid", "invalid"],
+        "__Q1G": ["valid", "invalid"],
+        "__Q1H": ["valid", "invalid"],
+        "__Q1I": ["valid", "invalid"],
+        "__Q1J": ["valid", "invalid"]
+    },
+    "solns": [
+        {"__Q1A": "valid",
+        "__Q1B": "invalid",
+        "__Q1C": "valid",
+        "__Q1D": "valid",
+        "__Q1E": "valid",
+        "__Q1F": "invalid",
+        "__Q1G": "invalid",
+        "__Q1H": "valid",
+        "__Q1I": "valid",
+        "__Q1J": "invalid"
+    }
+    ]
+}
+</script>
+</q-multipledropdowns>
+<hr/>
+<q-multipledropdowns data-qid="Q02">
+    <p>Select the correct type of the literal in the left column.</p>
+    <table>
+        <tr><th style="text-align:left;">Literal</th><th style="text-align:left;">Type</th><tr>
+        <tr><td><code class="language-java">0L</code></td> <td>__Q2A</td> </tr>
+        <tr><td><code class="language-java">100000</code></td> <td>__Q2B</td> </tr>
+        <tr><td><code class="language-java">"0L"</code></td> <td>__Q2C</td> </tr>
+        <tr><td><code class="language-java">'A'</code></td> <td>__Q2D</td> </tr>
+        <tr><td><code class="language-java">""</code></td> <td>__Q2E</td> </tr>
+        <tr><td><code class="language-java">3.14D</code></td> <td>__Q2F</td> </tr>
+        <tr><td><code class="language-java">3.14</code></td> <td>__Q2G</td> </tr>
+        <tr><td><code class="language-java">3.14f</code></td> <td>__Q2H</td> </tr>
+        <tr><td><code class="language-java">true</code></td> <td>__Q2I</td> </tr>
+        <tr><td><code class="language-java">-1</code></td> <td>__Q2J</td> </tr>
+    </table>
+    <script type="application/json">
+    {   "title":  "Identify Literal Notation",
+        "options":{
+            "__Q2A": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2B": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2C": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2D": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2E": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2F": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2G": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2H": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2I": ["char", "int", "long", "float", "double", "boolean", "String"],
+            "__Q2J": ["char", "int", "long", "float", "double", "boolean", "String"]
+        },
+        "solns": [{
+            "__Q2A": "long",
+            "__Q2B": "int",
+            "__Q2C": "String",
+            "__Q2D": "char",
+            "__Q2E": "String",
+            "__Q2F": "double",
+            "__Q2G": "double",
+            "__Q2H": "float",
+            "__Q2I": "boolean",
+            "__Q2J": "int"
+            }]
+    }
+    </script>
+    </q-multipledropdowns>
+<hr/>
+
+<q-orderoptions data-qid="Q03">
+
+<p>Drag the types from the left to the right and arrange them in promotion order,
+where types higher in the list are promoted to types lower in the list.</p>
+
+<pre><code class="language-java">
+byte
+short
+int
+long
+float
+double
+String
+</code></pre>
+
+<script type="application/json">
+{}
+</script>
+</q-orderoptions>
+
+<hr/>
+
+<q-multipledropdowns data-qid="Q04">
+<p>Evaluate the expressions in the first column. 
+Choose the value to which each evaluates from the second column.</p>
+
+<table>
+<tr><th style="text-align:left;">Expression</th><th style="text-align:left;">Value</th><tr>
+<tr><td><code class="language-java">5 > 5</code></td> <td>__Q4A</td> </tr>
+<tr><td><code class="language-java">5 >= 5</code></td> <td>__Q4B</td> </tr>
+<tr><td><code class="language-java">0 < -1</code></td> <td>__Q4C</td> </tr>
+<tr><td><code class="language-java">2 + 3 * 4 == 20</code></td> <td>__Q4D</td> </tr>
+<tr><td><code class="language-java">true == !false</code></td> <td>__Q4E</td> </tr>
+<tr><td><code class="language-java">(7 < 9) || (7 > 9)</code></td> <td>__Q4F</td> </tr>
+<tr><td><code class="language-java">(7 < 9) &amp;&amp; (7 > 9)</code></td> <td>__Q4G</td> </tr>
+<tr><td><code class="language-java">(0 > 1) || (1 > 2)</code></td> <td>__Q4H</td> </tr>
+<tr><td><code class="language-java">(true || false) || (false &amp;&amp; true)</code></td> <td>__Q4I</td> </tr>
+<tr><td><code class="language-java">!!true</code></td> <td>__Q4J</td> </tr>
+</table>
+<script type="application/json">
+{   "title":  "Choose Evaluated Value",
+    "options":{
+        "__Q4A": ["true", "false"],
+        "__Q4B": ["true", "false"],
+        "__Q4C": ["true", "false"],
+        "__Q4D": ["true", "false"],
+        "__Q4E": ["true", "false"],
+        "__Q4F": ["true", "false"],
+        "__Q4G": ["true", "false"],
+        "__Q4H": ["true", "false"],
+        "__Q4I": ["true", "false"],
+        "__Q4J": ["true", "false"]
+    },
+    "solns": [{
+        "__Q4A": "false",
+        "__Q4B": "true",
+        "__Q4C": "false",
+        "__Q4D": "false",
+        "__Q4E": "true",
+        "__Q4F": "true",
+        "__Q4G": "false",
+        "__Q4H": "false",
+        "__Q4I": "true",
+        "__Q4J": "true"
+        }]
+}
+</script>
+
+</q-multipledropdowns>
+
+<hr/>
+<q-multipledropdowns data-qid="Q05">
 <p>Consider each expression on the left.
 Choose from the dropdowns on the right the the value and
 type that results from evaluating each expression.</p>
@@ -82,64 +239,60 @@ type that results from evaluating each expression.</p>
     <th style="text-align:left;">Type</th></tr>
 <tr>
 <td style="padding:5px;"><code class="language-java">1 + 1.0</code></td>
-<td>__Q1V</td><td>__Q1T</td>
+<td>__Q5AV</td><td>__Q5AT</td>
 </tr>
 
 <tr>
 <td style="padding:5px;"><code class="language-java">2 + 2 * 1.0</code></td>
-<td>__Q2V</td><td>__Q2T</td>
+<td>__Q5BV</td><td>__Q5BT</td>
 </tr>
 
 <tr>
 <td style="padding:5px;"><code class="language-java">2 * 2 + 1</code></td>
-<td>__Q3V</td><td>__Q3T</td>
+<td>__Q5CV</td><td>__Q5CT</td>
 </tr>
 
 <tr>
 <td style="padding:5px;"><code class="language-java">3 / 2 + 1</code></td>
-<td>__Q4V</td><td>__Q4T</td>
+<td>__Q5DV</td><td>__Q5DT</td>
 </tr>
 
 <tr>
 <td style="padding:5px;"><code class="language-java">3 + 2 / 1</code></td>
-<td>__Q5V</td><td>__Q5T</td>
+<td>__Q5EV</td><td>__Q5ET</td>
 </tr>
 
 <tr>
 <td style="padding:5px;"><code class="language-java">30 / 12</code></td>
-<td>__Q6V</td><td>__Q6T</td>
+<td>__Q5FV</td><td>__Q5FT</td>
 </tr>
 
 <tr>
 <td style="padding:5px;"><code class="language-java">30 % 12</code></td>
-<td>__Q7V</td><td>__Q7T</td>
+<td>__Q5GV</td><td>__Q5GT</td>
 </tr>
     
 </table>
 
 <script type="application/json">
-{"options":{"__Q1V":["2.0", "11.0", 10],  "__Q1T":["double", "int", "long"],
-            "__Q2V":["4.0", "2", 221],    "__Q2T":["double", "int", "float"],
-            "__Q3V":["5", "4", 221],      "__Q3T":["String", "int", "double"],
-            "__Q4V":["321", "2", "2.5"],  "__Q4T":["String", "int", "double"],
-            "__Q5V":["321", "5", "2.5"],  "__Q5T":["String", "int", "double"],
-            "__Q6V":["3", "2.5", "2"],    "__Q6T":["String", "int", "double"],
-            "__Q7V":["2.5", "5", "6"],    "__Q7T":["String", "int", "double"]
-},
- "solns" :[{"__Q1V":"2.0", "__Q1T":"double", 
-            "__Q2V":"4.0", "__Q2T":"double",
-            "__Q3V":"5", "__Q3T":"int",
-            "__Q4V":"2", "__Q4T":"int",
-            "__Q5V":"5", "__Q5T":"int",
-            "__Q6V":"2", "__Q6T":"int",
-            "__Q7V":"6", "__Q7T":"int"
+{ "title": "Evaluate the Expressions",
+  "options":{"__Q5AV":["2.0", "11.0", 10],  "__Q5AT":["double", "int", "long"],
+            "__Q5BV":["4.0", "2", 221],    "__Q5BT":["double", "int", "float"],
+            "__Q5CV":["5", "4", 221],      "__Q5CT":["String", "int", "double"],
+            "__Q5DV":["321", "2", "2.5"],  "__Q5DT":["String", "int", "double"],
+            "__Q5EV":["321", "5", "2.5"],  "__Q5ET":["String", "int", "double"],
+            "__Q5FV":["3", "2.5", "2"],    "__Q5FT":["String", "int", "double"],
+            "__Q5GV":["2.5", "5", "6"],    "__Q5GT":["String", "int", "double"]},
+ "solns" :[{"__Q5AV":"2.0", "__Q5AT":"double", 
+            "__Q5BV":"4.0", "__Q5BT":"double",
+            "__Q5CV":"5", "__Q5CT":"int",
+            "__Q5DV":"2", "__Q5DT":"int",
+            "__Q5EV":"5", "__Q5ET":"int",
+            "__Q5FV":"2", "__Q5FT":"int",
+            "__Q5GV":"6", "__Q5GT":"int"
 }]
 }
 </script>
 </q-multipledropdowns>
-<hr/>
-<p>Expression evaluation with casting</p>
-<hr/>
-
     </body>
 </html>

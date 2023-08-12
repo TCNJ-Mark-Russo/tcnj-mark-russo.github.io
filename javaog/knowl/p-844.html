@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">An alternative way to read plain text files in Java is to use the FileReader and BufferedReader classes. The FileReader class reads files byte-by-byte. This is not useful if we are interested in reading a file line-by-line. The BufferedReader class will wrap a FileReader object and use it to buffer file contents and the return these contents in a more convenient manner. For our purposes, we are most interested in the BufferedReader’s <code class="code-inline tex2jax_ignore">realLine()</code> method, which returns the next line from the bufferred file contents.</div>
-<span class="incontext"><a href="section-ex-reading-files.html#p-844" class="internal">in-context</a></span>
+<div class="para">Typically, a finally-block is used for cleanup tasks that must occur regardless of whether or not your code executed successfully. Cleanup tasks take the form of closing open files or open network and database connections. Depending n the resource being accessed, failing to clean up can lead to what’s know as a <em class="emphasis">resource leak</em> because leaving a resource open without properly closing it can make it unusable by others. Anything that must be done at the end of a try-catch statement may be placed in a finally-block, and Java will guarantee that it is executed.</div>
+<span class="incontext"><a href="section-ex-catching.html#p-844" class="internal">in-context</a></span>
 </body>
 </html>

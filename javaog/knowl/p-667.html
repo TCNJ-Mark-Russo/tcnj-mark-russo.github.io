@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">To both define a package and place a class into the package, simply add a <code class="code-inline tex2jax_ignore">package</code> statement as the first line in any file naming the package. For example,</div>
-<span class="incontext"><a href="section-cl-packages.html#p-667" class="internal">in-context</a></span>
+<div class="para">Even when an outer-scoped variable is shadowed by a local variable declaration, the shadowed variable can be accessed directly by setting its scope explicitly. Recall that class scoped variables and methods may be accessed using the class name with the dot-operator, think about <code class="code-inline tex2jax_ignore">Math.sqrt(…)</code>. Also, the current object scope is set using the <code class="code-inline tex2jax_ignore">this</code> keyword with the dot-operator. These techniques may be from from inner scopes just as well as from outer scopes. For example, from within the <code class="code-inline tex2jax_ignore">ClickThick</code> constructor in <a href="" class="xref" data-knowl="./knowl/listing-cl-click-thick.html" title="Listing 8.4.1">Listing 8.4.1</a>, to ensure that I was accessing the object-scope <code class="code-inline tex2jax_ignore">line</code> variable and not the locallt-scoped <code class="code-inline tex2jax_ignore">line</code>, I could have used <code class="code-inline tex2jax_ignore">this</code> to set the scope explicitly, <code class="code-inline tex2jax_ignore">this.line = new Line(100, 100, 500, 100);</code>. While Java will search progressively breader scopes for an identifier that matches one that you reference, explicit scoping using <code class="code-inline tex2jax_ignore">this</code> or a class name and the dot-operator removes any ambiguity.</div>
+<span class="incontext"><a href="section-cl-shadowing.html#p-667" class="internal">in-context</a></span>
 </body>
 </html>

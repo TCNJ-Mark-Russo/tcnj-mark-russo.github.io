@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">There is important option to be aware of when opening a file to write using the FileWriter class. That is, where in the file should writing begin? While it is not uncommon to read an entire file all at once, files are often written incrementally, a bit at a time. For example, you might open a file and write a few lines and then close it. Open it again later in your program and close it again. The implication here is that writing will begin <em class="emphasis">at the end of hte file</em>. If we begin writing from the beginning each time, then the fill will contain only the last data written because the file is being overwritten each time.</div>
-<span class="incontext"><a href="section-ex-writing-files.html#p-854" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">The format that we’ll work with here is often referred to as <dfn class="terminology">plain text files</dfn>. The way to interpret the sequence of bytes in a plain text file is as encoding the sequence of characters in the file. The most common standard for translating between the numerical byte value and its character equivalent is the <a href="" class="xref" data-knowl="./knowl/glossary-ascii.html" title="Term: ASCII">ASCII</a> (See <a href="appendix_ascii_table.html" class="internal" title="Appendix A: ASCII Table">Appendix A</a>). To interpret the contents of a plain text file, read the byte sequence and substitute each value with an equivalent character from the ASCII lookup table. Writing a plain text file is the inverse process. Convert your file contents to a String, and then write the ASCII bytes to a file that correspond to the character sequence of that String.</div>
+<span class="incontext"><a href="section-ex-reading-files.html#p-854" class="internal">in-context</a></span>
 </body>
 </html>

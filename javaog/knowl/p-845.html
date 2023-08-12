@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Find a complete example of reading a plain text file line-by-line in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a>. A BufferedReader returns null from its <code class="code-inline tex2jax_ignore">readLine()</code> method when there are no more lines to read. With this in mind, pay close attention to the way the while-statement in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a> is constructed. We invoke <code class="code-inline tex2jax_ignore">readLine()</code> once before the while-statement, and enter the statement only if the <code class="code-inline tex2jax_ignore">line</code> value is not null. This prevents further action to be taken on an empty file. Also, we read the next line at the end of the while-statement body to check if there is another line to be processed, and continue the while-statement only if there is another line.</div>
-<span class="incontext"><a href="section-ex-reading-files.html#p-845" class="internal">in-context</a></span>
+<div class="para">Let’s add a finally-block to <a href="" class="xref" data-knowl="./knowl/listing-ex-extest2.html" title="Listing 11.3.4">Listing 11.3.4</a> and test our new program, both with a statement that throws an exception and with a statement that succeeds.</div>
+<span class="incontext"><a href="section-ex-catching.html#p-845" class="internal">in-context</a></span>
 </body>
 </html>

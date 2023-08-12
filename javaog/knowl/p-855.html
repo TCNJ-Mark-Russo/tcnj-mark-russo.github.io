@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">When intending to append to the end of a file instead of writing from the beginning, we must be careful to open a file using a FileWriter in <em class="emphasis">append mode</em>. By default, the FileWriter opens in <em class="emphasis">write mode</em>, which begins writing from the beginning of a file. This may or may not be what you want. As a demonstration of FileWriter, let’s write a utility function that appends a message to a log file.</div>
-<span class="incontext"><a href="section-ex-writing-files.html#p-855" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">One shortcoming of plain text files is that they can be very large. There is no method of compression employed and so we might find significant content duplication. Another shortcoming is that the content is limited to characters. There is no method for storing native numerical values, which can be very inefficient. For example, the number 3.1415926 as a floating point number is stored in memory using four bytes. In a plain text file each of the nine characters must be stored separately, and reading the number involves the execution of a parsing algorithm to reinterpret the characters as the number. The advantage of plain text files is that the content is easily interpreted, with ASCII character code translation built right into all programming languages, including Java. Another advantage is that many files types are actually plain text files. For example, our Java programs are plain text, although, our compiled ".class" files are not. Also, HTML files and CSV files (comma-separated values) are stored as plain text.</div>
+<span class="incontext"><a href="section-ex-reading-files.html#p-855" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Compiling and running the program in <a href="" class="xref" data-knowl="./knowl/listing-ar-arrayargs.html" title="Listing 7.3.1">Listing 7.3.1</a> produces the following output. Note that both methods have <code class="code-inline tex2jax_ignore">void</code> return types; nothing is returned from either method. In spite of this, the <code class="code-inline tex2jax_ignore">doubleArr(…)</code> method modifies the elements of the <em class="emphasis">original array</em>, which is demonstrated when the array is printed a second time and we see that all element values have been doubled. As we know, the reason that the original array elements are modified by <code class="code-inline tex2jax_ignore">doubleArr(…)</code> is because a reference to the orignal array is passed to the method, not a copy. Consequently, the original array elements are modified as well.</div>
-<span class="incontext"><a href="section-ar-reftypes.html#p-571" class="internal">in-context</a></span>
+<div class="para">Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.</div>
+<span class="incontext"><a href="section-ar-creating.html#p-571" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">With the removal of the <code class="code-inline tex2jax_ignore">light</code> instance variable, we must replacement of all references to <code class="code-inline tex2jax_ignore">this.light</code>. For example, in the <code class="code-inline tex2jax_ignore">.turnOn()</code> and <code class="code-inline tex2jax_ignore">.turnOff()</code> methods, statements like <code class="code-inline tex2jax_ignore">this.light.setFillColor(…)</code> are now shortened to <code class="code-inline tex2jax_ignore">this.setFillColor(…)</code>. The LED class does not implement the <code class="code-inline tex2jax_ignore">setFillColor(…)</code> method directly, but LED <em class="emphasis">extends</em> Oval, and Oval provides access to the method through inheritance.</div>
-<span class="incontext"><a href="section-in-basics.html#p-699" class="internal">in-context</a></span>
+<div class="para">Under the <code class="code-inline tex2jax_ignore">java.</code> package in the core library, types are further divided into subpackages. For example, we’ve used many classes that are found in the <code class="code-inline tex2jax_ignore">java.util.</code> subpackage, such as <code class="code-inline tex2jax_ignore">java.util.Random</code> and <code class="code-inline tex2jax_ignore">java.util.Scanner</code>. When we start working with files we’ll use several classes in the <code class="code-inline tex2jax_ignore">java.io.</code> subpackage. Its worth noting that all types in the <code class="code-inline tex2jax_ignore">java.lang.</code> subpackage are imported automatically. That is were we find classes like String, and why we do not need to import <code class="code-inline tex2jax_ignore">java.lang.String</code> in order to use the class.</div>
+<span class="incontext"><a href="section-cl-packages.html#p-699" class="internal">in-context</a></span>
 </body>
 </html>

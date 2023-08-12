@@ -11,23 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.6.7<span class="period">.</span></span><span class="space"> </span>Shape Selection Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.2.3<span class="period">.</span></span><span class="space"> </span>array vs ArrayList</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Feature</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">ArrayList</code></th>
+<th scope="col" class="l m b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">array</code></th>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setSelectionChangedHandler-doodlepad.Shape.ShapeSelectionEventHandler-" target="_blank">public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-64-hidden.html" title="Footnote 4.6.9"><sup> 9 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the <a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.ShapeSelectionEventHandler.html" target="_blank">ShapeSelectionEventHandler</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-65-hidden.html" title="Footnote 4.6.10"><sup> 10 </sup></a> interface.</td>
+<td class="l t b0 r0 l0 t0 lines">Creating</td>
+<td class="l t b0 r0 l0 t0 lines">Uses <code class="code-inline tex2jax_ignore">new</code> with<br>the constructor</td>
+<td class="l t b0 r0 l0 t0 lines">Uses <code class="code-inline tex2jax_ignore">new</code> with<br><code class="code-inline tex2jax_ignore">[]</code> and size</td>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onSelectionChanged-boolean-" target="_blank">public void onSelectionChanged(boolean selected)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-66-hidden.html" title="Footnote 4.6.11"><sup> 11 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.</td>
+<td class="l t b0 r0 l0 t0 lines">Reading the<br>number of items</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">.size()</code><br>method</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">.length</code><br>property</td>
 </tr>
-</table></div></figure><span class="incontext"><a href="section-dp-events.html#table-32" class="internal">in-context</a></span>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Accessing element<br>value</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">.get(index)</code><br>method</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">[index]</code><br>notation</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">Updating element<br>value</td>
+<td class="l t b0 r0 l0 t0 lines">Use <code class="code-inline tex2jax_ignore">.set(index, val)</code><br>or <code class="code-inline tex2jax_ignore">.add(val)</code> methods</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">[index]</code><br>notation</td>
+</tr>
+</table></div></figure><span class="incontext"><a href="section-ar-iterating.html#table-32" class="internal">in-context</a></span>
 </body>
 </html>

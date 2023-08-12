@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">One of the limitiations to note is that the Java compiler checks that every method invocation on a class is implemented by the <em class="emphasis">declared</em> class type. This means that while we can assign a ToggleButton to a Shape variable, we cannot invoke its <code class="code-inline tex2jax_ignore">toggle()</code> method. The compiler will stop with an error telling us that the Shape does not implement <code class="code-inline tex2jax_ignore">toggle()</code>. The compiler does run a program and so it cannot know that our <code class="code-inline tex2jax_ignore">shp</code> variable actually references a ToggleButton object, so the program will run without an error. See the test program in <a href="" class="xref" data-knowl="./knowl/listing-in-test-togglebutton1.html" title="Listing 9.4.1">Listing 9.4.1</a> and the attempt to compile it that follows.</div>
-<span class="incontext"><a href="section-in-polymorph.html#p-723" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">A method invoked on a derived class that does not implement the exact method signature, will cause Java to search for the method signature in the base class, and up the inheritance hierarchy. But, if a method with the signature is implemented in the dervied class, then that implementation will be invoked, even if the same method signature has been implemented in a base class. If a method in a dervied class has the same signature as one in its base class, we say that the derived class method <dfn class="terminology">overrides</dfn> the one in the base class.</div>
+<span class="incontext"><a href="section-in-overriding.html#p-723" class="internal">in-context</a></span>
 </body>
 </html>

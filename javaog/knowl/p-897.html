@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">All recursive methods we’ve explored thus far are examples of <dfn class="terminology">direct recursion</dfn>, which occurs when a recursive method invokes itself <em class="emphasis">directly</em>. It is possible to write a program in which no individual method invokes itself, yet is considered recursive. In the simplest case, one method might invoke a second, which invokes the first, and so on. This is an example of <dfn class="terminology">indirect recursion</dfn>. As long as an invoked method traces back to itself, the program is considered recursive.</div>
-<span class="incontext"><a href="section-re-characterising.html#p-897" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Recognize how <code class="code-inline tex2jax_ignore">isPalindrome(…)</code> in <a href="" class="xref" data-knowl="./knowl/listing-re-palindrome-recursive.html" title="Listing 12.1.2">Listing 12.1.2</a> stops executing. The String being tested gets shorter by two on each recursive call. This makes progress toward moving us closer to the base case of a String with 1 or even 0 chars. We must always be moving toward the base case condition to avoid an infinite recursion. For example, what would happen if we swapped the order of the first two branches in the if-statement of <a href="" class="xref" data-knowl="./knowl/listing-re-palindrome-recursive.html" title="Listing 12.1.2">Listing 12.1.2</a>? Trace the modified program and make a prediction.</div>
+<span class="incontext"><a href="section-re-thinking.html#p-897" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The <em class="emphasis">scope</em> of a Java variable refers to the region of the program where the variable can be accessed and used. Think of how a <em class="emphasis">telescope</em> or <em class="emphasis">microscope</em> both enhances but also limits what we can see. The <em class="emphasis">lifetime</em> of a variable, on the other hand, refers to the period during which the variable exists in memory.</div>
-<span class="incontext"><a href="section-rt-scope.html#p-357" class="internal">in-context</a></span>
+<div class="para">String immutability is not a problem when concatenating a few small Strings, but when large Strings are concatenated over and over to build even larger String objects, your program can slow down because larger and larger chuncks of memory are repeatedly allocated and deallocated. A more efficient approach to concatenating large and numerous String objects would be a dedicated class with the job of collecting all Strings and then managing the underlying memory more efficiently. This is what Java’s built-in StringBuilder class does for us.</div>
+<span class="incontext"><a href="section-rt-stringbuilder.html#p-357" class="internal">in-context</a></span>
 </body>
 </html>

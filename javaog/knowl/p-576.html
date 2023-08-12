@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Using the same reasoning as in <a href="section-c1-nested-control.html#subsection-c1-two-dimensions" class="internal" title="Subsection 5.6.1: Accessing Two Dimensions">Subsection 5.6.1</a> we can access all elements in a multidimensional array using <em class="emphasis">nested iteration</em>. We use an outer loop with a loop counter to generate the indexes of the elements in the top-level array, and we use an inner loop with a counter to generate the indexes of the elements in the inner arrays. It is wise to use the array’s <code class="code-inline tex2jax_ignore">.length</code> property in the continuation test.</div>
-<span class="incontext"><a href="section-ar-multi.html#p-576" class="internal">in-context</a></span>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-ar-randomovals2.html" title="Listing 7.2.1">Listing 7.2.1</a> is an updated version of <a href="" class="xref" data-knowl="./knowl/listing-c1-randomovals.html" title="Listing 5.5.2">Listing 5.5.2</a>, with a few changes made. First, we use an array instead of an ArrayList to hold all Oval object references. Second, we change the while-statement to a for-statement. As you study the example, note that the number of Oval objects to create is set when declaring the array near the top of the program. For the iteration continuation test, we interrogate the array for its length instead of entering a value explicitly, and check that the loop counter is less-than the length. It is better to interrogate the array instead of entering the value into the for-statement because it is less error-prone if later we decide to modify the number of Oval objects. Only one change is made instead of searching the program for all instances of 20.</div>
+<span class="incontext"><a href="section-ar-iterating.html#p-576" class="internal">in-context</a></span>
 </body>
 </html>

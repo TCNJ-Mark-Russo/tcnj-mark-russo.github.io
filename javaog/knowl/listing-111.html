@@ -11,23 +11,34 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// FlyingBird.java
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Image3.java
 import doodlepad.*;
 
-public class FlyingBird {
+public class Image3 {
 
     public static void main(String[] args) {
-        // Create a Pad and a Sprite
-        Pad pad = new Pad(300, 300);
-        Sprite sprite = new Sprite("FlyingBird.png", 50, 50, 190, 5);
+        // Create Pad and Image
+        Pad pad  = new Pad(400, 400);
+        Image im = new Image(0, 0, 400, 400);
         
-        // Set Pad timer with a Java lambda function that advances sprite
-        pad.setTickHandler( (Pad p, long when) -&gt; { sprite.advance(); } );
-        pad.setTickRate(10);
-        pad.startTimer();
+        // Set up mouse event handler
+        im.setMousePressedHandler( Image3::onSpot );
+        
+        // Set drawing fill color to green
+        im.setFillColor(0,200,0);
+    }
+    
+    // What to do when mouse is pressed on Image
+    public static void onSpot(Shape shp, double cx, double cy, int button) {
+        // Cast Shape to Image
+        Image im = (Image)shp;
+        
+        // Draw randomly sized oval
+        double radius = Math.random()*40;
+        im.drawOval(cx-radius, cy-radius, 2*radius, 2*radius);
     }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.10.5<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">FlyingBird.java</code></figcaption></figure><span class="incontext"><a href="section-dp-sprites.html#listing-111" class="internal">in-context</a></span>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.8.9<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Image3.java</code></figcaption></figure><span class="incontext"><a href="section-dp-images.html#listing-111" class="internal">in-context</a></span>
 </body>
 </html>

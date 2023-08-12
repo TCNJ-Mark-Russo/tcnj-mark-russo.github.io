@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">When a derived class overrides a base class method signature, and an instance of the derived class is assigned to a base class typed variable, there is no reason to cast the base class variable to the derived class type before invoking the method. The method signature is implemented in the base class and so the compiler finds it and compiles without error. But this begs the question, which method implementation is invoked? Is it the base class method implementation because the variable has type base class, or is it the derived class implementation because the variable references a derived class object? Let’s create a small test program and find out.</div>
-<span class="incontext"><a href="section-in-polymorph.html#p-728" class="internal">in-context</a></span>
+<div class="para">You are familiar with how DoodlePad’s graphic objects can handle events such as a mouse click or key press. In <a href="section-dp-events.html#subsection-dp-events-connecting" class="internal" title="Subsection 14.6.1: Connecting Events and Methods with Method References">Subsection 14.6.1</a> we learned how to associate a method with an event by passing a method reference to a special method such as <code class="code-inline tex2jax_ignore">.setMousePressedHandler(…)</code>. DoodlePad provides a second way to handle events. When extending a shape or the Pad class, you may override certain inherited methods as a way to handle associated events rather than assigning a method reference. This approach can be more convenient and intuitive to implement.</div>
+<span class="incontext"><a href="section-in-overriding.html#p-728" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Another example of Fractal Art is the <em class="emphasis">Sierpiński Carpet</em>. One way for drawing a Sierpiński Carpet starts with an empty canvas with square dimensions. A new square shape is drawn at the center of the canvas, having a width and height that is 1/3 the width and 1/3 the height of the canvas square. This step is repeated recursively for square subregions at the eight points surrounding the central square.</div>
-<span class="incontext"><a href="section-re-graphics.html#p-918" class="internal">in-context</a></span>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-re-walk.html" title="Listing 12.3.3">Listing 12.3.3</a> is a simple demonstration of <em class="emphasis">indirect recursion</em>. The <code class="code-inline tex2jax_ignore">left(…)</code> method prints "left" and the <code class="code-inline tex2jax_ignore">right(…)</code> method prints "right." Neither the <code class="code-inline tex2jax_ignore">left(…)</code> nor the <code class="code-inline tex2jax_ignore">right(…)</code> methods are recursive by themselves. But, because <code class="code-inline tex2jax_ignore">left(…)</code> invokes <code class="code-inline tex2jax_ignore">right(…)</code> and <code class="code-inline tex2jax_ignore">right(…)</code> invokes <code class="code-inline tex2jax_ignore">left(…)</code>, the program is <em class="emphasis">indirectly recursive</em>. Both methods implement a base case that prints "arrived" and stops the recursion when the step count <code class="code-inline tex2jax_ignore">N</code> reaches 0.</div>
+<span class="incontext"><a href="section-re-characterising.html#p-918" class="internal">in-context</a></span>
 </body>
 </html>

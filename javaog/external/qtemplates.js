@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------  
 // qtemplates.js
 // MFR
-// v. 2023/07/14
+// v. 2023/08/11
 
 // TODO:
 // - Build random question generators
@@ -32,9 +32,10 @@ class QMultipleChoice extends HTMLElement {
     static get observedAttributes() { return ['data-qid']; }
 
     // Constructor
-    constructor(qid, prompt, config) {
+    constructor(qid, qtitle, prompt, config) {
         super();
         this.qid    = qid    || "Q##";
+        this.qtitle = qtitle || 'Multiple Choice';
         this.prompt = prompt || "<p>Please select the correct answer.</p>";
         this.config = config || {};
 
@@ -84,9 +85,19 @@ class QMultipleChoice extends HTMLElement {
         // Do later, after everything loaded and hydrated, make substitutions into shadow DOM
         setTimeout( () => {
 
-            // Get config, which is script type="application/json" node added by user to <q-parsonsproblem> element
+            // Get config, which is script type="application/json" node added by user to element
             let scriptNode = [...this.childNodes].find(node => node.nodeName === 'SCRIPT');
             if (scriptNode) { this.config = JSON.parse(scriptNode.textContent); }
+
+            // Setup question title
+            let qtitle = this.shadowRoot.querySelector('#title');
+            if (this.config.title) {
+                qtitle.innerHTML = `${this.qid}) ${this.config.title}`;
+            } else {
+                qtitle.innerHTML = `${this.qid}) ${this.qtitle}`;
+            }
+            // Substitute title with assigned qid
+            //this.shadowRoot.querySelector('#title').innerHTML = `${this.qid}) Multiple Choice`;
 
             // Select all direct child nodes in the webComponent that are not <script> elements
             let promptNodes = this.querySelectorAll(":scope > :not(script)")
@@ -98,9 +109,6 @@ class QMultipleChoice extends HTMLElement {
             } else {
                 prompt.innerHTML = this.prompt;
             }
-
-            // Substitute title with assigned qid
-            this.shadowRoot.querySelector('#title').innerHTML = `${this.qid}) Multiple Choice`;
 
             // Inject radio buttons for all answers
             this.shadowRoot.querySelector('#radiobuttons').innerHTML =
@@ -178,9 +186,10 @@ class QMultipleAnswer extends HTMLElement {
     static get observedAttributes() { return ['data-qid']; }
 
     // Constructor
-    constructor(qid, prompt, config) {
+    constructor(qid, qtitle, prompt, config) {
         super();
         this.qid    = qid    || "Q##";
+        this.qtitle = qtitle || 'Multiple Answer';
         this.prompt = prompt || "<p>Please select all correct answers.</p>";
         this.config = config || {};
 
@@ -229,9 +238,19 @@ class QMultipleAnswer extends HTMLElement {
         // Do later, after everything loaded and hydrated, make substitutions into shadow DOM
         setTimeout( () => {
 
-            // Get config, which is script type="application/json" node added by user to <q-parsonsproblem> element
+            // Get config, which is script type="application/json" node added by user to element
             let scriptNode = [...this.childNodes].find(node => node.nodeName === 'SCRIPT');
             if (scriptNode) { this.config = JSON.parse(scriptNode.textContent); }
+
+            // Setup question title
+            let qtitle = this.shadowRoot.querySelector('#title');
+            if (this.config.title) {
+                qtitle.innerHTML = `${this.qid}) ${this.config.title}`;
+            } else {
+                qtitle.innerHTML = `${this.qid}) ${this.qtitle}`;
+            }
+            // Substitute title with assigned qid
+            //this.shadowRoot.querySelector('#title').innerHTML = `${this.qid}) Multiple Answer`;
 
             // Select all direct child nodes in the webComponent that are not <script> elements
             let promptNodes = this.querySelectorAll(":scope > :not(script)")
@@ -243,9 +262,6 @@ class QMultipleAnswer extends HTMLElement {
             } else {
                 prompt.innerHTML = this.prompt;
             }
-
-            // Substitute title with assigned qid
-            this.shadowRoot.querySelector('#title').innerHTML = `${this.qid}) Multiple Answer`;
 
             // Randomize options
             shuffle(this.config.options);
@@ -342,10 +358,11 @@ class QFillInBlanks extends HTMLElement {
     static get observedAttributes() { return ['data-qid']; }
 
     // Constructor
-    constructor(qid, prompt, config) {
+    constructor(qid, qtitle, prompt, config) {
         super();
         // Save any parameters passed to constructor - only happens when component created from code
         this.qid    = qid    || "Q##";
+        this.qtitle = qtitle || 'Fill in the Blanks';
         this.prompt = prompt || "<p>Please fill in the blanks.</p>";
         this.config = config || {};
 
@@ -396,9 +413,6 @@ class QFillInBlanks extends HTMLElement {
 
         // Do later, after everything loaded and hydrated, make substitutions into shadow DOM
         setTimeout( () => {
-            // Substitute title with assigned qid
-            this.shadowRoot.querySelector('#title').innerHTML = `${this.qid}) Fill in the Blanks`;
-
             // Loop over all immediate childNodes and divide into prompt nodes and config node
             let configNodes = [];
             let promptNodes = [];
@@ -413,6 +427,16 @@ class QFillInBlanks extends HTMLElement {
             // Replace config with web component config, if any
             if (configNodes.length > 0) { this.config = JSON.parse(configNodes[0].textContent); }
             const conf = this.config;
+
+            // Setup question title
+            let qtitle = this.shadowRoot.querySelector('#title');
+            if (conf.title) {
+                qtitle.innerHTML = `${this.qid}) ${conf.title}`;
+            } else {
+                qtitle.innerHTML = `${this.qid}) ${this.qtitle}`;
+            }
+            // Substitute title with assigned qid
+            //this.shadowRoot.querySelector('#title').innerHTML = `${this.qid}) Fill in the Blanks`;
 
             // Replace all prompt nodes in prompt element under shadowRoot
             let prompt = this.shadowRoot.querySelector('#prompt');
@@ -535,10 +559,11 @@ class QMultipleDropdowns extends HTMLElement {
     static get observedAttributes() { return ['data-qid']; }
 
     // Constructor
-    constructor(qid, prompt, config) {
+    constructor(qid, qtitle, prompt, config) {
         super();
         // Init any params passed to the constructor
         this.qid    = qid    || "Q##";
+        this.qtitle = qtitle || 'Multiple Dropdowns';
         this.prompt = prompt || "<p>Please choose an option from all dropdowns</p>";
         this.config = config || {};
 
@@ -565,7 +590,7 @@ class QMultipleDropdowns extends HTMLElement {
             .hljs-keyword, .hljs-operator { color: darkblue; }
         </style>
         <div id="prob">
-        <div id="title" style="font-weight:bold;">Q##) Multiple Dropdowns</div>
+        <div id="title"  style="font-weight:bold;">Q## Multiple Dropdowns</div>
         <div id="prompt" style="padding:5px;"></div>
 
         <div style="padding:5px;">
@@ -587,9 +612,6 @@ class QMultipleDropdowns extends HTMLElement {
 
         // Do later, after everything loaded and hydrated, make substitutions into shadow DOM
         setTimeout( () => {
-            // Substitute title with assigned qid
-            this.shadowRoot.querySelector('#title').innerHTML = `${this.qid}) Multiple Dropdowns`;
-
             // Loop over all custom elements childNodes and split into prompt nodes and config node
             let configNodes = [];
             let promptNodes = [];
@@ -603,6 +625,15 @@ class QMultipleDropdowns extends HTMLElement {
             
             // Replace config with web component config, if any
             if (configNodes.length > 0) { this.config = JSON.parse(configNodes[0].textContent); }
+            const conf = this.config;
+
+            // Setup question title
+            let qtitle = this.shadowRoot.querySelector('#title');
+            if (conf.title) {
+                qtitle.innerHTML = `${this.qid}) ${conf.title}`;
+            } else {
+                qtitle.innerHTML = `${this.qid}) ${this.qtitle}`;
+            }
 
             // Replace all prompt nodes in prompt element under shadowRoot
             let prompt = this.shadowRoot.querySelector('#prompt');
@@ -723,15 +754,16 @@ class QMultipleDropdowns extends HTMLElement {
 customElements.define("q-multipledropdowns", QMultipleDropdowns);
 
 // ---------------------------------------------------------------  
-// 5. Parsons Problems
-class QParsonsProblem extends HTMLElement {
+// 5. Order the Options
+class QOrderOptions extends HTMLElement {
     static get observedAttributes() { return ['data-qid']; }
     
     // Constructor
-    constructor(qid, prompt, config) {
+    constructor(qid, qtitle, prompt, config) {
         super();
-        this.qid    = qid    || "Q##";;
-        this.prompt = prompt || "<p>Drag lines of code from left box to right box</p>";
+        this.qid    = qid    || "Q##";
+        this.qtitle = qtitle || "Order the Options";
+        this.prompt = prompt || "<p>Drag options from left box to right box in correct order</p>";
         this.config = config || {};
         this.dragSrcEl = null;
         this.soln = [];         // Expected solution
@@ -785,7 +817,7 @@ class QParsonsProblem extends HTMLElement {
             .hljs-keyword, .hljs-operator { color: darkblue; }
         </style>
         <div id="prob">
-        <div id="title" style="font-weight:bold;">Q##) Parson's Problem</div>
+        <div id="title" style="font-weight:bold;">Q##) Order the Options</div>
         <div id="prompt"></div>
 
         <table><tr>
@@ -815,13 +847,20 @@ class QParsonsProblem extends HTMLElement {
         // Do later, after everything loaded and hydrated
         // Get element content, wrap and substitute
         setTimeout( () => {
-            // Get config, which is script type="application/json" node added by user to <q-parsonsproblem> element
+            // Get config, which is script type="application/json" node added by user to <q-orderoptions> element
             let scriptNode = [...this.childNodes].find(node => node.nodeName === 'SCRIPT');
             if (scriptNode) { this.config = JSON.parse(scriptNode.textContent); }
+            const conf = this.config;
 
-            // Get prompt HTML, which is all non-script nodes added by user to <q-parsonsproblem> element
-            //let promptNodes = [...this.childNodes].filter(node => node.nodeName !== 'SCRIPT' && node.textContent.trim().length > 0);
-            //if (promptNodes.length > 0) { this.prompt = promptNodes.map(node => node.textContent).join('\n'); }
+            // Setup question title
+            let qtitle = this.shadowRoot.querySelector('#title');
+            if (conf.title) {
+                qtitle.innerHTML = `${this.qid}) ${conf.title}`;
+            } else {
+                qtitle.innerHTML = `${this.qid}) ${this.qtitle}`;
+            }
+            // Add title
+            //cont.querySelector("#title").innerHTML =`${this.qid}) Order the Options`;
 
             // Select all direct child nodes in the webComponent that are not <pre><code> or <script> elements
             let promptNodes = this.querySelectorAll(":scope > :not(pre):not(script)")
@@ -831,9 +870,6 @@ class QParsonsProblem extends HTMLElement {
             
             // Build and inject problem nodes into shadowDOM container
             let tmpElement = document.createElement('div');
-
-            // Add title
-            cont.querySelector("#title").innerHTML =`${this.qid}) Parson's Problem`;
 
             // Replace all prompt nodes in prompt element under shadowRoot
             let prompt = this.shadowRoot.querySelector('#prompt');
@@ -853,7 +889,7 @@ class QParsonsProblem extends HTMLElement {
             if (codeBlock) {
                 cls = codeBlock.className;
                 const codeText = codeBlock.innerText;
-                lines = codeText.split('\n');
+                lines = codeText.split('\n').filter(line => line.trim().length > 0);
 
                 // Save a copy of these lines as the solution to be tested in onCheck.
                 let acopy = JSON.parse(JSON.stringify(lines))
@@ -930,16 +966,16 @@ class QParsonsProblem extends HTMLElement {
     // Reset the problem
     onReset() {
         // Reset the problem
-        let dragcol = document.querySelector(`q-parsonsproblem[data-qid='${this.qid}']`).shadowRoot.querySelector('td#dragcol div.container');
+        let dragcol = document.querySelector(`q-orderoptions[data-qid='${this.qid}']`).shadowRoot.querySelector('td#dragcol div.container');
 
         // Get all source elements in the dropcol and move back to the dragcol
-        let dropcol = document.querySelector(`q-parsonsproblem[data-qid='${this.qid}']`).shadowRoot.querySelector('td#dropcol div.container');
+        let dropcol = document.querySelector(`q-orderoptions[data-qid='${this.qid}']`).shadowRoot.querySelector('td#dropcol div.container');
         let srcs = dropcol.querySelectorAll('div.source');
         let sarr = [...srcs];   // Spread into Array
         shuffle(sarr);          // Randomize order and move back to dragcol
         sarr.forEach(src => dragcol.appendChild(src));
 
-        let items = document.querySelector(`q-parsonsproblem[data-qid='${this.qid}']`).shadowRoot.querySelectorAll('div.box');
+        let items = document.querySelector(`q-orderoptions[data-qid='${this.qid}']`).shadowRoot.querySelectorAll('div.box');
         items.forEach(item => { 
             item.classList.remove('over');
             item.style.opacity = '1';
@@ -1052,11 +1088,11 @@ class QParsonsProblem extends HTMLElement {
 
         e.currentTarget.style.opacity = '1';
         //let items = this.shadowRoot.querySelectorAll('div.box');
-        let items = document.querySelector(`q-parsonsproblem[data-qid='${this.qid}']`).shadowRoot.querySelectorAll('div.box');
+        let items = document.querySelector(`q-orderoptions[data-qid='${this.qid}']`).shadowRoot.querySelectorAll('div.box');
         items.forEach(item => { item.classList.remove('over'); });
     }
 }
-customElements.define("q-parsonsproblem", QParsonsProblem);
+customElements.define("q-orderoptions", QOrderOptions);
 
 // ---------------------------------------------------------------  
 // 6. Matching Problem
@@ -1064,9 +1100,10 @@ class QMatching extends HTMLElement {
     static get observedAttributes() { return ['data-qid']; }
     
     // Constructor
-    constructor(qid, prompt, config) {
+    constructor(qid, qtitle, prompt, config) {
         super();
-        this.qid    = qid    || "Q##";;
+        this.qid    = qid    || "Q##";
+        this.qtitle = qtitle || 'Matching';
         this.prompt = prompt || "<p>Match the left column with the right column</p>";
         this.config = config || {};
         this.dragSrcEl = null;
@@ -1149,12 +1186,20 @@ class QMatching extends HTMLElement {
             // Get config, which is script type="application/json" node added by user to <q-matching> element
             let scriptNode = [...this.childNodes].find(node => node.nodeName === 'SCRIPT');
             if (scriptNode) { this.config = JSON.parse(scriptNode.textContent); }
-            
+            const conf = this.config;
+
             // Get container, which was inserted into shadowDOM by constructor
             const cont = this.shadowRoot.querySelector('#prob');    // Container is a div
 
+            // Setup question title
+            let qtitle = this.shadowRoot.querySelector('#title');
+            if (conf.title) {
+                qtitle.innerHTML = `${this.qid}) ${conf.title}`;
+            } else {
+                qtitle.innerHTML = `${this.qid}) ${this.qtitle}`;
+            }
             // Add title
-            cont.querySelector("#title").innerHTML = `${this.qid}) Matching`;
+            //cont.querySelector("#title").innerHTML = `${this.qid}) Matching`;
 
             // Get prompt HTML, which is all non-script nodes added by user to <q-matching> element
             let promptNodes = [...this.childNodes].filter(node => node.nodeName !== 'SCRIPT' && node.textContent.trim().length > 0);

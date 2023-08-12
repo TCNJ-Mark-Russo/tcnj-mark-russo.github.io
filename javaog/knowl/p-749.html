@@ -11,8 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">But modifying a class with <dfn class="terminology">abstract</dfn> is not enough. If a class is <em class="emphasis">abstract</em> then it must also contain at least one method that is modified with <em class="emphasis">abstract</em> as well. A method with the additional <em class="emphasis">abstract</em> modifier is required to have no implementation. Instead, an abstract method is composed of a method signature only, and this signals that all derived classes must provide a concrete implementation of the method. Once again, the Java compiler enforces this design constraint. Classes that extend an abstract base class must (eventually) provide a concrete implementation of all abstract methods.</div>
-<span class="incontext"><a href="section-in-abstract-class.html#p-749" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-in-base-dynamic-binding.html" title="Listing 9.4.3">Listing 9.4.3</a> defines two classes, Base and Derived. Derived extends Base. (Recall that we can define multiple classes in one Java file provided only one is declared public.) Both have a private instance variable named <code class="code-inline tex2jax_ignore">name</code>. The Base class constructor initializes <code class="code-inline tex2jax_ignore">name</code> to "Base Class" and the Derived class constructor initialize <code class="code-inline tex2jax_ignore">name</code> to "Derived Class. Both implement a <code class="code-inline tex2jax_ignore">whodunnit()</code> method. The Derived class version of <code class="code-inline tex2jax_ignore">whodunnit()</code> overrides the Base class version. Both implementations return the <code class="code-inline tex2jax_ignore">name</code>, which will be the name of the "guilty party." Base implements a <code class="code-inline tex2jax_ignore">main(…)</code> method that declares a variable named <code class="code-inline tex2jax_ignore">guilty</code> which has type Base and initializes it to an object of type Derived. It then invokes invokes the <code class="code-inline tex2jax_ignore">whodunnit()</code> method on guilty to find out, <code class="code-inline tex2jax_ignore">whodunnit</code>.</div>
+<span class="incontext"><a href="section-in-polymorph.html#p-749" class="internal">in-context</a></span>
 </body>
 </html>

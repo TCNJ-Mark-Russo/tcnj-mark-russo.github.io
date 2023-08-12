@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Similar to iteration, we can use a recursive technique to accumulate a result. Let’s consider the simple problem of summing a sequence of integers in a range [begin, end]. <a href="" class="xref" data-knowl="./knowl/listing-re-sums.html" title="Listing 12.3.1">Listing 12.3.1</a> includes two methods to solve this problem: one iterative and one recursive. The <code class="code-inline tex2jax_ignore">main(…)</code> method tests both on the integer range [1, 10]. Both produce the correct value of 55.</div>
-<span class="incontext"><a href="section-re-characterising.html#p-889" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">The first step is to check that the first and last characters in the String are equal. What’s left is to continue with the chars in the middle. In a way, we are checking that the middle chars themselves constitute a smaller palindrome. Why not use the same <code class="code-inline tex2jax_ignore">isPalindrome(…)</code> method to check this inner substring, without the first and last chars? Wouldn’t this solve our problem? In other words, we can say that a String is a palindrome if the first and last chars are equal and the remaining part of the String is also a palindrome. A String of length 1 is a palindrome by definition because the first and last characters are identical.</div>
+<span class="incontext"><a href="section-re-thinking.html#p-889" class="internal">in-context</a></span>
 </body>
 </html>

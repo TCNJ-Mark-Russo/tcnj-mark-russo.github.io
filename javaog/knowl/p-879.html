@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The state of a suspended method is saved in an internal data structure called a <dfn class="terminology">stack frame</dfn>. A stack frame tracks the suspended method’s scope (variables and their instantaneous values) and on which instruction to continue execution when the invoked method completes. There are as many stack frames as your program has suspended methods, all of which are stored in another data structure called the <dfn class="terminology">call stack</dfn>. To visualize a call statck, think of a stack of clean dinner plates. Typically, you add to the top of a stack, and remove from the top of the stack. It is the same with the call stack. When a new stack frame (dinner plate) is created as a result of one method invoking another, the stack frame is <em class="emphasis">pushed</em> onto the top of the call stack. When the invoked method completes, the stack frame describing the suspended method is <em class="emphasis">popped</em> off the top of the stack and used to resume execution.</div>
-<span class="incontext"><a href="section-re-call-stack.html#p-879" class="internal">in-context</a></span>
+<div class="para">In <a href="" class="xref" data-knowl="./knowl/listing-ex-writefile1.html" title="Listing 11.6.1">Listing 11.6.1</a> we demonstrate the use of the FileWriter class by defining a utility method named <code class="code-inline tex2jax_ignore">log(…)</code> which takes a message String and appends it to a file named "log.txt". This static method can very useful when you need to monitor a long running program that you cannot monitor continuously.</div>
+<span class="incontext"><a href="section-ex-writing-files.html#p-879" class="internal">in-context</a></span>
 </body>
 </html>

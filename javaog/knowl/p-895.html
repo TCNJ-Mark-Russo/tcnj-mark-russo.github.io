@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">We use <em class="emphasis">method polymorphism</em> to overload the <code class="code-inline tex2jax_ignore">recursiveMax(…)</code> method with two implementations. The first overload takes only the double array as a parameter. This is a helper method, which is not recursive. It serves only to help us invoke the second overload, which is a recursive method. This second implementation takes the double array as well as the starting index (<code class="code-inline tex2jax_ignore">idx</code>) in the array from which the maximum should be calculated in the remaining elements. The second overload starts by checking for a base case, which occurs when the index from which to start is the last index of the array. The maximum value of one remaining array element is that array element value, so this value is returned immediately. If <code class="code-inline tex2jax_ignore">idx</code> is not the last index, the method is invoked recursively with the double array and a starting index of <code class="code-inline tex2jax_ignore">idx+1</code>, which computes the the maximum value of the remaining elements in the array, excluding the first. The value returned from this recursive invocation is compared to the element at <code class="code-inline tex2jax_ignore">idx</code> and the maximum of the two is returned. The <code class="code-inline tex2jax_ignore">main(…)</code> method tests both methods on an arbitrary array of doubles. Both produce the correct result of 9.8.</div>
-<span class="incontext"><a href="section-re-characterising.html#p-895" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">We’ve constructed a way to solve the problem <em class="emphasis">in terms of itself</em>. This is <em class="emphasis">recursion</em>.</div>
+<span class="incontext"><a href="section-re-thinking.html#p-895" class="internal">in-context</a></span>
 </body>
 </html>

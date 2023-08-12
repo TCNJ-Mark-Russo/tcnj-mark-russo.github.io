@@ -11,71 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.6.8<span class="period">.</span></span><span class="space"> </span>Pad Mouse Event-Related Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.2.3<span class="period">.</span></span><span class="space"> </span>array vs ArrayList</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
-<th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Feature</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">ArrayList</code></th>
+<th scope="col" class="l m b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">array</code></th>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMousePressedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMousePressedHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-67-hidden.html" title="Footnote 4.6.12"><sup> 12 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMousePressed event handler using a method reference.</td>
+<td class="l t b0 r0 l0 t0 lines">Creating</td>
+<td class="l t b0 r0 l0 t0 lines">Uses <code class="code-inline tex2jax_ignore">new</code> with<br>the constructor</td>
+<td class="l t b0 r0 l0 t0 lines">Uses <code class="code-inline tex2jax_ignore">new</code> with<br><code class="code-inline tex2jax_ignore">[]</code> and size</td>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseReleasedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseReleasedHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-68-hidden.html" title="Footnote 4.6.13"><sup> 13 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMouseReleased event handler using a method reference.</td>
+<td class="l t b0 r0 l0 t0 lines">Reading the<br>number of items</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">.size()</code><br>method</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">.length</code><br>property</td>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseMovedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseMovedHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-69-hidden.html" title="Footnote 4.6.14"><sup> 14 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMouseMoved event handler using a method reference.</td>
+<td class="l t b0 r0 l0 t0 lines">Accessing element<br>value</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">.get(index)</code><br>method</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">[index]</code><br>notation</td>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseClickedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseClickedHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-70-hidden.html" title="Footnote 4.6.15"><sup> 15 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMouseClicked event handler using a method reference.</td>
+<td class="l t b0 r0 l0 t0 lines">Updating element<br>value</td>
+<td class="l t b0 r0 l0 t0 lines">Use <code class="code-inline tex2jax_ignore">.set(index, val)</code><br>or <code class="code-inline tex2jax_ignore">.add(val)</code> methods</td>
+<td class="l t b0 r0 l0 t0 lines">Use the <code class="code-inline tex2jax_ignore">[index]</code><br>notation</td>
 </tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseDoubleClickedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseDoubleClickedHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-71-hidden.html" title="Footnote 4.6.16"><sup> 16 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMouseDoubleClicked event handler using a method reference.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseDraggedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseDraggedHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-72-hidden.html" title="Footnote 4.6.17"><sup> 17 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMouseDragged event handler using a method reference.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseEnteredHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseEnteredHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-73-hidden.html" title="Footnote 4.6.18"><sup> 18 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMouseEntered event handler using a method reference.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setMouseExitedHandler-doodlepad.Pad.PadMouseEventHandler-" target="_blank">public void setMouseExitedHandler(PadMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-74-hidden.html" title="Footnote 4.6.19"><sup> 19 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Assign an onMouseExited event handler using a method reference.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#addMouseListener-doodlepad.PadMouseListener-" target="_blank">public void addMouseListener(PadMouseListener o)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-75-hidden.html" title="Footnote 4.6.20"><sup> 20 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Add object to the list of items that are notified on Pad’s mouse events.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#removeMouseListener-doodlepad.PadMouseListener-" target="_blank">public void removeMouseListener(PadMouseListener o)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-76-hidden.html" title="Footnote 4.6.21"><sup> 21 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Remove object from Pad’s mouse listener list.</td>
-</tr>
-</table></div></figure><span class="incontext"><a href="section-dp-events.html#table-33" class="internal">in-context</a></span>
+</table></div></figure><span class="incontext"><a href="section-ar-iterating.html#table-33" class="internal">in-context</a></span>
 </body>
 </html>

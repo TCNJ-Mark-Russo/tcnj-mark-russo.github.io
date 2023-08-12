@@ -11,59 +11,29 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.6.6<span class="period">.</span></span><span class="space"> </span>Shape Mouse Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.5.5<span class="period">.</span></span><span class="space"> </span>Color-related Pad object methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseClickedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseClickedHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-74-hidden.html" title="Footnote 14.6.1"><sup> 1 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setBackground-double-double-double-" target="_blank">public void setBackground(double red, double green, double blue)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-73-hidden.html" title="Footnote 14.5.21"><sup> 21 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is clicked on a Shape. A mouse-click event occurs when the mouse is pressed and released at the same location.</td>
+<td class="l t b0 r0 l0 t0 lines">Specify the color to use to fill the background of a Pad object. Only red, green and blue color components are specified because Pad objects may not be transparent.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseDoubleClickedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseDoubleClickedHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-75-hidden.html" title="Footnote 14.6.2"><sup> 2 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setBackground-double-" target="_blank">public void setBackground(double gray)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-74-hidden.html" title="Footnote 14.5.22"><sup> 22 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is double-clicked on a Shape. A mouse-double-clicked event occurs when the mouse is pressed and released at the same location twice in succession.</td>
+<td class="l t b0 r0 l0 t0 lines">Specify the shade of gray to use to fill the background of a Pad object. The single parameter value is used for red, green and blue.</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMousePressedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMousePressedHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-76-hidden.html" title="Footnote 14.6.3"><sup> 3 </sup></a>
+<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Pad.html#getBackground--" target="_blank">public java.awt.Color getBackground()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-75-hidden.html" title="Footnote 14.5.23"><sup> 23 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is pressed on a Shape. A mouse-pressed event occurs when the mouse button is pressed while over a Shape.</td>
+<td class="l t b0 r0 l0 t0 lines">Return the color used to fill the background of a Pad object as a java.awt.Color object.</td>
 </tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseReleasedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseReleasedHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-77-hidden.html" title="Footnote 14.6.4"><sup> 4 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is released on a Shape. A mouse-released event occurs when the mouse button is released while over a Shape.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseMovedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseMovedHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-78-hidden.html" title="Footnote 14.6.5"><sup> 5 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when a mouse is moved on a Shape. A mouse-moved event occurs when the mouse is moved over a Shape while the mouse button is not pressed.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseDraggedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseDraggedHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-79-hidden.html" title="Footnote 14.6.6"><sup> 6 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse is dragged on a Shape. A mouse-dragged event occurs when the mouse is moved over a Shape while the mouse button is pressed.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseEnteredHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseEnteredHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-80-hidden.html" title="Footnote 14.6.7"><sup> 7 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse enters a Shape. A mouse-entered event occurs when the mouse is moved from a location outside the bounds of a Shape to a location within the bounds of a Shape.</td>
-</tr>
-<tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setMouseExitedHandler-doodlepad.Shape.ShapeMouseEventHandler-" target="_blank">public void setMouseExitedHandler(ShapeMouseEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-81-hidden.html" title="Footnote 14.6.8"><sup> 8 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Set a method to be invoked when the mouse exits a Shape. A mouse-exited event occurs when the mouse is moved from a location within the bounds of a Shape to a location outside the bounds of a Shape.</td>
-</tr>
-</table></div></figure><span class="incontext"><a href="section-dp-events.html#table-41" class="internal">in-context</a></span>
+</table></div></figure><span class="incontext"><a href="section-dp-colors.html#table-41" class="internal">in-context</a></span>
 </body>
 </html>

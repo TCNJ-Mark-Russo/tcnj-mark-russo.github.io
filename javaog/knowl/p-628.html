@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s expand our LED class example once more. Let’s assume that we can choose the color that the LED emits when it is on to one of four values: RED, GREEN, BLUE, and YELLOW. It is easy enough to add an instance variable that holds an LED color, but we also need to manage that variable, limiting it to one of the four possible values. To manage this instance variable, we must add to the LED class a <code class="code-inline tex2jax_ignore">setColor(…)</code> method, a setter, and a <code class="code-inline tex2jax_ignore">getColor()</code> method, a getter. To help with this addition, let’s define an enum with constants for the four LED colors, similar to what we did in <a href="section-pe-enumerated.html" class="internal" title="Section 2.7: Enumerated Types">Section 2.7</a>.</div>
-<span class="incontext"><a href="section-cl-methods.html#p-628" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">All of the methods that we’ve written in previous chapters were static (i.e. class scope). This was determined when adding the <code class="code-inline tex2jax_ignore">static</code> keyword to the method declaration. By contrast, the object-scoped methods we used, were defined in either core Java libraries or other provided libraries, like those in DoodlePad. To take advantage of the object-oriented nature of Java we need to declare object-scoped fields that hold data specific to the instance and methods that have access to these fields. This enables us to define our own objects that <dfn class="terminology">encapsulate</dfn> and manage data in accordance with the principles of object-oriented programming. Let’s learn how to define our own instantiatable classes that encapsulate object-specific data.</div>
+<span class="incontext"><a href="section-cl-class-v-instance.html#p-628" class="internal">in-context</a></span>
 </body>
 </html>

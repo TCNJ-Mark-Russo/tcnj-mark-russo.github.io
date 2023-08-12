@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">As your programs grow in size, you will define more classes, many of which may end up with identical method and field implementations, especially when they are related in some way. This ends up making program maintenance very difficult and violates the <a href="" class="xref" data-knowl="./knowl/assemblage-dry.html" title="Assemblage: Principle: Don’t Repeat Yourself (DRY)">DRY</a> principle. This is a tedious and error-prone process. Sooner or later a mistake will be made. It is much better to define the shared methods once, and let each of the class make use of the single implementation. This is one majr benefit of <dfn class="terminology">inheritance</dfn>.</div>
-<span class="incontext"><a href="chapter-inheritance.html#p-682" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">One approach is to author a separate class that defines only this top-level <code class="code-inline tex2jax_ignore">main(…)</code> method that starts the larger program. In a sense, this <code class="code-inline tex2jax_ignore">main(…)</code> method <em class="emphasis">drives</em> the rest of your program, hence the term <dfn class="terminology">Driver Class</dfn>. In fact, you may define several Driver Classes in a program, each with a different purpose, and invoke each separately by sepcifying the name of the Driver Class of interest when running your program using the <code class="code-inline tex2jax_ignore">java</code> command.</div>
+<span class="incontext"><a href="section-cl-multi-file-programs.html#p-682" class="internal">in-context</a></span>
 </body>
 </html>

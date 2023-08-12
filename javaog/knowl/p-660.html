@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The compiler searches and finds all classes that it needs to produce compiled class files. The compiler will complain if it cannot find a class. Note that you will see a compiled <code class="code-inline tex2jax_ignore">.class</code> file produced by the compiler for every class that you define, even if those classes are not public.</div>
-<span class="incontext"><a href="section-cl-multi-file-programs.html#p-660" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">With nested scopes we can define a variable in the scope of a method or constructor and then another having the same name in an outer object or class scope. This doesn’t cause a problem until we want to access one of the two variables by name from the inner scope. An ambiguity arises. Java cannot tell if you intended to reference the variable declared within the inner method scope or the outer object or class scope. To solve this problem, Java always chooses a variable by searching for the variable declaration in the current scope, and if not found, it proceeds to outer scopes progressively until the first match is found.</div>
+<span class="incontext"><a href="section-cl-shadowing.html#p-660" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">When a program executes, it dynamically allocates memory to hold objects, variables, and other data structures. As the program runs, the garbage collector periodically examines the objects to determine which ones are still in use. It does this through a process called "mark and sweep." It starts by traversing the reachable objects (e.g., through global variables, static variables, and local variables, etc.), marking all objects in use. Any objects not marked during this traversal are considered unreachable and eligible for garbage collection. When we lose all references to an object it becomes unreachable and eligible for garbage collection.</div>
-<span class="incontext"><a href="section-rt-gc.html#p-353" class="internal">in-context</a></span>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<div class="para">Java variable types can be grouped into two broad categories: <dfn class="terminology">primitive types</dfn> and <dfn class="terminology">reference types</dfn>. Unlike primitive type variables which have memory locations holding <em class="emphasis">data values</em>, the memory for reference type variables hold <em class="emphasis">references</em> to objects that are stored elsewhere in memory. In other words, the data associated with a reference type variable is not an object itself, but rather it tells Java where to find the object.</div>
+<span class="incontext"><a href="chapter-reftypes.html#p-353" class="internal">in-context</a></span>
 </body>
 </html>

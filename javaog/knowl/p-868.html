@@ -11,8 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">What about a recursive version of <code class="code-inline tex2jax_ignore">isPalindrome(String lets)</code>? Can you identify a way to determine if a String is a palindrome involving a test that a substring of the main String is a palindrome?</div>
-<span class="incontext"><a href="section-re-thinking.html#p-868" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1b.html" title="Listing 11.4.3">Listing 11.4.3</a> is an alternative version of <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a>. The definition of <code class="code-inline tex2jax_ignore">printFile(…)</code> in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1b.html" title="Listing 11.4.3">Listing 11.4.3</a> had no try-catch. Instead, it declares that it throws the checked FileNotFoundException by adding <code class="code-inline tex2jax_ignore">throws FileNotFoundException</code> to the method declaration. This requires us to move the try-catch to <code class="code-inline tex2jax_ignore">main(…)</code> where <code class="code-inline tex2jax_ignore">printFile(…)</code> is invoked. The invocation of this method must be placed in the try-block of the try-catch otherwise the compiler will print an error and fail.</div>
+<span class="incontext"><a href="section-ex-reading-files.html#p-868" class="internal">in-context</a></span>
 </body>
 </html>
