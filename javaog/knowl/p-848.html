@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Output from running <a href="" class="xref" data-knowl="./knowl/listing-ex-extest2.html" title="Listing 11.3.4">Listing 11.3.4</a> tells us the class of the exception that was caught and a description of the problem.</div>
+<div class="para">But why did we recieve an ArrayIndexOutOfBoundsException exception and not an ArithmeticException? The answer relates to how a quotient is evaluated, left-to-right. The numerator is evaluted before the denominator, and so the out-of-bounds index in the array is detected first. Had the index be in-bounds, the ArithmeticException would have been thrown instead.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-848" class="internal">in-context</a></span>
 </body>
 </html>

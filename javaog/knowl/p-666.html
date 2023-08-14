@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">With nested scopes we can define a variable in the scope of a method or constructor and then another having the same name in an outer object or class scope. This doesn’t cause a problem until we want to access one of the two variables by name from the inner scope. An ambiguity arises. Java cannot tell if you intended to reference the variable declared within the inner method scope or the outer object or class scope. To solve this problem, Java always chooses a variable by searching for the variable declaration in the current scope, and if not found, it proceeds to outer scopes progressively until the first match is found.</div>
-<span class="incontext"><a href="section-cl-shadowing.html#p-666" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">As an example, rather than defaulting the LED on color to RED and then being required to change it using the <code class="code-inline tex2jax_ignore">setColor(…)</code> method, let’s overload the constructor as two implementations. The the more general implementation takes the LED on color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value <code class="code-inline tex2jax_ignore">LEDColor.RED</code> as the third parameter, making it the default. Note that a constructor overload is invoked using <code class="code-inline tex2jax_ignore">this</code> instead of the class name, and no <code class="code-inline tex2jax_ignore">new</code> keyword.</div>
+<span class="incontext"><a href="section-cl-methods.html#p-666" class="internal">in-context</a></span>
 </body>
 </html>

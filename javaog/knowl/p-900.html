@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">How do these two implementations compare? More initial thought was required for the iterative version to ensure we calculated the indexes correctly. Arguably, once you see it, the recursive version is more elegant and easier to understand. The recursive version of <code class="code-inline tex2jax_ignore">isPalindrome(…)</code> says that Strings of length 0 or 1 are a palindrome by definition, and if the end characters are equal then the answer is delegated to testing if the central substring constitutes a palindrome.</div>
+<div class="para">Otherwise, the String is a palindrome if the characters at both ends are equal and the substring excluding the end characters is also a palindrome. To test for the smaller palindrome, we invoke the same method, passing a smaller substring and returning as the overall result whatever the recursive method returns. This is called the <dfn class="terminology">recursive case</dfn>.</div>
 <span class="incontext"><a href="section-re-thinking.html#p-900" class="internal">in-context</a></span>
 </body>
 </html>

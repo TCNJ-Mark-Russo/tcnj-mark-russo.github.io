@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">As a <em class="emphasis">final</em> note, you may decide that you do not want a class that you define to be derived. You can accomplish this by adding the <code class="code-inline tex2jax_ignore">final</code> keyword to your class declaration.</div>
+<div class="para">With the removal of the <code class="code-inline tex2jax_ignore">light</code> instance variable, we must replacement of all references to <code class="code-inline tex2jax_ignore">this.light</code>. For example, in the <code class="code-inline tex2jax_ignore">.turnOn()</code> and <code class="code-inline tex2jax_ignore">.turnOff()</code> methods, statements like <code class="code-inline tex2jax_ignore">this.light.setFillColor(…)</code> are now shortened to <code class="code-inline tex2jax_ignore">this.setFillColor(…)</code>. The LED class does not implement the <code class="code-inline tex2jax_ignore">setFillColor(…)</code> method directly, but LED <em class="emphasis">extends</em> Oval, and Oval provides access to the method through inheritance.</div>
 <span class="incontext"><a href="section-in-basics.html#p-727" class="internal">in-context</a></span>
 </body>
 </html>

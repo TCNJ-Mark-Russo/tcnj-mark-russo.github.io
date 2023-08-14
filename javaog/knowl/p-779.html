@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">Abstract classes and methods are very useful. Centralizing shared behavior and requiring derived classes to implement dependent custom behavior enforces design constraints and ensures compatibility. What if we take this idea to an extreme and mark all methodsas  abstract? We would be left with an abstract base class having only abstract method signatures, no implementations, all of which must be implemented by derived classes. This idea turns out to be a very useful concept on its own, called an <dfn class="terminology">interface</dfn>.</div>
-<span class="incontext"><a href="chapter-interfaces.html#p-779" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">The complete definition of <code class="code-inline tex2jax_ignore">draw(…)</code> is given in <a href="" class="xref" data-knowl="./knowl/listing-in-shape-draw.html" title="Listing 9.6.1">Listing 9.6.1</a>. There is no method body! The definitin is a signature only, no curly braces, just a semicolon (<code class="code-inline tex2jax_ignore">;</code>). Shape can provide no implementation. But Shape methods depend upon there being a concrete implementation. This is guaranteed by the compiler by the addition of the <em class="emphasis">abstract</em> modifier.</div>
+<span class="incontext"><a href="section-in-abstract-class.html#p-779" class="internal">in-context</a></span>
 </body>
 </html>

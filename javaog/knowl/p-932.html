@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The <code class="code-inline tex2jax_ignore">Fibonacci</code> class has two static variables used for tracking metrics. The <code class="code-inline tex2jax_ignore">count</code> long will be used to count the number of recursive calls or iterations in a method, and the <code class="code-inline tex2jax_ignore">start</code> long will hold the moment in time a method starts execution measured as milliseconds since 00:00 on January 1, 1970. The value of <code class="code-inline tex2jax_ignore">start</code> is subtracted from a second measurement of milliseconds after a method completes which estimates the method’s execution duration in milliseconds. The built-in static Java utility method <code class="code-inline tex2jax_ignore">System.currentTimeMillis()</code> returns the number of milliseconds that have elapsed since January 1, 1970 at 00:00. It is convenient tool to use to calculate elapsed time. The first line in <code class="code-inline tex2jax_ignore">recursiveFibonacci(…)</code> increments the <code class="code-inline tex2jax_ignore">count</code> variable so it will hold the total number of times the method was invoked.</div>
+<div class="para">Let’s explore two alternative ways to calculate Fibonacci number: <span class="process-math">\(F_N\text{.}\)</span> To help better understand the difference between these implementations, we’ll measure and report a few metrics, including recursion/iteration count as well as elapsed wall-clock time.</div>
 <span class="incontext"><a href="section-re-characterising.html#p-932" class="internal">in-context</a></span>
 </body>
 </html>

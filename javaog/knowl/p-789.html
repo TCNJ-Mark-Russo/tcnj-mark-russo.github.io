@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">There is a much shorter and more clever implementation of <code class="code-inline tex2jax_ignore">compareTo(…)</code> that merely returns the difference between word counts. Convince yourself that the following revision works just as well as the long-winded version in <a href="" class="xref" data-knowl="./knowl/listing-if-sentence.html" title="Listing 10.1.2">Listing 10.1.2</a>.</div>
+<div class="para">The Java String class implements Comparable&lt;T&gt;. Strings order themselves <em class="emphasis">lexographically</em>, which is the same ordering of words when listed in a dictionary. First the underlying integer code of each successive character is compared until a difference is found. The String with the lesser character code value is ordered first. Also, shorter Strings are ordered first. We can explore this by invoking the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method on several String pairs in JShell.</div>
 <span class="incontext"><a href="section-if-comparable.html#p-789" class="internal">in-context</a></span>
 </body>
 </html>

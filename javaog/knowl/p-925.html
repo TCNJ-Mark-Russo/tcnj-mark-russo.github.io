@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">A recursive method must encode at least one <dfn class="terminology">base case</dfn> and one <dfn class="terminology">recursive case</dfn> to work properly. These cases may not always be obvious. For example, a base case of a <code class="code-inline tex2jax_ignore">void</code> method may simply be a scenario in which program control causes the method to exit because no recursive case condition is satisfied.</div>
+<div class="para">All recursive methods we’ve explored thus far are examples of <dfn class="terminology">direct recursion</dfn>, which occurs when a recursive method invokes itself <em class="emphasis">directly</em>. It is possible to write a program in which no individual method invokes itself, yet is considered recursive. In the simplest case, one method might invoke a second, which invokes the first, and so on. This is an example of <dfn class="terminology">indirect recursion</dfn>. As long as an invoked method traces back to itself, the program is considered recursive.</div>
 <span class="incontext"><a href="section-re-characterising.html#p-925" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The following code snippet demonstrates hwo to create two FileWriter objects using a file name String. The first <code class="code-inline tex2jax_ignore">fw1</code> variable references a FileWriter object that will write from the beginning of the file, overwriting anything that is in the file currently, and the second <code class="code-inline tex2jax_ignore">fw2</code> variable references a FileWriter object that will append to the file by beginning to write at the end of the file. Note that the only difference between these two constructors is the addition of a <code class="code-inline tex2jax_ignore">true</code> after the file name when intending to append to the file.</div>
+<div class="para">When intending to append to the end of a file instead of writing from the beginning, we must be careful to open a file using a FileWriter in <em class="emphasis">append mode</em>. By default, the FileWriter opens in <em class="emphasis">write mode</em>, which begins writing from the beginning of a file. This may or may not be what you want. As a demonstration of FileWriter, let’s write a utility function that appends a message to a log file.</div>
 <span class="incontext"><a href="section-ex-writing-files.html#p-883" class="internal">in-context</a></span>
 </body>
 </html>

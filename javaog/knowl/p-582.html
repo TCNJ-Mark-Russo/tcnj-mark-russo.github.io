@@ -12,8 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<a href="" class="xref" data-knowl="./knowl/listing-ar-randomovals2.html" title="Listing 7.2.1">Listing 7.2.1</a> is an updated version of <a href="" class="xref" data-knowl="./knowl/listing-c1-randomovals.html" title="Listing 5.5.2">Listing 5.5.2</a>, with a few changes made. First, we use an array instead of an ArrayList to hold all Oval object references. Second, we change the while-statement to a for-statement. As you study the example, note that the number of Oval objects to create is set when declaring the array near the top of the program. For the iteration continuation test, we interrogate the array for its length instead of entering a value explicitly, and check that the loop counter is less-than the length. It is better to interrogate the array instead of entering the value into the for-statement because it is less error-prone if later we decide to modify the number of Oval objects. Only one change is made instead of searching the program for all instances of 20.</div>
-<span class="incontext"><a href="section-ar-iterating.html#p-582" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Take a moment to notice something important about arrays. In order to fully realize an array containing non-default element values, you must complete <em class="emphasis">three steps</em>.</div>
+<ol class="decimal">
+<li><div class="para">There must be a variable that references the array. Without maintaining a reachable reference, the array is subject to garbage collection.</div></li>
+<li><div class="para">Declaring an array variable does NOT create an array. You must use the <dfn class="terminology">new</dfn> keyword and follow the array declaration syntax with size (or initializing values) to create the actual array. The variable has the ability only to reference an existing array, not create the array. You must explicitly create the array in order for it to exist.</div></li>
+<li><div class="para">A newly created array contains element with default values for its type. A third step of initializing the array is required for it to contain something other than default values.</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="section-ar-creating.html#p-582" class="internal">in-context</a></span>
 </body>
 </html>

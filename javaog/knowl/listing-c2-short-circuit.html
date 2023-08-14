@@ -11,7 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// ShortCircuit.java
+public class ShortCircuit {
+
+  public static void main(String[] args) {
+    // Left subexpression is false, so the right is never evaluated
+    if ( eval("A", false) &amp;&amp; eval("B", true) ) {
+        System.out.println("Conjunction is true");
+    } else {
+        System.out.println("Conjunction is false");
+    }
+  }
+
+  // Print label and return boolean parameter value
+  public static boolean eval(String label, boolean value) {
+    System.out.println(label);
+    return value;
+  }
+}
+</code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">6.6.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore"></code>ShortCircuit.java</figcaption></figure><span class="incontext"><a href="section-c2-comparisons.html#listing-c2-short-circuit" class="internal">in-context</a></span>
 </body>
 </html>

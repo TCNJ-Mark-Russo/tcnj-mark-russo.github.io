@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">A recursive method may have more than one base case and/or more than one recursive case. Multi-base and multi-recursive case methods encode multiple conditions that trigger different base cases or multiple conditions that trigger different recursive cases. We’ll refer to this scenario as <dfn class="terminology">multi-case recursion</dfn>.</div>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-re-walk.html" title="Listing 12.3.3">Listing 12.3.3</a> is a simple demonstration of <em class="emphasis">indirect recursion</em>. The <code class="code-inline tex2jax_ignore">left(…)</code> method prints "left" and the <code class="code-inline tex2jax_ignore">right(…)</code> method prints "right." Neither the <code class="code-inline tex2jax_ignore">left(…)</code> nor the <code class="code-inline tex2jax_ignore">right(…)</code> methods are recursive by themselves. But, because <code class="code-inline tex2jax_ignore">left(…)</code> invokes <code class="code-inline tex2jax_ignore">right(…)</code> and <code class="code-inline tex2jax_ignore">right(…)</code> invokes <code class="code-inline tex2jax_ignore">left(…)</code>, the program is <em class="emphasis">indirectly recursive</em>. Both methods implement a base case that prints "arrived" and stops the recursion when the step count <code class="code-inline tex2jax_ignore">N</code> reaches 0.</div>
 <span class="incontext"><a href="section-re-characterising.html#p-926" class="internal">in-context</a></span>
 </body>
 </html>

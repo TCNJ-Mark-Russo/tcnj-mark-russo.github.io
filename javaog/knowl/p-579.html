@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">This initialization syntax may be used with any type, provided you are able to write down the sequence of value in braces. In the examples below, pay careful attention to the <code class="code-inline tex2jax_ignore">rands</code> array holding two Random objects. The only means of creating Random objects is to use the Random constructor.. Within the braces of the initializer, we invoked the Random constructor twice in create two objects which are stored in the <code class="code-inline tex2jax_ignore">rands</code> array.</div>
+<div class="para">Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.</div>
 <span class="incontext"><a href="section-ar-creating.html#p-579" class="internal">in-context</a></span>
 </body>
 </html>

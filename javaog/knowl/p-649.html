@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">To test our new methods, in addition to replacing configuration statements in the constructor with <code class="code-inline tex2jax_ignore">turnOff()</code>, we invoke <code class="code-inline tex2jax_ignore">turnOn()</code> in <code class="code-inline tex2jax_ignore">main(…)</code> on both LED objects after instantiation. We also test the state of the first LED object by invoking its <code class="code-inline tex2jax_ignore">isOn()</code> method and printing the result. See the result in <a href="" class="xref" data-knowl="./knowl/figure-cl-led4.html" title="Figure 8.3.3">Figure 8.3.3</a>.</div>
+<div class="para">Consider what might happen if we decided to leave the initialization of the LED object’s instance variables by setting the object state explicitly in the constructor. Doing this requires us to make sure that the constructor and the <code class="code-inline tex2jax_ignore">turnOff()</code> method remained in sync. If we decided to change the fill color of the LED when off, and we modified the code in <code class="code-inline tex2jax_ignore">turnOff()</code> but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such an oversight can lead to more serious problems. This important software development principle has been dubbed <dfn class="terminology">Don’t repeat yourself</dfn> or <dfn class="terminology">DRY</dfn>.</div>
 <span class="incontext"><a href="section-cl-methods.html#p-649" class="internal">in-context</a></span>
 </body>
 </html>

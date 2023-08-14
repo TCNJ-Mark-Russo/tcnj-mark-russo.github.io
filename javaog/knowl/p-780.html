@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">Unlike base classes which are <em class="emphasis">extended</em> by another class, interfaces are <dfn class="terminology">implemented</dfn> by a class. Otherwise, an interface can be thought of an abstract base class with nothing but abstract method signatures. <em class="emphasis">Implementing</em> a interface is a kind of <em class="emphasis">contract</em> that must be fulfilled by the implementing derived class. To fulfill the contract, a class that implements an interface must provide concrete method implementations with signatures that match all those found in the interface. As with abstract methods, the Java compiler enforces the contract, raising compile-time errors if an interface’s signature is not implemented.</div>
-<span class="incontext"><a href="chapter-interfaces.html#p-780" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Abstract classes and abstrat methods give us a way to express intended design constraints into our class definitions, which are checked by the compiler. If a base class depends on its subclasses implementing certain methods that have no reasonable default implementation, then the base class is abstract. Modify the base class with <code class="code-inline tex2jax_ignore">abstract</code> and include the abstract method signatures that are required in the base class. The Java comiler will ensure these abstract methods will be implemented in a derived class so that all base class behavior functions properly.</div>
+<span class="incontext"><a href="section-in-abstract-class.html#p-780" class="internal">in-context</a></span>
 </body>
 </html>
