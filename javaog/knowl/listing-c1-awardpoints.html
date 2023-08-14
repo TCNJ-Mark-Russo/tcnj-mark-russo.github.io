@@ -20,12 +20,12 @@ public static void awardPoints(double x1, double y1) {
     double dist = Math.sqrt(Math.pow(x1 - xc, 2) + Math.pow(y1 - yc, 2));
 
     // Branch depending on distance from center
-    if (dist &lt; 20) {
+    if (dist &lt; 60) {
         // In center red circle. Add 4 points.
         total = total + 4;
     }
 
-    if (dist &gt;= 20 &amp;&amp; dist &lt; 50) {
+    if (dist &gt;= 60 &amp;&amp; dist &lt; 120) {
         // In green circle. Add 3 points.
         total = total + 3;
     }

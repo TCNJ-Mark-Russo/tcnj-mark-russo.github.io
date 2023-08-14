@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The statement that performs the division was moved into a try-block, so any problems with this statement will be caught. Following the try-block is a catch-block, which is followed by a pair of parentheses containing the declaration of an ArithmeticException variable. This format indicates that any exception object that can be bound to the <code class="code-inline tex2jax_ignore">e</code> variable will cause program flow to enter the catch-block. Remember, due to subtype polymorphism, we can assign any object a type class or any one of its derived classes to a variable of type class. In <a href="" class="xref" data-knowl="./knowl/listing-ex-try.html" title="Listing 11.3.2">Listing 11.3.2</a>, the catch-block with handle any thrown ArithmeticException objects, or objects with a type that matches any classes that derive from ArithmeticException. In this example an ArithmeticException was thrown, which matches the declaration in the catch-block, and so the message is printed.</div>
-<span class="incontext"><a href="section-ex-catching.html#p-836" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">In <a href="" class="xref" data-knowl="./knowl/figure-ex-exception-class-hierarchy.html" title="Figure 11.2.1">Figure 11.2.1</a> under the Throwable class, things that can go wrong in Java at runtime are grouped under two broad base classes, <dfn class="terminology">Error</dfn> and <dfn class="terminology">Exception</dfn>. Classes that derive from Error are very serious problems from which there is no recovery possible. These tend to occur when system resources are exhausted, such as when an instance of the OutOfMemoryError class, the StackOverflowError class, or the ominous ThreadDeath class, is thrown. Because we cannot catch and handle these exceptions, the best we can do is note that they exist and hope we never encounter them. The Exception class and its derived classes are of more interest because we can catch these exceptions and hopefully handle them in a productive way.</div>
+<span class="incontext"><a href="section-ex-classes.html#p-836" class="internal">in-context</a></span>
 </body>
 </html>

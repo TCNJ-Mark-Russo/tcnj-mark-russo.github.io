@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Musketeers.java
+// The Three Musketeers order dinner
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Musketeers {
+  public static void main(String[] args) {
+    // The Three Musketeers enter the restaurant: Athos, Porthos and Aramis
+    
+    // Get ready to take their order.
+    HashMap&lt;String, ArrayList&lt;String&gt;&gt; order = 
+                            new HashMap&lt;String, ArrayList&lt;String&gt;&gt;();
+
+    // Add a new element for each Musketeer
+    order.put("Athos",   new ArrayList&lt;String&gt;());
+    order.put("Porthos", new ArrayList&lt;String&gt;());
+    order.put("Aramis",  new ArrayList&lt;String&gt;());
+
+    // Athos: I'll have a hamburger
+    order.get("Athos").add("Hamburger");      // Get Athos' order and add
+
+    // Porthos: Cheese fries please
+    order.get("Porthos").add("Cheese fries"); // Get Porthos' order and add
+
+    // Aramis: Greek Salad
+    order.get("Aramis").add("Greek salad");   // Get Aramis' order and add
+
+    // Athos: Nevermind. I'll have the Cobb salad
+    order.get("Athos").clear();               // Clear Athos' order
+    order.get("Athos").add("Cobb salad");     // Add a Cobb salad
+
+    // Porthos: Tuna sandwich as well
+    order.get("Porthos").add("Tuna sandwich"); 
+    
+    // Aramis: Iced tea too
+    order.get("Aramis").add("Iced tea");
+
+    // Athos: Grape juice for me
+    order.get("Athos").add("Grape juice");
+
+    // Porthos: Please add a chocolate milk shake to my order
+    order.get("Porthos").add("Chocolate shake");
+
+    // Waiter recounts order
+    System.out.println("Athos:");
+    for (int i=0; i&lt;order.get("Athos").size(); i++) {
+        System.out.println("   " + order.get("Athos").get(i));
+    }
+    System.out.println("Porthos:");
+    for (int i=0; i&lt;order.get("Porthos").size(); i++) {
+        System.out.println("   " + order.get("Porthos").get(i));
+    }
+    System.out.println("Aramis:");
+    for (int i=0; i&lt;order.get("Aramis").size(); i++) {
+        System.out.println("   " + order.get("Aramis").get(i));
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.5.9<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Musketeers.java</code></figcaption></figure><span class="incontext"><a href="section-c1-collection-classes.html#listing-c1-musketeer-order" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// NumberGuess.java
+import java.util.Scanner;   // Import helper classes
+import java.util.Random;
+
+public class NumberGuess {
+  public static void main(String[] args) {
+    // Instantiate a Scanner to read from the terminal
+    Scanner scnr = new Scanner(System.in);
+
+    // Instantiate a random number generator
+    Random rnd = new Random();
+
+    // Pick a random number to be guessed
+    int answer = rnd.nextInt(10);
+
+    int count = 0;          // Counter
+    while (true) {          // Keep going
+      count++;              // Increment count
+
+      if (count &gt; 3) {      // Max three guesses.
+        System.out.println("No more guesses.");
+        System.out.println("The correct number was " + answer);
+        break;
+      }
+
+      // Prompt user and read response.
+      System.out.print("Guess a number in [0, 9]: ");
+      int resp = scnr.nextInt();
+
+      if (resp &lt; answer) {  // Check value
+        System.out.println("Too low.");
+        continue;           // Try again 
+      } else if (resp &gt; answer) {
+        System.out.println("Too high.");
+        continue;           // Try again 
+      } else {              // Must be the right guess!
+        System.out.println("Correct. You win!");
+        break;
+      }
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.4.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">NumberGuess.java</code></figcaption></figure><span class="incontext"><a href="section-c1-break-continue.html#listing-c1-guess-a-number" class="internal">in-context</a></span>
+</body>
+</html>

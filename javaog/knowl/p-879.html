@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">In <a href="" class="xref" data-knowl="./knowl/listing-ex-writefile1.html" title="Listing 11.6.1">Listing 11.6.1</a> we demonstrate the use of the FileWriter class by defining a utility method named <code class="code-inline tex2jax_ignore">log(…)</code> which takes a message String and appends it to a file named "log.txt". This static method can very useful when you need to monitor a long running program that you cannot monitor continuously.</div>
+<div class="para">Plain text files can be written as well as read using Java. The use of only one Java class is required to write a plain text file, the FileWriter class. The FileWriter must be closed after it is open, and it implements the AutoClosable interface. Consequently, it is best to open it using a try-with-resources so that we allow Java to close the file for us.</div>
 <span class="incontext"><a href="section-ex-writing-files.html#p-879" class="internal">in-context</a></span>
 </body>
 </html>

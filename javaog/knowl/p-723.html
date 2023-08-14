@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">A method invoked on a derived class that does not implement the exact method signature, will cause Java to search for the method signature in the base class, and up the inheritance hierarchy. But, if a method with the signature is implemented in the dervied class, then that implementation will be invoked, even if the same method signature has been implemented in a base class. If a method in a dervied class has the same signature as one in its base class, we say that the derived class method <dfn class="terminology">overrides</dfn> the one in the base class.</div>
-<span class="incontext"><a href="section-in-overriding.html#p-723" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Let’s compare <a href="" class="xref" data-knowl="./knowl/listing-in-led6.html" title="Listing 9.2.1">Listing 9.2.1</a> with <a href="" class="xref" data-knowl="./knowl/listing-cl-led5.html" title="Listing 8.3.4">Listing 8.3.4</a> The first thing to notice is that the LED class no longer declares a private <code class="code-inline tex2jax_ignore">light</code> instance variable. This is not necessary because the LED itself is a kind of Oval, so no additional Oval object is required. Nevertheless, initialization is required. Because the LED is a kind of Oval, it must perform whatever initialization that an Oval requires, which is implemented by the Oval constructor. To invoke the constructor, we can use the <code class="code-inline tex2jax_ignore">super</code> keyword. In the second LED constructor, in place of the line that initialized the <code class="code-inline tex2jax_ignore">light</code> instance variable, we invoke the base class constructor using the line <code class="code-inline tex2jax_ignore">super(x, y, 30, 30)</code>. This relays the (x, y) LED constructor parameter values to the base class constructor, and fixes the LED size to 30×30.</div>
+<span class="incontext"><a href="section-in-basics.html#p-723" class="internal">in-context</a></span>
 </body>
 </html>

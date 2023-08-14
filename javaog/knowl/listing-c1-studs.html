@@ -13,17 +13,17 @@
 <body class="ignore-math">
 <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Studs.java
 public class Studs {
-    public static void main(String[] args) {
-        int feet, inches;                   // Temp variables
-        int width = 12*12;                  // Width of wall in inches
-        int position = 0;                   // First stud position
-        while ( position &lt;= width  ) {      // Keep going while less that width
-            feet = position / 12;           // Compute feet and remaining inches
-            inches = position % 12;         // Print results
-            System.out.println(feet + " ft " + inches + " in");
-            position += 16;                 // Increment position
-        }
+  public static void main(String[] args) {
+    int feet, inches;                   // Temp variables
+    int width = 12*12;                  // Width of wall in inches
+    int position = 0;                   // First stud position
+    while ( position &lt;= width  ) {      // Keep going while less that width
+      feet = position / 12;             // Compute feet and remaining inches
+      inches = position % 12;           // Print results
+      System.out.println(feet + " ft " + inches + " in");
+      position += 16;                   // Increment position
     }
+  }
 }
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Studs.java</code></figcaption></figure><span class="incontext"><a href="section-c1-while-statements.html#listing-c1-studs" class="internal">in-context</a></span>

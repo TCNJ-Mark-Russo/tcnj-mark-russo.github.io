@@ -8,10 +8,10 @@ o1.setFillColor(255,255,200);
 const o2 = new Oval(75, 50, 150, 150);
 o2.eventsEnabled = false;
 o2.setFillColor(200,200,255);
-const o3 = new Oval(100,75,100,100);
+const o3 = new Oval(100, 75, 100, 100);
 o3.eventsEnabled = false;
 o3.setFillColor(200,255,200);
-const o4 = new Oval(130,105,40,40);
+const o4 = new Oval(125, 100, 50, 50);
 o4.eventsEnabled = false;
 o4.setFillColor(255,200,200);
 pad.onMousePressed = function(eX, eY, buts) {

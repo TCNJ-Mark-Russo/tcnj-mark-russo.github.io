@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The following example program creates a flying bird Sprite object that makes use of the sprite sheet displayed above. On the right is an animated image showing the flying bird Sprite in action. The Pad object’s timer functionality is used to drive the Sprite animation by invoking its advance() method repeatedly at a regular interval.</div>
-<span class="incontext"><a href="section-dp-sprites.html#p-1068" class="internal">in-context</a></span>
+<div class="para">The moveBug() method is the Pad timer’s event handler. It is fired approximately 30 times per second by the timer. Each time it is fired, it computes a new location that is about 10% of the way between its current location and the target location, and it moves the bug to the new location. Because it does not move the bug all the way to the target location, the bug continuously changes direction as the mouse moves. The result is a fun program to play with, and the basis for more interesting games and animated illustrations.</div>
+<span class="incontext"><a href="section-dp-timers.html#p-1068" class="internal">in-context</a></span>
 </body>
 </html>

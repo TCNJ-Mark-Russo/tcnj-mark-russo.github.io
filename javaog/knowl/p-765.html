@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Also important to appreciate is that the default <code class="code-inline tex2jax_ignore">equals()</code> method inherited by all classes simply defers to testing for object identity using the <code class="code-inline tex2jax_ignore">==</code> operator. This explains why the String class overrides <code class="code-inline tex2jax_ignore">equals()</code> to test equality character-by-character (See <a href="section-jp-string.html#subsection-jp-string-methods" class="internal" title="Subsection 3.3.2: String Methods">Subsection 3.3.2</a>). In general we want Strings to be equal when their character sequence is equal, even when they are not identical.</div>
-<span class="incontext"><a href="section-in-object-class.html#p-765" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Public members are accessible from anywhere in a program. Explicit scoping may be required, but access is granted. Protected members prohibit access from outside the implementing class other than derived classes, which can access protected members. Private member access is limited strictly to the implementing class and its objects. A fourth type of visibility occurs when no visibility modifier is specified. This type of visibility is called <dfn class="terminology">package-private</dfn> because members with no visibility modifier are accessible from within the implementing class as well as from within its package, but not from no other scope.</div>
+<span class="incontext"><a href="section-in-polymorph.html#p-765" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">String immutability is not a problem when concatenating a few small Strings, but when large Strings are concatenated over and over to build even larger String objects, your program can slow down because larger and larger chuncks of memory are repeatedly allocated and deallocated. A more efficient approach to concatenating large and numerous String objects would be a dedicated class with the job of collecting all Strings and then managing the underlying memory more efficiently. This is what Java’s built-in StringBuilder class does for us.</div>
+<div class="para">String immutability is not a problem when concatenating a few small Strings, but when large Strings are concatenated over and over to build even larger String objects, your program can slow down because larger and larger chuncks of memory are repeatedly allocated and deallocated. A more efficient approach to concatenating large and numerous String objects would be a dedicated class with the job of collecting all Strings to be concatenated and then copying all characters into a new concatenated String only when that new String is needed. This utilizes the underlying memory much more efficiently. This is what Java’s built-in <dfn class="terminology">StringBuilder</dfn> class does for us.</div>
 <span class="incontext"><a href="section-rt-stringbuilder.html#p-357" class="internal">in-context</a></span>
 </body>
 </html>

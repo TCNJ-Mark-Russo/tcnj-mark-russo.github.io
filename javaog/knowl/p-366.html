@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">TODO: Illustrate the difference between copying primitive and ref variables.</div>
+<div class="para">The assignment operator copies values from one memory location to another. If we could look at memory we’d see the value <code class="code-inline tex2jax_ignore">12</code> at the <code class="code-inline tex2jax_ignore">k1</code> location and <code class="code-inline tex2jax_ignore">13</code> at the <code class="code-inline tex2jax_ignore">k2</code> location. What would we see at the <code class="code-inline tex2jax_ignore">sb1</code> and <code class="code-inline tex2jax_ignore">sb2</code> locations? It would not be the StringBuilder objects. Instead, we’d see an address indicating <em class="emphasis">where</em> Java chose to store each StringBuilder object. Said differently, the data stored at the <code class="code-inline tex2jax_ignore">sb1</code> and <code class="code-inline tex2jax_ignore">sb2</code> memory locations is the <em class="emphasis">address</em> of the StringBuilder objects, not the objects themselves. To access the StringBuilder objects stored in memory, we would have to read the address and move to that memory location first.</div>
 <span class="incontext"><a href="section-rt-refvars.html#p-366" class="internal">in-context</a></span>
 </body>
 </html>

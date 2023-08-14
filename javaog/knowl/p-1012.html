@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">By default, all Shape objects as well as Pad objects trigger a wide array of events. But sometimes you don’t want a Shape or Pad object to react to events at all, allowing all interactions to be handled by the Shape object or Pad object underneath. For example, imagine a Happy Face made up of a large yellow Oval for the face, two smaller black Ovals for the eyes and an Arc for the smile. You might want the eyes and smile to ignore all mouse interaction so that only the underlying yellow face Oval detects all mouse interaction and triggers mouse events. Another use case occurs when you want to create a button with a label by placing a Text Shape over a RoundRect Shape. In this case you want the Text to ignore all mouse interaction and allow the underlying RoundRect to respond to the mouse. This is easily accomplished by disabling events on your top-level Shapes. Use the setEventsEnabled(...) method to disable or re-enable event triggering for any Shape object or any Pad object.</div>
-<span class="incontext"><a href="section-dp-events.html#p-1012" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Each Shape object’s fill color and stroke color may be specified using color component values. There are two mutator methods for setting Shape color: <code class="code-inline tex2jax_ignore">setFillColor(...)</code> and <code class="code-inline tex2jax_ignore">getStrokeColor(...)</code>. These setter methods each have three overloads. The base method signature has four parameters, one for each of the four color components: red, green, blue and alpha. A second overloaded method has only three parameters, which specify red, green and blue components. In this case the alpha component is assumed to have a value of 255, meaning that the Shape color has no transparency. The third overloaded method has only one parameter, often called gray. In this case the parameter value is repeated for all three color components, and alpha once again is set to 255.</div>
+<span class="incontext"><a href="section-dp-colors.html#p-1012" class="internal">in-context</a></span>
 </body>
 </html>

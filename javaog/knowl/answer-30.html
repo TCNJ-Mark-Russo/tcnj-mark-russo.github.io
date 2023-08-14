@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="answer solution-like">
+<h3 class="heading">
+<span class="type">Answer</span><span class="space"> </span><span class="codenumber">5.1.1.1</span><span class="period">.</span>
+</h3>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public static void awardPoints(double x1, double y1) {
+  // Circle parameters
+  double xc = 300.0, yc = 300.0;
+  
+  // Compute distance
+  double dist = Math.sqrt(Math.pow(x1 - xc, 2) + Math.pow(y1 - yc, 2));
+  
+  // Branch depending on distance from center
+  if (dist &lt; 60) {
+    // In center red circle. Add 4 points.
+    total = total + 4;
+  }
+  
+  if (dist &gt;= 60 &amp;&amp; dist &lt; 120) {
+    // In green circle. Add 3 points.
+    total = total + 3;
+  }
+  // Remaining test
+  if (dist &gt;= 120 &amp;&amp; dist &lt; 180) {
+    // In blue circle. Add 2 points.
+    total = total + 2;
+  }
+  
+  if (dist &gt;= 180 &amp;&amp; dist &lt; 240) {
+    // In yellow circle. Add 1 point.
+    total = total + 1;
+  }
+}
+</code></pre></div>
+</div>
+<span class="incontext"><a href="section-c1-if-statements.html#answer-30" class="internal">in-context</a></span>
+</body>
+</html>

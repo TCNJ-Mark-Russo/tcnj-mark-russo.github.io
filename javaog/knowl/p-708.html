@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">DoodlePad graphic classes are organized in a hierarchy with a Shape class at its root. For your reference, <a href="" class="xref" data-knowl="./knowl/figure-in-doodlepad-hierarchy.html" title="Figure 9.1.1">Figure 9.1.1</a> illustrates this hierarchy. In addition to the Shape class and all its derived classes, DoodlePad implements several additional classes, including Pad, Timer and Sound. You can find details for all classes in the library’s <a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/package-summary.html" target="_blank">JavaDocs</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-20-hidden.html" title="Footnote 9.1.1"><sup> 1 </sup></a>.</div>
-<span class="incontext"><a href="section-in-dp-design.html#p-708" class="internal">in-context</a></span>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<div class="para">As your programs grow in size, you will define more classes, many of which may end up with identical method and field implementations, especially when they are related in some way. This ends up making program maintenance very difficult and violates the <a href="" class="xref" data-knowl="./knowl/assemblage-dry.html" title="Assemblage: Principle: Don’t Repeat Yourself (DRY)">DRY</a> principle. This is a tedious and error-prone process. Sooner or later a mistake will be made. It is much better to define the shared methods once, and let each of the class make use of the single implementation. This is one majr benefit of <dfn class="terminology">inheritance</dfn>.</div>
+<span class="incontext"><a href="chapter-inheritance.html#p-708" class="internal">in-context</a></span>
 </body>
 </html>

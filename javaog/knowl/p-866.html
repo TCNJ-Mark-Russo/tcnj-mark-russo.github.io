@@ -12,8 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a> works in a manner very similar to <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a>. We must catch the IOException thrown by the FileReader constructor, and we must use the finally-statement to close the opened BufferedReader to prevent a resource leak. Output generated from running this program is identical to running <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a>.</div>
+<div class="para">The first step to reading from a file is to instantiate a File object representing the file stored in your file system. Assuming the data file is anmed "data.txt" and is saved to the same file system location as your Java program, you can accomplish this with the following statement, where <code class="code-inline tex2jax_ignore">fileName</code> is a String variable with the name of the file to be opened. Before you can instantiate a File object, you must import it from <code class="code-inline tex2jax_ignore">java.io.File</code>. Refer to <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> for the completed program.</div>
 <span class="incontext"><a href="section-ex-reading-files.html#p-866" class="internal">in-context</a></span>
 </body>
 </html>

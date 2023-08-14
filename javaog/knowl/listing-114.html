@@ -11,31 +11,34 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Transform1.java
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Image3.java
 import doodlepad.*;
 
-public class Transform1 {
-    private Rectangle redRect;
-    private Rectangle grnRect;
-
-    public Transform1() {
-        // Two Rectangles with identical location and dimensions
-        redRect = new Rectangle(0, 0, 50, 50);
-        grnRect = new Rectangle(0, 0, 50, 50);
-
-        // Set fill colors
-        redRect.setFillColor(255, 0, 0);
-        grnRect.setFillColor(0, 255, 0);
-
-        // Translate the green Rectangle only
-        grnRect.translate(100, 100);
-    }
+public class Image3 {
 
     public static void main(String[] args) {
-        Transform1 myTransform1 = new Transform1();
+        // Create Pad and Image
+        Pad pad  = new Pad(400, 400);
+        Image im = new Image(0, 0, 400, 400);
+        
+        // Set up mouse event handler
+        im.setMousePressedHandler( Image3::onSpot );
+        
+        // Set drawing fill color to green
+        im.setFillColor(0,200,0);
+    }
+    
+    // What to do when mouse is pressed on Image
+    public static void onSpot(Shape shp, double cx, double cy, int button) {
+        // Cast Shape to Image
+        Image im = (Image)shp;
+        
+        // Draw randomly sized oval
+        double radius = Math.random()*40;
+        im.drawOval(cx-radius, cy-radius, 2*radius, 2*radius);
     }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.11.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Transform1.java</code></figcaption></figure><span class="incontext"><a href="section-dp-transformations.html#listing-114" class="internal">in-context</a></span>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.8.9<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Image3.java</code></figcaption></figure><span class="incontext"><a href="section-dp-images.html#listing-114" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">By defining mutator methods and accessor methods for an instance variable, we open up a wide range of options for managing instance variable values. For example, if we want to restict the value of an <code class="code-inline tex2jax_ignore">age</code> instance variable to a number greater-than or equal-to 0.0, we could test the value before assigning it. The following <code class="code-inline tex2jax_ignore">setAge(…)</code> method is a simple example.</div>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-cl-led4.html" title="Listing 8.3.2">Listing 8.3.2</a> shows the code changes to our class definition. The added <code class="code-inline tex2jax_ignore">turnOn()</code> and <code class="code-inline tex2jax_ignore">turnOff()</code> methods do what we expect, setting and configuring the state of the object by modifying its private instance variables. The <code class="code-inline tex2jax_ignore">isOn()</code> returns the boolean value of the <code class="code-inline tex2jax_ignore">on</code> instance variable. Because we have <em class="emphasis">abstracted</em> the concept of the LED being off and on and exposed that as these new methods, it is wise to remove the initial explicit instance variable configuration statements from the constructor that starts the LED in the off state and replace them by invoking the <code class="code-inline tex2jax_ignore">turnOff()</code> method directly.</div>
 <span class="incontext"><a href="section-cl-methods.html#p-646" class="internal">in-context</a></span>
 </body>
 </html>

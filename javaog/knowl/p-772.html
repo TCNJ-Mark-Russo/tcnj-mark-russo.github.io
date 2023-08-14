@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Abstract classes and abstrat methods give us a way to express intended design constraints into our class definitions, which are checked by the compiler. If a base class depends on its subclasses implementing certain methods that have no reasonable default implementation, then the base class is abstract. Modify the base class with <code class="code-inline tex2jax_ignore">abstract</code> and include the abstract method signatures that are required in the base class. The Java comiler will ensure these abstract methods will be implemented in a derived class so that all base class behavior functions properly.</div>
+<div class="para">The <a href="section-in-dp-design.html" class="internal" title="Section 9.1: DoodlePad Design">DoodlePad Shape base class</a> shares quite a bit of functionality with all its derived classes, including <a href="appendix-shape-events.html" class="internal" title="Appendix D: DoodlePad Shape Events">a wide array of pixel-perfect mouse events</a> that each shape object may individually. But, what about the Shape class itself. What would happen if we attempted to instantiate Shape directly? How would it look?</div>
 <span class="incontext"><a href="section-in-abstract-class.html#p-772" class="internal">in-context</a></span>
 </body>
 </html>

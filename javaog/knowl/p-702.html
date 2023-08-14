@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">As your programs grow in size, you will define more classes, many of which may end up with identical method and field implementations, especially when they are related in some way. This ends up making program maintenance very difficult and violates the <a href="" class="xref" data-knowl="./knowl/assemblage-dry.html" title="Assemblage: Principle: Don’t Repeat Yourself (DRY)">DRY</a> principle. This is a tedious and error-prone process. Sooner or later a mistake will be made. It is much better to define the shared methods once, and let each of the class make use of the single implementation. This is one majr benefit of <dfn class="terminology">inheritance</dfn>.</div>
-<span class="incontext"><a href="chapter-inheritance.html#p-702" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">A more convenient option, especially when we intend to use most or all classes from a package, is to use the <code class="code-inline tex2jax_ignore">import</code> statement and a the wildcard character (<code class="code-inline tex2jax_ignore">*</code>) to bring all the type names into the current package, which we have seen many times when importing DoodlePad classes with <code class="code-inline tex2jax_ignore">import doodlepad.*</code>. <a href="" class="xref" data-knowl="./knowl/listing-cl-construction2.html" title="Listing 8.7.4">Listing 8.7.4</a> is an alternative implementation if the <code class="code-inline tex2jax_ignore">Construction</code> driver class that imports all tool classes from the "toolbox" package at the top of the program file. This allows us to avoid the repeated explicit scoping of classes to the <code class="code-inline tex2jax_ignore">toolbox</code> package. After an <code class="code-inline tex2jax_ignore">import</code>, the classes are now available locally.</div>
+<span class="incontext"><a href="section-cl-packages.html#p-702" class="internal">in-context</a></span>
 </body>
 </html>

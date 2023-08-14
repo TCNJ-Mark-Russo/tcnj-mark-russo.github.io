@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">There are two items to consider when working with arrays and reference types. The first is that array variable types are reference types and following all the same rules. The second is that array elements that store objects are reference types as well, and so store only a reference to the object, not the object itself.</div>
-<span class="incontext"><a href="section-ar-reftypes.html#p-581" class="internal">in-context</a></span>
+<div class="para">Because arrays use integer indexes within square brackets, we can access the elements of an array sequentially using iteration and a counter variable, in a manner similar to the way we did with ArrayLists. Like an ArrayList, we can ask an array about its length. Unlike an ArrayList, the length of an array is determined using the <code class="code-inline tex2jax_ignore">.length</code> property of the array instead of the <code class="code-inline tex2jax_ignore">.size()</code> method of an ArrayList. Recall that when iterating over the elements of an ArrayList, our loop counter had to stop at a value of 1 less that the size of the ArrayList. If the first index is 0, the last index is <code class="code-inline tex2jax_ignore">size()-1</code>. The same argument applies to arrays. The first index is 0, so the last index is <code class="code-inline tex2jax_ignore">.length - 1</code>. The test for continuation when iterating over the elements of an array must check that the counter is <em class="emphasis">less-than</em> the length of an array, not <em class="emphasis">less-than or equal-to</em>. Notice the form of the continuation tests in the following for-statement examples.</div>
+<span class="incontext"><a href="section-ar-iterating.html#p-581" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The format of a try-with-resources is exactly like a try-catch, only with a parenthesized object declaration added between the <code class="code-inline tex2jax_ignore">try</code> keyword and its opening <code class="code-inline tex2jax_ignore">{</code>. Because both Scanner and BufferedReader implement the AutoClosable interface, we can rewrite the <code class="code-inline tex2jax_ignore">printFile(…)</code> implementations in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> and <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a> to use try-with-resources instead. This simplifies the code and ensures the resources will always be closed properly.</div>
-<span class="incontext"><a href="section-try-with-resources.html#p-871" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Find a complete example of reading a plain text file line-by-line in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a>. A BufferedReader returns null from its <code class="code-inline tex2jax_ignore">readLine()</code> method when there are no more lines to read. With this in mind, pay close attention to the way the while-statement in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a> is constructed. We invoke <code class="code-inline tex2jax_ignore">readLine()</code> once before the while-statement, and enter the statement only if the <code class="code-inline tex2jax_ignore">line</code> value is not null. This prevents further action to be taken on an empty file. Also, we read the next line at the end of the while-statement body to check if there is another line to be processed, and continue the while-statement only if there is another line.</div>
+<span class="incontext"><a href="section-ex-reading-files.html#p-871" class="internal">in-context</a></span>
 </body>
 </html>

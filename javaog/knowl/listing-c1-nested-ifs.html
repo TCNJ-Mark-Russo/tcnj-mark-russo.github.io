@@ -15,31 +15,31 @@
 import doodlepad.*;
 
 public class Grid2 {
-    public static void main(String[] args) {
-                                            // Get reference Pad (window)
-        Pad pad = Pad.getPad();             // Set event handler method
-        pad.setMousePressedHandler( Grid2::onPadPressed );
-    }
+  public static void main(String[] args) {
+                                        // Get reference Pad (window)
+    Pad pad = Pad.getPad();             // Set event handler method
+    pad.setMousePressedHandler( Grid2::onPadPressed );
+  }
 
-    // Event handler method
-    public static void onPadPressed(Pad pad, double x, double y, int but) {
-                                            // Instantiate new Rectangle
-        Rectangle r = new Rectangle(x-60, y-25, 110, 50);
-        
-        if (y &lt; 300) {                      // Set fill with nested branches.
-            if (x &lt; 300) {
-                r.setFillColor(255, 0, 0);  // Red
-            } else {
-                r.setFillColor(0, 255, 0);  // Green
-            }
-        } else {
-            if (x &lt; 300) {
-                r.setFillColor(0, 0, 255);  // Blue
-            } else {
-                r.setFillColor(255, 255, 0);// Yellow
-            }
-        }
+  // Event handler method
+  public static void onPadPressed(Pad pad, double x, double y, int but) {
+                                        // Instantiate new Rectangle
+    Rectangle r = new Rectangle(x-60, y-25, 110, 50);
+      
+    if (y &lt; 300) {                      // Set fill with nested branches.
+      if (x &lt; 300) {
+        r.setFillColor(255, 0, 0);      // Red
+      } else {
+        r.setFillColor(0, 255, 0);      // Green
+      }
+    } else {
+      if (x &lt; 300) {
+        r.setFillColor(0, 0, 255);      // Blue
+      } else {
+        r.setFillColor(255, 255, 0);    // Yellow
+      }
     }
+  }
 }
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Grid1.java</code></figcaption></figure><span class="incontext"><a href="section-c1-nested-control.html#listing-c1-nested-ifs" class="internal">in-context</a></span>
