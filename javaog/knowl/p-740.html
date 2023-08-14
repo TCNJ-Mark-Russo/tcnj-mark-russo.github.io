@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Note that we added a line to the new <code class="code-inline tex2jax_ignore">onMousePressed(…)</code> method. We invoked the base class method with the same signature. This means we are <em class="emphasis">augmenting</em> the base class method with this override rather than replacing it. Overridable shape event handler methods perform core behaviors that make the event system work properly. Because we are augmenting the base class method and not simply replacing it, we want to ensure that all the default behavior is executed. We only want to add a <code class="code-inline tex2jax_ignore">toggle()</code> method invocation. Invoking the base class method using <code class="code-inline tex2jax_ignore">super</code> and relaying parameter values, ensures that all default behavior will be executed as well. See <a href="" class="xref" data-knowl="./knowl/figure-in-togglebutton2.html" title="Figure 9.3.2">Figure 9.3.2</a> for examples if the new program.</div>
+<div class="para">Let’s do a better job at implementing our ToggleButton class, which we first created in <a href="" class="xref" data-knowl="./knowl/listing-dp-togglebutton1.html" title="Listing 14.6.4">Listing 14.6.4</a>. Now that we’re familiar with what we can do using inheritance, let’s reconsider ToggleButton’s implementation. Refer to <a href="" class="xref" data-knowl="./knowl/listing-in-togglebutton2.html" title="Listing 9.3.1">Listing 9.3.1</a> for all the details of the updated class.</div>
 <span class="incontext"><a href="section-in-overriding.html#p-740" class="internal">in-context</a></span>
 </body>
 </html>

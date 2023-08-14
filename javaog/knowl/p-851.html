@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The optional last part of a try-catch statement is the <dfn class="terminology">finally block</dfn>. You may add one <dfn class="terminology">finally block</dfn> to end of a try-catch, or leave it out entirely. Unlike an "else" in a multi-branch if-statement or a "default" in a switch-statement, the "finally" of a try-catch statement <dfn class="terminology">always</dfn> executes, regardless of whether or not an exception was thrown in the try-block, or even if a thrown exception was caught. The finally-block <em class="emphasis">always</em> executes.</div>
+<div class="para">But why did we recieve an ArrayIndexOutOfBoundsException exception and not an ArithmeticException? The answer relates to how a quotient is evaluated, left-to-right. The numerator is evaluted before the denominator, and so the out-of-bounds index in the array is detected first. Had the index be in-bounds, the ArithmeticException would have been thrown instead.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-851" class="internal">in-context</a></span>
 </body>
 </html>

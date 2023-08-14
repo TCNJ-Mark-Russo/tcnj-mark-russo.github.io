@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">There is important option to be aware of when opening a file to write using the FileWriter class. That is, where in the file should writing begin? While it is not uncommon to read an entire file all at once, files are often written incrementally, a bit at a time. For example, you might open a file and write a few lines and then close it. Open it again later in your program and close it again. The implication here is that writing will begin <em class="emphasis">at the end of hte file</em>. If we begin writing from the beginning each time, then the fill will contain only the last data written because the file is being overwritten each time.</div>
-<span class="incontext"><a href="section-ex-writing-files.html#p-882" class="internal">in-context</a></span>
+<div class="para">The format of a try-with-resources is exactly like a try-catch, only with a parenthesized object declaration added between the <code class="code-inline tex2jax_ignore">try</code> keyword and its opening <code class="code-inline tex2jax_ignore">{</code>. Because both Scanner and BufferedReader implement the AutoClosable interface, we can rewrite the <code class="code-inline tex2jax_ignore">printFile(…)</code> implementations in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> and <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a> to use try-with-resources instead. This simplifies the code and ensures the resources will always be closed properly.</div>
+<span class="incontext"><a href="section-try-with-resources.html#p-882" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">You may provide multiple catch-blocks, each with different exception class variable declarations. The first declaration that matches the thrown exception is the block that gets executed, if any. If a different exception object is thrown by the example above, the catch-block would not match and Java would resort to dumping the stack. To avoid this kind of problem, it can be useful to add a final catch-block that catches an Exception base class. This way we know that all exceptions will be caught, no matter which one is thrown, because all exception objects can be assigned to a variable with base class type Exception.</div>
+<div class="para">Consider the following sample program that has an obvious divide-by-zero error. When we compile and run, Java throws a <code class="code-inline tex2jax_ignore">java.lang.ArithmeticException</code> object.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-845" class="internal">in-context</a></span>
 </body>
 </html>

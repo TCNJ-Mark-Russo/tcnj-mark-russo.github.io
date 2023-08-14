@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Encapsulation requires that we manage access to instance variables. We can make an instance variable accessible simply by declaring it with public visibility. This leaves the variable’s value wide open to change. We lose the ability to manage it, such as by restricting its value to a valid range.</div>
+<div class="para">Consider what might happen if we decided to leave the initialization of the LED object’s instance variables by setting the object state explicitly in the constructor. Doing this requires us to make sure that the constructor and the <code class="code-inline tex2jax_ignore">turnOff()</code> method remained in sync. If we decided to change the fill color of the LED when off, and we modified the code in <code class="code-inline tex2jax_ignore">turnOff()</code> but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such an oversight can lead to more serious problems. This important software development principle has been dubbed <dfn class="terminology">Don’t repeat yourself</dfn> or <dfn class="terminology">DRY</dfn>.</div>
 <span class="incontext"><a href="section-cl-methods.html#p-652" class="internal">in-context</a></span>
 </body>
 </html>

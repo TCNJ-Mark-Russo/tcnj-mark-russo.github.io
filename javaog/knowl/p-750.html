@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Imagine having a large set of Shape objects of various types. Let’s say we have a program that uses Rectangles, Ovals, RoundRects, Polygons, Texts, etc. We need to track and manage all of these Shapes. It would be terribly inconvenient to be forced to declare an ArrayList or other Collection for each type of Shape. Fortunately, this is not necessary. Because every one of these classes extends the Shape base class, we can store all objects in an ArrayList&lt;Shape&gt;. Our ability to do this is a direct result of polymorhism, which simplifies our job significantly.</div>
+<div class="para">One important ramification of <dfn class="terminology">subtype polymorphism</dfn> is that <em class="emphasis">a variable with a type of a base class, may reference objects with the type of one of its derived classes</em>. After all, ifaa derived class is also a <em class="emphasis">kind</em> of base class, then such an assignment should be legal.</div>
 <span class="incontext"><a href="section-in-polymorph.html#p-750" class="internal">in-context</a></span>
 </body>
 </html>

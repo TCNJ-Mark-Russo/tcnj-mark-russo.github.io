@@ -11,8 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">In the two <code class="code-inline tex2jax_ignore">printFile(…)</code> implementations given in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> and <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a>, we made sure to close the opened resource to ensure that we had no resource leaks. A better way to ensure suitable resources are closed is to use a newer version of try-catch called <dfn class="terminology">try-with-resources</dfn>. This newer version of try-catch takes a <em class="emphasis">closable</em> object as an argument and closes it automatically when its block scope is exited. There is no reason to use finally-statement or other means of checking that the resource is closed in a try-with-resources statement. Java takes of it for us.</div>
-<span class="incontext"><a href="section-try-with-resources.html#p-877" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a> works in a manner very similar to <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a>. We must catch the IOException thrown by the FileReader constructor, and we must use the finally-statement to close the opened BufferedReader to prevent a resource leak. Output generated from running this program is identical to running <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a>.</div>
+<span class="incontext"><a href="section-ex-reading-files.html#p-877" class="internal">in-context</a></span>
 </body>
 </html>

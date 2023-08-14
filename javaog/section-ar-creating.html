@@ -730,19 +730,18 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-ar-creating"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Creating, Initializing Arrays</span>
 </h2>
-<section class="introduction" id="introduction-30">A Java <dfn class="terminology">array</dfn> stores in memory a sequence of data items with common data type. The entire sequence can be assigned to a single variable with each element accessed using the variable followed by a sequential integer index (offest) in square brackets, starting with 0. Arrays are incredibly useful when you must store a very large number of related values. Using an index for element access works well with iteration counters, very much like the way we access elements in an ArrayList using the <code class="code-inline tex2jax_ignore">.get(…)</code> method.</section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-30"><div class="para" id="p-564">A Java <dfn class="terminology">array</dfn> stores in memory a sequence of data items having a common data type. The entire sequence can be assigned to a single variable with each element accessed using the variable followed by a sequential integer index (offset) in square brackets, starting with 0. Arrays are incredibly useful when you must store a very large number of related values.</div> <div class="para" id="p-565">Using an integer index for element access works well with iteration counters, very much like the way we access elements in an ArrayList using the <code class="code-inline tex2jax_ignore">get(…)</code> method. Arrays are similar to an ArrayList collection classes in some aspect, but significantly different in others. We’ll compare and contrast the two as we learn more about Java arrays.</div></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.1</span> <span class="title">Declaring Arrays</span>
 </h3>
-<div class="para" id="p-564">An array variable is declared just like any Java variable with a data type, only followed with a pair of square brackets (<code class="code-inline tex2jax_ignore">[]</code>).</div>
+<div class="para" id="p-566">An array variable is declared just like any Java variable, using a data type. In fact, an array can be declared to hold any Java data type, primitive, object, or even another array. Contrast this with an ArrayList which must box primitives before one can be added to the ArrayList. The core difference between an array and the type that it holds is that the declaration of an array follows the type of elements it holds with a pair of square brackets (<code class="code-inline tex2jax_ignore">[]</code>).</div>
+<div class="para" id="p-567">In the JShell session below, we declare a <code class="code-inline tex2jax_ignore">double</code> <em class="emphasis">array</em> variable just like we would declare a single <code class="code-inline tex2jax_ignore">double</code> variable, only we follow the type with <code class="code-inline tex2jax_ignore">[]</code>. It’s useful to read this declaration as <em class="emphasis">double-array data</em>. The variable <code class="code-inline tex2jax_ignore">data</code> may now <em class="emphasis">reference</em> an array that holds doubles. Note that the array has <dfn class="terminology">not</dfn> yet been created. Only a variable that <em class="emphasis">may</em> reference an array has been declared.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; double[] data;
-data ==&gt; null
-
-jshell&gt;
+</b>data ==&gt; null
+ 
+<b>jshell&gt;
 </b></pre></div>
-<div class="para" id="p-565">In the JShell session above, we declare a <code class="code-inline tex2jax_ignore">double</code> <em class="emphasis">array</em> variable just like we would declare a single <code class="code-inline tex2jax_ignore">double</code> variable, only we follow the type with <code class="code-inline tex2jax_ignore">[]</code>. It’s useful to read this declaration as <em class="emphasis">double array data</em>. In general, working with array variables is very similar to working single data variable, only with the additional of square brackets.</div>
-<div class="para" id="p-566">In the above JShell session, we see that the <code class="code-inline tex2jax_ignore">data</code> array variable starts with the value <code class="code-inline tex2jax_ignore">null</code>. This is very important to note. In Java, array variables are <em class="emphasis">reference</em> variables, just like variables having a class type are reference variable. As a reference type, all the same rules and behaviors that we investigated in <a href="chapter-reftypes.html" class="internal" title="Chapter 4: Reference Types">Chapter 4</a> apply to array variables as well.</div>
-<div class="para" id="p-567">Also like a class variable, declaring an array variable <dfn class="terminology">does not</dfn> create the array. An array variable is only a variable that <em class="emphasis">may</em> reference an array, should we choose to create one and assign it to the variable. The variable itself is not the array, which is illustrated by its initial default value being <code class="code-inline tex2jax_ignore">null</code>.</div>
-<div class="para" id="p-568">We can declare an array of <em class="emphasis">any</em> valid type in Java. In fact, we can declare <em class="emphasis">arrays of arrays</em>, which investigate more in <a href="section-ar-multi.html" class="internal" title="Section 7.4: Multidimensional Arrays">Section 7.4</a>. The following code snippet illustrates this idea. None of these variables are arrays. They are only variables that may reference an array, not the array itself.</div>
+<div class="para" id="p-568">We also see that the <code class="code-inline tex2jax_ignore">data</code> array variable starts with the value <code class="code-inline tex2jax_ignore">null</code>. This is very important to note. In Java, array variables are <em class="emphasis">reference</em> variables, just like variables having a class type are reference variables. The variable itself is not the array, which is demonstrated by its initial default value being <code class="code-inline tex2jax_ignore">null</code>. As a reference type, all the same rules and behaviors that we investigated in <a href="chapter-reftypes.html" class="internal" title="Chapter 4: Reference Types">Chapter 4</a> apply to array variables as well.</div>
+<div class="para" id="p-569">We can declare an array of <em class="emphasis">any</em> valid type in Java. In fact, we can declare <em class="emphasis">arrays of arrays</em>, which we will investigate further in <a href="section-ar-multi.html" class="internal" title="Section 7.4: Multidimensional Arrays">Section 7.4</a>. The following code snippet illustrates the idea that an array can hold any Java type. None of the following variables are arrays. They are only variables that may reference an array, not the array itself.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data;      // An array variable of doubles
 int[]    lengths;   // An array variable of integers
 String[] names;     // An array variable of Strings
@@ -750,13 +749,14 @@ Random[] rands;     // An array variable of Random objects
 </code></pre></div></section><section class="subsection" id="subsection-51"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.2</span> <span class="title">Creating Arrays</span>
 </h3>
-<div class="para" id="p-569">Similar to instantiating new objects using a constructor, the syntax for creating a new array makes use of the <dfn class="terminology">new</dfn> keyword. This reinforces the fact that arrays are reference types. Unlike invoking an object constructor, the syntax for creating a new array follows the <em class="emphasis">new</em> keyword with the <em class="emphasis">data type</em> to be stored in elements of the array and then square backets containing the number of elements to be stored in the array. In the following code snippet, we create and assign arrays of size 100 for each of the array variables declared above.</div>
+<div class="para" id="p-570">Similar to instantiating new objects using a constructor, the syntax for creating a new array makes use of the <dfn class="terminology">new</dfn> keyword. This reinforces the fact that arrays are reference types. Unlike invoking an object constructor, the syntax for creating a new array follows the <em class="emphasis">new</em> keyword with the <em class="emphasis">data type</em> to be stored in elements of the array and then square backets containing the number of elements to be stored in the array. Unlike ArrayLists, arrays are fixed-size. When an array is created using the <code class="code-inline tex2jax_ignore">new</code> keyword, the amount of memory allocated is the number of bytes required for a single type multiplied by the size of the array.</div>
+<div class="para" id="p-571">In the following code snippet, we create and assign arrays of size 100 for each of the array variables declared above.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">data        = new double[100];
 lengths     = new int[100];
 names       = new String[100];
 rands       = new Random[100];
 </code></pre></div>
-<div class="para" id="p-570">Note that we can also use the combination declaration/initialization statement just like we did with single-value variables.</div>
+<div class="para" id="p-572">Note that we also can use the combination declaration/initialization statement just like we did with single-valued variables. See the following.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data    = new double[100];
 int[]    lengths = new int[100];
 String[] names   = new String[100];
@@ -764,56 +764,57 @@ Random[] rands   = new Random[100];
 </code></pre></div></section><section class="subsection" id="subsection-52"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.3</span> <span class="title">Accessing Array Elements</span>
 </h3>
-<div class="para" id="p-571">Once created, you may access and use the elements of an array just like you would a single-valued variable. The only difference is that you must follow your array variable with square brackets and an item index so that Java knows which element of the array that you want to access. In the example below, the <code class="code-inline tex2jax_ignore">data</code> array variable is declared and initialized to a new array of doubles with length 100. These items are then accessed by following the array variable name <code class="code-inline tex2jax_ignore">data</code> with square brackets and an index value, like <code class="code-inline tex2jax_ignore">data[0]</code>.</div>
+<div class="para" id="p-573">Once created, you may access and use the elements of an array just like you would a single-valued variable. The only difference is that you must follow your array variable with square brackets and an item index so that Java knows which element of the array that you want to access. In general, working with array variables is very similar to working a single data variable, only with the additional of square brackets and an index.</div>
+<div class="para" id="p-574">In the example below, the <code class="code-inline tex2jax_ignore">data</code> array variable is declared and initialized to a new array of doubles with length 100. These items are then accessed by following the array variable name <code class="code-inline tex2jax_ignore">data</code> with square brackets and an index, for example <code class="code-inline tex2jax_ignore">data[0]</code>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; double[] data = new double[100];
-data ==&gt; double[100] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,  ...  0.0, 0.0, 0.0, 0.0, 0.0 }
-
+</b>data ==&gt; double[100] { 0.0, 0.0, 0.0, 0.0, 0.0,  ...  0.0, 0.0, 0.0, 0.0, 0.0 }
+<b> 
 jshell&gt; System.out.println( data[0] );   // Access an array for printing
-0.0
-
+</b>0.0
+<b> 
 jshell&gt; data[0] = 3.14;                  // Assign a value to an array element
-$3 ==&gt; 3.14
-
+</b>$3 ==&gt; 3.14
+<b> 
 jshell&gt; System.out.println( data[0] );
-3.14
-
+</b>3.14
+<b> 
 jshell&gt;
 </b></pre></div>
-<article class="assemblage assemblage-like" id="assemblage-14"><h4 class="heading"><span class="title">Indexes Start at 0.</span></h4>
-<div class="para" id="p-572">In Java, when accessing a sequence of items, the index of the first item always starts at 0. Think of an index as an <em class="emphasis">offset</em> from the start of a sequence, not as an item’s sequence position.</div></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<article class="assemblage assemblage-like" id="assemblage-14"><h4 class="heading"><span class="title">Rule: Sequence Data Structure Indexes Start at 0.</span></h4>
+<div class="para" id="p-575">In Java, we learned that when accessing an indexed sequence of items, the index of the first item always starts at 0. This is the case for arrays as well. Think of an index as an <em class="emphasis">offset</em> from the start of a sequence, not as an item’s sequence position. The offset from the first element to the first element is 0, hence the index of the first element is 0.</div></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:77%;">
-<div class="para" id="p-573">The idea that array is a sequence of data values is more than just a useful visual queue. Array elements are stored in contiguous memory, one after the other.</div>
-<div class="para" id="p-574">In the <code class="code-inline tex2jax_ignore">data</code> example of <a href="" class="xref" data-knowl="./knowl/figure-ar-array-memory.html" title="Figure 7.1.1">Figure 7.1.1</a>, note that Java initializes double array items with the value <code class="code-inline tex2jax_ignore">0.0</code>, just like it would initialize a single-valued double variable. This is the case with any array holding any numerical type.</div>
-<div class="para" id="p-575">If numeric array elements are initialized with 0, how about boolean array elements? What is the default value assigned to a single boolean variable? JShell is a useful tool to investigate Java’s behavior.</div>
+<div class="para" id="p-576">The idea that array is a sequence of data values is more than just a useful visual queue. Array elements are stored in contiguous memory, one after the other.</div>
+<div class="para" id="p-577">In the <code class="code-inline tex2jax_ignore">data</code> array example of <a href="" class="xref" data-knowl="./knowl/figure-ar-array-memory.html" title="Figure 7.1.1">Figure 7.1.1</a>, note that Java initializes all double array items with the value <code class="code-inline tex2jax_ignore">0.0</code>, just like it would initialize a single-valued double variable. This is the case with any array holding any numerical type.</div>
+<div class="para" id="p-578">If numeric array elements are initialized with 0, how about boolean array elements? What is the default value assigned to a single boolean variable? As always, JShell is a useful tool to investigate Java’s behavior.</div>
 </div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-576"></div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-579"></div></div>
 <div class="sbspanel top" style="width:20%;"><figure class="figure figure-like" id="figure-ar-array-memory"><img src="external/images/ar-array-memory.svg" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.1<span class="period">.</span></span><span class="space"> </span>An array stored in memory</figcaption></figure></div>
 </div></div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>jshell&gt; boolean response;
-response ==&gt; false
-
-jshell&gt; System.out.println( response );
-false
-
-jshell&gt; boolean[] responses = new boolean[5];
-responses ==&gt; boolean[5] { false, false, false, false, false }
-
-jshell&gt; System.out.println( responses[4] );
-false
-
-jshell&gt;
+</b>response ==&gt; false
+ 
+<b>jshell&gt; System.out.println( response );
+</b>false
+ 
+<b>jshell&gt; boolean[] responses = new boolean[5];
+</b>responses ==&gt; boolean[5] { false, false, false, false, false }
+ 
+<b>jshell&gt; System.out.println( responses[4] );
+</b>false
+ 
+<b>jshell&gt;
 </b></pre></div>
-<div class="para" id="p-577">In both cases the default value of a boolean is <code class="code-inline tex2jax_ignore">false</code>. Java sets the initial value of array elements to the same value that it would a single-values variable.</div></section><section class="subsection" id="subsection-53"><h3 class="heading hide-type">
+<div class="para" id="p-580">In both cases the default value of a boolean is <code class="code-inline tex2jax_ignore">false</code>. Java sets the initial value of array elements to the same initial value that it would set to a single-valued variable.</div></section><section class="subsection" id="subsection-53"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.4</span> <span class="title">Initializing Arrays</span>
 </h3>
-<div class="para" id="p-578">Just like we can initialize a variable at the time of declaration, we also can initialize the elements of an array. We need to specify multiple element values for the array to be initialized. Syntactically, we following the creation of the array with a sequence of values delimited with braces (<code class="code-inline tex2jax_ignore">{…}</code>) and separated by commas. In the following example we declare the double array variable <code class="code-inline tex2jax_ignore">data</code>, assign it to a newly created double array, and initialize the double array to the values 10.0, 20.0, 30.0, 40.0 and 50.0.</div>
+<div class="para" id="p-581">Just like we can initialize a variable at the time of declaration, we also can initialize the elements of an array. We must specify multiple element values for the array to be initialized, one for each array element. Syntactically, we follow the creation of the array with a sequence of values delimited with braces (<code class="code-inline tex2jax_ignore">{…}</code>) and separated by commas. In the following example we declare the double array variable <code class="code-inline tex2jax_ignore">data</code>, assign it to a newly created double array, and initialize the double array to the values 10.0, 20.0, 30.0, 40.0 and 50.0.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data = new double[] {10.0, 20.0, 30.0, 40.0 50.0};
 </code></pre></div>
-<div class="para" id="p-579">Did you see that we left out the size of the array between the square brackets when we created the array? Including this value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values? To avoid the issue, when initializing the elements of an array using this syntax, Java requires us to create the array without a size; it can infer the correct size from the number of items between the braces.</div>
-<div class="para" id="p-580">We can shorten the above example even further. The <code class="code-inline tex2jax_ignore">new double[]</code> part of the expression is redundant. Clearly, we want to create a new double array because we provided initial element values. There are legitimate reasons to declare an array variable without creating an array, but no legitimate reason if initial element values are provided. For this reason Java let’s us accomplish the same task of creating and initializing the array without the need to include the <code class="code-inline tex2jax_ignore">new double[]</code> part. In the example below, we create and initialize the array by going right to the initial values in braces, leaving out the <code class="code-inline tex2jax_ignore">new double[]</code>.</div>
+<div class="para" id="p-582">Did you see that we left out the size of the array between the square brackets when we created the array using <code class="code-inline tex2jax_ignore">new</code>? Including a size value would open us up to an inconsistency. What should Java do if we said the size of the array was 5, but we provided on 4 values, or 6? To avoid the issue, when initializing the elements of an array using this syntax, Java allows us to create the array without a size; it can infer the correct size from the number of items between the braces.</div>
+<div class="para" id="p-583">We can shorten the above example even further. The <code class="code-inline tex2jax_ignore">new double[]</code> part of the expression is redundant. Clearly, we want to create a new double array because we provided initial element values within the initializer (<code class="code-inline tex2jax_ignore">{…}</code>). There are legitimate reasons to declare an array variable without creating an array, but no legitimate reason if initial element values are provided. For this reason Java let’s us accomplish the same task of creating and initializing the array without the need to include the <code class="code-inline tex2jax_ignore">new double[]</code> part. In the example below, we create and initialize the array by going right to the initializer in braces, leaving out the redundant <code class="code-inline tex2jax_ignore">new double[]</code>.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[] data = {10.0, 20.0, 30.0, 40.0 50.0};
 </code></pre></div>
-<div class="para" id="p-581">This initialization syntax may be used with any type, provided you are able to write down the sequence of value in braces. In the examples below, pay careful attention to the <code class="code-inline tex2jax_ignore">rands</code> array holding two Random objects. The only means of creating Random objects is to use the Random constructor.. Within the braces of the initializer, we invoked the Random constructor twice in create two objects which are stored in the <code class="code-inline tex2jax_ignore">rands</code> array.</div>
+<div class="para" id="p-584">This initialization syntax may be used with any type, provided you are able to write down the sequence of values in braces. In the examples below, pay careful attention to the <code class="code-inline tex2jax_ignore">rands</code> array holding two Random objects. The only means of creating Random objects is to use the Random constructor. Within the braces of the initializer, we invoked the Random constructor twice to create two objects which are stored in the <code class="code-inline tex2jax_ignore">rands</code> array.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">double[]  data      = {10.0, 20.0, 30.0, 40.0 50.0};
 int[]     lengths   = {32, 34, 40};
 String[]  names     = {"Athos", "Porthos", "Aramis"};
@@ -822,12 +823,12 @@ boolean[] responses = {true, false, false, false, true};
 </code></pre></div></section><section class="subsection" id="subsection-54"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.5</span> <span class="title">The Java Array Three-Step Process</span>
 </h3>
-<div class="para logical" id="p-582">
+<div class="para logical" id="p-585">
 <div class="para">Take a moment to notice something important about arrays. In order to fully realize an array containing non-default element values, you must complete <em class="emphasis">three steps</em>.</div>
 <ol class="decimal">
 <li id="li-245"><div class="para" id="p-derived-li-245">There must be a variable that references the array. Without maintaining a reachable reference, the array is subject to garbage collection.</div></li>
-<li id="li-246"><div class="para" id="p-derived-li-246">Declaring an array variable does NOT create an array. You must use the <dfn class="terminology">new</dfn> keyword and follow the array declaration syntax with size (or initializing values) to create the actual array. The variable has the ability only to reference an existing array, not create the array. You must explicitly create the array in order for it to exist.</div></li>
-<li id="li-247"><div class="para" id="p-derived-li-247">A newly created array contains element with default values for its type. A third step of initializing the array is required for it to contain something other than default values.</div></li>
+<li id="li-246"><div class="para" id="p-derived-li-246">Declaring an array variable does not create an array. You must use the <dfn class="terminology">new</dfn> keyword and follow the array declaration syntax with size in square brackets (or initializing values) to create the actual array. The variable has the ability to reference an existing array only, not ro create the array. You must explicitly create the array in order for it to exist.</div></li>
+<li id="li-247"><div class="para" id="p-derived-li-247">A newly created array contains elements with default values for its type. A third step of initializing the array is required for it to contain something other than default values.</div></li>
 </ol>
 </div></section></section></div>
 <div class="ptx-content-footer">

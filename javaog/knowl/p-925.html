@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">All recursive methods we’ve explored thus far are examples of <dfn class="terminology">direct recursion</dfn>, which occurs when a recursive method invokes itself <em class="emphasis">directly</em>. It is possible to write a program in which no individual method invokes itself, yet is considered recursive. In the simplest case, one method might invoke a second, which invokes the first, and so on. This is an example of <dfn class="terminology">indirect recursion</dfn>. As long as an invoked method traces back to itself, the program is considered recursive.</div>
+<div class="para">The <code class="code-inline tex2jax_ignore">iterativeMax(…)</code> method starts by temporarily initializing the <code class="code-inline tex2jax_ignore">max</code> variable to the first value in the array. A loop is used to compare this value to the remaining array values. If better value is found, exceeding the current maximum, the <code class="code-inline tex2jax_ignore">max</code> variable value is updated. The final value of <code class="code-inline tex2jax_ignore">max</code> is returned as the overall maximum of the array.</div>
 <span class="incontext"><a href="section-re-characterising.html#p-925" class="internal">in-context</a></span>
 </body>
 </html>
