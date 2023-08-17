@@ -512,7 +512,7 @@ window.MathJax = {
 <div class="toc-item"><a href="section-in-polymorph.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Subtype Polymorphism</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-86" class="internal"><span class="codenumber">9.4.1</span> <span class="title">The <em class="emphasis">Many Forms</em> of Derived Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic Binding</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-88" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Protected Visibility</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-89" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Summary of Scope and Visibility</span></a></div></li>
 </ul>
@@ -738,17 +738,17 @@ window.MathJax = {
 <div class="para">
 <a href="" class="xref" data-knowl="./knowl/listing-re-fractal-tree.html" title="Listing 12.4.1">Listing 12.4.1</a> draws a Fractal Tree, with the recursive method <code class="code-inline tex2jax_ignore">branch(…)</code>. The <code class="code-inline tex2jax_ignore">branch(…)</code> method takes six parameters:</div>
 <ol class="decimal">
-<li id="li-434"><div class="para" id="p-derived-li-434">
+<li id="li-433"><div class="para" id="p-derived-li-433">
 <code class="code-inline tex2jax_ignore">x1</code>: Branch starting x-location</div></li>
-<li id="li-435"><div class="para" id="p-derived-li-435">
+<li id="li-434"><div class="para" id="p-derived-li-434">
 <code class="code-inline tex2jax_ignore">y1</code>: Branch starting y-location</div></li>
-<li id="li-436"><div class="para" id="p-derived-li-436">
+<li id="li-435"><div class="para" id="p-derived-li-435">
 <code class="code-inline tex2jax_ignore">angle</code>: Angle with which to rotate branch [degrees]</div></li>
-<li id="li-437"><div class="para" id="p-derived-li-437">
+<li id="li-436"><div class="para" id="p-derived-li-436">
 <code class="code-inline tex2jax_ignore">length</code>: Length of branch</div></li>
-<li id="li-438"><div class="para" id="p-derived-li-438">
+<li id="li-437"><div class="para" id="p-derived-li-437">
 <code class="code-inline tex2jax_ignore">dangle</code>: Amount to rotate next branch (positive and negative) [degrees].</div></li>
-<li id="li-439"><div class="para" id="p-derived-li-439">
+<li id="li-438"><div class="para" id="p-derived-li-438">
 <code class="code-inline tex2jax_ignore">dlength</code>: Amount to shorten next branch [pixels]</div></li>
 </ol>
 <div class="para">The <code class="code-inline tex2jax_ignore">branch(…)</code> method calls itself twice, with new angles and a shorter length. This method is an example of <dfn class="terminology">multiple recursion</dfn> due to the two recursive invocations. The base case stops recursion when branch length is reduced to a value that is less than 10. <a href="" class="xref" data-knowl="./knowl/figure-re-fractal-tree.html" title="Figure 12.4.2">Figure 12.4.2</a> shows output from <a href="" class="xref" data-knowl="./knowl/listing-re-fractal-tree.html" title="Listing 12.4.1">Listing 12.4.1</a>.</div>

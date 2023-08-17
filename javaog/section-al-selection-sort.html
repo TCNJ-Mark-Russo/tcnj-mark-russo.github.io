@@ -512,7 +512,7 @@ window.MathJax = {
 <div class="toc-item"><a href="section-in-polymorph.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Subtype Polymorphism</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-86" class="internal"><span class="codenumber">9.4.1</span> <span class="title">The <em class="emphasis">Many Forms</em> of Derived Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic Binding</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-88" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Protected Visibility</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-89" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Summary of Scope and Visibility</span></a></div></li>
 </ul>
@@ -731,19 +731,19 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">13.4</span> <span class="title">Selection Sort</span>
 </h2>
 <section class="introduction" id="introduction-66"><div class="para" id="p-982">The <dfn class="terminology">selection sort algorithm</dfn> is a simple sorting algorithm that repeatedly selects the smallest (or largest) element from an unsorted portion of the sequence and moves it to the sorted portion. It works by iteratively building the sorted portion of the sequence from the beginning, effectively dividing the sequence into two parts: the <em class="emphasis">sorted part</em> and the <em class="emphasis">unsorted part</em>.</div> <div class="para" id="p-983">The selection sort algorithm works as follows.</div> <ol class="decimal">
-<li id="li-477"><div class="para" id="p-derived-li-477">
+<li id="li-476"><div class="para" id="p-derived-li-476">
 <dfn class="terminology">Input</dfn>: The algorithm takes an unsorted collection or array of elements as input.</div></li>
-<li id="li-478"><div class="para" id="p-derived-li-478">
+<li id="li-477"><div class="para" id="p-derived-li-477">
 <dfn class="terminology">Initialization</dfn>: Start with the first element of the sequence as the current "minimum" or "maximum" value, depending on whether you’re sorting in ascending or descending order.</div></li>
-<li id="li-479"><div class="para" id="p-derived-li-479">
+<li id="li-478"><div class="para" id="p-derived-li-478">
 <dfn class="terminology">Search for Minimum/Maximum</dfn>: Iterate through the unsorted portion of the sequence, comparing each element with the current minimum/maximum value.</div></li>
-<li id="li-480"><div class="para" id="p-derived-li-480">
+<li id="li-479"><div class="para" id="p-derived-li-479">
 <dfn class="terminology">Update Minimum/Maximum</dfn>: If you find an element that is smaller (or larger, depending on the sorting order) than the current minimum/maximum value, update the current minimum/maximum value to the new element.</div></li>
-<li id="li-481"><div class="para" id="p-derived-li-481">
+<li id="li-480"><div class="para" id="p-derived-li-480">
 <dfn class="terminology">Swap</dfn>: After completing the iteration through the unsorted portion, swap the current minimum/maximum value with the first element in the unsorted portion. This effectively moves the smallest (or largest) element to its correct position in the sorted portion of the sequence.</div></li>
-<li id="li-482"><div class="para" id="p-derived-li-482">
+<li id="li-481"><div class="para" id="p-derived-li-481">
 <dfn class="terminology">Repeat</dfn>: Repeat steps 2 to 5, incrementing the starting position of the unsorted portion by one element each time. This process continues until the entire sequence is sorted.</div></li>
-<li id="li-483"><div class="para" id="p-derived-li-483">
+<li id="li-482"><div class="para" id="p-derived-li-482">
 <dfn class="terminology">Termination</dfn>: Once all elements are placed in their correct positions, the sorting is complete, and the sequence is now sorted in ascending (or descending) order.</div></li>
 </ol> <div class="para" id="p-984">The selection sort algorithm has a time complexity of <span class="process-math">\(O(N^2)\text{,}\)</span> where <span class="process-math">\(N\)</span> is the number of elements in the sequence. This is because, in each iteration, the algorithm searches through the remaining unsorted portion to find the minimum/maximum element and then performs a swap. Selection sort is not very efficient for large sequences. There are more efficient sorting algorithms like <dfn class="terminology">merge sort</dfn> which has better average and worst-case time complexities.</div> <div class="para" id="p-985">While selection sort is not commonly used for large-scale sorting tasks due to its inefficiency, it’s easy to understand and implement, making it suitable for small sequences where efficiency is not a critical concern.</div> <div class="para" id="p-986">In <a href="" class="xref" data-knowl="./knowl/listing-al-selection-sort.html" title="Listing 13.4.1">Listing 13.4.1</a>, the <code class="code-inline tex2jax_ignore">selectionSort(…)</code> function takes an array (arr) as a parameter and sorts it using the selection sort algorithm. The main method demonstrates how to use the selection sort function on an array. The selection sort algorithm repeatedly finds the minimum element from the unsorted portion and swaps it with the current element, effectively building the sorted portion of the array.</div> <div class="para" id="p-987">After sorting, the output will display the original array and the sorted array.</div> <figure class="listing figure-like" id="listing-al-selection-sort"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// SelectionSort.java
 import java.util.Arrays;

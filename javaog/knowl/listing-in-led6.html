@@ -63,6 +63,10 @@ public class LED extends Oval { // Extend Oval
   public LEDColor getColor() {
     return this.color;
   }
+  // String representation of an LED object
+  public String toString() {
+    return "LED is" + (this.isOn() ? "" : " not") + " on";
+  }
 
   // --- Test LED
   public static void main(String[] args) {
@@ -78,7 +82,7 @@ public class LED extends Oval { // Extend Oval
     led1.turnOn();
     led2.turnOn();
 
-    System.out.println( "LED1 is" + (led1.isOn() ? "" : " not") + " on");
+    System.out.println( led1 );
   }
 }
 

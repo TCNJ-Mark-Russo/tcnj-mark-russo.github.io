@@ -512,7 +512,7 @@ window.MathJax = {
 <div class="toc-item"><a href="section-in-polymorph.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Subtype Polymorphism</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-86" class="internal"><span class="codenumber">9.4.1</span> <span class="title">The <em class="emphasis">Many Forms</em> of Derived Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic Binding</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-88" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Protected Visibility</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-89" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Summary of Scope and Visibility</span></a></div></li>
 </ul>
@@ -731,24 +731,24 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">10.4</span> <span class="title">Key Concepts</span>
 </h2>
 <ol class="decimal">
-<li id="li-384"><div class="para" id="p-derived-li-384">An <dfn class="terminology">interface</dfn> is a kind of contract to be fulfilled by a class definition.</div></li>
-<li id="li-385"><div class="para" id="p-derived-li-385">An interface is made up of one or more <dfn class="terminology">method signatures</dfn>.</div></li>
-<li id="li-386"><div class="para" id="p-derived-li-386">A class <dfn class="terminology">implements</dfn> an interface when it adds the <code class="code-inline tex2jax_ignore">implements</code> keyword and an interface name to the start line of the class.</div></li>
-<li id="li-387"><div class="para" id="p-derived-li-387">When a class implements an interface it is obligated to implement all methods signatures defined in that interface.</div></li>
-<li id="li-388"><div class="para" id="p-derived-li-388">The compiler enforces the interface implementation contract. If the contract is not fulfilled completely, the compiler will fail with an error.</div></li>
-<li id="li-389"><div class="para" id="p-derived-li-389">Interfaces may be defined using the angle brackets of generic notation which allows methods signatures to be parameterized by type.</div></li>
-<li id="li-390"><div class="para" id="p-derived-li-390">By implementing the <code class="code-inline tex2jax_ignore">java.lang.Comparable&lt;T&gt;</code> Interface, objects may be sorted by <code class="code-inline tex2jax_ignore">Arrays.sort(…)</code> or <code class="code-inline tex2jax_ignore">Collections.sort(…)</code>.</div></li>
-<li id="li-391"><div class="para" id="p-derived-li-391">By implementing the <code class="code-inline tex2jax_ignore">java.util.Iterator&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">java.util.Iterable&lt;T&gt;</code> interfaces, objects may be iterated using the enhanced-for statement.</div></li>
-<li id="li-392"><div class="para" id="p-derived-li-392">
+<li id="li-383"><div class="para" id="p-derived-li-383">An <dfn class="terminology">interface</dfn> is a kind of contract to be fulfilled by a class definition.</div></li>
+<li id="li-384"><div class="para" id="p-derived-li-384">An interface is made up of one or more <dfn class="terminology">method signatures</dfn>.</div></li>
+<li id="li-385"><div class="para" id="p-derived-li-385">A class <dfn class="terminology">implements</dfn> an interface when it adds the <code class="code-inline tex2jax_ignore">implements</code> keyword and an interface name to the start line of the class.</div></li>
+<li id="li-386"><div class="para" id="p-derived-li-386">When a class implements an interface it is obligated to implement all methods signatures defined in that interface.</div></li>
+<li id="li-387"><div class="para" id="p-derived-li-387">The compiler enforces the interface implementation contract. If the contract is not fulfilled completely, the compiler will fail with an error.</div></li>
+<li id="li-388"><div class="para" id="p-derived-li-388">Interfaces may be defined using the angle brackets of generic notation which allows methods signatures to be parameterized by type.</div></li>
+<li id="li-389"><div class="para" id="p-derived-li-389">By implementing the <code class="code-inline tex2jax_ignore">java.lang.Comparable&lt;T&gt;</code> Interface, objects may be sorted by <code class="code-inline tex2jax_ignore">Arrays.sort(…)</code> or <code class="code-inline tex2jax_ignore">Collections.sort(…)</code>.</div></li>
+<li id="li-390"><div class="para" id="p-derived-li-390">By implementing the <code class="code-inline tex2jax_ignore">java.util.Iterator&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">java.util.Iterable&lt;T&gt;</code> interfaces, objects may be iterated using the enhanced-for statement.</div></li>
+<li id="li-391"><div class="para" id="p-derived-li-391">
 <dfn class="terminology">Polymorphism</dfn> occurs when a single idea has many forms. There are multiple ways that Java supports polymorphism.</div></li>
-<li id="li-393"><div class="para" id="p-derived-li-393">Polymorphic methods are implemented when multiple methods of the same name have distinct signatures</div></li>
-<li id="li-394"><div class="para" id="p-derived-li-394">Polymorphic methods also occur when derived classes override base class methods</div></li>
-<li id="li-395"><div class="para" id="p-derived-li-395">Polymorphic reference variables occur when a variable of type base class reference a value of type derived class.</div></li>
-<li id="li-396"><div class="para" id="p-derived-li-396">Polymorphic reference variables occur when a variable of type interface is capable of referencing any object that implements the interface.</div></li>
-<li id="li-397"><div class="para" id="p-derived-li-397">As the number of objects in a program grows, so does its complexity. It is essential to design your program before starting to code.</div></li>
-<li id="li-398"><div class="para" id="p-derived-li-398">
+<li id="li-392"><div class="para" id="p-derived-li-392">Polymorphic methods are implemented when multiple methods of the same name have distinct signatures</div></li>
+<li id="li-393"><div class="para" id="p-derived-li-393">Polymorphic methods also occur when derived classes override base class methods</div></li>
+<li id="li-394"><div class="para" id="p-derived-li-394">Polymorphic reference variables occur when a variable of type base class reference a value of type derived class.</div></li>
+<li id="li-395"><div class="para" id="p-derived-li-395">Polymorphic reference variables occur when a variable of type interface is capable of referencing any object that implements the interface.</div></li>
+<li id="li-396"><div class="para" id="p-derived-li-396">As the number of objects in a program grows, so does its complexity. It is essential to design your program before starting to code.</div></li>
+<li id="li-397"><div class="para" id="p-derived-li-397">
 <dfn class="terminology">Implementation inheritance</dfn> in Java occurs when the <dfn class="terminology">extends</dfn> keyword is used (is-a)</div></li>
-<li id="li-399"><div class="para" id="p-derived-li-399">
+<li id="li-398"><div class="para" id="p-derived-li-398">
 <dfn class="terminology">Interface inheritance</dfn> in Java occurs when the implements keyword is used (another kind of is-a)</div></li>
 </ol></section></div>
 <div class="ptx-content-footer">

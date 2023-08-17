@@ -512,7 +512,7 @@ window.MathJax = {
 <div class="toc-item"><a href="section-in-polymorph.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Subtype Polymorphism</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-86" class="internal"><span class="codenumber">9.4.1</span> <span class="title">The <em class="emphasis">Many Forms</em> of Derived Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic Binding</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-88" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Protected Visibility</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-89" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Summary of Scope and Visibility</span></a></div></li>
 </ul>
@@ -732,15 +732,15 @@ window.MathJax = {
 </h2>
 <section class="introduction" id="introduction-54"><div class="para" id="p-842">The Java Core Library provides many prewritten exception classes that it uses to indicate when runtime errors occur. <a href="" class="xref" data-knowl="./knowl/figure-ex-exception-class-hierarchy.html" title="Figure 11.2.1">Figure 11.2.1</a> illustrates many common exception classes making up part of this hierarchy.</div> <figure class="figure figure-like" id="figure-ex-exception-class-hierarchy"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/ex-exception-class-hierarchy.svg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.2.1<span class="period">.</span></span><span class="space"> </span>Part of the Java Exception Class Hierarchy</figcaption></figure> <div class="para" id="p-843">In <a href="" class="xref" data-knowl="./knowl/figure-ex-exception-class-hierarchy.html" title="Figure 11.2.1">Figure 11.2.1</a> under the Throwable class, things that can go wrong in Java at runtime are grouped under two broad base classes, <dfn class="terminology">Error</dfn> and <dfn class="terminology">Exception</dfn>. Classes that derive from Error are very serious problems from which there is no recovery possible. These tend to occur when system resources are exhausted, such as when an instance of the OutOfMemoryError class, the StackOverflowError class, or the ominous ThreadDeath class, is thrown. Because we cannot catch and handle these exceptions, the best we can do is note that they exist and hope we never encounter them. The Exception class and its derived classes are of more interest because we can catch these exceptions and hopefully handle them in a productive way.</div> <div class="para" id="p-844">The Core Library includes a long list of classes that derive from the Exception class. You are able to identify Exception derived classes by their name; all classes that derive from Exception end with "Exception." The following lists several examples.</div> <ul class="disc">
-<li id="li-400"><div class="para" id="p-derived-li-400">
+<li id="li-399"><div class="para" id="p-derived-li-399">
 <dfn class="terminology">ArithmeticException</dfn> - Occurs when dividing by 0</div></li>
-<li id="li-401"><div class="para" id="p-derived-li-401">
+<li id="li-400"><div class="para" id="p-derived-li-400">
 <dfn class="terminology">NullPointerException</dfn> - A reference variable with a value of <code class="code-inline tex2jax_ignore">null</code> was accessed</div></li>
-<li id="li-402"><div class="para" id="p-derived-li-402">
+<li id="li-401"><div class="para" id="p-derived-li-401">
 <dfn class="terminology">IndexOutOfBoundsException</dfn> - an out-of-bounds index was passed to an ArrayList</div></li>
-<li id="li-403"><div class="para" id="p-derived-li-403">
+<li id="li-402"><div class="para" id="p-derived-li-402">
 <dfn class="terminology">ArrayIndexOutOfBoundsException</dfn> - an out-of-bounds index was passed to an array</div></li>
-<li id="li-404"><div class="para" id="p-derived-li-404">
+<li id="li-403"><div class="para" id="p-derived-li-403">
 <dfn class="terminology">IllegalArgumentException</dfn> - An illegal or inappropriate argument was passed to a method</div></li>
 </ul> <div class="para" id="p-845">Fortunately, when thrown, each of these and many additional exceptions may be caught and handled.</div> <div class="para" id="p-846">printStackTrace() method</div></section></section></div>
 <div class="ptx-content-footer">

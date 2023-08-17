@@ -512,7 +512,7 @@ window.MathJax = {
 <div class="toc-item"><a href="section-in-polymorph.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Subtype Polymorphism</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-86" class="internal"><span class="codenumber">9.4.1</span> <span class="title">The <em class="emphasis">Many Forms</em> of Derived Classes</span></a></div></li>
-<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic binding</span></a></div></li>
+<li><div class="toc-item"><a href="section-in-polymorph.html#subsection-87" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Dynamic Binding</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-88" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Protected Visibility</span></a></div></li>
 <li><div class="toc-item"><a href="section-in-polymorph.html#subsection-89" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Summary of Scope and Visibility</span></a></div></li>
 </ul>
@@ -842,16 +842,16 @@ public class Sentence implements Comparable&lt;Sentence&gt; {
 }
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">10.1.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Sentence.java</code></figcaption></figure><ol class="decimal">
-<li id="li-374"><div class="para" id="p-derived-li-374">We import both ArrayList and Collections because we plan to use both.</div></li>
-<li id="li-375"><div class="para" id="p-derived-li-375">Our Sentence class <code class="code-inline tex2jax_ignore">implements Comparable&lt;Sentence&gt;</code>.</div></li>
-<li id="li-376"><div class="para" id="p-derived-li-376">Sentence encapsulates the sentence String itself and word count.</div></li>
-<li id="li-377"><div class="para" id="p-derived-li-377">Word count is precomputed in the constructor.</div></li>
-<li id="li-378"><div class="para" id="p-derived-li-378">A <code class="code-inline tex2jax_ignore">toString()</code> override returns Sentence String.</div></li>
-<li id="li-379"><div class="para" id="p-derived-li-379">The <code class="code-inline tex2jax_ignore">getWordCount()</code> accessor method returns word count.</div></li>
-<li id="li-380"><div class="para" id="p-derived-li-380">The <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code> interface method returns an int value that indicates Sentence order based on word count.</div></li>
-<li id="li-381"><div class="para" id="p-derived-li-381">The <code class="code-inline tex2jax_ignore">main(…)</code> method fills an <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code> with Sentence objects from Juliet’s famous speach.</div></li>
-<li id="li-382"><div class="para" id="p-derived-li-382">The <code class="code-inline tex2jax_ignore">Collections.sort(…)</code> static method is invoked to sort the <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code>, which uses our overridden <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code>.</div></li>
-<li id="li-383"><div class="para" id="p-derived-li-383">Sorted Sentences are printed in order, with word count.</div></li>
+<li id="li-373"><div class="para" id="p-derived-li-373">We import both ArrayList and Collections because we plan to use both.</div></li>
+<li id="li-374"><div class="para" id="p-derived-li-374">Our Sentence class <code class="code-inline tex2jax_ignore">implements Comparable&lt;Sentence&gt;</code>.</div></li>
+<li id="li-375"><div class="para" id="p-derived-li-375">Sentence encapsulates the sentence String itself and word count.</div></li>
+<li id="li-376"><div class="para" id="p-derived-li-376">Word count is precomputed in the constructor.</div></li>
+<li id="li-377"><div class="para" id="p-derived-li-377">A <code class="code-inline tex2jax_ignore">toString()</code> override returns Sentence String.</div></li>
+<li id="li-378"><div class="para" id="p-derived-li-378">The <code class="code-inline tex2jax_ignore">getWordCount()</code> accessor method returns word count.</div></li>
+<li id="li-379"><div class="para" id="p-derived-li-379">The <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code> interface method returns an int value that indicates Sentence order based on word count.</div></li>
+<li id="li-380"><div class="para" id="p-derived-li-380">The <code class="code-inline tex2jax_ignore">main(…)</code> method fills an <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code> with Sentence objects from Juliet’s famous speach.</div></li>
+<li id="li-381"><div class="para" id="p-derived-li-381">The <code class="code-inline tex2jax_ignore">Collections.sort(…)</code> static method is invoked to sort the <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code>, which uses our overridden <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code>.</div></li>
+<li id="li-382"><div class="para" id="p-derived-li-382">Sorted Sentences are printed in order, with word count.</div></li>
 </ol>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac Sentence.java
 java Sentence
