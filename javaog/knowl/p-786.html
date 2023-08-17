@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">One of the more important interfaces provided by the Java core library is <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code>, the source code of which is in <a href="" class="xref" data-knowl="./knowl/listing-if-comparable.html" title="Listing 10.1.1">Listing 10.1.1</a>. The <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface is widely used in Java. A class must implement the <code class="code-inline tex2jax_ignore">Comparable&lt;T&gt;</code> interface before it may be processed by certain predefined algorithms in the Core Library, including sorting and searching. The <code class="code-inline tex2jax_ignore">compareTo(T o)</code> method returns a negative int if <code class="code-inline tex2jax_ignore">this</code> is ordered to the left of <code class="code-inline tex2jax_ignore">o</code>, a positive int if <code class="code-inline tex2jax_ignore">this</code> is ordered to the right of <code class="code-inline tex2jax_ignore">o</code>, and 0 if <code class="code-inline tex2jax_ignore">this</code> and <code class="code-inline tex2jax_ignore">o</code> can appear in either order. What constitutes less-than, greater-than and equal-to is something that you are free to decide for yourself to suit your own needs.</div>
-<span class="incontext"><a href="section-if-comparable.html#p-786" class="internal">in-context</a></span>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<div class="para">Abstract classes and methods are very useful. Centralizing shared behavior and requiring derived classes to implement dependent custom behavior enforces design constraints and ensures compatibility. What if we take this idea to an extreme and mark all methodsas  abstract? We would be left with an abstract base class having only abstract method signatures, no implementations, all of which must be implemented by derived classes. This idea turns out to be a very useful concept on its own, called an <dfn class="terminology">interface</dfn>.</div>
+<span class="incontext"><a href="chapter-interfaces.html#p-786" class="internal">in-context</a></span>
 </body>
 </html>

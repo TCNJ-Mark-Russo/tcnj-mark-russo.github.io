@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Each Shape object’s fill color and stroke color may be specified using color component values. There are two mutator methods for setting Shape color: <code class="code-inline tex2jax_ignore">setFillColor(...)</code> and <code class="code-inline tex2jax_ignore">getStrokeColor(...)</code>. These setter methods each have three overloads. The base method signature has four parameters, one for each of the four color components: red, green, blue and alpha. A second overloaded method has only three parameters, which specify red, green and blue components. In this case the alpha component is assumed to have a value of 255, meaning that the Shape color has no transparency. The third overloaded method has only one parameter, often called gray. In this case the parameter value is repeated for all three color components, and alpha once again is set to 255.</div>
-<span class="incontext"><a href="section-dp-colors.html#p-1017" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">An interesting feature of DoodlePad is that if you do not explicitly create a Pad object, one will be created for you. This is a good example of DoodlePad’s core design philosophy, which is to automatically provide missing components and default parameters as necessary so that your program runs successfully right off the bat <code class="code-inline tex2jax_ignore">:-)</code>. You need to create only an instance of a graphic object; DoodlePad will create a default Pad for you automatically and add your object to the Pad.</div>
+<span class="incontext"><a href="section-dp-model.html#p-1017" class="internal">in-context</a></span>
 </body>
 </html>

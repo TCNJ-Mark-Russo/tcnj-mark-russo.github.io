@@ -11,22 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.6.7<span class="period">.</span></span><span class="space"> </span>Shape Selection Event Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.6.1<span class="period">.</span></span><span class="space"> </span>Mouse Event Parameters</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="l m b1 r0 l0 t0 lines">Method</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">#</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Type</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#setSelectionChangedHandler-doodlepad.Shape.ShapeSelectionEventHandler-" target="_blank">public void setSelectionChangedHandler(ShapeSelectionEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-84-hidden.html" title="Footnote 14.6.9"><sup> 9 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Specify a suitable method to handle selectionChanged events triggered by a Shape object. The method reference must implement the signature defined by the <a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.ShapeSelectionEventHandler.html" target="_blank">ShapeSelectionEventHandler</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-85-hidden.html" title="Footnote 14.6.10"><sup> 10 </sup></a> interface.</td>
+<td class="l t b0 r0 l0 t0 lines">1.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">Shape</code></td>
+<td class="l t b0 r0 l0 t0 lines">The Shape object that initiated the mouse event</td>
 </tr>
 <tr>
-<td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="http://doodlepad.org/dist/javadoc/doodlepad/Shape.html#onSelectionChanged-boolean-" target="_blank">public void onSelectionChanged(boolean selected)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-86-hidden.html" title="Footnote 14.6.11"><sup> 11 </sup></a>
-</td>
-<td class="l t b0 r0 l0 t0 lines">Override this method in a Shape subclass to handle selectionChanged events by overriding the base class method.</td>
+<td class="l t b0 r0 l0 t0 lines">2.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
+<td class="l t b0 r0 l0 t0 lines">The x-coordinate at which the event occurred</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">3.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double</code></td>
+<td class="l t b0 r0 l0 t0 lines">The y-coordinate at which the event occurred</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">4.</td>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">int</code></td>
+<td class="l t b0 r0 l0 t0 lines">A number identifying the mouse button used</td>
 </tr>
 </table></div></figure><span class="incontext"><a href="section-dp-events.html#table-46" class="internal">in-context</a></span>
 </body>

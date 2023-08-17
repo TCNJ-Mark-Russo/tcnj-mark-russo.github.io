@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">What about a recursive version of <code class="code-inline tex2jax_ignore">isPalindrome(String lets)</code>? Can you identify a way to determine if a String is a palindrome involving a test that a substring of the main String is a palindrome?</div>
+<div class="para">For a String having an odd number of chars, say 7, the loop extent does not change, but iteration terminates with one lone character at the center. <code class="code-inline tex2jax_ignore">lets.length()/2</code> is still 3 because we lose the fractional part with integer division. The variable <code class="code-inline tex2jax_ignore">i</code> starts at 0 and again increments to 1 and then 2. The value of <code class="code-inline tex2jax_ignore">j</code> is computed as <code class="code-inline tex2jax_ignore">7-1-0 == 6</code> and decrements to 5 and 4. The char at index 3 is not tested. This is not a problem because this is the middle char, which is a singleton and can be ignored because it has no char that must be matched.</div>
 <span class="incontext"><a href="section-re-thinking.html#p-899" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The problem is in the constructor. The intention was to assign the object-scoped <code class="code-inline tex2jax_ignore">line</code> variable. Unfortunately, the locally-scoped <code class="code-inline tex2jax_ignore">line</code> variable <em class="emphasis">shadows</em> the object-scoped variable because it has the same name. The constructor initialized the wrote <code class="code-inline tex2jax_ignore">line</code> variable. See <a href="" class="xref" data-knowl="./knowl/figure-cl-shadowing.html" title="Figure 8.4.3">Figure 8.4.3</a> for an illustration of the situation. To solve the problem we can eliminate the declaration of the locally-scoped <code class="code-inline tex2jax_ignore">line</code> variable by removing the class name <code class="code-inline tex2jax_ignore">Line</code>, leaving only the initialization. Specifically, <code class="code-inline tex2jax_ignore">line = new Line(100, 100, 500, 100)</code>. With this modification, the program works correctly.</div>
+<div class="para">This might seem odd because it is clear that the <code class="code-inline tex2jax_ignore">line</code> variable is initialized in the constructor, in the statement <code class="code-inline tex2jax_ignore">Line line = new Line(100, 100, 500, 100)</code>. So what could be wrong? Can you spot the error?</div>
 <span class="incontext"><a href="section-cl-shadowing.html#p-676" class="internal">in-context</a></span>
 </body>
 </html>

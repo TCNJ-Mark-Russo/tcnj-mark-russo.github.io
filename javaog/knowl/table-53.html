@@ -11,41 +11,95 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.9.1<span class="period">.</span></span><span class="space"> </span>Timer Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.8.4<span class="period">.</span></span><span class="space"> </span>Image Object Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method Signature</th>
 <th scope="col" class="l m b1 r0 l0 t0 lines">Description</th>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setTickRate-double-" target="_blank">public final void setTickRate(double tps)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-127-hidden.html" title="Footnote 14.9.1"><sup> 1 </sup></a>
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#setPixel-int-int-int-int-int-" target="_blank">public void setPixel(int x, int y, int red, int green, int blue)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-108-hidden.html" title="Footnote 14.8.4"><sup> 4 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Set the rate at which the Pad’s internal timer fires. The single method argument is the tick rate, provided in the units ticks-per-second. The default tick rate value is 60.</td>
+<td class="l t b0 r0 l0 t0 lines">Set the color of the pixel at the coordinate (x, y) to the color identified by (red, green, blue). (See <a class="external" href="https://doodlepad.org/colors.html" target="_blank">Colors</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-109-hidden.html" title="Footnote 14.8.5"><sup> 5 </sup></a>.)</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#getTickRate--" target="_blank">public final double getTickRate()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-128-hidden.html" title="Footnote 14.9.2"><sup> 2 </sup></a>
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#getRed-int-int-" target="_blank">public int getRed(int x, int y)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-110-hidden.html" title="Footnote 14.8.6"><sup> 6 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Return the current tick rate value in ticks-per-second that has been set for a Pad object’s internal timer.</td>
+<td class="l t b0 r0 l0 t0 lines">Return an int corresponding to the red component of the pixel color at (x, y).</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#setTickHandler-doodlepad.Pad.PadTimerEventHandler-" target="_blank">public void setTickHandler(Pad.PadTimerEventHandler handler)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-129-hidden.html" title="Footnote 14.9.3"><sup> 3 </sup></a>
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#getGreen-int-int-" target="_blank">public int getGreen(int x, int y)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-111-hidden.html" title="Footnote 14.8.7"><sup> 7 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Provide a method reference for a method to be executed when a Pad timer ticks, the tick event handler. The method signature for the handler must match the signature void handler(Pad pad, long when).</td>
+<td class="l t b0 r0 l0 t0 lines">Return an int corresponding to the green component of the pixel color at (x, y).</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#startTimer--" target="_blank">public void startTimer()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-130-hidden.html" title="Footnote 14.9.4"><sup> 4 </sup></a>
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#getBlue-int-int-" target="_blank">public int getBlue(int x, int y)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-112-hidden.html" title="Footnote 14.8.8"><sup> 8 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Start a Pad’s timer ticking. The timer will invoke the associated tick event handler at its preset tick rate.</td>
+<td class="l t b0 r0 l0 t0 lines">Return an int corresponding to the blue component of the pixel color at (x, y).</td>
 </tr>
 <tr>
 <td class="l t b0 r0 l0 t0 lines">
-<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Pad.html#stopTimer--" target="_blank">public void stopTimer()</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-131-hidden.html" title="Footnote 14.9.5"><sup> 5 </sup></a>
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#getAlpha-int-int-" target="_blank">public int getAlpha(int x, int y)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-113-hidden.html" title="Footnote 14.8.9"><sup> 9 </sup></a>
 </td>
-<td class="l t b0 r0 l0 t0 lines">Stop a Pad’s timer ticking.</td>
+<td class="l t b0 r0 l0 t0 lines">Return an int corresponding to the alpha (transparency) component of the pixel color at (x, y).</td>
 </tr>
-</table></div></figure><span class="incontext"><a href="section-dp-timers.html#table-53" class="internal">in-context</a></span>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#drawArc-double-double-double-double-double-double-" target="_blank">public void drawArc(double x, double y, double width, double height, double startAngle, double arcAngle)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-114-hidden.html" title="Footnote 14.8.10"><sup> 10 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw an arc on the Image defined by a section of an ellipse bounded by the rectangle with upper left corner at (x, y) and size (width, height). The arc starts at angle startAngle (degrees) and extends by arcAngle (degrees).</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#drawLine-double-double-double-double-" target="_blank">public void drawLine(double x1, double y1, double x2, double y2)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-115-hidden.html" title="Footnote 14.8.11"><sup> 11 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw a line on the Image from the coordinate (x1, y1) to (x2, y2).</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#getAlpha-int-int-" target="_blank">public void drawOval(double x, double y, double width, double height)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-116-hidden.html" title="Footnote 14.8.12"><sup> 12 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw an oval on the Image within the bounding box having an upper left corner at (x, y) and dimensions (width, height).</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#drawPolygon-double:A-double:A-" target="_blank">public void drawPolygon(double[] xPoints, double[] yPoints)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-117-hidden.html" title="Footnote 14.8.13"><sup> 13 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw a polygon on the Image that connects corresponding coordinate pairs stored in the two arrays xPoints and yPoints.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#drawPolygon-java.util.List-" target="_blank">public void drawPolygon(java.util.List&lt;Point&gt; points)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-118-hidden.html" title="Footnote 14.8.14"><sup> 14 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw a polygon on the Image that connects coordinates stored as a List&lt;&gt; of <a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Point.html" target="_blank">Point</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-119-hidden.html" title="Footnote 14.8.15"><sup> 15 </sup></a> objects.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#drawRectangle-double-double-double-double-" target="_blank">public void drawRectangle(double x, double y, double width, double height)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-120-hidden.html" title="Footnote 14.8.16"><sup> 16 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw a rectangle within the bounding box having an upper left corner at (x, y) and dimensions (width, height).</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#getAlpha-int-int-" target="_blank">public void drawRoundRect(double x, double y, double width, double height, double arcWidth, double arcHeight)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-121-hidden.html" title="Footnote 14.8.17"><sup> 17 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw a rounded rectangle within the bounding box having an upper left corner at (x, y), dimensions (width, height), and rounded corners defined by an arc with width arcWidth and height arcHeight.</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#drawText-java.lang.String-double-double-" target="_blank">public void drawText(java.lang.String text, double x, double y)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-122-hidden.html" title="Footnote 14.8.18"><sup> 18 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw text on an Image stored in the String text, with an upper left corner defined by (x, y).</td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">
+<a class="external" href="https://doodlepad.org/dist/javadoc/doodlepad/Image.html#drawText-java.lang.String-double-double-int-" target="_blank">public void drawText(java.lang.String text, double x, double y, int size)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-123-hidden.html" title="Footnote 14.8.19"><sup> 19 </sup></a>
+</td>
+<td class="l t b0 r0 l0 t0 lines">Draw text on an Image stored in the String text, with an upper left corner defined by (x, y), and a font size of size.</td>
+</tr>
+</table></div></figure><span class="incontext"><a href="section-dp-images.html#table-53" class="internal">in-context</a></span>
 </body>
 </html>

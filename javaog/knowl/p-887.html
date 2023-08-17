@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The FileWriter class is in java.io.FileWriter and it has a constructor that take a file name String to be opened. If the file does not exist on your file system, FileWriter will create it for you. If it does exist, the existing file will be opened for writing.</div>
+<div class="para">There is important option to be aware of when opening a file to write using the FileWriter class. That is, where in the file should writing begin? While it is not uncommon to read an entire file all at once, files are often written incrementally, a bit at a time. For example, you might open a file and write a few lines and then close it. Open it again later in your program and close it again. The implication here is that writing will begin <em class="emphasis">at the end of hte file</em>. If we begin writing from the beginning each time, then the fill will contain only the last data written because the file is being overwritten each time.</div>
 <span class="incontext"><a href="section-ex-writing-files.html#p-887" class="internal">in-context</a></span>
 </body>
 </html>

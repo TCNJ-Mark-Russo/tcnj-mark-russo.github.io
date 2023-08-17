@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// MergeSort.java
+import java.util.Arrays;
+
+public class MergeSort {
+
+  // Merge function to merge two subarrays
+  static void merge(int[] arr, int left, int mid, int right) {
+    int N1 = mid - left + 1;
+    int N2 = right - mid;
+
+    int[] leftArray  = new int[N1];
+    int[] rightArray = new int[N2];
+
+    // Copy data to temporary arrays
+    for (int i = 0; i &lt; N1; i++) {
+      leftArray[i] = arr[left + i];
+    }
+    for (int j = 0; j &lt; N2; j++) {
+      rightArray[j] = arr[mid + 1 + j];
+    }
+
+    int i = 0, j = 0, k = left;
+
+    // Merge the two arrays back into the original array
+    while (i &lt; N1 &amp;&amp; j &lt; N2) {
+      if (leftArray[i] &lt;= rightArray[j]) {
+        arr[k] = leftArray[i];
+        i++;
+      } else {
+        arr[k] = rightArray[j];
+        j++;
+      }
+        k++;
+    }
+
+    // Copy remaining elements from leftArray, if any
+    while (i &lt; N1) {
+      arr[k] = leftArray[i];
+      i++;
+      k++;
+    }
+
+    // Copy remaining elements from rightArray, if any
+    while (j &lt; N2) {
+      arr[k] = rightArray[j];
+      j++;
+      k++;
+    }
+  }
+
+  // Merge sort function
+  static void mergeSort(int[] arr, int left, int right) {
+    if (left &lt; right) {
+      int mid = left + (right - left) / 2;
+
+      // Sort the first and second halves
+      mergeSort(arr, left, mid);
+      mergeSort(arr, mid + 1, right);
+
+      // Merge the sorted halves
+      merge(arr, left, mid, right);
+    }
+  }
+
+  public static void main(String[] args) {
+    int[] arrayToSort = { 12, 11, 13, 5, 6, 7 };
+      
+    System.out.println("Original array: " + Arrays.toString(arrayToSort));
+    mergeSort(arrayToSort, 0, arrayToSort.length - 1);  
+    System.out.println("Sorted array: " + Arrays.toString(arrayToSort));
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.6.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="section-al-merge-sort.html#listing-al-merge-sort" class="internal">in-context</a></span>
+</body>
+</html>

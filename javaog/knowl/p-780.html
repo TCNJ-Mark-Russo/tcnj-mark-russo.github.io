@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">But modifying a class with <dfn class="terminology">abstract</dfn> is not enough. If a class is <em class="emphasis">abstract</em> then it must also contain at least one method that is modified with <em class="emphasis">abstract</em> as well. A method with the additional <em class="emphasis">abstract</em> modifier is required to have no implementation. Instead, an abstract method is composed of a method signature only, and this signals that all derived classes must provide a concrete implementation of the method. Once again, the Java compiler enforces this design constraint. Classes that extend an abstract base class must (eventually) provide a concrete implementation of all abstract methods.</div>
+<div class="para">An attempt to instantiate Shape will end with a compiler error, and that’s a good thing. After all, Shape is an <em class="emphasis">abstract</em> concept, not an actual graphic. It has no visual representation. The Shape class exists primarily as as way to generalize the concept of a shape and to encapsulate the shared functionality of all concrete shape derived classes in one place, to avoid the problems assocaited with code duplication. In fact, the Shape class was designed to be abstract. Never was there an intention that concrete Shape objects would be instantiated. This was part of the original design, and we’d like Java to help us enforce that restriction.</div>
 <span class="incontext"><a href="section-in-abstract-class.html#p-780" class="internal">in-context</a></span>
 </body>
 </html>

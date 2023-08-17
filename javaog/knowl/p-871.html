@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The first step to reading from a file is to instantiate a File object representing the file stored in your file system. Assuming the data file is anmed "data.txt" and is saved to the same file system location as your Java program, you can accomplish this with the following statement, where <code class="code-inline tex2jax_ignore">fileName</code> is a String variable with the name of the file to be opened. Before you can instantiate a File object, you must import it from <code class="code-inline tex2jax_ignore">java.io.File</code>. Refer to <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> for the completed program.</div>
+<div class="para">A Scanner is instantiated with a java.io.File object that represents a file on the local file system. One File constructor takes a String containing the unique file location. A file location can be a complete path to the file from the file system root, or a relative path from the location of the Java program. We’ll assume that the file we want to read is in the same folder as our Java program, and so we can pass only the file name as a String to the File constructor.</div>
 <span class="incontext"><a href="section-ex-reading-files.html#p-871" class="internal">in-context</a></span>
 </body>
 </html>

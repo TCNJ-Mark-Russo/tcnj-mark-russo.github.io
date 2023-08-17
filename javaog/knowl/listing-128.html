@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Transform3.java
+import doodlepad.*;
+
+public class Transform3 {
+    private Rectangle redRect;
+    private Rectangle grnRect;
+
+    public Transform3() {
+        // Two Rectangles with identical location and dimensions
+        grnRect = new Rectangle(100, 0, 50, 50);
+        redRect = new Rectangle(100, 0, 50, 50);
+
+        // Set fill colors
+        redRect.setFillColor(255, 0, 0);
+        grnRect.setFillColor(0, 255, 0);
+
+        // Rotate the green Rectangle only
+        grnRect.rotate(45);
+    }
+
+    public static void main(String[] args) {
+        Transform3 myTransform3 = new Transform3();
+    }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.11.9<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Transform3.java</code></figcaption></figure><span class="incontext"><a href="section-dp-transformations.html#listing-128" class="internal">in-context</a></span>
+</body>
+</html>

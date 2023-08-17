@@ -11,24 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// HeartPath.java
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RoundRectDemo1.java
 import doodlepad.*;
 
-public class HeartPath {
+public class RoundRectDemo1 {
     public static void main(String[] args) {
-        // Create heart-shaped Path
-        Path h = new Path();
-        h.moveTo(100.0, 70.0);
-        h.quadTo( 10.0, 25.0, 100.0, 150.0);    // 1) Left side of heart
-        h.quadTo(190.0, 25.0, 100.0,  70.0);    // 2) Right side of heart
-        h.closePath();
-
-        // Set fill color and disable stroke
-        h.setFillColor(255, 0, 0);              // 3) Fill with red
-        h.setStroked(false);                    // 4) Do not draw outline
+        
+        RoundRect r1 = new RoundRect(10, 10, 200, 150, 30, 30);
+        
     }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="section-dp-paths.html#listing-106" class="internal">in-context</a></span>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">14.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="section-dp-shapes.html#listing-106" class="internal">in-context</a></span>
 </body>
 </html>

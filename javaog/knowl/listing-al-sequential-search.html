@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// SequentialSearch.java
+public class SequentialSearch {
+
+  // Sequential search function
+  static int sequentialSearch(int[] arr, int target) {
+    int n = arr.length;
+
+    for (int i = 0; i &lt; n; i++) {
+      if (arr[i] == target) {
+        return i; // Target found, return the index
+      }
+    }
+
+    return -1; // Target not found
+  }
+
+  public static void main(String[] args) {
+    int[] arrayToSearch = { 4, 2, 8, 5, 1, 9 };
+    int target = 5;
+
+    int result = sequentialSearch(arrayToSearch, target);
+
+    if (result != -1) {
+      System.out.println("Target " + target + " found at index " + result);
+    } else {
+      System.out.println("Target " + target + " not found in the array.");
+    }
+  }
+}
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">13.2.1<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">SequentialSearch.java</code></figcaption></figure><span class="incontext"><a href="section-al-sequential-search.html#listing-al-sequential-search" class="internal">in-context</a></span>
+</body>
+</html>
