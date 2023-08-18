@@ -536,9 +536,9 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="section-if-custom.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Custom Interfaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-if-custom.html#subsection-92" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Define a Custom Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-if-custom.html#subsection-93" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Implement Multiple Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-if-custom.html#subsection-94" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Add Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-if-custom.html#subsection-92" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Defining a Custom Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-if-custom.html#subsection-93" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Implementing Multiple Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-if-custom.html#subsection-94" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Adding Inheritance</span></a></div></li>
 <li><div class="toc-item"><a href="section-if-custom.html#subsection-95" class="internal"><span class="codenumber">10.2.4</span> <span class="title">TogglingSelector Widget</span></a></div></li>
 <li><div class="toc-item"><a href="section-if-custom.html#subsection-96" class="internal"><span class="codenumber">10.2.5</span> <span class="title">SlidingSelector Widget</span></a></div></li>
 <li><div class="toc-item"><a href="section-if-custom.html#subsection-97" class="internal"><span class="codenumber">10.2.6</span> <span class="title">RotatingSelector Widget</span></a></div></li>
@@ -580,7 +580,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-109" class="internal"><span class="codenumber">11.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">11.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">11.5</span> <span class="title"><code class="code-inline tex2jax_ignore">try-with-resources</code></span></a></div></li>
 <li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Writing Files</span></a></div></li>
 <li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Chapter Exercises</span></a></div></li>
@@ -730,25 +730,25 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-re-graphics"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">12.4</span> <span class="title">Recursive Graphics</span>
 </h2>
-<section class="introduction" id="introduction-61"><dfn class="terminology">Fractal art</dfn> is composed using algorithms to generate graphical illustrations, where each part of the illustation can be identified as a reduced-size copy of the original. This <em class="emphasis">self-similarity</em> property makes recursive algorithms an ideal method to use to compose fractal art.</section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-61"><dfn class="terminology">Fractal art</dfn> is composed using algorithms to generate graphical illustrations, where each part of the illustation can be identified as a reduced-size copy of the original. This <em class="emphasis">self-similarity</em> property makes recursive algorithms an ideal method to use to generate fractal art.</section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">12.4.1</span> <span class="title">Fractal Tree</span>
 </h3>
-<div class="para" id="p-948">One example of fractal art is the <em class="emphasis">Fractal Tree</em>. The recursive method of a Fractal Tree draws one linear branch of the tree and then recursively draws two shorter linear branches starting at the end of the current branch with an added positive and negative angle of rotation as well as an incrementally shorter length.</div>
+<div class="para" id="p-948">One example of fractal art is the <em class="emphasis">Fractal Tree</em>. The recursive method of a Fractal Tree draws one linear branch of the tree and then recursively draws two shorter linear branches starting at the end of the first branch with an added positive and negative angle of rotation as well as an incrementally shorter length.</div>
 <div class="para logical" id="p-949">
 <div class="para">
 <a href="" class="xref" data-knowl="./knowl/listing-re-fractal-tree.html" title="Listing 12.4.1">Listing 12.4.1</a> draws a Fractal Tree, with the recursive method <code class="code-inline tex2jax_ignore">branch(…)</code>. The <code class="code-inline tex2jax_ignore">branch(…)</code> method takes six parameters:</div>
 <ol class="decimal">
-<li id="li-433"><div class="para" id="p-derived-li-433">
+<li id="li-432"><div class="para" id="p-derived-li-432">
 <code class="code-inline tex2jax_ignore">x1</code>: Branch starting x-location</div></li>
-<li id="li-434"><div class="para" id="p-derived-li-434">
+<li id="li-433"><div class="para" id="p-derived-li-433">
 <code class="code-inline tex2jax_ignore">y1</code>: Branch starting y-location</div></li>
-<li id="li-435"><div class="para" id="p-derived-li-435">
+<li id="li-434"><div class="para" id="p-derived-li-434">
 <code class="code-inline tex2jax_ignore">angle</code>: Angle with which to rotate branch [degrees]</div></li>
-<li id="li-436"><div class="para" id="p-derived-li-436">
+<li id="li-435"><div class="para" id="p-derived-li-435">
 <code class="code-inline tex2jax_ignore">length</code>: Length of branch</div></li>
-<li id="li-437"><div class="para" id="p-derived-li-437">
+<li id="li-436"><div class="para" id="p-derived-li-436">
 <code class="code-inline tex2jax_ignore">dangle</code>: Amount to rotate next branch (positive and negative) [degrees].</div></li>
-<li id="li-438"><div class="para" id="p-derived-li-438">
+<li id="li-437"><div class="para" id="p-derived-li-437">
 <code class="code-inline tex2jax_ignore">dlength</code>: Amount to shorten next branch [pixels]</div></li>
 </ol>
 <div class="para">The <code class="code-inline tex2jax_ignore">branch(…)</code> method calls itself twice, with new angles and a shorter length. This method is an example of <dfn class="terminology">multiple recursion</dfn> due to the two recursive invocations. The base case stops recursion when branch length is reduced to a value that is less than 10. <a href="" class="xref" data-knowl="./knowl/figure-re-fractal-tree.html" title="Figure 12.4.2">Figure 12.4.2</a> shows output from <a href="" class="xref" data-knowl="./knowl/listing-re-fractal-tree.html" title="Listing 12.4.1">Listing 12.4.1</a>.</div>

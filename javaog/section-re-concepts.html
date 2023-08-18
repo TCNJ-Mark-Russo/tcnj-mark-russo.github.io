@@ -536,9 +536,9 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="section-if-custom.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Custom Interfaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-if-custom.html#subsection-92" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Define a Custom Interface</span></a></div></li>
-<li><div class="toc-item"><a href="section-if-custom.html#subsection-93" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Implement Multiple Interfaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-if-custom.html#subsection-94" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Add Inheritance</span></a></div></li>
+<li><div class="toc-item"><a href="section-if-custom.html#subsection-92" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Defining a Custom Interface</span></a></div></li>
+<li><div class="toc-item"><a href="section-if-custom.html#subsection-93" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Implementing Multiple Interfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-if-custom.html#subsection-94" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Adding Inheritance</span></a></div></li>
 <li><div class="toc-item"><a href="section-if-custom.html#subsection-95" class="internal"><span class="codenumber">10.2.4</span> <span class="title">TogglingSelector Widget</span></a></div></li>
 <li><div class="toc-item"><a href="section-if-custom.html#subsection-96" class="internal"><span class="codenumber">10.2.5</span> <span class="title">SlidingSelector Widget</span></a></div></li>
 <li><div class="toc-item"><a href="section-if-custom.html#subsection-97" class="internal"><span class="codenumber">10.2.6</span> <span class="title">RotatingSelector Widget</span></a></div></li>
@@ -580,7 +580,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-ex-reading-files.html#subsection-109" class="internal"><span class="codenumber">11.4.4</span> <span class="title">Defering Exception Handling</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">11.5</span> <span class="title">try-with-resources</span></a></div></li>
+<li><div class="toc-item"><a href="section-try-with-resources.html" class="internal"><span class="codenumber">11.5</span> <span class="title"><code class="code-inline tex2jax_ignore">try-with-resources</code></span></a></div></li>
 <li><div class="toc-item"><a href="section-ex-writing-files.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Writing Files</span></a></div></li>
 <li><div class="toc-item"><a href="section-ex-concepts.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Key Concepts</span></a></div></li>
 <li><div class="toc-item"><a href="section-ex-exercises.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Chapter Exercises</span></a></div></li>
@@ -731,23 +731,28 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">12.5</span> <span class="title">Key Concepts</span>
 </h2>
 <ol class="decimal">
-<li id="li-439"><div class="para" id="p-derived-li-439">The <dfn class="terminology">call stack</dfn> is a data structure that tracks all currently executing methods.</div></li>
-<li id="li-440"><div class="para" id="p-derived-li-440">A <dfn class="terminology">stack frame</dfn> tracks the state of each executing method on the call stack.</div></li>
-<li id="li-441"><div class="para" id="p-derived-li-441">A stack frame contains all information about the associated suspended method.</div></li>
-<li id="li-442"><div class="para" id="p-derived-li-442">Stack frames are pushed on the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.</div></li>
-<li id="li-443"><div class="para" id="p-derived-li-443">When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.</div></li>
-<li id="li-444"><div class="para" id="p-derived-li-444">The size of the call stack is limited. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.</div></li>
-<li id="li-445"><div class="para" id="p-derived-li-445">When a method (eventually) invokes itself during execution, the process is called <dfn class="terminology">recursion</dfn>.</div></li>
-<li id="li-446"><div class="para" id="p-derived-li-446">When a recursively invoked method returns, the method call resolves to the returned value.</div></li>
-<li id="li-447"><div class="para" id="p-derived-li-447">Many algorithms may be implemented using recursion.</div></li>
-<li id="li-448"><div class="para" id="p-derived-li-448">Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.</div></li>
-<li id="li-449"><div class="para" id="p-derived-li-449">Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.</div></li>
-<li id="li-450"><div class="para" id="p-derived-li-450">Recursive programs may be divided into <dfn class="terminology">direct recursion</dfn> and <dfn class="terminology">indirect recursion</dfn>.</div></li>
-<li id="li-451"><div class="para" id="p-derived-li-451">All recursive programs must have at least one <dfn class="terminology">base case</dfn> and at least one <dfn class="terminology">recursive case</dfn>.</div></li>
-<li id="li-452"><div class="para" id="p-derived-li-452">The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.</div></li>
-<li id="li-453"><div class="para" id="p-derived-li-453">A recursive case must move the state of the program closer to the base case in some way to ensure the recursive program terminates.</div></li>
-<li id="li-454"><div class="para" id="p-derived-li-454">There may be multiple base cases and multiple recursive cases in a recursive algorithm.</div></li>
-<li id="li-455"><div class="para" id="p-derived-li-455">The code block of one recursive case may invoke more than one recursive method.</div></li>
+<li id="li-438"><div class="para" id="p-derived-li-438">The <dfn class="terminology">call stack</dfn> is a data structure that tracks all currently executing methods.</div></li>
+<li id="li-439"><div class="para" id="p-derived-li-439">A <dfn class="terminology">stack frame</dfn> tracks the state of each executing method on the call stack.</div></li>
+<li id="li-440"><div class="para" id="p-derived-li-440">A stack frame contains all information about the associated active method instance.</div></li>
+<li id="li-441"><div class="para" id="p-derived-li-441">Stack frames are pushed onto the top of the call stack when a method starts execution and popped off the top of the call stack when execution terminates.</div></li>
+<li id="li-442"><div class="para" id="p-derived-li-442">When a method invokes itself, a new stack frame is added to the call stack so all instances of an executing method may be tracked.</div></li>
+<li id="li-443"><div class="para" id="p-derived-li-443">The size of the call stack is limited by memory. If an excessive number of methods are invoked, the call stack may overflow resulting in a StackOverflowError being thrown.</div></li>
+<li id="li-444"><div class="para" id="p-derived-li-444">When a method (eventually) invokes itself during execution, the process is called <dfn class="terminology">recursion</dfn>.</div></li>
+<li id="li-445"><div class="para" id="p-derived-li-445">When a recursively invoked method returns, the method call resolves to the returned value.</div></li>
+<li id="li-446"><div class="para" id="p-derived-li-446">Many algorithms may be implemented using recursion.</div></li>
+<li id="li-447"><div class="para" id="p-derived-li-447">Most recursive algorithms have alternative iterative implementations that tend to be more efficient in terms of the amount of memory used.</div></li>
+<li id="li-448"><div class="para" id="p-derived-li-448">Computing a factorial, the Fibonacci number, and the Greatest Common Divisor have elegant recursive implementations as well as iterative implementations.</div></li>
+<li id="li-449"><div class="para" id="p-derived-li-449">Recursive programs may be divided into <dfn class="terminology">direct recursion</dfn> and <dfn class="terminology">indirect recursion</dfn>.</div></li>
+<li id="li-450"><div class="para" id="p-derived-li-450">All recursive programs must have at least one <dfn class="terminology">base case</dfn> and at least one <dfn class="terminology">recursive case</dfn>.</div></li>
+<li id="li-451"><div class="para" id="p-derived-li-451">The base case executes when the recursive algorithm has reached the end of execution and no further recursion is required.</div></li>
+<li id="li-452"><div class="para" id="p-derived-li-452">A recursive case must move the state of the program closer to the base case in some way to ensure the recursive program terminates.</div></li>
+<li id="li-453"><div class="para" id="p-derived-li-453">There may be multiple base cases and multiple recursive cases in a recursive algorithm.</div></li>
+<li id="li-454"><div class="para" id="p-derived-li-454">
+<dfn class="terminology">Multi-case recursion</dfn> occurs when a method has more than one base case and/or more than one recursive case.</div></li>
+<li id="li-455"><div class="para" id="p-derived-li-455">
+<dfn class="terminology">Multiple recursion</dfn> occurs when the block of code that implements a single recursive case invokes multiple recursive methods or the same recursive method multiple times.</div></li>
+<li id="li-456"><div class="para" id="p-derived-li-456">
+<dfn class="terminology">Dynamic programming</dfn> is a technique used to improve performance of certain recursive methods by saving intermediate results that would otherwise be computed multiple times.</div></li>
 </ol></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-re-graphics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-re-exercises.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -12,22 +12,22 @@
 </head>
 <body class="ignore-math">
 <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// WriteFile1.java
-import java.io.FileWriter;                                  // Import classes
+import java.io.FileWriter;                        // Import classes
 import java.io.IOException;
 
 public class WriteFile1 {
   public static void main(String[] args) {
-    log("First message");                                   // Log a message
-    log("Second message");                                  // Log another message
-    log("Third message");                                   // And another message
+    log("First message");                         // Log a message
+    log("Second message");                        // Log another message
+    log("Third message");                         // And another message
   }
 
   // Utility method to log messages to a file
-  public static void log(String msg) {
-    try (FileWriter fw = new FileWriter("log.txt", true)) { // Opens a file for appending
-      fw.write(msg + "\n");                                 // Write added to end of file
+  public static void log(String msg) {            // Open a file to append
+    try (FileWriter fw = new FileWriter("log.txt", true)) { 
+      fw.write(msg + "\n");                       // Write added to end of file
     }
-    catch (IOException e) { // Log                          // Handle exceptions
+    catch (IOException e) { // Log                // Handle exceptions
       System.out.println(e);
     }
   }
