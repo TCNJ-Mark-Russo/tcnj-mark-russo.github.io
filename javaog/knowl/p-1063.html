@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">A wide variety of mouse events are captured and can be handled in a similar manner. Following is a list of all methods used to connect a mouse event with a Shape. Each method is used to associate a particular mouse event with a custom method. Each of the following methods takes a method reference as its only parameter. Each method reference must identify a method with a signature that matches the previously listed four parameter types in the given order, otherwise the compiler will complain.</div>
+<div class="para">Shapes triggers one additional event beyond the above list of mouse events. The selectionChanged event is triggered whenever the selection status of a Shape changes. For example, if the user clicks on a selectable Shape that is not already selected, the Shape becomes selected, which is indicated by a light gray rectangle drawn around the Shape. If a suitable event handler method is attached to the Shape’s selectionChange event, then as the Shape becomes selected, the event method will be invoked, indicating the Shape object whose selection state changed as well as if the Shape is currently selected. Likewise, if another Shape is clicked causing the currently selected Shape to be unselected, the event handler method will once again be invoked.</div>
 <span class="incontext"><a href="section-dp-events.html#p-1063" class="internal">in-context</a></span>
 </body>
 </html>
