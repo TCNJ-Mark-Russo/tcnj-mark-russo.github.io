@@ -1,0 +1,36 @@
+[
+    {
+        "id"      : "Q01",
+        "type"    : "fillinblanks",
+        "title"   : "Fill in the Blanks",
+        "prompt"  : [
+            "<table>",
+            "<tr><td>1.</td><td>What is the command to compile a Java program?</td><td>__Q01A</td></tr>",
+            "<tr><td>2.</td><td>What is the command to launch a compiled Java program?</td><td>__Q01B</td></tr>",
+            "<tr><td>3.</td><td>What is the command to run the interactive Java shell?</td><td>__Q01C</td></tr>",
+            "<tr><td>4.</td><td>What must you name the Java file defining the public class Lab03?</td><td>__Q01D</td></tr>",
+            "<tr><td>5.</td><td>What is the index of the first character in a String?</td><td>__Q01E</td></tr>",
+            "</table>"
+        ],
+        "solution": {
+            "__Q01A": "javac",
+            "__Q01B": "java",
+            "__Q01C": "jshell",
+            "__Q01D": "Lab03.java",
+            "__Q01E": "0"
+        }
+    },
+    {
+        "id"      : "Q02",
+        "type"    : "matching",
+        "title"   : "Matching Terms",
+        "prompt"  : ["<p>Drag the terms from the left column to matching terms in the right column.</p>"],
+        "solution": [
+            ["main",        "The name of the method where a Java program begins execution."], 
+            ["signature",   "A combination of the name of a method and an ordered list of parameter types."], 
+            ["new",         "The Java keyword used to invoke a constructor to instantiate an object."],
+            ["Scanner",     "A class that may be used to read data from an input stream."],
+            ["JAR",         "A zip archive containing compiled Java programs."]
+        ]
+    }
+]
