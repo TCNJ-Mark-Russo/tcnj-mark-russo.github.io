@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">Executing a sequence of of Java statements is useful, especially when we have a deterministic calculation to perform. But it is often the case that we want to perform different calculations depending on the outcome of some expression, the response of a user, or another condition in our program. For example, we might use a <code class="code-inline tex2jax_ignore">Scanner</code> class to ask the user what they would like the program to do on their behalf. We need to read the input and execute only the relevant part of your program.</div>
-<span class="incontext"><a href="chapter-control1.html#p-388" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">For an example of method-scoped variables, we can refer back to nearly any of the past programs we’ve studied. For example, refer back to the updated <code class="code-inline tex2jax_ignore">ComputeDistance</code> class in <a href="" class="xref" data-knowl="./knowl/listing-jp-computedistance2.html" title="Listing 3.2.2">Listing 3.2.2</a>. The <code class="code-inline tex2jax_ignore">distanceBetween(…)</code> method declares several variables that are used within that method only, including <code class="code-inline tex2jax_ignore">term1</code>, <code class="code-inline tex2jax_ignore">term2</code>, and <code class="code-inline tex2jax_ignore">distance</code>. These variables have <dfn class="terminology">method scope</dfn> because they are declared within the <code class="code-inline tex2jax_ignore">distanceBetween(…)</code> method and they are destroyed when the method returns (stops executing). They cannot be accessed from outside the method after its exits because they do not exist at that point.</div>
+<span class="incontext"><a href="section-rt-scope.html#p-388" class="internal">in-context</a></span>
 </body>
 </html>

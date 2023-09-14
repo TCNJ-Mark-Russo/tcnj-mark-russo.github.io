@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">One implication of the do-while continuation condition occuring at the end of the code block is that the block statements execute <em class="emphasis">at least once</em> before the condition is tested. Compare this to both the while-statement and the for-statement where the condition is tested <em class="emphasis">before</em> the code block. Consequently, with while- and for-statements, the code block may never execute. By contrast, the code block of a do-while always executes at least once.</div>
-<span class="incontext"><a href="section-c2-do-while-statements.html#p-503" class="internal">in-context</a></span>
+<div class="para">When we attempt to compile this program, the compiler is unable to find the our loop counter variable <code class="code-inline tex2jax_ignore">i</code> because it is declared within the parentheses of the for-statement, and therefore is considered to exist in that statement’s block scope. (See below.) If you do have a need to access <code class="code-inline tex2jax_ignore">i</code> after the for-statement, you can circumvent this problem by declaring <code class="code-inline tex2jax_ignore">i</code> before the for-statement, and use the first expression in the parentheses for initializing <code class="code-inline tex2jax_ignore">i</code> only, without the declaration.</div>
+<span class="incontext"><a href="section-c2-for-statements.html#p-503" class="internal">in-context</a></span>
 </body>
 </html>

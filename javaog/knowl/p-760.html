@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The signature of methods capable of handling events is required to be (Shape, double, double, int). We can now explain why that first parameter is of type Shape and is not required to be of type ToggleButton, even though we know that a reference to the pressed ToggleButton is passed to this method as the first parameter. The short answer is, once again, <em class="emphasis">subtype polymorphism</em>. Because ToggleButton extends RoundRect which extends Shape, the ToggleButton object reference argument may be assigned to the Shape parameter. If we really needed it to be of type ToggleButton in order to invoke one of its custom methods, we could simply cast it to a ToggleButton first. Without the flexibility that we get from subtype polymorphism, this type of event handling would be more difficult to implement.</div>
+<div class="para">Let’s return to our method-reference style of handling events for a moment and take another look at the method signature of event handler methods assigned using method references.</div>
 <span class="incontext"><a href="section-in-polymorph.html#p-760" class="internal">in-context</a></span>
 </body>
 </html>

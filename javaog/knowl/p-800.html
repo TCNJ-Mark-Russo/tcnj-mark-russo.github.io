@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">These signatures are straightforward. <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> has two signatures, <code class="code-inline tex2jax_ignore">T next()</code> returns the next element and a <code class="code-inline tex2jax_ignore">boolean hasNext()</code> tests if there is another element to be returned. The only required signature in <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> is <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt; iterator()</code> which generates and return the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> object.</div>
+<div class="para">Another pair of interesting intefaces in Java’s Core Library are the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> and <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> interfaces. These interfaces are useful to make it possible to iterate over objects stored in a class that acts as a container. Specifically, fulfilling the <code class="code-inline tex2jax_ignore">Iterator&lt;T&gt;</code> interface provides implementations of methods required to access the elements of a collection one at a time, and the <code class="code-inline tex2jax_ignore">Iterable&lt;T&gt;</code> makes the custom container class compatible with a for-each statement.</div>
 <span class="incontext"><a href="section-if-comparable.html#p-800" class="internal">in-context</a></span>
 </body>
 </html>

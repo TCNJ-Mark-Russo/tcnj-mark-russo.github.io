@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">There is one more item to note about for-statements associated with its block scope. In <a href="section-c1-block-scope.html" class="internal" title="Section 5.7: Block Scope">Section 5.7</a> we introduced the concept of block scope and mentioned how all statements having a code block define a new block scope. This is the case with for-statements as well. If we define a variable within the code block of a for-statement, that variable may not be accessed from outside the block scope.</div>
+<div class="para">Another update we made in <code class="code-inline tex2jax_ignore">Grid4.java</code> is the addition of fill colors for the Rectangles. We wanted to fill every other Rectangle with blue or gold. To achieve this we declared a <code class="code-inline tex2jax_ignore">boolean</code> variable named <code class="code-inline tex2jax_ignore">flip</code>. Each time through the inner code block, we negate <code class="code-inline tex2jax_ignore">flip</code> with the statement <code class="code-inline tex2jax_ignore">flip = !flip</code>. In other words, if <code class="code-inline tex2jax_ignore">flip == true</code> then it becomes <code class="code-inline tex2jax_ignore">false</code>. If <code class="code-inline tex2jax_ignore">flip == false</code> then it becomes <code class="code-inline tex2jax_ignore">true</code>. We used this flip-flop variable and an if-statement to decide which color to use to fill the current Rectangle.</div>
 <span class="incontext"><a href="section-c2-for-statements.html#p-499" class="internal">in-context</a></span>
 </body>
 </html>

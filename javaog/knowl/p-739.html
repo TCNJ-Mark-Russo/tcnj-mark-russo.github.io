@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In a third application, a derived class might override a base class method as a way of stopping its execution, and simply returning. This might be used when a derived class is designed to simulate the behavior of a base class during testing. If certain base class methods are expensive to execute, we can use a derived class to catch and surpress the execution of certain base class methods during testing, and then remove the derived class before final release.</div>
+<div class="para">It may be the case that a derived class shares many of the behaviors of a base class, but not all. The methods that differ may be reimplemented correctly in the derived class. Because the search for a particular method signature moves up an inheritance hierarchy, overriding a method in a derived class effectively <em class="emphasis">replaces</em> it.</div>
 <span class="incontext"><a href="section-in-overriding.html#p-739" class="internal">in-context</a></span>
 </body>
 </html>

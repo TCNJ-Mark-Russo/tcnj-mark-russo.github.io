@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">This example illustrates how variable <em class="emphasis">shadowing</em> works, and how it can lead to trouble if you are not careful about where variables are declared and how they are initialized.</div>
+<div class="para">If you look closely, you will see that there are two <code class="code-inline tex2jax_ignore">line</code> variables. One is declared in the constructor and the other in the outer scope of the object. In the constructor, only the locally scoped <code class="code-inline tex2jax_ignore">line</code> variable is initialized. The other <code class="code-inline tex2jax_ignore">line</code> variable declared in the scope of the object is never initialized. When the constructor exits, its scope is gone and so is its locally scoped <code class="code-inline tex2jax_ignore">line</code> variable. When the Line object is clicked the <code class="code-inline tex2jax_ignore">onPressed(…)</code> method is invoked. There is no <code class="code-inline tex2jax_ignore">line</code> variable declared in this method and so the variable referenced is the one declared in the object scope, which still has the value of <code class="code-inline tex2jax_ignore">null</code> because it was never initialized. This is the source of the error. It was cause by mistakenly <em class="emphasis">declaring</em> a new line variable in the constructor which shadows the object-scoped line variable.</div>
 <span class="incontext"><a href="section-cl-shadowing.html#p-679" class="internal">in-context</a></span>
 </body>
 </html>

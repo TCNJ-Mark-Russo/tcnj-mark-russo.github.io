@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">You may provide multiple catch-blocks, each with different exception class variable declarations. The first declaration that can be bound to the thrown exception has the block that gets executed, if any. If a different exception object is thrown by the example above, the catch-block would not match and Java would resort to dumping the call stack. To avoid this kind of problem, it can be useful to add a final catch-block that catches all remaining exceptions by declaring the exception variable to be of class type Exception, the root of the exception class hierarchy. This way we know that all exceptions will be caught, no matter which one is thrown, because all exception objects can be bound to a variable with base class type Exception.</div>
+<div class="para">To detect a thrown exception, embed all statements in a <dfn class="terminology">try-block</dfn>. To catch exceptions thrown from code in a try-block, follow the try-block with one or more <dfn class="terminology">catch-blocks</dfn>. Consider the following updated sample program in <a href="" class="xref" data-knowl="./knowl/listing-ex-try.html" title="Listing 11.3.2">Listing 11.3.2</a>, with a try-catch statement added.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-850" class="internal">in-context</a></span>
 </body>
 </html>

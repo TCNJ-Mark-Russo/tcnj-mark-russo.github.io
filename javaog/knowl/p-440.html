@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Note that the type used to declare the variable <code class="code-inline tex2jax_ignore">ovals</code> is <code class="code-inline tex2jax_ignore">ArrayList&lt;Oval&gt;</code>, but the constructor used to create a new object to initialize the variable, is <code class="code-inline tex2jax_ignore">ArrayList&lt;&gt;</code>, having no class name in the diamond operator. Java knows that the variable is of type <code class="code-inline tex2jax_ignore">ArrayList&lt;Oval&gt;</code> and so it is not necessary to repeat the <code class="code-inline tex2jax_ignore">Oval</code> class in the constructor’s diamond operator.</div>
+<div class="para">When an ArrayList is instantiated, it must name the class of objects that it will hold. Because Java is a <dfn class="terminology">strongly typed</dfn> language, we cannot freely assign just any object to a variable that is declared to hold another type of object. Despite this property, an ArrayList can be configured to hold objects of a particular class. The reason this is possible is because the ArrayList class is defined as a <dfn class="terminology">generic</dfn>. In short, the ArrayList is more of a class <em class="emphasis">template</em> that substitutes a class named as part of its constructor. A class is specified as a part of its constructor using the <dfn class="terminology">diamond operator</dfn> (<code class="code-inline tex2jax_ignore">&lt; … &gt;</code>).</div>
 <span class="incontext"><a href="section-c1-collection-classes.html#p-440" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In our <code class="code-inline tex2jax_ignore">BoxDriver.java</code> example we handled this difference by writing complex conditional tests for each if-statement branch in the key-press event handler. The following two code snippets show the original multi-branch if-statement on the left and an updated version rewritten as a switch-statement on the right. Note how the switch-statement has two case labels for each branch with no <code class="code-inline tex2jax_ignore">break</code> between them. Statements under each pair of case labels will be executed when either label matches the value of <code class="code-inline tex2jax_ignore">keyText</code>. The switch-statement on the right has much less clutter as compared to the if-statement on the left. More importantly, eliminating the complex conditionals required for each if- branch reduces the number of opportunities for a mistake.</div>
+<div class="para">Leaving out a break statement can be useful when you want to execute the same set of actions for multiple label value matches. A good example is when you are writing code that should handle the differences in behavior between different operating systems.</div>
 <span class="incontext"><a href="section-c2-switch-statements.html#p-532" class="internal">in-context</a></span>
 </body>
 </html>

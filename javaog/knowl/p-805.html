@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In this section we want to build a graphical panel demonstrating three kinds of tri-option selector widgets. The way these widgets look may be customized, but all must give the user the ability to select from the three options and provide a way to report the currently selected option. To ensure that all tri-option widgets provide common capabilities, we define a TriOption interface that all selector widgets must implement. In <a href="" class="xref" data-knowl="./knowl/listing-if-trioption.html" title="Listing 10.2.1">Listing 10.2.1</a> we specify that the TriOption interface includes four signatures. This public interface must be saved to a file having the same name as the interface, and compiled with the other files in the project, in a manner exactly analogous to any multi-file Java project.</div>
-<span class="incontext"><a href="section-if-custom.html#p-805" class="internal">in-context</a></span>
+<div class="para">Notice that we no longer need a collection or array to hold the Shape objects. The Pad object holds them automatically. We create a mixture of Oval and Rectangle objects just to demonstrate that we can iterate over both using a single for loop. The <code class="code-inline tex2jax_ignore">recolor(…)</code> method performs the iteration using a single for-each statement which iterates using the Pad object as an iterator, specifically <code class="code-inline tex2jax_ignore">for (Shape s: pad) {…</code>. See <a href="" class="xref" data-knowl="./knowl/figure-if-randomshapes.html" title="Figure 10.1.4">Figure 10.1.4</a> for the result.</div>
+<span class="incontext"><a href="section-if-comparable.html#p-805" class="internal">in-context</a></span>
 </body>
 </html>

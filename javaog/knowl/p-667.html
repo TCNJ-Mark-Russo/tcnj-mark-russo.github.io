@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Constructors may be overloaded as well. The Java compiler matches the invoked constructor signature to available definitions to ensure the proper constructor implementation is invoked.</div>
+<div class="para">Colors in DoodlePad may be partially or fully transparent. This is set using a fourth value in the range [0, 255] known as <dfn class="terminology">alpha</dfn>. An alpha of 0 means fully transparent and an alpha of 255 means fully opaque. All color-related DoodlePad methods can take four color component parameters, the fourth being transparency specified as alpha. If that fourth parameter is omitted, DoodlePad substitutes an alpha of 255, fully opaque. This is implemented by overloading the definition of <code class="code-inline tex2jax_ignore">setFillColor(…)</code>, which you can observe in the <a class="external" href="https://github.com/russomf/doodlepad/blob/master/src/doodlepad/Shape.java" target="_blank">DoodlePad source code</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-16-hidden.html" title="Footnote 8.3.1"><sup> 1 </sup></a>. The three-parameter overload of <code class="code-inline tex2jax_ignore">setFillColor(…)</code> just invokes the four-parameter overload with <code class="code-inline tex2jax_ignore">255</code> passed as the alpha value.</div>
 <span class="incontext"><a href="section-cl-methods.html#p-667" class="internal">in-context</a></span>
 </body>
 </html>

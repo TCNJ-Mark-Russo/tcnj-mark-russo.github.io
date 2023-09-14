@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="vs.min.css">
+        <script src="highlight.min.js"></script>
+        <script src="wq2.js"></script>
+
+        <style>
+            .title{ font-family:Arial, Helvetica, sans-serif; }
+            .prompt{ font-family:Arial, Helvetica, sans-serif; }
+            #soln{ font-family:Arial, Helvetica, sans-serif; }
+            .hljs { background: whitesmoke; }
+            .hljs-number   { color: brown; }
+            .hljs-string   { color: #444; }
+            .hljs-type     { color: darkred; }
+            .hljs-comment  { color: darkgreen; }
+            .hljs-keyword, .hljs-operator { color: darkblue; }
+            input { width: 100px; }
+            code, .hljs {
+                font-family: 'Courier New', Courier, monospace !important;
+                font-weight: bold;
+                line-height: 1.4em;
+            }
+            table {
+                border-spacing: 0 15px; 
+            } 
+            tr td { 
+                vertical-align: top; 
+            }
+            pre {
+                background-color: whitesmoke;
+                margin: 0;
+                padding: 0 0 0 10px;
+            }
+            button#bReset, button#bCheck, button#bResp, select {
+                width: 75px;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0px;
+            }
+            .box {
+                cursor: move;
+                border: 1px solid #EEE;
+                border-radius: .3em;
+                background-color: whitesmoke;
+                padding: 10px;
+            }
+            .box.over {
+                background-color: white;
+                /* border: 2px dotted #666; */
+            }
+            .source {
+                background-color: gold;
+            }
+            .target {
+                background-color: lightblue;
+            }
+            [draggable] {
+                user-select: none;
+            }
+        </style>
+        <script>
+            // Renders a config JSON
+            function renderConfig(config) {
+                // Parse config
+                let qs   = JSON.parse(config);
+
+                // Render and collect each question
+                let qobs = [];
+                for (let q of qs) {
+                    switch (q.type.trim().toLowerCase()) {
+                        case 'multipledropdowns':
+                            qobs.push( new QMultipleDropdowns(q) );
+                            break;
+                        case 'orderoptions':
+                            qobs.push( new QOrderOptions(q) );
+                            break;
+                        case 'matching':
+                            qobs.push( new QMatching(q) );
+                            break;
+                        case 'multipleanswer':
+                            qobs.push( new QMultipleAnswer(q) );
+                            break;
+                        case 'multiplechoice':
+                            qobs.push( new QMultipleChoice(q) );
+                            break;
+                        case 'fillinblanks':
+                            qobs.push( new QFillInBlanks(q) );
+                            break;
+                    }
+                }
+            }
+
+            // Check for JSON config file URL in querystring with param 'config'
+            const uparams  = new URLSearchParams(window.location.search);
+            const confpath = uparams.get('config');
+
+//            fetch(  "http://127.0.0.1:8888/quiz.json", 
+            if (confpath) {
+                fetch( confpath, { method : 'GET', headers: { 'Content-Type': 'text/xml', }} )
+                    .then( (resp) => resp.text() )
+                    .then( (config) => renderConfig(config) );
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

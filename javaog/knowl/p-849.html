@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The statement that performs the division was moved into a try-block, the first step required to handle exceptions. Following the try-block is a catch-block, which is followed by a pair of parentheses containing the declaration of an ArithmeticException variable. This format indicates that any exception object that can be bound to the <code class="code-inline tex2jax_ignore">e</code> variable will cause program flow to enter the catch-block. Remember, due to subtype polymorphism, we can assign any object of type class or any one of its derived classes to a variable of type class. In <a href="" class="xref" data-knowl="./knowl/listing-ex-try.html" title="Listing 11.3.2">Listing 11.3.2</a>, the catch-block with handle any thrown ArithmeticException objects, or objects with a type that matches any classes that derive from ArithmeticException. In this example an ArithmeticException was thrown, which matches the declaration in the catch-block, and so the message is printed.</div>
+<div class="para">Consider the following sample program that has an obvious divide-by-zero error. When we compile and run it, Java throws a <code class="code-inline tex2jax_ignore">java.lang.ArithmeticException</code> object.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-849" class="internal">in-context</a></span>
 </body>
 </html>

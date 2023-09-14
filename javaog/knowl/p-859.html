@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The output from <a href="" class="xref" data-knowl="./knowl/listing-ex-extest3.html" title="Listing 11.3.5">Listing 11.3.5</a> above demonstrates that in spite of the exception being thrown, the finally-block is executed.</div>
+<div class="para">Typically, a finally-block is used for cleanup tasks that must occur regardless of whether or not your code executed successfully. Cleanup tasks take the form of closing open files or open network and database connections. Depending on the resource being accessed, failing to clean up can lead to what’s know as a <em class="emphasis">resource leak</em> because leaving a resource open without properly closing it can make it unusable by others. Anything that must be done at the end of a try-catch statement may be placed in a finally-block, and Java will guarantee that it is executed.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-859" class="internal">in-context</a></span>
 </body>
 </html>

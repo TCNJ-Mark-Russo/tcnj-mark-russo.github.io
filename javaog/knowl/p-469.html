@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">It is not uncommon to find a two-dimensional layout of objects. Think of the cells of a spreadsheet, keys on a keyboard, pixels on a display, or bricks in a wall. Obviously, the position of elements in a two-dimensional layout are characterized by two coordinate or two index values, one for the first dimension and another for the second dimension. These might be the rows and columns of a spreadsheet or the x,y location of pixels in an image. Accessing each of these elements requires us to iterate both over one dimension as well as the other dimension to generate all possible indexes or coordinate pairs. This is accomplished with nested iteration, for example, a while-statement within a while-statement. The outer while-statement generates the index or coordinate for one dimension, and for each of these values, the inner while-statement generates the index or coordinate for the other dimension. The complete inner iteration is repreated for every value of the outer iteration. The result is that on each pass of the inner iteration, we have a unique pair of coordinate values.</div>
-<span class="incontext"><a href="section-c1-nested-control.html#p-469" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Take a moment to carefully study <a href="" class="xref" data-knowl="./knowl/listing-c1-musketeer-order.html" title="Listing 5.5.9">Listing 5.5.9</a>. Here are some things to note.</div>
+<ol class="decimal">
+<li><div class="para">The HashMap <code class="code-inline tex2jax_ignore">order</code> is keyed by String objects that relate to ArrayList&lt;String&gt; values.</div></li>
+<li><div class="para">We use the <code class="code-inline tex2jax_ignore">get(…)</code> method with a name key to get the ArrayList for a particular customer, and then modify it directly, as needed.</div></li>
+<li><div class="para">We can chain methods using multiple dot-operators, where intermediate objects are never assigned to variables, but stored temporarily as <em class="emphasis">automatics</em>.</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="section-c1-collection-classes.html#p-469" class="internal">in-context</a></span>
 </body>
 </html>

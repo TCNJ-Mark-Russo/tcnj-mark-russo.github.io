@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Each Shape object’s fill color and stroke color may be specified using color component values. There are two mutator methods for setting Shape color: <code class="code-inline tex2jax_ignore">setFillColor(...)</code> and <code class="code-inline tex2jax_ignore">getStrokeColor(...)</code>. These setter methods each have three overloads. The base method signature has four parameters, one for each of the four color components: red, green, blue and alpha. A second overloaded method has only three parameters, which specify red, green and blue components. In this case the alpha component is assumed to have a value of 255, meaning that the Shape color has no transparency. The third overloaded method has only one parameter, often called gray. In this case the parameter value is repeated for all three color components, and alpha once again is set to 255.</div>
+<div class="para">Pure red, green or blue is achieved by setting the corresponding color component value to its maximum (255) and leaving the other two color color values at 0. Other colors are constructed from different combinations of the color components. All shades of gray, from black to white, are formed by setting the values of red, green, and blue to equal values between 0 and 255.</div>
 <span class="incontext"><a href="section-dp-colors.html#p-1045" class="internal">in-context</a></span>
 </body>
 </html>

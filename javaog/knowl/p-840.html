@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The important thing to know about runtime errors is that they may be <dfn class="terminology">caught</dfn> at runtime, and handled gracefully, without causing your program to dump a trace of the call stack. Typical runtime errors include inadvertently dividing by zero, or attempting to open a file that does not exist. A trace of the call stack might be useful to you, but it is generally useless to the average user of your program. The message "File not found. Please try again." is far more useful to the average user than a trace of the call stack.</div>
+<div class="para">The last broad category of errors occurs after a program compiles, but something goes wrong while it is running. Java responds to such problems by <dfn class="terminology">throwing an exception</dfn>. Like nearly everything else in Java, a thrown exception is an <em class="emphasis">object</em> created by instantiating a suitable Exception class. A thrown exception object may come from code in the Core Library, or you may instantiate and throw exceptions on your own. The particular Exception class instantiated and thrown should identify the detected problem.</div>
 <span class="incontext"><a href="section-ex-errors.html#p-840" class="internal">in-context</a></span>
 </body>
 </html>

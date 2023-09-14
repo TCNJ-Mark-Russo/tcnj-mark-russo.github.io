@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Initialization of multidimensional arrays is permitted at the time of declaration using curly braces in a manner similar to initializing an array with one dimension. For multi-dimensional arrays the initialization structure must match the structure of the array, using <em class="emphasis">nested</em> curly braces <code class="code-inline tex2jax_ignore">{{…}, {…}, …}</code>.</div>
+<div class="para">Using the same reasoning as in <a href="section-c1-nested-control.html#subsection-c1-two-dimensions" class="internal" title="Subsection 5.6.1: Accessing Two Dimensions">Subsection 5.6.1</a> we can access all elements in a multidimensional array using <em class="emphasis">nested iteration</em>. We use an outer loop with a loop counter to generate the indexes of the elements in the top-level array, and we use an inner loop with a counter to generate the indexes of the elements in each inner array. It is best to use the array’s <code class="code-inline tex2jax_ignore">.length</code> property in the continuation test of both the outer and inner loops.</div>
 <span class="incontext"><a href="section-ar-multi.html#p-609" class="internal">in-context</a></span>
 </body>
 </html>

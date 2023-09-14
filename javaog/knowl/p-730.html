@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s compare <a href="" class="xref" data-knowl="./knowl/listing-in-led6.html" title="Listing 9.2.1">Listing 9.2.1</a> with <a href="" class="xref" data-knowl="./knowl/listing-cl-led5.html" title="Listing 8.3.4">Listing 8.3.4</a> The first thing to notice is that the LED class no longer declares a private <code class="code-inline tex2jax_ignore">light</code> instance variable. This is no longer necessary because the LED itself <dfn class="terminology">is a kind of Oval</dfn>, a <em class="emphasis">specialized</em> Oval, so no additional Oval object is required. Nevertheless, initialization is required. Because the LED is a kind of Oval, it must perform whatever initialization that an Oval requires, which is implemented by the Oval constructor. To invoke the Oval constructor, we can use the <code class="code-inline tex2jax_ignore">super</code> keyword. In the second LED constructor, in place of the line that initialized the <code class="code-inline tex2jax_ignore">light</code> instance variable, we now invoke the base class constructor using the line <code class="code-inline tex2jax_ignore">super(x, y, 30, 30)</code>. This relays the (x, y) LED constructor parameter values to the base class constructor, and sets the LED size to 30×30.</div>
+<div class="para">This one addition to a derived class declaration has the potential to add quite a number of default behaviors, giving you as the developer a significant head start to completing your new class implementation.</div>
 <span class="incontext"><a href="section-in-basics.html#p-730" class="internal">in-context</a></span>
 </body>
 </html>

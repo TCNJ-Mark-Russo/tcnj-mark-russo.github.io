@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">In <a href="" class="xref" data-knowl="./knowl/listing-al-merge-sort.html" title="Listing 13.6.1">Listing 13.6.1</a> the <code class="code-inline tex2jax_ignore">mergeSort(…)</code> function takes an array (arr), a left index (left), and a right index (right) as parameters and sorts the array using the merge sort algorithm. The merge function is responsible for merging two sorted subarrays. The main method demonstrates how to use the merge sort function on an array.</div>
+<div class="para">The key to the efficiency of the merge sort algorithm lies in the merging step. Merging two sorted sublists into a single sorted sequence takes linear time <span class="process-math">\(O(N)\text{,}\)</span> where <span class="process-math">\(N\)</span> is the total number of elements in the sequence. Because the sequence is divided in half at each recursive step, the depth of the recursion is <span class="process-math">\(log_2(N)\text{,}\)</span> and at each level, the merging step takes linear time. Thus, the overall time complexity of merge sort is <span class="process-math">\(O(N logN)\text{.}\)</span>
+</div>
 <span class="incontext"><a href="section-al-merge-sort.html#p-997" class="internal">in-context</a></span>
 </body>
 </html>

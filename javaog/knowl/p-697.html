@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The LEDPanel class in <a href="" class="xref" data-knowl="./knowl/listing-cl-led-panel.html" title="Listing 8.6.1">Listing 8.6.1</a> implements only the <code class="code-inline tex2jax_ignore">main(…)</code> method which sets up and runs the program. First in the <code class="code-inline tex2jax_ignore">main(…)</code> method a Pad object is created directly with a title and custom dimensions. Rather than declare eight LED variables, an array of LED objects named <code class="code-inline tex2jax_ignore">leds</code> is declared. Each element of the <code class="code-inline tex2jax_ignore">leds</code> array is assigned to a new LED object with a certain color. Note that we are using an LED class with the updated constructor overload that takes an additional color parameter used to initialize the LED with color.</div>
+<div class="para">One approach is to author a separate class that defines only this top-level <code class="code-inline tex2jax_ignore">main(…)</code> method which starts the larger program. In a sense, this <code class="code-inline tex2jax_ignore">main(…)</code> method <em class="emphasis">drives</em> the rest of your program, hence the term <dfn class="terminology">Driver Class</dfn>. In fact, you may define several Driver Classes in a program, each with a different purpose, and invoke each separately by specifying the name of the Driver Class of interest when running your program using the <code class="code-inline tex2jax_ignore">java</code> launcher command.</div>
 <span class="incontext"><a href="section-cl-multi-file-programs.html#p-697" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">But why did we recieve an ArrayIndexOutOfBoundsException exception and not an ArithmeticException? The answer relates to how a quotient is evaluated, which is left-to-right. The numerator is evaluted before the denominator, and so the out-of-bounds index in the array is detected first. If the index was in-bounds, the ArithmeticException would have been thrown instead.</div>
+<div class="para">Consider the example in <a href="" class="xref" data-knowl="./knowl/listing-ex-extest1.html" title="Listing 11.3.3">Listing 11.3.3</a>. In <code class="code-inline tex2jax_ignore">main(…)</code> method’s <code class="code-inline tex2jax_ignore">nums</code> array is initialized and then the quotient of two elements are computed in the try-block of a try-catch. The catch-block catches an ArithmeticException. The denominator is <code class="code-inline tex2jax_ignore">nums[0]</code> which has a value of 0, so an ArithmeticException is certainly possible. The shell session following <a href="" class="xref" data-knowl="./knowl/listing-ex-extest1.html" title="Listing 11.3.3">Listing 11.3.3</a> shows the result of running this program.</div>
 <span class="incontext"><a href="section-ex-catching.html#p-853" class="internal">in-context</a></span>
 </body>
 </html>

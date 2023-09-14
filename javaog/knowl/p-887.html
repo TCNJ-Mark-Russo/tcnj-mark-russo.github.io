@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">There is an important option to be aware of when opening a file to write using the FileWriter class. That is, where in the file should writing begin? While it is not uncommon to read an entire file all at once, files are often written incrementally, a small amount at a time. For example, you might open a file and write a few lines and then close it. Open it again later in your program and close it again. The implication here is that writing will begin <em class="emphasis">at the end of the file</em>. If we begin writing from the beginning each time, then the file will contain only the last data written because the file content is being overwritten each time.</div>
-<span class="incontext"><a href="section-ex-writing-files.html#p-887" class="internal">in-context</a></span>
+<div class="para">It is a best practice to use one of the following two examples as your standard way to read a file line-by-line.</div>
+<span class="incontext"><a href="section-try-with-resources.html#p-887" class="internal">in-context</a></span>
 </body>
 </html>
