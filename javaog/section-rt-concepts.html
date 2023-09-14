@@ -733,21 +733,22 @@ window.MathJax = {
 <ol class="decimal">
 <li id="li-151"><div class="para" id="p-derived-li-151">Variables that refer to objects are called <em class="emphasis">reference variables</em>. They differ from primitive variables in important ways.</div></li>
 <li id="li-152"><div class="para" id="p-derived-li-152">It is useful to think of the value held by a reference variable as the address in memory where an object is stored, not the object itself.</div></li>
-<li id="li-153"><div class="para" id="p-derived-li-153">Any variable declared with some class type is a kind of reference variable.</div></li>
-<li id="li-154"><div class="para" id="p-derived-li-154">When an reference variable is copied to another reference variable using assignment (<code class="code-inline tex2jax_ignore">=</code>) the address of the object is copied, not the object itself.</div></li>
-<li id="li-155"><div class="para" id="p-derived-li-155">The implication is that two or more reference variables may refer to one object in memory</div></li>
-<li id="li-156"><div class="para" id="p-derived-li-156">To break the connection between a reference variable and an object, assign the variable to the special value <dfn class="terminology">null</dfn>. After such an assignment the variable no longer refers to the object as it no longer holds the object’s address in memory.</div></li>
-<li id="li-157"><div class="para" id="p-derived-li-157">Java is able to track references to an object. When no references to an object are found, Java deletes the object from memory. This process is called <dfn class="terminology">Garbage Collection</dfn>.</div></li>
-<li id="li-158"><div class="para" id="p-derived-li-158">To trigger garbage collection, assign <code class="code-inline tex2jax_ignore">null</code> to all variables that reference an object.</div></li>
-<li id="li-159"><div class="para" id="p-derived-li-159">The StringBuilder class defines a special kind of object that builds large Strings in a memory-efficient manner.</div></li>
-<li id="li-160"><div class="para" id="p-derived-li-160">The StringBuilder class implements a number of methods, including <code class="code-inline tex2jax_ignore">append()</code> and <code class="code-inline tex2jax_ignore">toString().</code>
+<li id="li-153"><div class="para" id="p-derived-li-153">Any variable declared with some class type is a kind of <dfn class="terminology">reference variable</dfn>.</div></li>
+<li id="li-154"><div class="para" id="p-derived-li-154">When an reference variable is copied to another reference variable using assignment (<code class="code-inline tex2jax_ignore">=</code>) a reference to the object is copied, not the object itself.</div></li>
+<li id="li-155"><div class="para" id="p-derived-li-155">It is useful to think of a reference as the memory address at which the object is stored.</div></li>
+<li id="li-156"><div class="para" id="p-derived-li-156">The implication is that two or more reference variables may refer to one object in memory if they both hold the same reference.</div></li>
+<li id="li-157"><div class="para" id="p-derived-li-157">To break the connection between a reference variable and an object, assign the variable to the special value <dfn class="terminology">null</dfn>. After such an assignment the variable no longer refers to the object as it no longer holds the object’s reference in memory.</div></li>
+<li id="li-158"><div class="para" id="p-derived-li-158">When Java is unable to find a reference to an object amongst all its accessible reference variables, Java reclaims the memory for another purpose. This process is called <dfn class="terminology">Garbage Collection</dfn>.</div></li>
+<li id="li-159"><div class="para" id="p-derived-li-159">To permit garbage collection to be performed on memory holding an object, assign <code class="code-inline tex2jax_ignore">null</code> to all variables that reference the object.</div></li>
+<li id="li-160"><div class="para" id="p-derived-li-160">The StringBuilder class defines a special kind of object that builds large Strings in a memory-efficient manner.</div></li>
+<li id="li-161"><div class="para" id="p-derived-li-161">The StringBuilder class implements a number of methods, including <code class="code-inline tex2jax_ignore">append()</code> and <code class="code-inline tex2jax_ignore">toString().</code>
 </div></li>
-<li id="li-161"><div class="para" id="p-derived-li-161">When variables are declared within the scope of a method, they come in to existence during execution of the method, and go out of existence when the method returns.</div></li>
-<li id="li-162"><div class="para" id="p-derived-li-162">To ensure a variable persists for more than the time during which a method is executing, declare that variable within a class but outside all methods.</div></li>
-<li id="li-163"><div class="para" id="p-derived-li-163">Variables declared outside a method must be at the top of a class declaration.</div></li>
-<li id="li-164"><div class="para" id="p-derived-li-164">Variables declared outside a method are accessible from within all methods of a class.</div></li>
-<li id="li-165"><div class="para" id="p-derived-li-165">A useful problem solving strategy is to use such variables as a kind of <em class="emphasis">bulletin board</em> to post values to be used by other methods. One method can write a value, while another method can read and use that value.</div></li>
-<li id="li-166"><div class="para" id="p-derived-li-166">
+<li id="li-162"><div class="para" id="p-derived-li-162">When variables are declared within the scope of a method, they come in to existence during execution of the method, and go out of existence when the method returns.</div></li>
+<li id="li-163"><div class="para" id="p-derived-li-163">To ensure a variable persists for longer than the time during which a method is executing, declare that variable within a class but outside all methods.</div></li>
+<li id="li-164"><div class="para" id="p-derived-li-164">Variables declared outside a method must be at the top of a class definition.</div></li>
+<li id="li-165"><div class="para" id="p-derived-li-165">Variables declared outside a method are accessible from within all methods of a class while the method is executing.</div></li>
+<li id="li-166"><div class="para" id="p-derived-li-166">A useful problem solving strategy is to use such variables as a kind of <em class="emphasis">bulletin board</em> to post values to be used by other methods. One method can write a value, while another method can read and use that value.</div></li>
+<li id="li-167"><div class="para" id="p-derived-li-167">
 <dfn class="terminology">Never</dfn> declare a variable outside the scope of a method unless it is absolutely necessary. Variables declared in this manner often lead to bugs that are difficult to find.</div></li>
 </ol></section></div>
 <div class="ptx-content-footer">

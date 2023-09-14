@@ -546,8 +546,8 @@ class QMatching {
         this.qdoc  = parser.parseFromString(`
         <hr/>
         <div id="${this.qid}">
-        <div id="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
-        <div id="prompt">${this.prompt.join('\n')}</div>
+        <div class="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
+        <div class="prompt">${this.prompt.join('\n')}</div>
 
         <table><tr>
         <td id="dragcol" valign="top" style="min-width:250px; background-color:whitesmoke; border: solid gold 2px; border-radius: 5px;">

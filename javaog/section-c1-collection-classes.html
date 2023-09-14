@@ -825,20 +825,20 @@ while ( i &lt; ovals.size() ) {
 <div class="para logical" id="p-449">
 <div class="para">Let’s bring a number of skills together in a larger program. In the following <code class="code-inline tex2jax_ignore">RandomOvals.java</code> example, we are applying several skills, including:</div>
 <ul class="disc">
-<li id="li-170"><div class="para" id="p-derived-li-170">Importing classes, both from the Java Core Library and a JAR file</div></li>
-<li id="li-171"><div class="para" id="p-derived-li-171">Naming our top-level class and matching to file name</div></li>
-<li id="li-172"><div class="para" id="p-derived-li-172">Declaring static variables in the outer class scope so the entire program has access</div></li>
-<li id="li-173"><div class="para" id="p-derived-li-173">Starting execution at <code class="code-inline tex2jax_ignore">main(…)</code>
+<li id="li-171"><div class="para" id="p-derived-li-171">Importing classes, both from the Java Core Library and a JAR file</div></li>
+<li id="li-172"><div class="para" id="p-derived-li-172">Naming our top-level class and matching to file name</div></li>
+<li id="li-173"><div class="para" id="p-derived-li-173">Declaring static variables in the outer class scope so the entire program has access</div></li>
+<li id="li-174"><div class="para" id="p-derived-li-174">Starting execution at <code class="code-inline tex2jax_ignore">main(…)</code>
 </div></li>
-<li id="li-174"><div class="para" id="p-derived-li-174">Defining a helper method for abstraction and reuse</div></li>
-<li id="li-175"><div class="para" id="p-derived-li-175">Instantiating new objects like Random and Oval</div></li>
-<li id="li-176"><div class="para" id="p-derived-li-176">Generating random numbers in a defined range</div></li>
-<li id="li-177"><div class="para" id="p-derived-li-177">Constructing a while-statement with an index that is used both to count iterations as well as to access ArrayList elements</div></li>
-<li id="li-178"><div class="para" id="p-derived-li-178">Invoking ArrayList methods like <code class="code-inline tex2jax_ignore">add(…)</code>, <code class="code-inline tex2jax_ignore">get(…)</code> and <code class="code-inline tex2jax_ignore">size()</code>
+<li id="li-175"><div class="para" id="p-derived-li-175">Defining a helper method for abstraction and reuse</div></li>
+<li id="li-176"><div class="para" id="p-derived-li-176">Instantiating new objects like Random and Oval</div></li>
+<li id="li-177"><div class="para" id="p-derived-li-177">Generating random numbers in a defined range</div></li>
+<li id="li-178"><div class="para" id="p-derived-li-178">Constructing a while-statement with an index that is used both to count iterations as well as to access ArrayList elements</div></li>
+<li id="li-179"><div class="para" id="p-derived-li-179">Invoking ArrayList methods like <code class="code-inline tex2jax_ignore">add(…)</code>, <code class="code-inline tex2jax_ignore">get(…)</code> and <code class="code-inline tex2jax_ignore">size()</code>
 </div></li>
-<li id="li-179"><div class="para" id="p-derived-li-179">Invoking Oval methods like <code class="code-inline tex2jax_ignore">setFillColor(…)</code> and <code class="code-inline tex2jax_ignore">setMousePressedHandler(…)</code>
+<li id="li-180"><div class="para" id="p-derived-li-180">Invoking Oval methods like <code class="code-inline tex2jax_ignore">setFillColor(…)</code> and <code class="code-inline tex2jax_ignore">setMousePressedHandler(…)</code>
 </div></li>
-<li id="li-180"><div class="para" id="p-derived-li-180">Declaring methods with well-defined signatures and handing mouse events</div></li>
+<li id="li-181"><div class="para" id="p-derived-li-181">Declaring methods with well-defined signatures and handing mouse events</div></li>
 </ul>
 </div>
 <figure class="listing figure-like" id="listing-c1-randomovals"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// RandomOvals.java
@@ -973,8 +973,8 @@ while (i &lt; ints.size()) {           // Loop
 <div class="para logical" id="p-465">
 <div class="para">Two important behaviors of a HashSet are:</div>
 <ol class="decimal">
-<li id="li-181"><div class="para" id="p-derived-li-181">you cannot add duplicate values to a HashSet</div></li>
-<li id="li-182"><div class="para" id="p-derived-li-182">the order of items added to a HashSet is not preserved</div></li>
+<li id="li-182"><div class="para" id="p-derived-li-182">you cannot add duplicate values to a HashSet</div></li>
+<li id="li-183"><div class="para" id="p-derived-li-183">the order of items added to a HashSet is not preserved</div></li>
 </ol>
 <div class="para">Just like a set in mathematics does not contain duplicates, a HashSet also does not hold duplicates. You may add the same element to a HashSet multiple times, but when you look at its contents, you will find only one occurrence. <a href="" class="xref" data-knowl="./knowl/table-c1-hashset-methods.html" title="Table 5.5.6: Common HashSet Methods">Table 5.5.6</a> lists several useful HashSet constructors and methods.</div>
 </div>
@@ -1085,9 +1085,9 @@ java Unique
 <div class="para logical" id="p-469">
 <div class="para">Take a moment to carefully study <a href="" class="xref" data-knowl="./knowl/listing-c1-musketeer-order.html" title="Listing 5.5.9">Listing 5.5.9</a>. Here are some things to note.</div>
 <ol class="decimal">
-<li id="li-183"><div class="para" id="p-derived-li-183">The HashMap <code class="code-inline tex2jax_ignore">order</code> is keyed by String objects that relate to ArrayList&lt;String&gt; values.</div></li>
-<li id="li-184"><div class="para" id="p-derived-li-184">We use the <code class="code-inline tex2jax_ignore">get(…)</code> method with a name key to get the ArrayList for a particular customer, and then modify it directly, as needed.</div></li>
-<li id="li-185"><div class="para" id="p-derived-li-185">We can chain methods using multiple dot-operators, where intermediate objects are never assigned to variables, but stored temporarily as <em class="emphasis">automatics</em>.</div></li>
+<li id="li-184"><div class="para" id="p-derived-li-184">The HashMap <code class="code-inline tex2jax_ignore">order</code> is keyed by String objects that relate to ArrayList&lt;String&gt; values.</div></li>
+<li id="li-185"><div class="para" id="p-derived-li-185">We use the <code class="code-inline tex2jax_ignore">get(…)</code> method with a name key to get the ArrayList for a particular customer, and then modify it directly, as needed.</div></li>
+<li id="li-186"><div class="para" id="p-derived-li-186">We can chain methods using multiple dot-operators, where intermediate objects are never assigned to variables, but stored temporarily as <em class="emphasis">automatics</em>.</div></li>
 </ol>
 </div>
 <figure class="listing figure-like" id="listing-c1-musketeer-order"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Musketeers.java

@@ -731,33 +731,33 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">13.3</span> <span class="title">Binary Search</span>
 </h2>
 <section class="introduction" id="introduction-65"><div class="para" id="p-975">The <dfn class="terminology">binary search algorithm</dfn> is a highly efficient search algorithm used to find a target value within a sorted collection or array. It follows a "divide and conquer" strategy, repeatedly narrowing down the search range by comparing the target value with the middle element of the current range. This algorithm is particularly useful when dealing with large datasets, as it reduces the search space exponentially with each comparison.</div> <div class="para" id="p-976">The binary search algorithm works as follows.</div> <ol class="decimal">
-<li id="li-466"><div class="para" id="p-derived-li-466">
-<dfn class="terminology">Input</dfn>: The algorithm takes two inputs: the target value that you want to find and the sorted sequence or array in which you’re searching for the target value.</div></li>
 <li id="li-467"><div class="para" id="p-derived-li-467">
+<dfn class="terminology">Input</dfn>: The algorithm takes two inputs: the target value that you want to find and the sorted sequence or array in which you’re searching for the target value.</div></li>
+<li id="li-468"><div class="para" id="p-derived-li-468">
 <dfn class="terminology">Initialization</dfn>: Start with the entire range of the sorted sequence, from the first element (index 0) to the last element (index N-1), where "n" is the number of elements in the sequence.</div></li>
-<li id="li-468">
+<li id="li-469">
 <div class="para" id="p-977">
 <dfn class="terminology">Midpoint Calculation</dfn>: Calculate the midpoint of the current range by finding the average of the first and last indices:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">midpoint = (first_index + last_index) / 2
 </code></pre></div>
 </li>
-<li id="li-469">
+<li id="li-470">
 <div class="para" id="p-978">
 <dfn class="terminology">Comparison</dfn>: Compare the value at the midpoint with the target value.</div>
 <ol class="lower-alpha">
-<li id="li-470"><div class="para" id="p-derived-li-470">If the value at the midpoint is equal to the target value, the search is successful, and you’ve found the target value. The algorithm terminates.</div></li>
-<li id="li-471"><div class="para" id="p-derived-li-471">If the value at the midpoint is greater than the target value, narrow the search range to the lower half of the current range (from the first index to the midpoint - 1).</div></li>
-<li id="li-472"><div class="para" id="p-derived-li-472">If the value at the midpoint is less than the target value, narrow the search range to the upper half of the current range (from the midpoint + 1 to the last index).</div></li>
+<li id="li-471"><div class="para" id="p-derived-li-471">If the value at the midpoint is equal to the target value, the search is successful, and you’ve found the target value. The algorithm terminates.</div></li>
+<li id="li-472"><div class="para" id="p-derived-li-472">If the value at the midpoint is greater than the target value, narrow the search range to the lower half of the current range (from the first index to the midpoint - 1).</div></li>
+<li id="li-473"><div class="para" id="p-derived-li-473">If the value at the midpoint is less than the target value, narrow the search range to the upper half of the current range (from the midpoint + 1 to the last index).</div></li>
 </ol>
 </li>
-<li id="li-473"><div class="para" id="p-derived-li-473">
+<li id="li-474"><div class="para" id="p-derived-li-474">
 <dfn class="terminology">Repeat</dfn>: Repeat steps 3 to 5 until the target value is found or until the search range becomes empty (i.e., first index is greater than last index).</div></li>
-<li id="li-474">
+<li id="li-475">
 <div class="para" id="p-979">
 <dfn class="terminology">Termination</dfn>:</div>
 <ol class="lower-alpha">
-<li id="li-475"><div class="para" id="p-derived-li-475">If the target value is found, the algorithm returns the index of the element where the target value was found.</div></li>
-<li id="li-476"><div class="para" id="p-derived-li-476">If the target value is not found after the search range becomes empty, the algorithm indicates that the target value is not present in the sequence.</div></li>
+<li id="li-476"><div class="para" id="p-derived-li-476">If the target value is found, the algorithm returns the index of the element where the target value was found.</div></li>
+<li id="li-477"><div class="para" id="p-derived-li-477">If the target value is not found after the search range becomes empty, the algorithm indicates that the target value is not present in the sequence.</div></li>
 </ol>
 </li>
 </ol> <div class="para" id="p-980">The binary search algorithm’s key advantage is its time complexity. In each step, the search range is halved, leading to a time complexity of <span class="process-math">\(O(log N)\text{,}\)</span> where <span class="process-math">\(N\)</span> is the number of elements in the sequence. This makes binary search significantly faster than sequential search for large datasets. However, it’s important to note that binary search requires the sequence to be sorted, and its implementation might be slightly more complex compared to sequential search.</div> <div class="para" id="p-981">In <a href="" class="xref" data-knowl="./knowl/listing-a-binary-search.html" title="Listing 13.3.1">Listing 13.3.1</a>, the <code class="code-inline tex2jax_ignore">binarySearch(…)</code> function takes a sorted array (arr) and a target value (target) as parameters. It uses the binary search algorithm to find the index of the target value in the array or returns -1 if the target is not found. The main method demonstrates the usage of the binary search function on a sorted array.</div> <figure class="listing figure-like" id="listing-a-binary-search"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class BinarySearch {

@@ -802,13 +802,13 @@ java -cp .;doodlepad.jar LED
 </code></pre></div>
 <div class="para" id="p-662">To incorporate this option into our LED class, we made the following changes. Refer to <a href="" class="xref" data-knowl="./knowl/listing-cl-led5.html" title="Listing 8.3.4">Listing 8.3.4</a>.</div>
 <ol class="decimal">
-<li id="li-295"><div class="para" id="p-derived-li-295"></div></li>
-<li id="li-296"><div class="para" id="p-derived-li-296">Added the enum to the bottom of our LED.java file.</div></li>
-<li id="li-297"><div class="para" id="p-derived-li-297">Added a private scoped <code class="code-inline tex2jax_ignore">LEDColor color</code> instance variable to hold an enum constant.</div></li>
-<li id="li-298"><div class="para" id="p-derived-li-298">Added <code class="code-inline tex2jax_ignore">setColor(…)</code> method to the class that takes the LEDColor enum constant as a parameter. This limits values to one of the four color constants.</div></li>
-<li id="li-299"><div class="para" id="p-derived-li-299">Added a <code class="code-inline tex2jax_ignore">getColor()</code> method to the class that returns an LEDColor enum constant.</div></li>
-<li id="li-300"><div class="para" id="p-derived-li-300">Initialized the <code class="code-inline tex2jax_ignore">color</code> instance variable in the LED constructor</div></li>
-<li id="li-301"><div class="para" id="p-derived-li-301">Added a <code class="code-inline tex2jax_ignore">switch</code> to the <code class="code-inline tex2jax_ignore">turnOn()</code> method that sets color based on the value of <code class="code-inline tex2jax_ignore">color</code> instance variable.</div></li>
+<li id="li-296"><div class="para" id="p-derived-li-296"></div></li>
+<li id="li-297"><div class="para" id="p-derived-li-297">Added the enum to the bottom of our LED.java file.</div></li>
+<li id="li-298"><div class="para" id="p-derived-li-298">Added a private scoped <code class="code-inline tex2jax_ignore">LEDColor color</code> instance variable to hold an enum constant.</div></li>
+<li id="li-299"><div class="para" id="p-derived-li-299">Added <code class="code-inline tex2jax_ignore">setColor(…)</code> method to the class that takes the LEDColor enum constant as a parameter. This limits values to one of the four color constants.</div></li>
+<li id="li-300"><div class="para" id="p-derived-li-300">Added a <code class="code-inline tex2jax_ignore">getColor()</code> method to the class that returns an LEDColor enum constant.</div></li>
+<li id="li-301"><div class="para" id="p-derived-li-301">Initialized the <code class="code-inline tex2jax_ignore">color</code> instance variable in the LED constructor</div></li>
+<li id="li-302"><div class="para" id="p-derived-li-302">Added a <code class="code-inline tex2jax_ignore">switch</code> to the <code class="code-inline tex2jax_ignore">turnOn()</code> method that sets color based on the value of <code class="code-inline tex2jax_ignore">color</code> instance variable.</div></li>
 </ol>
 <figure class="listing figure-like" id="listing-cl-led5"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// LED.java  (version 5)
 // A simple LED display class

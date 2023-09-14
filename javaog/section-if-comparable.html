@@ -848,16 +848,16 @@ public class Sentence implements Comparable&lt;Sentence&gt; {
 }
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">10.1.2<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Sentence.java</code></figcaption></figure><ol class="decimal">
-<li id="li-373"><div class="para" id="p-derived-li-373">We import both ArrayList and Collections because we plan to use both.</div></li>
-<li id="li-374"><div class="para" id="p-derived-li-374">Our Sentence class <code class="code-inline tex2jax_ignore">implements Comparable&lt;Sentence&gt;</code>.</div></li>
-<li id="li-375"><div class="para" id="p-derived-li-375">Sentence encapsulates the sentence String itself and word count.</div></li>
-<li id="li-376"><div class="para" id="p-derived-li-376">Word count is precomputed by the constructor.</div></li>
-<li id="li-377"><div class="para" id="p-derived-li-377">A <code class="code-inline tex2jax_ignore">toString()</code> override returns Sentence String.</div></li>
-<li id="li-378"><div class="para" id="p-derived-li-378">The <code class="code-inline tex2jax_ignore">getWordCount()</code> accessor method returns word count.</div></li>
-<li id="li-379"><div class="para" id="p-derived-li-379">The <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code> interface method returns an int value that indicates an ordering as compared with the <code class="code-inline tex2jax_ignore">Sentence other</code> by comparing word count.</div></li>
-<li id="li-380"><div class="para" id="p-derived-li-380">The <code class="code-inline tex2jax_ignore">main(…)</code> method fills an <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code> with Sentence objects from Juliet’s famous speech.</div></li>
-<li id="li-381"><div class="para" id="p-derived-li-381">The <code class="code-inline tex2jax_ignore">Collections.sort(…)</code> static method is invoked to sort the <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code>, which uses our overridden <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code> method.</div></li>
-<li id="li-382"><div class="para" id="p-derived-li-382">Sorted Sentences are printed in order, with word count.</div></li>
+<li id="li-374"><div class="para" id="p-derived-li-374">We import both ArrayList and Collections because we plan to use both.</div></li>
+<li id="li-375"><div class="para" id="p-derived-li-375">Our Sentence class <code class="code-inline tex2jax_ignore">implements Comparable&lt;Sentence&gt;</code>.</div></li>
+<li id="li-376"><div class="para" id="p-derived-li-376">Sentence encapsulates the sentence String itself and word count.</div></li>
+<li id="li-377"><div class="para" id="p-derived-li-377">Word count is precomputed by the constructor.</div></li>
+<li id="li-378"><div class="para" id="p-derived-li-378">A <code class="code-inline tex2jax_ignore">toString()</code> override returns Sentence String.</div></li>
+<li id="li-379"><div class="para" id="p-derived-li-379">The <code class="code-inline tex2jax_ignore">getWordCount()</code> accessor method returns word count.</div></li>
+<li id="li-380"><div class="para" id="p-derived-li-380">The <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code> interface method returns an int value that indicates an ordering as compared with the <code class="code-inline tex2jax_ignore">Sentence other</code> by comparing word count.</div></li>
+<li id="li-381"><div class="para" id="p-derived-li-381">The <code class="code-inline tex2jax_ignore">main(…)</code> method fills an <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code> with Sentence objects from Juliet’s famous speech.</div></li>
+<li id="li-382"><div class="para" id="p-derived-li-382">The <code class="code-inline tex2jax_ignore">Collections.sort(…)</code> static method is invoked to sort the <code class="code-inline tex2jax_ignore">ArrayList&lt;Sentence&gt;</code>, which uses our overridden <code class="code-inline tex2jax_ignore">compareTo(Sentence other)</code> method.</div></li>
+<li id="li-383"><div class="para" id="p-derived-li-383">Sorted Sentences are printed in order, with word count.</div></li>
 </ol>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac Sentence.java
 java Sentence
