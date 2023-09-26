@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In the code snippet below we rewrote the for-statement in the <code class="code-inline tex2jax_ignore">recolor(…)</code> method of <a href="" class="xref" data-knowl="./knowl/listing-ar-randomovals2.html" title="Listing 7.2.1">Listing 7.2.1</a> as a <em class="emphasis">for-each</em> statement. No loop counter is necessary because the for-each accesses array elements in sequence and iterates the correct number of times. We cannot replace the for-statement in the <code class="code-inline tex2jax_ignore">main(…)</code> method with a for-each. Do you see why?</div>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Because arrays use integer indexes within square brackets to access elements, we can access these elements sequentially using iteration and a counter variable, similar to the way we did with ArrayLists. Like an ArrayList, we can ask an array about its length. Unlike an ArrayList, the length of an array is determined using the <code class="code-inline tex2jax_ignore">.length</code> property instead of the <code class="code-inline tex2jax_ignore">size()</code> method which is used for an ArrayList. Recall that when iterating over the elements of an ArrayList, our loop counter had to stop at a value of 1 less that the size of the ArrayList. If the first index is 0, the last index is <code class="code-inline tex2jax_ignore">size()-1</code>. The same argument applies to arrays. The first index is 0, so the last index is <code class="code-inline tex2jax_ignore">.length - 1</code>. The test for continuation when iterating over the elements of an array must check that the counter is <em class="emphasis">less-than</em> the length of an array, not <em class="emphasis">less-than or equal-to</em>. Take note of the form of the continuation tests in the following for-statement examples.</div>
 <span class="incontext"><a href="section-ar-iterating.html#p-591" class="internal">in-context</a></span>
 </body>
 </html>

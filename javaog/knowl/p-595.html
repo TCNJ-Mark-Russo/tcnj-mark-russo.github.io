@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">As a reference type, an array variable is just a name that references an array. There is nothing to stop us from declaring a second array variable and assigning it to the same array, giving us two names for the array. As we know, assigning one reference variable to another does not copy the object being referenced. Rather, the value of the second reference variable gets the address of the object referenced by the first variable. This is why both variables reference the same object. Using either variable, when we access and modify an array element, the single underlying array is being modified. Specifically, we can modify an array referenced using one variable, and see the modification when accessing it using the other array variable. Let’s run some tests.</div>
-<span class="incontext"><a href="section-ar-reftypes.html#p-595" class="internal">in-context</a></span>
+<div class="para">The for-statement in <a href="" class="xref" data-knowl="./knowl/listing-ar-randomovals2.html" title="Listing 7.2.1">Listing 7.2.1</a> cannot be replaced with a for-each because the loop counter is used for more that just accessing existing objects. We use it to set references to new objects in the array as well. It is not possible to initialize array elements with a for-each statement.</div>
+<span class="incontext"><a href="section-ar-iterating.html#p-595" class="internal">in-context</a></span>
 </body>
 </html>

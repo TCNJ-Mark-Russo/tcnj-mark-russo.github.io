@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The LEDPanel class in <a href="" class="xref" data-knowl="./knowl/listing-cl-led-panel.html" title="Listing 8.6.1">Listing 8.6.1</a> implements only the <code class="code-inline tex2jax_ignore">main(…)</code> method which sets up and runs the program. First in the <code class="code-inline tex2jax_ignore">main(…)</code> method a Pad object is created directly with a title and custom dimensions. Rather than declare eight LED variables, an array of LED objects named <code class="code-inline tex2jax_ignore">leds</code> is declared. Each element of the <code class="code-inline tex2jax_ignore">leds</code> array is assigned to a new LED object with a certain color. Note that we are using an LED class with the updated constructor overload that takes an additional color parameter used to initialize the LED with color.</div>
+<div class="para">In which class file should the overall <code class="code-inline tex2jax_ignore">main(…)</code> method be placed — the one that initializes all classes and starts running your program? It may not always be obvious. After all, for our individual class definitions to be reusable, it does not make a lot of sense to use a class’s <code class="code-inline tex2jax_ignore">main(…)</code> method to start a larger application. Furthermore, in <a href="section-cl-methods.html" class="internal" title="Section 8.3: Methods">Section 8.3</a> we reserved the <code class="code-inline tex2jax_ignore">main(…)</code> method to run tests on our custom class.</div>
 <span class="incontext"><a href="section-cl-multi-file-programs.html#p-699" class="internal">in-context</a></span>
 </body>
 </html>

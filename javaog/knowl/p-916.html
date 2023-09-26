@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Each time the else-branch in the <code class="code-inline tex2jax_ignore">countdown(…)</code> method in <a href="" class="xref" data-knowl="./knowl/listing-re-countdown.html" title="Listing 12.2.1">Listing 12.2.1</a> is invoked, the state of the invoking method is captured in a stack frame and pushed on the call stack. During recursion this repeats itself with each new value of N until the base case is reached. <a href="" class="xref" data-knowl="./knowl/figure-re-countdown.html" title="Figure 12.2.2">Figure 12.2.2</a> is an illustrative diagram of the call stack when this recursion hits the base case. All stack frames hold the current value of N when it pauses. After reaching the base case, each paused method returns in reverse order, which pops the next stack frame off the top of the call stack, returning control to the paused method.</div>
+<div class="para">A running method must pause when it invokes another method. The state of a paused method must be saved so that when the invoked method returns the invoking method can pick up where it left off.</div>
 <span class="incontext"><a href="section-re-call-stack.html#p-916" class="internal">in-context</a></span>
 </body>
 </html>

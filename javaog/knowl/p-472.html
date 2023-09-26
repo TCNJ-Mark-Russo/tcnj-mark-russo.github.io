@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s write a program that generates a two-dimensional layout of fixed-size Rectangle objects. Creating the objects is straightforward. What we need is a way to generate all Rectangle locations, and nested iteration does that for us. Study <a href="" class="xref" data-knowl="./knowl/listing-c1-grid1.html" title="Listing 5.6.1">Listing 5.6.1</a>.</div>
-<span class="incontext"><a href="section-c1-nested-control.html#p-472" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Take a moment to carefully study <a href="" class="xref" data-knowl="./knowl/listing-c1-musketeer-order.html" title="Listing 5.5.9">Listing 5.5.9</a>. Here are some things to note.</div>
+<ol class="decimal">
+<li><div class="para">The HashMap <code class="code-inline tex2jax_ignore">order</code> is keyed by String objects that relate to ArrayList&lt;String&gt; values.</div></li>
+<li><div class="para">We use the <code class="code-inline tex2jax_ignore">get(…)</code> method with a String name key to get the ArrayList holding a particular customer, order and then modify it directly, as needed.</div></li>
+<li><div class="para">We can chain methods using multiple dot-operators, where intermediate objects are never assigned to variables, but stored temporarily as an <em class="emphasis">automatic</em>.</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="section-c1-collection-classes.html#p-472" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Consider what might happen if we continued to initialize the instance variables directly in the LED object’s constructor and also modify the instance variables in its methods. Doing this requires us to make sure that the constructor and the <code class="code-inline tex2jax_ignore">turnOff()</code> method remained consistent. If we decided to change the fill color of the LED when off, and we modified the code in <code class="code-inline tex2jax_ignore">turnOff()</code> but forgot to make the comparable change to the constructor, we would end up with an inconsistency in our program. The ramifications of making this mistake in this example are minor. But one can imagine how such a similar oversight can lead to more serious problems. This important software development principle has been dubbed <dfn class="terminology">Don’t repeat yourself</dfn> or <dfn class="terminology">DRY</dfn>.</div>
+<div class="para">We introduced methods in <a href="section-jp-static-methods.html" class="internal" title="Section 3.2: Static Methods">Section 3.2</a>. The difference between what was described there and the figure below is that here we leave out the <code class="code-inline tex2jax_ignore">static</code> modifier so as to define the method within the scope of the object. Otherwise, the same rules apply.</div>
 <span class="incontext"><a href="section-cl-methods.html#p-654" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">For an object resource to be suitable for use in a try-with-resources, it must implement the <dfn class="terminology">AutoClosable</dfn> interface, listed below. This interface includes one signature for the <code class="code-inline tex2jax_ignore">close()</code> method. This is the method invoked by a try-with-resources when its block scope is exited.</div>
-<span class="incontext"><a href="section-try-with-resources.html#p-885" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Each of the above versions of the <code class="code-inline tex2jax_ignore">printFile(…)</code> method was designed to handle any IOExceptions that might occur right in the method itself. Rather than handling the exceptions in the method, exception handling can be deferred and handled in the invoking method instead. To make the compiler happy about not handling a checked exception in the place it may be thrown, we must declare that the method <code class="code-inline tex2jax_ignore">throws</code> the exception. This has the effect of deferring the requirement to the invoking method. Eventually the checked exception must be handled in your program.</div>
+<span class="incontext"><a href="section-ex-reading-files.html#p-885" class="internal">in-context</a></span>
 </body>
 </html>

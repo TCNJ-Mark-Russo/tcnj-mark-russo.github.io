@@ -734,7 +734,7 @@ window.MathJax = {
 <section class="introduction" id="introduction-76">One way to perform animations or other graphic illustrations requiring repeated sequential execution of code is to make use of a timer. Smilar to its hardware counterpart, a software timer may be started and stopped, set to run at a presepecified tick rate, and take some action at one or more timepoints in the future. In DoodlePad the Pad class provides the functionality of a timer, which may be used to run repeated actions.</section><section class="subsection" id="subsection-141"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">14.9.1</span> <span class="title">Timer Methods</span>
 </h3>
-<div class="para" id="p-1099">The Pad’s timer functionality is encapsulated by five methods:</div>
+<div class="para" id="p-1102">The Pad’s timer functionality is encapsulated by five methods:</div>
 <figure class="table table-like" id="table-55"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">14.9.1<span class="period">.</span></span><span class="space"> </span>Timer Methods</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b1 r0 l0 t0 lines">Method Signature</th>
@@ -773,14 +773,14 @@ window.MathJax = {
 </table></div></figure></section><section class="subsection" id="subsection-142"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">14.9.2</span> <span class="title">Example: Animating Shape Motion</span>
 </h3>
-<div class="para" id="p-1100">The following example demonstrates the use of a timer in DoodlePad. In this example a small green "bug" (an Oval object) continually seek the mouse location. Moving the mouse on the Pad causes the bug to change direction.</div>
+<div class="para" id="p-1103">The following example demonstrates the use of a timer in DoodlePad. In this example a small green "bug" (an Oval object) continually seek the mouse location. Moving the mouse on the Pad causes the bug to change direction.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:40%;"><div class="para" id="p-1101">The program’s main() method starts by creating and styling new Pad and Oval objects. The Pad’s mouseMoved event is handled by a method that updates target coordinates. These target coordinates are continuously being sought by the bug. The Pad timer’s tick rate is set to 30 ticks-per-second, and its tick event handler is set to a method named moveBug(). Before exiting main() the Pad timer is started.</div></div>
-<div class="sbspanel top" style="width:3%;"><div class="para" id="p-1102"></div></div>
+<div class="sbspanel top" style="width:40%;"><div class="para" id="p-1104">The program’s main() method starts by creating and styling new Pad and Oval objects. The Pad’s mouseMoved event is handled by a method that updates target coordinates. These target coordinates are continuously being sought by the bug. The Pad timer’s tick rate is set to 30 ticks-per-second, and its tick event handler is set to a method named moveBug(). Before exiting main() the Pad timer is started.</div></div>
+<div class="sbspanel top" style="width:3%;"><div class="para" id="p-1105"></div></div>
 <div class="sbspanel top" style="width:57%;"><figure class="figure figure-like" id="figure-69"><img src="external/images/MouseSeeker.gif" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.9.2<span class="period">.</span></span><span class="space"> </span>Mouse Seeker</figcaption></figure></div>
 </div></div>
-<div class="para" id="p-1103">The moveBug() method is the Pad timer’s event handler. It is fired approximately 30 times per second by the timer. Each time it is fired, it computes a new location that is about 10% of the way between its current location and the target location, and it moves the bug to the new location. Because it does not move the bug all the way to the target location, the bug continuously changes direction as the mouse moves. The result is a fun program to play with, and the basis for more interesting games and animated illustrations.</div>
-<div class="para" id="p-1104">Finally, note that a Shape’s location is not the only thing that may be animated. Any object property may change. For example, a Shapes’ fill or stroke color may be animated, as can its width, height or other properties. The only limit is your imagination.</div>
+<div class="para" id="p-1106">The moveBug() method is the Pad timer’s event handler. It is fired approximately 30 times per second by the timer. Each time it is fired, it computes a new location that is about 10% of the way between its current location and the target location, and it moves the bug to the new location. Because it does not move the bug all the way to the target location, the bug continuously changes direction as the mouse moves. The result is a fun program to play with, and the basis for more interesting games and animated illustrations.</div>
+<div class="para" id="p-1107">Finally, note that a Shape’s location is not the only thing that may be animated. Any object property may change. For example, a Shapes’ fill or stroke color may be animated, as can its width, height or other properties. The only limit is your imagination.</div>
 <figure class="listing figure-like" id="listing-124"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Seeker.java
 // Continually move a green bug to follow a moving mouse
 import doodlepad.*;

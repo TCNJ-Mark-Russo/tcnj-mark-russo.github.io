@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">If you look closely you will see that <code class="code-inline tex2jax_ignore">i</code> is used as the counter for the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method as well as in the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method. In both cases <code class="code-inline tex2jax_ignore">i</code> is reset to 0, but <code class="code-inline tex2jax_ignore">repeatChars(…)</code> leaves the value of <code class="code-inline tex2jax_ignore">i</code> at <code class="code-inline tex2jax_ignore">count + 1</code>. When <code class="code-inline tex2jax_ignore">repeatChars(…)</code> exits it returns to the while-statement in <code class="code-inline tex2jax_ignore">main(…)</code> already in progress. This statement continues, but does with a value of <code class="code-inline tex2jax_ignore">i</code> that has been changed by <code class="code-inline tex2jax_ignore">repeatChars(…)</code>. In this case, the result is that the counter is advanced too quickly, resulting in some of the expected output being skipped.</div>
+<div class="para">In general, it is a very good idea to declare your variables in a scope that is as narrow as feasible and still be able to solve your problem. You may be tempted to just declare all variables in the outer class scope so that you don’t have to worry about declaring them again. Resist the temptation. This is often the cause for subtle bugs that can be very hard to find.</div>
 <span class="incontext"><a href="section-c1-block-scope.html#p-490" class="internal">in-context</a></span>
 </body>
 </html>

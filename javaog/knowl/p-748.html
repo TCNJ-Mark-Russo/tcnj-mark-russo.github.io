@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para"></div>
+<div class="para">This new implementation of <code class="code-inline tex2jax_ignore">ToggleButton</code> takes advantage of inheritance by extending the RoundRect class instead of managing an internal RoundRect object. With this update we can now delete the internal RoundRect object instance variable used in <a href="" class="xref" data-knowl="./knowl/listing-dp-togglebutton1.html" title="Listing 14.6.4">Listing 14.6.4</a>. The new constructor is modified by first removing the statement to initialize the <code class="code-inline tex2jax_ignore">shpButton</code> instance variable and replace it with a statement that invokes the base class constructor using <code class="code-inline tex2jax_ignore">super(…)</code>. The new constructor was expanded to take the button’s location and size. These parameter values are relayed to the base class constructor as parameters passed to <code class="code-inline tex2jax_ignore">super(…)</code>. Additionally, the former constructor is modified by removing the <code class="code-inline tex2jax_ignore">setMousePressedHandler(…)</code> method entirely, which is no longer needed because we now use method overriding to handle the mouse-pressed event.</div>
 <span class="incontext"><a href="section-in-overriding.html#p-748" class="internal">in-context</a></span>
 </body>
 </html>

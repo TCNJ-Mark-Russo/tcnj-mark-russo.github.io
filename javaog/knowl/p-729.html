@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">To establish an inheritance relationship between a derived class and a base class, add the <dfn class="terminology">extends</dfn> keyword and the base class name to the right of the first line in a derived class declaration. For example, in DoodlePad, all shape classes inherit a base class named <dfn class="terminology">Shape</dfn>, so each shape class starts with a declaration like the following. Have a look at any one of the shape classes in the <a class="external" href="https://github.com/russomf/doodlepad/tree/master/src/doodlepad" target="_blank">DoodlePad source code</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-21-hidden.html" title="Footnote 9.2.1"><sup> 1 </sup></a>.</div>
+<div class="para">First and foremost, inheritance solves the code duplication problem. If a method in a base class needs updating, any changes made are inherited automatically by all derived classes, no extra effort required. This reduces the chance for errors caused by neglecting to make necessary changes to all implementations of a shared method. Of course, if an error is made in the base class method, all derived classes inherit the same broken method. But fixing that error in the single base class implementation also means that the corrected method is fixed everywhere.</div>
 <span class="incontext"><a href="section-in-basics.html#p-729" class="internal">in-context</a></span>
 </body>
 </html>

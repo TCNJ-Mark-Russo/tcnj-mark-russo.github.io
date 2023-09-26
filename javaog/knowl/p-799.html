@@ -12,8 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<code class="code-inline tex2jax_ignore">Collections.sort(…)</code> does its job because the only external dependency that the algorithm has is on an implementation of the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method to order two instances of objects stored in an ArrayList. We provide a way to solve that small task, and benefit from highly optimized sorting and searching algorithms that are built-in to the Core Library. This is a powerful opportunity to leverage existing algorithms.</div>
+<div class="para">The Java String class implements Comparable&lt;T&gt;. Strings order themselves <em class="emphasis">lexographically</em>, which is the same ordering of words as found in a dictionary. First the underlying integer code of each successive character is compared until a difference is found. The String with the lesser character code value is ordered first. Also, shorter Strings are ordered first. We can explore this by invoking the <code class="code-inline tex2jax_ignore">compareTo(…)</code> method on several String pairs in JShell.</div>
 <span class="incontext"><a href="section-if-comparable.html#p-799" class="internal">in-context</a></span>
 </body>
 </html>

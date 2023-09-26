@@ -730,12 +730,12 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-c1-while-statements"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">while-Statements</span>
 </h2>
-<section class="introduction" id="introduction-17"><div class="para" id="p-414">Our second Java control statement is the <em class="emphasis">while-statement</em>. This statement gives us a way to perform <em class="emphasis">iteration</em>, the second major program flow control technique. Recall that the if-statement gives us <em class="emphasis">branching</em>, the first flow control technique. With the while-statement we now have a second way to control program flow.</div> <div class="para" id="p-415">The <em class="emphasis">while-statement</em> executes a block of code — <em class="emphasis">while</em> — a conditional expression continues to evaluate to <code class="code-inline tex2jax_ignore">true</code>. More specifically, when a while-statement is encountered at runtime, the condition is evaluated. If <code class="code-inline tex2jax_ignore">true</code>, the code block is executed, and the condition is evaluated again. If it remains <code class="code-inline tex2jax_ignore">true</code>, the code block is executed a second time. This repeats until the condition evaluates to <code class="code-inline tex2jax_ignore">false</code>. Compare this to the if-statement, which executes a block of code once, at most, if a conditional expression evaluates to <code class="code-inline tex2jax_ignore">true</code>. Otherise the code block is skipped. Either way, program control continues immediately after the if-statement.</div> <div class="para" id="p-416">The structure of a while-statement is nearly identical to an if-statement, the only difference being that the <code class="code-inline tex2jax_ignore">if</code> keyword is replace by the <code class="code-inline tex2jax_ignore">while</code> keyword. Otherwise, the structure is the same.</div> <figure class="figure figure-like" id="figure-c1-while-statement-schematic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/while-statement-schematic.svg" class="contained"></div>
+<section class="introduction" id="introduction-17"><div class="para" id="p-416">Our second Java control statement for this chapter is the <em class="emphasis">while-statement</em>. This statement gives us a way to perform <em class="emphasis">iteration</em>, the second major program flow control technique. Recall that the if-statement gives us <em class="emphasis">branching</em>, the first flow control technique. With the while-statement we now have a second way to control program flow.</div> <div class="para" id="p-417">The <em class="emphasis">while-statement</em> executes a block of code — <em class="emphasis">while</em> — a condition continues to evaluate to <code class="code-inline tex2jax_ignore">true</code>. More specifically, when a while-statement is encountered at runtime, the condition is evaluated. If <code class="code-inline tex2jax_ignore">true</code>, the code block is executed, and the condition is evaluated again. If it remains <code class="code-inline tex2jax_ignore">true</code>, the code block is executed again. This repeats until the condition evaluates to <code class="code-inline tex2jax_ignore">false</code>. Compare this to the if-statement, which executes a block of code once, at most, if a condition evaluates to <code class="code-inline tex2jax_ignore">true</code>. Otherise the code block is skipped. Either way, program control continues immediately after the if-statement.</div> <div class="para" id="p-418">The structure of a while-statement is nearly identical to an if-statement, the only difference being that the <code class="code-inline tex2jax_ignore">if</code> keyword is replace by the <code class="code-inline tex2jax_ignore">while</code> keyword. Otherwise, the structure is the same.</div> <figure class="figure figure-like" id="figure-c1-while-statement-schematic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/c1-while-statement-schematic.svg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span>Parts of a while-Statement</figcaption></figure></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.1</span> <span class="title">While with a Counter</span>
 </h3>
-<div class="para" id="p-417">One of the most common ways to use the while-statement is to execute its block of code a constant number of times. We can accomplish this by adding a counter variable to the while-statement. The counter variable is declared and initialized <em class="emphasis">before</em> the loop, usually to 0, and it is incremented by 1 each time the code block is executed. The while-statement’s conditional expression tests the value of the counter. When it meets or exceeds some maximum value, the condition evaluates to <code class="code-inline tex2jax_ignore">false</code> and the while-statement stops iteration.</div>
-<div class="para" id="p-418">
+<div class="para" id="p-419">One of the most common ways to use the while-statement is to execute its block of code a fixed number of times. We can accomplish this by adding a counter variable to the while-statement. The counter variable is declared and initialized <em class="emphasis">before</em> the loop, usually to 0, and it is incremented by 1 each time the code block is executed. The while-statement’s condition tests the value of the counter. When it meets or exceeds some maximum value, the condition evaluates to <code class="code-inline tex2jax_ignore">false</code> and the while-statement stops iteration.</div>
+<div class="para" id="p-420">
 <a href="" class="xref" data-knowl="./knowl/listing-c1-while-counter.html" title="Listing 5.3.2">Listing 5.3.2</a> is an example program that makes use of this strategy.</div>
 <figure class="listing figure-like" id="listing-c1-while-counter"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// WhileCounter.java
 public class WhileCounter {
@@ -749,7 +749,7 @@ public class WhileCounter {
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span>While-statement with a counter</figcaption></figure><div class="para" id="p-419">When we compile and run this program, we see the following output.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span>While-statement with a counter</figcaption></figure><div class="para" id="p-421">When we compile and run this program, we see the following output.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac WhileCounter.java
 java WhileCounter
 </b>0
@@ -759,19 +759,19 @@ java WhileCounter
 4
 Done
 </pre></div>
-<div class="para" id="p-420">The variable <code class="code-inline tex2jax_ignore">i</code> is declared and initialized to <code class="code-inline tex2jax_ignore">0</code>. The while-statement condition continues to run while the value of <code class="code-inline tex2jax_ignore">i</code> remains less than 5. Each time the while-statement code block executes, it prints the current value of <code class="code-inline tex2jax_ignore">i</code> and then increments the value of <code class="code-inline tex2jax_ignore">i</code> by 1.</div>
-<div class="para" id="p-421">As expected, 0 is printed first, followed by 1, 2, etc. as <code class="code-inline tex2jax_ignore">i</code> is incremented. The last value printed is 4. After 4 the value of <code class="code-inline tex2jax_ignore">i</code> increments to 5, and then the condition is tested. Because <code class="code-inline tex2jax_ignore">5 &lt; 5</code> evaluates to <code class="code-inline tex2jax_ignore">false</code>, iteration stops and control continues with the first line after the while-statement, which prints "Done".</div>
-<div class="para" id="p-422">Constructing a while-statement for counting involves the addition of three important elements:</div>
+<div class="para" id="p-422">The variable <code class="code-inline tex2jax_ignore">i</code> is declared and initialized to <code class="code-inline tex2jax_ignore">0</code>. The while-statement condition continues to run while the value of <code class="code-inline tex2jax_ignore">i</code> remains less than 5. Each time the while-statement code block executes, it prints the current value of <code class="code-inline tex2jax_ignore">i</code> and then increments the value of <code class="code-inline tex2jax_ignore">i</code> by 1.</div>
+<div class="para" id="p-423">As expected, 0 is printed first, followed by 1, 2, etc. as <code class="code-inline tex2jax_ignore">i</code> is incremented. The last value printed is 4. After 4 the value of <code class="code-inline tex2jax_ignore">i</code> increments to 5, and then the condition is tested. Because <code class="code-inline tex2jax_ignore">5 &lt; 5</code> evaluates to <code class="code-inline tex2jax_ignore">false</code>, iteration stops and control continues with the first line after the while-statement, which prints "Done".</div>
+<div class="para" id="p-424">Constructing a while-statement for counting involves the addition of three important elements:</div>
 <ol class="decimal">
 <li id="li-168"><div class="para" id="p-derived-li-168">A counter is declared and initialized before the while-statement.</div></li>
 <li id="li-169"><div class="para" id="p-derived-li-169">The counter is incremented within the block of code associated with the while-statement.</div></li>
-<li id="li-170"><div class="para" id="p-derived-li-170">The while-statement’s conditional test checks if the counter exceeds some value and stops.</div></li>
+<li id="li-170"><div class="para" id="p-derived-li-170">The while-statement’s conditional expression checks if the counter exceeds some value and stops.</div></li>
 </ol>
-<div class="para" id="p-423">We will see these same three important elements resurface when we continue our exploration of iteration.</div></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<div class="para" id="p-425">We will see these same three important elements resurface when we continue our exploration of iteration.</div></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.2</span> <span class="title">Counter Variations</span>
 </h3>
-<div class="para" id="p-424">Nothing prevents us from modifying the way a while-statement counts. There is no requirement that we count up by 1 for each iteration. We might count up by 2, or count down by 1. Also, there is nothing to say what we use as the test for when a while-statement should stop iterating. We might want to change the way a while-statement operates when we have a secondary use for the counter variable.</div>
-<div class="para" id="p-425">
+<div class="para" id="p-426">Nothing prevents us from defining the way a while-statement counts. There is no requirement that we count up by 1 for each iteration. We might count up by 2, or count down by 1. Also, there is nothing to say what we use as the test for when a while-statement should stop iterating. We might want to change the way a while-statement operates when we have a secondary use for the counter variable.</div>
+<div class="para" id="p-427">
 <a href="" class="xref" data-knowl="./knowl/listing-c1-liftoff.html" title="Listing 5.3.3">Listing 5.3.3</a> is a program that prints a countdown sequence to the launch of a rocket.</div>
 <figure class="listing figure-like" id="listing-c1-liftoff"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Liftoff.java
 public class Liftoff {
@@ -785,7 +785,7 @@ public class Liftoff {
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Listoff.java</code></figcaption></figure><div class="para" id="p-426">Compiling and running the previous program, we see the following.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Listoff.java</code></figcaption></figure><div class="para" id="p-428">Compiling and running <a href="" class="xref" data-knowl="./knowl/listing-c1-liftoff.html" title="Listing 5.3.3">Listing 5.3.3</a>, we see the following output.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac Liftoff.java
 java Liftoff
 </b>10
@@ -801,7 +801,7 @@ java Liftoff
 0
 Lift off!
 </pre></div>
-<div class="para" id="p-427">In another application, we might want to print the number of feet and remaining inches from the edge of a wall where studs should be placed. Typically, wall studs are placed at a 16 inch spacing from center to center. Let’s write a program that prints the location for all studs on a 12 foot wall measured in feet plus remaining inches. To solve this problem we count up position by 16 inches, but use integer division and modulus to convert to feet and remaining inches before printing.</div>
+<div class="para" id="p-429">In another application, we might want to print the number of feet and remaining inches from the edge of a wall where studs should be placed. Typically, wall studs are placed at a 16 inch spacing from center to center. Let’s write a program that prints the location for all studs on a 12 foot wall measured in feet plus remaining inches. To solve this problem we count up position by 16 inches, but use integer division and modulo to convert to feet and remaining inches before printing.</div>
 <figure class="listing figure-like" id="listing-c1-studs"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// Studs.java
 public class Studs {
   public static void main(String[] args) {
@@ -817,7 +817,7 @@ public class Studs {
   }
 }
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Studs.java</code></figcaption></figure><div class="para" id="p-428">After compiling and running this program, we see the following output stud positions.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span><code class="code-inline tex2jax_ignore">Studs.java</code></figcaption></figure><div class="para" id="p-430">After compiling and running this program, we see the following output stud positions.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>javac Studs.java
 java Studs
 </b>0 ft 0 in
@@ -831,7 +831,7 @@ java Studs
 10 ft 8 in
 12 ft 0 in
 </pre></div>
-<div class="para" id="p-429">Iteraton is just one technique that can be used alone or combined with branching and other program flow control statements to craft sophisticated computational problem solutions.</div></section></section></div>
+<div class="para" id="p-431">Iteraton is just one technique which can be used alone or combined with branching and other program flow control statements to craft sophisticated computational problem solutions.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-c1-multibranch-ifs.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-c1-break-continue.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

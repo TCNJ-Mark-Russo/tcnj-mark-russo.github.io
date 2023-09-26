@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Note how we use nested curly brackets to initialize the array, and how we don’t specify the dimensions of the nested arrays. Java determines the array dimensions by the structure of the initialization. Also note the type of the variable in the outer for-each loop inside <code class="code-inline tex2jax_ignore">printArr(…)</code>, which is <code class="code-inline tex2jax_ignore">for (double[] inarr : arr) {…</code>. The loop variable is a reference to a one-dimensional double array! By now, this should make sense. In Java, a multidimensional array is an array of arrays; the outer array is a one-dimensional array with elements that each hold one-dimensional arrays.</div>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/listing-arr-nestedarrays1.html" title="Listing 7.4.2">Listing 7.4.2</a> demonstrates these ideas. This program has two methods defined, <code class="code-inline tex2jax_ignore">main(…)</code> and <code class="code-inline tex2jax_ignore">print2D(…)</code>. Both methods use the nested iteration approach to access array elements. In <code class="code-inline tex2jax_ignore">main(…)</code> we access each element and initialize values to random doubles. In <code class="code-inline tex2jax_ignore">print2D(…)</code> we access each element for printing. Pay special attention to the inner loop continuation test, <code class="code-inline tex2jax_ignore">j&lt;arr2D[i].length</code>. We are querying each inner array for its length, that is, each array at <code class="code-inline tex2jax_ignore">arr2D[i]</code>. In the next section we’ll learn why we want to ask <em class="emphasis">each</em> inner array for its length, and not use the length of just the first inner array or a constant.</div>
 <span class="incontext"><a href="section-ar-multi.html#p-613" class="internal">in-context</a></span>
 </body>
 </html>

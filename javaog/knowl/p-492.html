@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">In <a href="section-c1-collection-classes.html" class="internal" title="Section 5.5: Collection Classes">Section 5.5</a> we introduced the two major forms of program flow control, <dfn class="terminology">brancing</dfn> and <dfn class="terminology">iteration</dfn>, and we demonstrated these concepts using the Java if-statement and the while-statement. These two statements are not the only ways to perform <em class="emphasis">branching</em> and <em class="emphasis">iteration</em> in Java. In this section we will explore many of the other options to do the same, and cover some additional important topics in the process.</div>
-<span class="incontext"><a href="chapter-control2.html#p-492" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Next we compile and run the program. The program compiles and runs just fine, and it looks correct. In fact, when testing the <code class="code-inline tex2jax_ignore">repeatChars(…)</code> method individually, outside the iteration in the <code class="code-inline tex2jax_ignore">main(…)</code> method, it worked correctly. The loop counter <code class="code-inline tex2jax_ignore">i</code> is properly initialized and incremented by 1 every time. I expected the output "A", "AA", "AAA", "AAAA", "AAAAA". But as you can see below the output is "A", "AAA", "AAAAA". It is clear that the counter in <code class="code-inline tex2jax_ignore">main(…)</code> increases by 1 each time. I can see with my own eyes the statement <code class="code-inline tex2jax_ignore">i++;</code>. So what is the problem? Could it have something to do with the variable <code class="code-inline tex2jax_ignore">i</code> that we declared in the outer class scope?</div>
+<span class="incontext"><a href="section-c1-block-scope.html#p-492" class="internal">in-context</a></span>
 </body>
 </html>

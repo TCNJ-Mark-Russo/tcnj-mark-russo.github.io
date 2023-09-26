@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Leaving out a break statement can be useful when you want to execute the same set of actions for multiple label value matches. A good example is when you are writing code that should handle the differences in behavior between different operating systems.</div>
+<div class="para">Make sure you understand this behavior of a switch-statement. The switch- does not exit a <code class="code-inline tex2jax_ignore">case</code> branch automatically when finished executing its statements like an if-statement does. It continues to flow into the statements of next <code class="code-inline tex2jax_ignore">case</code> branch. Always include a <code class="code-inline tex2jax_ignore">break</code> when you intend to exit a switch-statement.</div>
 <span class="incontext"><a href="section-c2-switch-statements.html#p-532" class="internal">in-context</a></span>
 </body>
 </html>
