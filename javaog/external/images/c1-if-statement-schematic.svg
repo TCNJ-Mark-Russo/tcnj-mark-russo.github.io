@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="96mm"
+   width="90mm"
    height="55mm"
-   viewBox="0 0 96 54.999999"
+   viewBox="0 0 90 54.999999"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
-   sodipodi:docname="while-statement-schematic.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="c1-if-statement-schematic.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4324916"
-     inkscape:cx="174.87014"
-     inkscape:cy="99.826065"
+     inkscape:cx="127.05136"
+     inkscape:cy="99.477023"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -133,7 +133,7 @@
     <rect
        style="fill:#00ffff;fill-opacity:0.5;stroke:none;stroke-width:0.129"
        id="rect1112"
-       width="21.979479"
+       width="13.113806"
        height="5.7257462"
        x="71.269836"
        y="46.406254" />
@@ -142,7 +142,7 @@
        id="rect1112-5"
        width="36.386192"
        height="5.7257462"
-       x="97.954544"
+       x="89.487869"
        y="46.406254" />
     <rect
        style="fill:#ffff00;fill-opacity:0.5;stroke:none;stroke-width:0.226042"
@@ -158,29 +158,27 @@
        style="font-size:21.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';white-space:pre;shape-inside:url(#rect740);display:inline;fill:#000000;stroke:#000000;stroke-width:0.487559"><tspan
          x="85.166016"
          y="83.687625"
-         id="tspan23487"><tspan
+         id="tspan5"><tspan
            style="font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal'"
-           id="tspan23481">while ( </tspan><tspan
+           id="tspan2">if ( </tspan><tspan
            style="font-style:italic;font-family:'Courier New';-inkscape-font-specification:'Courier New, Italic'"
-           id="tspan23483">condition</tspan><tspan
+           id="tspan3">condition</tspan><tspan
            style="font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal'"
-           id="tspan23485"> ) {
-</tspan></tspan><tspan
+           id="tspan4"> ) {&#10;</tspan></tspan><tspan
          x="85.166016"
          y="110.83538"
-         id="tspan23495"><tspan
+         id="tspan9"><tspan
            style="font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal'"
-           id="tspan23489">    </tspan><tspan
+           id="tspan6">    </tspan><tspan
            style="font-style:italic;font-family:'Courier New';-inkscape-font-specification:'Courier New, Italic'"
-           id="tspan23491">statements</tspan><tspan
+           id="tspan7">statements</tspan><tspan
            style="font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal'"
-           id="tspan23493">;
-</tspan></tspan><tspan
+           id="tspan8">;&#10;</tspan></tspan><tspan
          x="85.166016"
          y="137.98313"
-         id="tspan23499"><tspan
+         id="tspan11"><tspan
            style="font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal'"
-           id="tspan23497">}</tspan></tspan></text>
+           id="tspan10">}</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.129"
@@ -195,25 +193,24 @@
     <text
        xml:space="preserve"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.129"
-       x="96.491119"
+       x="89.082779"
        y="34.443787"
        id="text2470-8"><tspan
          sodipodi:role="line"
          id="tspan2468-8"
          style="fill:#000000;stroke-width:0.129"
-         x="96.491119"
+         x="89.082779"
          y="34.443787">parentheses</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.129"
-       x="90.858292"
-       y="77.294525"
+       x="80.637283"
+       y="75.816917"
        id="text2470-8-2"><tspan
          sodipodi:role="line"
-         id="tspan2468-8-5"
-         style="fill:#000000;stroke-width:0.129"
-         x="90.858292"
-         y="77.294525">brackets</tspan></text>
+         id="tspan1"
+         x="80.637283"
+         y="75.816917">curly braces</tspan></text>
     <path
        style="fill:none;stroke:#c0c0c0;stroke-width:0.471976;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
        d="m 60.962779,42.092827 c -0.08532,6.698243 4.694644,6.424992 8.274126,6.408407"
@@ -221,12 +218,12 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#bfbfbf;stroke-width:0.472;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart-9)"
-       d="M 136.02496,45.761524 C 135.9762,31.437461 96.341928,32.339348 96.534269,45.338635"
+       d="M 128.61658,45.761524 C 128.56782,31.437461 86.717172,32.339348 86.909513,45.338635"
        id="path3831-4"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#bfbfbf;stroke-width:0.472;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart-4);marker-end:url(#TriangleStart-9-2)"
-       d="M 143.59522,54.106353 C 144.28526,86.696469 76.207006,85.012535 75.660541,69.567792"
+       d="M 136.76126,54.845159 C 137.4513,87.435275 76.207006,85.012535 75.660541,69.567792"
        id="path3831-4-2"
        sodipodi:nodetypes="cc" />
   </g>
