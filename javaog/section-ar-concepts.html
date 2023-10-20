@@ -426,10 +426,10 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-ar-multi.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Multidimensional Arrays</span></a></div>
+<div class="toc-item"><a href="section-ar-multi.html" class="internal"><span class="codenumber">7.4</span> <span class="title">"Multidimensional" Arrays</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-ar-multi.html#subsection-62" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Declaring Arrays of Arrays</span></a></div></li>
-<li><div class="toc-item"><a href="section-ar-multi.html#subsection-63" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Accessing Multidimensional Array Elements</span></a></div></li>
+<li><div class="toc-item"><a href="section-ar-multi.html#subsection-63" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Accessing "Multidimensional" Array Elements</span></a></div></li>
 <li><div class="toc-item"><a href="section-ar-multi.html#subsection-64" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Ragged Arrays</span></a></div></li>
 </ul>
 </li>
@@ -734,30 +734,30 @@ window.MathJax = {
 <li id="li-254"><div class="para" id="p-derived-li-254">An <code class="code-inline tex2jax_ignore">array</code> is a linear data structure in Java.</div></li>
 <li id="li-255"><div class="para" id="p-derived-li-255">Arrays may hold primitive data types, object references, as well as other arrays.</div></li>
 <li id="li-256"><div class="para" id="p-derived-li-256">Array elements must have a uniform type in all its elements.</div></li>
-<li id="li-257"><div class="para" id="p-derived-li-257">When created, an array has a size that is predetermined and may not be extended.</div></li>
+<li id="li-257"><div class="para" id="p-derived-li-257">When created, an array has a size that is predetermined and may not be extended dynamically.</div></li>
 <li id="li-258"><div class="para" id="p-derived-li-258">An array variable is declared by specifying the type of array elements followed by a pair of square brackets (<code class="code-inline tex2jax_ignore">[]</code>).</div></li>
 <li id="li-259"><div class="para" id="p-derived-li-259">An array is created using the <dfn class="terminology">new</dfn> keyword followed by the type and a size in square brackets (<code class="code-inline tex2jax_ignore">[…]</code>).</div></li>
-<li id="li-260"><div class="para" id="p-derived-li-260">To access an element of an array, follow the array variable with a pair of square brackets containing the number of the array element. This form of element access may be used for reading and assigning values to an array element.</div></li>
+<li id="li-260"><div class="para" id="p-derived-li-260">To access an element of an array, follow the array variable with a pair of square brackets containing the index of the array element. This form of element access may be used for both reading and assigning values to an array element.</div></li>
 <li id="li-261"><div class="para" id="p-derived-li-261">Array elements begin at index 0 and end at an index of one less than the length of the array.</div></li>
-<li id="li-262"><div class="para" id="p-derived-li-262">The length of an array may be determined using the <code class="code-inline tex2jax_ignore">.length</code> property of an array.</div></li>
+<li id="li-262"><div class="para" id="p-derived-li-262">The length of an array may be determined using the <code class="code-inline tex2jax_ignore">.length</code> property of the array.</div></li>
 <li id="li-263"><div class="para" id="p-derived-li-263">An array may be initialized at the time it is created by leaving out the size of the array but following with curly braces containing a comma-delimited list of initializer values.</div></li>
 <li id="li-264"><div class="para" id="p-derived-li-264">A shorthand for initializing an array is to declare an array variable with empty square brackets and assign it directly to a curly brace-delimited list of values.</div></li>
 <li id="li-265"><div class="para" id="p-derived-li-265">Accessing all elements of an array may be performed with a while- or for-loop which generates all indexes, typically as a loop counter.</div></li>
 <li id="li-266"><div class="para" id="p-derived-li-266">An array element may itself be an array.</div></li>
-<li id="li-267"><div class="para" id="p-derived-li-267">An array of arrays is referred to as a <dfn class="terminology">multidimensional array</dfn>.</div></li>
+<li id="li-267"><div class="para" id="p-derived-li-267">An array of arrays is referred to as a <dfn class="terminology">"multidimensional" array</dfn>.</div></li>
 <li id="li-268"><div class="para" id="p-derived-li-268">2D array variables may be declared with a type followed by two pairs of square brackets.</div></li>
 <li id="li-269"><div class="para" id="p-derived-li-269">2D arrays may be created using the <dfn class="terminology">new</dfn> keyword following by two pairs of square brackets containing the number of elements in each dimension. In this case the array is rectangular in shape.</div></li>
 <li id="li-270"><div class="para" id="p-derived-li-270">To access an element in a 2D array use the array variable followed by two pairs of square brackets, each containing indexes.</div></li>
 <li id="li-271"><div class="para" id="p-derived-li-271">A 2D array may be initialized by leaving out dimensions when creating the array and followed by nested curly braces containing comma-separated values.</div></li>
-<li id="li-272"><div class="para" id="p-derived-li-272">The second dimension of a 2D array is not required to have uniform lengths. This is referred to as a <dfn class="terminology">ragged array</dfn>.</div></li>
+<li id="li-272"><div class="para" id="p-derived-li-272">The second dimension of a 2D array is made up of arrays that are not required to have uniform length. This is referred to as a <dfn class="terminology">ragged array</dfn>.</div></li>
 <li id="li-273"><div class="para" id="p-derived-li-273">2D ragged arrays may be created by leaving out the length of the second dimension. In this case each array element starts with the default value <code class="code-inline tex2jax_ignore">null</code>.</div></li>
-<li id="li-274"><div class="para" id="p-derived-li-274">When using a ragged array, each element of the first dimension may be assigned to a 1D array of non-uniform length, provided the types are compatible.</div></li>
+<li id="li-274"><div class="para" id="p-derived-li-274">When using a ragged array, each element of the first dimension may be assigned to a 1D array of non-uniform length, provided the array type is compatible.</div></li>
 <li id="li-275"><div class="para" id="p-derived-li-275">A shorthand for initializing a ragged 2D array is to declare an array variable and assign it directly to nested curly brace-delimited lists of values, where the length of each subordinate list may vary.</div></li>
 <li id="li-276"><div class="para" id="p-derived-li-276">To print the elements of a ragged array with iteration, the inner loop extent must use each subordinate array length to test the loop counter value.</div></li>
 <li id="li-277"><div class="para" id="p-derived-li-277">Arrays of dimension higher than two are possible by following the pattern for extending from 1D to 2D arrays.</div></li>
 <li id="li-278"><div class="para" id="p-derived-li-278">Use the <code class="code-inline tex2jax_ignore">java.util.Arrays</code> package to access static utility functions for manipulating arrays.</div></li>
 <li id="li-279"><div class="para" id="p-derived-li-279">Arrays are passed to methods by reference, just like any other object.</div></li>
-<li id="li-280"><div class="para" id="p-derived-li-280">The <code class="code-inline tex2jax_ignore">public static void main()String[] args)</code> method takes an array of Strings parameter, where the array Strings are read from the user input following the <code class="code-inline tex2jax_ignore">java</code> command and class name. This array is referred to as the programs <dfn class="terminology">command line arguments</dfn>.</div></li>
+<li id="li-280"><div class="para" id="p-derived-li-280">The <code class="code-inline tex2jax_ignore">public static void main()String[] args)</code> method takes an array of Strings parameter, where the array’s Strings are read from the user input following the <code class="code-inline tex2jax_ignore">java</code> command and class name. This array is referred to as the programs <dfn class="terminology">command line arguments</dfn>.</div></li>
 </ol></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-ar-polygons.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-ar-exercises.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
