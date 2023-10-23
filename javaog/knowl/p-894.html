@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The FileWriter class is in java.io.FileWriter and it has a constructor that take a file name String to be opened. If the file does not exist on your file system, FileWriter will create it for you. If it does exist, the existing file will be opened for writing.</div>
+<div class="para">When intending to append to the end of a file instead of writing from the beginning, we must be careful to open a file using a FileWriter in <em class="emphasis">append mode</em>. By default, the FileWriter opens in <em class="emphasis">write mode</em>, which starts writing from the beginning of a file. This may or may not be what you want. As a demonstration of FileWriter, let’s write a utility function that appends a message to a log file.</div>
 <span class="incontext"><a href="section-ex-writing-files.html#p-894" class="internal">in-context</a></span>
 </body>
 </html>

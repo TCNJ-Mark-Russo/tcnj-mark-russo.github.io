@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Consider the <code class="code-inline tex2jax_ignore">ClickThick.java</code> program source code in <a href="" class="xref" data-knowl="./knowl/listing-cl-click-thick.html" title="Listing 8.4.1">Listing 8.4.1</a>. This program creates an initial Line shape object assigned to the variable <code class="code-inline tex2jax_ignore">line</code>, which is set up to invoke the object-scoped <code class="code-inline tex2jax_ignore">onPressed(…)</code> method when the mouse clicks the line. If the left mouse button is used to click, the thickness of the line is doubled. If the right mouse button is used to click, the thickness of the line is halved.</div>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">With nested scopes we can define a variable within a method or constructor scope and then another having the same name in an outer object or class scope. This doesn’t cause a problem until we want to access one of the two variables by name from the inner scope. An ambiguity arises. Java cannot tell if you intended to reference the variable declared within the inner scope or the outer scope. To solve this problem, Java always chooses a variable by searching for the variable declaration starting in the current scope, and if not found, it proceeds to outer scopes, progressively.</div>
 <span class="incontext"><a href="section-cl-shadowing.html#p-679" class="internal">in-context</a></span>
 </body>
 </html>

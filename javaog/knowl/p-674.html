@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">It is common practice in Java to define one method or constructor with the most general implementation, and then one or more overloads that provide default parameter values. This practice is also a good example of <a href="" class="xref" data-knowl="./knowl/assemblage-dry.html" title="Assemblage: Principle: Don’t Repeat Yourself (DRY)">DRY</a>.</div>
+<div class="para">As an example, rather than defaulting the LED color to RED and then changing it using the <code class="code-inline tex2jax_ignore">setColor(…)</code> method, let’s overload the constructor with two implementations. The more general implementation takes the LED "on" color as a third parameter, and a two-parameter overload invokes the three parameter implementation with the value <code class="code-inline tex2jax_ignore">LEDColor.RED</code> as the third parameter, making it the default. Note that a constructor overload is invoked using <code class="code-inline tex2jax_ignore">this</code> as the scope instead of the class name, and no <code class="code-inline tex2jax_ignore">new</code> keyword.</div>
 <span class="incontext"><a href="section-cl-methods.html#p-674" class="internal">in-context</a></span>
 </body>
 </html>

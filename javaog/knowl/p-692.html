@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Because each statement returns a new String object, there is no reason to assign results to the <code class="code-inline tex2jax_ignore">saying</code> String variable at all, other than for clarity. If our ultimate goal is to produce the printed output then why use the <code class="code-inline tex2jax_ignore">saying</code> String variable? In fact, we could chain these statement into one complex statement and pass it as a parameter directly to the <code class="code-inline tex2jax_ignore">println(…)</code> method. The JShell session that follows demonstrates this fact.</div>
+<div class="para">We could simplify this just a bit by reusing the <code class="code-inline tex2jax_ignore">saying</code> String variable, as we did in the updated code snippet below. But it is important to realize that reusing the String variable does not change the fact that three String objects are created in the process. Our String object count remains 3.</div>
 <span class="incontext"><a href="section-cl-anonymous-objects.html#p-692" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">As an example, let’s say your class implements the previous onPress method, and you would like to invoke this method when the mouse is pressed on an Oval Shape object, a reference to which was saved as an instance variable named myOval. The following statement establishes this connection, so that when the mouse is pressed on myOval the onPress method implemented by this will be invoked.</div>
+<div class="para">Every Shape object in DoodlePad inherits a set of methods used to attach mouse events to a suitable method - one method for each mouse event type. Each Shape method takes a single argument: a reference to the method to be invoked when the event occurs. Method references were added to Java in version 8, which is why Java 8 is the minimum required by DoodlePad. Method references are constructed using the <code class="code-inline tex2jax_ignore">::</code> binary operator. On the left side of the operator is the name of a class or object that implements a method, and on the right side of the operator is the method to reference.</div>
 <span class="incontext"><a href="section-dp-events.html#p-1061" class="internal">in-context</a></span>
 </body>
 </html>

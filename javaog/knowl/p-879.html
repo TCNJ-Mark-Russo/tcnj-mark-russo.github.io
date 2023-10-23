@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">With the File object instantiated, the next step is to pass it to the Scanner class constructor to create a new Scanner configured to read from the File object. A Scanner that wraps a File object throws a FileNotFoundException. Because this is a checked exception, the Scanner must be created in a try-block. In the following code snippet, we declare the Scanner variable in the outer method scope because we will use it later, but the instantiation of the Scanner object must be done in the try-block.</div>
+<div class="para">The first step to read from a file is to instantiate a File object representing the file stored in your file system. Assuming the data file is named "data.txt" and is saved to the same file system location as your Java program, you can accomplish this with the following statement, where <code class="code-inline tex2jax_ignore">fileName</code> is a String variable with the name of the file to be opened. Before you can instantiate a File object, you must import it from <code class="code-inline tex2jax_ignore">java.io.File</code>. Refer to <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> for the completed program.</div>
 <span class="incontext"><a href="section-ex-reading-files.html#p-879" class="internal">in-context</a></span>
 </body>
 </html>

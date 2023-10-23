@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Also important to appreciate is that the default <code class="code-inline tex2jax_ignore">equals()</code> method inherited by all classes simply defers to testing for object identity using the <code class="code-inline tex2jax_ignore">==</code> operator. This explains why the String class overrides <code class="code-inline tex2jax_ignore">equals()</code> to test equality character-by-character (See <a href="section-jp-string.html#subsection-jp-string-methods" class="internal" title="Subsection 3.3.2: String Methods">Subsection 3.3.2</a>). In general we want Strings to be equal when their character sequence is equal, even when they are not identical.</div>
+<div class="para">Now we understand why printing an object that does not override <code class="code-inline tex2jax_ignore">toString()</code> generates that curious output. The default implementation of <code class="code-inline tex2jax_ignore">toString()</code> returns a String constructed by concatenating the class name of an object with "@" and the hexidecimal representation of its unique hash code.</div>
 <span class="incontext"><a href="section-in-object-class.html#p-783" class="internal">in-context</a></span>
 </body>
 </html>

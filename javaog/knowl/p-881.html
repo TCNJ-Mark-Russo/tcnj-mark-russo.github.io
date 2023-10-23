@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">For our file reading examples we will read files one line at a time, rather than reading data item by data item. We use the Scanner’s <code class="code-inline tex2jax_ignore">hasNextLine()</code> method to check if the file has another line of text to be read, and its <code class="code-inline tex2jax_ignore">readLine()</code> method to read the next line as a String. <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> includes the complete Java program with a utility method named <code class="code-inline tex2jax_ignore">printFile(…)</code> to read all lines from a file and print them to the terminal. Following this listing is a shell session demonstrating compilation and execution of the program. Our example "data.txt" file contains random floating point numbers.</div>
+<div class="para">In the above code snippet, note that we used a finally-block to close the Scanner. If the Scanner is not closed properly, we run the risk of leaking the resources.</div>
 <span class="incontext"><a href="section-ex-reading-files.html#p-881" class="internal">in-context</a></span>
 </body>
 </html>

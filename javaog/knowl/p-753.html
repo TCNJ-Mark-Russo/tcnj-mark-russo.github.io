@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The ToggleButton does not implement <code class="code-inline tex2jax_ignore">setFontSize(…)</code> and <code class="code-inline tex2jax_ignore">setFontStyle(…)</code>, but it does inherit these methods from its base class. Modifying <code class="code-inline tex2jax_ignore">main(…)</code> and rerunning our program, we see the updated output in <a href="" class="xref" data-knowl="./knowl/figure-in-togglebutton3.html" title="Figure 9.3.4">Figure 9.3.4</a>. This would have taken some extra work had we stuck with our old implementation. We would have had to implement all new methods that modified the encapsulated RoundRect object. With inheritance, we get the behavior automatically; no modifications required.</div>
+<div class="para">That’s pretty good. It is a small upgrade to the previous version, but was it worth the effort? Looking at <a href="" class="xref" data-knowl="./knowl/figure-in-togglebutton2.html" title="Figure 9.3.2">Figure 9.3.2</a>, it seems that the button text is a bit small. We’d like to increase the font size. No problem! Because the button is really just an extension of a RoundRect, it inherits all of the RoundRect behavior, including the ability to adjust font size. We can simply add the appropriate methods to our <code class="code-inline tex2jax_ignore">main(…)</code> method, as follows.</div>
 <span class="incontext"><a href="section-in-overriding.html#p-753" class="internal">in-context</a></span>
 </body>
 </html>

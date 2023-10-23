@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The remaining class implementation is detail. The following three sections provide the three TriOption selector widgets that we implement for this example.</div>
+<div class="para">The TogglingSelector will be round and respond to mouse presses. Each time the mouse is pressed on a TogglingSelector object, it toggles through the three options available, changing its color and text display to match. <a href="" class="xref" data-knowl="./knowl/listing-if-widget-outline.html" title="Listing 10.2.3">Listing 10.2.3</a> expands <a href="" class="xref" data-knowl="./knowl/listing-if-multiple-interfaces.html" title="Listing 10.2.2">Listing 10.2.2</a> further so that it also inherits the Oval class. Note how the top line of the class definition both <code class="code-inline tex2jax_ignore">extends</code> Oval and <code class="code-inline tex2jax_ignore">implements</code> TriOption and Comparable&lt;TriOption&gt;. The constructor invokes a base class constructor on its first line by invoking <code class="code-inline tex2jax_ignore">super(…)</code> and we override <code class="code-inline tex2jax_ignore">onMousePressed(…)</code> to add custom mouse-pressed behavior to the class, but invoke <code class="code-inline tex2jax_ignore">super.onMousePressed(x, y, button)</code> to ensure any default behavior is executed.</div>
 <span class="incontext"><a href="section-if-custom.html#p-815" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The format of a try-with-resources is exactly like a try-catch, only with a parenthesized object declaration added between the <code class="code-inline tex2jax_ignore">try</code> keyword and its opening <code class="code-inline tex2jax_ignore">{</code>. Because both Scanner and BufferedReader implement the AutoClosable interface, we can rewrite the <code class="code-inline tex2jax_ignore">printFile(…)</code> implementations in <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile1.html" title="Listing 11.4.1">Listing 11.4.1</a> and <a href="" class="xref" data-knowl="./knowl/listing-ex-readfile2.html" title="Listing 11.4.2">Listing 11.4.2</a> to use try-with-resources instead. This simplifies the code and ensures the resources will always be closed properly.</div>
+<div class="para">For an object resource to be suitable for use in a try-with-resources, it must implement the <dfn class="terminology">AutoClosable</dfn> interface, listed below. This interface includes one signature for the <code class="code-inline tex2jax_ignore">close()</code> method. This is the method invoked by a try-with-resources when its block scope is exited.</div>
 <span class="incontext"><a href="section-try-with-resources.html#p-889" class="internal">in-context</a></span>
 </body>
 </html>

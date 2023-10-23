@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s revisit our LED class from <a href="section-cl-methods.html" class="internal" title="Section 8.3: Methods">Section 8.3</a>. Rather than encapsulate an Oval object, let’s set up our LED class to <em class="emphasis">extend</em> the Oval class so that it starts with (inherits) all Oval behavior by default. This means that we no longer need to instantiate and manage an Oval class in LED. The LED class now has access to all the behavior of an Oval class through inheritance, and so LED behaves like an Oval. One ramification of this is that, instead of relaying method invocations to an encapsulated Oval object (e.g. setFillColor(…)) the LED class itself has access to these methods and can invoke them directly. Even though LED does not implement Oval methods, inheritance takes care of <em class="emphasis">finding</em> suitable implementations automatically in the Oval base class.</div>
+<div class="para">This one addition to a derived class declaration has the potential to add quite a number of default behaviors, giving you as the developer a significant head start to completing your new class implementation.</div>
 <span class="incontext"><a href="section-in-basics.html#p-734" class="internal">in-context</a></span>
 </body>
 </html>
