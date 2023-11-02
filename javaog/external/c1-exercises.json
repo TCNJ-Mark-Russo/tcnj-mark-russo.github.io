@@ -7,9 +7,17 @@
         "solution": [
             ["branching",   "A form of flow control that selects a block of code to execute based on an evaluated condition"], 
             ["iteration",   "A form of flow control that repeats a block of code while a conditions continues to be true"], 
-            ["block scope", "Defined by a pair of curly braces that identifies the code making up statements like an if-statement or a while-statement."],
             ["break",       "Terminates iteration immediately, continuing execution after the iteration statement."],
             ["continue",    "Terminates iteration immediately and returns to the conditional expression to test if another iteration should be performed."],
+            ["block scope", "Defined by a pair of curly braces that identifies the code making up statements like an if-statement or a while-statement."]
+        ]
+    },
+    {
+        "id"      : "Q02",
+        "type"    : "matching",
+        "title"   : "Match Definitions",
+        "prompt"  : ["<p>Drag the terms from the left column to matching definitions in the right column.</p>"],
+        "solution": [
             ["ArrayList",   "A collection class capable of holding a sequence of objects, identified by order index."],
             ["HashSet",     "A collection class that holds a sequence of unique objects."],
             ["HashMap",     "A collection class that holds a sequence of key-value pairs."],
@@ -19,39 +27,39 @@
         ]
     },
     {
-        "id"    : "Q02",
+        "id"    : "Q03",
         "type"  : "multipledropdowns",
         "title" : "Select Correct Answers",
         "prompt": [
             "<p>Select correct answers for each of the following questions.</p>",
             "<table>",
                 "<tr><th style='text-align:left;'>Question</th><th style='text-align:left;'>Answer</th></tr>",
-                "<tr><td>How many branches can an if-statement have?</td>                  <td data-qans='__Q2A'></td> </tr>",
-                "<tr><td>What is the maximum number of while-statement iterations?</td>    <td data-qans='__Q2B'></td> </tr>",
-                "<tr><td>To what must the condition of an if- or while-statement evaluate?</td>             <td data-qans='__Q2C'></td> </tr>",
-                "<tr><td>How many lines of code may be in a code block?</td>               <td data-qans='__Q2D'></td> </tr>",
-                "<tr><td>Which branches in an if-statement are executed?</td>              <td data-qans='__Q2E'></td> </tr>",
-                "<tr><td>What is the condition on an else-branch in an if-statement?</td>  <td data-qans='__Q2F'></td> </tr>",
-                "<tr><td>What type can an ArrayList hold?</td>              <td data-qans='__Q2G'></td> </tr>",
+                "<tr><td>How many branches can an if-statement have?</td>                  <td data-qans='__Q3A'></td> </tr>",
+                "<tr><td>What is the maximum number of while-statement iterations?</td>    <td data-qans='__Q3B'></td> </tr>",
+                "<tr><td>To what must the condition of an if- or while-statement evaluate?</td>             <td data-qans='__Q3C'></td> </tr>",
+                "<tr><td>How many lines of code may be in a code block?</td>               <td data-qans='__Q3D'></td> </tr>",
+                "<tr><td>Which branches in an if-statement are executed?</td>              <td data-qans='__Q3E'></td> </tr>",
+                "<tr><td>What is the condition on an else-branch in an if-statement?</td>  <td data-qans='__Q3F'></td> </tr>",
+                "<tr><td>What type can an ArrayList hold?</td>              <td data-qans='__Q3G'></td> </tr>",
             "</table>"
         ],
         "options": {
-            "__Q2A": ["0 or more","1 or more", "0 or 1"],
-            "__Q2B": ["1000","The largest Java integer", "There is no maximum"],
-            "__Q2C": ["boolean", "integer", "String"],
-            "__Q2D": ["0 or more","1 or more"],
-            "__Q2E": ["all branches","all true branches", "first true branch", "last true branch"],
-            "__Q2F": ["Like any other condition","boolean condition only", "else has no condition"],
-            "__Q2G": ["Any object type","The Object class only", "primitive types only"]
+            "__Q3A": ["0 or more","1 or more", "0 or 1"],
+            "__Q3B": ["1000","The largest Java integer", "There is no maximum"],
+            "__Q3C": ["boolean", "integer", "String"],
+            "__Q3D": ["0 or more","1 or more"],
+            "__Q3E": ["all branches","all true branches", "first true branch", "last true branch"],
+            "__Q3F": ["Like any other condition","boolean condition only", "else has no condition"],
+            "__Q3G": ["Any object type","The Object class only", "primitive types only"]
         },
         "solution": {
-            "__Q2A": "1 or more",
-            "__Q2B": "There is no maximum",
-            "__Q2C": "boolean",
-            "__Q2D": "0 or more",
-            "__Q2E": "first true branch",
-            "__Q2F": "else has no condition",
-            "__Q2G": "Any object type"
+            "__Q3A": "1 or more",
+            "__Q3B": "There is no maximum",
+            "__Q3C": "boolean",
+            "__Q3D": "0 or more",
+            "__Q3E": "first true branch",
+            "__Q3F": "else has no condition",
+            "__Q3G": "Any object type"
         }
     }
 ]
