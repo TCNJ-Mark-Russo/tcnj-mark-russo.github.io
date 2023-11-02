@@ -1,0 +1,28 @@
+[
+    {
+        "id"      : "Q01",
+        "type"    : "matching",
+        "title"   : "Match Definitions",
+        "prompt"  : ["<p>Drag the terms from the left column to matching definitions in the right column.</p>"],
+        "solution": [
+            ["extends",  "The keyword used to establish inheritance between a derived class and a base class."], 
+            ["this",     "A keyword that always resolves to a reference to the current object."],
+            ["super",    "A keyword that always resolves to a reference to the base class object."],
+            ["override", "When a derived class method has the same signature as a base class method."],
+            ["overload", "When two methods defined in a class have the same name but different signatures."]
+        ]
+    },
+    {
+        "id"      : "Q02",
+        "type"    : "matching",
+        "title"   : "Match Definitions",
+        "prompt"  : ["<p>Drag the terms from the left column to matching definitions in the right column.</p>"],
+        "solution": [
+            ["instanceof",      "Operator that tests if a derived class object inherits a base class."], 
+            ["abstract",        "A base class method modifier that requires a method signature to be implemented by a derived class."],
+            ["dynamic binding", "A method invoked at runtime is determined by the object referenced, not the type of the variable."],
+            ["protected",       "A visibility modifier that permits access from a object of derived class, but not an external object."],
+            ["final",           "A modifier that prevents a class from being derived."]
+        ]
+    }
+]

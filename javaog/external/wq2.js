@@ -65,8 +65,8 @@ class QMultipleDropdowns {
         this.qdoc = parser.parseFromString(`
         <hr/>
         <div id="${this.qid}">
-        <div id="title"  style="font-weight:bold;">${this.qid}: ${this.title}</div>
-        <div id="prompt" style="padding:5px;">${this.prompt.join('\n')}</div>
+        <div class="title"  style="font-weight:bold;">${this.qid}: ${this.title}</div>
+        <div class="prompt" style="padding:5px;">${this.prompt.join('\n')}</div>
 
         <div style="padding:5px;">
         <table><tr>
@@ -96,7 +96,10 @@ class QMultipleDropdowns {
         }
 
         // Append substituted question template into html document
-        document.body.appendChild(this.qdoc.documentElement);
+        // this.qdoc.documentElement.childNodes[1](this.qdoc.documentElement);
+        // document.body.append(this.qdoc.documentElement.childNodes[1]);
+        let body = this.qdoc.documentElement.childNodes[1];
+        for (const el of body.childNodes) document.body.appendChild(el);
 
         // Assign event handlers
         document.querySelector(`div#${this.qid} #bReset`).addEventListener("click", this.onReset.bind(this) );
@@ -209,11 +212,9 @@ class QFillInBlanks {
         let promptNode = topDiv.querySelector('div.prompt');
         let titleNode  = topDiv.querySelector('div.title');
         let codeNodes  = [...promptNode.querySelectorAll('code')];
-        //let codeNodes = [...this.qdoc.querySelectorAll('#prompt code')];
 
         // Hydrate initial prompt lines into qdoc DOM
         promptNode.innerHTML = this.prompt.join("\n");
-        //this.qdoc.getElementById('prompt').innerHTML = this.prompt.join("\n");
 
         // Select and highlight all code nodes in prompt
         codeNodes.forEach( node => hljs.highlightElement(node) );
@@ -232,7 +233,10 @@ class QFillInBlanks {
         promptNode.innerHTML = promptHTML;                          // Rehydrate
 
         // Append substituted question template into html document
-        document.body.appendChild(this.qdoc.documentElement);
+        // document.body.appendChild(this.qdoc.documentElement);
+        // document.body.append(this.qdoc.documentElement.childNodes[1]);
+        let body = this.qdoc.documentElement.childNodes[1];
+        for (const el of body.childNodes) document.body.appendChild(el);
 
         // Assign event handlers
         document.querySelector(`div#${this.qid} #bReset`).addEventListener("click", this.onReset.bind(this) );
@@ -324,8 +328,8 @@ class QOrderOptions {
         this.qdoc  = parser.parseFromString(`
         <hr />
         <div id="${this.qid}">
-        <div id="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
-        <div id="prompt">${this.prompt.join('\n')}</div>
+        <div class="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
+        <div class="prompt">${this.prompt.join('\n')}</div>
 
         <table><tr>
         <td id="dragcol" valign="top" style="min-width:250px; background-color:whitesmoke; border: solid gold 2px; border-radius: 5px;">
@@ -384,7 +388,9 @@ class QOrderOptions {
         tddropcol.addEventListener('drop',      this.doDrop.bind(this),     false);
 
         // Append substituted question template into html document
-        document.body.appendChild(this.qdoc.documentElement);
+        // document.body.append(this.qdoc.documentElement.childNodes[1]);
+        let body = this.qdoc.documentElement.childNodes[1];
+        for (const el of body.childNodes) document.body.appendChild(el);
 
         // Assign event handlers
         document.getElementById(`${this.qid}`).querySelector("#bReset").addEventListener("click", this.onReset.bind(this) );
@@ -615,7 +621,9 @@ class QMatching {
         tddragcol.addEventListener('drop',      this.doDrop.bind(this),     false);
 
         // Append substituted question template into html document
-        document.body.appendChild(this.qdoc.documentElement);
+        // document.body.append(this.qdoc.documentElement.childNodes[1]);
+        let body = this.qdoc.documentElement.childNodes[1];
+        for (const el of body.childNodes) document.body.appendChild(el);
 
         // Assign event handlers
         document.getElementById(`${this.qid}`).querySelector("#bReset").addEventListener("click", this.onReset.bind(this) );
@@ -787,8 +795,8 @@ class QMultipleAnswer {
         this.qdoc  = parser.parseFromString(`
         <hr/>
         <div id="${this.qid}">
-        <div id="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
-        <div id="prompt">${this.prompt.join('\n')}</div>
+        <div class="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
+        <div class="prompt">${this.prompt.join('\n')}</div>
 
         <table><tr>
             <td id="checkboxes" style="vertical-align:top; padding:10px;"></td>
@@ -813,7 +821,9 @@ class QMultipleAnswer {
         for (let i = 0; i< blocks.length; i++) { hljs.highlightElement(blocks[i]); }
 
         // Append substituted question template into html document
-        document.body.appendChild(this.qdoc.documentElement);
+        // document.body.append(this.qdoc.documentElement.childNodes[1]);
+        let body = this.qdoc.documentElement.childNodes[1];
+        for (const el of body.childNodes) document.body.appendChild(el);
 
         // Assign event handlers
         document.getElementById(`${this.qid}`).querySelector("#bReset").addEventListener("click", this.onReset.bind(this) );
@@ -906,8 +916,8 @@ class QMultipleChoice {
         this.qdoc  = parser.parseFromString(`
         <hr/>
         <div id="${this.qid}">
-        <div id="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
-        <div id="prompt">${this.prompt.join('\n')}</div>
+        <div class="title" style="font-weight:bold;">${this.qid}: ${this.title}</div>
+        <div class="prompt">${this.prompt.join('\n')}</div>
 
         <table><tr>
             <td id="radiobuttons" style="vertical-align:top; padding:10px;"></td>
@@ -932,7 +942,7 @@ class QMultipleChoice {
         for (let i = 0; i< blocks.length; i++) { hljs.highlightElement(blocks[i]); }
 
         // Append substituted question template into html document
-        document.body.appendChild(this.qdoc.documentElement);
+        document.body.append(this.qdoc.documentElement.childNodes[1]);
 
         // Assign event handlers
         document.getElementById(`${this.qid}`).querySelector("#bReset").addEventListener("click", this.onReset.bind(this) );

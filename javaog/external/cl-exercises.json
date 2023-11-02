@@ -1,0 +1,74 @@
+[
+    {
+        "id"      : "Q01",
+        "type"    : "matching",
+        "title"   : "Match Definitions",
+        "prompt"  : ["<p>Drag the terms from the left column to matching definitions in the right column.</p>"],
+        "solution": [
+            ["member",          "A term used for fields (or instance variable) and methods defined within the scope of a class or object"], 
+            ["anonymous",       "Objects created temporarily but never assigned to a variable."],
+            ["constructor",     "Executed when the new keyword is used to construct a new instance of the class."],
+            ["accessor methods","Methods that control access to private fields."],
+            ["mutator methods", "Methods that modify private fields."]
+        ]
+    },
+    {
+        "id"      : "Q02",
+        "type"    : "matching",
+        "title"   : "Match Definitions",
+        "prompt"  : ["<p>Drag the terms from the left column to matching definitions in the right column.</p>"],
+        "solution": [
+            ["class scope",     "The scope in which a variable or method exists when its declaration is modified with static."],
+            ["this",            "A keyword that always resolves to a reference to the current object."],
+            ["shadowing",       "A variable defined in an inner scope having a name identical to a variable defined in an outer scope."],
+            ["signature",       "The combination of a method name, parameters, and parameter types."],
+            ["method overloading", "Multiple methods having the same name but distinct signatures defined within a class."]
+        ]
+    },
+    {
+        "id"    : "Q03",
+        "type"  : "multipledropdowns",
+        "title" : "Select Correct Answers",
+        "prompt": [
+            "<p>Select correct answers for each of the following questions.</p>",
+            "<table>",
+                "<tr><th style='text-align:left;'>Question</th><th style='text-align:left;'>Answer</th></tr>",
+
+                "<tr><td>How many public classes may be defined in a single Java file?</td> <td data-qans='__Q2A'></td> </tr>",
+                "<tr><td>How many instances of a class can be created?</td>         <td data-qans='__Q2B'></td> </tr>",
+                "<tr><td>A static method may be scoped by what?</td>                <td data-qans='__Q2C'></td> </tr>",
+                "<tr><td>What is the keyword used to scope a method by the current object?</td><td data-qans='__Q2D'></td> </tr>",
+                "<tr><td>Which visibility specifier is used to ensure a declaration is visible to the current object only?</td> <td data-qans='__Q2E'></td> </tr>",
+                "<tr><td>?</td>  <td data-qans='__Q2F'></td> </tr>",
+                "<tr><td>?</td>              <td data-qans='__Q2G'></td> </tr>",
+                "<tr><td><code class='language-java'></code></td>  <td data-qans='__Q2H'></td> </tr>",
+                "<tr><td><code class='language-java'></code></td>       <td data-qans='__Q2I'></td> </tr>",
+                "<tr><td><code class='language-java'></code></td>       <td data-qans='__Q2J'></td> </tr>",
+            "</table>"
+        ],
+        "options": {
+            "__Q2A": ["0 or more", "exactly 1", "as many as you like"],
+            "__Q2B": ["0 or more", "exactly 1", "as many as you like"],
+            "__Q2C": ["class", "object", "array", "no scope required"],
+            "__Q2D": ["null","that","super","this"],
+            "__Q2E": ["public","private", "protected"],
+            "__Q2F": ["Like any other condition","boolean condition only", "else has no condition"],
+            "__Q2G": ["Any object type","The Object class only", "primitive types only"],
+            "__Q2H": ["valid","invalid"],
+            "__Q2I": ["valid","invalid"],
+            "__Q2J": ["valid","invalid"]
+        },
+        "solution": {
+            "__Q2A": "exactly 1",
+            "__Q2B": "as many as you like",
+            "__Q2C": "class",
+            "__Q2D": "0 or more",
+            "__Q2E": "private",
+            "__Q2F": "else has no condition",
+            "__Q2G": "Any object type",
+            "__Q2H": "valid",
+            "__Q2I": "valid",
+            "__Q2J": "invalid"
+        }
+    }
+]

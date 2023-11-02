@@ -11,8 +11,8 @@
             ["break",       "Terminates iteration immediately, continuing execution after the iteration statement."],
             ["continue",    "Terminates iteration immediately and returns to the conditional expression to test if another iteration should be performed."],
             ["ArrayList",   "A collection class capable of holding a sequence of objects, identified by order index."],
-            ["MapSet",      "A collection class that holds a sequence of unique objects."],
-            ["MapList",     "A collection class that holds a sequence of key-value pairs."],
+            ["HashSet",     "A collection class that holds a sequence of unique objects."],
+            ["HashMap",     "A collection class that holds a sequence of key-value pairs."],
             ["generic",     "A parameterized type in Java"],
             ["boxing",      "The automatic Java process of wrapping a primitive data type in an object."],
             ["unboxing",    "The automatic Java process of unwrapping a primitive data type from an object."]
@@ -23,7 +23,7 @@
         "type"  : "multipledropdowns",
         "title" : "Select Correct Answers",
         "prompt": [
-            "<p>Select the correct answers to the following questions?</p>",
+            "<p>Select correct answers for each of the following questions.</p>",
             "<table>",
                 "<tr><th style='text-align:left;'>Question</th><th style='text-align:left;'>Answer</th></tr>",
                 "<tr><td>How many branches can an if-statement have?</td>                  <td data-qans='__Q2A'></td> </tr>",
@@ -33,9 +33,6 @@
                 "<tr><td>Which branches in an if-statement are executed?</td>              <td data-qans='__Q2E'></td> </tr>",
                 "<tr><td>What is the condition on an else-branch in an if-statement?</td>  <td data-qans='__Q2F'></td> </tr>",
                 "<tr><td>What type can an ArrayList hold?</td>              <td data-qans='__Q2G'></td> </tr>",
-                "<tr><td><code class='language-java'>lookupinthesky</code></td>  <td data-qans='__Q2H'></td> </tr>",
-                "<tr><td><code class='language-java'>thing_one</code></td>       <td data-qans='__Q2I'></td> </tr>",
-                "<tr><td><code class='language-java'>thing-one</code></td>       <td data-qans='__Q2J'></td> </tr>",
             "</table>"
         ],
         "options": {
@@ -45,10 +42,7 @@
             "__Q2D": ["0 or more","1 or more"],
             "__Q2E": ["all branches","all true branches", "first true branch", "last true branch"],
             "__Q2F": ["Like any other condition","boolean condition only", "else has no condition"],
-            "__Q2G": ["Any object type","The Object class only", "primitive types only"],
-            "__Q2H": ["valid","invalid"],
-            "__Q2I": ["valid","invalid"],
-            "__Q2J": ["valid","invalid"]
+            "__Q2G": ["Any object type","The Object class only", "primitive types only"]
         },
         "solution": {
             "__Q2A": "1 or more",
@@ -57,10 +51,7 @@
             "__Q2D": "0 or more",
             "__Q2E": "first true branch",
             "__Q2F": "else has no condition",
-            "__Q2G": "Any object type",
-            "__Q2H": "valid",
-            "__Q2I": "valid",
-            "__Q2J": "invalid"
+            "__Q2G": "Any object type"
         }
     }
 ]
