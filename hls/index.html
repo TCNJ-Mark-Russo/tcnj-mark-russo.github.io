@@ -90,11 +90,46 @@
             height: 300px;
             z-index: 1000;
         }
+        #id_credits {
+            position: absolute;
+            display: none;
+            width: 600px; 
+            top: 100px;
+            left:0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            z-index: 1001;
+            background: rgb(255 255 255 / 0.95)
+        }
+        #id_credits_dismiss {
+            float: right;
+            cursor: default;
+            font-size: 28px;
+        }
+        #id_credits_show {
+            float:left;
+            cursor: default;
+            font-size: 12px;
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+        }
+        #id_credits_show:hover {
+            text-decoration:underline;
+        }
+        #id_tcnj {
+            color:rgb(41 63 111);
+            font-family:'Arial Narrow', Arial, sans-serif;
+            font-size: 36px;
+            font-weight:bold; 
+        }
     </style>
 </head>
 <body>
     <header>
-        TCNJ Hearing Loss Simulator
+        <span id="id_tcnj">TCNJ</span> Hearing Loss Simulator
     </header>
     <main>
         <div id="contentContainer">
@@ -323,6 +358,10 @@
                 </tr>
                 <tr>
                     <td>
+                        
+                        <a href="#" id="id_credits_show">
+                            <img src="tcnj-logo-vertical.png" style="width:50px" /><br/>
+                            CREDITS</a>
                         <table style="margin-left: auto; margin-right:auto;">
                         <tr>
                             <td colspan="2"><b>Hearing Loss Audiogram Presets</b></td>
@@ -346,6 +385,7 @@
                             <td>Custom</td>
                         </tr>
                         </table>
+
                         <!-- <p>An audiogram measures the intensity, or loudness, that a sound must be in a 
                             specific frequency range for a certain person to hear it. 
                             This is measured in decibels (Db) and ranges from -10 to 120 on the audiogram. 
@@ -358,7 +398,6 @@
                             High-frequency sounds include small bird chirps and the sound of pronounced 
                             letters like "f", "s", and "th".
                         </p> -->
-
                     </td>
                     <td></td>
                 </tr>
@@ -373,15 +412,28 @@
                             This work is licensed under 
                             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a>
                             <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
-                            <span style="float:right;">v0.5</span>
+                            <span style="float:right;">v0.6</span>
                         </p>
                     </td>
                 </tr>
             </table>
+            <div id="id_credits">
+                <div id="id_credits_dismiss">✕</div>
+                <div style="text-align: center; font-size:28px;">Credits</div>
+                <p>This video was created as a collaborative project at The College of New Jersey,
+                    2000 Pennington Road, Ewing, NJ 08628.</p>
+                <p>Gabriella Hairston, Madison Frunzi, Samantha Ahlborn, and Aria Abalos under the direction of 
+                    <a href="https://education.tcnj.edu/education-faculty/lynn-smith/" target="blank">Dr. Lynn Smith</a>, 
+                    <a href="https://specialeducation.tcnj.edu/programs/speech-pathology/" target="blank">Speech-Language Pathology and Audiology Program</a>.</p>
+                <p>Simon Blamo and Amanda Piantanida under the direction of 
+                    <a href="https://science.tcnj.edu/science_faculty/mark-russo/" target="blank">Dr. Mark Russo</a>,
+                    <a href="https://computerscience.tcnj.edu/" target="blank">Department of Computer Science</a>.
+                </p>
+                <div><img style="width:50%; display:block; margin: auto;" src="tcnj-logo-horizontal.png" /></div>
+            </div>
         </div>
     </main>
 
-<!-- <script type="module" src="./script.js" async defer></script> -->
 <script type="module" async defer>
     import WaveSurfer  from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
     
@@ -410,6 +462,12 @@
             lyr.elementY = parseInt(e.target.getAttribute('cy'));   
             lyr.style.display="block";                  // Show event handling layer element
         };
+    }
+
+    // Hide the video play button overlay, if it exists
+    function hidePlayButton() {
+        let play = el('id_play');
+        if (play) play.style.display = "none";
     }
 
     // Globals
@@ -450,10 +508,8 @@
 
     // When the video selected changes
     function loadFromFiles() {
-        let play = el('id_play');   // Hide play button, if exists.
-        if (play) play.style.display = "none";
-
-        const fileElem  = el('id_import'); // Gets the file element object
+        hidePlayButton();                   // Hide play button, if exists.
+        const fileElem  = el('id_import');  // Gets the file element object
 
         // Select files based on extension
         let videoFile = null;
@@ -589,7 +645,10 @@
             }
         };
 
-        video.onplay        = function(e) { audioContext.resume(); };
+        video.onplay        = function(e) { 
+            audioContext.resume();
+            hidePlayButton();
+        };
         //video.onseeked      = function(e) { console.log("onseeked", video.currentTime); };
         //video.ontimeupdate  = function(e) { console.log("ontimeupdate", video.currentTime); };
 
@@ -618,7 +677,7 @@
                 mediaControls:  true,
                 media:          video,          // Set video as source media for waveform display
                 waveColor:      'rgb(200, 0, 200)',
-                progressColor:  'rgb(100, 0, 100)'
+                progressColor:  'rgb(100, 0, 100)',
             });
         }
     }
@@ -725,8 +784,16 @@
 
     el('id_play').onclick = function(ev) { 
         el('id_video').play();
-        el('id_play').style.display = "none";
+        hidePlayButton();          // Hide play button, if exists.
     };
+
+    el('id_credits_dismiss').onclick = function(e) {
+        el('id_credits').style.display = "none";
+    }
+    el('id_credits_show').onclick = function(e) {
+        el('id_credits').style.display = "block";
+        return false;
+    }
 
     // Load initial demo video and vtt files
     if(document.location.href.startsWith("file")) {
