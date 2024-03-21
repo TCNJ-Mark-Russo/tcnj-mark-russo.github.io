@@ -65,14 +65,30 @@
             background: whitesmoke;
             vertical-align: top;
         }
-        #id_video {
-            width : 533px;
-            height: 300px;
-        }
         #td_footer {
             text-align: center;
             font-size: 8pt;
             padding: 5px;
+        }
+        #td_video {
+            position: relative;
+            min-width : 533px;
+            min-height: 300px;
+        }
+        #id_video {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width : 533px;
+            height: 300px;
+        }
+        #id_play {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 533px;
+            height: 300px;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -88,6 +104,13 @@
                         <video id="id_video" src="" autoplay="true" playsinline="" controls preload >
                             <track id="id_track" kind="subtitles" srclang="en" src="" default="" />
                         </video>
+                        <div id="id_play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533 300">
+                                <rect    fill-opacity="0.8" width="533" height="300"></rect>
+                                <circle  fill="black" stroke="white" stroke-width="1" transform="translate(237 107)" cx="30" cy="30" r="30"></circle>
+                                <polygon fill="white" transform="translate(237 107) scale(0.2 0.2)" points="218.79 155.84 119.22 94.34 119.22 217.34 218.79 155.84"></polygon>
+                            </svg>
+                        </div>
                     </td>
                     <td id="td_audiogram" rowspan="3" style="vertical-align:top;">
                         <svg width="600" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
@@ -323,7 +346,6 @@
                             <td>Custom</td>
                         </tr>
                         </table>
-                        
                         <!-- <p>An audiogram measures the intensity, or loudness, that a sound must be in a 
                             specific frequency range for a certain person to hear it. 
                             This is measured in decibels (Db) and ranges from -10 to 120 on the audiogram. 
@@ -416,7 +438,6 @@
 
     // Load video and cue files from a URL
     function loadFromURLs(videoPath, cuePath) {
-
         rebuildMediaFramework();           // Rebuild and replace media framework
         const videoElem = el('id_video');  // Get the video element object
         const trackElem = el('id_track');  // Video track element
@@ -429,6 +450,8 @@
 
     // When the video selected changes
     function loadFromFiles() {
+        let play = el('id_play');   // Hide play button, if exists.
+        if (play) play.style.display = "none";
 
         const fileElem  = el('id_import'); // Gets the file element object
 
@@ -699,6 +722,11 @@
 
     // When the selected file list changes, load video file and play it
     el('id_import').addEventListener("change", loadFromFiles, false);
+
+    el('id_play').onclick = function(ev) { 
+        el('id_video').play();
+        el('id_play').style.display = "none";
+    };
 
     // Load initial demo video and vtt files
     if(document.location.href.startsWith("file")) {
