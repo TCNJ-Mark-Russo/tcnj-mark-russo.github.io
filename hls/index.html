@@ -113,7 +113,8 @@
             cursor: default;
             font-size: 12px;
             color: black;
-            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
             text-decoration: none;
         }
         #id_credits_show:hover {
@@ -556,7 +557,7 @@
             trackElem.src = URL.createObjectURL(cueFile);
         } else {
             if (trackElem.src) URL.revokeObjectURL(trackElem.src);
-            trackElem.src = cueSrc;
+            //trackElem.src = cueSrc;   // Do not reload cue file if not provided
         }
 
         // Init to normal hearing
