@@ -304,6 +304,8 @@ function initAudioContext(){                            //init the audioContext 
     if(audioContext == null){
         audioContext = new AudioContext();
         initFilters();
+    } else if (audioContext.state == 'suspended') {
+        audioContext.resume();
     }
 } 
 
