@@ -56,12 +56,13 @@ const _sentences = [
     {start: 207.0, end: 210.0, phrase: "Glue the sheet to the dark background."},
     {start: 220.0, end: 224.0, phrase: "The zones merge in the central part of town."},
     {start: 226.0, end: 229.0, phrase: "Let's all join as we sing the chorus."}
-
 ];
 
+const _playlist = null;     // An array of all sentences played thus far
+
 // Info about current video segment under test
-let _start      = 0.0;                    // Video segment start time
-let _end        = 3.0;                    // Video segment end time
+let _start      = 0.0;      // Video segment start time
+let _end        = 3.0;      // Video segment end time
 let _sentence   = "A rod is used to catch pink salmon";      // Current phrase
 
 const agPresetMap = new Map();
@@ -137,6 +138,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Default to choice-1
     setChoice("choice-1");
 });
+
+// Repopulate the playlist of indexes
+function resetPlaylist() {
+}
 
 // Select degradation choice and update interface
 function setChoice(choice) {
@@ -306,8 +311,8 @@ function initAudioContext(){
     if(aCtx == null){
         aCtx = new AudioContext();
         initFilters();
-    // } else if (aCtx.state == 'suspended') {
-    //     aCtx.resume();
+    } else if (aCtx.state == 'suspended') {
+        aCtx.resume();
     }
 } 
 // Init filters only when called by initAudioContext()
