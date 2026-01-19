@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noise-Induced Hearing Loss</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="lr.css" rel="stylesheet">
+	<script src="Waveform.js"></script>
+    <script src="lr.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="contain">
+			<div class="logolock">
+				<img class="logo" src="logo.webp" alt="TCNJ" width="200">
+				<p class="tagline">Noise-Induced Hearing Loss</p>
+			</div>
+			<nav>
+				<ul>
+					<li><a class="active" href="#" id="id_normal_hl">Normal</a></li>
+					<li><a href="#" id="id_mild_hl">Noise-Induced Loss</a></li>
+					<!-- <li><a href="#" id="id_moderate_hl">Moderate</a></li>
+					<li><a href="#" id="id_severe_hl">Severe</a></li>
+					<li><a href="#" id="id_profound_hl">Profound</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="intro contain">
+			<h1>Normal Hearing</h1>
+			<p class="info">
+				<strong style="color: var(--secondary-color);">
+					<img src="info-icon.svg" alt="info" width="14" height="14" style="fill: #0d99ff; display: inline;" > INFO: 
+				</strong>
+				1. Select degree of hearing loss (above).
+				2. Select video and audio degredation level (below).
+				3. Enter spoken sentence in the TEXT ENTRY box for your score.
+			</p>
+		</section>
+
+		<div class="choices">
+			<button class="choice" id="choice-1">
+				<span>1</span>
+				<span class="choice-title">Degraded Audio Only No Face Video</span>
+				<svg viewBox="0 0 512 512" width="60">
+					<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z" />
+				</svg>
+			</button>
+<!-- 			disable buttons until viewer has completed section 1 -->
+			<button class="choice" id="choice-2">
+				<span>2</span>
+				<span class="choice-title">Degraded Audio with Face Video</span>
+				<svg viewBox="0 0 512 512" width="60">
+					<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z" />
+				</svg>
+			</button>
+			<button class="choice" id="choice-3">
+				<span>3</span>
+				<span class="choice-title">Non-Degraded Audio with Face Video</span>
+				<svg viewBox="0 0 512 512" width="60">
+					<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="content">
+			<div class="videoblock">
+				<div class="sentence-button-block">
+					<button id="id_new_sentence" class="sentence">
+						<span class="button-title">Select a new sentence</span>
+					</button>
+					<button id="id_replay_sentence" class="sentence">
+						<span class="button-title">Re/play sentence</span>
+					</button>
+				</div>
+				<div class="vidclip">
+					<video id="id_video" width="600" height="303" crossorigin="anonymous" playsinline webkit-playsinline>
+						<source src="merged551x311.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<div id="id_waveform" class="waveform"></div>
+			</div>
+			<div class="tab-block">
+				<div class="tabs">
+					<div class="tab active" data-tab="accuracy">
+						<h3>Sentence</h3>
+					</div>
+					<div class="tab" data-tab="graph">
+						<h3>Audiogram</h3>
+					</div>
+				</div>
+				<div class="tab-content">
+					<div class="tab-content-item active" id="accuracy">
+						<p><small>TEXT ENTRY:</small></p>
+						<textarea name="userarea" id="id_inputArea" cols="60" rows="30" placeholder="Enter the spoken sentence..."></textarea>
+						<p><small>SCORE: <strong><span id="id_percentageDisplay" class="percentageDisplay">0%</span></strong></small>
+							<input type="range" id="id_percentageSlider" name="vol" min="0" max="100" value="0" disabled>
+						</p>
+					</div>
+					<div class="tab-content-item" id="graph">
+						<img src="mild.png" height="300" alt="Audiogram">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="contain">
+			<p>This work is licensed under
+				<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a>
+				<img style="height:15px!important;display:inline;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+				<img style="height:15px!important;display:inline;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+				<img style="height:15px!important;display:inline;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+				<img style="height:15px!important;display:inline;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+			</p>
+            <button popovertarget="creditpop">Credits ⤡</button>
+            <div popover id="creditpop" class="credits">
+                <h2>Credits</h2>
+				<p>This application was created as a collaborative project at 
+					<a href="https://tcnj.edu/" target="_blank">The College of New Jersey</a><br>
+					2000 Pennington Road, Ewing, NJ 08628
+				</p>
+                <ul>
+                    <li><b>Kelsey Brillantes</b>, <b>Deanna Dimaiolo</b>, <b>Michael Lillis</b> and <b>Brooke Walker</b><br>
+						under the direction of <b><a href="https://education.tcnj.edu/education-faculty/lynn-smith/" target="_blank">Dr. Lynn Smith</a></b>,
+						<a href="https://specialeducation.tcnj.edu/programs/speech-pathology/" target="_blank">Speech-Language Pathology and Audiology Program</a><br>
+						<a href="https://specialeducation.tcnj.edu/" target="_blank">Special Education, Language, and Literacy</a>, 
+						<a href="https://education.tcnj.edu/" target="_blank">School of Education</a>
+					</li>
+					<li><b>Lauren Ciotola</b><br>
+						under the direction of <b>J. "Kel" Kelter</b>, 
+						<a href="https://dct.tcnj.edu/" target="_blank">Design and Creative Technology</a><br>
+						<a href="https://artscomm.tcnj.edu/" target="_blank">School of the Arts and Communication</a></li>
+					<li><b>Amanda Piantanida</b> and <b>Francesco Musto</b><br>
+						under the direction of <b><a href="https://science.tcnj.edu/science_faculty/mark-russo/" target="_blank">Dr. Mark Russo</a></b>, 
+						<a href="https://computerscience.tcnj.edu/" target="_blank">Computer Science</a><br>
+						<a href="https://science.tcnj.edu/" target="_blank">School of Science</a>
+					</li>
+					</ul>
+            </div>
+		</div>
+	</footer>
+
+	<script>
+		function doit(e) {
+			let snum1 = 8;		// Girl zones
+			let snum2 = 28;		// Boy zones
+			let snum3 = 9;		// Girl chorus
+			let snum4 = 29;		// Boy chorus
+			const video   = document.getElementById("id_video");
+			const hlevels = document.querySelectorAll('nav>ul>li>a');
+
+			const dt1 = 1000;
+			const dt2 = 7000;
+
+			function selectVideo(snum) {
+				_start          = _sentences[snum].start;                   // Get sentence info
+				_end            = _sentences[snum].end;
+				_sentence       = _sentences[snum].phrase;
+				video.currentTime = _start;
+				_wf.setRange(_start, _end);
+				_wf.draw();
+			}
+
+			setTimeout( () => {
+				selectVideo( snum1 );
+				document.querySelector('div.tab[data-tab=graph]').click();	// Select Audiogram tab once
+			}, 100);
+
+			// -------------------
+
+			let tp = dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 4 ] );									// Set profound level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+
+			tp += dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 3 ] );									// Set severe level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+
+			tp += dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 2 ] );									// Set moderate level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+
+			tp += dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 1 ] );									// Set mild level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum3 );										// Choose girl-chorus
+				video.play();
+			}, tp);
+
+			// -----------------------------
+			tp += dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 4 ] );									// Set profound level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+
+			tp += dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 3 ] );									// Set severe level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+
+			tp += dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 2 ] );									// Set moderate level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+
+			tp += dt2;
+			setTimeout( () => {
+				setLevelHL( hlevels[ 1 ] );									// Set mild level
+			}, tp);
+			tp += dt1;
+			setTimeout( () => {
+				document.querySelector('button#choice-1').click();			// Select blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+			tp += dt2;
+			setTimeout( () => {
+				document.querySelector('button#choice-2').click();			// Select no-blur
+				selectVideo( snum2 );										// Choose boy-zones
+				video.play();
+			}, tp);
+
+		}
+
+		document.querySelector('.logo').onclick = doit;
+	</script>
+</body>
+
+</html>
