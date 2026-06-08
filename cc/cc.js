@@ -162,7 +162,6 @@ function harvestCrop(crop) {
 
 // When clicking on the field, plant a crop
 field.onmousedown = function(x, y, btn, target) {
-    console.log(x, y);
     if (btn == 0) { // Left mouse
 
         // Create a crop
