@@ -33,7 +33,7 @@ let cvs = new Canvas('_cvs');
 // window.addEventListener("resize", (ev) => { 
 //     console.log(window.innerWidth, window.innerHeight);
 // });
-
+ 
 let field = new Rectangle(0, 0, 1920, 1000);
 field.fill = "url(#dirt-pattern)"
 field.addTo(cvs);
