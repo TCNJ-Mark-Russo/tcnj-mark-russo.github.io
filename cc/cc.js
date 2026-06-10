@@ -190,9 +190,11 @@ field.onmouseup = function(x, y, b, target) {
 function startSimulation() {
     txtStatus.text = "Growing your crops";
     _tmr.start();
+    btnToggle.label = "Pause";
 };
 function pauseSimulation() {
     _tmr.pause();
+    btnToggle.label = "Start";
 };
 function stepSimulation(elapsed) {
     let elapsedDays = Math.floor(elapsed / 1000);
@@ -210,6 +212,7 @@ const _tmr = new Timer(100, stepSimulation);
 
 // Reset the entire game
 function resetGame() {
+    pauseSimulation()
     _tmr.reset();
     txtMsg.text = "";
     txtStatus.text = "Plant your crops";
@@ -315,11 +318,9 @@ btnToggle.onmousedown = function(x, y, b, target) {
     hideInstructions();
     if (btnToggle.label == "Start") {
         startSimulation();
-        btnToggle.label = "Pause";
         //document.documentElement.requestFullscreen();
     } else {
         pauseSimulation();
-        btnToggle.label = "Start";
         //document.exitFullscreen();
     }
 }
