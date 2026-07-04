@@ -29,10 +29,6 @@
 
 // Canvas
 let cvs = new Canvas('_cvs');
-
-// window.addEventListener("resize", (ev) => { 
-//     console.log(window.innerWidth, window.innerHeight);
-// });
  
 let field = new Rectangle(0, 0, 1920, 1000);
 field.fill = "url(#dirt-pattern)"
@@ -72,7 +68,7 @@ function makeCrop(x, y) {
     g.fill = "green";
     g.fillOpacity = 0.5;
     g.stroke = "none";
-    g.data.set("age", 0);
+    g.data.set("size", 0);
 
     g.onmousedown = function(x, y, b, target) {
         if (_tmr.running) {                 // If growing...
@@ -97,41 +93,58 @@ function makeCrop(x, y) {
 }
 
 // Grow the crop
-function grow(crop, factor) {
+function grow(crop) {
     const c1 = crop.children[0];
     const c2 = crop.children[1];
     const c3 = crop.children[2];
     const c4 = crop.children[3];
 
-    // Get the center of this crop
+    // Get crop bounding box
     let bb = crop.getTransformedBBox()
+
+    // Get the center of this crop
     let cx = bb.x + 0.5*bb.width;
     let cy = bb.y + 0.5*bb.height;
     
-    // Update crop age
-    // let age = parseFloat(crop._root.getAttribute('data-age'));
-    let age = crop.data.get('age');
-    age = age + 0.01;
-    crop.data.set('age', age);
-    // crop._root.setAttribute('data-age', age);
+    // Count number of crops within 75
+    let nclose = 0;
+    for (const tcrop of crops) {
+        if (tcrop === crop) continue;   // Skip self
+        let tbb = tcrop.getTransformedBBox();
+        let tcx = tbb.x + 0.5*tbb.width;
+        let tcy = tbb.y + 0.5*tbb.height;
+        let dx = cx - tcx;
+        let dy = cy - tcy;
+        let dist = Math.sqrt( dx*dx + dy*dy );
+        if (dist <= 75) nclose++;
+    }
 
-    // Configure based on age
-    c1.cy = cy - age;
-    c1.r  = 2*age + 4;
-    c2.cy = cy + age;
-    c2.r  = 2*age + 4;
-    c3.cx = cx - age;
-    c3.r  = 2*age + 4;
-    c4.cx = cx + age;
-    c4.r  = 2*age + 4;
+    // Get crop size
+    let size = crop.data.get('size');
+
+    // Grow only if no crops close and competing for resources
+    if (nclose == 0) {
+        size = size + 0.01;
+        crop.data.set('size', size);
+    }
+
+    // Grow crop based on size
+    c1.cy = cy - size;
+    c1.r  = 2*size + 4;
+    c2.cy = cy + size;
+    c2.r  = 2*size + 4;
+    c3.cx = cx - size;
+    c3.r  = 2*size + 4;
+    c4.cx = cx + size;
+    c4.r  = 2*size + 4;
 
     // Change fill color based on size of crop
     if (bb.width < 75) {
         crop.fill = "green";
     } else if (bb.width > 100) {
-        crop.fill = "#6A6E09";
+        crop.fill = "#654321";
     } else {
-        crop.fill = "#00480c";
+        crop.fill = "darkgreen";
     }
 }
 
@@ -141,6 +154,15 @@ function deleteCrop(crop) {
     if (idx > -1) {
         crops.splice(idx, 1);
         crop.remove();        // Delete the group from the SVG element
+    }
+}
+
+// Cleanly delete all crop groups from the game
+function deleteAllCrops() {
+    while (crops.length > 0) {
+        let crop = crops[0];
+        crops.splice(0, 1);
+        crop.remove();
     }
 }
 
@@ -206,7 +228,7 @@ function stepSimulation(elapsed) {
     }
     resetElapsedTime( elapsedDays );
 
-    for(crop of crops) { grow(crop, 1.01); }
+    for(const crop of crops) { grow(crop); }
 };
 const _tmr = new Timer(100, stepSimulation);
 
@@ -220,7 +242,7 @@ function resetGame() {
     resetProfit(-50);
     resetPlanted(0);
     resetHarvestCount(0);
-    while (crops.length > 0) deleteCrop(crops[0]);
+    deleteAllCrops();
 };
 
 // Text Displays
