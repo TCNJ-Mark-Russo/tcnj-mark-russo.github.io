@@ -106,8 +106,21 @@ function grow(crop) {
     let cx = bb.x + 0.5*bb.width;
     let cy = bb.y + 0.5*bb.height;
     
-    // Count number of crops within 75
-    let nclose = 0;
+    // Count number of crops within 100
+    // let nclose = 0;
+    // for (const tcrop of crops) {
+    //     if (tcrop === crop) continue;   // Skip self
+    //     let tbb = tcrop.getTransformedBBox();
+    //     let tcx = tbb.x + 0.5*tbb.width;
+    //     let tcy = tbb.y + 0.5*tbb.height;
+    //     let dx = cx - tcx;
+    //     let dy = cy - tcy;
+    //     let dist = Math.sqrt( dx*dx + dy*dy );
+    //     if (dist <= 100) nclose++;
+    // }
+
+    // Find the distance of the closest crop within 100 units
+    let closest = 100;
     for (const tcrop of crops) {
         if (tcrop === crop) continue;   // Skip self
         let tbb = tcrop.getTransformedBBox();
@@ -116,19 +129,24 @@ function grow(crop) {
         let dx = cx - tcx;
         let dy = cy - tcy;
         let dist = Math.sqrt( dx*dx + dy*dy );
-        if (dist <= 75) nclose++;
+        if (dist <= 100) closest = dist;
     }
 
     // Get crop size
     let size = crop.data.get('size');
 
-    // Grow only if no crops close and competing for resources
-    if (nclose == 0) {
-        size = size + 0.01;
-        crop.data.set('size', size);
-    }
+    // Grow at rate that is reduced by nearby crops competing for resources
+    const factor = closest/100;
+    size = size + factor*0.01;
+    crop.data.set('size', size);
 
-    // Grow crop based on size
+    // // Grow only if no crops close and competing for resources
+    // if (nclose == 0) {
+    //     size = size + 0.01;
+    //     crop.data.set('size', size);
+    // }
+
+    // Grow crop based on size and growth rate factor
     c1.cy = cy - size;
     c1.r  = 2*size + 4;
     c2.cy = cy + size;
