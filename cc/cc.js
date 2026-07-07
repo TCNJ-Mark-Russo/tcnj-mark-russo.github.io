@@ -53,6 +53,10 @@ let stats = {
 // Crops planted
 let crops = [];
 
+// Crop radius parameters
+const crop_min = 40;        // Minimum radius for harvest
+const crop_max = 60;        // Maximum radius for harvest
+
 // Make and return a crop group object
 function makeCrop(x, y) {
     let g  = new Group();
@@ -65,10 +69,11 @@ function makeCrop(x, y) {
     g.add(c2);
     g.add(c3);
     g.add(c4);
-    g.fill = "green";
+    g.fill = "#009000";
     g.fillOpacity = 0.5;
     g.stroke = "none";
     g.data.set("size", 0);
+    g.data.set("infested", false);
 
     g.onmousedown = function(x, y, b, target) {
         if (_tmr.running) {                 // If growing...
@@ -94,6 +99,7 @@ function makeCrop(x, y) {
 
 // Grow the crop
 function grow(crop) {
+    // Green parts of crop
     const c1 = crop.children[0];
     const c2 = crop.children[1];
     const c3 = crop.children[2];
@@ -102,25 +108,16 @@ function grow(crop) {
     // Get crop bounding box
     let bb = crop.getTransformedBBox()
 
-    // Get the center of this crop
-    let cx = bb.x + 0.5*bb.width;
-    let cy = bb.y + 0.5*bb.height;
-    
-    // Count number of crops within 100
-    // let nclose = 0;
-    // for (const tcrop of crops) {
-    //     if (tcrop === crop) continue;   // Skip self
-    //     let tbb = tcrop.getTransformedBBox();
-    //     let tcx = tbb.x + 0.5*tbb.width;
-    //     let tcy = tbb.y + 0.5*tbb.height;
-    //     let dx = cx - tcx;
-    //     let dy = cy - tcy;
-    //     let dist = Math.sqrt( dx*dx + dy*dy );
-    //     if (dist <= 100) nclose++;
-    // }
+    // Get the center and size of this crop
+    let width = bb.width;
+    let height = bb.height;
+    let cx = bb.x + 0.5*width;
+    let cy = bb.y + 0.5*height;
+    let cradius = width/2;        // Crop radius
 
-    // Find the distance of the closest crop within 100 units
-    let closest = 100;
+    // Find the distance of the closest crop within max units and if it is infested with aphids
+    let closest = crop_max*2;
+    let closest_invested = false;
     for (const tcrop of crops) {
         if (tcrop === crop) continue;   // Skip self
         let tbb = tcrop.getTransformedBBox();
@@ -129,24 +126,53 @@ function grow(crop) {
         let dx = cx - tcx;
         let dy = cy - tcy;
         let dist = Math.sqrt( dx*dx + dy*dy );
-        if (dist <= 100) closest = dist;
+        if (dist < closest) {
+            closest = dist;
+            closest_invested = tcrop.data.get('infested');
+        }
     }
 
-    // Get crop size
+    // Tiny probability of randomly infesting crap anew
+    let infest_prob = 0.0001;
+
+    // Get this crop infested status
+    let infested = crop.data.get('infested')
+
+    // If this crop or closest crop is infested, increase probability of new infestation
+    if (infested || closest_invested) { infest_prob = 0.001; }
+
+    // Randomly infest
+    if (Math.random() < infest_prob) {
+        let ax = 0;                                     // Start aphid at center
+        let ay = 0;
+        if (cradius > 10) {                             // If crop radius is greater than 10
+            const r = Math.random()*(cradius - 10);     // Random radians within 10 pixels of crop edge
+            const theta = Math.random()*(Math.PI*2);    // Random angle (radians)
+            ax = r * Math.cos(theta);                   // Convert polar to cartesian
+            ay = r * Math.sin(theta);
+        }
+        // Add aphid to crop
+        let aphid = new Image("aphid.png", cx-10+ax, cy-10+ay, 20, 20);
+        crop.add(aphid);
+
+        // Set crop infested
+        crop.data.set('infested', true)
+        infested = true;
+    }
+
+    // Get crop size parameter
     let size = crop.data.get('size');
 
     // Grow at rate that is reduced by nearby crops competing for resources
-    const factor = closest/100;
+    // Stop growing if crop radius exceeds max
+    let factor = closest/(crop_max*2);
+    if (cradius > crop_max) { factor = 0.0; }
+
+    // Grow crop dimished by growth factor
     size = size + factor*0.01;
     crop.data.set('size', size);
 
-    // // Grow only if no crops close and competing for resources
-    // if (nclose == 0) {
-    //     size = size + 0.01;
-    //     crop.data.set('size', size);
-    // }
-
-    // Grow crop based on size and growth rate factor
+    // Grow crop
     c1.cy = cy - size;
     c1.r  = 2*size + 4;
     c2.cy = cy + size;
@@ -157,9 +183,12 @@ function grow(crop) {
     c4.r  = 2*size + 4;
 
     // Change fill color based on size of crop
-    if (bb.width < 75) {
-        crop.fill = "green";
-    } else if (bb.width > 100) {
+    // TODO: Change color based on infestation status
+    bb = crop.getTransformedBBox()
+    cradius = bb.width/2;
+    if (cradius < crop_min) {
+        crop.fill = "#009000";
+    } else if (cradius > crop_max) {
         crop.fill = "#654321";
     } else {
         crop.fill = "darkgreen";
@@ -187,10 +216,14 @@ function deleteAllCrops() {
 // Harvest a crop and compute profit
 function harvestCrop(crop) {
     let bb = crop.getTransformedBBox();
-    
-    if (bb.width < 75) {
+    let infested = crop.data.get('infested');
+    const cradius = bb.width / 2;
+
+    if (infested) {
+        txtMsg.text = "Infested crop. No profit.";
+    } else if (cradius < crop_min) {
         txtMsg.text = "Too small. No profit.";
-    } else if (bb.width > 100) {
+    } else if (cradius > crop_max) {
         txtMsg.text = "Too old. No profit.";
     } else {
         txtMsg.text = "You earned $3 profit.";
@@ -349,6 +382,10 @@ function toggleInstructions() {
         hideInstructions();
     }
 }
+
+const randint = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 // --- Button Controls
 let btnToggle = new Button("Start", 1270, 35, 170, 100);
