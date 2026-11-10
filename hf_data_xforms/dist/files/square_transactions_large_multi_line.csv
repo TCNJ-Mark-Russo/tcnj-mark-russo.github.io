@@ -1,0 +1,521 @@
+Date,Time,Transaction ID,Item,SKU,Category,Quantity,Gross Sales,Discounts,Net Sales,Tax,Total Collected,Payment Method,Device Name
+2026-11-01,07:04:00,TX-5001,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,iPad Pro Stand
+2026-11-01,07:04:00,TX-5001,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,iPad Pro Stand
+2026-11-01,07:13:00,TX-5002,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,Register 1
+2026-11-01,07:13:00,TX-5002,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Register 1
+2026-11-01,07:18:00,TX-5003,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Gift Card,iPad Pro Stand
+2026-11-01,07:31:00,TX-5004,Chai Latte,TEA-01,Tea & Other,3,$16.50,$0.00,$16.50,$1.36,$17.86,Cash,iPad Pro Stand
+2026-11-01,07:45:00,TX-5005,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,iPad Pro Stand
+2026-11-01,07:45:00,TX-5005,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,iPad Pro Stand
+2026-11-01,07:59:00,TX-5006,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 2
+2026-11-01,07:59:00,TX-5006,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Card,Register 2
+2026-11-01,07:59:00,TX-5006,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 2
+2026-11-01,08:08:00,TX-5007,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Card,Register 2
+2026-11-01,08:08:00,TX-5007,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 2
+2026-11-01,08:08:00,TX-5007,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 2
+2026-11-01,08:10:00,TX-5008,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Gift Card,iPad Pro Stand
+2026-11-01,08:10:00,TX-5008,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,iPad Pro Stand
+2026-11-01,08:10:00,TX-5008,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,iPad Pro Stand
+2026-11-01,08:25:00,TX-5009,Coffee Beans 1lb,MER-01,Merchandise,3,$54.00,$0.00,$54.00,$4.46,$58.46,Google Pay,Mobile POS
+2026-11-01,08:25:00,TX-5009,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Google Pay,Mobile POS
+2026-11-01,08:36:00,TX-5010,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Card,Register 2
+2026-11-01,08:36:00,TX-5010,Iced Hibiscus Tea,TEA-03,Tea & Other,3,$12.75,$0.00,$12.75,$1.05,$13.80,Card,Register 2
+2026-11-01,08:36:00,TX-5010,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,Register 2
+2026-11-01,08:38:00,TX-5011,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Cash,iPad Pro Stand
+2026-11-01,08:38:00,TX-5011,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,iPad Pro Stand
+2026-11-01,08:52:00,TX-5012,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,iPad Pro Stand
+2026-11-01,08:52:00,TX-5012,Espresso,COF-05,Coffee,2,$6.50,$0.00,$6.50,$0.54,$7.04,Card,iPad Pro Stand
+2026-11-01,09:00:00,TX-5013,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,iPad Pro Stand
+2026-11-01,09:00:00,TX-5013,Espresso,COF-05,Coffee,2,$6.50,$0.00,$6.50,$0.54,$7.04,Card,iPad Pro Stand
+2026-11-01,09:00:00,TX-5013,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Card,iPad Pro Stand
+2026-11-01,09:00:00,TX-5013,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,iPad Pro Stand
+2026-11-01,09:09:00,TX-5014,Matcha Latte,TEA-02,Tea & Other,2,$11.50,$1.15,$10.35,$0.85,$11.20,Apple Pay,iPad Pro Stand
+2026-11-01,09:09:00,TX-5014,Americano,COF-03,Coffee,1,$3.75,$0.38,$3.37,$0.28,$3.65,Apple Pay,iPad Pro Stand
+2026-11-01,09:09:00,TX-5014,Travel Mug,MER-02,Merchandise,2,$50.00,$5.00,$45.00,$3.71,$48.71,Apple Pay,iPad Pro Stand
+2026-11-01,09:09:00,TX-5014,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.55,$4.95,$0.41,$5.36,Apple Pay,iPad Pro Stand
+2026-11-01,09:19:00,TX-5015,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,Register 2
+2026-11-01,09:28:00,TX-5016,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,Register 1
+2026-11-01,09:28:00,TX-5016,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,Register 1
+2026-11-01,09:28:00,TX-5016,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,Register 1
+2026-11-01,09:28:00,TX-5016,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Cash,Register 1
+2026-11-01,09:29:00,TX-5017,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Card,Register 1
+2026-11-01,09:29:00,TX-5017,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Card,Register 1
+2026-11-01,09:33:00,TX-5018,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.30,$2.70,$0.22,$2.92,Cash,Mobile POS
+2026-11-01,09:33:00,TX-5018,Croissant,BAK-01,Bakery,1,$4.50,$0.45,$4.05,$0.33,$4.38,Cash,Mobile POS
+2026-11-01,09:48:00,TX-5019,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,Register 1
+2026-11-01,09:48:00,TX-5019,Matcha Latte,TEA-02,Tea & Other,2,$11.50,$0.00,$11.50,$0.95,$12.45,Card,Register 1
+2026-11-01,09:49:00,TX-5020,Travel Mug,MER-02,Merchandise,1,$25.00,$3.75,$21.25,$1.75,$23.00,Apple Pay,Mobile POS
+2026-11-01,09:49:00,TX-5020,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.86,$4.89,$0.40,$5.29,Apple Pay,Mobile POS
+2026-11-01,09:49:00,TX-5020,Latte,COF-01,Coffee,1,$5.25,$0.79,$4.46,$0.37,$4.83,Apple Pay,Mobile POS
+2026-11-01,09:49:00,TX-5020,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.75,$4.25,$0.35,$4.60,Apple Pay,Mobile POS
+2026-11-01,09:50:00,TX-5021,Muffin,BAK-02,Bakery,1,$3.75,$0.56,$3.19,$0.26,$3.45,Google Pay,Register 2
+2026-11-01,09:50:00,TX-5021,Muffin,BAK-02,Bakery,1,$3.75,$0.56,$3.19,$0.26,$3.45,Google Pay,Register 2
+2026-11-01,10:00:00,TX-5022,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Google Pay,Register 2
+2026-11-01,10:00:00,TX-5022,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Google Pay,Register 2
+2026-11-01,10:00:00,TX-5022,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Register 2
+2026-11-01,10:00:00,TX-5022,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 2
+2026-11-01,10:08:00,TX-5023,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,Register 1
+2026-11-01,10:08:00,TX-5023,Coffee Beans 1lb,MER-01,Merchandise,2,$36.00,$0.00,$36.00,$2.97,$38.97,Card,Register 1
+2026-11-01,10:08:00,TX-5023,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 1
+2026-11-01,10:08:00,TX-5023,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Card,Register 1
+2026-11-01,10:19:00,TX-5024,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 1
+2026-11-01,10:19:00,TX-5024,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 1
+2026-11-01,10:19:00,TX-5024,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 1
+2026-11-01,10:30:00,TX-5025,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 2
+2026-11-01,10:30:00,TX-5025,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,Register 2
+2026-11-01,10:36:00,TX-5026,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Card,Register 1
+2026-11-01,10:36:00,TX-5026,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Card,Register 1
+2026-11-01,10:36:00,TX-5026,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Card,Register 1
+2026-11-01,10:43:00,TX-5027,Travel Mug,MER-02,Merchandise,2,$50.00,$0.00,$50.00,$4.12,$54.12,Google Pay,Register 2
+2026-11-01,10:43:00,TX-5027,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 2
+2026-11-01,10:56:00,TX-5028,Matcha Latte,TEA-02,Tea & Other,2,$11.50,$0.00,$11.50,$0.95,$12.45,Card,iPad Pro Stand
+2026-11-01,10:56:00,TX-5028,Cappuccino,COF-02,Coffee,3,$15.00,$0.00,$15.00,$1.24,$16.24,Card,iPad Pro Stand
+2026-11-01,10:59:00,TX-5029,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Gift Card,Register 1
+2026-11-01,10:59:00,TX-5029,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Gift Card,Register 1
+2026-11-01,10:59:00,TX-5029,Chocolate Chip Cookie,BAK-04,Bakery,2,$6.00,$0.00,$6.00,$0.49,$6.49,Gift Card,Register 1
+2026-11-01,11:13:00,TX-5030,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Apple Pay,Register 2
+2026-11-01,11:13:00,TX-5030,Cappuccino,COF-02,Coffee,1,$5.00,$0.50,$4.50,$0.37,$4.87,Apple Pay,Register 2
+2026-11-01,11:13:00,TX-5030,Cold Brew,COF-04,Coffee,1,$4.75,$0.48,$4.27,$0.35,$4.62,Apple Pay,Register 2
+2026-11-01,11:13:00,TX-5030,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.50,$4.50,$0.37,$4.87,Apple Pay,Register 2
+2026-11-01,11:14:00,TX-5031,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,iPad Pro Stand
+2026-11-01,11:14:00,TX-5031,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,iPad Pro Stand
+2026-11-01,11:24:00,TX-5032,Chocolate Chip Cookie,BAK-04,Bakery,2,$6.00,$0.90,$5.10,$0.42,$5.52,Cash,Mobile POS
+2026-11-01,11:24:00,TX-5032,Americano,COF-03,Coffee,1,$3.75,$0.56,$3.19,$0.26,$3.45,Cash,Mobile POS
+2026-11-01,11:30:00,TX-5033,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 2
+2026-11-01,11:30:00,TX-5033,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 2
+2026-11-01,11:42:00,TX-5034,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Mobile POS
+2026-11-01,11:42:00,TX-5034,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,Mobile POS
+2026-11-01,11:42:00,TX-5034,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Cash,Mobile POS
+2026-11-01,11:49:00,TX-5035,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Cash,Register 2
+2026-11-01,12:02:00,TX-5036,Latte,COF-01,Coffee,1,$5.25,$0.53,$4.72,$0.39,$5.11,Google Pay,Mobile POS
+2026-11-01,12:02:00,TX-5036,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$1.80,$16.20,$1.34,$17.54,Google Pay,Mobile POS
+2026-11-01,12:02:00,TX-5036,Americano,COF-03,Coffee,1,$3.75,$0.38,$3.37,$0.28,$3.65,Google Pay,Mobile POS
+2026-11-01,12:06:00,TX-5037,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.45,$2.55,$0.21,$2.76,Card,Register 1
+2026-11-01,12:14:00,TX-5038,Latte,COF-01,Coffee,2,$10.50,$0.00,$10.50,$0.87,$11.37,Apple Pay,Mobile POS
+2026-11-01,12:14:00,TX-5038,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Apple Pay,Mobile POS
+2026-11-01,12:15:00,TX-5039,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Google Pay,Mobile POS
+2026-11-01,12:15:00,TX-5039,Iced Hibiscus Tea,TEA-03,Tea & Other,2,$8.50,$0.00,$8.50,$0.70,$9.20,Google Pay,Mobile POS
+2026-11-01,12:15:00,TX-5039,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Mobile POS
+2026-11-01,12:23:00,TX-5040,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,Mobile POS
+2026-11-01,12:23:00,TX-5040,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Apple Pay,Mobile POS
+2026-11-01,12:28:00,TX-5041,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Register 2
+2026-11-01,12:30:00,TX-5042,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,Register 2
+2026-11-01,12:30:00,TX-5042,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,Register 2
+2026-11-01,12:44:00,TX-5043,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.45,$4.05,$0.33,$4.38,Google Pay,Register 1
+2026-11-01,12:44:00,TX-5043,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Google Pay,Register 1
+2026-11-01,12:52:00,TX-5044,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,Register 2
+2026-11-01,12:52:00,TX-5044,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Register 2
+2026-11-01,12:52:00,TX-5044,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Gift Card,Register 2
+2026-11-01,12:52:00,TX-5044,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Gift Card,Register 2
+2026-11-01,12:54:00,TX-5045,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Google Pay,Register 1
+2026-11-01,12:54:00,TX-5045,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Google Pay,Register 1
+2026-11-01,12:54:00,TX-5045,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Google Pay,Register 1
+2026-11-01,12:54:00,TX-5045,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Google Pay,Register 1
+2026-11-01,13:02:00,TX-5046,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 1
+2026-11-01,13:02:00,TX-5046,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,Register 1
+2026-11-01,13:02:00,TX-5046,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 1
+2026-11-01,13:10:00,TX-5047,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Apple Pay,Register 2
+2026-11-01,13:10:00,TX-5047,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Apple Pay,Register 2
+2026-11-01,13:15:00,TX-5048,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,Register 2
+2026-11-01,13:15:00,TX-5048,Hot Chocolate,TEA-04,Tea & Other,2,$9.00,$0.00,$9.00,$0.74,$9.74,Card,Register 2
+2026-11-01,13:15:00,TX-5048,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Card,Register 2
+2026-11-01,13:15:00,TX-5048,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Card,Register 2
+2026-11-01,13:15:00,TX-5048,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,Register 2
+2026-11-01,13:21:00,TX-5049,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Register 1
+2026-11-01,13:23:00,TX-5050,Sticker Pack,MER-03,Merchandise,2,$10.00,$0.00,$10.00,$0.83,$10.83,Gift Card,Mobile POS
+2026-11-01,13:23:00,TX-5050,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Gift Card,Mobile POS
+2026-11-01,13:31:00,TX-5051,Travel Mug,MER-02,Merchandise,2,$50.00,$0.00,$50.00,$4.12,$54.12,Cash,Mobile POS
+2026-11-01,13:31:00,TX-5051,Bagel with Cream Cheese,BAK-03,Bakery,2,$10.00,$0.00,$10.00,$0.83,$10.83,Cash,Mobile POS
+2026-11-01,13:31:00,TX-5051,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Cash,Mobile POS
+2026-11-01,13:39:00,TX-5052,Cold Brew,COF-04,Coffee,1,$4.75,$0.48,$4.27,$0.35,$4.62,Cash,Register 1
+2026-11-01,13:39:00,TX-5052,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Cash,Register 1
+2026-11-01,13:39:00,TX-5052,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.50,$4.50,$0.37,$4.87,Cash,Register 1
+2026-11-01,13:51:00,TX-5053,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Card,Register 2
+2026-11-01,13:51:00,TX-5053,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,Register 2
+2026-11-01,13:51:00,TX-5053,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,Register 2
+2026-11-01,13:51:00,TX-5053,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 2
+2026-11-01,13:58:00,TX-5054,Travel Mug,MER-02,Merchandise,1,$25.00,$3.75,$21.25,$1.75,$23.00,Google Pay,iPad Pro Stand
+2026-11-01,13:58:00,TX-5054,Travel Mug,MER-02,Merchandise,1,$25.00,$3.75,$21.25,$1.75,$23.00,Google Pay,iPad Pro Stand
+2026-11-01,14:00:00,TX-5055,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,iPad Pro Stand
+2026-11-01,14:02:00,TX-5056,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,iPad Pro Stand
+2026-11-01,14:02:00,TX-5056,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,iPad Pro Stand
+2026-11-01,14:11:00,TX-5057,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Card,Register 1
+2026-11-01,14:19:00,TX-5058,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Cash,Mobile POS
+2026-11-01,14:26:00,TX-5059,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 1
+2026-11-01,14:26:00,TX-5059,Coffee Beans 1lb,MER-01,Merchandise,3,$54.00,$0.00,$54.00,$4.46,$58.46,Card,Register 1
+2026-11-01,14:26:00,TX-5059,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Card,Register 1
+2026-11-01,14:26:00,TX-5059,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Card,Register 1
+2026-11-01,14:31:00,TX-5060,Croissant,BAK-01,Bakery,2,$9.00,$0.00,$9.00,$0.74,$9.74,Cash,Mobile POS
+2026-11-01,14:31:00,TX-5060,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Mobile POS
+2026-11-01,14:31:00,TX-5060,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Mobile POS
+2026-11-01,14:31:00,TX-5060,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Mobile POS
+2026-11-01,14:36:00,TX-5061,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Mobile POS
+2026-11-01,14:36:00,TX-5061,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Google Pay,Mobile POS
+2026-11-01,14:43:00,TX-5062,Cappuccino,COF-02,Coffee,2,$10.00,$0.00,$10.00,$0.83,$10.83,Google Pay,Register 2
+2026-11-01,14:43:00,TX-5062,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Google Pay,Register 2
+2026-11-01,14:43:00,TX-5062,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 2
+2026-11-01,14:43:00,TX-5062,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Google Pay,Register 2
+2026-11-01,14:52:00,TX-5063,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Gift Card,iPad Pro Stand
+2026-11-01,14:52:00,TX-5063,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Gift Card,iPad Pro Stand
+2026-11-01,14:52:00,TX-5063,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,iPad Pro Stand
+2026-11-01,15:05:00,TX-5064,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 1
+2026-11-01,15:05:00,TX-5064,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Google Pay,Register 1
+2026-11-01,15:05:00,TX-5064,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Google Pay,Register 1
+2026-11-01,15:13:00,TX-5065,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Gift Card,Register 1
+2026-11-01,15:13:00,TX-5065,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Gift Card,Register 1
+2026-11-01,15:21:00,TX-5066,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Gift Card,Register 1
+2026-11-01,15:21:00,TX-5066,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Gift Card,Register 1
+2026-11-01,15:25:00,TX-5067,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,Register 1
+2026-11-01,15:25:00,TX-5067,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Gift Card,Register 1
+2026-11-01,15:27:00,TX-5068,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Mobile POS
+2026-11-01,15:27:00,TX-5068,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Gift Card,Mobile POS
+2026-11-01,15:27:00,TX-5068,Chocolate Chip Cookie,BAK-04,Bakery,2,$6.00,$0.00,$6.00,$0.49,$6.49,Gift Card,Mobile POS
+2026-11-01,15:27:00,TX-5068,Cold Brew,COF-04,Coffee,2,$9.50,$0.00,$9.50,$0.78,$10.28,Gift Card,Mobile POS
+2026-11-01,15:41:00,TX-5069,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,Mobile POS
+2026-11-01,15:41:00,TX-5069,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Cash,Mobile POS
+2026-11-01,15:46:00,TX-5070,Iced Hibiscus Tea,TEA-03,Tea & Other,2,$8.50,$0.00,$8.50,$0.70,$9.20,Apple Pay,Register 1
+2026-11-01,15:46:00,TX-5070,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Apple Pay,Register 1
+2026-11-01,16:00:00,TX-5071,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Google Pay,Mobile POS
+2026-11-01,16:00:00,TX-5071,Hot Chocolate,TEA-04,Tea & Other,2,$9.00,$0.00,$9.00,$0.74,$9.74,Google Pay,Mobile POS
+2026-11-01,16:04:00,TX-5072,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.55,$4.95,$0.41,$5.36,Apple Pay,Mobile POS
+2026-11-01,16:04:00,TX-5072,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.45,$4.05,$0.33,$4.38,Apple Pay,Mobile POS
+2026-11-01,16:04:00,TX-5072,Cold Brew,COF-04,Coffee,2,$9.50,$0.95,$8.55,$0.71,$9.26,Apple Pay,Mobile POS
+2026-11-01,16:04:00,TX-5072,Espresso,COF-05,Coffee,2,$6.50,$0.65,$5.85,$0.48,$6.33,Apple Pay,Mobile POS
+2026-11-01,16:06:00,TX-5073,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Card,Mobile POS
+2026-11-01,16:06:00,TX-5073,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Card,Mobile POS
+2026-11-01,16:16:00,TX-5074,Bagel with Cream Cheese,BAK-03,Bakery,2,$10.00,$0.00,$10.00,$0.83,$10.83,Cash,iPad Pro Stand
+2026-11-01,16:16:00,TX-5074,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Cash,iPad Pro Stand
+2026-11-01,16:16:00,TX-5074,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Cash,iPad Pro Stand
+2026-11-01,16:28:00,TX-5075,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,Register 2
+2026-11-01,16:28:00,TX-5075,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Cash,Register 2
+2026-11-01,16:34:00,TX-5076,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Cash,iPad Pro Stand
+2026-11-01,16:34:00,TX-5076,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,iPad Pro Stand
+2026-11-01,16:34:00,TX-5076,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,iPad Pro Stand
+2026-11-01,16:45:00,TX-5077,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,Mobile POS
+2026-11-01,16:45:00,TX-5077,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Apple Pay,Mobile POS
+2026-11-01,16:55:00,TX-5078,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Gift Card,iPad Pro Stand
+2026-11-01,16:57:00,TX-5079,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Mobile POS
+2026-11-01,16:57:00,TX-5079,Coffee Beans 1lb,MER-01,Merchandise,3,$54.00,$0.00,$54.00,$4.46,$58.46,Gift Card,Mobile POS
+2026-11-01,17:07:00,TX-5080,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.30,$2.70,$0.22,$2.92,Cash,Register 1
+2026-11-01,17:07:00,TX-5080,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$1.80,$16.20,$1.34,$17.54,Cash,Register 1
+2026-11-01,17:07:00,TX-5080,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$1.80,$16.20,$1.34,$17.54,Cash,Register 1
+2026-11-01,17:22:00,TX-5081,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,Register 1
+2026-11-01,17:22:00,TX-5081,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,Register 1
+2026-11-01,17:34:00,TX-5082,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,iPad Pro Stand
+2026-11-01,17:48:00,TX-5083,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Cash,iPad Pro Stand
+2026-11-01,17:48:00,TX-5083,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Cash,iPad Pro Stand
+2026-11-01,17:48:00,TX-5083,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,iPad Pro Stand
+2026-11-01,17:48:00,TX-5083,Cold Brew,COF-04,Coffee,2,$9.50,$0.00,$9.50,$0.78,$10.28,Cash,iPad Pro Stand
+2026-11-01,18:01:00,TX-5084,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 1
+2026-11-01,18:01:00,TX-5084,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 1
+2026-11-01,18:01:00,TX-5084,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 1
+2026-11-01,18:12:00,TX-5085,Bagel with Cream Cheese,BAK-03,Bakery,2,$10.00,$0.00,$10.00,$0.83,$10.83,Cash,Register 1
+2026-11-01,18:12:00,TX-5085,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Cash,Register 1
+2026-11-01,18:14:00,TX-5086,Bagel with Cream Cheese,BAK-03,Bakery,3,$15.00,$0.00,$15.00,$1.24,$16.24,Cash,Mobile POS
+2026-11-01,18:14:00,TX-5086,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,Mobile POS
+2026-11-01,18:20:00,TX-5087,Matcha Latte,TEA-02,Tea & Other,2,$11.50,$0.00,$11.50,$0.95,$12.45,Gift Card,Mobile POS
+2026-11-01,18:20:00,TX-5087,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Gift Card,Mobile POS
+2026-11-01,18:32:00,TX-5088,Hot Chocolate,TEA-04,Tea & Other,2,$9.00,$0.00,$9.00,$0.74,$9.74,Cash,Register 1
+2026-11-01,18:32:00,TX-5088,Coffee Beans 1lb,MER-01,Merchandise,3,$54.00,$0.00,$54.00,$4.46,$58.46,Cash,Register 1
+2026-11-01,18:32:00,TX-5088,Sticker Pack,MER-03,Merchandise,2,$10.00,$0.00,$10.00,$0.83,$10.83,Cash,Register 1
+2026-11-01,18:32:00,TX-5088,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Cash,Register 1
+2026-11-01,18:34:00,TX-5089,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,Mobile POS
+2026-11-01,18:36:00,TX-5090,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Apple Pay,Register 2
+2026-11-01,18:36:00,TX-5090,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,Register 2
+2026-11-01,18:41:00,TX-5091,Cappuccino,COF-02,Coffee,1,$5.00,$0.50,$4.50,$0.37,$4.87,Google Pay,Register 1
+2026-11-01,18:41:00,TX-5091,Latte,COF-01,Coffee,1,$5.25,$0.53,$4.72,$0.39,$5.11,Google Pay,Register 1
+2026-11-01,18:41:00,TX-5091,Muffin,BAK-02,Bakery,1,$3.75,$0.38,$3.37,$0.28,$3.65,Google Pay,Register 1
+2026-11-01,18:42:00,TX-5092,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,iPad Pro Stand
+2026-11-01,18:42:00,TX-5092,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Apple Pay,iPad Pro Stand
+2026-11-01,18:42:00,TX-5092,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,iPad Pro Stand
+2026-11-01,18:54:00,TX-5093,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Apple Pay,Register 1
+2026-11-01,18:54:00,TX-5093,Croissant,BAK-01,Bakery,3,$13.50,$0.00,$13.50,$1.11,$14.61,Apple Pay,Register 1
+2026-11-01,19:02:00,TX-5094,Chai Latte,TEA-01,Tea & Other,2,$11.00,$0.00,$11.00,$0.91,$11.91,Gift Card,Register 1
+2026-11-01,19:02:00,TX-5094,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Register 1
+2026-11-01,19:02:00,TX-5094,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Gift Card,Register 1
+2026-11-01,19:12:00,TX-5095,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,Mobile POS
+2026-11-01,19:12:00,TX-5095,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Mobile POS
+2026-11-01,19:26:00,TX-5096,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Gift Card,iPad Pro Stand
+2026-11-01,19:26:00,TX-5096,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,iPad Pro Stand
+2026-11-01,19:26:00,TX-5096,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Gift Card,iPad Pro Stand
+2026-11-01,19:26:00,TX-5096,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,iPad Pro Stand
+2026-11-01,19:35:00,TX-5097,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 2
+2026-11-01,19:35:00,TX-5097,Sticker Pack,MER-03,Merchandise,2,$10.00,$0.00,$10.00,$0.83,$10.83,Cash,Register 2
+2026-11-01,19:35:00,TX-5097,Chai Latte,TEA-01,Tea & Other,2,$11.00,$0.00,$11.00,$0.91,$11.91,Cash,Register 2
+2026-11-01,19:45:00,TX-5098,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Cash,Register 1
+2026-11-01,19:45:00,TX-5098,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 1
+2026-11-01,19:58:00,TX-5099,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 2
+2026-11-01,19:58:00,TX-5099,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 2
+2026-11-01,20:01:00,TX-5100,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.55,$4.95,$0.41,$5.36,Cash,Register 1
+2026-11-01,20:01:00,TX-5100,Croissant,BAK-01,Bakery,1,$4.50,$0.45,$4.05,$0.33,$4.38,Cash,Register 1
+2026-11-01,20:01:00,TX-5100,Cold Brew,COF-04,Coffee,1,$4.75,$0.48,$4.27,$0.35,$4.62,Cash,Register 1
+2026-11-01,20:01:00,TX-5100,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$1.80,$16.20,$1.34,$17.54,Cash,Register 1
+2026-11-01,20:16:00,TX-5101,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Google Pay,Register 1
+2026-11-01,20:16:00,TX-5101,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 1
+2026-11-01,20:16:00,TX-5101,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Register 1
+2026-11-01,20:22:00,TX-5102,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,Register 1
+2026-11-01,20:22:00,TX-5102,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Apple Pay,Register 1
+2026-11-01,20:23:00,TX-5103,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 1
+2026-11-01,20:23:00,TX-5103,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Google Pay,Register 1
+2026-11-01,20:26:00,TX-5104,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Gift Card,Register 2
+2026-11-01,20:26:00,TX-5104,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Gift Card,Register 2
+2026-11-01,20:34:00,TX-5105,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.50,$4.50,$0.37,$4.87,Gift Card,Register 1
+2026-11-01,20:34:00,TX-5105,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.45,$4.05,$0.33,$4.38,Gift Card,Register 1
+2026-11-01,20:34:00,TX-5105,Chai Latte,TEA-01,Tea & Other,2,$11.00,$1.10,$9.90,$0.82,$10.72,Gift Card,Register 1
+2026-11-01,20:48:00,TX-5106,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Mobile POS
+2026-11-01,20:57:00,TX-5107,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Mobile POS
+2026-11-01,21:06:00,TX-5108,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,Register 1
+2026-11-01,21:06:00,TX-5108,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,Register 1
+2026-11-01,21:19:00,TX-5109,Muffin,BAK-02,Bakery,2,$7.50,$0.00,$7.50,$0.62,$8.12,Apple Pay,Register 2
+2026-11-01,21:19:00,TX-5109,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Apple Pay,Register 2
+2026-11-01,21:33:00,TX-5110,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$2.70,$15.30,$1.26,$16.56,Gift Card,iPad Pro Stand
+2026-11-01,21:33:00,TX-5110,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.67,$3.83,$0.32,$4.15,Gift Card,iPad Pro Stand
+2026-11-01,21:33:00,TX-5110,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.75,$4.25,$0.35,$4.60,Gift Card,iPad Pro Stand
+2026-11-01,21:41:00,TX-5111,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Cash,Mobile POS
+2026-11-01,21:41:00,TX-5111,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Cash,Mobile POS
+2026-11-01,21:56:00,TX-5112,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Mobile POS
+2026-11-01,21:56:00,TX-5112,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Card,Mobile POS
+2026-11-01,22:05:00,TX-5113,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Register 1
+2026-11-01,22:05:00,TX-5113,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,Register 1
+2026-11-01,22:05:00,TX-5113,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Cash,Register 1
+2026-11-01,22:18:00,TX-5114,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Register 1
+2026-11-01,22:18:00,TX-5114,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Google Pay,Register 1
+2026-11-01,22:24:00,TX-5115,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 2
+2026-11-01,22:24:00,TX-5115,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,Register 2
+2026-11-01,22:24:00,TX-5115,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 2
+2026-11-01,22:24:00,TX-5115,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Register 2
+2026-11-01,22:35:00,TX-5116,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Register 1
+2026-11-01,22:35:00,TX-5116,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 1
+2026-11-01,22:35:00,TX-5116,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,Register 1
+2026-11-01,22:49:00,TX-5117,Bagel with Cream Cheese,BAK-03,Bakery,2,$10.00,$0.00,$10.00,$0.83,$10.83,Card,iPad Pro Stand
+2026-11-01,22:52:00,TX-5118,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Google Pay,Mobile POS
+2026-11-01,22:52:00,TX-5118,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Mobile POS
+2026-11-01,23:05:00,TX-5119,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,iPad Pro Stand
+2026-11-01,23:05:00,TX-5119,Travel Mug,MER-02,Merchandise,2,$50.00,$0.00,$50.00,$4.12,$54.12,Google Pay,iPad Pro Stand
+2026-11-01,23:05:00,TX-5119,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,iPad Pro Stand
+2026-11-01,23:05:00,TX-5119,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,iPad Pro Stand
+2026-11-01,23:05:00,TX-5119,Hot Chocolate,TEA-04,Tea & Other,2,$9.00,$0.00,$9.00,$0.74,$9.74,Google Pay,iPad Pro Stand
+2026-11-01,23:19:00,TX-5120,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Google Pay,Register 2
+2026-11-01,23:19:00,TX-5120,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Register 2
+2026-11-01,23:19:00,TX-5120,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 2
+2026-11-01,23:34:00,TX-5121,Iced Hibiscus Tea,TEA-03,Tea & Other,2,$8.50,$0.00,$8.50,$0.70,$9.20,Gift Card,Register 1
+2026-11-01,23:34:00,TX-5121,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Gift Card,Register 1
+2026-11-01,23:40:00,TX-5122,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Gift Card,Register 1
+2026-11-01,23:40:00,TX-5122,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Gift Card,Register 1
+2026-11-01,23:53:00,TX-5123,Chai Latte,TEA-01,Tea & Other,2,$11.00,$0.00,$11.00,$0.91,$11.91,Gift Card,Register 2
+2026-11-01,23:53:00,TX-5123,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Register 2
+2026-11-01,23:55:00,TX-5124,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Mobile POS
+2026-11-01,23:57:00,TX-5125,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Google Pay,Mobile POS
+2026-11-01,23:57:00,TX-5125,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Mobile POS
+2026-11-02,00:07:00,TX-5126,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 2
+2026-11-02,00:14:00,TX-5127,Chocolate Chip Cookie,BAK-04,Bakery,3,$9.00,$0.90,$8.10,$0.67,$8.77,Google Pay,Register 1
+2026-11-02,00:14:00,TX-5127,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.50,$4.50,$0.37,$4.87,Google Pay,Register 1
+2026-11-02,00:26:00,TX-5128,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 2
+2026-11-02,00:26:00,TX-5128,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Register 2
+2026-11-02,00:26:00,TX-5128,Cold Brew,COF-04,Coffee,3,$14.25,$0.00,$14.25,$1.18,$15.43,Cash,Register 2
+2026-11-02,00:28:00,TX-5129,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Apple Pay,Register 2
+2026-11-02,00:28:00,TX-5129,Muffin,BAK-02,Bakery,2,$7.50,$0.00,$7.50,$0.62,$8.12,Apple Pay,Register 2
+2026-11-02,00:42:00,TX-5130,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Cash,Mobile POS
+2026-11-02,00:42:00,TX-5130,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Mobile POS
+2026-11-02,00:44:00,TX-5131,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,iPad Pro Stand
+2026-11-02,00:44:00,TX-5131,Iced Hibiscus Tea,TEA-03,Tea & Other,3,$12.75,$0.00,$12.75,$1.05,$13.80,Cash,iPad Pro Stand
+2026-11-02,00:44:00,TX-5131,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,iPad Pro Stand
+2026-11-02,00:56:00,TX-5132,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Cash,Register 1
+2026-11-02,00:56:00,TX-5132,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Cash,Register 1
+2026-11-02,00:56:00,TX-5132,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Cash,Register 1
+2026-11-02,01:02:00,TX-5133,Sticker Pack,MER-03,Merchandise,3,$15.00,$0.00,$15.00,$1.24,$16.24,Apple Pay,Mobile POS
+2026-11-02,01:02:00,TX-5133,Sticker Pack,MER-03,Merchandise,3,$15.00,$0.00,$15.00,$1.24,$16.24,Apple Pay,Mobile POS
+2026-11-02,01:02:00,TX-5133,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Apple Pay,Mobile POS
+2026-11-02,01:03:00,TX-5134,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Google Pay,Register 2
+2026-11-02,01:03:00,TX-5134,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 2
+2026-11-02,01:14:00,TX-5135,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 2
+2026-11-02,01:14:00,TX-5135,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 2
+2026-11-02,01:14:00,TX-5135,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Card,Register 2
+2026-11-02,01:14:00,TX-5135,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Card,Register 2
+2026-11-02,01:29:00,TX-5136,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Google Pay,Mobile POS
+2026-11-02,01:41:00,TX-5137,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.58,$5.17,$0.43,$5.60,Google Pay,iPad Pro Stand
+2026-11-02,01:41:00,TX-5137,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.30,$2.70,$0.22,$2.92,Google Pay,iPad Pro Stand
+2026-11-02,01:52:00,TX-5138,Bagel with Cream Cheese,BAK-03,Bakery,2,$10.00,$0.00,$10.00,$0.83,$10.83,Card,iPad Pro Stand
+2026-11-02,01:52:00,TX-5138,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,iPad Pro Stand
+2026-11-02,01:52:00,TX-5138,Latte,COF-01,Coffee,3,$15.75,$0.00,$15.75,$1.30,$17.05,Card,iPad Pro Stand
+2026-11-02,01:53:00,TX-5139,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Apple Pay,Mobile POS
+2026-11-02,01:53:00,TX-5139,Espresso,COF-05,Coffee,2,$6.50,$0.00,$6.50,$0.54,$7.04,Apple Pay,Mobile POS
+2026-11-02,01:53:00,TX-5139,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Apple Pay,Mobile POS
+2026-11-02,02:06:00,TX-5140,Muffin,BAK-02,Bakery,3,$11.25,$0.00,$11.25,$0.93,$12.18,Gift Card,Mobile POS
+2026-11-02,02:06:00,TX-5140,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Gift Card,Mobile POS
+2026-11-02,02:06:00,TX-5140,Coffee Beans 1lb,MER-01,Merchandise,2,$36.00,$0.00,$36.00,$2.97,$38.97,Gift Card,Mobile POS
+2026-11-02,02:19:00,TX-5141,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.82,$4.68,$0.39,$5.07,Google Pay,Register 2
+2026-11-02,02:19:00,TX-5141,Americano,COF-03,Coffee,1,$3.75,$0.56,$3.19,$0.26,$3.45,Google Pay,Register 2
+2026-11-02,02:19:00,TX-5141,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.75,$4.25,$0.35,$4.60,Google Pay,Register 2
+2026-11-02,02:33:00,TX-5142,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Google Pay,iPad Pro Stand
+2026-11-02,02:33:00,TX-5142,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,iPad Pro Stand
+2026-11-02,02:33:00,TX-5142,Espresso,COF-05,Coffee,2,$6.50,$0.00,$6.50,$0.54,$7.04,Google Pay,iPad Pro Stand
+2026-11-02,02:33:00,TX-5142,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,iPad Pro Stand
+2026-11-02,02:47:00,TX-5143,Croissant,BAK-01,Bakery,1,$4.50,$0.45,$4.05,$0.33,$4.38,Google Pay,iPad Pro Stand
+2026-11-02,02:47:00,TX-5143,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.50,$4.50,$0.37,$4.87,Google Pay,iPad Pro Stand
+2026-11-02,02:47:00,TX-5143,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.55,$4.95,$0.41,$5.36,Google Pay,iPad Pro Stand
+2026-11-02,02:55:00,TX-5144,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Cash,iPad Pro Stand
+2026-11-02,02:55:00,TX-5144,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,iPad Pro Stand
+2026-11-02,03:05:00,TX-5145,Sticker Pack,MER-03,Merchandise,3,$15.00,$0.00,$15.00,$1.24,$16.24,Apple Pay,iPad Pro Stand
+2026-11-02,03:05:00,TX-5145,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Apple Pay,iPad Pro Stand
+2026-11-02,03:11:00,TX-5146,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Register 1
+2026-11-02,03:11:00,TX-5146,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Google Pay,Register 1
+2026-11-02,03:15:00,TX-5147,Americano,COF-03,Coffee,2,$7.50,$1.12,$6.38,$0.53,$6.91,Google Pay,Mobile POS
+2026-11-02,03:15:00,TX-5147,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$2.70,$15.30,$1.26,$16.56,Google Pay,Mobile POS
+2026-11-02,03:15:00,TX-5147,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.67,$3.83,$0.32,$4.15,Google Pay,Mobile POS
+2026-11-02,03:15:00,TX-5147,Travel Mug,MER-02,Merchandise,1,$25.00,$3.75,$21.25,$1.75,$23.00,Google Pay,Mobile POS
+2026-11-02,03:19:00,TX-5148,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Mobile POS
+2026-11-02,03:19:00,TX-5148,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Mobile POS
+2026-11-02,03:19:00,TX-5148,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Mobile POS
+2026-11-02,03:19:00,TX-5148,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Mobile POS
+2026-11-02,03:20:00,TX-5149,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Mobile POS
+2026-11-02,03:20:00,TX-5149,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Card,Mobile POS
+2026-11-02,03:23:00,TX-5150,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.64,$3.61,$0.30,$3.91,Cash,Register 1
+2026-11-02,03:23:00,TX-5150,Sticker Pack,MER-03,Merchandise,2,$10.00,$1.50,$8.50,$0.70,$9.20,Cash,Register 1
+2026-11-02,03:23:00,TX-5150,Cappuccino,COF-02,Coffee,1,$5.00,$0.75,$4.25,$0.35,$4.60,Cash,Register 1
+2026-11-02,03:24:00,TX-5151,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 1
+2026-11-02,03:24:00,TX-5151,Espresso,COF-05,Coffee,2,$6.50,$0.00,$6.50,$0.54,$7.04,Card,Register 1
+2026-11-02,03:27:00,TX-5152,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,iPad Pro Stand
+2026-11-02,03:39:00,TX-5153,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Google Pay,Mobile POS
+2026-11-02,03:39:00,TX-5153,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Google Pay,Mobile POS
+2026-11-02,03:39:00,TX-5153,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Google Pay,Mobile POS
+2026-11-02,03:51:00,TX-5154,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,Register 2
+2026-11-02,03:51:00,TX-5154,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,Register 2
+2026-11-02,03:51:00,TX-5154,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Google Pay,Register 2
+2026-11-02,03:59:00,TX-5155,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Apple Pay,Register 1
+2026-11-02,03:59:00,TX-5155,Hot Chocolate,TEA-04,Tea & Other,2,$9.00,$0.00,$9.00,$0.74,$9.74,Apple Pay,Register 1
+2026-11-02,03:59:00,TX-5155,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,Register 1
+2026-11-02,04:05:00,TX-5156,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.64,$3.61,$0.30,$3.91,Gift Card,Mobile POS
+2026-11-02,04:05:00,TX-5156,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.75,$4.25,$0.35,$4.60,Gift Card,Mobile POS
+2026-11-02,04:09:00,TX-5157,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Cash,iPad Pro Stand
+2026-11-02,04:09:00,TX-5157,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.43,$3.82,$0.32,$4.14,Cash,iPad Pro Stand
+2026-11-02,04:09:00,TX-5157,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Cash,iPad Pro Stand
+2026-11-02,04:09:00,TX-5157,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.45,$4.05,$0.33,$4.38,Cash,iPad Pro Stand
+2026-11-02,04:09:00,TX-5157,Americano,COF-03,Coffee,1,$3.75,$0.38,$3.37,$0.28,$3.65,Cash,iPad Pro Stand
+2026-11-02,04:24:00,TX-5158,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,iPad Pro Stand
+2026-11-02,04:24:00,TX-5158,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Card,iPad Pro Stand
+2026-11-02,04:24:00,TX-5158,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Card,iPad Pro Stand
+2026-11-02,04:24:00,TX-5158,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,iPad Pro Stand
+2026-11-02,04:24:00,TX-5158,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,iPad Pro Stand
+2026-11-02,04:35:00,TX-5159,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Gift Card,Register 1
+2026-11-02,04:35:00,TX-5159,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,Register 1
+2026-11-02,04:40:00,TX-5160,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,iPad Pro Stand
+2026-11-02,04:40:00,TX-5160,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,iPad Pro Stand
+2026-11-02,04:40:00,TX-5160,Latte,COF-01,Coffee,3,$15.75,$0.00,$15.75,$1.30,$17.05,Cash,iPad Pro Stand
+2026-11-02,04:55:00,TX-5161,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Gift Card,Register 2
+2026-11-02,04:55:00,TX-5161,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Register 2
+2026-11-02,05:10:00,TX-5162,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.43,$3.82,$0.32,$4.14,Google Pay,Mobile POS
+2026-11-02,05:10:00,TX-5162,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.50,$4.50,$0.37,$4.87,Google Pay,Mobile POS
+2026-11-02,05:10:00,TX-5162,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.43,$3.82,$0.32,$4.14,Google Pay,Mobile POS
+2026-11-02,05:10:00,TX-5162,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.50,$4.50,$0.37,$4.87,Google Pay,Mobile POS
+2026-11-02,05:10:00,TX-5162,Cappuccino,COF-02,Coffee,1,$5.00,$0.50,$4.50,$0.37,$4.87,Google Pay,Mobile POS
+2026-11-02,05:19:00,TX-5163,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Gift Card,Mobile POS
+2026-11-02,05:19:00,TX-5163,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Gift Card,Mobile POS
+2026-11-02,05:23:00,TX-5164,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Cash,Mobile POS
+2026-11-02,05:23:00,TX-5164,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,Mobile POS
+2026-11-02,05:31:00,TX-5165,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Card,Register 1
+2026-11-02,05:31:00,TX-5165,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 1
+2026-11-02,05:31:00,TX-5165,Cappuccino,COF-02,Coffee,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,Register 1
+2026-11-02,05:38:00,TX-5166,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,iPad Pro Stand
+2026-11-02,05:38:00,TX-5166,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Google Pay,iPad Pro Stand
+2026-11-02,05:39:00,TX-5167,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Google Pay,Register 1
+2026-11-02,05:39:00,TX-5167,Americano,COF-03,Coffee,2,$7.50,$0.00,$7.50,$0.62,$8.12,Google Pay,Register 1
+2026-11-02,05:41:00,TX-5168,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.55,$4.95,$0.41,$5.36,Apple Pay,Mobile POS
+2026-11-02,05:41:00,TX-5168,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.45,$4.05,$0.33,$4.38,Apple Pay,Mobile POS
+2026-11-02,05:48:00,TX-5169,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Register 1
+2026-11-02,05:48:00,TX-5169,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Cash,Register 1
+2026-11-02,06:03:00,TX-5170,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 1
+2026-11-02,06:18:00,TX-5171,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,iPad Pro Stand
+2026-11-02,06:29:00,TX-5172,Muffin,BAK-02,Bakery,3,$11.25,$1.12,$10.13,$0.84,$10.97,Google Pay,Register 2
+2026-11-02,06:29:00,TX-5172,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.58,$5.17,$0.43,$5.60,Google Pay,Register 2
+2026-11-02,06:29:00,TX-5172,Latte,COF-01,Coffee,1,$5.25,$0.53,$4.72,$0.39,$5.11,Google Pay,Register 2
+2026-11-02,06:29:00,TX-5172,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Google Pay,Register 2
+2026-11-02,06:29:00,TX-5172,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.45,$4.05,$0.33,$4.38,Google Pay,Register 2
+2026-11-02,06:34:00,TX-5173,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,Register 2
+2026-11-02,06:34:00,TX-5173,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Cash,Register 2
+2026-11-02,06:42:00,TX-5174,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 1
+2026-11-02,06:55:00,TX-5175,Muffin,BAK-02,Bakery,1,$3.75,$0.38,$3.37,$0.28,$3.65,Apple Pay,Register 2
+2026-11-02,06:55:00,TX-5175,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$1.80,$16.20,$1.34,$17.54,Apple Pay,Register 2
+2026-11-02,06:59:00,TX-5176,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Cash,iPad Pro Stand
+2026-11-02,06:59:00,TX-5176,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Cash,iPad Pro Stand
+2026-11-02,06:59:00,TX-5176,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Cash,iPad Pro Stand
+2026-11-02,07:12:00,TX-5177,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Cash,Mobile POS
+2026-11-02,07:16:00,TX-5178,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Mobile POS
+2026-11-02,07:16:00,TX-5178,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Google Pay,Mobile POS
+2026-11-02,07:23:00,TX-5179,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Google Pay,Register 2
+2026-11-02,07:23:00,TX-5179,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Google Pay,Register 2
+2026-11-02,07:23:00,TX-5179,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Google Pay,Register 2
+2026-11-02,07:23:00,TX-5179,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Register 2
+2026-11-02,07:23:00,TX-5179,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Google Pay,Register 2
+2026-11-02,07:27:00,TX-5180,Chocolate Chip Cookie,BAK-04,Bakery,2,$6.00,$0.60,$5.40,$0.45,$5.85,Cash,Register 1
+2026-11-02,07:27:00,TX-5180,Cold Brew,COF-04,Coffee,2,$9.50,$0.95,$8.55,$0.71,$9.26,Cash,Register 1
+2026-11-02,07:27:00,TX-5180,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Cash,Register 1
+2026-11-02,07:27:00,TX-5180,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Cash,Register 1
+2026-11-02,07:29:00,TX-5181,Iced Hibiscus Tea,TEA-03,Tea & Other,2,$8.50,$0.00,$8.50,$0.70,$9.20,Gift Card,Mobile POS
+2026-11-02,07:29:00,TX-5181,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Gift Card,Mobile POS
+2026-11-02,07:30:00,TX-5182,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Apple Pay,Register 2
+2026-11-02,07:30:00,TX-5182,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Apple Pay,Register 2
+2026-11-02,07:35:00,TX-5183,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Gift Card,iPad Pro Stand
+2026-11-02,07:35:00,TX-5183,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Gift Card,iPad Pro Stand
+2026-11-02,07:35:00,TX-5183,Matcha Latte,TEA-02,Tea & Other,2,$11.50,$0.00,$11.50,$0.95,$12.45,Gift Card,iPad Pro Stand
+2026-11-02,07:49:00,TX-5184,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,Register 1
+2026-11-02,07:49:00,TX-5184,Latte,COF-01,Coffee,1,$5.25,$0.00,$5.25,$0.43,$5.68,Card,Register 1
+2026-11-02,07:55:00,TX-5185,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Mobile POS
+2026-11-02,07:56:00,TX-5186,Sticker Pack,MER-03,Merchandise,3,$15.00,$0.00,$15.00,$1.24,$16.24,Gift Card,Register 1
+2026-11-02,07:56:00,TX-5186,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Gift Card,Register 1
+2026-11-02,08:05:00,TX-5187,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Card,Register 1
+2026-11-02,08:05:00,TX-5187,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 1
+2026-11-02,08:05:00,TX-5187,Bagel with Cream Cheese,BAK-03,Bakery,2,$10.00,$0.00,$10.00,$0.83,$10.83,Card,Register 1
+2026-11-02,08:05:00,TX-5187,Matcha Latte,TEA-02,Tea & Other,3,$17.25,$0.00,$17.25,$1.42,$18.67,Card,Register 1
+2026-11-02,08:07:00,TX-5188,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,Register 1
+2026-11-02,08:07:00,TX-5188,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Card,Register 1
+2026-11-02,08:22:00,TX-5189,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Register 1
+2026-11-02,08:22:00,TX-5189,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Cash,Register 1
+2026-11-02,08:22:00,TX-5189,Bagel with Cream Cheese,BAK-03,Bakery,2,$10.00,$0.00,$10.00,$0.83,$10.83,Cash,Register 1
+2026-11-02,08:37:00,TX-5190,Muffin,BAK-02,Bakery,1,$3.75,$0.38,$3.37,$0.28,$3.65,Card,Register 2
+2026-11-02,08:37:00,TX-5190,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.55,$4.95,$0.41,$5.36,Card,Register 2
+2026-11-02,08:48:00,TX-5191,Travel Mug,MER-02,Merchandise,1,$25.00,$2.50,$22.50,$1.86,$24.36,Google Pay,Mobile POS
+2026-11-02,08:48:00,TX-5191,Latte,COF-01,Coffee,1,$5.25,$0.53,$4.72,$0.39,$5.11,Google Pay,Mobile POS
+2026-11-02,08:55:00,TX-5192,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Card,Register 1
+2026-11-02,08:55:00,TX-5192,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Card,Register 1
+2026-11-02,08:55:00,TX-5192,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 1
+2026-11-02,08:55:00,TX-5192,Sticker Pack,MER-03,Merchandise,2,$10.00,$0.00,$10.00,$0.83,$10.83,Card,Register 1
+2026-11-02,08:55:00,TX-5192,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Card,Register 1
+2026-11-02,09:08:00,TX-5193,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Card,iPad Pro Stand
+2026-11-02,09:08:00,TX-5193,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Card,iPad Pro Stand
+2026-11-02,09:08:00,TX-5193,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,iPad Pro Stand
+2026-11-02,09:14:00,TX-5194,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Cash,Mobile POS
+2026-11-02,09:16:00,TX-5195,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Google Pay,Mobile POS
+2026-11-02,09:16:00,TX-5195,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Google Pay,Mobile POS
+2026-11-02,09:26:00,TX-5196,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Card,Register 2
+2026-11-02,09:26:00,TX-5196,Travel Mug,MER-02,Merchandise,1,$25.00,$0.00,$25.00,$2.06,$27.06,Card,Register 2
+2026-11-02,09:33:00,TX-5197,Bagel with Cream Cheese,BAK-03,Bakery,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,iPad Pro Stand
+2026-11-02,09:41:00,TX-5198,Coffee Beans 1lb,MER-01,Merchandise,2,$36.00,$0.00,$36.00,$2.97,$38.97,Gift Card,Register 2
+2026-11-02,09:41:00,TX-5198,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Gift Card,Register 2
+2026-11-02,09:48:00,TX-5199,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Gift Card,iPad Pro Stand
+2026-11-02,09:48:00,TX-5199,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Gift Card,iPad Pro Stand
+2026-11-02,09:48:00,TX-5199,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Gift Card,iPad Pro Stand
+2026-11-02,09:48:00,TX-5199,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Gift Card,iPad Pro Stand
+2026-11-02,09:50:00,TX-5200,Espresso,COF-05,Coffee,3,$9.75,$0.98,$8.77,$0.72,$9.49,Gift Card,iPad Pro Stand
+2026-11-02,09:50:00,TX-5200,Espresso,COF-05,Coffee,1,$3.25,$0.33,$2.92,$0.24,$3.16,Gift Card,iPad Pro Stand
+2026-11-02,10:03:00,TX-5201,Chocolate Chip Cookie,BAK-04,Bakery,1,$3.00,$0.00,$3.00,$0.25,$3.25,Apple Pay,Mobile POS
+2026-11-02,10:03:00,TX-5201,Americano,COF-03,Coffee,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,Mobile POS
+2026-11-02,10:03:00,TX-5201,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Apple Pay,Mobile POS
+2026-11-02,10:13:00,TX-5202,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Google Pay,Mobile POS
+2026-11-02,10:15:00,TX-5203,Coffee Beans 1lb,MER-01,Merchandise,1,$18.00,$0.00,$18.00,$1.49,$19.49,Google Pay,Register 1
+2026-11-02,10:15:00,TX-5203,Chocolate Chip Cookie,BAK-04,Bakery,2,$6.00,$0.00,$6.00,$0.49,$6.49,Google Pay,Register 1
+2026-11-02,10:16:00,TX-5204,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Gift Card,Register 1
+2026-11-02,10:16:00,TX-5204,Cold Brew,COF-04,Coffee,1,$4.75,$0.00,$4.75,$0.39,$5.14,Gift Card,Register 1
+2026-11-02,10:22:00,TX-5205,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.82,$4.68,$0.39,$5.07,Google Pay,Register 2
+2026-11-02,10:22:00,TX-5205,Croissant,BAK-01,Bakery,1,$4.50,$0.67,$3.83,$0.32,$4.15,Google Pay,Register 2
+2026-11-02,10:28:00,TX-5206,Espresso,COF-05,Coffee,1,$3.25,$0.00,$3.25,$0.27,$3.52,Cash,iPad Pro Stand
+2026-11-02,10:28:00,TX-5206,Chai Latte,TEA-01,Tea & Other,1,$5.50,$0.00,$5.50,$0.45,$5.95,Cash,iPad Pro Stand
+2026-11-02,10:28:00,TX-5206,Iced Hibiscus Tea,TEA-03,Tea & Other,1,$4.25,$0.00,$4.25,$0.35,$4.60,Cash,iPad Pro Stand
+2026-11-02,10:42:00,TX-5207,Muffin,BAK-02,Bakery,2,$7.50,$0.00,$7.50,$0.62,$8.12,Card,Register 1
+2026-11-02,10:51:00,TX-5208,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Register 2
+2026-11-02,10:51:00,TX-5208,Matcha Latte,TEA-02,Tea & Other,1,$5.75,$0.00,$5.75,$0.47,$6.22,Google Pay,Register 2
+2026-11-02,10:51:00,TX-5208,Hot Chocolate,TEA-04,Tea & Other,1,$4.50,$0.00,$4.50,$0.37,$4.87,Google Pay,Register 2
+2026-11-02,11:01:00,TX-5209,Muffin,BAK-02,Bakery,1,$3.75,$0.00,$3.75,$0.31,$4.06,Apple Pay,Mobile POS
+2026-11-02,11:01:00,TX-5209,Croissant,BAK-01,Bakery,1,$4.50,$0.00,$4.50,$0.37,$4.87,Apple Pay,Mobile POS
+2026-11-02,11:05:00,TX-5210,Sticker Pack,MER-03,Merchandise,2,$10.00,$0.00,$10.00,$0.83,$10.83,Cash,iPad Pro Stand
+2026-11-02,11:05:00,TX-5210,Sticker Pack,MER-03,Merchandise,1,$5.00,$0.00,$5.00,$0.41,$5.41,Cash,iPad Pro Stand
