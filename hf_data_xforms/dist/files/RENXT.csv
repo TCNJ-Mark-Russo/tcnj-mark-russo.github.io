@@ -1,15 +1,15 @@
 Date,Transaction ID,Class,Customer First Name,Customer Last Name,Channel,Gross Sales
-10/25/2026,1,exchange,,,ArtSpace/SewingSpace,15.0
-10/25/2026,2,exchange,,,ArtSpace/SewingSpace,10.0
-10/25/2026,3,exchange,,,ArtSpace/SewingSpace,20.0
+10/25/2026,1,exchange,,ANONYMOUS,ArtSpace/SewingSpace,15.0
+10/25/2026,2,donation,,ANONYMOUS,ArtSpace/SewingSpace,10.0
+10/25/2026,3,donation,,ANONYMOUS,ArtSpace/SewingSpace,20.0
 10/25/2026,4,exchange,judith,long,ArtSpace/SewingSpace,20.0
 10/25/2026,5,exchange,Meghan,Cubano,ArtSpace/SewingSpace,15.0
-10/25/2026,6,exchange,,,ArtSpace/SewingSpace,5.0
-10/25/2026,7,exchange,,,ArtSpace/SewingSpace,5.0
-10/25/2026,8,exchange,,,ArtSpace/SewingSpace,35.0
-10/25/2026,9,exchange,,,ArtSpace/SewingSpace,25.0
-10/25/2026,10,exchange,,,ArtSpace/SewingSpace,15.0
-10/25/2026,11,exchange,,,ArtSpace/SewingSpace,15.0
-10/25/2026,12,exchange,,,ArtSpace/SewingSpace,20.0
-10/25/2026,13,contribution,,,ArtSpace/SewingSpace,15.0
-10/25/2026,13,exchange,,,ArtSpace/SewingSpace,5.0
+10/25/2026,6,exchange,,ANONYMOUS,ArtSpace/SewingSpace,5.0
+10/25/2026,7,exchange,,ANONYMOUS,ArtSpace/SewingSpace,5.0
+10/25/2026,8,exchange,,ANONYMOUS,ArtSpace/SewingSpace,35.0
+10/25/2026,9,exchange,,ANONYMOUS,ArtSpace/SewingSpace,25.0
+10/25/2026,10,exchange,,ANONYMOUS,ArtSpace/SewingSpace,15.0
+10/25/2026,11,exchange,,ANONYMOUS,ArtSpace/SewingSpace,15.0
+10/25/2026,12,exchange,,ANONYMOUS,ArtSpace/SewingSpace,20.0
+10/25/2026,13,contribution,,ANONYMOUS,ArtSpace/SewingSpace,15.0
+10/25/2026,13,exchange,,ANONYMOUS,ArtSpace/SewingSpace,5.0
